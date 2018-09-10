@@ -1,0 +1,50 @@
+security:
+
+    providers:
+        db_provider:
+            entity:
+                class: AppBundle:Users
+                property: username
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    encoders:
+        AppBundle\Entity\Users:
+            algorithm: bcrypt
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+                default_target_path: dashboard
+                always_use_default_target_path: true
+                use_referer: true
+                csrf_token_generator: security.csrf.token_manager
+            provider: fos_userbundle
+            logout_on_user_change: true
+            logout:
+                path:   /logout
+                target: /
+
+    access_control:
+      - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/, roles: ROLE_USER }
+      - { path: ^/impostazioni, roles: ROLE_ADMIN }
+
+
+    role_hierarchy:
+        ROLE_SEGNALATORE:       ROLE_USER
+        ROLE_IMPRESA_EDILE:     ROLE_USER
+        ROLE_PROGETTISTA:       ROLE_USER
+        ROLE_GENRAL_CONTRACTOR:     ROLE_USER
+        ROLE_IMMOBILIARE:       ROLE_USER
+        ROLE_AGENT:     [ROLE_USER, ROLE_IMMOBILIARE, ROLE_GENERAL_CONTRACTOR, ROLE_PROGETTISTA, ROLE_IMPRESA_EDILE,ROLE_SEGNALATORE]
+        ROLE_ADMIN:     [ROLE_USER, ROLE_IMMOBILIARE, ROLE_GENERAL_CONTRACTOR, ROLE_PROGETTISTA, ROLE_IMPRESA_EDILE,ROLE_SEGNALATORE]
+        ROLE_SUPER_ADMIN:       [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]

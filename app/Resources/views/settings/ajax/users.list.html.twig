@@ -1,0 +1,64 @@
+{% for user in users %}
+    <tr>
+        <td class="py-1" class="text-center">
+            {{ user.id }}
+        </td>
+        <td class="text-center">
+            {{ user.usernameCanonical }}
+        </td>
+        <td class="text-center">
+            {{ user.emailCanonical }}
+        </td>
+        <td class="text-center">
+            {% if user.enabled == 0 %}
+                <span class="status-indicator"></span>
+            {% elseif user.enabled == 1 %}
+                <span class="status-indicator online"></span>
+            {% endif %}
+        </td>
+        <td class="text-center">
+            {% for role in user.roles %}
+                {{ role }} &nbsp;
+            {% endfor %}
+        </td>
+        <td class="text-center">
+            {{ user.lastLogin|date("d-m-Y H:i:s") }}
+        </td>
+        <td style="width: 255px;">
+            <a href="" id="delete" class="btn btn-danger btn-sm float-right mr-1" data-user-id="{{ user.id }}">
+                <span class="mdi mdi-delete"></span>
+            </a>
+            <a href="" class="btn btn-warning btn-sm float-right mr-1">
+                <span class="mdi mdi-table-edit"></span>
+            </a>
+        </td>
+    </tr>
+{% endfor %}
+
+<script>
+    $("#delete").click(function(e){
+        e.preventDefault();
+        var uid = $(this).attr("data-user-id");
+
+        console.log('clicked' + uid);
+
+        bootbox.setLocale('it');
+        bootbox.confirm("Sei sicuro di voler eliminare questo utente?<br> <strong>Questa azione non può essere annullata</strong>", function(result) {
+            url = '{{ url('ajax_settings_users_delete', { 'id': 0 }) }}';
+            url = url.replace("0",uid);
+            console.log(url);
+            if(result){
+                $.ajax({
+                    url: url,
+                    type: 'delete',
+                    success: function(result) {
+                        console.log('Delete');
+                    },
+                    error: function(e){
+                        console.log(e.responseText);
+                    }
+                });
+            }
+        });
+    });
+</script>

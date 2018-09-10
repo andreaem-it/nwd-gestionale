@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+{% block title %}Lista Preventivi{% endblock %}
+{% block body %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <h3>Preventivi <small>Lista</small></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Data
+                                        </th>
+                                        <th>
+                                            Cliente
+                                        </th>
+                                        <th>
+                                            Stato
+                                        </th>
+                                        <th>
+                                            Prezzo
+                                        </th>
+                                        <th>
+                                            Scadenza
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in expertations %}
+                                        <tr>
+                                    <td class="py-1">
+                                        {{ item.date|date("d-m-Y") }}
+                                    </td>
+                                    <td>
+                                        <a href="{{ url('clienti', { id : item.client}) }}">
+                                            {{ functions.uidToName(item.client) }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ item.status }}%" aria-valuenow="{{ item.status }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        {{ item.price }} €
+                                    </td>
+                                    <td>
+                                        {{ item.expiration|date("d-m-Y") }}
+                                    </td>
+                                    <td style="width: 255px;">
+                                        <a href="" class="btn btn-danger btn-sm float-right mr-1">
+                                            <span class="mdi mdi-delete"></span>
+                                        </a>
+                                        <a href="" class="btn btn-warning btn-sm float-right mr-1">
+                                            <span class="mdi mdi-table-edit"></span>
+                                        </a>
+                                        <a href="{{ url('mostra_preventivo',{'id' : 1}) }}" class="btn btn-primary btn-sm float-right mr-1">
+                                            <span class="mdi mdi-eye-outline"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

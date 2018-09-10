@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>NWD {% block title %} Accesso{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.base.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/css/vendor.bundle.addons.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% block stylesheets %}{% endblock %}
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="container-scroller">
+            <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+                <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+                    <div class="row w-100">
+                        <div class="col-lg-4 mx-auto">
+                            <div class="auto-form-wrapper">
+                                <img class="mx-auto d-block mt-3 mb-3" src="{{ asset('images/logo_nwd_mini.png') }}" style="width:100%">
+                                <form action="{{ path('login') }}" method="post">
+                                    {% if error %}
+                                        <div class="">
+                                            <div class="alert alert-danger">
+                                                {{ error.messageKey|trans(error.messageData, 'security') }}
+                                            </div>
+                                        </div>
+
+                                    {% endif %}
+                                    <div class="form-group">
+                                        <label for="username" class="label">Username</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}">
+                                            <div class="input-group-append">
+                                  <span class="input-group-text">
+                                    <i class="mdi mdi-check-circle-outline"></i>
+                                  </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="label">Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="password" name="_password">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="mdi mdi-check-circle-outline"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary submit-btn btn-block">Accedi</button>
+                                    </div>
+                                    <div class="form-group d-flex justify-content-between">
+                                        <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" checked> Ricordami
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <p class="footer-text text-center mt-5">copyright © {{ "now"|date("Y") }} NWD srl. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+        <!-- content-wrapper ends -->
+            </div>
+        </div>
+        <script src="{{ asset('vendors/js/vendor.bundle.base.js') }}"></script>
+        <script src="{{ asset('vendors/js/vendor.bundle.addons.js') }}"></script>
+        <script src="{{ asset('js/off-canvas.js') }}"></script>
+        <script src="{{ asset('js/misc.js') }}"></script>
+    </body>
+</html>
+
+
