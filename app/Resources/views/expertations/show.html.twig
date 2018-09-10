@@ -50,14 +50,101 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        {{ dump(item) }}
+                        <h5 class="card-title">
+                            Dettaglio Preventivo
+                        </h5>
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr class="text-center" style="background-color: #f2f8f9;">
+                                    <th>
+                                        Piano
+                                    </th>
+                                    <th class="tbl-lg">
+                                        Ambiente
+                                    </th>
+                                    <th class="tbl-lg">
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Punti prese
+                                    </th>
+                                    <th>
+                                        Punti Luce
+                                    </th>
+                                    <th>
+                                        Prese TV
+                                    </th>
+                                </tr>
+                                {% for itm in item.floor %}
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                           {{ functions.convertAIDtoName(4) }}
+                                        </td>
+                                        <td>
+                                            Prova
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
-
-
+        </div>
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 text-left">
+                                Totale
+                            </div>
+                            <div class="col-6 text-right text-black">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">
+                                IVA
+                            </div>
+                            <div class="col-6 text-right">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">
+                                Sconto ({{ item.sconto }} %)
+                            </div>
+                            <div class="col-6 text-right">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">
+                                <strong>Totale</strong>
+                            </div>
+                            <div class="col-6 text-right">
+                                <strong>0.00 €</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    {{ dump(item) }}
 {% endblock %}

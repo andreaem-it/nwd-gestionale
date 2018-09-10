@@ -21,6 +21,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+
 
 class ExpertationsController extends Controller
 {
@@ -164,6 +166,7 @@ class ExpertationsController extends Controller
                             ->orderBy('u.name', 'DESC')->distinct()
                             ;},
                     'label' => false,
+                    'choice_label' => 'name',
                     'attr' => ['class' => 'form-control']
                 ],
                 'label' => false,
@@ -318,5 +321,17 @@ class ExpertationsController extends Controller
                 break;
         }
 
+    }
+
+    public function unserializeThis($data,Serializer $serializer) {
+        $serializer->deserialize($data, Expertations::class, 'json');
+    }
+
+    public function countArrayElements($item) {
+        return count($item);
+    }
+
+    public function convertAIDtoName($aid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Rooms')->find($aid)->getName();
     }
 }

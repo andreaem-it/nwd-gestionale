@@ -161,19 +161,122 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
             <div class=\"col-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        ";
-        // line 53
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, ($context["item"] ?? $this->getContext($context, "item")));
-        echo "
+                        <h5 class=\"card-title\">
+                            Dettaglio Preventivo
+                        </h5>
+                        <table class=\"table table-hover\">
+                            <tbody>
+                                <tr class=\"text-center\" style=\"background-color: #f2f8f9;\">
+                                    <th>
+                                        Piano
+                                    </th>
+                                    <th class=\"tbl-lg\">
+                                        Ambiente
+                                    </th>
+                                    <th class=\"tbl-lg\">
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Punti prese
+                                    </th>
+                                    <th>
+                                        Punti Luce
+                                    </th>
+                                    <th>
+                                        Prese TV
+                                    </th>
+                                </tr>
+                                ";
+        // line 78
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "floor", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["itm"]) {
+            // line 79
+            echo "                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                           ";
+            // line 84
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["functions"] ?? $this->getContext($context, "functions")), "convertAIDtoName", array(0 => 4), "method"), "html", null, true);
+            echo "
+                                        </td>
+                                        <td>
+                                            Prova
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr>
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['itm'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 100
+        echo "                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
-
-
+        </div>
+        <div class=\"row\">
+            <div class=\"col-8\"></div>
+            <div class=\"col-4\">
+                <div class=\"card\">
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                Totale
+                            </div>
+                            <div class=\"col-6 text-right text-black\">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                IVA
+                            </div>
+                            <div class=\"col-6 text-right\">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                Sconto (";
+        // line 129
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "sconto", array()), "html", null, true);
+        echo " %)
+                            </div>
+                            <div class=\"col-6 text-right\">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                <strong>Totale</strong>
+                            </div>
+                            <div class=\"col-6 text-right\">
+                                <strong>0.00 €</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    ";
+        // line 149
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, ($context["item"] ?? $this->getContext($context, "item")));
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -195,7 +298,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
 
     public function getDebugInfo()
     {
-        return array (  166 => 53,  151 => 41,  147 => 40,  143 => 39,  133 => 36,  129 => 35,  125 => 34,  121 => 33,  104 => 21,  98 => 20,  88 => 19,  84 => 18,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  278 => 149,  255 => 129,  224 => 100,  202 => 84,  195 => 79,  191 => 78,  151 => 41,  147 => 40,  143 => 39,  133 => 36,  129 => 35,  125 => 34,  121 => 33,  104 => 21,  98 => 20,  88 => 19,  84 => 18,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -260,16 +363,103 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
             <div class=\"col-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        {{ dump(item) }}
+                        <h5 class=\"card-title\">
+                            Dettaglio Preventivo
+                        </h5>
+                        <table class=\"table table-hover\">
+                            <tbody>
+                                <tr class=\"text-center\" style=\"background-color: #f2f8f9;\">
+                                    <th>
+                                        Piano
+                                    </th>
+                                    <th class=\"tbl-lg\">
+                                        Ambiente
+                                    </th>
+                                    <th class=\"tbl-lg\">
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Punti prese
+                                    </th>
+                                    <th>
+                                        Punti Luce
+                                    </th>
+                                    <th>
+                                        Prese TV
+                                    </th>
+                                </tr>
+                                {% for itm in item.floor %}
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                           {{ functions.convertAIDtoName(4) }}
+                                        </td>
+                                        <td>
+                                            Prova
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
-
-
+        </div>
+        <div class=\"row\">
+            <div class=\"col-8\"></div>
+            <div class=\"col-4\">
+                <div class=\"card\">
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                Totale
+                            </div>
+                            <div class=\"col-6 text-right text-black\">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                IVA
+                            </div>
+                            <div class=\"col-6 text-right\">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                Sconto ({{ item.sconto }} %)
+                            </div>
+                            <div class=\"col-6 text-right\">
+                                0.00 €
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <div class=\"col-6 text-left\">
+                                <strong>Totale</strong>
+                            </div>
+                            <div class=\"col-6 text-right\">
+                                <strong>0.00 €</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    {{ dump(item) }}
 {% endblock %}", "expertations/show.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/expertations/show.html.twig");
     }
 }
