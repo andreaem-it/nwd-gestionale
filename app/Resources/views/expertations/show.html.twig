@@ -4,12 +4,12 @@
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12">
                 <h3>Preventivi <small>Mostra</small></h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
@@ -22,23 +22,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
                             <h5>Abitazione</h5>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <strong>Tipo impianto:</strong>  {{ functions.plantIntToName(item.tipo) }}<br/>
                                 <strong>Piani edificio:</strong>  {{ item.pianiCasa }}<br/>
                                 <strong>Riscaldamento:</strong>  {{ functions.heatingIntToName(item.riscaldamento) }} <br/>
                                 <strong>Trifase:</strong>  {% if item.trifase == true %} Si {% elseif item.trifase == false %} No {% endif %}<br/>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <strong>Livello impianto:</strong> {{ item.level }} <br/>
                                 <strong>Fornitura elettrica:</strong> {{ item.kw }} Kw <br/>
-                                <strong>Metratura ambienti:</strong> {{ item.squareMeters }} m²
+                                <strong>Metratura ambienti:</strong> {{ item.squareMeters }} m² <br />
+                                <strong>Opere murarie:</strong> {% if item.opereMurarie == 0 %} No {% elseif item.opereMurarie == 1 %} Intonaco {% elseif item.opereMurarie == 2 %} Mattone/Pietra {% endif %}
                             </div>
                         </div>
 
@@ -47,7 +48,7 @@
             </div>
         </div>
         <div class="row mt-4">
-            <div class="col-12">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -104,39 +105,39 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-8"></div>
-            <div class="col-4">
+            <div class="col-lg-8"></div>
+            <div class="col-lg-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-6 text-left">
+                            <div class="col-lg-6 text-left">
                                 Totale
                             </div>
-                            <div class="col-6 text-right text-black">
+                            <div class="col-lg-6 text-right text-black">
                                 0.00 €
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6 text-left">
+                            <div class="col-lg-6 text-left">
                                 IVA
                             </div>
-                            <div class="col-6 text-right">
+                            <div class="col-lg-6 text-right">
                                 0.00 €
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6 text-left">
+                            <div class="col-lg-6 text-left">
                                 Sconto ({{ item.sconto }} %)
                             </div>
-                            <div class="col-6 text-right">
+                            <div class="col-lg-6 text-right">
                                 0.00 €
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6 text-left">
+                            <div class="col-lg-6 text-left">
                                 <strong>Totale</strong>
                             </div>
-                            <div class="col-6 text-right">
+                            <div class="col-lg-6 text-right">
                                 <strong>0.00 €</strong>
                             </div>
                         </div>

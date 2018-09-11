@@ -163,6 +163,41 @@ class Expertations
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="num_circuiti", type="integer", nullable=true)
+     */
+    private $num_circuiti;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="num_prese_telefono_dati", type="integer", nullable=true)
+     */
+    private $num_prese_telefono_dati;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="illum_sicurezza", type="integer", nullable=true)
+     */
+    private $illum_sicurezza;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="spd", type="integer", nullable=true)
+     */
+    private $spd;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imp_ausiliari", type="integer", nullable=true)
+     */
+    private $imp_ausiliari;
+
+    /**
+     * @var string
      * @return string
      */
     public  function __toString()
@@ -660,5 +695,125 @@ class Expertations
     public function getPt()
     {
         return $this->pt;
+    }
+
+    /**
+     * Set numCircuiti
+     *
+     * @param integer $numCircuiti
+     *
+     * @return Expertations
+     */
+    public function setNumCircuiti($numCircuiti)
+    {
+        $this->num_circuiti = $numCircuiti;
+
+        return $this;
+    }
+
+    /**
+     * Get numCircuiti
+     *
+     * @return integer
+     */
+    public function getNumCircuiti()
+    {
+        return $this->num_circuiti;
+    }
+
+    /**
+     * Set numPreseTelefonoDati
+     *
+     * @param integer $numPreseTelefonoDati
+     *
+     * @return Expertations
+     */
+    public function setNumPreseTelefonoDati($numPreseTelefonoDati)
+    {
+        $this->num_prese_telefono_dati = $numPreseTelefonoDati;
+
+        return $this;
+    }
+
+    /**
+     * Get numPreseTelefonoDati
+     *
+     * @return integer
+     */
+    public function getNumPreseTelefonoDati()
+    {
+        return $this->num_prese_telefono_dati;
+    }
+
+    /**
+     * Set illumSicurezza
+     *
+     * @param integer $illumSicurezza
+     *
+     * @return Expertations
+     */
+    public function setIllumSicurezza($illumSicurezza)
+    {
+        $this->illum_sicurezza = $illumSicurezza;
+
+        return $this;
+    }
+
+    /**
+     * Get illumSicurezza
+     *
+     * @return integer
+     */
+    public function getIllumSicurezza()
+    {
+        return $this->illum_sicurezza;
+    }
+
+    /**
+     * Set spd
+     *
+     * @param integer $spd
+     *
+     * @return Expertations
+     */
+    public function setSpd($spd)
+    {
+        $this->spd = $spd;
+
+        return $this;
+    }
+
+    /**
+     * Get spd
+     *
+     * @return integer
+     */
+    public function getSpd()
+    {
+        return $this->spd;
+    }
+
+    /**
+     * Set impAusiliari
+     *
+     * @param integer $impAusiliari
+     *
+     * @return Expertations
+     */
+    public function setImpAusiliari($impAusiliari)
+    {
+        $this->imp_ausiliari = $impAusiliari;
+
+        return $this;
+    }
+
+    /**
+     * Get impAusiliari
+     *
+     * @return integer
+     */
+    public function getImpAusiliari()
+    {
+        return $this->imp_ausiliari;
     }
 }

@@ -216,25 +216,13 @@
                         jQuery(document).ready(function () {
                             jQuery('.add-another-collection-widget').click(function (e) {
                                 var list = jQuery(jQuery(this).attr('data-list'));
-                                // Try to find the counter of the list
                                 var counter = list.data('widget-counter') | list.children().length;
-                                // If the counter does not exist, use the length of the list
                                 if (!counter) { counter = list.children().length; }
-
-                                // grab the prototype template
                                 var newWidget = list.attr('data-prototype');
-                                // replace the "__name__" used in the id and name of the prototype
-                                // with a number that's unique to your emails
-                                // end name attribute looks like name="contact[emails][2]"
                                 newWidget = newWidget.replace(/__name__/g, counter);
-                                // call changed
                                 changed(counter);
-                                // Increase the counter
                                 counter++;
-                                // And store it, the length cannot be used if deleting widgets is allowed
                                 list.data(' widget-counter', counter);
-
-                                // create a new list element and add it to the list
                                 var newElem = jQuery(list.attr('data-widget-tags')).append(newWidget);
                                 newElem.appendTo(list);
                             });
@@ -243,6 +231,64 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-2 grid-margin stretch-card">
+                                <div class="input-group">
+                                    {{ form_label(form.num_circuiti) }}
+                                    {{ form_widget(form.num_circuiti) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-2 grid-margin stretch-card">
+                                <div class="input-group">
+                                    {{ form_label(form.num_prese_telefono_dati) }}
+                                    {{ form_widget(form.num_prese_telefono_dati) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-2 grid-margin stretch-card">
+                                <div class="input-group">
+                                    {{ form_label(form.illum_sicurezza) }}
+                                    {{ form_widget(form.illum_sicurezza) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-2 grid-margin stretch-card">
+                                <div class="input-group">
+                                    {{ form_label(form.spd) }}
+                                    {{ form_widget(form.spd) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-4 grid-margin stretch-card">
+                                <div class="input-group">
+                                    {{ form_label(form.imp_ausiliari) }}
+                                    {{ form_widget(form.imp_ausiliari) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).on('change', '#form_square_meters', function () {
+                getData(1,'#form_num_circuiti');
+                getData(2,'#form_num_prese_telefono_dati');
+                getData(3,'#form_illum_sicurezza');
+            });
+            function getData(tipo,dest) {
+                meters = $("#form_square_meters").val();
+                level = $("#form_level").val();
+                $.ajax({
+                    url: '../ajax/expertations/get/quadri/' + tipo + '/' + level + '/' + meters,
+                    dataType: 'html',
+                    success: function (data) {
+                        $(dest).val(data);
+                    }
+                })
+            }
+        </script>
         <div class="row">
             <div class="col-9"></div>
             <div class="col-3">

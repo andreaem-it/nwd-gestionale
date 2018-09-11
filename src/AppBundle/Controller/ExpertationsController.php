@@ -213,6 +213,27 @@ class ExpertationsController extends Controller
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
             ])
+
+            ->add('num_circuiti', IntegerType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Circuiti'
+            ])
+            ->add('num_prese_telefono_dati', IntegerType::class, [
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Prese Telefono/Dati'
+            ])
+            ->add('illum_sicurezza', IntegerType::class, [
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Illuminazione Sicurezza'
+            ])
+            ->add('spd', IntegerType::class, [
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'SPD'
+            ])
+            ->add('imp_ausiliari', ChoiceType::class, [
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Impianti Ausiliari / Risparmio Energetico'
+            ])
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-lg'],
                 'label' => 'Genera'
@@ -267,6 +288,34 @@ class ExpertationsController extends Controller
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
+    }
+
+    /**
+     * @Route("ajax/expertations/get/quadri/{tipo}/{level}/{meters}", name="ajax_get_expertations_quadri")
+     */
+    public function AjaxEGQ($tipo, $level, $meters) {
+
+        $quadri = $this->getDoctrine()->getManager()->getRepository('AppBundle:Quadri_Elettrici')
+            ->createQueryBuilder('r')
+            ->select('r.numero')
+            ->where('r.livello = :livello')
+            ->andWhere('r.tipo = :tipo')
+            ->andWhere('r.areaDa < :meters')
+            ->andWhere('r.areaA > :meters')
+            ->setParameter('livello', $level)
+            ->setParameter('tipo', $tipo)
+            ->setParameter('meters', $meters)
+            ->getQuery()
+            ->getScalarResult();
+
+        /*$serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
+        $json = $serializer->serialize($quadri, 'json');
+
+        $response = new Response();
+        $response->setContent($json);
+        $response->headers->set('Content-Type', 'application/json');*/
+
+        return new Response($quadri[0]['numero']);
     }
 
     /**

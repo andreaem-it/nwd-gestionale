@@ -369,25 +369,13 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
                         jQuery(document).ready(function () {
                             jQuery('.add-another-collection-widget').click(function (e) {
                                 var list = jQuery(jQuery(this).attr('data-list'));
-                                // Try to find the counter of the list
                                 var counter = list.data('widget-counter') | list.children().length;
-                                // If the counter does not exist, use the length of the list
                                 if (!counter) { counter = list.children().length; }
-
-                                // grab the prototype template
                                 var newWidget = list.attr('data-prototype');
-                                // replace the \"__name__\" used in the id and name of the prototype
-                                // with a number that's unique to your emails
-                                // end name attribute looks like name=\"contact[emails][2]\"
                                 newWidget = newWidget.replace(/__name__/g, counter);
-                                // call changed
                                 changed(counter);
-                                // Increase the counter
                                 counter++;
-                                // And store it, the length cannot be used if deleting widgets is allowed
                                 list.data(' widget-counter', counter);
-
-                                // create a new list element and add it to the list
                                 var newElem = jQuery(list.attr('data-widget-tags')).append(newWidget);
                                 newElem.appendTo(list);
                             });
@@ -397,12 +385,100 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
             </div>
         </div>
         <div class=\"row\">
+            <div class=\"col-lg-12\">
+                <div class=\"card mt-3\">
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    ";
+        // line 241
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "num_circuiti", array()), 'label');
+        echo "
+                                    ";
+        // line 242
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "num_circuiti", array()), 'widget');
+        echo "
+                                </div>
+                            </div>
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    ";
+        // line 247
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "num_prese_telefono_dati", array()), 'label');
+        echo "
+                                    ";
+        // line 248
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "num_prese_telefono_dati", array()), 'widget');
+        echo "
+                                </div>
+                            </div>
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    ";
+        // line 253
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "illum_sicurezza", array()), 'label');
+        echo "
+                                    ";
+        // line 254
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "illum_sicurezza", array()), 'widget');
+        echo "
+                                </div>
+                            </div>
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    ";
+        // line 259
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "spd", array()), 'label');
+        echo "
+                                    ";
+        // line 260
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "spd", array()), 'widget');
+        echo "
+                                </div>
+                            </div>
+                            <div class=\"col-lg-4 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    ";
+        // line 265
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "imp_ausiliari", array()), 'label');
+        echo "
+                                    ";
+        // line 266
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "imp_ausiliari", array()), 'widget');
+        echo "
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            \$(document).on('change', '#form_square_meters', function () {
+                getData(1,'#form_num_circuiti');
+                getData(2,'#form_num_prese_telefono_dati');
+                getData(3,'#form_illum_sicurezza');
+            });
+            function getData(tipo,dest) {
+                meters = \$(\"#form_square_meters\").val();
+                level = \$(\"#form_level\").val();
+                \$.ajax({
+                    url: '../ajax/expertations/get/quadri/' + tipo + '/' + level + '/' + meters,
+                    dataType: 'html',
+                    success: function (data) {
+                        \$(dest).val(data);
+                    }
+                })
+            }
+        </script>
+        <div class=\"row\">
             <div class=\"col-9\"></div>
             <div class=\"col-3\">
                 <div class=\"card mt-3 \">
                     <div class=\"card-body pt-2 pb-4\">
                         ";
-        // line 251
+        // line 297
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "submit", array()), 'widget');
         echo "
                         <a href=\"\" class=\"btn btn-outline-danger btn-block\">Annulla</a>
@@ -412,7 +488,7 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
         </div>
 
         ";
-        // line 258
+        // line 304
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
     </div>
@@ -454,7 +530,7 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
 
     }
 
-    // line 290
+    // line 336
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -463,20 +539,20 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 291
+        // line 337
         echo "    <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/scrollbar.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 292
+        // line 338
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/fontawesome.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 293
+        // line 339
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/fontawesome.all.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 294
+        // line 340
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -488,7 +564,7 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
 
     }
 
-    // line 296
+    // line 342
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -497,12 +573,12 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 297
+        // line 343
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/scrollbar.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 298
+        // line 344
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
@@ -526,7 +602,7 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
 
     public function getDebugInfo()
     {
-        return array (  506 => 298,  501 => 297,  492 => 296,  480 => 294,  476 => 293,  472 => 292,  467 => 291,  458 => 290,  416 => 258,  406 => 251,  320 => 168,  301 => 152,  295 => 149,  289 => 146,  283 => 143,  277 => 140,  271 => 137,  217 => 86,  213 => 85,  205 => 80,  201 => 79,  185 => 66,  181 => 65,  173 => 60,  169 => 59,  161 => 54,  157 => 53,  149 => 48,  145 => 47,  137 => 42,  133 => 41,  125 => 36,  121 => 35,  113 => 30,  109 => 29,  99 => 22,  93 => 19,  89 => 18,  79 => 11,  70 => 4,  61 => 3,  43 => 2,  11 => 1,);
+        return array (  582 => 344,  577 => 343,  568 => 342,  556 => 340,  552 => 339,  548 => 338,  543 => 337,  534 => 336,  492 => 304,  482 => 297,  448 => 266,  444 => 265,  436 => 260,  432 => 259,  424 => 254,  420 => 253,  412 => 248,  408 => 247,  400 => 242,  396 => 241,  320 => 168,  301 => 152,  295 => 149,  289 => 146,  283 => 143,  277 => 140,  271 => 137,  217 => 86,  213 => 85,  205 => 80,  201 => 79,  185 => 66,  181 => 65,  173 => 60,  169 => 59,  161 => 54,  157 => 53,  149 => 48,  145 => 47,  137 => 42,  133 => 41,  125 => 36,  121 => 35,  113 => 30,  109 => 29,  99 => 22,  93 => 19,  89 => 18,  79 => 11,  70 => 4,  61 => 3,  43 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -757,25 +833,13 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
                         jQuery(document).ready(function () {
                             jQuery('.add-another-collection-widget').click(function (e) {
                                 var list = jQuery(jQuery(this).attr('data-list'));
-                                // Try to find the counter of the list
                                 var counter = list.data('widget-counter') | list.children().length;
-                                // If the counter does not exist, use the length of the list
                                 if (!counter) { counter = list.children().length; }
-
-                                // grab the prototype template
                                 var newWidget = list.attr('data-prototype');
-                                // replace the \"__name__\" used in the id and name of the prototype
-                                // with a number that's unique to your emails
-                                // end name attribute looks like name=\"contact[emails][2]\"
                                 newWidget = newWidget.replace(/__name__/g, counter);
-                                // call changed
                                 changed(counter);
-                                // Increase the counter
                                 counter++;
-                                // And store it, the length cannot be used if deleting widgets is allowed
                                 list.data(' widget-counter', counter);
-
-                                // create a new list element and add it to the list
                                 var newElem = jQuery(list.attr('data-widget-tags')).append(newWidget);
                                 newElem.appendTo(list);
                             });
@@ -784,6 +848,64 @@ class __TwigTemplate_5c1cd2968b83439a7eb1ecc6884b88aa080fa1ced05cea4dd649e4fbae6
                 </div>
             </div>
         </div>
+        <div class=\"row\">
+            <div class=\"col-lg-12\">
+                <div class=\"card mt-3\">
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    {{ form_label(form.num_circuiti) }}
+                                    {{ form_widget(form.num_circuiti) }}
+                                </div>
+                            </div>
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    {{ form_label(form.num_prese_telefono_dati) }}
+                                    {{ form_widget(form.num_prese_telefono_dati) }}
+                                </div>
+                            </div>
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    {{ form_label(form.illum_sicurezza) }}
+                                    {{ form_widget(form.illum_sicurezza) }}
+                                </div>
+                            </div>
+                            <div class=\"col-lg-2 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    {{ form_label(form.spd) }}
+                                    {{ form_widget(form.spd) }}
+                                </div>
+                            </div>
+                            <div class=\"col-lg-4 grid-margin stretch-card\">
+                                <div class=\"input-group\">
+                                    {{ form_label(form.imp_ausiliari) }}
+                                    {{ form_widget(form.imp_ausiliari) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            \$(document).on('change', '#form_square_meters', function () {
+                getData(1,'#form_num_circuiti');
+                getData(2,'#form_num_prese_telefono_dati');
+                getData(3,'#form_illum_sicurezza');
+            });
+            function getData(tipo,dest) {
+                meters = \$(\"#form_square_meters\").val();
+                level = \$(\"#form_level\").val();
+                \$.ajax({
+                    url: '../ajax/expertations/get/quadri/' + tipo + '/' + level + '/' + meters,
+                    dataType: 'html',
+                    success: function (data) {
+                        \$(dest).val(data);
+                    }
+                })
+            }
+        </script>
         <div class=\"row\">
             <div class=\"col-9\"></div>
             <div class=\"col-3\">

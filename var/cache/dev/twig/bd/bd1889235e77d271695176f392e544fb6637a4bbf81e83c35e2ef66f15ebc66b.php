@@ -68,12 +68,12 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
         echo "<div class=\"main-panel\">
     <div class=\"content-wrapper\">
         <div class=\"row\">
-            <div class=\"col-12\">
+            <div class=\"col-lg-12\">
                 <h3>Preventivi <small>Mostra</small></h3>
             </div>
         </div>
         <div class=\"row\">
-            <div class=\"col-4\">
+            <div class=\"col-lg-4\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <div class=\"card-title\">
@@ -108,14 +108,14 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
                     </div>
                 </div>
             </div>
-            <div class=\"col-8\">
+            <div class=\"col-lg-8\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <div class=\"card-title\">
                             <h5>Abitazione</h5>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6\">
+                            <div class=\"col-lg-6\">
                                 <strong>Tipo impianto:</strong>  ";
         // line 33
         echo twig_escape_filter($this->env, $this->getAttribute(($context["functions"] ?? $this->getContext($context, "functions")), "plantIntToName", array(0 => $this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "tipo", array())), "method"), "html", null, true);
@@ -137,7 +137,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
         }
         echo "<br/>
                             </div>
-                            <div class=\"col-6\">
+                            <div class=\"col-lg-6\">
                                 <strong>Livello impianto:</strong> ";
         // line 39
         echo twig_escape_filter($this->env, $this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "level", array()), "html", null, true);
@@ -149,8 +149,18 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
                                 <strong>Metratura ambienti:</strong> ";
         // line 41
         echo twig_escape_filter($this->env, $this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "squareMeters", array()), "html", null, true);
-        echo " m²
-                            </div>
+        echo " m² <br />
+                                <strong>Opere murarie:</strong> ";
+        // line 42
+        if (($this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "opereMurarie", array()) == 0)) {
+            echo " No ";
+        } elseif (($this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "opereMurarie", array()) == 1)) {
+            echo " Intonaco ";
+        } elseif (($this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "opereMurarie", array()) == 2)) {
+            echo " Mattone/Pietra ";
+        }
+        // line 43
+        echo "                            </div>
                         </div>
 
                     </div>
@@ -158,7 +168,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
             </div>
         </div>
         <div class=\"row mt-4\">
-            <div class=\"col-12\">
+            <div class=\"col-lg-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <h5 class=\"card-title\">
@@ -187,18 +197,18 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
                                     </th>
                                 </tr>
                                 ";
-        // line 78
+        // line 79
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "floor", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["itm"]) {
-            // line 79
+            // line 80
             echo "                                    <tr>
                                         <td>
                                             1
                                         </td>
                                         <td>
                                            ";
-            // line 84
+            // line 85
             echo twig_escape_filter($this->env, $this->getAttribute(($context["functions"] ?? $this->getContext($context, "functions")), "convertAIDtoName", array(0 => 4), "method"), "html", null, true);
             echo "
                                         </td>
@@ -220,7 +230,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['itm'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 100
+        // line 101
         echo "                            </tbody>
                         </table>
                     </div>
@@ -228,42 +238,42 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
             </div>
         </div>
         <div class=\"row\">
-            <div class=\"col-8\"></div>
-            <div class=\"col-4\">
+            <div class=\"col-lg-8\"></div>
+            <div class=\"col-lg-4\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 Totale
                             </div>
-                            <div class=\"col-6 text-right text-black\">
+                            <div class=\"col-lg-6 text-right text-black\">
                                 0.00 €
                             </div>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 IVA
                             </div>
-                            <div class=\"col-6 text-right\">
+                            <div class=\"col-lg-6 text-right\">
                                 0.00 €
                             </div>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 Sconto (";
-        // line 129
+        // line 130
         echo twig_escape_filter($this->env, $this->getAttribute(($context["item"] ?? $this->getContext($context, "item")), "sconto", array()), "html", null, true);
         echo " %)
                             </div>
-                            <div class=\"col-6 text-right\">
+                            <div class=\"col-lg-6 text-right\">
                                 0.00 €
                             </div>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 <strong>Totale</strong>
                             </div>
-                            <div class=\"col-6 text-right\">
+                            <div class=\"col-lg-6 text-right\">
                                 <strong>0.00 €</strong>
                             </div>
                         </div>
@@ -274,7 +284,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
     </div>
 </div>
     ";
-        // line 149
+        // line 150
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\DumpExtension')->dump($this->env, $context, ($context["item"] ?? $this->getContext($context, "item")));
         echo "
 ";
@@ -298,7 +308,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
 
     public function getDebugInfo()
     {
-        return array (  278 => 149,  255 => 129,  224 => 100,  202 => 84,  195 => 79,  191 => 78,  151 => 41,  147 => 40,  143 => 39,  133 => 36,  129 => 35,  125 => 34,  121 => 33,  104 => 21,  98 => 20,  88 => 19,  84 => 18,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  288 => 150,  265 => 130,  234 => 101,  212 => 85,  205 => 80,  201 => 79,  163 => 43,  155 => 42,  151 => 41,  147 => 40,  143 => 39,  133 => 36,  129 => 35,  125 => 34,  121 => 33,  104 => 21,  98 => 20,  88 => 19,  84 => 18,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -317,12 +327,12 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
 <div class=\"main-panel\">
     <div class=\"content-wrapper\">
         <div class=\"row\">
-            <div class=\"col-12\">
+            <div class=\"col-lg-12\">
                 <h3>Preventivi <small>Mostra</small></h3>
             </div>
         </div>
         <div class=\"row\">
-            <div class=\"col-4\">
+            <div class=\"col-lg-4\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <div class=\"card-title\">
@@ -335,23 +345,24 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
                     </div>
                 </div>
             </div>
-            <div class=\"col-8\">
+            <div class=\"col-lg-8\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <div class=\"card-title\">
                             <h5>Abitazione</h5>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6\">
+                            <div class=\"col-lg-6\">
                                 <strong>Tipo impianto:</strong>  {{ functions.plantIntToName(item.tipo) }}<br/>
                                 <strong>Piani edificio:</strong>  {{ item.pianiCasa }}<br/>
                                 <strong>Riscaldamento:</strong>  {{ functions.heatingIntToName(item.riscaldamento) }} <br/>
                                 <strong>Trifase:</strong>  {% if item.trifase == true %} Si {% elseif item.trifase == false %} No {% endif %}<br/>
                             </div>
-                            <div class=\"col-6\">
+                            <div class=\"col-lg-6\">
                                 <strong>Livello impianto:</strong> {{ item.level }} <br/>
                                 <strong>Fornitura elettrica:</strong> {{ item.kw }} Kw <br/>
-                                <strong>Metratura ambienti:</strong> {{ item.squareMeters }} m²
+                                <strong>Metratura ambienti:</strong> {{ item.squareMeters }} m² <br />
+                                <strong>Opere murarie:</strong> {% if item.opereMurarie == 0 %} No {% elseif item.opereMurarie == 1 %} Intonaco {% elseif item.opereMurarie == 2 %} Mattone/Pietra {% endif %}
                             </div>
                         </div>
 
@@ -360,7 +371,7 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
             </div>
         </div>
         <div class=\"row mt-4\">
-            <div class=\"col-12\">
+            <div class=\"col-lg-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <h5 class=\"card-title\">
@@ -417,39 +428,39 @@ class __TwigTemplate_aae222f9a77f00a1dd362fa87c8f713e0e54e88a69a92aa99638241259e
             </div>
         </div>
         <div class=\"row\">
-            <div class=\"col-8\"></div>
-            <div class=\"col-4\">
+            <div class=\"col-lg-8\"></div>
+            <div class=\"col-lg-4\">
                 <div class=\"card\">
                     <div class=\"card-body\">
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 Totale
                             </div>
-                            <div class=\"col-6 text-right text-black\">
+                            <div class=\"col-lg-6 text-right text-black\">
                                 0.00 €
                             </div>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 IVA
                             </div>
-                            <div class=\"col-6 text-right\">
+                            <div class=\"col-lg-6 text-right\">
                                 0.00 €
                             </div>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 Sconto ({{ item.sconto }} %)
                             </div>
-                            <div class=\"col-6 text-right\">
+                            <div class=\"col-lg-6 text-right\">
                                 0.00 €
                             </div>
                         </div>
                         <div class=\"row\">
-                            <div class=\"col-6 text-left\">
+                            <div class=\"col-lg-6 text-left\">
                                 <strong>Totale</strong>
                             </div>
-                            <div class=\"col-6 text-right\">
+                            <div class=\"col-lg-6 text-right\">
                                 <strong>0.00 €</strong>
                             </div>
                         </div>
