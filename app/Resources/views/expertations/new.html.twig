@@ -70,6 +70,54 @@
                 </div>
             </div>
         </div>
+        {#<div class="row">
+            <div class="col-lg-12">
+                <div class="card mt-3">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>#}
+        <script>
+            $(document).on('change', '#form_square_meters', function () {
+                dataChanged();
+
+            });
+            $(document).on('change', '#form_level', function() {
+                dataChanged();
+            });
+            function getData(tipo,dest) {
+
+                $.ajax({
+                    url: '../ajax/expertations/get/quadri/' + tipo + '/' + level + '/' + meters,
+                    dataType: 'html',
+                    success: function (data) {
+                        $(dest).val(data);
+                    }
+                })
+            }
+            function dataChanged() {
+                meters = $("#form_square_meters").val();
+                level = $("#form_level").val();
+
+                getData(1,'#form_num_circuiti');
+                getData(2,'#form_num_prese_telefono_dati');
+                getData(3,'#form_illum_sicurezza');
+                if (level === "1") {
+                    $('#form_spd').val("1");
+                    $('#form_imp_ausiliari').val("1");
+                }
+                if (level === "2") {
+                    $('#form_spd').val("1");
+                    $('#form_imp_ausiliari').val("2");
+                }
+                if (level === "3") {
+                    $('#form_spd').val("2");
+                    $('#form_imp_ausiliari').val("3");
+                }
+            }
+        </script>
         <div class="mt-3">
             <div class="card">
                 <div class="card-body">
@@ -80,16 +128,48 @@
                                 {{ form_widget(form.level) }}
                             </div>
                         </div>
-                        <div class="col-lg-3 grid-margin stretch-card">
+                        <div class="col-lg-2 grid-margin stretch-card">
                             <div class="input-group">
                                 {{ form_label(form.square_meters) }}
                                 {{ form_widget(form.square_meters) }}
                             </div>
                         </div>
                         <div class="col-lg-3"></div>
-                        <div class="col-lg-3 grid-margin stretch-card">
+                        {#<div class="col-lg-3 grid-margin stretch-card">
                             <div class="mt-5">
                                 <h4>Totale Preliminare: <span id="total" class="text-success text-right">0.00 €</span></h4>
+                            </div>
+                        </div>#}
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1 grid-margin stretch-card">
+                            <div class="input-group">
+                                {{ form_label(form.num_circuiti) }}
+                                {{ form_widget(form.num_circuiti) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-2 grid-margin stretch-card">
+                            <div class="input-group">
+                                {{ form_label(form.num_prese_telefono_dati) }}
+                                {{ form_widget(form.num_prese_telefono_dati) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-2 grid-margin stretch-card">
+                            <div class="input-group">
+                                {{ form_label(form.illum_sicurezza) }}
+                                {{ form_widget(form.illum_sicurezza) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-3 grid-margin stretch-card">
+                            <div class="input-group">
+                                {{ form_label(form.spd) }}
+                                {{ form_widget(form.spd) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-4 grid-margin stretch-card">
+                            <div class="input-group">
+                                {{ form_label(form.imp_ausiliari) }}
+                                {{ form_widget(form.imp_ausiliari) }}
                             </div>
                         </div>
                     </div>
@@ -173,7 +253,7 @@
                             function changed(item) {
                                 $(document).on('change', '#form_ambient_' + item, function () {
                                     val = $("#form_ambient_" + item).val();
-                                    level = $("#form_level").val()
+                                    level = $("#form_level").val();
                                     console.log(val);
                                     $.ajax({
                                         url: '../ajax/expertations/get/outlets/' + level + "/" + val,
@@ -221,6 +301,7 @@
                                 var newWidget = list.attr('data-prototype');
                                 newWidget = newWidget.replace(/__name__/g, counter);
                                 changed(counter);
+                                dataChanged();
                                 counter++;
                                 list.data(' widget-counter', counter);
                                 var newElem = jQuery(list.attr('data-widget-tags')).append(newWidget);
@@ -231,71 +312,20 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card mt-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-2 grid-margin stretch-card">
-                                <div class="input-group">
-                                    {{ form_label(form.num_circuiti) }}
-                                    {{ form_widget(form.num_circuiti) }}
-                                </div>
-                            </div>
-                            <div class="col-lg-2 grid-margin stretch-card">
-                                <div class="input-group">
-                                    {{ form_label(form.num_prese_telefono_dati) }}
-                                    {{ form_widget(form.num_prese_telefono_dati) }}
-                                </div>
-                            </div>
-                            <div class="col-lg-2 grid-margin stretch-card">
-                                <div class="input-group">
-                                    {{ form_label(form.illum_sicurezza) }}
-                                    {{ form_widget(form.illum_sicurezza) }}
-                                </div>
-                            </div>
-                            <div class="col-lg-2 grid-margin stretch-card">
-                                <div class="input-group">
-                                    {{ form_label(form.spd) }}
-                                    {{ form_widget(form.spd) }}
-                                </div>
-                            </div>
-                            <div class="col-lg-4 grid-margin stretch-card">
-                                <div class="input-group">
-                                    {{ form_label(form.imp_ausiliari) }}
-                                    {{ form_widget(form.imp_ausiliari) }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-            $(document).on('change', '#form_square_meters', function () {
-                getData(1,'#form_num_circuiti');
-                getData(2,'#form_num_prese_telefono_dati');
-                getData(3,'#form_illum_sicurezza');
-            });
-            function getData(tipo,dest) {
-                meters = $("#form_square_meters").val();
-                level = $("#form_level").val();
-                $.ajax({
-                    url: '../ajax/expertations/get/quadri/' + tipo + '/' + level + '/' + meters,
-                    dataType: 'html',
-                    success: function (data) {
-                        $(dest).val(data);
-                    }
-                })
-            }
-        </script>
+
         <div class="row">
             <div class="col-9"></div>
             <div class="col-3">
-                <div class="card mt-3 ">
+                <div class="card card-generate ">
                     <div class="card-body pt-2 pb-4">
-                        {{ form_widget(form.submit) }}
-                        <a href="" class="btn btn-outline-danger btn-block">Annulla</a>
+                        <div class="row">
+                            <div class="col-6">
+                                {{ form_widget(form.submit) }}
+                            </div>
+                            <div class="col-6">
+                                <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3">Annulla</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -325,6 +355,20 @@
         }
         .tbl-lg {
             min-width: 250px;
+        }
+        .card-generate {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-top-left-radius: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .card-generate {
+                position: fixed;
+                width: 100%;
+            }
         }
     </style>
     <script>

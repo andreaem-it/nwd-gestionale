@@ -3,13 +3,13 @@
 {% block body %}
 <div class="main-panel">
     <div class="content-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
+        <div class="row top-title">
+            <div class="col-sm-12">
                 <h3>Preventivi <small>Mostra</small></h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
@@ -22,20 +22,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-sm-8">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
                             <h5>Abitazione</h5>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-sm-6">
                                 <strong>Tipo impianto:</strong>  {{ functions.plantIntToName(item.tipo) }}<br/>
                                 <strong>Piani edificio:</strong>  {{ item.pianiCasa }}<br/>
                                 <strong>Riscaldamento:</strong>  {{ functions.heatingIntToName(item.riscaldamento) }} <br/>
                                 <strong>Trifase:</strong>  {% if item.trifase == true %} Si {% elseif item.trifase == false %} No {% endif %}<br/>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-6">
                                 <strong>Livello impianto:</strong> {{ item.level }} <br/>
                                 <strong>Fornitura elettrica:</strong> {{ item.kw }} Kw <br/>
                                 <strong>Metratura ambienti:</strong> {{ item.squareMeters }} m² <br />
@@ -48,10 +48,10 @@
             </div>
         </div>
         <div class="row mt-4">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">
+                        <h5 class="card-title title-dettagli">
                             Dettaglio Preventivo
                         </h5>
                         <table class="table table-hover">
@@ -79,13 +79,13 @@
                                 {% for itm in item.floor %}
                                     <tr>
                                         <td>
-                                            1
+                                            {{ itm }}
                                         </td>
                                         <td>
-                                           {{ functions.convertAIDtoName(4) }}
+                                           {{ functions.convertAIDtoName(itm) }}
                                         </td>
                                         <td>
-                                            Prova
+                                            {{ itm }}
                                         </td>
                                         <td>
                                             0
@@ -100,44 +100,69 @@
                                 {% endfor %}
                             </tbody>
                         </table>
+                        <div class="row mt-5">
+                            <div class="col-3">
+                                <strong>Circuiti:</strong>&nbsp; {{ item.numCircuiti }}
+                            </div>
+                            <div class="col-3">
+                                <strong>Prese Telefono / Dati:</strong>&nbsp; {{ item.numPreseTelefonoDati }}
+                            </div>
+                            <div class="col-4">
+                                <strong>Dispositivi per l'illuminazione di sicurezza:</strong>&nbsp; {{ item.illumSicurezza }}
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <strong>SPD:</strong>&nbsp;
+                                {% if item.spd == 1 %}SPD ad arrivo linea per rendere tollerabile il rischio R1 {% endif %}
+                                {% if item.spd == 2 %}SPD ad arrivo linea per rendere tollerabile il rischio R1 e ai fini della protezione contro le sovratensioni {% endif %}
+                            </div>
+                            <div class="col-6">
+                                <strong>Impianti ausiliari e risparmio energetico:</strong>&nbsp;
+                                {% if item.impAusiliari == 1 %}Campanello, citofono e videocitofono {% endif %}
+                                {% if item.impAusiliari == 2 %}Campanello, citofono e antintrusione, Controllo carichi {% endif %}
+                                {% if item.impAusiliari == 3 %}Campanello, citofono e antintrusione, Controllo carichi, Domotica {% endif %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-lg-8"></div>
-            <div class="col-lg-4">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-6 text-left">
+                            <div class="col-sm-6 text-left">
                                 Totale
                             </div>
-                            <div class="col-lg-6 text-right text-black">
+                            <div class="col-sm-6 text-right text-black">
                                 0.00 €
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 text-left">
+                            <div class="col-sm-6 text-left">
                                 IVA
                             </div>
-                            <div class="col-lg-6 text-right">
+                            <div class="col-sm-6 text-right">
                                 0.00 €
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 text-left">
+                            <div class="col-sm-6 text-left">
                                 Sconto ({{ item.sconto }} %)
                             </div>
-                            <div class="col-lg-6 text-right">
+                            <div class="col-sm-6 text-right">
                                 0.00 €
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 text-left">
+                            <div class="col-sm-6 text-left">
                                 <strong>Totale</strong>
                             </div>
-                            <div class="col-lg-6 text-right">
+                            <div class="col-sm-6 text-right">
                                 <strong>0.00 €</strong>
                             </div>
                         </div>
@@ -147,5 +172,35 @@
         </div>
     </div>
 </div>
-    {{ dump(item) }}
+    {#{{ dump(item) }}#}
+{% endblock %}
+{% block stylesheets %}
+<style>
+    @media print {
+        .sidebar {
+            display: none;
+        }
+        .footer {
+            display: none;
+        }
+        .sf-toolbar {
+            display: none;
+        }
+        .top-title {
+            display: none;
+        }
+        .navbar {
+            display: none;
+        }
+        .navbar-toggler {
+            display: none;
+        }
+        .title-dettagli {
+            display: none;
+        }
+        .brand-logo-mini img {
+            margin-left: 3vw;
+        }
+    }
+</style>
 {% endblock %}

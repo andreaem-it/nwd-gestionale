@@ -226,16 +226,25 @@ class ExpertationsController extends Controller
                 'attr' => ['class' => 'form-control'] ,
                 'label' => 'Illuminazione Sicurezza'
             ])
-            ->add('spd', IntegerType::class, [
+            ->add('spd', ChoiceType::class, [
+                'choices' => [
+                    'SPD ad arrivo linea, Tolleranza R1' => 1,
+                    'SPD ad arrivo linea, Tolleranza R1, Protezione sovratensioni' => 2
+                ],
                 'attr' => ['class' => 'form-control'] ,
                 'label' => 'SPD'
             ])
             ->add('imp_ausiliari', ChoiceType::class, [
+                'choices' => [
+                    'Campanello, citofono e videocitofono' => 1,
+                    'Campanello, citofono e antintrusione, Controllo carichi' => 2,
+                    'Campanello, citofono e antintrusione, Controllo carichi, Domotica' => 3
+                ],
                 'attr' => ['class' => 'form-control'] ,
                 'label' => 'Impianti Ausiliari / Risparmio Energetico'
             ])
             ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-lg'],
+                'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
                 'label' => 'Genera'
             ])
             ->getForm();
@@ -307,13 +316,6 @@ class ExpertationsController extends Controller
             ->setParameter('meters', $meters)
             ->getQuery()
             ->getScalarResult();
-
-        /*$serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
-        $json = $serializer->serialize($quadri, 'json');
-
-        $response = new Response();
-        $response->setContent($json);
-        $response->headers->set('Content-Type', 'application/json');*/
 
         return new Response($quadri[0]['numero']);
     }
