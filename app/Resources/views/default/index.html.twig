@@ -1,5 +1,120 @@
 {% extends 'base.html.twig' %}
 {% block title %}Dashboard{% endblock %}
 {% block body %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row top-title">
+            <div class="col-sm-12">
+                <h3>Dashboard <small> Benvenuto, {{ app.user.username }} !</small></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 mt-4">
+                <div class="card card-revenue" id="widget-1">
+                    <div class="card-body pb-0" style="min-height: 150px">
+                        <div class="row">
+                            <div class="col-9">
+                                <h3>Oggi</h3>
+                                <h1 class="mt-3 time card-title text-white" style="font-size: 20px">{{ "now"|date("d/m/Y H:i:s") }}</h1>
+                            </div>
+                            <div class="col-3">
+                                <i class="mdi mdi-clock text-white" style="font-size: 3em"></i>
+                            </div>
+                        </div>
+                        <script>
+                            var clock = 0;
+                            var interval_msec = 1000;
+                            $(document).ready( function() {
+                                clock = setTimeout("UpdateClock()", interval_msec);
+                            });
+                            function UpdateClock(){
+                                clearTimeout(clock);
+                                var dt_now = new Date();
+                                var hh	= dt_now.getUTCHours();
+                                var mm	= dt_now.getUTCMinutes();
+                                var ss	= dt_now.getUTCSeconds();
+                                var dd  = dt_now.getUTCDate();
+                                var mo  = dt_now.getUTCMonth() + 1;
+                                var yy  = dt_now.getUTCFullYear();
+                                if(dd < 10){
+                                    dd = "0" + dd;
+                                }
+                                if(mo < 10){
+                                    mo = "0" + mo;
+                                }
+                                if(hh < 10){
+                                    hh = "0" + hh;
+                                }
+                                if(mm < 10){
+                                    mm = "0" + mm;
+                                }
+                                if(ss < 10){
+                                    ss = "0" + ss;
+                                }
+                                $(".time").html(dd + "/" + mo + "/" + yy + " " + hh + ":" + mm + ":" + ss);
+                                clock = setTimeout("UpdateClock()", interval_msec);
+
+                            }
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 mt-4">
+                <div class="card card-revenue" id="widget-2">
+                    <div class="card-body pb-0" style="min-height: 150px">
+                        <div class="row">
+                            <div class="col-9">
+                                <h3>Preventivi</h3>
+                                <h1 class="mt-3 card-title text-white" style="font-size: 20px">0</h1>
+                            </div>
+                            <div class="col-3">
+                                <i class="mdi mdi-file-document text-white" style="font-size: 3em"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        $('#widget-1').hover( function() {
+            zoom('#widget-1');
+        });
+        $('#widget-2').hover( function() {
+            zoom('#widget-2');
+        });
+
+        function zoom(item) {
+            $(item).toggleClass('zoomOut','zoom');
+        }
+    </script>
+    <style>
+        .zoom {
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .5s ease-in-out;
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            font-size: 32px!important;
+        }
+        .zoomOut {
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+            font-size: 20px!important;
+        }
+    </style>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.all.min.css') }}">
 
 {% endblock %}

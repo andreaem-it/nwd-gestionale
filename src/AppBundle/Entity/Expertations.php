@@ -120,44 +120,44 @@ class Expertations
     private $square_meters;
 
     /**
-     * @var string
+     * @var array
      *
-     * @ORM\Column(name="floor", type="simple_array",nullable=true)
+     * @ORM\Column(name="floor", type="array",nullable=true)
      */
     private $floor;
 
     /**
-     * @var string
+     * @var array
      *
-     * @ORM\Column(name="ambient", type="simple_array",nullable=true)
+     * @ORM\Column(name="ambient", type="array",nullable=true)
      */
     private $ambient;
 
     /**
-     * @var string
+     * @var array
      *
-     * @ORM\Column(name="name", type="simple_array",nullable=true)
+     * @ORM\Column(name="name", type="array",nullable=true)
      */
     private $name;
 
     /**
-     * @var string
+     * @var array
      *
-     * @ORM\Column(name="pp", type="simple_array",nullable=true)
+     * @ORM\Column(name="pp", type="array",nullable=true)
      */
     private $pp;
 
     /**
-     * @var string
+     * @var array
      *
-     * @ORM\Column(name="pl", type="simple_array",nullable=true)
+     * @ORM\Column(name="pl", type="array",nullable=true)
      */
     private $pl;
 
     /**
-     * @var string
+     * @var array
      *
-     * @ORM\Column(name="pt", type="simple_array",nullable=true)
+     * @ORM\Column(name="pt", type="array",nullable=true)
      */
     private $pt;
 
@@ -202,7 +202,7 @@ class Expertations
      */
     public  function __toString()
     {
-        return $this->id;
+        return (integer) $this->id;
     }
 
 

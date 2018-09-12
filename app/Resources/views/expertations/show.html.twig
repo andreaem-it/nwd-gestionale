@@ -76,14 +76,20 @@
                                         Prese TV
                                     </th>
                                 </tr>
-                                {% for itm in item.floor %}
+                                {{ dump(item) }}
+                                {% set lenght = item.floor|length %}
+                                {% for itm in 1..lenght %}
                                     <tr>
                                         <td>
-                                            {{ itm }}
+                                            {% for floors in item.floor %}
+                                                {{ floors }}
+                                            {% endfor %}
                                         </td>
                                         <td>
-                                           {{ functions.convertAIDtoName(itm) }}
+                                            {{ itm }}
+                                            {#{{ dump(functions.convertAIDtoName(itm[loop.index0].ambient)) }} #}
                                         </td>
+                                            {{ itm }}
                                         <td>
                                             {{ itm }}
                                         </td>

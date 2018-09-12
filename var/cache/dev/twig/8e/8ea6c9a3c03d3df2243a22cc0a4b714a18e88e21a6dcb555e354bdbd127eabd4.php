@@ -120,6 +120,20 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
       </div>
     </li>
     <li class=\"nav-item\">
+      <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-prezzi\" aria-expanded=\"false\" aria-controls=\"nav-clienti\" >
+        <i class=\"menu-icon mdi mdi-currency-eur\"></i>
+        <span class=\"menu-title\">Prezzi</span>
+        <i class=\"menu-arrow\"></i>
+      </a>
+      <div class=\"collapse\" id=\"nav-prezzi\">
+        <ul class=\"nav flex-column sub-menu\">
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"\">Listino</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class=\"nav-item\">
       <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-settings\" aria-expanded=\"false\" aria-controls=\"nav-settings\">
         <i class=\"menu-icon mdi mdi-backup-restore\"></i>
         <span class=\"menu-title\">Impostazioni</span>
@@ -129,13 +143,13 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 75
+        // line 89
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_generali");
         echo "\">Generali</a>
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 78
+        // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
         echo "\">Utenti</a>
           </li>
@@ -164,7 +178,7 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
 
     public function getDebugInfo()
     {
-        return array (  139 => 78,  133 => 75,  116 => 61,  110 => 58,  93 => 44,  87 => 41,  70 => 27,  61 => 21,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
+        return array (  153 => 92,  147 => 89,  116 => 61,  110 => 58,  93 => 44,  87 => 41,  70 => 27,  61 => 21,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -230,6 +244,20 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"{{ url('clienti') }}\">Lista</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class=\"nav-item\">
+      <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-prezzi\" aria-expanded=\"false\" aria-controls=\"nav-clienti\" >
+        <i class=\"menu-icon mdi mdi-currency-eur\"></i>
+        <span class=\"menu-title\">Prezzi</span>
+        <i class=\"menu-arrow\"></i>
+      </a>
+      <div class=\"collapse\" id=\"nav-prezzi\">
+        <ul class=\"nav flex-column sub-menu\">
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"\">Listino</a>
           </li>
         </ul>
       </div>

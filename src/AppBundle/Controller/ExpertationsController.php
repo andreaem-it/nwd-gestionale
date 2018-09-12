@@ -48,6 +48,7 @@ class ExpertationsController extends Controller
         $item = $this->getDoctrine()->getRepository('AppBundle:Expertations')->find($id);
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
+
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
             'item' => $item,
@@ -163,10 +164,11 @@ class ExpertationsController extends Controller
                     'placeholder' => '-- Seleziona --',
                     'query_builder' => function (EntityRepository $er) {
                         return $er->createQueryBuilder('u')
-                            ->orderBy('u.name', 'DESC')->distinct()
+                            ->orderBy('u.name')->distinct()
                             ;},
                     'label' => false,
                     'choice_label' => 'name',
+                    'choice_value' => 'id',
                     'attr' => ['class' => 'form-control']
                 ],
                 'label' => false,
@@ -253,12 +255,18 @@ class ExpertationsController extends Controller
 
         if($form->isSubmitted() && $form->isValid()) {
 
+            $encoders = array(new JsonEncoder());
+            $normalizers = array(new ObjectNormalizer());
+
+            $serializer = new Serializer($normalizers, $encoders);
+
             $expertation = $form->getData();
             $expertations->setDate(New \DateTime("now"));
             $expertations->setClient(1);
             $expertations->setStatus(0);
             $expertations->setPrice(0);
             $expertations->setExpiration(New \DateTime("now"));
+            $expertations->setAmbient($serializer->serialize($expertation->get('ambient')));
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($expertation);
@@ -266,7 +274,7 @@ class ExpertationsController extends Controller
 
             $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
             $json = $serializer->serialize($form->getData(), 'json');
-            return new Response($json);
+            return $this->redirectToRoute('lista_preventivi');
         }
 
         return $this->render('expertations/new.html.twig', [
@@ -328,11 +336,6 @@ class ExpertationsController extends Controller
         return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getName();
     }
 
-    public function storeLines($object) {
-
-        $repo = $this->getDoctrine()->getRepository('AppBundle:Expertation_lines');
-    }
-
     public function plantIntToName($int) {
         switch ($int) {
             case 1 :
@@ -383,6 +386,14 @@ class ExpertationsController extends Controller
     }
 
     public function convertAIDtoName($aid) {
-        return $this->getDoctrine()->getRepository('AppBundle:Rooms')->find($aid)->getName();
+        return (string) $this->getDoctrine()->getRepository('AppBundle:Rooms')->find($aid)->getName();
+    }
+
+    public function stringToInt($string) {
+        return (integer) $string;
+    }
+
+    public function explodeToArray($string) {
+        return explode(',',$string);
     }
 }
