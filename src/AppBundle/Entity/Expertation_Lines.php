@@ -29,9 +29,9 @@ class Expertation_Lines
     private $eid;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="roof", type="string", length=255)
+     * @ORM\Column(name="roof", type="integer", length=255)
      */
     public $roof;
 
@@ -70,75 +70,7 @@ class Expertation_Lines
      */
     private $pt;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="c1n", type="string", length=255, nullable=true)
-     */
-    private $c1n;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="c1v", type="integer", nullable=true)
-     */
-    private $c1v;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="c2n", type="string", length=255, nullable=true)
-     */
-    private $c2n;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="c2v", type="integer", nullable=true)
-     */
-    private $c2v;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="c3n", type="string", length=255, nullable=true)
-     */
-    private $c3n;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="c3v", type="integer", nullable=true)
-     */
-    private $c3v;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="c4n", type="string", length=255, nullable=true)
-     */
-    private $c4n;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="c4v", type="integer", nullable=true)
-     */
-    private $c4v;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="c5n", type="string", length=255, nullable=true)
-     */
-    private $c5n;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="c5v", type="integer", nullable=true)
-     */
-    private $c5v;
 
 
     /**
@@ -178,7 +110,7 @@ class Expertation_Lines
     /**
      * Set roof
      *
-     * @param string $roof
+     * @param integer $roof
      *
      * @return Expertation_Lines
      */
@@ -192,7 +124,7 @@ class Expertation_Lines
     /**
      * Get roof
      *
-     * @return string
+     * @return integer
      */
     public function getRoof()
     {

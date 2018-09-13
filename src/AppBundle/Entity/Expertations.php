@@ -120,46 +120,116 @@ class Expertations
     private $square_meters;
 
     /**
-     * @var array
+     * @var string
      *
-     * @ORM\Column(name="floor", type="array",nullable=true)
+     * @ORM\Column(name="floor", type="simple_array",nullable=true)
      */
     private $floor;
 
     /**
-     * @var array
+     * @var string
      *
-     * @ORM\Column(name="ambient", type="array",nullable=true)
+     * @ORM\Column(name="ambient", type="simple_array",nullable=true)
      */
     private $ambient;
 
     /**
-     * @var array
+     * @var string
      *
-     * @ORM\Column(name="name", type="array",nullable=true)
+     * @ORM\Column(name="name", type="simple_array",nullable=true)
      */
     private $name;
 
     /**
-     * @var array
+     * @var string
      *
-     * @ORM\Column(name="pp", type="array",nullable=true)
+     * @ORM\Column(name="pp", type="simple_array",nullable=true)
      */
     private $pp;
 
     /**
-     * @var array
+     * @var string
      *
-     * @ORM\Column(name="pl", type="array",nullable=true)
+     * @ORM\Column(name="pl", type="simple_array",nullable=true)
      */
     private $pl;
 
     /**
-     * @var array
+     * @var string
      *
-     * @ORM\Column(name="pt", type="array",nullable=true)
+     * @ORM\Column(name="pt", type="simple_array",nullable=true)
      */
     private $pt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="c1n", type="string", length=255, nullable=true)
+     */
+    private $c1n;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="c1v", type="integer", nullable=true)
+     */
+    private $c1v;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="c2n", type="string", length=255, nullable=true)
+     */
+    private $c2n;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="c2v", type="integer", nullable=true)
+     */
+    private $c2v;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="c3n", type="string", length=255, nullable=true)
+     */
+    private $c3n;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="c3v", type="integer", nullable=true)
+     */
+    private $c3v;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="c4n", type="string", length=255, nullable=true)
+     */
+    private $c4n;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="c4v", type="integer", nullable=true)
+     */
+    private $c4v;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="c5n", type="string", length=255, nullable=true)
+     */
+    private $c5n;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="c5v", type="integer", nullable=true)
+     */
+    private $c5v;
 
     /**
      * @var string
@@ -815,5 +885,245 @@ class Expertations
     public function getImpAusiliari()
     {
         return $this->imp_ausiliari;
+    }
+
+    /**
+     * Set c1n.
+     *
+     * @param string|null $c1n
+     *
+     * @return Expertations
+     */
+    public function setC1n($c1n = null)
+    {
+        $this->c1n = $c1n;
+
+        return $this;
+    }
+
+    /**
+     * Get c1n.
+     *
+     * @return string|null
+     */
+    public function getC1n()
+    {
+        return $this->c1n;
+    }
+
+    /**
+     * Set c1v.
+     *
+     * @param int|null $c1v
+     *
+     * @return Expertations
+     */
+    public function setC1v($c1v = null)
+    {
+        $this->c1v = $c1v;
+
+        return $this;
+    }
+
+    /**
+     * Get c1v.
+     *
+     * @return int|null
+     */
+    public function getC1v()
+    {
+        return $this->c1v;
+    }
+
+    /**
+     * Set c2n.
+     *
+     * @param string|null $c2n
+     *
+     * @return Expertations
+     */
+    public function setC2n($c2n = null)
+    {
+        $this->c2n = $c2n;
+
+        return $this;
+    }
+
+    /**
+     * Get c2n.
+     *
+     * @return string|null
+     */
+    public function getC2n()
+    {
+        return $this->c2n;
+    }
+
+    /**
+     * Set c2v.
+     *
+     * @param int|null $c2v
+     *
+     * @return Expertations
+     */
+    public function setC2v($c2v = null)
+    {
+        $this->c2v = $c2v;
+
+        return $this;
+    }
+
+    /**
+     * Get c2v.
+     *
+     * @return int|null
+     */
+    public function getC2v()
+    {
+        return $this->c2v;
+    }
+
+    /**
+     * Set c3n.
+     *
+     * @param string|null $c3n
+     *
+     * @return Expertations
+     */
+    public function setC3n($c3n = null)
+    {
+        $this->c3n = $c3n;
+
+        return $this;
+    }
+
+    /**
+     * Get c3n.
+     *
+     * @return string|null
+     */
+    public function getC3n()
+    {
+        return $this->c3n;
+    }
+
+    /**
+     * Set c3v.
+     *
+     * @param int|null $c3v
+     *
+     * @return Expertations
+     */
+    public function setC3v($c3v = null)
+    {
+        $this->c3v = $c3v;
+
+        return $this;
+    }
+
+    /**
+     * Get c3v.
+     *
+     * @return int|null
+     */
+    public function getC3v()
+    {
+        return $this->c3v;
+    }
+
+    /**
+     * Set c4n.
+     *
+     * @param string|null $c4n
+     *
+     * @return Expertations
+     */
+    public function setC4n($c4n = null)
+    {
+        $this->c4n = $c4n;
+
+        return $this;
+    }
+
+    /**
+     * Get c4n.
+     *
+     * @return string|null
+     */
+    public function getC4n()
+    {
+        return $this->c4n;
+    }
+
+    /**
+     * Set c4v.
+     *
+     * @param int|null $c4v
+     *
+     * @return Expertations
+     */
+    public function setC4v($c4v = null)
+    {
+        $this->c4v = $c4v;
+
+        return $this;
+    }
+
+    /**
+     * Get c4v.
+     *
+     * @return int|null
+     */
+    public function getC4v()
+    {
+        return $this->c4v;
+    }
+
+    /**
+     * Set c5n.
+     *
+     * @param string|null $c5n
+     *
+     * @return Expertations
+     */
+    public function setC5n($c5n = null)
+    {
+        $this->c5n = $c5n;
+
+        return $this;
+    }
+
+    /**
+     * Get c5n.
+     *
+     * @return string|null
+     */
+    public function getC5n()
+    {
+        return $this->c5n;
+    }
+
+    /**
+     * Set c5v.
+     *
+     * @param int|null $c5v
+     *
+     * @return Expertations
+     */
+    public function setC5v($c5v = null)
+    {
+        $this->c5v = $c5v;
+
+        return $this;
+    }
+
+    /**
+     * Get c5v.
+     *
+     * @return int|null
+     */
+    public function getC5v()
+    {
+        return $this->c5v;
     }
 }

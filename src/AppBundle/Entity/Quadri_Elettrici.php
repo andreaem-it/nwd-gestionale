@@ -10,8 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="quadri__elettrici")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\Quadri_ElettriciRepository")
  */
-class Quadri_Elettrici
-{
+class Quadri_Elettrici {
     /**
      * @var int
      *

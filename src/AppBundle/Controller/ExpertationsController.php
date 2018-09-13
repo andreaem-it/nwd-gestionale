@@ -7,6 +7,7 @@ use AppBundle\Entity\Expertation_Lines;
 use AppBundle\Entity\Expertations;
 use AppBundle\Entity\Outlets;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Internal\Hydration\HydrationException;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -46,12 +47,39 @@ class ExpertationsController extends Controller
     public function expertationsShowAction($id) {
 
         $item = $this->getDoctrine()->getRepository('AppBundle:Expertations')->find($id);
+
+        $data = $this->getDoctrine()->getRepository('AppBundle:Expertation_Lines')->findBy(['eid'=> $id]);
+
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
+        $item = [
+                'id' => $item->getId(),
+                'date' => $item->getDate()->format('d-m-Y'),
+                'client' => $item->getClient(),
+                'status' => $item->getStatus(),
+                'price' => $item->getPrice(),
+                'expiration' => $item->getExpiration()->format('d-m-Y'),
+                'tipo' => $item->getTipo(),
+                'kw' => $item->getKw(),
+                'pianiCasa' => $item->getPianiCasa(),
+                'riscaldamento' => $item->getRiscaldamento(),
+                'opereMurarie' => $item->getOpereMurarie(),
+                'trifase' => $item->getTrifase(),
+                'sconto' => $item->getSconto(),
+                'level' => $item->getLevel(),
+                'squareMeters' => $item->getSquareMeters(),
+                'numCircuiti' => $item->getNumCircuiti(),
+                'numPreseTelefonoDati' => $item->getNumPreseTelefonoDati(),
+                'illumSicurezza' => $item->getIllumSicurezza(),
+                'spd' => $item->getSpd(),
+                'impAusiliari' => $item->getImpAusiliari(),
+                //'data' => $data
+        ];
 
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
             'item' => $item,
+            'data' => $data,
             'client' => $client
         ]);
     }
@@ -255,21 +283,36 @@ class ExpertationsController extends Controller
 
         if($form->isSubmitted() && $form->isValid()) {
 
-            $encoders = array(new JsonEncoder());
-            $normalizers = array(new ObjectNormalizer());
-
-            $serializer = new Serializer($normalizers, $encoders);
-
             $expertation = $form->getData();
-            $expertations->setDate(New \DateTime("now"));
-            $expertations->setClient(1);
-            $expertations->setStatus(0);
-            $expertations->setPrice(0);
+            $expertations->setDate      (New \DateTime("now"));
+            $expertations->setClient    (1);
+            $expertations->setStatus    (0);
+            $expertations->setPrice     (0);
             $expertations->setExpiration(New \DateTime("now"));
-            $expertations->setAmbient($serializer->serialize($expertation->get('ambient')));
+
+            $expLines =  $this->explodeToArray(',',$form->getData()->getFloor());
+            $count = count($expLines);
+
+            for ($i = 1; $i < $count; $i++ ) {
+
+                $line = $form->getData();
+
+                $lines = new Expertation_Lines();
+                $lines->setEid      ($form->getData()->getId());
+                $lines->setRoof     ($form->getData()->getFloor());
+                $lines->setAmbient  ($form->getData()->getAmbient());
+                $lines->setName     ($form->getData()->getName());
+                $lines->setPp       ($form->getData()->getPp());
+                $lines->setPl       ($form->getData()->getPl());
+                $lines->setPt       ($form->getData()->getPt());
+
+                $emEL = $this->getDoctrine()->getManager();
+                $emEL->persist($line);
+                $emEL->flush();
+            }
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($expertation);
+            $em->persist((object)$expertation);
             $em->flush();
 
             $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));

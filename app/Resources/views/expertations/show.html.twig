@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card card-grey">
                     <div class="card-body">
                         <div class="card-title">
                             <h5>Cliente</h5>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <div class="card">
+                <div class="card card-grey">
                     <div class="card-body">
                         <div class="card-title">
                             <h5>Abitazione</h5>
@@ -54,13 +54,14 @@
                         <h5 class="card-title title-dettagli">
                             Dettaglio Preventivo
                         </h5>
-                        <table class="table table-hover">
+                        <div class="scrollable" style="overflow-x: scroll">
+                            <table class="table table-hover">
                             <tbody>
-                                <tr class="text-center" style="background-color: #f2f8f9;">
+                                <tr class="text-center table-header" style="background-color: #f2f8f9;">
                                     <th>
                                         Piano
                                     </th>
-                                    <th class="tbl-lg">
+                                    <th class="tbl-lg ambient-td">
                                         Ambiente
                                     </th>
                                     <th class="tbl-lg">
@@ -76,55 +77,52 @@
                                         Prese TV
                                     </th>
                                 </tr>
-                                {{ dump(item) }}
-                                {% set lenght = item.floor|length %}
-                                {% for itm in 1..lenght %}
+                                {% for items in data %}
                                     <tr>
                                         <td>
-                                            {% for floors in item.floor %}
-                                                {{ floors }}
-                                            {% endfor %}
+                                            {{ items.roof }}
+                                        </td>
+                                        <td class="ambient-td">
+                                            {{ functions.convertAIDtoName(items.ambient) }}
                                         </td>
                                         <td>
-                                            {{ itm }}
-                                            {#{{ dump(functions.convertAIDtoName(itm[loop.index0].ambient)) }} #}
-                                        </td>
-                                            {{ itm }}
-                                        <td>
-                                            {{ itm }}
+                                            {{ items.name }}
                                         </td>
                                         <td>
-                                            0
+                                            {{ items.pp }}
                                         </td>
                                         <td>
-                                            0
+                                            {{ items.pl }}
                                         </td>
                                         <td>
-                                            0
+                                            {{ items.pt }}
                                         </td>
                                     </tr>
+
                                 {% endfor %}
+
                             </tbody>
                         </table>
+                        </div>
                         <div class="row mt-5">
                             <div class="col-3">
-                                <strong>Circuiti:</strong>&nbsp; {{ item.numCircuiti }}
+                                <strong>Circuiti:</strong> {{ item.numCircuiti }}
                             </div>
                             <div class="col-3">
-                                <strong>Prese Telefono / Dati:</strong>&nbsp; {{ item.numPreseTelefonoDati }}
+                                <strong>Prese Telefono / Dati:</strong> {{ item.numPreseTelefonoDati }}
                             </div>
                             <div class="col-4">
-                                <strong>Dispositivi per l'illuminazione di sicurezza:</strong>&nbsp; {{ item.illumSicurezza }}
+                                <strong>Dispositivi per l'illuminazione di sicurezza:</strong> {{ item.illumSicurezza }}
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-6">
-                                <strong>SPD:</strong>&nbsp;
+                                <strong>SPD:</strong>
                                 {% if item.spd == 1 %}SPD ad arrivo linea per rendere tollerabile il rischio R1 {% endif %}
                                 {% if item.spd == 2 %}SPD ad arrivo linea per rendere tollerabile il rischio R1 e ai fini della protezione contro le sovratensioni {% endif %}
                             </div>
                             <div class="col-6">
-                                <strong>Impianti ausiliari e risparmio energetico:</strong>&nbsp;
+                                <strong>Impianti ausiliari e risparmio energetico:</strong>
                                 {% if item.impAusiliari == 1 %}Campanello, citofono e videocitofono {% endif %}
                                 {% if item.impAusiliari == 2 %}Campanello, citofono e antintrusione, Controllo carichi {% endif %}
                                 {% if item.impAusiliari == 3 %}Campanello, citofono e antintrusione, Controllo carichi, Domotica {% endif %}
@@ -150,7 +148,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6 text-left">
-                                IVA
+                                IVA (22%)
                             </div>
                             <div class="col-sm-6 text-right">
                                 0.00 €
@@ -181,7 +179,12 @@
     {#{{ dump(item) }}#}
 {% endblock %}
 {% block stylesheets %}
-<style>
+    <link rel="stylesheet" href="{{ asset('css/scrollbar.css') }}">
+
+    <style>
+    td {
+        text-align: center!important;
+    }
     @media print {
         .sidebar {
             display: none;
@@ -207,6 +210,34 @@
         .brand-logo-mini img {
             margin-left: 3vw;
         }
+        .ambient-td {
+            display: none;
+        }
+        .ambient-th {
+            display: none;
+        }
+        a {
+            text-decoration: none!important;
+            color: #000000!important;
+        }
+        .card-grey {
+            border: 1px solid #EEEEEE!important;
+        }
+        .card {
+            padding: 0!important;
+            margin: 0!important;
+        }
+        .table-header {
+            background-color: #EEEEEE!important;
+        }
     }
 </style>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/scrollbar.min.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('.scrollable').scrollbar();
+        });
+    </script>
 {% endblock %}
