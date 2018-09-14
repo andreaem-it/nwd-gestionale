@@ -175,16 +175,54 @@ class ExpertationsController extends Controller
                 'label_attr' => ['class' => '']
 
             ])
-            ->add('floor', CollectionType::class, [
-                'entry_type' => IntegerType::class,
-                'entry_options' => [
-                    'label' => false,
-                    'attr' => ['class' => 'form-control']
-                    ],
-                'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
+
+
+            ->add('num_circuiti', IntegerType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Circuiti'
             ])
+            ->add('num_prese_telefono_dati', IntegerType::class, [
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Prese Telefono/Dati'
+            ])
+            ->add('illum_sicurezza', IntegerType::class, [
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Illuminazione Sicurezza'
+            ])
+            ->add('spd', ChoiceType::class, [
+                'choices' => [
+                    'SPD ad arrivo linea, Tolleranza R1' => 1,
+                    'SPD ad arrivo linea, Tolleranza R1, Protezione sovratensioni' => 2
+                ],
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'SPD'
+            ])
+            ->add('imp_ausiliari', ChoiceType::class, [
+                'choices' => [
+                    'Campanello, citofono e videocitofono' => 1,
+                    'Campanello, citofono e antintrusione, Controllo carichi' => 2,
+                    'Campanello, citofono e antintrusione, Controllo carichi, Domotica' => 3
+                ],
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Impianti Ausiliari / Risparmio Energetico'
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
+                'label' => 'Genera'
+            ])
+            ->getForm();
+
+        $formLines = $this->createFormBuilder()
+            ->add('roof', CollectionType::class, [
+            'entry_type' => IntegerType::class,
+            'entry_options' => [
+                'label' => false,
+                'attr' => ['class' => 'form-control']
+            ],
+            'label' => false,
+            'allow_add' => 'true',
+            'allow_delete' => 'true',
+        ])
             ->add('ambient', CollectionType::class, [
                 'entry_type' => EntityType::class,
                 'entry_options' => [
@@ -243,45 +281,18 @@ class ExpertationsController extends Controller
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
             ])
-
-            ->add('num_circuiti', IntegerType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'Circuiti'
-            ])
-            ->add('num_prese_telefono_dati', IntegerType::class, [
-                'attr' => ['class' => 'form-control'] ,
-                'label' => 'Prese Telefono/Dati'
-            ])
-            ->add('illum_sicurezza', IntegerType::class, [
-                'attr' => ['class' => 'form-control'] ,
-                'label' => 'Illuminazione Sicurezza'
-            ])
-            ->add('spd', ChoiceType::class, [
-                'choices' => [
-                    'SPD ad arrivo linea, Tolleranza R1' => 1,
-                    'SPD ad arrivo linea, Tolleranza R1, Protezione sovratensioni' => 2
-                ],
-                'attr' => ['class' => 'form-control'] ,
-                'label' => 'SPD'
-            ])
-            ->add('imp_ausiliari', ChoiceType::class, [
-                'choices' => [
-                    'Campanello, citofono e videocitofono' => 1,
-                    'Campanello, citofono e antintrusione, Controllo carichi' => 2,
-                    'Campanello, citofono e antintrusione, Controllo carichi, Domotica' => 3
-                ],
-                'attr' => ['class' => 'form-control'] ,
-                'label' => 'Impianti Ausiliari / Risparmio Energetico'
-            ])
             ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
-                'label' => 'Genera'
+                'attr' => ['hidden' => 'hidden',
+                    'id' => 'form_lines_submit']
             ])
             ->getForm();
+
 
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
+
+            $formLines->handleRequest($request);
 
             $expertation = $form->getData();
             $expertations->setDate      (New \DateTime("now"));
@@ -290,10 +301,11 @@ class ExpertationsController extends Controller
             $expertations->setPrice     (0);
             $expertations->setExpiration(New \DateTime("now"));
 
-            $expLines =  $this->explodeToArray(',',$form->getData()->getFloor());
+            $expLines = $formLines->getData();
+            //$expLines =  $this->explodeToArray(',',$form->getData()->getFloor());
             $count = count($expLines);
 
-            for ($i = 1; $i < $count; $i++ ) {
+            for ($i = 0; $i < $count; $i++ ) {
 
                 $line = $form->getData();
 
@@ -312,16 +324,17 @@ class ExpertationsController extends Controller
             }
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist((object)$expertation);
+            $em->persist($expertation);
             $em->flush();
 
             $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
             $json = $serializer->serialize($form->getData(), 'json');
-            return $this->redirectToRoute('lista_preventivi');
+            return $this->redirectToRoute('mostra_preventivo', ['id' => $form->getData()->getId()]);
         }
 
         return $this->render('expertations/new.html.twig', [
             'form' => $form->createView(),
+            'formLines' => $formLines->createView()
             //'form_expertation' => $form_expertation->createView()
         ]);
     }
