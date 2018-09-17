@@ -145,6 +145,6 @@ class __TwigTemplate_29991b930d23d0fd68cf8b8210bad88a2994b52aa8cabe6e9024c3d49a6
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "/Users/andreaemili/Desktop/gestionale/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/ajax.html.twig");
     }
 }

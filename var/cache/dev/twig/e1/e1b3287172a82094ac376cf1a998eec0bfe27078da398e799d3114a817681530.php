@@ -417,6 +417,6 @@ class __TwigTemplate_9a1878fa5001c415df7f7255d8a76826b19f0dbb2e6e6ef6031725989cb
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "/Users/andreaemili/Desktop/gestionale/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/base_js.html.twig");
+", "@Twig/base_js.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/base_js.html.twig");
     }
 }

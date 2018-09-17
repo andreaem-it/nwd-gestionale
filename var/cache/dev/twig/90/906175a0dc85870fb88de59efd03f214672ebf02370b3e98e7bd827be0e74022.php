@@ -286,6 +286,6 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
     </div>
 </div>
 {% endblock %}
-", "expertations/list.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/expertations/list.html.twig");
+", "expertations/list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/list.html.twig");
     }
 }

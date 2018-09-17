@@ -1156,6 +1156,6 @@ class __TwigTemplate_5ff9f00cfeaae2e75d08f83e862468a3a034c71fff4d4f8b7ae4c905daf
         </table>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/Users/andreaemili/Desktop/gestionale/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views/Collector/security.html.twig");
     }
 }

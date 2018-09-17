@@ -823,6 +823,6 @@ class __TwigTemplate_3aaed89b9374d94558e320f7b00d35408bc04b5496e8771b376723c6c5c
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "/Users/andreaemili/Desktop/gestionale/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

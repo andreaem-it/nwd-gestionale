@@ -112,39 +112,24 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             </div>
           </li>
         </ul>
-        <button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"offcanvas\">
+        <button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
           <span class=\"mdi mdi-menu\"></span>
         </button>
+        <script>
+          \$('.navbar-toggler').click( function(e) {
+              e.preventDefault();
 
-        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-          <ul class=\"navbar-nav mr-auto\">
-            <li class=\"nav-item active\">
-              <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>
-            </li>
-            <li class=\"nav-item\">
-              <a class=\"nav-link\" href=\"#\">Link</a>
-            </li>
-            <li class=\"nav-item dropdown\">
-              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                Dropdown
-              </a>
-              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                <a class=\"dropdown-item\" href=\"#\">Action</a>
-                <a class=\"dropdown-item\" href=\"#\">Another action</a>
-                <div class=\"dropdown-divider\"></div>
-                <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-              </div>
-            </li>
-            <li class=\"nav-item\">
-              <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
-            </li>
-          </ul>
-          <form class=\"form-inline my-2 my-lg-0\">
-            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
-          </form>
-        </div>
-
+              \$('.sidebar-offcanvas').toggleClass('sidebar-open');
+          })
+        </script>
+        <style>
+          .sidebar-open{
+            right: 0px;
+          }
+        </style>
+        ";
+        // line 215
+        echo "
       </div>
     </nav>";
         
@@ -167,7 +152,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
 
     public function getDebugInfo()
     {
-        return array (  108 => 166,  102 => 163,  98 => 161,  96 => 160,  94 => 159,  88 => 155,  83 => 153,  80 => 152,  78 => 151,  76 => 150,  68 => 144,  65 => 143,  59 => 141,  57 => 140,  52 => 137,  48 => 25,  40 => 7,  34 => 4,  29 => 1,);
+        return array (  132 => 215,  108 => 166,  102 => 163,  98 => 161,  96 => 160,  94 => 159,  88 => 155,  83 => 153,  80 => 152,  78 => 151,  76 => 150,  68 => 144,  65 => 143,  59 => 141,  57 => 140,  52 => 137,  48 => 25,  40 => 7,  34 => 4,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -343,11 +328,22 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             </div>
           </li>
         </ul>
-        <button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"offcanvas\">
+        <button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
           <span class=\"mdi mdi-menu\"></span>
         </button>
+        <script>
+          \$('.navbar-toggler').click( function(e) {
+              e.preventDefault();
 
-        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+              \$('.sidebar-offcanvas').toggleClass('sidebar-open');
+          })
+        </script>
+        <style>
+          .sidebar-open{
+            right: 0px;
+          }
+        </style>
+        {#<div class=\"collapse navbar-collapse\" >
           <ul class=\"navbar-nav mr-auto\">
             <li class=\"nav-item active\">
               <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>
@@ -374,9 +370,9 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
             <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
           </form>
-        </div>
+        </div>#}
 
       </div>
-    </nav>", "template/navbar.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/template/navbar.html.twig");
+    </nav>", "template/navbar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/navbar.html.twig");
     }
 }

@@ -83,6 +83,6 @@ class __TwigTemplate_6711669675065951a83271acc615fe9d2f605b621f7c3c96ba0b2a5a153
         </div>
     </div>
 </div>
-", "@WebProfiler/Profiler/header.html.twig", "/Users/andreaemili/Desktop/gestionale/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/header.html.twig");
+", "@WebProfiler/Profiler/header.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/header.html.twig");
     }
 }

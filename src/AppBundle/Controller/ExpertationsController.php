@@ -52,7 +52,21 @@ class ExpertationsController extends Controller
 
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
-        $item = [
+        dump($item);
+
+        $total = (array_sum($item->getPp()) * 26.20) + (array_sum($item->getPl()) * 24.50) + (array_sum($item->getPt()) * 25);
+
+        $vat = $total * 22 / 100;
+
+        $vattotal = ($total + $vat);
+
+        $sconto = $item->getSconto() * $vattotal / 100;
+
+        $grandtotal = $vattotal - $sconto;
+
+        dump($vat);
+
+        /*$item = [
                 'id' => $item->getId(),
                 'date' => $item->getDate()->format('d-m-Y'),
                 'client' => $item->getClient(),
@@ -74,12 +88,16 @@ class ExpertationsController extends Controller
                 'spd' => $item->getSpd(),
                 'impAusiliari' => $item->getImpAusiliari(),
                 //'data' => $data
-        ];
+        ];*/
 
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
             'item' => $item,
             'data' => $data,
+            'total' => $total,
+            'vat' => $vat,
+            'sconto' => $sconto,
+            'grand_total' => $grandtotal,
             'client' => $client
         ]);
     }
@@ -206,23 +224,16 @@ class ExpertationsController extends Controller
                 'attr' => ['class' => 'form-control'] ,
                 'label' => 'Impianti Ausiliari / Risparmio Energetico'
             ])
-            ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
-                'label' => 'Genera'
-            ])
-            ->getForm();
-
-        $formLines = $this->createFormBuilder()
-            ->add('roof', CollectionType::class, [
-            'entry_type' => IntegerType::class,
-            'entry_options' => [
+            ->add('floor', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['class' => 'form-control']
+                ],
                 'label' => false,
-                'attr' => ['class' => 'form-control']
-            ],
-            'label' => false,
-            'allow_add' => 'true',
-            'allow_delete' => 'true',
-        ])
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+            ])
             ->add('ambient', CollectionType::class, [
                 'entry_type' => EntityType::class,
                 'entry_options' => [
@@ -282,8 +293,8 @@ class ExpertationsController extends Controller
                 'allow_delete' => 'true',
             ])
             ->add('submit', SubmitType::class, [
-                'attr' => ['hidden' => 'hidden',
-                    'id' => 'form_lines_submit']
+                'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
+                'label' => 'Genera'
             ])
             ->getForm();
 
@@ -292,36 +303,12 @@ class ExpertationsController extends Controller
 
         if($form->isSubmitted() && $form->isValid()) {
 
-            $formLines->handleRequest($request);
-
             $expertation = $form->getData();
             $expertations->setDate      (New \DateTime("now"));
             $expertations->setClient    (1);
             $expertations->setStatus    (0);
             $expertations->setPrice     (0);
             $expertations->setExpiration(New \DateTime("now"));
-
-            $expLines = $formLines->getData();
-            //$expLines =  $this->explodeToArray(',',$form->getData()->getFloor());
-            $count = count($expLines);
-
-            for ($i = 0; $i < $count; $i++ ) {
-
-                $line = $form->getData();
-
-                $lines = new Expertation_Lines();
-                $lines->setEid      ($form->getData()->getId());
-                $lines->setRoof     ($form->getData()->getFloor());
-                $lines->setAmbient  ($form->getData()->getAmbient());
-                $lines->setName     ($form->getData()->getName());
-                $lines->setPp       ($form->getData()->getPp());
-                $lines->setPl       ($form->getData()->getPl());
-                $lines->setPt       ($form->getData()->getPt());
-
-                $emEL = $this->getDoctrine()->getManager();
-                $emEL->persist($line);
-                $emEL->flush();
-            }
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($expertation);
@@ -334,7 +321,6 @@ class ExpertationsController extends Controller
 
         return $this->render('expertations/new.html.twig', [
             'form' => $form->createView(),
-            'formLines' => $formLines->createView()
             //'form_expertation' => $form_expertation->createView()
         ]);
     }

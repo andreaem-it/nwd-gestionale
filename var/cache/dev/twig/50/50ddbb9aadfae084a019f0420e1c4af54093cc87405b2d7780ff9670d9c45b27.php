@@ -63,6 +63,6 @@ class __TwigTemplate_685880747ae60b433c13983e2665b618bf20af73f2c96678e9cfa4da04a
               <i class=\"mdi mdi-heart text-danger\"></i>
             </span>
           </div>
-        </footer>", "template/footer.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/template/footer.html.twig");
+        </footer>", "template/footer.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/footer.html.twig");
     }
 }

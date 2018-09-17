@@ -474,6 +474,6 @@ class __TwigTemplate_89fccfdbef73c03271b9008da9328740c8c4cca3f3e3b588084388b496d
         {% endif %}
     </div>
 </div>
-", "@Twig/Exception/exception.html.twig", "/Users/andreaemili/Desktop/gestionale/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
+", "@Twig/Exception/exception.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
     }
 }

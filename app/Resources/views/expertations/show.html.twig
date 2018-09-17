@@ -52,7 +52,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title title-dettagli">
-                            Dettaglio Preventivo
+                            Dettaglio Preventivo {% if item.level == 1 %} Base {% elseif item.level == 2 %} Standard {% elseif item.level == 3 %} Domotico {% endif %}
                         </h5>
                         <div class="scrollable" style="overflow-x: scroll">
                             <table class="table table-hover">
@@ -77,25 +77,26 @@
                                         Prese TV
                                     </th>
                                 </tr>
-                                {% for items in data %}
+                                {% for key in item.floor|keys %}
+                                    {% dump(key) %}
                                     <tr>
                                         <td>
-                                            {{ items.roof }}
+                                            {{ item.floor[key] }}
                                         </td>
                                         <td class="ambient-td">
-                                            {{ functions.convertAIDtoName(items.ambient) }}
+                                            {{ functions.convertAIDtoName(item.ambient[key]) }}
                                         </td>
                                         <td>
-                                            {{ items.name }}
+                                            {{ item.name[key] }}
                                         </td>
                                         <td>
-                                            {{ items.pp }}
+                                            {{ item.pp[key] }}
                                         </td>
                                         <td>
-                                            {{ items.pl }}
+                                            {{ item.pl[key] }}
                                         </td>
                                         <td>
-                                            {{ items.pt }}
+                                            {{ item.pt[key] }}
                                         </td>
                                     </tr>
 
@@ -143,7 +144,7 @@
                                 Totale
                             </div>
                             <div class="col-sm-6 text-right text-black">
-                                0.00 €
+                                {{ total|number_format(2,'.') }} €
                             </div>
                         </div>
                         <div class="row">
@@ -151,7 +152,7 @@
                                 IVA (22%)
                             </div>
                             <div class="col-sm-6 text-right">
-                                0.00 €
+                                {{ vat|number_format(2,'.') }} €
                             </div>
                         </div>
                         <div class="row">
@@ -159,7 +160,7 @@
                                 Sconto ({{ item.sconto }} %)
                             </div>
                             <div class="col-sm-6 text-right">
-                                0.00 €
+                                - {{ sconto|number_format(2,'.') }} €
                             </div>
                         </div>
                         <div class="row">
@@ -167,7 +168,7 @@
                                 <strong>Totale</strong>
                             </div>
                             <div class="col-sm-6 text-right">
-                                <strong>0.00 €</strong>
+                                <strong>{{ grand_total|number_format(2,'.') }} €</strong>
                             </div>
                         </div>
                     </div>

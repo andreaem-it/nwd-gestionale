@@ -224,6 +224,6 @@ class __TwigTemplate_0ec069d66f7e932efc615a5be580503d3fb1ff1c5e0e98a2d0b0407fcbc
         {% include 'template/footer.html.twig' %}
         {% block javascripts %}{% endblock %}
     </body>
-</html>", "base.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/base.html.twig");
+</html>", "base.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/base.html.twig");
     }
 }

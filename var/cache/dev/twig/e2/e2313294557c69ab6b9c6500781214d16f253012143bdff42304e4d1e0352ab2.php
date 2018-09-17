@@ -359,6 +359,6 @@ class __TwigTemplate_25932c5350254c030ec7da03a4fa172202bc424ce812b01c15db59a014d
     <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.min.css') }}\">
     <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.all.min.css') }}\">
 
-{% endblock %}", "default/index.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/default/index.html.twig");
+{% endblock %}", "default/index.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/default/index.html.twig");
     }
 }
