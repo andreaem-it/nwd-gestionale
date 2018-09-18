@@ -150,18 +150,20 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
             echo "
                                     </td>
                                     <td style=\"width: 255px;\">
-                                        <a href=\"\" class=\"btn btn-danger btn-sm float-right mr-1\">
-                                            <span class=\"mdi mdi-delete\"></span>
-                                        </a>
-                                        <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                                            <span class=\"mdi mdi-table-edit\"></span>
-                                        </a>
-                                        <a href=\"";
-            // line 66
+                                        <div class=\"btn-group\">
+                                            <a href=\"\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-delete\"></span>
+                                            </a>
+                                            <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-table-edit\"></span>
+                                            </a>
+                                            <a href=\"";
+            // line 67
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
-                                            <span class=\"mdi mdi-eye-outline\"></span>
-                                        </a>
+                                                <span class=\"mdi mdi-eye-outline\"></span>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                                     ";
@@ -169,7 +171,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 72
+        // line 74
         echo "                                </tbody>
                             </table>
                         </div>
@@ -200,7 +202,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
 
     public function getDebugInfo()
     {
-        return array (  173 => 72,  161 => 66,  149 => 57,  143 => 54,  134 => 50,  126 => 45,  122 => 44,  116 => 41,  112 => 39,  108 => 38,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  175 => 74,  162 => 67,  149 => 57,  143 => 54,  134 => 50,  126 => 45,  122 => 44,  116 => 41,  112 => 39,  108 => 38,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -264,15 +266,17 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         {{ item.expiration|date(\"d-m-Y\") }}
                                     </td>
                                     <td style=\"width: 255px;\">
-                                        <a href=\"\" class=\"btn btn-danger btn-sm float-right mr-1\">
-                                            <span class=\"mdi mdi-delete\"></span>
-                                        </a>
-                                        <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                                            <span class=\"mdi mdi-table-edit\"></span>
-                                        </a>
-                                        <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
-                                            <span class=\"mdi mdi-eye-outline\"></span>
-                                        </a>
+                                        <div class=\"btn-group\">
+                                            <a href=\"\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-delete\"></span>
+                                            </a>
+                                            <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-table-edit\"></span>
+                                            </a>
+                                            <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-eye-outline\"></span>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                                     {% endfor %}
