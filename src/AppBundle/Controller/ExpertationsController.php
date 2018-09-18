@@ -2,12 +2,8 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Clients;
-use AppBundle\Entity\Expertation_Lines;
 use AppBundle\Entity\Expertations;
-use AppBundle\Entity\Outlets;
 use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Internal\Hydration\HydrationException;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -15,14 +11,12 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 
 class ExpertationsController extends Controller
@@ -92,14 +86,14 @@ class ExpertationsController extends Controller
                 $opMurPt = ($this->getPrice(12) * array_sum($item->getPt()));
             }
 
-            $circ       = (100 * $item->getNumCircuiti());
-            $prTelDati  = (25  * $item->getNumPreseTelefonoDati());
-            $illmSic    = (64  * $item->getIllumSicurezza());
+            $circ       = ($this->getPrice(13) * $item->getNumCircuiti());
+            $prTelDati  = ($this->getPrice(14)  * $item->getNumPreseTelefonoDati());
+            $illmSic    = ($this->getPrice(15)  * $item->getIllumSicurezza());
 
             if ($item->getSpd() == 1) {
-                $spd = 100;
+                $spd = $this->getPrice(16);
             } elseif ($item->getSpd() == 2) {
-                $spd = 176;
+                $spd = $this->getPrice(17);
             }
 
             $total= $total +
@@ -135,29 +129,6 @@ class ExpertationsController extends Controller
 
         dump($grandtotal);
         dump($total);
-        /*$item = [
-                'id' => $item->getId(),
-                'date' => $item->getDate()->format('d-m-Y'),
-                'client' => $item->getClient(),
-                'status' => $item->getStatus(),
-                'price' => $item->getPrice(),
-                'expiration' => $item->getExpiration()->format('d-m-Y'),
-                'tipo' => $item->getTipo(),
-                'kw' => $item->getKw(),
-                'pianiCasa' => $item->getPianiCasa(),
-                'riscaldamento' => $item->getRiscaldamento(),
-                'opereMurarie' => $item->getOpereMurarie(),
-                'trifase' => $item->getTrifase(),
-                'sconto' => $item->getSconto(),
-                'level' => $item->getLevel(),
-                'squareMeters' => $item->getSquareMeters(),
-                'numCircuiti' => $item->getNumCircuiti(),
-                'numPreseTelefonoDati' => $item->getNumPreseTelefonoDati(),
-                'illumSicurezza' => $item->getIllumSicurezza(),
-                'spd' => $item->getSpd(),
-                'impAusiliari' => $item->getImpAusiliari(),
-                //'data' => $data
-        ];*/
 
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,

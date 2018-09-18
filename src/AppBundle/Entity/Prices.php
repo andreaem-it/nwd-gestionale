@@ -35,6 +35,13 @@ class Prices
      */
     private $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="canonical", type="string", length=255, nullable=true)
+     */
+    private $canonical;
+
 
     /**
      * Get id.
@@ -92,5 +99,29 @@ class Prices
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set canonical.
+     *
+     * @param string|null $canonical
+     *
+     * @return Prices
+     */
+    public function setCanonical($canonical = null)
+    {
+        $this->canonical = $canonical;
+
+        return $this;
+    }
+
+    /**
+     * Get canonical.
+     *
+     * @return string|null
+     */
+    public function getCanonical()
+    {
+        return $this->canonical;
     }
 }

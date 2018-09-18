@@ -86,16 +86,16 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
                         <a href=\"\" class=\"btn btn-secondary btn-sm float-right mr-1\">
                             <i class=\"mdi mdi-pencil mr-0\"></i>
                         </a>
-                        <a href=\"\" class=\"btn btn-success btn-sm float-right mr-1\" onclick=\"javascript:print();\">
+                        <a href=\"\" class=\"btn btn-success btn-sm float-right mr-1\" onclick=\"print();\">
                             <i class=\"mdi mdi-printer mr-0\"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class=\"row\">
+        <div class=\"row mb-sm-2\">
             <div class=\"col-sm-4\">
-                <div class=\"card card-grey mb-sm-3\">
+                <div class=\"card card-grey\">
                     <div class=\"card-body \">
                         <div class=\"card-title\">
                             <h5>Cliente</h5>
@@ -563,16 +563,16 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
                         <a href=\"\" class=\"btn btn-secondary btn-sm float-right mr-1\">
                             <i class=\"mdi mdi-pencil mr-0\"></i>
                         </a>
-                        <a href=\"\" class=\"btn btn-success btn-sm float-right mr-1\" onclick=\"javascript:print();\">
+                        <a href=\"\" class=\"btn btn-success btn-sm float-right mr-1\" onclick=\"print();\">
                             <i class=\"mdi mdi-printer mr-0\"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class=\"row\">
+        <div class=\"row mb-sm-2\">
             <div class=\"col-sm-4\">
-                <div class=\"card card-grey mb-sm-3\">
+                <div class=\"card card-grey\">
                     <div class=\"card-body \">
                         <div class=\"card-title\">
                             <h5>Cliente</h5>

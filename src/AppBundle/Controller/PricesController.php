@@ -2,21 +2,20 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
 
-
-class PricesController extends Controller
-{
+class PricesController extends Controller {
     /**
-     *@Route("/prezzi/listino", name="prices_list")
+     * @Route("/prezzi/listino", name="prezzi_listino")
      */
-    public function pricesListAction(Request $request) {
+    public function pricesListAction()
+    {
         $list = $this->getDoctrine()->getRepository('AppBundle:Prices')->findAll();
 
         return $this->render('prices/list.html.twig', [
-           'items' => $list
+            'items' => $list
         ]);
     }
 }
