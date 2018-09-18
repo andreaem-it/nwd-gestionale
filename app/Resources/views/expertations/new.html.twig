@@ -327,22 +327,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function () {
-                $("#form_submit").click(function () {
-                    var $form1 = $("#form");
-                    $.post($form1.attr("action"), $form1.serialize(), function () {
-                        alert('Form 1 submitted');
-                    });
-
-                    $('form[name="formsub"]').each(function () {
-                        var $form = $(this);
-                        $.post($form.attr("action"), $form.serialize(), function () {
-                            alert('Form 2 submitted');
-                        });
-                    })
-                });
-            });</script>
         <div class="row">
             <div class="col-9"></div>
             <div class="col-3">

@@ -52,9 +52,78 @@ class ExpertationsController extends Controller
 
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
-        dump($item);
 
-        $total = (array_sum($item->getPp()) * 26.20) + (array_sum($item->getPl()) * 24.50) + (array_sum($item->getPt()) * 25);
+
+        if($item->getPrice() == 0.0) {
+
+            $em = $this->getDoctrine()->getManager();
+            $item = $em->getRepository('AppBundle:Expertations')->find($item->getId());
+
+            $total = (array_sum($item->getPp()) * $this->getPrice(1)) +
+                     (array_sum($item->getPl()) * $this->getPrice(2)) +
+                     (array_sum($item->getPt()) * $this->getPrice(3));
+
+            dump($total);
+
+            if($item->getOpereMurarie() == 1) {
+                //TODO: Price
+                $opMurPp = ($this->getPrice(4) * array_sum($item->getPp()));
+            } elseif ($item->getOpereMurarie() == 2) {
+                $opMurPp = ($this->getPrice(5) * array_sum($item->getPp()));
+            } else {
+                $opMurPp = ($this->getPrice(6) * array_sum($item->getPp())) ;
+            }
+
+            if($item->getOpereMurarie() == 1) {
+                //TODO: Price
+                $opMurPl = ($this->getPrice(7) * array_sum($item->getPl()));
+            } elseif($item->getOpereMurarie() == 2) {
+                $opMurPl = ($this->getPrice(8) * array_sum($item->getPl()));
+            } else {
+                $opMurPl = ($this->getPrice(9) * array_sum($item->getPl()));
+            }
+
+            if($item->getOpereMurarie() == 1) {
+                //TODO: Price
+                $opMurPt = ($this->getPrice(10) * array_sum($item->getPt()));
+            } elseif($item->getOpereMurarie() == 2) {
+                $opMurPt = ($this->getPrice(11) * array_sum($item->getPt()));
+            } else {
+                $opMurPt = ($this->getPrice(12) * array_sum($item->getPt()));
+            }
+
+            $circ       = (100 * $item->getNumCircuiti());
+            $prTelDati  = (25  * $item->getNumPreseTelefonoDati());
+            $illmSic    = (64  * $item->getIllumSicurezza());
+
+            if ($item->getSpd() == 1) {
+                $spd = 100;
+            } elseif ($item->getSpd() == 2) {
+                $spd = 176;
+            }
+
+            $total= $total +
+                    $opMurPp +
+                    $opMurPl +
+                    $opMurPt +
+                    $circ +
+                    $prTelDati +
+                    $illmSic +
+                    $spd;
+
+
+            //$item->setPrice($total);
+            //$em->flush();
+
+            $generated = true;
+
+        } else {
+
+            $total = $item->getPrice();
+
+            $generated = false;
+
+        }
 
         $vat = $total * 22 / 100;
 
@@ -64,8 +133,8 @@ class ExpertationsController extends Controller
 
         $grandtotal = $vattotal - $sconto;
 
-        dump($vat);
-
+        dump($grandtotal);
+        dump($total);
         /*$item = [
                 'id' => $item->getId(),
                 'date' => $item->getDate()->format('d-m-Y'),
@@ -98,6 +167,7 @@ class ExpertationsController extends Controller
             'vat' => $vat,
             'sconto' => $sconto,
             'grand_total' => $grandtotal,
+            'generated' => $generated,
             'client' => $client
         ]);
     }
@@ -437,5 +507,10 @@ class ExpertationsController extends Controller
 
     public function explodeToArray($string) {
         return explode(',',$string);
+    }
+
+    function getPrice($item) {
+        $thing = $prices = $this->getDoctrine()->getRepository('AppBundle:Prices')->find($item);
+        return $thing->getPrice();
     }
 }
