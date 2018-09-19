@@ -156,6 +156,12 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
         echo "\">Utenti</a>
           </li>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"";
+        // line 95
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_gruppi");
+        echo "\">Gruppi</a>
+          </li>
         </ul>
       </div>
     </li>
@@ -181,7 +187,7 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
 
     public function getDebugInfo()
     {
-        return array (  156 => 92,  150 => 89,  133 => 75,  116 => 61,  110 => 58,  93 => 44,  87 => 41,  70 => 27,  61 => 21,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
+        return array (  162 => 95,  156 => 92,  150 => 89,  133 => 75,  116 => 61,  110 => 58,  93 => 44,  87 => 41,  70 => 27,  61 => 21,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -278,6 +284,9 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"{{ url('impostazioni_utenti') }}\">Utenti</a>
+          </li>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"{{ url('impostazioni_gruppi') }}\">Gruppi</a>
           </li>
         </ul>
       </div>

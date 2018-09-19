@@ -264,14 +264,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'AppBundle\\Controller\\PricesController::AJAXPl',  '_route' => 'ajax_price_list',);
             }
 
-            // ajax_settings_users_list
-            if ('/ajax/settings/users/list' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSULAction',  '_route' => 'ajax_settings_users_list',);
-            }
+            if (0 === strpos($pathinfo, '/ajax/settings')) {
+                // ajax_settings_users_list
+                if ('/ajax/settings/users/list' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSULAction',  '_route' => 'ajax_settings_users_list',);
+                }
 
-            // ajax_settings_users_delete
-            if (0 === strpos($pathinfo, '/ajax/settings/users/delete/{') && preg_match('#^/ajax/settings/users/delete/\\{(?P<id>[^/]+)\\}$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_settings_users_delete')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUDAction',));
+                // ajax_settings_users_delete
+                if (0 === strpos($pathinfo, '/ajax/settings/users/delete') && preg_match('#^/ajax/settings/users/delete/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_settings_users_delete')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUDAction',));
+                }
+
+                // ajax_settings_groups_list
+                if ('/ajax/settings/groups/list' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSGLAction',  '_route' => 'ajax_settings_groups_list',);
+                }
+
             }
 
         }
@@ -333,40 +341,66 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::changePasswordAction',  '_route' => 'security_change_password',);
         }
 
-        // impostazioni_generali
-        if ('/impostazioni/generali' === $trimmedPathinfo) {
-            $ret = array (  '_controller' => 'AppBundle\\Controller\\SettingsController::SettingsGeneralAction',  '_route' => 'impostazioni_generali',);
-            if ('/' === substr($pathinfo, -1)) {
-                // no-op
-            } elseif ('GET' !== $canonicalMethod) {
-                goto not_impostazioni_generali;
-            } else {
-                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'impostazioni_generali'));
-            }
-
-            return $ret;
-        }
-        not_impostazioni_generali:
-
-        if (0 === strpos($pathinfo, '/impostazioni/utenti')) {
-            // impostazioni_utenti
-            if ('/impostazioni/utenti' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'AppBundle\\Controller\\SettingsController::SettingsUsersAction',  '_route' => 'impostazioni_utenti',);
+        if (0 === strpos($pathinfo, '/impostazioni')) {
+            // impostazioni_generali
+            if ('/impostazioni/generali' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\SettingsController::SettingsGeneralAction',  '_route' => 'impostazioni_generali',);
                 if ('/' === substr($pathinfo, -1)) {
                     // no-op
                 } elseif ('GET' !== $canonicalMethod) {
-                    goto not_impostazioni_utenti;
+                    goto not_impostazioni_generali;
                 } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'impostazioni_utenti'));
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'impostazioni_generali'));
                 }
 
                 return $ret;
             }
-            not_impostazioni_utenti:
+            not_impostazioni_generali:
 
-            // impostazioni_utenti_aggiungi
-            if ('/impostazioni/utenti/nuovo' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUAAction',  '_route' => 'impostazioni_utenti_aggiungi',);
+            if (0 === strpos($pathinfo, '/impostazioni/gruppi')) {
+                // impostazioni_gruppi
+                if ('/impostazioni/gruppi' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\SettingsController::settingsGroupsAction',  '_route' => 'impostazioni_gruppi',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_impostazioni_gruppi;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'impostazioni_gruppi'));
+                    }
+
+                    return $ret;
+                }
+                not_impostazioni_gruppi:
+
+                // impostazioni_gruppi_nuovo
+                if ('/impostazioni/gruppi/nuovo' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::settingsGroupAddAction',  '_route' => 'impostazioni_gruppi_nuovo',);
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/impostazioni/utenti')) {
+                // impostazioni_utenti
+                if ('/impostazioni/utenti' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\SettingsController::SettingsUsersAction',  '_route' => 'impostazioni_utenti',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_impostazioni_utenti;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'impostazioni_utenti'));
+                    }
+
+                    return $ret;
+                }
+                not_impostazioni_utenti:
+
+                // impostazioni_utenti_aggiungi
+                if ('/impostazioni/utenti/nuovo' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUAAction',  '_route' => 'impostazioni_utenti_aggiungi',);
+                }
+
             }
 
         }

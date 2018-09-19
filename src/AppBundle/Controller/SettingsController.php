@@ -2,7 +2,10 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Groups;
 use AppBundle\Entity\Users;
+use Doctrine\DBAL\Types\IntegerType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -95,6 +98,88 @@ class SettingsController extends Controller
     }
 
     /**
+     * @Route("impostazioni/gruppi/", name="impostazioni_gruppi")
+     */
+    public function settingsGroupsAction(Request $request) {
+
+
+        return $this->render('settings/groups.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("impostazioni/gruppi/nuovo", name="impostazioni_gruppi_nuovo")
+     */
+    public function settingsGroupAddAction(Request $request) {
+        $group = new Groups();
+        $group->setIsActive(True);
+
+        $form = $this->createFormBuilder($group)
+            ->add('name', TextType::class,['label' => 'Nome Gruppo', 'attr' => ['class' => 'form-control']])
+            ->add('level', ChoiceType::class,
+                ['choices' => [
+                    'Livello 1' => '1',
+                    'Livello 2' => '2',
+                    'Livello 3' => '3',
+                    'Livello 4' => '4',
+                    'Livello 5' => '5',
+                ],
+                    'choice_attr' => ['class' => 'form-control'],
+                    'label' => 'Livello',
+                    'attr' => [
+                        'class' => 'form-control'
+                ]])
+            ->add('components', EntityType::class, [
+                'class' => Users::class,
+                'choice_label' => 'username',
+                'choice_value' => 'id',
+                'choice_attr' => ['class' => 'form-control'],
+                'label' => 'Componenti',
+                'multiple' => true,
+                'expanded' => false,
+                'attr' => [
+                    'class' => 'form-control'
+                ]])
+            ->add('father', EntityType::class, [
+                'class' => Groups::class,
+                'choice_label' => 'name',
+                'choice_attr' => ['class' => 'form-control'],
+                'expanded' => false,
+                'multiple' => false,
+                'label' => 'Gruppo Padre',
+                'attr' => ['class' => 'form-control']
+            ])
+            ->add('childs', EntityType::class, [
+                'class' => Groups::class,
+                'choice_label' => 'name',
+                'label_attr' => ['class' => 'mr-3'],
+                'choice_attr' => ['class' => 'form-control ml-2'],
+                'expanded' => false,
+                'multiple' => true,
+                'label' => 'Figli',
+                'attr' => ['class' => 'form-control']
+            ])
+            ->add('submit', SubmitType::class,['label' => 'Aggiungi', 'attr' => ['class' => 'btn btn-success']])
+            ->add('reset', ResetType::class, ['label' => 'Reset', 'attr' => ['class' => 'btn btn-warning']])
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($form->getData());
+            $em->flush();
+
+            $this->redirectToRoute('impostazioni_gruppi');
+        }
+
+        return $this->render('settings/ajax/groups.add.form.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
      * @Route("ajax/settings/users/list", name="ajax_settings_users_list")
      */
     public function AjaxSULAction() {
@@ -106,7 +191,18 @@ class SettingsController extends Controller
     }
 
     /**
-     * @Route("ajax/settings/users/delete/{{id}}", name="ajax_settings_users_delete")
+     * @Route("ajax/settings/groups/list", name="ajax_settings_groups_list")
+     */
+    public function AjaxSGLAction() {
+        $groupsList = $this->getDoctrine()->getRepository(Groups::class)->findAll();
+
+        return $this->render('settings/ajax/groups.list.html.twig', [
+            'groups' => $groupsList
+        ]);
+    }
+
+    /**
+     * @Route("ajax/settings/users/delete/{id}", name="ajax_settings_users_delete")
      */
     public function AjaxSUDAction($id) {
 

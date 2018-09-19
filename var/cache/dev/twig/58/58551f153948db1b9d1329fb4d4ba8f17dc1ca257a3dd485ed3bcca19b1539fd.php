@@ -43,7 +43,7 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
             <th>
                 Prezzo
             </th>
-            <th>
+            <th style=\"width: 80px\">
                 Opzioni
             </th>
         </tr>
@@ -70,12 +70,12 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
             // line 27
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
             echo "</td>
-                <td>
+                <td class=\"float-right\">
                     <a href=\"";
             // line 29
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("prezzi_aggiorna", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-secondary btn-sm\" data-id=\"\">
-                        <i class=\"mdi mdi-table-edit\"></i>
+            echo "\" class=\"btn btn-secondary btn-sm \" data-id=\"\">
+                        <i class=\"mdi mdi-table-edit mr-0\"></i>
                     </a>
                 </td>
             </tr>
@@ -132,7 +132,7 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
             <th>
                 Prezzo
             </th>
-            <th>
+            <th style=\"width: 80px\">
                 Opzioni
             </th>
         </tr>
@@ -142,9 +142,9 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
                 <td>{{ item.name }}</td>
                 <td>{{ item.canonical }}</td>
                 <td>{{ item.price }}</td>
-                <td>
-                    <a href=\"{{ url('prezzi_aggiorna', { 'id' : item.id } ) }}\" class=\"btn btn-secondary btn-sm\" data-id=\"\">
-                        <i class=\"mdi mdi-table-edit\"></i>
+                <td class=\"float-right\">
+                    <a href=\"{{ url('prezzi_aggiorna', { 'id' : item.id } ) }}\" class=\"btn btn-secondary btn-sm \" data-id=\"\">
+                        <i class=\"mdi mdi-table-edit mr-0\"></i>
                     </a>
                 </td>
             </tr>

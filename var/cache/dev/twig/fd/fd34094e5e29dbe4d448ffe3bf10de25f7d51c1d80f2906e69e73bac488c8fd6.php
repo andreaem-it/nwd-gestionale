@@ -76,10 +76,38 @@ class __TwigTemplate_56e7e0816a52f68392a3a4cc86dc10bdd8ba35df0b0f9b36c24a909a75e
                     <h3>Prezzi <small>Listino</small></h3>
                 </div>
             </div>
-            <div class=\"alert alert-info\">
-                I prezzi in listino sono senza IVA.
-            </div>
-            <div class=\"row\">
+            ";
+        // line 11
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 11, $this->source); })()), "flashes", array()));
+        foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
+            // line 12
+            echo "                ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($context["messages"]);
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                // line 13
+                echo "                    <div class=\"alert alert-";
+                echo twig_escape_filter($this->env, $context["label"], "html", null, true);
+                echo "\">
+                        ";
+                // line 14
+                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+                echo "
+                    </div>
+                ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 17
+            echo "            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 18
+        echo "            <div class=\"row\">
                 <div class=\"col-lg-12 grid-margin stretch-card\">
                     <div class=\"card\">
                         <div class=\"card-body\">
@@ -97,7 +125,7 @@ class __TwigTemplate_56e7e0816a52f68392a3a4cc86dc10bdd8ba35df0b0f9b36c24a909a75e
         function loadTable() {
             \$.ajax({
                 url: '";
-        // line 31
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("ajax_price_list");
         echo "',
                 dataType: 'html',
@@ -128,7 +156,7 @@ class __TwigTemplate_56e7e0816a52f68392a3a4cc86dc10bdd8ba35df0b0f9b36c24a909a75e
 
     public function getDebugInfo()
     {
-        return array (  101 => 31,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  129 => 35,  110 => 18,  104 => 17,  95 => 14,  90 => 13,  85 => 12,  81 => 11,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -143,9 +171,13 @@ class __TwigTemplate_56e7e0816a52f68392a3a4cc86dc10bdd8ba35df0b0f9b36c24a909a75e
                     <h3>Prezzi <small>Listino</small></h3>
                 </div>
             </div>
-            <div class=\"alert alert-info\">
-                I prezzi in listino sono senza IVA.
-            </div>
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class=\"alert alert-{{ label }}\">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
             <div class=\"row\">
                 <div class=\"col-lg-12 grid-margin stretch-card\">
                     <div class=\"card\">
