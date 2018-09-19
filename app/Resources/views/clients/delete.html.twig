@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Clienti <small>{{ client.name }}</small></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <strong>Nome:</strong> {{ client.name }} <br/>
+                            <strong>Indirizzo:</strong> {{ client.address }}, {{ client.postalCode }}, {{ client.city }} ({{ client.province }}) <br/>
+                            <strong>Telefono:</strong> <a href="tel:{{ client.phone }}">{{ client.phone }}</a>  <br/>
+                            <strong>E-Mail:</strong> <a href="mailto:{{ client.email }}">{{ client.email }}</a>  <br/>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Eliminare definitivamente questo cliente?</h3>
+                            <br/>
+                            <a href="{{ url('elimina_clienti' , { 'id' : client.id , 'confirm' : true }) }}" class="btn btn-danger">Conferma</a>
+                            <a href="{{ url('clienti') }}" class="btn btn-secondary">Annulla</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

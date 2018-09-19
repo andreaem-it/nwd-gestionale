@@ -76,7 +76,38 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                 <h3>Preventivi <small>Lista</small></h3>
             </div>
         </div>
-        <div class=\"row\">
+        ";
+        // line 11
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 11, $this->source); })()), "flashes", array()));
+        foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
+            // line 12
+            echo "            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($context["messages"]);
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                // line 13
+                echo "                <div class=\"alert alert-";
+                echo twig_escape_filter($this->env, $context["label"], "html", null, true);
+                echo "\">
+                    ";
+                // line 14
+                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+                echo "
+                </div>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 17
+            echo "        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 18
+        echo "        <div class=\"row\">
             <div class=\"col-lg-12 grid-margin stretch-card\">
                 <div class=\"card\">
                     <div class=\"card-body\">
@@ -104,33 +135,33 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                 </thead>
                                 <tbody>
                                     ";
-        // line 38
+        // line 45
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["expertations"]) || array_key_exists("expertations", $context) ? $context["expertations"] : (function () { throw new Twig_Error_Runtime('Variable "expertations" does not exist.', 38, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["expertations"]) || array_key_exists("expertations", $context) ? $context["expertations"] : (function () { throw new Twig_Error_Runtime('Variable "expertations" does not exist.', 45, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 39
+            // line 46
             echo "                                        <tr>
                                     <td class=\"py-1\">
                                         ";
-            // line 41
+            // line 48
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "date", array()), "d-m-Y"), "html", null, true);
             echo "
                                     </td>
                                     <td>
                                         <a href=\"";
-            // line 44
+            // line 51
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
             echo "\">
                                             ";
-            // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 45, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 52, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
             echo "
                                         </a>
                                     </td>
                                     <td>
                                         <div class=\"progress\">
                                             <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: ";
-            // line 50
+            // line 57
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", array()), "html", null, true);
             echo "%\" aria-valuenow=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", array()), "html", null, true);
@@ -139,26 +170,29 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                     </td>
                                     <td>
                                         ";
-            // line 54
+            // line 61
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
             echo " €
                                     </td>
                                     <td>
                                         ";
-            // line 57
+            // line 64
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "expiration", array()), "d-m-Y"), "html", null, true);
             echo "
                                     </td>
                                     <td style=\"width: 255px;\">
                                         <div class=\"btn-group\">
-                                            <a href=\"\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                            <a href=\"";
+            // line 68
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
+            echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
                                                 <span class=\"mdi mdi-delete\"></span>
                                             </a>
                                             <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
                                                 <span class=\"mdi mdi-table-edit\"></span>
                                             </a>
                                             <a href=\"";
-            // line 67
+            // line 74
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
                                                 <span class=\"mdi mdi-eye-outline\"></span>
@@ -171,7 +205,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 81
         echo "                                </tbody>
                             </table>
                         </div>
@@ -202,7 +236,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
 
     public function getDebugInfo()
     {
-        return array (  175 => 74,  162 => 67,  149 => 57,  143 => 54,  134 => 50,  126 => 45,  122 => 44,  116 => 41,  112 => 39,  108 => 38,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  209 => 81,  196 => 74,  187 => 68,  180 => 64,  174 => 61,  165 => 57,  157 => 52,  153 => 51,  147 => 48,  143 => 46,  139 => 45,  110 => 18,  104 => 17,  95 => 14,  90 => 13,  85 => 12,  81 => 11,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -217,6 +251,13 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                 <h3>Preventivi <small>Lista</small></h3>
             </div>
         </div>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class=\"alert alert-{{ label }}\">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
         <div class=\"row\">
             <div class=\"col-lg-12 grid-margin stretch-card\">
                 <div class=\"card\">
@@ -267,7 +308,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                     </td>
                                     <td style=\"width: 255px;\">
                                         <div class=\"btn-group\">
-                                            <a href=\"\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                            <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
                                                 <span class=\"mdi mdi-delete\"></span>
                                             </a>
                                             <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">

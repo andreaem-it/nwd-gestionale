@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Cliente <small>{{ client.name }}</small></h3>
+                </div>
+            </div>
+            <div class="row mb-sm-2">
+                <div class="col-md-4">
+                    <div class="card card-grey mbgitmd-4">
+                        <div class="card-body ">
+                            <div class="card-title">
+                                <h5>Cliente</h5>
+                            </div>
+                            <strong>Nome:</strong> {{ client.name }} <br/>
+                            <strong>Indirizzo:</strong> {{ client.address }}, {{ client.postalCode }}, {{ client.city }} ({{ client.province }}) <br/>
+                            <strong>Telefono:</strong> <a href="tel:{{ client.phone }}">{{ client.phone }}</a>  <br/>
+                            <strong>E-Mail:</strong> <a href="mailto:{{ client.email }}">{{ client.email }}</a>  <br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card card-grey">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5>Abitazione</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <strong>Tipo impianto:</strong>  {{ functions.plantIntToName(item.tipo) }}<br/>
+                                    <strong>Piani edificio:</strong>  {{ item.pianiCasa }}<br/>
+                                    <strong>Riscaldamento:</strong>  {{ functions.heatingIntToName(item.riscaldamento) }} <br/>
+                                    <strong>Trifase:</strong>  {% if item.trifase == true %} Si {% elseif item.trifase == false %} No {% endif %}<br/>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong>Livello impianto:</strong> {{ item.level }} <br/>
+                                    <strong>Fornitura elettrica:</strong> {{ item.kw }} Kw <br/>
+                                    <strong>Metratura ambienti:</strong> {{ item.squareMeters }} m² <br />
+                                    <strong>Opere murarie:</strong> {% if item.opereMurarie == 0 %} No {% elseif item.opereMurarie == 1 %} Intonaco {% elseif item.opereMurarie == 2 %} Mattone/Pietra {% endif %}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Eliminare definitivamente questo preventivo?</h3>
+                            <br/>
+                            <a href="{{ url('preventivi_elimina' , { 'id' : item.id , 'confirm' : true }) }}" class="btn btn-danger">Conferma</a>
+                            <a href="{{ url('lista_preventivi') }}" class="btn btn-secondary">Annulla</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

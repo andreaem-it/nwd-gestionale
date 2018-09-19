@@ -1,6 +1,6 @@
 <?php
 
-/* settings/settings.html.twig */
+/* :settings:settings.html.twig */
 class __TwigTemplate_94b1255a99b2c510526ccf92cedbf462c6052426385f782fdfa87f1c41729cfa extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_94b1255a99b2c510526ccf92cedbf462c6052426385f782fdfa87f1c417
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "settings/settings.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", ":settings:settings.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -27,10 +27,10 @@ class __TwigTemplate_94b1255a99b2c510526ccf92cedbf462c6052426385f782fdfa87f1c417
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/settings.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings:settings.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/settings.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings:settings.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -92,7 +92,7 @@ class __TwigTemplate_94b1255a99b2c510526ccf92cedbf462c6052426385f782fdfa87f1c417
 
     public function getTemplateName()
     {
-        return "settings/settings.html.twig";
+        return ":settings:settings.html.twig";
     }
 
     public function isTraitable()
@@ -122,6 +122,6 @@ class __TwigTemplate_94b1255a99b2c510526ccf92cedbf462c6052426385f782fdfa87f1c417
             </div>
         </div>
     </div>
-{% endblock %}", "settings/settings.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/settings/settings.html.twig");
+{% endblock %}", ":settings:settings.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/settings.html.twig");
     }
 }

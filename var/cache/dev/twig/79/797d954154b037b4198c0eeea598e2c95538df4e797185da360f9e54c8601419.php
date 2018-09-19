@@ -1,6 +1,6 @@
 <?php
 
-/* expertations/show.html.twig */
+/* :expertations:show.html.twig */
 class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd3049d4e extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "expertations/show.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", ":expertations:show.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -29,10 +29,10 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "expertations/show.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":expertations:show.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "expertations/show.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":expertations:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -97,7 +97,7 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
         </div>
         <div class=\"row mb-sm-2\">
             <div class=\"col-md-4\">
-                <div class=\"card card-grey mbmd-4\">
+                <div class=\"card card-grey mbgitmd-4\">
                     <div class=\"card-body \">
                         <div class=\"card-title\">
                             <h5>Cliente</h5>
@@ -532,7 +532,7 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
 
     public function getTemplateName()
     {
-        return "expertations/show.html.twig";
+        return ":expertations:show.html.twig";
     }
 
     public function isTraitable()
@@ -576,7 +576,7 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
         </div>
         <div class=\"row mb-sm-2\">
             <div class=\"col-md-4\">
-                <div class=\"card card-grey mbmd-4\">
+                <div class=\"card card-grey mbgitmd-4\">
                     <div class=\"card-body \">
                         <div class=\"card-title\">
                             <h5>Cliente</h5>
@@ -815,6 +815,6 @@ class __TwigTemplate_72adca56bd6d846409d16b3b77f2c1c9849f8d8d489e543deb69063cd30
             })
         </script>
     {% endif %}
-{% endblock %}", "expertations/show.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/show.html.twig");
+{% endblock %}", ":expertations:show.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/show.html.twig");
     }
 }

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -106,8 +107,8 @@ class ExpertationsController extends Controller
                     $spd;
 
 
-            //$item->setPrice($total);
-            //$em->flush();
+            $item->setPrice($total);
+            $em->flush();
 
             $generated = true;
 
@@ -158,6 +159,8 @@ class ExpertationsController extends Controller
                     return $er->createQueryBuilder('u')
                         ->orderBy('u.name', 'ASC');
                 },
+                'choice_name' => 'name',
+                'choice_value' => 'id',
                 'label' => 'Cliente',
                 'attr' => ['class' => 'form-control']
             ])
@@ -346,7 +349,7 @@ class ExpertationsController extends Controller
 
             $expertation = $form->getData();
             $expertations->setDate      (New \DateTime("now"));
-            $expertations->setClient    (1);
+            $expertations->setClient    ((string)$form->get('client')->getData());
             $expertations->setStatus    (0);
             $expertations->setPrice     (0);
             $expertations->setExpiration(New \DateTime("now"));
@@ -367,10 +370,32 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("preventivi/genera/", name="preventivi_genera")
+     * @Route("preventivi/elimina/{id}/{confirm}", name="preventivi_elimina", defaults={"confirm" = false})
      */
-    public function generateExpertatationAction(Request $request) {
+    public function deleteExpertatationAction($id, $confirm = false) {
 
+        $expertation = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+
+        if($confirm == false) {
+
+            $client = $this->getDoctrine()->getRepository(Clients::class)->find($expertation->getClient());
+
+            return $this->render('expertations/delete.html.twig', [
+                'item' => $expertation,
+                'client' => $client,
+                'functions' => $this
+            ]);
+        } else {
+            $this->addFlash('success', 'Preventivo eliminato!');
+
+            $expertation = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($expertation);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('lista_preventivi');
+        }
     }
 
     /**

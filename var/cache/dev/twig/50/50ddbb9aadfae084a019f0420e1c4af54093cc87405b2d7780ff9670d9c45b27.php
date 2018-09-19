@@ -1,6 +1,6 @@
 <?php
 
-/* template/footer.html.twig */
+/* :template:footer.html.twig */
 class __TwigTemplate_685880747ae60b433c13983e2665b618bf20af73f2c96678e9cfa4da04a57813 extends Twig_Template
 {
     private $source;
@@ -20,10 +20,10 @@ class __TwigTemplate_685880747ae60b433c13983e2665b618bf20af73f2c96678e9cfa4da04a
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "template/footer.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":template:footer.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "template/footer.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":template:footer.html.twig"));
 
         // line 1
         echo "<footer class=\"footer\">
@@ -45,7 +45,7 @@ class __TwigTemplate_685880747ae60b433c13983e2665b618bf20af73f2c96678e9cfa4da04a
 
     public function getTemplateName()
     {
-        return "template/footer.html.twig";
+        return ":template:footer.html.twig";
     }
 
     public function getDebugInfo()
@@ -63,6 +63,6 @@ class __TwigTemplate_685880747ae60b433c13983e2665b618bf20af73f2c96678e9cfa4da04a
               <i class=\"mdi mdi-heart text-danger\"></i>
             </span>
           </div>
-        </footer>", "template/footer.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/footer.html.twig");
+        </footer>", ":template:footer.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/footer.html.twig");
     }
 }

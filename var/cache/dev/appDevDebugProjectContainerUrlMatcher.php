@@ -133,6 +133,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'AppBundle\\Controller\\ClientsController::ClientsNewAction',  '_route' => 'nuovo_cliente',);
             }
 
+            // modifica_cliente
+            if (0 === strpos($pathinfo, '/clienti/modifica') && preg_match('#^/clienti/modifica/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifica_cliente')), array (  '_controller' => 'AppBundle\\Controller\\ClientsController::ClientsEditAction',));
+            }
+
+            // elimina_clienti
+            if (0 === strpos($pathinfo, '/clienti/elimina') && preg_match('#^/clienti/elimina/(?P<id>[^/]++)(?:/(?P<confirm>[^/]++))?$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'elimina_clienti')), array (  'confirm' => false,  '_controller' => 'AppBundle\\Controller\\ClientsController::deleteClientAction',));
+            }
+
         }
 
         // homepage
@@ -155,36 +165,39 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dashboard',);
         }
 
-        if (0 === strpos($pathinfo, '/preventivi')) {
-            // lista_preventivi
-            if ('/preventivi/lista' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsListAction',  '_route' => 'lista_preventivi',);
-            }
-
-            // mostra_preventivo
-            if (0 === strpos($pathinfo, '/preventivi/mostra') && preg_match('#^/preventivi/mostra/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'mostra_preventivo')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsShowAction',));
-            }
-
-            // nuovo_preventivo
-            if ('/preventivi/nuovo' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsNewAction',  '_route' => 'nuovo_preventivo',);
-            }
-
-            // preventivi_genera
-            if ('/preventivi/genera' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::generateExpertatationAction',  '_route' => 'preventivi_genera',);
-                if ('/' === substr($pathinfo, -1)) {
-                    // no-op
-                } elseif ('GET' !== $canonicalMethod) {
-                    goto not_preventivi_genera;
-                } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'preventivi_genera'));
+        if (0 === strpos($pathinfo, '/pre')) {
+            if (0 === strpos($pathinfo, '/preventivi')) {
+                // lista_preventivi
+                if ('/preventivi/lista' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsListAction',  '_route' => 'lista_preventivi',);
                 }
 
-                return $ret;
+                // mostra_preventivo
+                if (0 === strpos($pathinfo, '/preventivi/mostra') && preg_match('#^/preventivi/mostra/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'mostra_preventivo')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsShowAction',));
+                }
+
+                // nuovo_preventivo
+                if ('/preventivi/nuovo' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsNewAction',  '_route' => 'nuovo_preventivo',);
+                }
+
+                // preventivi_elimina
+                if (0 === strpos($pathinfo, '/preventivi/elimina') && preg_match('#^/preventivi/elimina/(?P<id>[^/]++)(?:/(?P<confirm>[^/]++))?$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_elimina')), array (  'confirm' => false,  '_controller' => 'AppBundle\\Controller\\ExpertationsController::deleteExpertatationAction',));
+                }
+
             }
-            not_preventivi_genera:
+
+            // prezzi_listino
+            if ('/prezzi/listino' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesListAction',  '_route' => 'prezzi_listino',);
+            }
+
+            // prezzi_aggiorna
+            if (0 === strpos($pathinfo, '/prezzi/aggiorna') && preg_match('#^/prezzi/aggiorna/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'prezzi_aggiorna')), array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesUpdateAction',));
+            }
 
         }
 
@@ -244,6 +257,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // ajax_get_expertations_quadri
             if (0 === strpos($pathinfo, '/ajax/expertations/get/quadri') && preg_match('#^/ajax/expertations/get/quadri/(?P<tipo>[^/]++)/(?P<level>[^/]++)/(?P<meters>[^/]++)$#sD', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_quadri')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGQ',));
+            }
+
+            // ajax_price_list
+            if ('/ajax/prices/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::AJAXPl',  '_route' => 'ajax_price_list',);
             }
 
             // ajax_settings_users_list

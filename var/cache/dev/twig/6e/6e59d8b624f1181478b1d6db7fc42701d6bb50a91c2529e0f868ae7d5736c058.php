@@ -1,6 +1,6 @@
 <?php
 
-/* settings/ajax/users.list.html.twig */
+/* :settings/ajax:users.list.html.twig */
 class __TwigTemplate_056239aeffae94df390ff198afadf45ca02909cb06e8baa5aef834b8b2ef37da extends Twig_Template
 {
     private $source;
@@ -20,10 +20,10 @@ class __TwigTemplate_056239aeffae94df390ff198afadf45ca02909cb06e8baa5aef834b8b2e
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/ajax/users.list.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings/ajax:users.list.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/ajax/users.list.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings/ajax:users.list.html.twig"));
 
         // line 1
         $context['_parent'] = $context;
@@ -146,7 +146,7 @@ $context["user"], "enabled", array()) == 1)) {
 
     public function getTemplateName()
     {
-        return "settings/ajax/users.list.html.twig";
+        return ":settings/ajax:users.list.html.twig";
     }
 
     public function isTraitable()
@@ -224,6 +224,6 @@ $context["user"], "enabled", array()) == 1)) {
             }
         });
     });
-</script>", "settings/ajax/users.list.html.twig", "/Users/andreaemili/Desktop/gestionale/app/Resources/views/settings/ajax/users.list.html.twig");
+</script>", ":settings/ajax:users.list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/ajax/users.list.html.twig");
     }
 }
