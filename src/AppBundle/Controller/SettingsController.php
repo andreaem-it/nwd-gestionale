@@ -24,8 +24,6 @@ class SettingsController extends Controller
      * @Route("impostazioni/generali/", name="impostazioni_generali")
      */
     public function SettingsGeneralAction(Request $request) {
-
-
         return $this->render('settings/settings.html.twig');
     }
 
@@ -33,8 +31,6 @@ class SettingsController extends Controller
      * @Route("impostazioni/utenti/", name="impostazioni_utenti")
      */
     public function SettingsUsersAction(Request $request) {
-
-
         return $this->render('settings/users.html.twig', [
         ]);
     }
@@ -101,8 +97,6 @@ class SettingsController extends Controller
      * @Route("impostazioni/gruppi/", name="impostazioni_gruppi")
      */
     public function settingsGroupsAction(Request $request) {
-
-
         return $this->render('settings/groups.html.twig', [
         ]);
     }
@@ -125,7 +119,7 @@ class SettingsController extends Controller
                     'Livello 5' => '5',
                 ],
                     'choice_attr' => ['class' => 'form-control'],
-                    'label' => 'Livello',
+                    'label' => 'Livello di Accesso',
                     'attr' => [
                         'class' => 'form-control'
                 ]])

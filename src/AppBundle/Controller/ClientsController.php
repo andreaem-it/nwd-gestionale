@@ -176,7 +176,7 @@ class ClientsController extends Controller
 
         }
 
-        return $this->render('clients/clients.new.html.twig',[
+        return $this->render('clients/clients.edit.html.twig',[
             'form' => $form->createView()
         ]);
     }

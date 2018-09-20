@@ -16,6 +16,7 @@ class __TwigTemplate_b63ba6408d8b08ad041c6e252c0fc089d2871ecaa1a53dafcdef2a12bd1
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -99,7 +100,7 @@ class __TwigTemplate_b63ba6408d8b08ad041c6e252c0fc089d2871ecaa1a53dafcdef2a12bd1
                                 ";
         // line 22
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 22, $this->source); })()), "level", array()), 'label');
-        echo "
+        echo " <a class=\"small\" style=\"top: -5px;position: relative;\" href=\"#\" data-toggle=\"modal\" data-target=\"#infoDialog\"><i class=\"mdi mdi-information\"></i></a>
                                 ";
         // line 23
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 23, $this->source); })()), "level", array()), 'widget');
@@ -158,6 +159,56 @@ class __TwigTemplate_b63ba6408d8b08ad041c6e252c0fc089d2871ecaa1a53dafcdef2a12bd1
             </div>
         </div>
     </div>
+
+    <div class=\"modal\" tabindex=\"-1\" role=\"dialog\" id=\"infoDialog\">
+        <div class=\"modal-dialog\" role=\"document\" style=\"max-width: 35%\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h4>Info sui livelli</h4>
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                        <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                </div>
+                <div class=\"modal-body\">
+                    <strong>Livello 1:</strong><p>Accesso completo a tutte le funzionalità e configurazioni</p><br/>
+                    <strong>Livello 2:</strong><p>Accesso completo a tutte le funzionalità ma non alle configurazioni</p><br/>
+                    <strong>Livello 3:</strong><p>Accesso completo alle funzionalità preventivi e clienti</p><br/>
+                    <strong>Livello 4:</strong><p>Accesso a preventivi e clienti propri e degli utenti di Livello 5 assegnai a lui</p><br/>
+                    <strong>Livello 5:</strong><p>Accesso a preventivi e clienti dell'utente</p><br/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 73
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 74
+        echo "    <script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-ui.min.js"), "html", null, true);
+        echo "\"></script>
+    <script>
+        \$(\"#infoDialog\").draggable({
+            handle: \".modal-header\"
+        });
+        \$('.modal-backdrop').remove();
+
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -179,7 +230,7 @@ class __TwigTemplate_b63ba6408d8b08ad041c6e252c0fc089d2871ecaa1a53dafcdef2a12bd1
 
     public function getDebugInfo()
     {
-        return array (  152 => 43,  148 => 42,  144 => 41,  135 => 35,  131 => 34,  125 => 31,  121 => 30,  115 => 27,  111 => 26,  105 => 23,  101 => 22,  95 => 19,  91 => 18,  86 => 16,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  202 => 74,  193 => 73,  153 => 43,  149 => 42,  145 => 41,  136 => 35,  132 => 34,  126 => 31,  122 => 30,  116 => 27,  112 => 26,  106 => 23,  102 => 22,  96 => 19,  92 => 18,  87 => 16,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -205,7 +256,7 @@ class __TwigTemplate_b63ba6408d8b08ad041c6e252c0fc089d2871ecaa1a53dafcdef2a12bd1
                                 {{ form_widget(form.name) }}
                             </div>
                             <div class=\"form-group\">
-                                {{ form_label(form.level) }}
+                                {{ form_label(form.level) }} <a class=\"small\" style=\"top: -5px;position: relative;\" href=\"#\" data-toggle=\"modal\" data-target=\"#infoDialog\"><i class=\"mdi mdi-information\"></i></a>
                                 {{ form_widget(form.level) }}
                             </div>
                             <div class=\"form-group\">
@@ -234,6 +285,37 @@ class __TwigTemplate_b63ba6408d8b08ad041c6e252c0fc089d2871ecaa1a53dafcdef2a12bd1
             </div>
         </div>
     </div>
+
+    <div class=\"modal\" tabindex=\"-1\" role=\"dialog\" id=\"infoDialog\">
+        <div class=\"modal-dialog\" role=\"document\" style=\"max-width: 35%\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h4>Info sui livelli</h4>
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                        <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                </div>
+                <div class=\"modal-body\">
+                    <strong>Livello 1:</strong><p>Accesso completo a tutte le funzionalità e configurazioni</p><br/>
+                    <strong>Livello 2:</strong><p>Accesso completo a tutte le funzionalità ma non alle configurazioni</p><br/>
+                    <strong>Livello 3:</strong><p>Accesso completo alle funzionalità preventivi e clienti</p><br/>
+                    <strong>Livello 4:</strong><p>Accesso a preventivi e clienti propri e degli utenti di Livello 5 assegnai a lui</p><br/>
+                    <strong>Livello 5:</strong><p>Accesso a preventivi e clienti dell'utente</p><br/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src=\"{{ asset('js/jquery-ui.min.js') }}\"></script>
+    <script>
+        \$(\"#infoDialog\").draggable({
+            handle: \".modal-header\"
+        });
+        \$('.modal-backdrop').remove();
+
+    </script>
 {% endblock %}", "settings/ajax/groups.add.form.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/ajax/groups.add.form.html.twig");
     }
 }

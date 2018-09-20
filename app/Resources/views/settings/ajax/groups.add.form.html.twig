@@ -19,7 +19,7 @@
                                 {{ form_widget(form.name) }}
                             </div>
                             <div class="form-group">
-                                {{ form_label(form.level) }}
+                                {{ form_label(form.level) }} <a class="small" style="top: -5px;position: relative;" href="#" data-toggle="modal" data-target="#infoDialog"><i class="mdi mdi-information"></i></a>
                                 {{ form_widget(form.level) }}
                             </div>
                             <div class="form-group">
@@ -34,10 +34,6 @@
                                 {{ form_label(form.childs) }}
                                 {{ form_widget(form.childs) }}
                             </div>
-
-
-
-
                             {{ form_widget(form.submit) }}
                             {{ form_widget(form.reset) }}
                             {{ form_end(form) }}
@@ -48,4 +44,35 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="infoDialog">
+        <div class="modal-dialog" role="document" style="max-width: 35%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Info sui livelli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Livello 1:</strong><p>Accesso completo a tutte le funzionalità e configurazioni</p><br/>
+                    <strong>Livello 2:</strong><p>Accesso completo a tutte le funzionalità ma non alle configurazioni</p><br/>
+                    <strong>Livello 3:</strong><p>Accesso completo alle funzionalità preventivi e clienti</p><br/>
+                    <strong>Livello 4:</strong><p>Accesso a preventivi e clienti propri e degli utenti di Livello 5 assegnai a lui</p><br/>
+                    <strong>Livello 5:</strong><p>Accesso a preventivi e clienti dell'utente</p><br/>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script>
+        $("#infoDialog").draggable({
+            handle: ".modal-header"
+        });
+        $('.modal-backdrop').remove();
+
+    </script>
 {% endblock %}

@@ -159,7 +159,7 @@ class ExpertationsController extends Controller
                     return $er->createQueryBuilder('u')
                         ->orderBy('u.name', 'ASC');
                 },
-                'choice_name' => 'name',
+                'choice_label' => 'name',
                 'choice_value' => 'id',
                 'label' => 'Cliente',
                 'attr' => ['class' => 'form-control']

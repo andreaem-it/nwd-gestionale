@@ -150,7 +150,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                     <td>
                                         <a href=\"";
             // line 51
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
             echo "\">
                                             ";
             // line 52
@@ -291,7 +291,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         {{ item.date|date(\"d-m-Y\") }}
                                     </td>
                                     <td>
-                                        <a href=\"{{ url('clienti', { id : item.client}) }}\">
+                                        <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
                                             {{ functions.uidToName(item.client) }}
                                         </a>
                                     </td>

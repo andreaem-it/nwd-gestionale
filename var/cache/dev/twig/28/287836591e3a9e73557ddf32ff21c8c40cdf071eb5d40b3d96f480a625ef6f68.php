@@ -1,6 +1,6 @@
 <?php
 
-/* :clients:clients.new.html.twig */
+/* clients/clients.new.html.twig */
 class __TwigTemplate_c2189e2e5153d1073606ec7998d29c729ddaa9348bb8d0fa1c283c5be6f3a257 extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_c2189e2e5153d1073606ec7998d29c729ddaa9348bb8d0fa1c283c5be6f
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":clients:clients.new.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "clients/clients.new.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -27,10 +27,10 @@ class __TwigTemplate_c2189e2e5153d1073606ec7998d29c729ddaa9348bb8d0fa1c283c5be6f
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":clients:clients.new.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "clients/clients.new.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":clients:clients.new.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "clients/clients.new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -188,7 +188,75 @@ class __TwigTemplate_c2189e2e5153d1073606ec7998d29c729ddaa9348bb8d0fa1c283c5be6f
         echo "
             </div>
         </div>
+        <script>
+            var placeSearch, autocomplete;
+            var componentForm = {
+                street_number: 'short_name',
+                route: 'long_name',
+                locality: 'short_name',
+                administrative_area_level_1: 'short_name',
+                country: 'short_name',
+                postal_code: 'long_name'
+            };
 
+            function initAutocomplete() {
+                // Create the autocomplete object, restricting the search to geographical
+                // location types.
+                autocomplete = new google.maps.places.Autocomplete(
+                    /** @type {!HTMLInputElement} */(document.getElementById('form_address')),
+                    {types: ['geocode']});
+
+                // When the user selects an address from the dropdown, populate the address
+                // fields in the form.
+                autocomplete.addListener('place_changed', fillInAddress);
+            }
+
+            function fillInAddress() {
+                // Get the place details from the autocomplete object.
+                var place = autocomplete.getPlace();
+
+                console.log(place);
+
+                \$('#form_address').val(place['address_components'][0]['short_name']);
+                \$('#form_province').val(place['address_components'][3]['short_name']);
+                \$('#form_city').val(place['address_components'][2]['long_name']);
+                \$('#form_postal_code').val(place['address_components'][6]['long_name']);
+
+                for (var component in componentForm) {
+                    document.getElementById(component).value = '';
+                    document.getElementById(component).disabled = false;
+                }
+
+                // Get each component of the address from the place details
+                // and fill the corresponding field on the form.
+                for (var i = 0; i < place.address_components.length; i++) {
+                    var addressType = place.address_components[i].types[0];
+                    if (componentForm[addressType]) {
+                        var val = place.address_components[i][componentForm[addressType]];
+                        document.getElementById(addressType).value = val;
+                    }
+                }
+            }
+
+            // Bias the autocomplete object to the user's geographical location,
+            // as supplied by the browser's 'navigator.geolocation' object.
+            function geolocate() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var geolocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        var circle = new google.maps.Circle({
+                            center: geolocation,
+                            radius: position.coords.accuracy
+                        });
+                        autocomplete.setBounds(circle.getBounds());
+                    });
+                }
+            }
+        </script>
+        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyD7BG7Z8rK75xxgo-njpJ9kBSV6iRlhQnk&libraries=places&callback=initAutocomplete\" async defer></script>
     </div>
 </div>
 ";
@@ -202,7 +270,7 @@ class __TwigTemplate_c2189e2e5153d1073606ec7998d29c729ddaa9348bb8d0fa1c283c5be6f
 
     public function getTemplateName()
     {
-        return ":clients:clients.new.html.twig";
+        return "clients/clients.new.html.twig";
     }
 
     public function isTraitable()
@@ -282,9 +350,77 @@ class __TwigTemplate_c2189e2e5153d1073606ec7998d29c729ddaa9348bb8d0fa1c283c5be6f
                 {{ form_end(form) }}
             </div>
         </div>
+        <script>
+            var placeSearch, autocomplete;
+            var componentForm = {
+                street_number: 'short_name',
+                route: 'long_name',
+                locality: 'short_name',
+                administrative_area_level_1: 'short_name',
+                country: 'short_name',
+                postal_code: 'long_name'
+            };
 
+            function initAutocomplete() {
+                // Create the autocomplete object, restricting the search to geographical
+                // location types.
+                autocomplete = new google.maps.places.Autocomplete(
+                    /** @type {!HTMLInputElement} */(document.getElementById('form_address')),
+                    {types: ['geocode']});
+
+                // When the user selects an address from the dropdown, populate the address
+                // fields in the form.
+                autocomplete.addListener('place_changed', fillInAddress);
+            }
+
+            function fillInAddress() {
+                // Get the place details from the autocomplete object.
+                var place = autocomplete.getPlace();
+
+                console.log(place);
+
+                \$('#form_address').val(place['address_components'][0]['short_name']);
+                \$('#form_province').val(place['address_components'][3]['short_name']);
+                \$('#form_city').val(place['address_components'][2]['long_name']);
+                \$('#form_postal_code').val(place['address_components'][6]['long_name']);
+
+                for (var component in componentForm) {
+                    document.getElementById(component).value = '';
+                    document.getElementById(component).disabled = false;
+                }
+
+                // Get each component of the address from the place details
+                // and fill the corresponding field on the form.
+                for (var i = 0; i < place.address_components.length; i++) {
+                    var addressType = place.address_components[i].types[0];
+                    if (componentForm[addressType]) {
+                        var val = place.address_components[i][componentForm[addressType]];
+                        document.getElementById(addressType).value = val;
+                    }
+                }
+            }
+
+            // Bias the autocomplete object to the user's geographical location,
+            // as supplied by the browser's 'navigator.geolocation' object.
+            function geolocate() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var geolocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        var circle = new google.maps.Circle({
+                            center: geolocation,
+                            radius: position.coords.accuracy
+                        });
+                        autocomplete.setBounds(circle.getBounds());
+                    });
+                }
+            }
+        </script>
+        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyD7BG7Z8rK75xxgo-njpJ9kBSV6iRlhQnk&libraries=places&callback=initAutocomplete\" async defer></script>
     </div>
 </div>
-{% endblock %}", ":clients:clients.new.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/clients/clients.new.html.twig");
+{% endblock %}", "clients/clients.new.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/clients/clients.new.html.twig");
     }
 }
