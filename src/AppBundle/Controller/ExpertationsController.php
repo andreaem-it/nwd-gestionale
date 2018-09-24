@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
+use AppBundle\Entity\Users;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -27,7 +28,8 @@ class ExpertationsController extends Controller
      */
     public function expertationsListAction(Request $request)
     {
-        $expertations = $this->getDoctrine()->getRepository('AppBundle:Expertations')->findAll();
+
+        $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
 
         return $this->render('expertations/list.html.twig', [
             'expertations' => $expertations,
@@ -42,8 +44,6 @@ class ExpertationsController extends Controller
     public function expertationsShowAction($id) {
 
         $item = $this->getDoctrine()->getRepository('AppBundle:Expertations')->find($id);
-
-        $data = $this->getDoctrine()->getRepository('AppBundle:Expertation_Lines')->findBy(['eid'=> $id]);
 
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
@@ -134,7 +134,6 @@ class ExpertationsController extends Controller
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
             'item' => $item,
-            'data' => $data,
             'total' => $total,
             'vat' => $vat,
             'sconto' => $sconto,
@@ -353,6 +352,7 @@ class ExpertationsController extends Controller
             $expertations->setStatus    (0);
             $expertations->setPrice     (0);
             $expertations->setExpiration(New \DateTime("now"));
+            $expertations->setCreatedBy($this->getUser()->getId());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($expertation);
@@ -444,6 +444,10 @@ class ExpertationsController extends Controller
         return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getName();
     }
 
+    public function userToName($user) {
+        return $this->getDoctrine()->getRepository(Users::class)->find($user)->getUsername();
+    }
+
     public function plantIntToName($int) {
         switch ($int) {
             case 1 :
@@ -508,5 +512,22 @@ class ExpertationsController extends Controller
     function getPrice($item) {
         $thing = $prices = $this->getDoctrine()->getRepository('AppBundle:Prices')->find($item);
         return $thing->getPrice();
+    }
+
+    function getLevel($role) {
+        switch ($role) {
+            case 'ROLE_SUPER_ADMIN':
+                return 1;
+                break;
+            case 'ROLE_ADMIN':
+                return 2;
+                break;
+            case 'ROLE_AGENT':
+                return 3;
+                break;
+            case 'ROLE_':
+                return 4;
+                break;
+        }
     }
 }

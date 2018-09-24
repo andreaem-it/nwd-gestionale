@@ -122,7 +122,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                             Cliente
                                         </th>
                                         <th>
-                                            Stato
+                                            Creatore
                                         </th>
                                         <th>
                                             Prezzo
@@ -159,14 +159,15 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         </a>
                                     </td>
                                     <td>
-                                        <div class=\"progress\">
-                                            <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: ";
+                                        <a href=\"";
+            // line 56
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
+            echo "\">
+                                            ";
             // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", array()), "html", null, true);
-            echo "%\" aria-valuenow=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", array()), "html", null, true);
-            echo "\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>
-                                        </div>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 57, $this->source); })()), "userToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "createdBy", array())), "method"), "html", null, true);
+            echo "
+                                        </a>
                                     </td>
                                     <td>
                                         ";
@@ -236,7 +237,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
 
     public function getDebugInfo()
     {
-        return array (  209 => 81,  196 => 74,  187 => 68,  180 => 64,  174 => 61,  165 => 57,  157 => 52,  153 => 51,  147 => 48,  143 => 46,  139 => 45,  110 => 18,  104 => 17,  95 => 14,  90 => 13,  85 => 12,  81 => 11,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  210 => 81,  197 => 74,  188 => 68,  181 => 64,  175 => 61,  168 => 57,  164 => 56,  157 => 52,  153 => 51,  147 => 48,  143 => 46,  139 => 45,  110 => 18,  104 => 17,  95 => 14,  90 => 13,  85 => 12,  81 => 11,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -273,7 +274,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                             Cliente
                                         </th>
                                         <th>
-                                            Stato
+                                            Creatore
                                         </th>
                                         <th>
                                             Prezzo
@@ -296,9 +297,9 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         </a>
                                     </td>
                                     <td>
-                                        <div class=\"progress\">
-                                            <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: {{ item.status }}%\" aria-valuenow=\"{{ item.status }}\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>
-                                        </div>
+                                        <a href=\"{{ url('impostazioni_utenti') }}\">
+                                            {{ functions.userToName(item.createdBy) }}
+                                        </a>
                                     </td>
                                     <td>
                                         {{ item.price }} €

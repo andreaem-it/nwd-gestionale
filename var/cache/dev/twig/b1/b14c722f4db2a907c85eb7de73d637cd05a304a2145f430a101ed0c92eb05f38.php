@@ -1,6 +1,6 @@
 <?php
 
-/* :template:navbar.html.twig */
+/* template/navbar.html.twig */
 class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239f37a6 extends Twig_Template
 {
     private $source;
@@ -20,10 +20,10 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":template:navbar.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "template/navbar.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":template:navbar.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "template/navbar.html.twig"));
 
         // line 1
         echo "<nav class=\"navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row\" style=\"background: #759EB8!important;\">
@@ -57,7 +57,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
             // line 141
             echo "                    ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 141, $this->source); })()), "user", array()), "username", array()), "html", null, true);
+            echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 141, $this->source); })()), "user", array()), "username", array())), "html", null, true);
             echo "
                 ";
         }
@@ -80,7 +80,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
         echo "                  <div class=\"py-3 px-4 d-flex align-items-center justify-content-center border-left\">
                       ";
         // line 153
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 153, $this->source); })()), "user", array()), "username", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 153, $this->source); })()), "user", array()), "username", array())), "html", null, true);
         echo "
                   </div>
                   <a class=\"py-3 px-4 d-flex align-items-center justify-content-center border-right\" href=\"";
@@ -142,7 +142,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
 
     public function getTemplateName()
     {
-        return ":template:navbar.html.twig";
+        return "template/navbar.html.twig";
     }
 
     public function isTraitable()
@@ -297,7 +297,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             <a class=\"nav-link dropdown-toggle\" id=\"UserDropdown\" href=\"#\" data-toggle=\"dropdown\" aria-expanded=\"false\">
               <span class=\"profile-text\">
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    {{ app.user.username }}
+                    {{ app.user.username|capitalize }}
                 {% endif %}
               </span>
               <img class=\"img-xs rounded-circle\" src=\"{{ asset('images/faces-clipart/pic-1.png') }}\" alt=\"Profile image\">
@@ -309,7 +309,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
                     {#<i class=\"mdi mdi-bookmark-plus-outline mr-0 text-gray\"></i>#}
                   {#</div>#}
                   <div class=\"py-3 px-4 d-flex align-items-center justify-content-center border-left\">
-                      {{ app.user.username }}
+                      {{ app.user.username|capitalize }}
                   </div>
                   <a class=\"py-3 px-4 d-flex align-items-center justify-content-center border-right\" href=\"{{ url('fos_user_profile_show') }}\">
                     <i class=\"mdi mdi-account-outline mr-0 text-gray\"></i>
@@ -373,6 +373,6 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
         </div>#}
 
       </div>
-    </nav>", ":template:navbar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/navbar.html.twig");
+    </nav>", "template/navbar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/navbar.html.twig");
     }
 }

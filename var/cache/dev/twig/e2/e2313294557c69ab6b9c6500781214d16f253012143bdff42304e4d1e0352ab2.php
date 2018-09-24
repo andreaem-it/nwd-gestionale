@@ -77,7 +77,7 @@ class __TwigTemplate_25932c5350254c030ec7da03a4fa172202bc424ce812b01c15db59a014d
             <div class=\"col-sm-12\">
                 <h3>Dashboard <small> Benvenuto, ";
         // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 8, $this->source); })()), "user", array()), "username", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 8, $this->source); })()), "user", array()), "username", array())), "html", null, true);
         echo " !</small></h3>
             </div>
         </div>
@@ -276,7 +276,7 @@ class __TwigTemplate_25932c5350254c030ec7da03a4fa172202bc424ce812b01c15db59a014d
     <div class=\"content-wrapper\">
         <div class=\"row top-title\">
             <div class=\"col-sm-12\">
-                <h3>Dashboard <small> Benvenuto, {{ app.user.username }} !</small></h3>
+                <h3>Dashboard <small> Benvenuto, {{ app.user.username|capitalize }} !</small></h3>
             </div>
         </div>
         <div class=\"row\">

@@ -30,7 +30,7 @@
                                             Cliente
                                         </th>
                                         <th>
-                                            Stato
+                                            Creatore
                                         </th>
                                         <th>
                                             Prezzo
@@ -53,9 +53,9 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ item.status }}%" aria-valuenow="{{ item.status }}" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
+                                        <a href="{{ url('impostazioni_utenti') }}">
+                                            {{ functions.userToName(item.createdBy) }}
+                                        </a>
                                     </td>
                                     <td>
                                         {{ item.price }} €

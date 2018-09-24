@@ -9,7 +9,7 @@
           <div class="text-wrapper">
             <p class="profile-name">
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    {{ app.user.username }}
+                    {{ app.user.username|capitalize }}
                 {% endif %}
             </p>
             <div>

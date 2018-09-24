@@ -401,6 +401,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUAAction',  '_route' => 'impostazioni_utenti_aggiungi',);
                 }
 
+                // impostazioni_utenti_modifica
+                if (0 === strpos($pathinfo, '/impostazioni/utenti/modifica') && preg_match('#^/impostazioni/utenti/modifica/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'impostazioni_utenti_modifica')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::SettingsUserEditAction',));
+                }
+
             }
 
         }
@@ -515,6 +520,69 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $ret;
             }
             not_fos_user_resetting_check_email:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/group')) {
+            // fos_user_group_list
+            if ('/group/list' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.group.controller:listAction',  '_route' => 'fos_user_group_list',);
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_fos_user_group_list;
+                }
+
+                return $ret;
+            }
+            not_fos_user_group_list:
+
+            // fos_user_group_new
+            if ('/group/new' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.group.controller:newAction',  '_route' => 'fos_user_group_new',);
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_group_new;
+                }
+
+                return $ret;
+            }
+            not_fos_user_group_new:
+
+            // fos_user_group_show
+            if (preg_match('#^/group/(?P<groupName>[^/]++)$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_group_show')), array (  '_controller' => 'fos_user.group.controller:showAction',));
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_fos_user_group_show;
+                }
+
+                return $ret;
+            }
+            not_fos_user_group_show:
+
+            // fos_user_group_edit
+            if (preg_match('#^/group/(?P<groupName>[^/]++)/edit$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_group_edit')), array (  '_controller' => 'fos_user.group.controller:editAction',));
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_group_edit;
+                }
+
+                return $ret;
+            }
+            not_fos_user_group_edit:
+
+            // fos_user_group_delete
+            if (preg_match('#^/group/(?P<groupName>[^/]++)/delete$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_group_delete')), array (  '_controller' => 'fos_user.group.controller:deleteAction',));
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_fos_user_group_delete;
+                }
+
+                return $ret;
+            }
+            not_fos_user_group_delete:
 
         }
 

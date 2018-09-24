@@ -267,6 +267,13 @@ class Expertations
     private $imp_ausiliari;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="created_by", type="integer", nullable=true)
+     */
+    private $created_by;
+
+    /**
      * @var string
      * @return string
      */
@@ -1125,5 +1132,29 @@ class Expertations
     public function getC5v()
     {
         return $this->c5v;
+    }
+
+    /**
+     * Set createdBy.
+     *
+     * @param int $createdBy
+     *
+     * @return Expertations
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->created_by = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy.
+     *
+     * @return int
+     */
+    public function getCreatedBy()
+    {
+        return $this->created_by;
     }
 }

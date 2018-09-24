@@ -162,18 +162,23 @@
     <parameter key="security.role_hierarchy.roles" type="collection">
       <parameter key="ROLE_SEGNALATORE" type="collection">
         <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_LEVEL_5</parameter>
       </parameter>
       <parameter key="ROLE_IMPRESA_EDILE" type="collection">
         <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_LEVEL_5</parameter>
       </parameter>
       <parameter key="ROLE_PROGETTISTA" type="collection">
         <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_LEVEL_5</parameter>
       </parameter>
-      <parameter key="ROLE_GENRAL_CONTRACTOR" type="collection">
+      <parameter key="ROLE_GENERAL_CONTRACTOR" type="collection">
         <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_LEVEL_5</parameter>
       </parameter>
       <parameter key="ROLE_IMMOBILIARE" type="collection">
         <parameter>ROLE_USER</parameter>
+        <parameter>ROLE_LEVEL_4</parameter>
       </parameter>
       <parameter key="ROLE_AGENT" type="collection">
         <parameter>ROLE_USER</parameter>
@@ -182,6 +187,7 @@
         <parameter>ROLE_PROGETTISTA</parameter>
         <parameter>ROLE_IMPRESA_EDILE</parameter>
         <parameter>ROLE_SEGNALATORE</parameter>
+        <parameter>ROLE_LEVEL_3</parameter>
       </parameter>
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_USER</parameter>
@@ -189,11 +195,12 @@
         <parameter>ROLE_GENERAL_CONTRACTOR</parameter>
         <parameter>ROLE_PROGETTISTA</parameter>
         <parameter>ROLE_IMPRESA_EDILE</parameter>
-        <parameter>ROLE_SEGNALATORE</parameter>
+        <parameter>ROLE_SEGNALATORE ROLE_LEVEL_2</parameter>
       </parameter>
       <parameter key="ROLE_SUPER_ADMIN" type="collection">
         <parameter>ROLE_ADMIN</parameter>
         <parameter>ROLE_ALLOWED_TO_SWITCH</parameter>
+        <parameter>ROLE_LEVEL_1</parameter>
       </parameter>
     </parameter>
     <parameter key="security.access.denied_url">null</parameter>
@@ -410,6 +417,14 @@
     <parameter key="fos_user.resetting.form.name">fos_user_resetting_form</parameter>
     <parameter key="fos_user.resetting.form.validation_groups" type="collection">
       <parameter>ResetPassword</parameter>
+      <parameter>Default</parameter>
+    </parameter>
+    <parameter key="fos_user.group_manager.class">FOS\UserBundle\Doctrine\GroupManager</parameter>
+    <parameter key="fos_user.model.group.class">AppBundle\Entity\Groups</parameter>
+    <parameter key="fos_user.group.form.type">FOS\UserBundle\Form\Type\GroupFormType</parameter>
+    <parameter key="fos_user.group.form.name">fos_user_group_form</parameter>
+    <parameter key="fos_user.group.form.validation_groups" type="collection">
+      <parameter>Registration</parameter>
       <parameter>Default</parameter>
     </parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
@@ -645,7 +660,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.e9fyu6i"/>
+      <argument type="service" id="service_locator.k6cjxhm"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -909,6 +924,7 @@
         <argument>FOS\UserBundle\Form\Type\RegistrationFormType</argument>
         <argument>FOS\UserBundle\Form\Type\ChangePasswordFormType</argument>
         <argument>FOS\UserBundle\Form\Type\ResettingFormType</argument>
+        <argument>FOS\UserBundle\Form\Type\GroupFormType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension</argument>
@@ -1115,7 +1131,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.gflhj7f"/>
+      <argument type="service" id="service_locator.kydiwx4"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -4833,6 +4849,28 @@
         <argument type="service" id="service_container"/>
       </call>
     </service>
+    <service id="fos_user.group.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
+      <argument type="service" id="form.factory"/>
+      <argument>fos_user_group_form</argument>
+      <argument>FOS\UserBundle\Form\Type\GroupFormType</argument>
+      <argument>%fos_user.group.form.validation_groups%</argument>
+    </service>
+    <service id="fos_user.group.form.type" class="FOS\UserBundle\Form\Type\GroupFormType">
+      <tag name="form.type" alias="fos_user_group"/>
+      <argument>AppBundle\Entity\Groups</argument>
+    </service>
+    <service id="fos_user.group.controller" class="FOS\UserBundle\Controller\GroupController" public="true">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="fos_user.group.form.factory"/>
+      <argument type="service" id="fos_user.group_manager.default"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="fos_user.group_manager.default" class="FOS\UserBundle\Doctrine\GroupManager" public="false">
+      <argument type="service" id="fos_user.object_manager"/>
+      <argument>AppBundle\Entity\Groups</argument>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -5003,13 +5041,15 @@
         <argument key="encoder" type="service" id="security.user_password_encoder.generic" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.e9fyu6i" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.k6cjxhm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Controller\SecurityController:login" type="service" id="service_locator.jwewuuw"/>
         <argument key="AppBundle\Controller\SettingsController:AjaxSUAAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController:SettingsUserEditAction" type="service" id="service_locator.vuxplsm"/>
         <argument key="AppBundle\Controller\SecurityController::login" type="service" id="service_locator.jwewuuw"/>
         <argument key="AppBundle\Controller\SettingsController::AjaxSUAAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController::SettingsUserEditAction" type="service" id="service_locator.vuxplsm"/>
       </argument>
     </service>
     <service id="service_locator.yepb.pt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5035,10 +5075,11 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.gflhj7f" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.kydiwx4" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
+        <argument key="FOS\UserBundle\Form\Type\GroupFormType" type="service" id="fos_user.group.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ResettingFormType" type="service" id="fos_user.resetting.form.type"/>
@@ -5553,6 +5594,8 @@
     <service id="fos_user.util.username_canonicalizer" alias="fos_user.util.canonicalizer.default"/>
     <service id="fos_user.util.token_generator" alias="fos_user.util.token_generator.default"/>
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default" public="true"/>
+    <service id="fos_user.group_manager" alias="fos_user.group_manager.default" public="true"/>
+    <service id="FOS\UserBundle\Model\GroupManagerInterface" alias="fos_user.group_manager.default" public="false"/>
     <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
     <service id="fos_user.session" alias="session" public="false"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>

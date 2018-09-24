@@ -1,6 +1,6 @@
 <?php
 
-/* :settings/ajax:users.list.html.twig */
+/* settings/ajax/users.list.html.twig */
 class __TwigTemplate_056239aeffae94df390ff198afadf45ca02909cb06e8baa5aef834b8b2ef37da extends Twig_Template
 {
     private $source;
@@ -20,10 +20,10 @@ class __TwigTemplate_056239aeffae94df390ff198afadf45ca02909cb06e8baa5aef834b8b2e
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings/ajax:users.list.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/ajax/users.list.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings/ajax:users.list.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/ajax/users.list.html.twig"));
 
         // line 1
         $context['_parent'] = $context;
@@ -72,39 +72,103 @@ $context["user"], "enabled", array()) == 1)) {
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
                 // line 21
                 echo "                ";
-                echo twig_escape_filter($this->env, $context["role"], "html", null, true);
-                echo " &nbsp;
-            ";
+                if (($context["role"] == "ROLE_ADMIN")) {
+                    // line 22
+                    echo "                    <span class=\"badge badge-danger\">
+                        ";
+                    // line 23
+                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo "
+                    </span>
+                ";
+                } elseif ((                // line 25
+$context["role"] == "ROLE_SUPER_ADMIN")) {
+                    // line 26
+                    echo "                    <span class=\"badge badge-warning\">
+                        ";
+                    // line 27
+                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo "
+                    </span>
+                ";
+                } elseif ((                // line 29
+$context["role"] == "ROLE_USER")) {
+                    // line 30
+                    echo "                    <span class=\"badge badge-info\">
+                        ";
+                    // line 31
+                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo "
+                    </span>
+                ";
+                } else {
+                    // line 34
+                    echo "                    <span class=\"badge badge-primary\">
+                        ";
+                    // line 35
+                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo "
+                    </span>
+                ";
+                }
+                // line 38
+                echo "            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 23
+            // line 39
             echo "        </td>
         <td class=\"text-center\">
             ";
-            // line 25
+            // line 41
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "lastLogin", array()), "d-m-Y H:i:s"), "html", null, true);
             echo "
         </td>
         <td style=\"width: 255px;\">
-            <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
-            echo "\">
-                <span class=\"mdi mdi-delete\"></span>
+            ";
+            // line 44
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
+                // line 45
+                echo "                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
+                echo "\">
+                    <span class=\"mdi mdi-delete\"></span>
+                </a>
+                <a href=\"";
+                // line 48
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti_modifica", array("id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", array()))), "html", null, true);
+                echo "\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                    <span class=\"mdi mdi-table-edit\"></span>
+                </a>
+            ";
+            }
+            // line 52
+            echo "            ";
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "id", array()) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 52, $this->source); })()), "user", array()), "id", array()))) {
+                // line 53
+                echo "                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
+                echo "\">
+                    <span class=\"mdi mdi-delete\"></span>
+                </a>
+                <a href=\"";
+                // line 56
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti_modifica", array("id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", array()))), "html", null, true);
+                echo "\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                    <span class=\"mdi mdi-table-edit\"></span>
             </a>
-            <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                <span class=\"mdi mdi-table-edit\"></span>
-            </a>
-        </td>
+            ";
+            }
+            // line 60
+            echo "        </td>
     </tr>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 63
         echo "
 <script>
     \$(\"#delete\").click(function(e){
@@ -116,7 +180,7 @@ $context["user"], "enabled", array()) == 1)) {
         bootbox.setLocale('it');
         bootbox.confirm(\"Sei sicuro di voler eliminare questo utente?<br> <strong>Questa azione non può essere annullata</strong>\", function(result) {
             url = '";
-        // line 47
+        // line 73
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("ajax_settings_users_delete", array("id" => 0));
         echo "';
             url = url.replace(\"0\",uid);
@@ -146,7 +210,7 @@ $context["user"], "enabled", array()) == 1)) {
 
     public function getTemplateName()
     {
-        return ":settings/ajax:users.list.html.twig";
+        return "settings/ajax/users.list.html.twig";
     }
 
     public function isTraitable()
@@ -156,7 +220,7 @@ $context["user"], "enabled", array()) == 1)) {
 
     public function getDebugInfo()
     {
-        return array (  120 => 47,  108 => 37,  93 => 28,  87 => 25,  83 => 23,  74 => 21,  70 => 20,  66 => 18,  62 => 16,  60 => 15,  57 => 14,  55 => 13,  49 => 10,  43 => 7,  37 => 4,  33 => 2,  29 => 1,);
+        return array (  184 => 73,  172 => 63,  164 => 60,  157 => 56,  150 => 53,  147 => 52,  140 => 48,  133 => 45,  131 => 44,  125 => 41,  121 => 39,  115 => 38,  109 => 35,  106 => 34,  100 => 31,  97 => 30,  95 => 29,  90 => 27,  87 => 26,  85 => 25,  80 => 23,  77 => 22,  74 => 21,  70 => 20,  66 => 18,  62 => 16,  60 => 15,  57 => 14,  55 => 13,  49 => 10,  43 => 7,  37 => 4,  33 => 2,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -181,19 +245,45 @@ $context["user"], "enabled", array()) == 1)) {
         </td>
         <td class=\"text-center\">
             {% for role in user.roles %}
-                {{ role }} &nbsp;
+                {% if role == 'ROLE_ADMIN' %}
+                    <span class=\"badge badge-danger\">
+                        {{ role }}
+                    </span>
+                {% elseif role == 'ROLE_SUPER_ADMIN' %}
+                    <span class=\"badge badge-warning\">
+                        {{ role }}
+                    </span>
+                {% elseif role == 'ROLE_USER' %}
+                    <span class=\"badge badge-info\">
+                        {{ role }}
+                    </span>
+                {% else %}
+                    <span class=\"badge badge-primary\">
+                        {{ role }}
+                    </span>
+                {% endif %}
             {% endfor %}
         </td>
         <td class=\"text-center\">
             {{ user.lastLogin|date(\"d-m-Y H:i:s\") }}
         </td>
         <td style=\"width: 255px;\">
-            <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"{{ user.id }}\">
-                <span class=\"mdi mdi-delete\"></span>
+            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"{{ user.id }}\">
+                    <span class=\"mdi mdi-delete\"></span>
+                </a>
+                <a href=\"{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                    <span class=\"mdi mdi-table-edit\"></span>
+                </a>
+            {% endif %}
+            {% if user.id == app.user.id %}
+                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"{{ user.id }}\">
+                    <span class=\"mdi mdi-delete\"></span>
+                </a>
+                <a href=\"{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                    <span class=\"mdi mdi-table-edit\"></span>
             </a>
-            <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                <span class=\"mdi mdi-table-edit\"></span>
-            </a>
+            {% endif %}
         </td>
     </tr>
 {% endfor %}
@@ -224,6 +314,6 @@ $context["user"], "enabled", array()) == 1)) {
             }
         });
     });
-</script>", ":settings/ajax:users.list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/ajax/users.list.html.twig");
+</script>", "settings/ajax/users.list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/ajax/users.list.html.twig");
     }
 }

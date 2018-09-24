@@ -24,6 +24,8 @@ class SettingsController extends Controller
      * @Route("impostazioni/generali/", name="impostazioni_generali")
      */
     public function SettingsGeneralAction(Request $request) {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         return $this->render('settings/settings.html.twig');
     }
 
@@ -94,6 +96,58 @@ class SettingsController extends Controller
     }
 
     /**
+     * @Route("impostazioni/utenti/modifica/{id}", name="impostazioni_utenti_modifica")
+     */
+    public function SettingsUserEditAction($id, Request $request, UserPasswordEncoderInterface $encoder) {
+        $user = $this->getDoctrine()->getRepository(Users::class)->find($id);
+
+        $form = $this->createFormBuilder($user)
+            ->add('username', TextType::class,['label' => 'Nome Utente', 'attr' => ['class' => 'form-control']])
+            ->add('email', EmailType::class,['label' => 'E-Mail', 'attr' => ['class' => 'form-control']])
+            ->add('roles', ChoiceType::class,
+                ['choices' => [
+                    'Utente' => 'ROLE_USER',
+                    'SuperAmministratore' => 'ROLE_SUPER_ADMIN',
+                    'Amministratore' => 'ROLE_ADMIN',
+                    'Agente' => 'ROLE_AGENT',
+                    'Immobiliare' => 'ROLE_IMMOBILIARE',
+                    'General Contractor' => 'ROLE_GENERAL_CONTRACTOR',
+                    'Progettista' => 'ROLE_PROGETTISTA',
+                    'Impresa Edile' => 'ROLE_IMPRESA_EDILE',
+                    'Segnalatore' => 'ROLE_SEGNALATORE',
+                    'Test' => 'ROLE_TEST'
+                ],
+                    'choice_attr' => ['class' => 'form-control ml-2'],
+                    'expanded' => false,
+                    'multiple' => true,
+                    'attr' => ['class' => 'form-control']
+                ], ['label' => 'Ruoli', 'attr' => ['class' => 'form-control mr-3']])
+            ->add('submit', SubmitType::class,['label' => 'Modifica', 'attr' => ['class' => 'btn btn-success mt-3']])
+            ->add('reset', ResetType::class, ['label' => 'Reset', 'attr' => ['class' => 'btn btn-warning mt-3']])
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $user = $form->getData();
+
+            $user->setUsernameCanonical($form->get('username')->getData());
+            $user->setEmailCanonical($form->get('email')->getData());
+            $user->setSalt(rand('100000000','999999999'));
+
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+
+            $this->redirectToRoute('impostazioni_utenti');
+        }
+
+        return $this->render('settings/ajax/user.edit.form.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
      * @Route("impostazioni/gruppi/", name="impostazioni_gruppi")
      */
     public function settingsGroupsAction(Request $request) {
@@ -105,10 +159,9 @@ class SettingsController extends Controller
      * @Route("impostazioni/gruppi/nuovo", name="impostazioni_gruppi_nuovo")
      */
     public function settingsGroupAddAction(Request $request) {
-        $group = new Groups();
-        $group->setIsActive(True);
+        //$group = new Groups();
 
-        $form = $this->createFormBuilder($group)
+        /*$form = $this->createFormBuilder($group)
             ->add('name', TextType::class,['label' => 'Nome Gruppo', 'attr' => ['class' => 'form-control']])
             ->add('level', ChoiceType::class,
                 ['choices' => [
@@ -126,7 +179,9 @@ class SettingsController extends Controller
             ->add('components', EntityType::class, [
                 'class' => Users::class,
                 'choice_label' => 'username',
-                'choice_value' => 'id',
+                'choice_value' => function (Users $users = null) {
+                        return null === $users ? '': $users->getUsername();
+                    },
                 'choice_attr' => ['class' => 'form-control'],
                 'label' => 'Componenti',
                 'multiple' => true,
@@ -161,15 +216,20 @@ class SettingsController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            dump($form->getData());
+
             $em = $this->getDoctrine()->getManager();
+            $group->setName($form->get('name')->getData());
+            $group->setComponents(serialize($form->get('components')->getData()));
+            $group->setIsActive(true);
             $em->persist($form->getData());
             $em->flush();
 
             $this->redirectToRoute('impostazioni_gruppi');
-        }
+        }*/
 
         return $this->render('settings/ajax/groups.add.form.html.twig', [
-            'form' => $form->createView()
+            //'form' => $form->createView()
         ]);
     }
 
