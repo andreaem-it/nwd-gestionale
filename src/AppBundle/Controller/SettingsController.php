@@ -40,7 +40,7 @@ class SettingsController extends Controller
     /**
      * @Route("impostazioni/utenti/nuovo", name="impostazioni_utenti_aggiungi")
      */
-    public function AjaxSUAAction(Request $request, UserPasswordEncoderInterface $encoder) {
+    public function AjaxSUAAction(Request $request, UserPasswordEncoderInterface $encoder, \Swift_Mailer $mailer) {
         $user = new Users();
         $user->setLastLogin(new \DateTime("now"));
         $user->setConfirmationToken('NWD-' . rand('1000000000','9999999999'));
@@ -52,7 +52,7 @@ class SettingsController extends Controller
             ->add('email', EmailType::class,['label' => 'E-Mail', 'attr' => ['class' => 'form-control']])
             ->add('password', RepeatedType::class, array(
                 'type' => PasswordType::class,
-                'invalid_message' => 'Le due password devono essere uguali.',
+                'invalid_message' => 'Le due password devono coincidere.',
                 'options' => array('attr' => array('class' => 'form-control password-field')),
                 'required' => true,
                 'first_options'  => array('label' => 'Password'),
@@ -60,9 +60,14 @@ class SettingsController extends Controller
             ))
             ->add('roles', ChoiceType::class,
                 ['choices' => [
-                    'Utente' => 'ROLE_USER',
+                    'SuperAmministratore' => 'ROLE_SUPER_ADMIN',
                     'Amministratore' => 'ROLE_ADMIN',
-                    'Test' => 'ROLE_TEST'
+                    'Agente' => 'ROLE_AGENT',
+                    'Immobiliare' => 'ROLE_IMMOBILIARE',
+                    'General Contractor' => 'ROLE_GENERAL_CONTRACTOR',
+                    'Progettista' => 'ROLE_PROGETTISTA',
+                    'Impresa Edile' => 'ROLE_IMPRESA_EDILE',
+                    'Segnalatore' => 'ROLE_SEGNALATORE',
                 ], 'choice_attr' => ['form-control'],
                     'expanded' => true,
                     'multiple' => true,
@@ -83,11 +88,23 @@ class SettingsController extends Controller
             $encoded = $encoder->encodePassword($user, $form->get('password')->getData());
             $user->setPassword($encoded);
 
+            $message = (new \Swift_Message('Account creato!'))
+                ->setFrom('gestionale@nwd.it')
+                ->setTo($user->getEmail())
+                ->setBody($this->renderView('mail/mail.template.html.twig', [
+                    'title' => 'Creazione Account',
+                    'message' => 'Abbiamo creato un account nel nostro sistema per te. Accedi utilizzando i dati forniti dall\'amministratore del sistema.',
+                    'link' => '',
+                    'link_title' => 'Accedi'
+                ]),'text/html');
+
+            $mailer->send($message);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
 
-            $this->redirectToRoute('impostazioni_utenti');
+            return $this->redirectToRoute('impostazioni_utenti');
         }
 
         return $this->render('settings/ajax/user.add.form.html.twig', [
@@ -106,7 +123,6 @@ class SettingsController extends Controller
             ->add('email', EmailType::class,['label' => 'E-Mail', 'attr' => ['class' => 'form-control']])
             ->add('roles', ChoiceType::class,
                 ['choices' => [
-                    'Utente' => 'ROLE_USER',
                     'SuperAmministratore' => 'ROLE_SUPER_ADMIN',
                     'Amministratore' => 'ROLE_ADMIN',
                     'Agente' => 'ROLE_AGENT',
@@ -115,7 +131,6 @@ class SettingsController extends Controller
                     'Progettista' => 'ROLE_PROGETTISTA',
                     'Impresa Edile' => 'ROLE_IMPRESA_EDILE',
                     'Segnalatore' => 'ROLE_SEGNALATORE',
-                    'Test' => 'ROLE_TEST'
                 ],
                     'choice_attr' => ['class' => 'form-control ml-2'],
                     'expanded' => false,
@@ -129,21 +144,13 @@ class SettingsController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            $user = $form->getData();
-
-            $user->setUsernameCanonical($form->get('username')->getData());
-            $user->setEmailCanonical($form->get('email')->getData());
-            $user->setSalt(rand('100000000','999999999'));
-
-            $em = $this->getDoctrine()->getManager();
-            $em->flush();
-
-            $this->redirectToRoute('impostazioni_utenti');
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('impostazioni_utenti');
         }
 
         return $this->render('settings/ajax/user.edit.form.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'user' => $user
         ]);
     }
 
@@ -230,6 +237,90 @@ class SettingsController extends Controller
 
         return $this->render('settings/ajax/groups.add.form.html.twig', [
             //'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("impostazioni/utenti/reset-password/{id}", name="impostazioni_utenti_reset_password")
+     */
+    public function settingsUserPasswordResetAction($id, \Swift_Mailer $mailer) {
+
+        $repo = $this->getDoctrine()->getRepository(Users::class)->find($id);
+
+        $repo->setPassword('');
+        $repo->setPasswordRequestedAt(new \DateTime("now"));
+        $confirmationToken = 'NWD-' . rand('1000000000','9999999999');
+        $repo->setConfirmationToken($confirmationToken);
+
+        $this->getDoctrine()->getManager()->flush();
+
+        $message = (new \Swift_Message('Reset Password'))
+            ->setFrom('gestionale@nwd.it')
+            ->setTo($repo->getEmail())
+            ->setBody($this->renderView('mail/mail.template.html.twig',array(
+                'title' => 'Reset Password',
+                'message' => 'E\' stato richiesto un reset della password per il tuo account, cortesemente segua il link qui sotto per ripristinare l\'accesso',
+                'link' => $this->generateUrl('reset-password-link', ['token' => $confirmationToken]),
+                'link_title' => 'Reset Password'
+            )),'text/html');
+
+        $mailer->send($message);
+
+        $this->addFlash(
+            'notice',
+            'Abbiamo inviato una mail all\'utente per resettare la sua password'
+        );
+
+        return $this->redirectToRoute('impostazioni_utenti');
+    }
+
+    /**
+     * @Route("impostazioni/utenti/reset-password-link/{token}", name="reset-password-link")
+     */
+    public function resetPassLinkTokenAction($token, \Swift_Mailer $mailer) {
+
+        $user = $this->getDoctrine()->getRepository(Users::class)->findBy(['confirmationToken' => $token]);
+
+        $form = $this->createFormBuilder($user)
+            ->add('username', TextType::class,
+                ['attr' => ['class' => 'form-control disabled', 'disabled' => 'disabled'],
+                'data' => $user[0]->getUsername()])
+            ->add('password', RepeatedType::class, array(
+                'type' => PasswordType::class,
+                'invalid_message' => 'Le due password devono coincidere.',
+                'options' => array('attr' => array('class' => 'form-control password-field')),
+                'required' => true,
+                'first_options'  => array('label' => 'Password'),
+                'second_options' => array('label' => 'Ripeti Password'),
+            ))
+            ->add('submit', SubmitType::class,
+                ['attr' => ['class' => 'btn btn-success mt-3'],
+                'label' => 'Cambia Password'])
+            ->getForm();
+
+        if($form->isSubmitted() && $form->isValid()) {
+
+            $user = $this->getDoctrine()->getRepository(Users::class)->find($user[0]->getId());
+
+            $user->setPassword($form->get('password')->getData());
+
+            $this->getDoctrine()->getManager()->flush();
+
+            $message = (new \Swift_Message('Reset Password'))
+                ->setFrom('gestionale@nwd.it')
+                ->setTo($user->getEmail())
+                ->setBody($this->renderView('mail/mail.template.html.twig',array(
+                    'title' => 'Reset Password',
+                    'message' => 'La sua password è stata cambiata con successo.',
+                    'link' => '',
+                    'link_title' => 'Accedi'
+                )),'text/html');
+
+            $mailer->send($message);
+        }
+
+        return $this->render(':settings/ajax:user.password-reset.html.twig', [
+            'form' => $form->createView()
         ]);
     }
 

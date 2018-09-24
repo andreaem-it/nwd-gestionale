@@ -1,6 +1,6 @@
 <?php
 
-/* :settings:users.html.twig */
+/* settings/users.html.twig */
 class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d22b4e extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":settings:users.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "settings/users.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -28,10 +28,10 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings:users.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/users.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings:users.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "settings/users.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -84,7 +84,25 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
                     <a id=\"reload-btn\" href=\"\" class=\"float-right btn btn-secondary btn-sm mr-1 pr-2\"><i class=\"mdi mdi-reload\"></i></a>
                 </div>
             </div>
-            <div class=\"row mt-3\">
+            ";
+        // line 15
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 15, $this->source); })()), "flashes", array(0 => "notice"), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 16
+            echo "                <div class=\"alert alert-primary\">
+                    ";
+            // line 17
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+                </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 20
+        echo "            <div class=\"row mt-3\">
                 <div class=\"col-lg-12 grid-margin stretch-card\">
                     <div class=\"card\">
                         <div class=\"card-body\">
@@ -127,7 +145,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
                                         function loadTable() {
                                             \$.ajax({
                                                 url: '";
-        // line 57
+        // line 62
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("ajax_settings_users_list");
         echo "',
                                                 dataType: 'html',
@@ -163,7 +181,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
 
     }
 
-    // line 83
+    // line 88
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -172,7 +190,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 84
+        // line 89
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootbox.min.js"), "html", null, true);
         echo "\"></script>
@@ -187,7 +205,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
 
     public function getTemplateName()
     {
-        return ":settings:users.html.twig";
+        return "settings/users.html.twig";
     }
 
     public function isTraitable()
@@ -197,7 +215,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
 
     public function getDebugInfo()
     {
-        return array (  176 => 84,  167 => 83,  131 => 57,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
+        return array (  194 => 89,  185 => 88,  149 => 62,  105 => 20,  96 => 17,  93 => 16,  89 => 15,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -216,6 +234,11 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
                     <a id=\"reload-btn\" href=\"\" class=\"float-right btn btn-secondary btn-sm mr-1 pr-2\"><i class=\"mdi mdi-reload\"></i></a>
                 </div>
             </div>
+            {% for message in app.flashes('notice') %}
+                <div class=\"alert alert-primary\">
+                    {{ message }}
+                </div>
+            {% endfor %}
             <div class=\"row mt-3\">
                 <div class=\"col-lg-12 grid-margin stretch-card\">
                     <div class=\"card\">
@@ -286,6 +309,6 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
 {% endblock %}
 {% block javascripts %}
     <script src=\"{{ asset('js/bootbox.min.js') }}\"></script>
-{% endblock %}", ":settings:users.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/users.html.twig");
+{% endblock %}", "settings/users.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/settings/users.html.twig");
     }
 }

@@ -102,9 +102,9 @@
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="database_path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/db/data_dev.db</parameter>
     <parameter key="mailer_transport">smtp</parameter>
-    <parameter key="mailer_host">127.0.0.1</parameter>
-    <parameter key="mailer_user">info@nwd.it</parameter>
-    <parameter key="mailer_password">null</parameter>
+    <parameter key="mailer_host">smtp.mailtrap.io</parameter>
+    <parameter key="mailer_user">abcc765e49a04c</parameter>
+    <parameter key="mailer_password">0265d66763a0ca</parameter>
     <parameter key="secret">1315451b511620433db424b09f2fe7daedc9179f</parameter>
     <parameter key="locale">it</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
@@ -249,9 +249,9 @@
     <parameter key="swiftmailer.mailer.default.transport.name">smtp</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.host">127.0.0.1</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.username">info@nwd.it</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">null</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.host">smtp.mailtrap.io</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.username">abcc765e49a04c</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">0265d66763a0ca</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
@@ -380,7 +380,7 @@
     <parameter key="fos_user.backend_type_orm">true</parameter>
     <parameter key="fos_user.security.interactive_login_listener.class">FOS\UserBundle\EventListener\LastLoginListener</parameter>
     <parameter key="fos_user.security.login_manager.class">FOS\UserBundle\Security\LoginManager</parameter>
-    <parameter key="fos_user.resetting.email.template">@FOSUser/Resetting/email.txt.twig</parameter>
+    <parameter key="fos_user.resetting.email.template">mail/password_resetting.email.twig</parameter>
     <parameter key="fos_user.registration.confirmation.template">@FOSUser/Registration/email.txt.twig</parameter>
     <parameter key="fos_user.storage">orm</parameter>
     <parameter key="fos_user.firewall_name">main</parameter>
@@ -393,9 +393,9 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.from_email" type="collection">
-      <parameter key="info@nwd.it">info@nwd.it</parameter>
+      <parameter key="registration@nwd.it">NWD</parameter>
     </parameter>
-    <parameter key="fos_user.registration.confirmation.enabled">false</parameter>
+    <parameter key="fos_user.registration.confirmation.enabled">true</parameter>
     <parameter key="fos_user.registration.form.type">FOS\UserBundle\Form\Type\RegistrationFormType</parameter>
     <parameter key="fos_user.registration.form.name">fos_user_registration_form</parameter>
     <parameter key="fos_user.registration.form.validation_groups" type="collection">
@@ -409,7 +409,7 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="fos_user.resetting.email.from_email" type="collection">
-      <parameter key="info@nwd.it">info@nwd.it</parameter>
+      <parameter key="abcc765e49a04c">abcc765e49a04c</parameter>
     </parameter>
     <parameter key="fos_user.resetting.retry_ttl">7200</parameter>
     <parameter key="fos_user.resetting.token_ttl">86400</parameter>
@@ -660,7 +660,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.k6cjxhm"/>
+      <argument type="service" id="service_locator.91lsdet"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -2692,6 +2692,14 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
+        <argument>fos_user.registration.success</argument>
+        <argument type="collection">
+          <argument type="service" id="fos_user.listener.email_confirmation"/>
+          <argument>onRegistrationSuccess</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
         <argument>fos_user.resetting.reset.initialize</argument>
         <argument type="collection">
           <argument type="service" id="fos_user.listener.resetting"/>
@@ -4118,10 +4126,10 @@
         <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~agoqmwd"/>
       </argument>
       <call method="setUsername">
-        <argument>info@nwd.it</argument>
+        <argument>abcc765e49a04c</argument>
       </call>
       <call method="setPassword">
-        <argument>null</argument>
+        <argument>0265d66763a0ca</argument>
       </call>
       <call method="setAuthMode">
         <argument>null</argument>
@@ -4141,7 +4149,7 @@
       </argument>
       <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
       <call method="setHost">
-        <argument>127.0.0.1</argument>
+        <argument>smtp.mailtrap.io</argument>
       </call>
       <call method="setPort">
         <argument>25</argument>
@@ -4685,7 +4693,7 @@
       <argument type="service" id="templating.engine.twig"/>
       <argument type="collection">
         <argument key="confirmation.template">@FOSUser/Registration/email.txt.twig</argument>
-        <argument key="resetting.template">@FOSUser/Resetting/email.txt.twig</argument>
+        <argument key="resetting.template">mail/password_resetting.email.twig</argument>
         <argument key="from_email" type="collection">
           <argument key="confirmation">%fos_user.registration.confirmation.from_email%</argument>
           <argument key="resetting">%fos_user.resetting.email.from_email%</argument>
@@ -4700,7 +4708,7 @@
       <argument type="collection">
         <argument key="template" type="collection">
           <argument key="confirmation">@FOSUser/Registration/email.txt.twig</argument>
-          <argument key="resetting">@FOSUser/Resetting/email.txt.twig</argument>
+          <argument key="resetting">mail/password_resetting.email.twig</argument>
         </argument>
         <argument key="from_email" type="collection">
           <argument key="confirmation">%fos_user.registration.confirmation.from_email%</argument>
@@ -4805,6 +4813,13 @@
         <argument type="service" id="service_container"/>
       </call>
     </service>
+    <service id="fos_user.listener.email_confirmation" class="FOS\UserBundle\EventListener\EmailConfirmationListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="fos_user.mailer.twig_swift"/>
+      <argument type="service" id="fos_user.util.token_generator.default"/>
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="session"/>
+    </service>
     <service id="fos_user.change_password.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
       <argument type="service" id="form.factory"/>
       <argument>fos_user_change_password_form</argument>
@@ -4843,7 +4858,7 @@
       <argument type="service" id="fos_user.resetting.form.factory"/>
       <argument type="service" id="fos_user.user_manager.default"/>
       <argument type="service" id="fos_user.util.token_generator.default"/>
-      <argument type="service" id="fos_user.mailer.default"/>
+      <argument type="service" id="fos_user.mailer.twig_swift"/>
       <argument>7200</argument>
       <call method="setContainer">
         <argument type="service" id="service_container"/>
@@ -5035,21 +5050,38 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id="service_locator.hd_5bqv" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="encoder" type="service" id="security.user_password_encoder.generic" on-invalid="ignore"/>
+        <argument key="mailer" type="service" id="swiftmailer.mailer.default" on-invalid="ignore"/>
+      </argument>
+    </service>
     <service id="service_locator.vuxplsm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="encoder" type="service" id="security.user_password_encoder.generic" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.k6cjxhm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.i3nl.uy" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="mailer" type="service" id="swiftmailer.mailer.default" on-invalid="ignore"/>
+      </argument>
+    </service>
+    <service id="service_locator.91lsdet" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Controller\SecurityController:login" type="service" id="service_locator.jwewuuw"/>
-        <argument key="AppBundle\Controller\SettingsController:AjaxSUAAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController:AjaxSUAAction" type="service" id="service_locator.hd_5bqv"/>
         <argument key="AppBundle\Controller\SettingsController:SettingsUserEditAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController:resetPassLinkTokenAction" type="service" id="service_locator.i3nl.uy"/>
+        <argument key="AppBundle\Controller\SettingsController:settingsUserPasswordResetAction" type="service" id="service_locator.i3nl.uy"/>
         <argument key="AppBundle\Controller\SecurityController::login" type="service" id="service_locator.jwewuuw"/>
-        <argument key="AppBundle\Controller\SettingsController::AjaxSUAAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController::AjaxSUAAction" type="service" id="service_locator.hd_5bqv"/>
         <argument key="AppBundle\Controller\SettingsController::SettingsUserEditAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController::resetPassLinkTokenAction" type="service" id="service_locator.i3nl.uy"/>
+        <argument key="AppBundle\Controller\SettingsController::settingsUserPasswordResetAction" type="service" id="service_locator.i3nl.uy"/>
       </argument>
     </service>
     <service id="service_locator.yepb.pt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5596,7 +5628,7 @@
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default" public="true"/>
     <service id="fos_user.group_manager" alias="fos_user.group_manager.default" public="true"/>
     <service id="FOS\UserBundle\Model\GroupManagerInterface" alias="fos_user.group_manager.default" public="false"/>
-    <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
+    <service id="fos_user.mailer" alias="fos_user.mailer.twig_swift"/>
     <service id="fos_user.session" alias="session" public="false"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>

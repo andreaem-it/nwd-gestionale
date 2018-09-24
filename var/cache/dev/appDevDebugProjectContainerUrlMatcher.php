@@ -406,6 +406,70 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'impostazioni_utenti_modifica')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::SettingsUserEditAction',));
                 }
 
+                if (0 === strpos($pathinfo, '/impostazioni/utenti/reset-password')) {
+                    // impostazioni_utenti_reset_password
+                    if (preg_match('#^/impostazioni/utenti/reset\\-password/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'impostazioni_utenti_reset_password')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::settingsUserPasswordResetAction',));
+                    }
+
+                    // reset-password-link
+                    if (0 === strpos($pathinfo, '/impostazioni/utenti/reset-password-link') && preg_match('#^/impostazioni/utenti/reset\\-password\\-link/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'reset-password-link')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::resetPassLinkTokenAction',));
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/impostazioni/utenti/resetpassword/do')) {
+                    // fos_user_resetting_request
+                    if ('/impostazioni/utenti/resetpassword/do/request' === $pathinfo) {
+                        $ret = array (  '_controller' => 'fos_user.resetting.controller:requestAction',  '_route' => 'fos_user_resetting_request',);
+                        if (!in_array($canonicalMethod, array('GET'))) {
+                            $allow = array_merge($allow, array('GET'));
+                            goto not_fos_user_resetting_request;
+                        }
+
+                        return $ret;
+                    }
+                    not_fos_user_resetting_request:
+
+                    // fos_user_resetting_reset
+                    if (0 === strpos($pathinfo, '/impostazioni/utenti/resetpassword/do/reset') && preg_match('#^/impostazioni/utenti/resetpassword/do/reset/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                        $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_resetting_reset')), array (  '_controller' => 'fos_user.resetting.controller:resetAction',));
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_fos_user_resetting_reset;
+                        }
+
+                        return $ret;
+                    }
+                    not_fos_user_resetting_reset:
+
+                    // fos_user_resetting_send_email
+                    if ('/impostazioni/utenti/resetpassword/do/send-email' === $pathinfo) {
+                        $ret = array (  '_controller' => 'fos_user.resetting.controller:sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
+                        if (!in_array($requestMethod, array('POST'))) {
+                            $allow = array_merge($allow, array('POST'));
+                            goto not_fos_user_resetting_send_email;
+                        }
+
+                        return $ret;
+                    }
+                    not_fos_user_resetting_send_email:
+
+                    // fos_user_resetting_check_email
+                    if ('/impostazioni/utenti/resetpassword/do/check-email' === $pathinfo) {
+                        $ret = array (  '_controller' => 'fos_user.resetting.controller:checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
+                        if (!in_array($canonicalMethod, array('GET'))) {
+                            $allow = array_merge($allow, array('GET'));
+                            goto not_fos_user_resetting_check_email;
+                        }
+
+                        return $ret;
+                    }
+                    not_fos_user_resetting_check_email:
+
+                }
+
             }
 
         }
@@ -469,57 +533,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 not_fos_user_registration_confirmed:
 
             }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/resetting')) {
-            // fos_user_resetting_request
-            if ('/resetting/request' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.resetting.controller:requestAction',  '_route' => 'fos_user_resetting_request',);
-                if (!in_array($canonicalMethod, array('GET'))) {
-                    $allow = array_merge($allow, array('GET'));
-                    goto not_fos_user_resetting_request;
-                }
-
-                return $ret;
-            }
-            not_fos_user_resetting_request:
-
-            // fos_user_resetting_reset
-            if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
-                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_resetting_reset')), array (  '_controller' => 'fos_user.resetting.controller:resetAction',));
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_resetting_reset;
-                }
-
-                return $ret;
-            }
-            not_fos_user_resetting_reset:
-
-            // fos_user_resetting_send_email
-            if ('/resetting/send-email' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.resetting.controller:sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
-                if (!in_array($requestMethod, array('POST'))) {
-                    $allow = array_merge($allow, array('POST'));
-                    goto not_fos_user_resetting_send_email;
-                }
-
-                return $ret;
-            }
-            not_fos_user_resetting_send_email:
-
-            // fos_user_resetting_check_email
-            if ('/resetting/check-email' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.resetting.controller:checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
-                if (!in_array($canonicalMethod, array('GET'))) {
-                    $allow = array_merge($allow, array('GET'));
-                    goto not_fos_user_resetting_check_email;
-                }
-
-                return $ret;
-            }
-            not_fos_user_resetting_check_email:
 
         }
 

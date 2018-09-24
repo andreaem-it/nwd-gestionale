@@ -74,20 +74,20 @@ $context["user"], "enabled", array()) == 1)) {
                 echo "                ";
                 if (($context["role"] == "ROLE_ADMIN")) {
                     // line 22
-                    echo "                    <span class=\"badge badge-danger\">
+                    echo "                    <span class=\"badge badge-warning\">
                         ";
                     // line 23
-                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
                     echo "
                     </span>
                 ";
                 } elseif ((                // line 25
 $context["role"] == "ROLE_SUPER_ADMIN")) {
                     // line 26
-                    echo "                    <span class=\"badge badge-warning\">
+                    echo "                    <span class=\"badge badge-danger\">
                         ";
                     // line 27
-                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
                     echo "
                     </span>
                 ";
@@ -97,7 +97,7 @@ $context["role"] == "ROLE_USER")) {
                     echo "                    <span class=\"badge badge-info\">
                         ";
                     // line 31
-                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
                     echo "
                     </span>
                 ";
@@ -106,7 +106,7 @@ $context["role"] == "ROLE_USER")) {
                     echo "                    <span class=\"badge badge-primary\">
                         ";
                     // line 35
-                    echo twig_escape_filter($this->env, $context["role"], "html", null, true);
+                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
                     echo "
                     </span>
                 ";
@@ -128,7 +128,7 @@ $context["role"] == "ROLE_USER")) {
         <td style=\"width: 255px;\">
             ";
             // line 44
-            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "id", array()) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 44, $this->source); })()), "user", array()), "id", array()))) {
                 // line 45
                 echo "                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
@@ -142,25 +142,22 @@ $context["role"] == "ROLE_USER")) {
                     <span class=\"mdi mdi-table-edit\"></span>
                 </a>
             ";
-            }
-            // line 52
-            echo "            ";
-            if ((twig_get_attribute($this->env, $this->source, $context["user"], "id", array()) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 52, $this->source); })()), "user", array()), "id", array()))) {
-                // line 53
+            } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
+                // line 52
                 echo "                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
                 echo "\">
                     <span class=\"mdi mdi-delete\"></span>
                 </a>
                 <a href=\"";
-                // line 56
+                // line 55
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti_modifica", array("id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", array()))), "html", null, true);
                 echo "\" class=\"btn btn-warning btn-sm float-right mr-1\">
                     <span class=\"mdi mdi-table-edit\"></span>
-            </a>
+                </a>
             ";
             }
-            // line 60
+            // line 59
             echo "        </td>
     </tr>
 ";
@@ -168,7 +165,7 @@ $context["role"] == "ROLE_USER")) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 62
         echo "
 <script>
     \$(\"#delete\").click(function(e){
@@ -180,7 +177,7 @@ $context["role"] == "ROLE_USER")) {
         bootbox.setLocale('it');
         bootbox.confirm(\"Sei sicuro di voler eliminare questo utente?<br> <strong>Questa azione non può essere annullata</strong>\", function(result) {
             url = '";
-        // line 73
+        // line 72
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("ajax_settings_users_delete", array("id" => 0));
         echo "';
             url = url.replace(\"0\",uid);
@@ -220,7 +217,7 @@ $context["role"] == "ROLE_USER")) {
 
     public function getDebugInfo()
     {
-        return array (  184 => 73,  172 => 63,  164 => 60,  157 => 56,  150 => 53,  147 => 52,  140 => 48,  133 => 45,  131 => 44,  125 => 41,  121 => 39,  115 => 38,  109 => 35,  106 => 34,  100 => 31,  97 => 30,  95 => 29,  90 => 27,  87 => 26,  85 => 25,  80 => 23,  77 => 22,  74 => 21,  70 => 20,  66 => 18,  62 => 16,  60 => 15,  57 => 14,  55 => 13,  49 => 10,  43 => 7,  37 => 4,  33 => 2,  29 => 1,);
+        return array (  181 => 72,  169 => 62,  161 => 59,  154 => 55,  147 => 52,  140 => 48,  133 => 45,  131 => 44,  125 => 41,  121 => 39,  115 => 38,  109 => 35,  106 => 34,  100 => 31,  97 => 30,  95 => 29,  90 => 27,  87 => 26,  85 => 25,  80 => 23,  77 => 22,  74 => 21,  70 => 20,  66 => 18,  62 => 16,  60 => 15,  57 => 14,  55 => 13,  49 => 10,  43 => 7,  37 => 4,  33 => 2,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -246,20 +243,20 @@ $context["role"] == "ROLE_USER")) {
         <td class=\"text-center\">
             {% for role in user.roles %}
                 {% if role == 'ROLE_ADMIN' %}
-                    <span class=\"badge badge-danger\">
-                        {{ role }}
+                    <span class=\"badge badge-warning\">
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% elseif role == 'ROLE_SUPER_ADMIN' %}
-                    <span class=\"badge badge-warning\">
-                        {{ role }}
+                    <span class=\"badge badge-danger\">
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% elseif role == 'ROLE_USER' %}
                     <span class=\"badge badge-info\">
-                        {{ role }}
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% else %}
                     <span class=\"badge badge-primary\">
-                        {{ role }}
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% endif %}
             {% endfor %}
@@ -268,21 +265,20 @@ $context["role"] == "ROLE_USER")) {
             {{ user.lastLogin|date(\"d-m-Y H:i:s\") }}
         </td>
         <td style=\"width: 255px;\">
-            {% if is_granted('ROLE_SUPER_ADMIN') %}
-                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"{{ user.id }}\">
-                    <span class=\"mdi mdi-delete\"></span>
-                </a>
-                <a href=\"{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                    <span class=\"mdi mdi-table-edit\"></span>
-                </a>
-            {% endif %}
             {% if user.id == app.user.id %}
                 <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"{{ user.id }}\">
                     <span class=\"mdi mdi-delete\"></span>
                 </a>
                 <a href=\"{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1\">
                     <span class=\"mdi mdi-table-edit\"></span>
-            </a>
+                </a>
+            {% elseif is_granted('ROLE_SUPER_ADMIN') %}
+                <a href=\"\" id=\"delete\" class=\"btn btn-danger btn-sm float-right mr-1\" data-user-id=\"{{ user.id }}\">
+                    <span class=\"mdi mdi-delete\"></span>
+                </a>
+                <a href=\"{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                    <span class=\"mdi mdi-table-edit\"></span>
+                </a>
             {% endif %}
         </td>
     </tr>

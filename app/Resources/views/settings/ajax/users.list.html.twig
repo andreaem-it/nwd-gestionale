@@ -19,20 +19,20 @@
         <td class="text-center">
             {% for role in user.roles %}
                 {% if role == 'ROLE_ADMIN' %}
-                    <span class="badge badge-danger">
-                        {{ role }}
+                    <span class="badge badge-warning">
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% elseif role == 'ROLE_SUPER_ADMIN' %}
-                    <span class="badge badge-warning">
-                        {{ role }}
+                    <span class="badge badge-danger">
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% elseif role == 'ROLE_USER' %}
                     <span class="badge badge-info">
-                        {{ role }}
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% else %}
                     <span class="badge badge-primary">
-                        {{ role }}
+                        {{ role|trim('ROLE_') }}
                     </span>
                 {% endif %}
             {% endfor %}
@@ -41,21 +41,20 @@
             {{ user.lastLogin|date("d-m-Y H:i:s") }}
         </td>
         <td style="width: 255px;">
-            {% if is_granted('ROLE_SUPER_ADMIN') %}
-                <a href="" id="delete" class="btn btn-danger btn-sm float-right mr-1" data-user-id="{{ user.id }}">
-                    <span class="mdi mdi-delete"></span>
-                </a>
-                <a href="{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}" class="btn btn-warning btn-sm float-right mr-1">
-                    <span class="mdi mdi-table-edit"></span>
-                </a>
-            {% endif %}
             {% if user.id == app.user.id %}
                 <a href="" id="delete" class="btn btn-danger btn-sm float-right mr-1" data-user-id="{{ user.id }}">
                     <span class="mdi mdi-delete"></span>
                 </a>
                 <a href="{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}" class="btn btn-warning btn-sm float-right mr-1">
                     <span class="mdi mdi-table-edit"></span>
-            </a>
+                </a>
+            {% elseif is_granted('ROLE_SUPER_ADMIN') %}
+                <a href="" id="delete" class="btn btn-danger btn-sm float-right mr-1" data-user-id="{{ user.id }}">
+                    <span class="mdi mdi-delete"></span>
+                </a>
+                <a href="{{ url('impostazioni_utenti_modifica', {'id':user.id}) }}" class="btn btn-warning btn-sm float-right mr-1">
+                    <span class="mdi mdi-table-edit"></span>
+                </a>
             {% endif %}
         </td>
     </tr>

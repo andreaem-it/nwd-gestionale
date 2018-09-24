@@ -115,7 +115,10 @@ class __TwigTemplate_7c4991b8273fc8125a1d6c8698630909f361d9af90e23289eafdbb9a7b8
         // line 22
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 22, $this->source); })()), "reset", array()), 'widget');
         echo "
-                <a href=\"\" class=\"btn bt-danger mt-3\">Reset Password</a>
+                <a href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti_reset_password", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 23, $this->source); })()), "id", array()))), "html", null, true);
+        echo "\" class=\"btn bt-danger mt-3\">Reset Password</a>
                 ";
         // line 24
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 24, $this->source); })()), 'form_end');
@@ -145,7 +148,7 @@ class __TwigTemplate_7c4991b8273fc8125a1d6c8698630909f361d9af90e23289eafdbb9a7b8
 
     public function getDebugInfo()
     {
-        return array (  121 => 24,  116 => 22,  112 => 21,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  124 => 24,  120 => 23,  116 => 22,  112 => 21,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -172,7 +175,7 @@ class __TwigTemplate_7c4991b8273fc8125a1d6c8698630909f361d9af90e23289eafdbb9a7b8
                 {{ form_widget(form.roles) }}
                 {{ form_widget(form.submit) }}
                 {{ form_widget(form.reset) }}
-                <a href=\"\" class=\"btn bt-danger mt-3\">Reset Password</a>
+                <a href=\"{{ url('impostazioni_utenti_reset_password', {'id': user.id}) }}\" class=\"btn bt-danger mt-3\">Reset Password</a>
                 {{ form_end(form) }}
             </div>
         </div>
