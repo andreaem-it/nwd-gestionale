@@ -169,9 +169,9 @@ class Expertations
     private $c1n;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="c1v", type="integer", nullable=true)
+     * @ORM\Column(name="c1v", type="simple_array", nullable=true)
      */
     private $c1v;
 
@@ -183,9 +183,9 @@ class Expertations
     private $c2n;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="c2v", type="integer", nullable=true)
+     * @ORM\Column(name="c2v", type="simple_array", nullable=true)
      */
     private $c2v;
 
@@ -197,9 +197,9 @@ class Expertations
     private $c3n;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="c3v", type="integer", nullable=true)
+     * @ORM\Column(name="c3v", type="simple_array", nullable=true)
      */
     private $c3v;
 
@@ -211,9 +211,9 @@ class Expertations
     private $c4n;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="c4v", type="integer", nullable=true)
+     * @ORM\Column(name="c4v", type="simple_array", nullable=true)
      */
     private $c4v;
 
@@ -225,9 +225,9 @@ class Expertations
     private $c5n;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="c5v", type="integer", nullable=true)
+     * @ORM\Column(name="c5v", type="simple_array", nullable=true)
      */
     private $c5v;
 

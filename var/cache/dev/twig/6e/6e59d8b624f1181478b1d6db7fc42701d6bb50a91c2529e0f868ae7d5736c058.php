@@ -72,33 +72,24 @@ $context["user"], "enabled", array()) == 1)) {
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
                 // line 21
                 echo "                ";
-                if (($context["role"] == "ROLE_ADMIN")) {
+                if (($context["role"] == "ROLE_SUPER_ADMIN")) {
                     // line 22
-                    echo "                    <span class=\"badge badge-warning\">
-                        ";
-                    // line 23
-                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
-                    echo "
+                    echo "                    <span class=\"badge badge-danger\">
+                        SUPER AMMINISTRATORE
                     </span>
                 ";
                 } elseif ((                // line 25
-$context["role"] == "ROLE_SUPER_ADMIN")) {
+$context["role"] == "ROLE_ADMIN")) {
                     // line 26
-                    echo "                    <span class=\"badge badge-danger\">
-                        ";
-                    // line 27
-                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
-                    echo "
+                    echo "                    <span class=\"badge badge-warning\">
+                        AMMINISTRATORE
                     </span>
-                ";
+                    ";
                 } elseif ((                // line 29
 $context["role"] == "ROLE_USER")) {
                     // line 30
                     echo "                    <span class=\"badge badge-info\">
-                        ";
-                    // line 31
-                    echo twig_escape_filter($this->env, twig_trim_filter($context["role"], "ROLE_"), "html", null, true);
-                    echo "
+                        UTENTE
                     </span>
                 ";
                 } else {
@@ -217,7 +208,7 @@ $context["role"] == "ROLE_USER")) {
 
     public function getDebugInfo()
     {
-        return array (  181 => 72,  169 => 62,  161 => 59,  154 => 55,  147 => 52,  140 => 48,  133 => 45,  131 => 44,  125 => 41,  121 => 39,  115 => 38,  109 => 35,  106 => 34,  100 => 31,  97 => 30,  95 => 29,  90 => 27,  87 => 26,  85 => 25,  80 => 23,  77 => 22,  74 => 21,  70 => 20,  66 => 18,  62 => 16,  60 => 15,  57 => 14,  55 => 13,  49 => 10,  43 => 7,  37 => 4,  33 => 2,  29 => 1,);
+        return array (  172 => 72,  160 => 62,  152 => 59,  145 => 55,  138 => 52,  131 => 48,  124 => 45,  122 => 44,  116 => 41,  112 => 39,  106 => 38,  100 => 35,  97 => 34,  91 => 30,  89 => 29,  84 => 26,  82 => 25,  77 => 22,  74 => 21,  70 => 20,  66 => 18,  62 => 16,  60 => 15,  57 => 14,  55 => 13,  49 => 10,  43 => 7,  37 => 4,  33 => 2,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -242,17 +233,17 @@ $context["role"] == "ROLE_USER")) {
         </td>
         <td class=\"text-center\">
             {% for role in user.roles %}
-                {% if role == 'ROLE_ADMIN' %}
-                    <span class=\"badge badge-warning\">
-                        {{ role|trim('ROLE_') }}
-                    </span>
-                {% elseif role == 'ROLE_SUPER_ADMIN' %}
+                {% if role == 'ROLE_SUPER_ADMIN' %}
                     <span class=\"badge badge-danger\">
-                        {{ role|trim('ROLE_') }}
+                        SUPER AMMINISTRATORE
                     </span>
-                {% elseif role == 'ROLE_USER' %}
+                {% elseif role == 'ROLE_ADMIN' %}
+                    <span class=\"badge badge-warning\">
+                        AMMINISTRATORE
+                    </span>
+                    {% elseif role == 'ROLE_USER' %}
                     <span class=\"badge badge-info\">
-                        {{ role|trim('ROLE_') }}
+                        UTENTE
                     </span>
                 {% else %}
                     <span class=\"badge badge-primary\">

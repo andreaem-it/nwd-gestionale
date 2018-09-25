@@ -18,17 +18,17 @@
         </td>
         <td class="text-center">
             {% for role in user.roles %}
-                {% if role == 'ROLE_ADMIN' %}
-                    <span class="badge badge-warning">
-                        {{ role|trim('ROLE_') }}
-                    </span>
-                {% elseif role == 'ROLE_SUPER_ADMIN' %}
+                {% if role == 'ROLE_SUPER_ADMIN' %}
                     <span class="badge badge-danger">
-                        {{ role|trim('ROLE_') }}
+                        SUPER AMMINISTRATORE
                     </span>
-                {% elseif role == 'ROLE_USER' %}
+                {% elseif role == 'ROLE_ADMIN' %}
+                    <span class="badge badge-warning">
+                        AMMINISTRATORE
+                    </span>
+                    {% elseif role == 'ROLE_USER' %}
                     <span class="badge badge-info">
-                        {{ role|trim('ROLE_') }}
+                        UTENTE
                     </span>
                 {% else %}
                     <span class="badge badge-primary">

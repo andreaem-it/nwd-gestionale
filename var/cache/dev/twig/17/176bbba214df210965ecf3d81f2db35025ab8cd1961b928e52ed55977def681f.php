@@ -1,6 +1,6 @@
 <?php
 
-/* :expertations:new.html.twig */
+/* expertations/new.html.twig */
 class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708acd5e extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":expertations:new.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "expertations/new.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -29,10 +29,10 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":expertations:new.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "expertations/new.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":expertations:new.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "expertations/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -361,19 +361,34 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                         Prese TV
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        ";
+        // line 201
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 201, $this->source); })()), "c1n", array()), 'widget');
+        echo "
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        ";
+        // line 204
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 204, $this->source); })()), "c2n", array()), 'widget');
+        echo "
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        ";
+        // line 207
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 207, $this->source); })()), "c3n", array()), 'widget');
+        echo "
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        ";
+        // line 210
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 210, $this->source); })()), "c4n", array()), 'widget');
+        echo "
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        ";
+        // line 213
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 213, $this->source); })()), "c5n", array()), 'widget');
+        echo "
                                     </th>
                                 </tr>
                             </tbody>
@@ -419,19 +434,34 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
         echo "
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        ";
+        // line 241
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 241, $this->source); })()), "c1v", array()), "vars", array()), "prototype", array()), 'widget'));
+        echo "
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        ";
+        // line 244
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 244, $this->source); })()), "c2v", array()), "vars", array()), "prototype", array()), 'widget'));
+        echo "
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        ";
+        // line 247
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 247, $this->source); })()), "c3v", array()), "vars", array()), "prototype", array()), 'widget'));
+        echo "
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        ";
+        // line 250
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 250, $this->source); })()), "c4v", array()), "vars", array()), "prototype", array()), 'widget'));
+        echo "
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        ";
+        // line 253
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 253, $this->source); })()), "c5v", array()), "vars", array()), "prototype", array()), 'widget'));
+        echo "
                                     </td>
                                     ' data-widget-tags=\"";
         // line 255
@@ -652,7 +682,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 
     public function getTemplateName()
     {
-        return ":expertations:new.html.twig";
+        return "expertations/new.html.twig";
     }
 
     public function isTraitable()
@@ -662,7 +692,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 
     public function getDebugInfo()
     {
-        return array (  642 => 403,  637 => 402,  628 => 401,  616 => 399,  612 => 398,  608 => 397,  603 => 396,  594 => 395,  536 => 347,  523 => 337,  438 => 255,  418 => 238,  412 => 235,  406 => 232,  400 => 229,  394 => 226,  388 => 223,  327 => 165,  323 => 164,  315 => 159,  311 => 158,  303 => 153,  299 => 152,  291 => 147,  287 => 146,  279 => 141,  275 => 140,  269 => 136,  262 => 127,  258 => 126,  250 => 121,  246 => 120,  190 => 67,  186 => 66,  178 => 61,  174 => 60,  166 => 55,  162 => 54,  154 => 49,  150 => 48,  142 => 43,  138 => 42,  130 => 37,  126 => 36,  118 => 31,  114 => 30,  104 => 23,  98 => 20,  94 => 19,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  672 => 403,  667 => 402,  658 => 401,  646 => 399,  642 => 398,  638 => 397,  633 => 396,  624 => 395,  566 => 347,  553 => 337,  468 => 255,  463 => 253,  457 => 250,  451 => 247,  445 => 244,  439 => 241,  433 => 238,  427 => 235,  421 => 232,  415 => 229,  409 => 226,  403 => 223,  390 => 213,  384 => 210,  378 => 207,  372 => 204,  366 => 201,  327 => 165,  323 => 164,  315 => 159,  311 => 158,  303 => 153,  299 => 152,  291 => 147,  287 => 146,  279 => 141,  275 => 140,  269 => 136,  262 => 127,  258 => 126,  250 => 121,  246 => 120,  190 => 67,  186 => 66,  178 => 61,  174 => 60,  166 => 55,  162 => 54,  154 => 49,  150 => 48,  142 => 43,  138 => 42,  130 => 37,  126 => 36,  118 => 31,  114 => 30,  104 => 23,  98 => 20,  94 => 19,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -867,19 +897,19 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                         Prese TV
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        {{ form_widget(form.c1n) }}
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        {{ form_widget(form.c2n) }}
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        {{ form_widget(form.c3n) }}
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        {{ form_widget(form.c4n) }}
                                     </th>
                                     <th>
-                                        <input type=\"text\" class=\"form-control\" placeholder=\"Nuova dotazione\">
+                                        {{ form_widget(form.c5n) }}
                                     </th>
                                 </tr>
                             </tbody>
@@ -907,19 +937,19 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                         {{ form_widget(form.pt.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        {{ form_widget(form.c1v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        {{ form_widget(form.c2v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        {{ form_widget(form.c3v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        {{ form_widget(form.c4v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type=\"number\" class=\"form-control\" placeholder=\"0\" min=\"0\">
+                                        {{ form_widget(form.c5v.vars.prototype)|e }}
                                     </td>
                                     ' data-widget-tags=\"{{ '<tr></tr>'|e }}\">
 
@@ -1070,6 +1100,6 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 {% block javascripts %}
     <script src=\"{{ asset('js/scrollbar.min.js') }}\" type=\"text/javascript\"></script>
     <script src=\"{{ asset('js/jquery.toastr.js') }}\" type=\"text/javascript\"></script>
-{% endblock %}", ":expertations:new.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/new.html.twig");
+{% endblock %}", "expertations/new.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/new.html.twig");
     }
 }

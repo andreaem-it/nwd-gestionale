@@ -130,6 +130,7 @@ class ExpertationsController extends Controller
 
         dump($grandtotal);
         dump($total);
+        dump($item);
 
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
@@ -271,7 +272,8 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control']
+                    'attr' => ['class' => 'form-control'],
+                    'data' => 0
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -335,6 +337,92 @@ class ExpertationsController extends Controller
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
             ])
+            ->add('c1n', ChoiceType::class, [
+                'choices' => [
+                    'Punto Comando' => 'Punto Comando',
+                    'Tirante' => 'Tirante',
+                ],
+                'attr' => ['class' => 'form-control'] ,
+                'label' => false
+            ])
+            ->add('c2n',ChoiceType::class, [
+                'choices' => [
+                    'Punto Comando' => 'Punto Comando',
+                    'Tirante' => 'Tirante',
+                ],
+                'attr' => ['class' => 'form-control'] ,
+                'label' => false
+            ])
+            ->add('c3n',TextType::class, [
+                'label' => false,
+                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'required' => false
+            ])
+            ->add('c4n',TextType::class, [
+                'label' => false,
+                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'required' => false
+            ])
+            ->add('c5n',TextType::class, [
+                'label' => false,
+                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'required' => false
+            ])
+            ->add('c1v', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['class' => 'form-control', 'min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])
+            ->add('c2v', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['class' => 'form-control', 'min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])
+            ->add('c3v', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['class' => 'form-control', 'min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])
+            ->add('c4v', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['class' => 'form-control', 'min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])
+            ->add('c5v', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['class' => 'form-control', 'min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
                 'label' => 'Genera'
@@ -365,7 +453,6 @@ class ExpertationsController extends Controller
 
         return $this->render('expertations/new.html.twig', [
             'form' => $form->createView(),
-            //'form_expertation' => $form_expertation->createView()
         ]);
     }
 

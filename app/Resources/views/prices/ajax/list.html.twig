@@ -7,7 +7,7 @@
                 ID
             </th>
             <th>
-                Nome Interno
+                Codice Interno
             </th>
             <th>
                 Nome Canonico
@@ -24,7 +24,7 @@
                 <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.canonical }}</td>
-                <td>{{ item.price }}</td>
+                <td>{{ item.price }} €</td>
                 <td class="float-right">
                     <a href="{{ url('prezzi_aggiorna', { 'id' : item.id } ) }}" class="btn btn-secondary btn-sm " data-id="">
                         <i class="mdi mdi-table-edit mr-0"></i>

@@ -93,6 +93,31 @@
                                     <th>
                                         Prese TV
                                     </th>
+                                    {% if item.c1n is not null %}
+                                        <th>
+                                            {{ item.c1n }}
+                                        </th>
+                                    {% endif %}
+                                    {% if item.c2n is not null %}
+                                        <th>
+                                            {{ item.c2n }}
+                                        </th>
+                                    {% endif %}
+                                    {% if item.c3n is not null %}
+                                        <th>
+                                            {{ item.c3n }}
+                                        </th>
+                                    {% endif %}
+                                    {% if item.c4n is not null %}
+                                        <th>
+                                            {{ item.c4n }}
+                                        </th>
+                                    {% endif %}
+                                    {% if item.c5n is not null %}
+                                        <th>
+                                            {{ item.c5n }}
+                                        </th>
+                                    {% endif %}
                                 </tr>
                                 {% for key in item.floor|keys %}
                                     <tr>
@@ -114,6 +139,31 @@
                                         <td>
                                             {{ item.pt[key] }}
                                         </td>
+                                        {% if item.c1n is not null %}
+                                            <td>
+                                                {{ item.c1v[key] }}
+                                            </td>
+                                        {% endif %}
+                                        {% if item.c2n is not null %}
+                                            <td>
+                                                {{ item.c2v[key] }}
+                                            </td>
+                                        {% endif %}
+                                        {% if item.c3n is not null%}
+                                            <td>
+                                                {{ item.c3v[key] }}
+                                            </td>
+                                        {% endif %}
+                                        {% if item.c4n is not null %}
+                                            <td>
+                                                {{ item.c4v[key] }}
+                                            </td>
+                                        {% endif %}
+                                        {% if item.c5n is not null %}
+                                            <td>
+                                                {{ item.c5v[key] }}
+                                            </td>
+                                        {% endif %}
                                     </tr>
 
                                 {% endfor %}

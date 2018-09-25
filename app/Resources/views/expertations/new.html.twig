@@ -198,19 +198,19 @@
                                         Prese TV
                                     </th>
                                     <th>
-                                        <input type="text" class="form-control" placeholder="Nuova dotazione">
+                                        {{ form_widget(form.c1n) }}
                                     </th>
                                     <th>
-                                        <input type="text" class="form-control" placeholder="Nuova dotazione">
+                                        {{ form_widget(form.c2n) }}
                                     </th>
                                     <th>
-                                        <input type="text" class="form-control" placeholder="Nuova dotazione">
+                                        {{ form_widget(form.c3n) }}
                                     </th>
                                     <th>
-                                        <input type="text" class="form-control" placeholder="Nuova dotazione">
+                                        {{ form_widget(form.c4n) }}
                                     </th>
                                     <th>
-                                        <input type="text" class="form-control" placeholder="Nuova dotazione">
+                                        {{ form_widget(form.c5n) }}
                                     </th>
                                 </tr>
                             </tbody>
@@ -238,19 +238,19 @@
                                         {{ form_widget(form.pt.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control" placeholder="0" min="0">
+                                        {{ form_widget(form.c1v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control" placeholder="0" min="0">
+                                        {{ form_widget(form.c2v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control" placeholder="0" min="0">
+                                        {{ form_widget(form.c3v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control" placeholder="0" min="0">
+                                        {{ form_widget(form.c4v.vars.prototype)|e }}
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control" placeholder="0" min="0">
+                                        {{ form_widget(form.c5v.vars.prototype)|e }}
                                     </td>
                                     ' data-widget-tags="{{ '<tr></tr>'|e }}">
 

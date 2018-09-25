@@ -69,7 +69,7 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
                 <td>";
             // line 27
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
-            echo "</td>
+            echo " €</td>
                 <td class=\"float-right\">
                     <a href=\"";
             // line 29
@@ -141,7 +141,7 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
                 <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.canonical }}</td>
-                <td>{{ item.price }}</td>
+                <td>{{ item.price }} €</td>
                 <td class=\"float-right\">
                     <a href=\"{{ url('prezzi_aggiorna', { 'id' : item.id } ) }}\" class=\"btn btn-secondary btn-sm \" data-id=\"\">
                         <i class=\"mdi mdi-table-edit mr-0\"></i>
