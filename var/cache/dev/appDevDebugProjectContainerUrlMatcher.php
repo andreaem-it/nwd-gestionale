@@ -249,14 +249,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/ajax')) {
-            // ajax_get_expertations_room
-            if (0 === strpos($pathinfo, '/ajax/expertations/get/outlets') && preg_match('#^/ajax/expertations/get/outlets/(?P<level>[^/]++)/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_room')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGO',));
-            }
+            if (0 === strpos($pathinfo, '/ajax/expertation')) {
+                // ajax_get_expertations_room
+                if (0 === strpos($pathinfo, '/ajax/expertations/get/outlets') && preg_match('#^/ajax/expertations/get/outlets/(?P<level>[^/]++)/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_room')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGO',));
+                }
 
-            // ajax_get_expertations_quadri
-            if (0 === strpos($pathinfo, '/ajax/expertations/get/quadri') && preg_match('#^/ajax/expertations/get/quadri/(?P<tipo>[^/]++)/(?P<level>[^/]++)/(?P<meters>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_quadri')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGQ',));
+                // ajax_get_expertations_quadri
+                if (0 === strpos($pathinfo, '/ajax/expertations/get/quadri') && preg_match('#^/ajax/expertations/get/quadri/(?P<tipo>[^/]++)/(?P<level>[^/]++)/(?P<meters>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_quadri')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGQ',));
+                }
+
+                // ajax_get_tiranti
+                if (0 === strpos($pathinfo, '/ajax/expertation/get/tiranti') && preg_match('#^/ajax/expertation/get/tiranti/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_tiranti')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGT',));
+                }
+
             }
 
             // ajax_price_list

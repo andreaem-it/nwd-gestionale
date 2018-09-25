@@ -13,7 +13,20 @@
                 {% endif %}
             </p>
             <div>
-              <small class="designation text-muted">Manager</small>
+              <small class="designation text-muted">
+                  {#{% for roles in app.user.roles %}#}
+                    {% if app.user.roles|first == 'ROLE_ADMIN' %}
+                        {% set role = 'Amministratore' %}
+                    {% elseif app.user.roles|first == 'ROLE_SUPER_ADMIN' %}
+                        {% set role = 'SuperAmministratore' %}
+                    {% elseif app.user.roles|first == 'ROLE_AGENT' %}
+                        {% set role = 'Agente' %}
+                    {% elseif app.user.roles|first == 'ROLE_PROGETTISTA' %}
+                        {% set role = 'Progettista' %}
+                    {% endif %}
+                    {{ role }}
+                  {#{% endfor %}#}
+              </small>
               <span class="status-indicator online"></span>
             </div>
           </div>

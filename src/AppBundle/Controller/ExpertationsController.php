@@ -338,6 +338,7 @@ class ExpertationsController extends Controller
                 'allow_delete' => 'true',
             ])
             ->add('c1n', ChoiceType::class, [
+                'placeholder' => '--Seleziona--',
                 'choices' => [
                     'Punto Comando' => 'Punto Comando',
                     'Tirante' => 'Tirante',
@@ -346,6 +347,7 @@ class ExpertationsController extends Controller
                 'label' => false
             ])
             ->add('c2n',ChoiceType::class, [
+                'placeholder' => '--Seleziona--',
                 'choices' => [
                     'Punto Comando' => 'Punto Comando',
                     'Tirante' => 'Tirante',
@@ -521,6 +523,19 @@ class ExpertationsController extends Controller
             ->getScalarResult();
 
         return new Response($quadri[0]['numero']);
+    }
+
+    /**
+     * @Route("ajax/expertation/get/tiranti/{room}", name="ajax_get_tiranti")
+     */
+    public function AjaxEGT($room) {
+        if ($room == 12 ) {
+            return new Response(1);
+        } elseif ($room == 8 ) {
+            return new Response(1);
+        } else {
+            return new Response(0);
+        }
     }
 
     /**

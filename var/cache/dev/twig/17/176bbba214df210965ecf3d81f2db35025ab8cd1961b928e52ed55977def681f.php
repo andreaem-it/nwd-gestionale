@@ -500,6 +500,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                             }
                                         }
                                     });
+                                    change_tirante(val,item);
                                     toastr.info('Carico valori');
                                 });
                             }
@@ -507,6 +508,20 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                 val = Math.floor(Math.random() * (1000 - 10) + 10);
                                 \$('#total').text(val + '.00 €');
                             }
+                            function change_tirante(val,item) {
+                                \$.ajax({
+                                    url: '../ajax/expertation/get/tiranti/' + val,
+                                    dataType: 'html',
+                                    success: function (data) {
+                                        if(\$('#form_c1n').val() === 'Tirante') {
+                                            \$('#form_c1v_' + item).val(data);
+                                        } else if(\$('#form_c2n').val() === 'Tirante') {
+                                            \$('#form_c2v_' + item).val(data);
+                                        }
+                                    }
+                                });
+                            }
+
                         </script>
                     </div>
                     <button type=\"button\"
@@ -534,6 +549,12 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 
                                     return false;
                                 });
+                                \$(document).on('change', '#form_c1n', function () {
+                                    change_tirante(\$(\"#form_ambient_\" + item).val(),item)
+                                });
+                                \$(document).on('change', '#form_c2n', function () {
+                                    change_tirante(\$(\"#form_ambient_\" + item).val(),item)
+                                });
                             });
 
                         });
@@ -549,8 +570,8 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                         <div class=\"row\">
                             <div class=\"col-6\">
                                 ";
-        // line 337
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 337, $this->source); })()), "submit", array()), 'widget');
+        // line 358
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 358, $this->source); })()), "submit", array()), 'widget');
         echo "
                             </div>
                             <div class=\"col-6\">
@@ -562,8 +583,8 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
             </div>
         </div>
         ";
-        // line 347
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 347, $this->source); })()), 'form_end');
+        // line 368
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 368, $this->source); })()), 'form_end');
         echo "
 
     </div>
@@ -620,7 +641,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 
     }
 
-    // line 395
+    // line 416
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -629,20 +650,20 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 396
+        // line 417
         echo "    <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/scrollbar.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 397
+        // line 418
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 398
+        // line 419
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.all.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 399
+        // line 420
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -654,7 +675,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 
     }
 
-    // line 401
+    // line 422
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -663,12 +684,12 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 402
+        // line 423
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/scrollbar.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 403
+        // line 424
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
@@ -692,7 +713,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
 
     public function getDebugInfo()
     {
-        return array (  672 => 403,  667 => 402,  658 => 401,  646 => 399,  642 => 398,  638 => 397,  633 => 396,  624 => 395,  566 => 347,  553 => 337,  468 => 255,  463 => 253,  457 => 250,  451 => 247,  445 => 244,  439 => 241,  433 => 238,  427 => 235,  421 => 232,  415 => 229,  409 => 226,  403 => 223,  390 => 213,  384 => 210,  378 => 207,  372 => 204,  366 => 201,  327 => 165,  323 => 164,  315 => 159,  311 => 158,  303 => 153,  299 => 152,  291 => 147,  287 => 146,  279 => 141,  275 => 140,  269 => 136,  262 => 127,  258 => 126,  250 => 121,  246 => 120,  190 => 67,  186 => 66,  178 => 61,  174 => 60,  166 => 55,  162 => 54,  154 => 49,  150 => 48,  142 => 43,  138 => 42,  130 => 37,  126 => 36,  118 => 31,  114 => 30,  104 => 23,  98 => 20,  94 => 19,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  693 => 424,  688 => 423,  679 => 422,  667 => 420,  663 => 419,  659 => 418,  654 => 417,  645 => 416,  587 => 368,  574 => 358,  468 => 255,  463 => 253,  457 => 250,  451 => 247,  445 => 244,  439 => 241,  433 => 238,  427 => 235,  421 => 232,  415 => 229,  409 => 226,  403 => 223,  390 => 213,  384 => 210,  378 => 207,  372 => 204,  366 => 201,  327 => 165,  323 => 164,  315 => 159,  311 => 158,  303 => 153,  299 => 152,  291 => 147,  287 => 146,  279 => 141,  275 => 140,  269 => 136,  262 => 127,  258 => 126,  250 => 121,  246 => 120,  190 => 67,  186 => 66,  178 => 61,  174 => 60,  166 => 55,  162 => 54,  154 => 49,  150 => 48,  142 => 43,  138 => 42,  130 => 37,  126 => 36,  118 => 31,  114 => 30,  104 => 23,  98 => 20,  94 => 19,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -985,6 +1006,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                             }
                                         }
                                     });
+                                    change_tirante(val,item);
                                     toastr.info('Carico valori');
                                 });
                             }
@@ -992,6 +1014,20 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                 val = Math.floor(Math.random() * (1000 - 10) + 10);
                                 \$('#total').text(val + '.00 €');
                             }
+                            function change_tirante(val,item) {
+                                \$.ajax({
+                                    url: '../ajax/expertation/get/tiranti/' + val,
+                                    dataType: 'html',
+                                    success: function (data) {
+                                        if(\$('#form_c1n').val() === 'Tirante') {
+                                            \$('#form_c1v_' + item).val(data);
+                                        } else if(\$('#form_c2n').val() === 'Tirante') {
+                                            \$('#form_c2v_' + item).val(data);
+                                        }
+                                    }
+                                });
+                            }
+
                         </script>
                     </div>
                     <button type=\"button\"
@@ -1018,6 +1054,12 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                                     \$(newElem).remove();
 
                                     return false;
+                                });
+                                \$(document).on('change', '#form_c1n', function () {
+                                    change_tirante(\$(\"#form_ambient_\" + item).val(),item)
+                                });
+                                \$(document).on('change', '#form_c2n', function () {
+                                    change_tirante(\$(\"#form_ambient_\" + item).val(),item)
                                 });
                             });
 

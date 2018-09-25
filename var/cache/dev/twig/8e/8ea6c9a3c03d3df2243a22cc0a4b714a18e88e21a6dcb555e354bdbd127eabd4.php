@@ -51,13 +51,48 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         // line 14
         echo "            </p>
             <div>
-              <small class=\"designation text-muted\">Manager</small>
+              <small class=\"designation text-muted\">
+                  ";
+        // line 18
+        echo "                    ";
+        if ((twig_first($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 18, $this->source); })()), "user", array()), "roles", array())) == "ROLE_ADMIN")) {
+            // line 19
+            echo "                        ";
+            $context["role"] = "Amministratore";
+            // line 20
+            echo "                    ";
+        } elseif ((twig_first($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 20, $this->source); })()), "user", array()), "roles", array())) == "ROLE_SUPER_ADMIN")) {
+            // line 21
+            echo "                        ";
+            $context["role"] = "SuperAmministratore";
+            // line 22
+            echo "                    ";
+        } elseif ((twig_first($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 22, $this->source); })()), "user", array()), "roles", array())) == "ROLE_AGENT")) {
+            // line 23
+            echo "                        ";
+            $context["role"] = "Agente";
+            // line 24
+            echo "                    ";
+        } elseif ((twig_first($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 24, $this->source); })()), "user", array()), "roles", array())) == "ROLE_PROGETTISTA")) {
+            // line 25
+            echo "                        ";
+            $context["role"] = "Progettista";
+            // line 26
+            echo "                    ";
+        }
+        // line 27
+        echo "                    ";
+        echo twig_escape_filter($this->env, (isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new Twig_Error_Runtime('Variable "role" does not exist.', 27, $this->source); })()), "html", null, true);
+        echo "
+                  ";
+        // line 29
+        echo "              </small>
               <span class=\"status-indicator online\"></span>
             </div>
           </div>
         </div>
         <a href=\"";
-        // line 21
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo");
         echo "\" class=\"btn btn-success btn-block\">Nuovo Preventivo
           <i class=\"mdi mdi-plus\"></i>
@@ -66,7 +101,7 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
     </li>
     <li class=\"nav-item\">
       <a class=\"nav-link\" href=\"";
-        // line 27
+        // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("dashboard");
         echo "\">
         <i class=\"menu-icon mdi mdi-television\"></i>
@@ -83,13 +118,13 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 41
+        // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo");
         echo "\">Nuovo</a>
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 44
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("lista_preventivi");
         echo "\">Lista</a>
           </li>
@@ -106,13 +141,13 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 58
+        // line 71
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_cliente");
         echo "\">Nuovo</a>
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 61
+        // line 74
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("clienti");
         echo "\">Lista</a>
           </li>
@@ -129,7 +164,7 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 75
+        // line 88
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prezzi_listino");
         echo "\">Listino</a>
           </li>
@@ -146,19 +181,19 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 89
+        // line 102
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_generali");
         echo "\">Generali</a>
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 92
+        // line 105
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
         echo "\">Utenti</a>
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 95
+        // line 108
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_gruppi");
         echo "\">Gruppi</a>
           </li>
@@ -187,7 +222,7 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
 
     public function getDebugInfo()
     {
-        return array (  162 => 95,  156 => 92,  150 => 89,  133 => 75,  116 => 61,  110 => 58,  93 => 44,  87 => 41,  70 => 27,  61 => 21,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
+        return array (  197 => 108,  191 => 105,  185 => 102,  168 => 88,  151 => 74,  145 => 71,  128 => 57,  122 => 54,  105 => 40,  96 => 34,  89 => 29,  84 => 27,  81 => 26,  78 => 25,  75 => 24,  72 => 23,  69 => 22,  66 => 21,  63 => 20,  60 => 19,  57 => 18,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -207,7 +242,20 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
                 {% endif %}
             </p>
             <div>
-              <small class=\"designation text-muted\">Manager</small>
+              <small class=\"designation text-muted\">
+                  {#{% for roles in app.user.roles %}#}
+                    {% if app.user.roles|first == 'ROLE_ADMIN' %}
+                        {% set role = 'Amministratore' %}
+                    {% elseif app.user.roles|first == 'ROLE_SUPER_ADMIN' %}
+                        {% set role = 'SuperAmministratore' %}
+                    {% elseif app.user.roles|first == 'ROLE_AGENT' %}
+                        {% set role = 'Agente' %}
+                    {% elseif app.user.roles|first == 'ROLE_PROGETTISTA' %}
+                        {% set role = 'Progettista' %}
+                    {% endif %}
+                    {{ role }}
+                  {#{% endfor %}#}
+              </small>
               <span class=\"status-indicator online\"></span>
             </div>
           </div>

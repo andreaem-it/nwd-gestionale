@@ -75,7 +75,7 @@
                             <table class="table table-hover">
                             <tbody>
                                 <tr class="text-center table-header" style="background-color: #f2f8f9;">
-                                    <th>
+                                    <th style="max-width: 50px;">
                                         Piano
                                     </th>
                                     <th class="tbl-lg ambient-td">
@@ -122,7 +122,11 @@
                                 {% for key in item.floor|keys %}
                                     <tr>
                                         <td>
-                                            {{ item.floor[key] }}
+                                            {% if item.floor[key] == 0 %}
+                                                T
+                                            {% else %}
+                                                {{ item.floor[key] }}
+                                            {% endif %}
                                         </td>
                                         <td class="ambient-td">
                                             {{ functions.convertAIDtoName(item.ambient[key]) }}

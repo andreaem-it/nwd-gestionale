@@ -185,18 +185,18 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         <div class=\"btn-group\">
                                             <a href=\"";
             // line 68
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
-            echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-delete\"></span>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-eye-outline\"></span>
                                             </a>
                                             <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
                                                 <span class=\"mdi mdi-table-edit\"></span>
                                             </a>
                                             <a href=\"";
             // line 74
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-eye-outline\"></span>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
+            echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-delete\"></span>
                                             </a>
                                         </div>
                                     </td>
@@ -309,14 +309,14 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                     </td>
                                     <td style=\"width: 255px;\">
                                         <div class=\"btn-group\">
-                                            <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-delete\"></span>
+                                            <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-eye-outline\"></span>
                                             </a>
                                             <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
                                                 <span class=\"mdi mdi-table-edit\"></span>
                                             </a>
-                                            <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-eye-outline\"></span>
+                                            <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                <span class=\"mdi mdi-delete\"></span>
                                             </a>
                                         </div>
                                     </td>

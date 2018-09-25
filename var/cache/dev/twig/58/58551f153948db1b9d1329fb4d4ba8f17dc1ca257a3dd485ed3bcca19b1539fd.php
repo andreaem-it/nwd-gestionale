@@ -35,7 +35,7 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
                 ID
             </th>
             <th>
-                Nome Interno
+                Codice Interno
             </th>
             <th>
                 Nome Canonico
@@ -124,7 +124,7 @@ class __TwigTemplate_3b654b5a37a12554f78861d360e63490e0c34447b2c61bf3b34d5ee6f1e
                 ID
             </th>
             <th>
-                Nome Interno
+                Codice Interno
             </th>
             <th>
                 Nome Canonico

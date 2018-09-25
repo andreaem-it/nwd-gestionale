@@ -286,6 +286,7 @@
                                             }
                                         }
                                     });
+                                    change_tirante(val,item);
                                     toastr.info('Carico valori');
                                 });
                             }
@@ -293,6 +294,20 @@
                                 val = Math.floor(Math.random() * (1000 - 10) + 10);
                                 $('#total').text(val + '.00 €');
                             }
+                            function change_tirante(val,item) {
+                                $.ajax({
+                                    url: '../ajax/expertation/get/tiranti/' + val,
+                                    dataType: 'html',
+                                    success: function (data) {
+                                        if($('#form_c1n').val() === 'Tirante') {
+                                            $('#form_c1v_' + item).val(data);
+                                        } else if($('#form_c2n').val() === 'Tirante') {
+                                            $('#form_c2v_' + item).val(data);
+                                        }
+                                    }
+                                });
+                            }
+
                         </script>
                     </div>
                     <button type="button"
@@ -319,6 +334,12 @@
                                     $(newElem).remove();
 
                                     return false;
+                                });
+                                $(document).on('change', '#form_c1n', function () {
+                                    change_tirante($("#form_ambient_" + item).val(),item)
+                                });
+                                $(document).on('change', '#form_c2n', function () {
+                                    change_tirante($("#form_ambient_" + item).val(),item)
                                 });
                             });
 
