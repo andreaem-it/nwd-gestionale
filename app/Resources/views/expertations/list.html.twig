@@ -24,6 +24,9 @@
                                 <thead>
                                     <tr>
                                         <th>
+                                            ID
+                                        </th>
+                                        <th>
                                             Data
                                         </th>
                                         <th>
@@ -42,42 +45,85 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for item in expertations %}
-                                        <tr>
-                                    <td class="py-1">
-                                        {{ item.date|date("d-m-Y") }}
-                                    </td>
-                                    <td>
-                                        <a href="{{ url('vedi_clienti', { id : item.client}) }}">
-                                            {{ functions.uidToName(item.client) }}
+                                {% for item in u_expertations %}
+                                    <tr>
+                                        <td>
+                                            {{ item.id }}
+                                        </td>
+                                        <td class="py-1">
+                                            {{ item.date|date("d-m-Y") }}
+                                        </td>
+                                        <td>
+                                            <a href="{{ url('vedi_clienti', { id : item.client}) }}">
+                                                {{ functions.uidToName(item.client) }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ url('impostazioni_utenti') }}">
+                                                {{ functions.userToName(item.createdBy) }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            {{ item.price }} €
+                                        </td>
+                                        <td>
+                                            {{ item.expiration|date("d-m-Y") }}
+                                        </td>
+                                        <td style="width: 255px;">
+                                            <div class="btn-group">
+                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right mr-1">
+                                                    <span class="mdi mdi-eye-outline"></span>
+                                                </a>
+                                                <a href="" class="btn btn-warning btn-sm float-right mr-1">
+                                                    <span class="mdi mdi-table-edit"></span>
+                                                </a>
+                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right mr-1">
+                                                    <span class="mdi mdi-delete"></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                {% for item in expertations %}
+                                    <tr>
+                                        <td>
+                                            {{ item.id }}
+                                        </td>
+                                <td class="py-1">
+                                    {{ item.date|date("d-m-Y") }}
+                                </td>
+                                <td>
+                                    <a href="{{ url('vedi_clienti', { id : item.client}) }}">
+                                        {{ functions.uidToName(item.client) }}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{ url('impostazioni_utenti') }}">
+                                        {{ functions.userToName(item.createdBy) }}
+                                    </a>
+                                </td>
+                                <td>
+                                    {{ item.price }} €
+                                </td>
+                                <td>
+                                    {{ item.expiration|date("d-m-Y") }}
+                                </td>
+                                <td style="width: 255px;">
+                                    <div class="btn-group">
+                                        <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right mr-1">
+                                            <span class="mdi mdi-eye-outline"></span>
                                         </a>
-                                    </td>
-                                    <td>
-                                        <a href="{{ url('impostazioni_utenti') }}">
-                                            {{ functions.userToName(item.createdBy) }}
+                                        <a href="" class="btn btn-warning btn-sm float-right mr-1">
+                                            <span class="mdi mdi-table-edit"></span>
                                         </a>
-                                    </td>
-                                    <td>
-                                        {{ item.price }} €
-                                    </td>
-                                    <td>
-                                        {{ item.expiration|date("d-m-Y") }}
-                                    </td>
-                                    <td style="width: 255px;">
-                                        <div class="btn-group">
-                                            <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right mr-1">
-                                                <span class="mdi mdi-eye-outline"></span>
-                                            </a>
-                                            <a href="" class="btn btn-warning btn-sm float-right mr-1">
-                                                <span class="mdi mdi-table-edit"></span>
-                                            </a>
-                                            <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right mr-1">
-                                                <span class="mdi mdi-delete"></span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                    {% endfor %}
+                                        <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right mr-1">
+                                            <span class="mdi mdi-delete"></span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                                {% endfor %}
+
                                 </tbody>
                             </table>
                         </div>

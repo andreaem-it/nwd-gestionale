@@ -662,7 +662,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.91lsdet"/>
+      <argument type="service" id="service_locator.az8m5_5"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -5154,9 +5154,10 @@
         <argument key="mailer" type="service" id="swiftmailer.mailer.default" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.vuxplsm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.pmsflvt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="authChecker" type="service" id="security.authorization_checker" on-invalid="ignore"/>
         <argument key="encoder" type="service" id="security.user_password_encoder.generic" on-invalid="ignore"/>
       </argument>
     </service>
@@ -5166,17 +5167,17 @@
         <argument key="mailer" type="service" id="swiftmailer.mailer.default" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.91lsdet" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.az8m5_5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Controller\SecurityController:login" type="service" id="service_locator.jwewuuw"/>
         <argument key="AppBundle\Controller\SettingsController:AjaxSUAAction" type="service" id="service_locator.hd_5bqv"/>
-        <argument key="AppBundle\Controller\SettingsController:SettingsUserEditAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController:SettingsUserEditAction" type="service" id="service_locator.pmsflvt"/>
         <argument key="AppBundle\Controller\SettingsController:resetPassLinkTokenAction" type="service" id="service_locator.i3nl.uy"/>
         <argument key="AppBundle\Controller\SettingsController:settingsUserPasswordResetAction" type="service" id="service_locator.i3nl.uy"/>
         <argument key="AppBundle\Controller\SecurityController::login" type="service" id="service_locator.jwewuuw"/>
         <argument key="AppBundle\Controller\SettingsController::AjaxSUAAction" type="service" id="service_locator.hd_5bqv"/>
-        <argument key="AppBundle\Controller\SettingsController::SettingsUserEditAction" type="service" id="service_locator.vuxplsm"/>
+        <argument key="AppBundle\Controller\SettingsController::SettingsUserEditAction" type="service" id="service_locator.pmsflvt"/>
         <argument key="AppBundle\Controller\SettingsController::resetPassLinkTokenAction" type="service" id="service_locator.i3nl.uy"/>
         <argument key="AppBundle\Controller\SettingsController::settingsUserPasswordResetAction" type="service" id="service_locator.i3nl.uy"/>
       </argument>

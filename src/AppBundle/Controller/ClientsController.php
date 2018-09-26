@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
+use AppBundle\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -28,7 +29,8 @@ class ClientsController extends Controller
         }
 
         return $this->render('clients/clients.html.twig',[
-            'clients' => $clients
+            'clients' => $clients,
+            'func' => $this
         ]);
     }
 
@@ -212,5 +214,9 @@ class ClientsController extends Controller
         }
 
         return $this->redirectToRoute('clienti');
+    }
+
+    public function convertUName($uname) {
+        return $this->getDoctrine()->getRepository(Users::class)->find($uname);
     }
 }

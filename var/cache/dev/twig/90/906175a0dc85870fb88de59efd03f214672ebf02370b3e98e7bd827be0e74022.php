@@ -116,6 +116,9 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                 <thead>
                                     <tr>
                                         <th>
+                                            ID
+                                        </th>
+                                        <th>
                                             Data
                                         </th>
                                         <th>
@@ -134,80 +137,165 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    ";
-        // line 45
+                                ";
+        // line 48
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["expertations"]) || array_key_exists("expertations", $context) ? $context["expertations"] : (function () { throw new Twig_Error_Runtime('Variable "expertations" does not exist.', 45, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["u_expertations"]) || array_key_exists("u_expertations", $context) ? $context["u_expertations"] : (function () { throw new Twig_Error_Runtime('Variable "u_expertations" does not exist.', 48, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 46
-            echo "                                        <tr>
-                                    <td class=\"py-1\">
-                                        ";
-            // line 48
+            // line 49
+            echo "                                    <tr>
+                                        <td>
+                                            ";
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "html", null, true);
+            echo "
+                                        </td>
+                                        <td class=\"py-1\">
+                                            ";
+            // line 54
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "date", array()), "d-m-Y"), "html", null, true);
             echo "
-                                    </td>
-                                    <td>
-                                        <a href=\"";
-            // line 51
+                                        </td>
+                                        <td>
+                                            <a href=\"";
+            // line 57
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
             echo "\">
-                                            ";
-            // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 52, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
+                                                ";
+            // line 58
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 58, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
             echo "
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href=\"";
-            // line 56
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href=\"";
+            // line 62
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
             echo "\">
-                                            ";
-            // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 57, $this->source); })()), "userToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "createdBy", array())), "method"), "html", null, true);
+                                                ";
+            // line 63
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 63, $this->source); })()), "userToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "createdBy", array())), "method"), "html", null, true);
             echo "
-                                        </a>
-                                    </td>
-                                    <td>
-                                        ";
-            // line 61
+                                            </a>
+                                        </td>
+                                        <td>
+                                            ";
+            // line 67
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
             echo " €
-                                    </td>
-                                    <td>
-                                        ";
-            // line 64
+                                        </td>
+                                        <td>
+                                            ";
+            // line 70
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "expiration", array()), "d-m-Y"), "html", null, true);
             echo "
-                                    </td>
-                                    <td style=\"width: 255px;\">
-                                        <div class=\"btn-group\">
-                                            <a href=\"";
-            // line 68
+                                        </td>
+                                        <td style=\"width: 255px;\">
+                                            <div class=\"btn-group\">
+                                                <a href=\"";
+            // line 74
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-eye-outline\"></span>
-                                            </a>
-                                            <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-table-edit\"></span>
-                                            </a>
-                                            <a href=\"";
-            // line 74
+                                                    <span class=\"mdi mdi-eye-outline\"></span>
+                                                </a>
+                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                    <span class=\"mdi mdi-table-edit\"></span>
+                                                </a>
+                                                <a href=\"";
+            // line 80
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
             echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-delete\"></span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                    ";
+                                                    <span class=\"mdi mdi-delete\"></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 81
-        echo "                                </tbody>
+        // line 87
+        echo "                                ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["expertations"]) || array_key_exists("expertations", $context) ? $context["expertations"] : (function () { throw new Twig_Error_Runtime('Variable "expertations" does not exist.', 87, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 88
+            echo "                                    <tr>
+                                        <td>
+                                            ";
+            // line 90
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "html", null, true);
+            echo "
+                                        </td>
+                                <td class=\"py-1\">
+                                    ";
+            // line 93
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "date", array()), "d-m-Y"), "html", null, true);
+            echo "
+                                </td>
+                                <td>
+                                    <a href=\"";
+            // line 96
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
+            echo "\">
+                                        ";
+            // line 97
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 97, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
+            echo "
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href=\"";
+            // line 101
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
+            echo "\">
+                                        ";
+            // line 102
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 102, $this->source); })()), "userToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "createdBy", array())), "method"), "html", null, true);
+            echo "
+                                    </a>
+                                </td>
+                                <td>
+                                    ";
+            // line 106
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
+            echo " €
+                                </td>
+                                <td>
+                                    ";
+            // line 109
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "expiration", array()), "d-m-Y"), "html", null, true);
+            echo "
+                                </td>
+                                <td style=\"width: 255px;\">
+                                    <div class=\"btn-group\">
+                                        <a href=\"";
+            // line 113
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                            <span class=\"mdi mdi-eye-outline\"></span>
+                                        </a>
+                                        <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                            <span class=\"mdi mdi-table-edit\"></span>
+                                        </a>
+                                        <a href=\"";
+            // line 119
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
+            echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                            <span class=\"mdi mdi-delete\"></span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 126
+        echo "
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -237,7 +325,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
 
     public function getDebugInfo()
     {
-        return array (  210 => 81,  197 => 74,  188 => 68,  181 => 64,  175 => 61,  168 => 57,  164 => 56,  157 => 52,  153 => 51,  147 => 48,  143 => 46,  139 => 45,  110 => 18,  104 => 17,  95 => 14,  90 => 13,  85 => 12,  81 => 11,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  297 => 126,  284 => 119,  275 => 113,  268 => 109,  262 => 106,  255 => 102,  251 => 101,  244 => 97,  240 => 96,  234 => 93,  228 => 90,  224 => 88,  219 => 87,  206 => 80,  197 => 74,  190 => 70,  184 => 67,  177 => 63,  173 => 62,  166 => 58,  162 => 57,  156 => 54,  150 => 51,  146 => 49,  142 => 48,  110 => 18,  104 => 17,  95 => 14,  90 => 13,  85 => 12,  81 => 11,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -268,6 +356,9 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                 <thead>
                                     <tr>
                                         <th>
+                                            ID
+                                        </th>
+                                        <th>
                                             Data
                                         </th>
                                         <th>
@@ -286,42 +377,85 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for item in expertations %}
-                                        <tr>
-                                    <td class=\"py-1\">
-                                        {{ item.date|date(\"d-m-Y\") }}
-                                    </td>
-                                    <td>
-                                        <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
-                                            {{ functions.uidToName(item.client) }}
+                                {% for item in u_expertations %}
+                                    <tr>
+                                        <td>
+                                            {{ item.id }}
+                                        </td>
+                                        <td class=\"py-1\">
+                                            {{ item.date|date(\"d-m-Y\") }}
+                                        </td>
+                                        <td>
+                                            <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
+                                                {{ functions.uidToName(item.client) }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href=\"{{ url('impostazioni_utenti') }}\">
+                                                {{ functions.userToName(item.createdBy) }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            {{ item.price }} €
+                                        </td>
+                                        <td>
+                                            {{ item.expiration|date(\"d-m-Y\") }}
+                                        </td>
+                                        <td style=\"width: 255px;\">
+                                            <div class=\"btn-group\">
+                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                                    <span class=\"mdi mdi-eye-outline\"></span>
+                                                </a>
+                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                    <span class=\"mdi mdi-table-edit\"></span>
+                                                </a>
+                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                    <span class=\"mdi mdi-delete\"></span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                {% for item in expertations %}
+                                    <tr>
+                                        <td>
+                                            {{ item.id }}
+                                        </td>
+                                <td class=\"py-1\">
+                                    {{ item.date|date(\"d-m-Y\") }}
+                                </td>
+                                <td>
+                                    <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
+                                        {{ functions.uidToName(item.client) }}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href=\"{{ url('impostazioni_utenti') }}\">
+                                        {{ functions.userToName(item.createdBy) }}
+                                    </a>
+                                </td>
+                                <td>
+                                    {{ item.price }} €
+                                </td>
+                                <td>
+                                    {{ item.expiration|date(\"d-m-Y\") }}
+                                </td>
+                                <td style=\"width: 255px;\">
+                                    <div class=\"btn-group\">
+                                        <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                            <span class=\"mdi mdi-eye-outline\"></span>
                                         </a>
-                                    </td>
-                                    <td>
-                                        <a href=\"{{ url('impostazioni_utenti') }}\">
-                                            {{ functions.userToName(item.createdBy) }}
+                                        <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                            <span class=\"mdi mdi-table-edit\"></span>
                                         </a>
-                                    </td>
-                                    <td>
-                                        {{ item.price }} €
-                                    </td>
-                                    <td>
-                                        {{ item.expiration|date(\"d-m-Y\") }}
-                                    </td>
-                                    <td style=\"width: 255px;\">
-                                        <div class=\"btn-group\">
-                                            <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-eye-outline\"></span>
-                                            </a>
-                                            <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-table-edit\"></span>
-                                            </a>
-                                            <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
-                                                <span class=\"mdi mdi-delete\"></span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                    {% endfor %}
+                                        <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                            <span class=\"mdi mdi-delete\"></span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                                {% endfor %}
+
                                 </tbody>
                             </table>
                         </div>

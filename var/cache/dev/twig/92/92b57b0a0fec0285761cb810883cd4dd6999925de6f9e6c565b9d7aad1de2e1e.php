@@ -103,6 +103,9 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                             Cliente
                                         </th>
                                         <th>
+                                            Referente
+                                        </th>
+                                        <th>
                                             Indirizzo
                                         </th>
                                         <th>
@@ -116,27 +119,33 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                     </thead>
                                     <tbody>
                                     ";
-        // line 44
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new Twig_Error_Runtime('Variable "clients" does not exist.', 44, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new Twig_Error_Runtime('Variable "clients" does not exist.', 47, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 45
+            // line 48
             echo "                                        <tr>
                                             <td class=\"py-1\">
                                                 ";
-            // line 47
+            // line 50
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "html", null, true);
             echo "
                                             </td>
                                             <td>
                                                 ";
-            // line 50
+            // line 53
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", array()), "html", null, true);
             echo "
                                             </td>
                                             <td>
                                                 ";
-            // line 53
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["func"]) || array_key_exists("func", $context) ? $context["func"] : (function () { throw new Twig_Error_Runtime('Variable "func" does not exist.', 56, $this->source); })()), "convertUName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "refereer", array())), "method"), "html", null, true);
+            echo "
+                                            </td>
+                                            <td>
+                                                ";
+            // line 59
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "address", array()), "html", null, true);
             echo ", ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "postalCode", array()), "html", null, true);
@@ -148,31 +157,31 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                             </td>
                                             <td>
                                                 ";
-            // line 56
+            // line 62
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "phone", array()), "html", null, true);
             echo "
                                             </td>
                                             <td>
                                                 ";
-            // line 59
+            // line 65
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "email", array()), "html", null, true);
             echo "
                                             </td>
                                             <td style=\"width: 255px;\">
                                                 <a href=\"";
-            // line 62
+            // line 68
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("elimina_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                                 <a href=\"";
-            // line 65
+            // line 71
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("modifica_cliente", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-warning btn-sm float-right mr-1\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
                                                 <a href=\"";
-            // line 68
+            // line 74
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => 1));
             echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
@@ -184,7 +193,7 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 80
         echo "                                    </tbody>
                                 </table>
                             </div>
@@ -215,7 +224,7 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
 
     public function getDebugInfo()
     {
-        return array (  188 => 74,  176 => 68,  170 => 65,  164 => 62,  158 => 59,  152 => 56,  140 => 53,  134 => 50,  128 => 47,  124 => 45,  120 => 44,  91 => 17,  85 => 16,  76 => 13,  71 => 12,  66 => 11,  62 => 10,  53 => 3,  44 => 2,  15 => 1,);
+        return array (  197 => 80,  185 => 74,  179 => 71,  173 => 68,  167 => 65,  161 => 62,  149 => 59,  143 => 56,  137 => 53,  131 => 50,  127 => 48,  123 => 47,  91 => 17,  85 => 16,  76 => 13,  71 => 12,  66 => 11,  62 => 10,  53 => 3,  44 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -251,6 +260,9 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                             Cliente
                                         </th>
                                         <th>
+                                            Referente
+                                        </th>
+                                        <th>
                                             Indirizzo
                                         </th>
                                         <th>
@@ -270,6 +282,9 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                             </td>
                                             <td>
                                                 {{ item.name }}
+                                            </td>
+                                            <td>
+                                                {{ func.convertUName(item.refereer) }}
                                             </td>
                                             <td>
                                                 {{ item.address }}, {{ item.postalCode }}, {{ item.city }} ({{ item.province }})

@@ -23,6 +23,8 @@
                         {% set role = 'Agente' %}
                     {% elseif app.user.roles|first == 'ROLE_PROGETTISTA' %}
                         {% set role = 'Progettista' %}
+                    {% elseif app.user.roles|first == 'ROLE_SEGNALATORE' %}
+                        {% set role = 'Segnalatore' %}
                     {% endif %}
                     {{ role }}
                   {#{% endfor %}#}

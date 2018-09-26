@@ -28,16 +28,22 @@ class ExpertationsController extends Controller
      */
     public function expertationsListAction(Request $request)
     {
-
+        $expertations = null;
         if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
             $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findAll();
+            $uExpertations = null;
         } else {
-            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
+            $permission = $this->getDoctrine()->getRepository(Users::class)->findBy(['father' => $this->getUser()]);
+            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $permission[0]->getId()]);
+            $uExpertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()]);
+            if ($expertations == null) {
+                $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()]);
+            }
         }
-
 
         return $this->render('expertations/list.html.twig', [
             'expertations' => $expertations,
+            'u_expertations' => $uExpertations,
             'functions' => $this,
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);

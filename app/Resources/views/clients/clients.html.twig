@@ -29,6 +29,9 @@
                                             Cliente
                                         </th>
                                         <th>
+                                            Referente
+                                        </th>
+                                        <th>
                                             Indirizzo
                                         </th>
                                         <th>
@@ -48,6 +51,9 @@
                                             </td>
                                             <td>
                                                 {{ item.name }}
+                                            </td>
+                                            <td>
+                                                {{ func.convertUName(item.refereer) }}
                                             </td>
                                             <td>
                                                 {{ item.address }}, {{ item.postalCode }}, {{ item.city }} ({{ item.province }})

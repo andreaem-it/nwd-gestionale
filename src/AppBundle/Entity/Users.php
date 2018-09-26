@@ -32,6 +32,11 @@ class Users extends BaseUser
     protected $groups;
 
     /**
+     * @ORM\Column(name="father", type="integer", nullable=true)
+     */
+    private $father;
+
+    /**
      * Get id
      *
      * @return int
@@ -41,5 +46,28 @@ class Users extends BaseUser
         return $this->id;
     }
 
-}
 
+    /**
+     * Set father.
+     *
+     * @param array $father
+     *
+     * @return Users
+     */
+    public function setFather($father)
+    {
+        $this->father = $father;
+
+        return $this;
+    }
+
+    /**
+     * Get father.
+     *
+     * @return array
+     */
+    public function getFather()
+    {
+        return $this->father;
+    }
+}

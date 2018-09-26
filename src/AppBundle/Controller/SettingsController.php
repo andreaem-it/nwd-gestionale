@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -115,31 +116,41 @@ class SettingsController extends Controller
     /**
      * @Route("impostazioni/utenti/modifica/{id}", name="impostazioni_utenti_modifica")
      */
-    public function SettingsUserEditAction($id, Request $request, UserPasswordEncoderInterface $encoder) {
+    public function SettingsUserEditAction($id, Request $request, UserPasswordEncoderInterface $encoder, AuthorizationCheckerInterface $authChecker) {
+
         $user = $this->getDoctrine()->getRepository(Users::class)->find($id);
 
-        $form = $this->createFormBuilder($user)
-            ->add('username', TextType::class,['label' => 'Nome Utente', 'attr' => ['class' => 'form-control']])
-            ->add('email', EmailType::class,['label' => 'E-Mail', 'attr' => ['class' => 'form-control']])
-            ->add('roles', ChoiceType::class,
-                ['choices' => [
-                    'SuperAmministratore' => 'ROLE_SUPER_ADMIN',
-                    'Amministratore' => 'ROLE_ADMIN',
-                    'Agente' => 'ROLE_AGENT',
-                    'Immobiliare' => 'ROLE_IMMOBILIARE',
-                    'General Contractor' => 'ROLE_GENERAL_CONTRACTOR',
-                    'Progettista' => 'ROLE_PROGETTISTA',
-                    'Impresa Edile' => 'ROLE_IMPRESA_EDILE',
-                    'Segnalatore' => 'ROLE_SEGNALATORE',
-                ],
-                    'choice_attr' => ['class' => 'form-control ml-2'],
-                    'expanded' => false,
-                    'multiple' => true,
-                    'attr' => ['class' => 'form-control']
-                ], ['label' => 'Ruoli', 'attr' => ['class' => 'form-control mr-3']])
-            ->add('submit', SubmitType::class,['label' => 'Modifica', 'attr' => ['class' => 'btn btn-success mt-3']])
-            ->add('reset', ResetType::class, ['label' => 'Reset', 'attr' => ['class' => 'btn btn-warning mt-3']])
-            ->getForm();
+        if ($authChecker->isGranted('ROLE_ADMIN') === true) {
+            $form = $this->createFormBuilder($user)
+                ->add('username', TextType::class,['label' => 'Nome Utente', 'attr' => ['class' => 'form-control']])
+                ->add('email', EmailType::class,['label' => 'E-Mail', 'attr' => ['class' => 'form-control']])
+                ->add('roles', ChoiceType::class,
+                    ['choices' => [
+                        'SuperAmministratore' => 'ROLE_SUPER_ADMIN',
+                        'Amministratore' => 'ROLE_ADMIN',
+                        'Agente' => 'ROLE_AGENT',
+                        'Immobiliare' => 'ROLE_IMMOBILIARE',
+                        'General Contractor' => 'ROLE_GENERAL_CONTRACTOR',
+                        'Progettista' => 'ROLE_PROGETTISTA',
+                        'Impresa Edile' => 'ROLE_IMPRESA_EDILE',
+                        'Segnalatore' => 'ROLE_SEGNALATORE',
+                    ],
+                        'choice_attr' => ['class' => 'form-control ml-2'],
+                        'expanded' => false,
+                        'multiple' => true,
+                        'attr' => ['class' => 'form-control']
+                    ], ['label' => 'Ruoli', 'attr' => ['class' => 'form-control mr-3']])
+                ->add('submit', SubmitType::class,['label' => 'Modifica', 'attr' => ['class' => 'btn btn-success mt-3']])
+                ->add('reset', ResetType::class, ['label' => 'Reset', 'attr' => ['class' => 'btn btn-warning mt-3']])
+                ->getForm();
+        } else {
+            $form = $this->createFormBuilder($user)
+                ->add('username', TextType::class,['label' => 'Nome Utente', 'attr' => ['class' => 'form-control']])
+                ->add('email', EmailType::class,['label' => 'E-Mail', 'attr' => ['class' => 'form-control']])
+                ->add('submit', SubmitType::class,['label' => 'Modifica', 'attr' => ['class' => 'btn btn-success mt-3']])
+                ->add('reset', ResetType::class, ['label' => 'Reset', 'attr' => ['class' => 'btn btn-warning mt-3']])
+                ->getForm();
+        }
 
         $form->handleRequest($request);
 

@@ -16,8 +16,10 @@
                 {{ form_widget(form.username) }}
                 {{ form_label(form.email) }}
                 {{ form_widget(form.email) }}
-                {{ form_label(form.roles) }}
-                {{ form_widget(form.roles) }}
+                {% if is_granted('ROLE_ADMIN') %}
+                    {{ form_label(form.roles) }}
+                    {{ form_widget(form.roles) }}
+                {% endif %}
                 {{ form_widget(form.submit) }}
                 {{ form_widget(form.reset) }}
                 <a href="{{ url('impostazioni_utenti_reset_password', {'id': user.id}) }}" class="btn bt-danger mt-3">Reset Password</a>

@@ -32,7 +32,7 @@
                     </span>
                 {% else %}
                     <span class="badge badge-primary">
-                        {{ role|trim('ROLE_') }}
+                        {{ role|replace({'ROLE_':''}) }}
                     </span>
                 {% endif %}
             {% endfor %}
