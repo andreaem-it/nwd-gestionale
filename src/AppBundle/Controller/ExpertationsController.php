@@ -29,7 +29,12 @@ class ExpertationsController extends Controller
     public function expertationsListAction(Request $request)
     {
 
-        $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
+        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findAll();
+        } else {
+            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
+        }
+
 
         return $this->render('expertations/list.html.twig', [
             'expertations' => $expertations,

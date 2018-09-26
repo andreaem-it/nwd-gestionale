@@ -4,7 +4,7 @@ security:
         db_provider:
             entity:
                 class: AppBundle:Users
-                property: username
+                property: email
         fos_userbundle:
             id: fos_user.user_provider.username
 
@@ -20,6 +20,7 @@ security:
 
         main:
             anonymous: ~
+            switch_user: true
             form_login:
                 login_path: login
                 check_path: login
@@ -48,3 +49,6 @@ security:
         ROLE_AGENT:     [ROLE_IMMOBILIARE, ROLE_GENERAL_CONTRACTOR, ROLE_PROGETTISTA, ROLE_IMPRESA_EDILE,ROLE_SEGNALATORE, ROLE_LEVEL_3]
         ROLE_ADMIN:     [ROLE_IMMOBILIARE, ROLE_GENERAL_CONTRACTOR, ROLE_PROGETTISTA, ROLE_IMPRESA_EDILE,ROLE_SEGNALATORE ROLE_LEVEL_2]
         ROLE_SUPER_ADMIN:       [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH, ROLE_LEVEL_1]
+
+    acl:
+        connection: default

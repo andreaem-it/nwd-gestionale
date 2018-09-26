@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Profile:show.html.twig */
+/* @FOSUser/Profile/show.html.twig */
 class __TwigTemplate_b92ad6f5e9ad69fa51d56187e164fdce5b16bc2c40da1822aa2f5a92109271ca extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_b92ad6f5e9ad69fa51d56187e164fdce5b16bc2c40da1822aa2f5a92109
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "FOSUserBundle:Profile:show.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "@FOSUser/Profile/show.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
@@ -27,10 +27,10 @@ class __TwigTemplate_b92ad6f5e9ad69fa51d56187e164fdce5b16bc2c40da1822aa2f5a92109
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -110,7 +110,7 @@ class __TwigTemplate_b92ad6f5e9ad69fa51d56187e164fdce5b16bc2c40da1822aa2f5a92109
 
         // line 20
         echo "                                        ";
-        $this->loadTemplate("@FOSUser/Profile/show_content.html.twig", "FOSUserBundle:Profile:show.html.twig", 20)->display($context);
+        $this->loadTemplate("@FOSUser/Profile/show_content.html.twig", "@FOSUser/Profile/show.html.twig", 20)->display($context);
         // line 21
         echo "                                    ";
         
@@ -123,7 +123,7 @@ class __TwigTemplate_b92ad6f5e9ad69fa51d56187e164fdce5b16bc2c40da1822aa2f5a92109
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Profile:show.html.twig";
+        return "@FOSUser/Profile/show.html.twig";
     }
 
     public function isTraitable()
@@ -172,6 +172,6 @@ class __TwigTemplate_b92ad6f5e9ad69fa51d56187e164fdce5b16bc2c40da1822aa2f5a92109
             </div>
         </div>
     </div>
-{% endblock %}", "FOSUserBundle:Profile:show.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig");
+{% endblock %}", "@FOSUser/Profile/show.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle/Resources/views/Profile/show.html.twig");
     }
 }

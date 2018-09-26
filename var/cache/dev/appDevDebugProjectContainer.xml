@@ -201,6 +201,11 @@
     <parameter key="security.authentication.session_strategy.strategy">migrate</parameter>
     <parameter key="security.access.always_authenticate_before_granting">false</parameter>
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
+    <parameter key="security.acl.dbal.class_table_name">acl_classes</parameter>
+    <parameter key="security.acl.dbal.entry_table_name">acl_entries</parameter>
+    <parameter key="security.acl.dbal.oid_table_name">acl_object_identities</parameter>
+    <parameter key="security.acl.dbal.oid_ancestors_table_name">acl_object_identity_ancestors</parameter>
+    <parameter key="security.acl.dbal.sid_table_name">acl_security_identities</parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
@@ -516,6 +521,8 @@
       <parameter key="console.command.symfony_bundle_frameworkbundle_command_xlifflintcommand">console.command.xliff_lint</parameter>
       <parameter key="console.command.symfony_bundle_frameworkbundle_command_yamllintcommand">console.command.yaml_lint</parameter>
       <parameter key="console.command.symfony_component_form_command_debugcommand">console.command.form_debug</parameter>
+      <parameter key="console.command.symfony_bundle_securitybundle_command_initaclcommand">security.command.init_acl</parameter>
+      <parameter key="console.command.symfony_bundle_securitybundle_command_setaclcommand">security.command.set_acl</parameter>
       <parameter key="console.command.symfony_bundle_securitybundle_command_userpasswordencodercommand">security.command.user_password_encoder</parameter>
       <parameter key="console.command.symfony_bridge_twig_command_debugcommand">twig.command.debug</parameter>
       <parameter key="console.command.symfony_bundle_twigbundle_command_lintcommand">twig.command.lint</parameter>
@@ -575,6 +582,8 @@
       <parameter key="console.command.xliff_lint">true</parameter>
       <parameter key="console.command.yaml_lint">true</parameter>
       <parameter key="console.command.form_debug">true</parameter>
+      <parameter key="security.command.init_acl">true</parameter>
+      <parameter key="security.command.set_acl">true</parameter>
       <parameter key="security.command.user_password_encoder">true</parameter>
       <parameter key="twig.command.debug">true</parameter>
       <parameter key="twig.command.lint">true</parameter>
@@ -2421,6 +2430,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -3414,7 +3431,7 @@
     <service id="security.user.provider.concrete.db_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false">
       <argument type="service" id="doctrine"/>
       <argument>AppBundle:Users</argument>
-      <argument>username</argument>
+      <argument>email</argument>
       <argument>null</argument>
     </service>
     <service id="security.firewall.map.config.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallConfig" public="false">
@@ -3452,10 +3469,15 @@
       <argument>null</argument>
       <argument>null</argument>
       <argument type="collection">
+        <argument>switch_user</argument>
         <argument>form_login</argument>
         <argument>anonymous</argument>
       </argument>
-      <argument>null</argument>
+      <argument type="collection">
+        <argument key="parameter">_switch_user</argument>
+        <argument key="role">ROLE_ALLOWED_TO_SWITCH</argument>
+        <argument key="stateless">false</argument>
+      </argument>
     </service>
     <service id="security.context_listener.0" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3566,6 +3588,18 @@
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
       <argument>%container.build_hash%</argument>
     </service>
+    <service id="security.authentication.switchuser_listener.main" class="Symfony\Component\Security\Http\Firewall\SwitchUserListener" public="false">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="fos_user.user_provider.username"/>
+      <argument type="service" id="security.user_checker"/>
+      <argument>main</argument>
+      <argument type="service" id="debug.security.access.decision_manager"/>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <argument>_switch_user</argument>
+      <argument>ROLE_ALLOWED_TO_SWITCH</argument>
+      <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+      <argument>false</argument>
+    </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.authentication.trust_resolver"/>
@@ -3583,6 +3617,7 @@
         <argument type="service" id="security.context_listener.0"/>
         <argument type="service" id="security.authentication.listener.form.main"/>
         <argument type="service" id="security.authentication.listener.anonymous.main"/>
+        <argument type="service" id="security.authentication.switchuser_listener.main"/>
         <argument type="service" id="security.access_listener"/>
       </argument>
       <argument type="service" id="security.exception_listener.main"/>
@@ -3605,6 +3640,21 @@
     <service id="security.request_matcher.e2vt2gh" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/impostazioni</argument>
     </service>
+    <service id="security.command.init_acl" class="Symfony\Bundle\SecurityBundle\Command\InitAclCommand" public="false">
+      <tag name="console.command" command="init:acl"/>
+      <argument type="service" id="doctrine.dbal.default_connection"/>
+      <argument type="service" id="security.acl.dbal.schema"/>
+      <call method="setName">
+        <argument>init:acl</argument>
+      </call>
+    </service>
+    <service id="security.command.set_acl" class="Symfony\Bundle\SecurityBundle\Command\SetAclCommand" public="false">
+      <tag name="console.command" command="acl:set"/>
+      <argument type="service" id="security.acl.dbal.provider"/>
+      <call method="setName">
+        <argument>acl:set</argument>
+      </call>
+    </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -3615,6 +3665,54 @@
       <call method="setName">
         <argument>security:encode-password</argument>
       </call>
+    </service>
+    <service id="security.acl.object_identity_retrieval_strategy" class="Symfony\Component\Security\Acl\Domain\ObjectIdentityRetrievalStrategy" public="false"/>
+    <service id="security.acl.security_identity_retrieval_strategy" class="Symfony\Component\Security\Acl\Domain\SecurityIdentityRetrievalStrategy" public="false">
+      <argument type="service" id="security.role_hierarchy"/>
+      <argument type="service" id="security.authentication.trust_resolver"/>
+    </service>
+    <service id="security.acl.permission_granting_strategy" class="Symfony\Component\Security\Acl\Domain\PermissionGrantingStrategy" public="false"/>
+    <service id="security.acl.permission.map" class="Symfony\Component\Security\Acl\Permission\BasicPermissionMap" public="false"/>
+    <service id="security.acl.voter.basic_permissions" class="Symfony\Component\Security\Acl\Voter\AclVoter" public="false">
+      <tag name="monolog.logger" channel="security"/>
+      <tag name="security.voter" priority="255"/>
+      <argument type="service" id="security.acl.dbal.provider"/>
+      <argument type="service" id="security.acl.object_identity_retrieval_strategy"/>
+      <argument type="service" id="security.acl.security_identity_retrieval_strategy"/>
+      <argument type="service" id="security.acl.permission.map"/>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <argument>true</argument>
+    </service>
+    <service id="security.acl.dbal.provider" class="Symfony\Component\Security\Acl\Dbal\MutableAclProvider" public="false">
+      <argument type="service" id="doctrine.dbal.default_connection"/>
+      <argument type="service" id="security.acl.permission_granting_strategy"/>
+      <argument type="collection">
+        <argument key="class_table_name">acl_classes</argument>
+        <argument key="entry_table_name">acl_entries</argument>
+        <argument key="oid_table_name">acl_object_identities</argument>
+        <argument key="oid_ancestors_table_name">acl_object_identity_ancestors</argument>
+        <argument key="sid_table_name">acl_security_identities</argument>
+      </argument>
+      <argument>null</argument>
+    </service>
+    <service id="security.acl.dbal.schema" class="Symfony\Component\Security\Acl\Dbal\Schema">
+      <argument type="collection">
+        <argument key="class_table_name">acl_classes</argument>
+        <argument key="entry_table_name">acl_entries</argument>
+        <argument key="oid_table_name">acl_object_identities</argument>
+        <argument key="oid_ancestors_table_name">acl_object_identity_ancestors</argument>
+        <argument key="sid_table_name">acl_security_identities</argument>
+      </argument>
+      <argument type="service" id="doctrine.dbal.default_connection"/>
+    </service>
+    <service id="security.acl.dbal.schema_listener" class="Symfony\Bundle\SecurityBundle\EventListener\AclSchemaListener" public="true">
+      <tag name="doctrine.event_listener" connection="default" event="postGenerateSchema" lazy="1"/>
+      <argument type="service" id="security.acl.dbal.schema"/>
+    </service>
+    <service id="security.acl.cache.doctrine" class="Symfony\Component\Security\Acl\Domain\DoctrineAclCache" public="false">
+      <argument type="service" id="doctrine_cache.providers.doctrine.orm.default_result_cache"/>
+      <argument type="service" id="security.acl.permission_granting_strategy"/>
+      <argument>sf2_acl_</argument>
     </service>
     <service id="twig" class="Twig\Environment" public="true">
       <argument type="service" id="twig.loader.filesystem"/>
@@ -4283,6 +4381,12 @@
       <argument type="service" id="service_container"/>
       <call method="addEventSubscriber">
         <argument type="service" id="fos_user.user_listener"/>
+      </call>
+      <call method="addEventListener">
+        <argument type="collection">
+          <argument>postGenerateSchema</argument>
+        </argument>
+        <argument>security.acl.dbal.schema_listener</argument>
       </call>
       <call method="addEventListener">
         <argument type="collection">
@@ -5285,6 +5389,7 @@
     </service>
     <service id="debug.security.access.decision_manager.inner" class="Symfony\Component\Security\Core\Authorization\AccessDecisionManager" public="false">
       <argument type="iterator">
+        <argument type="service" id="security.acl.voter.basic_permissions"/>
         <argument type="service" id="security.access.authenticated_voter"/>
         <argument type="service" id="security.access.role_hierarchy_voter"/>
         <argument type="service" id="security.access.expression_voter"/>
@@ -5350,7 +5455,7 @@
       </argument>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id="service_locator.kkqqvng"/>
+      <argument type="service" id="service_locator.3wy6vfo"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -5370,6 +5475,8 @@
         <argument key="lint:xliff">console.command.xliff_lint</argument>
         <argument key="lint:yaml">console.command.yaml_lint</argument>
         <argument key="debug:form">console.command.form_debug</argument>
+        <argument key="init:acl">security.command.init_acl</argument>
+        <argument key="acl:set">security.command.set_acl</argument>
         <argument key="security:encode-password">security.command.user_password_encoder</argument>
         <argument key="debug:twig">twig.command.debug</argument>
         <argument key="lint:twig">twig.command.lint</argument>
@@ -5407,7 +5514,7 @@
         <argument key="server:log">web_server.command.server_log</argument>
       </argument>
     </service>
-    <service id="service_locator.kkqqvng" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.3wy6vfo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -5454,6 +5561,8 @@
         <argument key="fos_user.command.deactivate_user" type="service" id="fos_user.command.deactivate_user"/>
         <argument key="fos_user.command.demote_user" type="service" id="fos_user.command.demote_user"/>
         <argument key="fos_user.command.promote_user" type="service" id="fos_user.command.promote_user"/>
+        <argument key="security.command.init_acl" type="service" id="security.command.init_acl"/>
+        <argument key="security.command.set_acl" type="service" id="security.command.set_acl"/>
         <argument key="security.command.user_password_encoder" type="service" id="security.command.user_password_encoder"/>
         <argument key="sensio_distribution.security_checker.command" type="service" id="sensio_distribution.security_checker.command"/>
         <argument key="twig.command.debug" type="service" id="twig.command.debug"/>
@@ -5577,6 +5686,10 @@
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
+    <service id="security.acl.dbal.connection" alias="doctrine.dbal.default_connection"/>
+    <service id="security.acl.provider" alias="security.acl.dbal.provider"/>
+    <service id="Symfony\Component\Security\Acl\Model\AclProviderInterface" alias="security.acl.dbal.provider" public="false"/>
+    <service id="security.acl.cache.doctrine.cache_impl" alias="doctrine_cache.providers.doctrine.orm.default_result_cache" public="false"/>
     <service id="Twig_Environment" alias="twig" public="false"/>
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>

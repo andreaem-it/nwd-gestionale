@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Registration:register.html.twig */
+/* @FOSUser/Registration/register.html.twig */
 class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b3bfc1 extends Twig_Template
 {
     private $source;
@@ -12,7 +12,7 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "FOSUserBundle:Registration:register.html.twig", 1);
+        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Registration/register.html.twig", 1);
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -26,10 +26,10 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -50,7 +50,7 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 4
-        $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "FOSUserBundle:Registration:register.html.twig", 4)->display($context);
+        $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "@FOSUser/Registration/register.html.twig", 4)->display($context);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -61,7 +61,7 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Registration:register.html.twig";
+        return "@FOSUser/Registration/register.html.twig";
     }
 
     public function isTraitable()
@@ -81,6 +81,6 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
 {% block fos_user_content %}
 {% include \"@FOSUser/Registration/register_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "FOSUserBundle:Registration:register.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig");
+", "@FOSUser/Registration/register.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig");
     }
 }

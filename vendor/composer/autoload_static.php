@@ -35,10 +35,12 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Symfony\\Polyfill\\Apcu\\' => 22,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Templating\\' => 29,
+            'Symfony\\Component\\Security\\Acl\\' => 31,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\' => 18,
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
             'Symfony\\Bundle\\MonologBundle\\' => 29,
+            'Symfony\\Bundle\\AclBundle\\' => 25,
             'Symfony\\Bundle\\' => 15,
             'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\ProxyManager\\' => 28,
@@ -132,6 +134,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/..' . '/symfony/templating',
         ),
+        'Symfony\\Component\\Security\\Acl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/security-acl',
+        ),
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
@@ -147,6 +153,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'Symfony\\Bundle\\MonologBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/monolog-bundle',
+        ),
+        'Symfony\\Bundle\\AclBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/acl-bundle/src',
         ),
         'Symfony\\Bundle\\' => 
         array (

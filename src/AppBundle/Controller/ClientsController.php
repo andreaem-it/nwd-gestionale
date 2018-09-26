@@ -20,7 +20,12 @@ class ClientsController extends Controller
      */
     public function ClientsAction(Request $request) {
 
-        $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findAll();
+        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+            $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findAll();
+            dump($clients);
+        } else {
+            $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findBy(['refereer' => $this->getUser()]);
+        }
 
         return $this->render('clients/clients.html.twig',[
             'clients' => $clients
@@ -94,6 +99,8 @@ class ClientsController extends Controller
         if ($form->isValid() && $form->isSubmitted()) {
 
             $client = $form->getData();
+
+            $client->setRefereer($this->getUser()->getId());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($client);

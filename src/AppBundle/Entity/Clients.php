@@ -77,6 +77,13 @@ class Clients
      */
     private $privacyAccepted;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="refereer", type="integer", nullable=true)
+     */
+    private $refereer;
+
 
     /**
      * Get id
@@ -294,5 +301,29 @@ class Clients
 
     public function __toInt() {
         return $this->id;
+    }
+
+    /**
+     * Set refereer.
+     *
+     * @param int $refereer
+     *
+     * @return Clients
+     */
+    public function setRefereer($refereer)
+    {
+        $this->refereer = $refereer;
+
+        return $this;
+    }
+
+    /**
+     * Get refereer.
+     *
+     * @return int
+     */
+    public function getRefereer()
+    {
+        return $this->refereer;
     }
 }
