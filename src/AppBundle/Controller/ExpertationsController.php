@@ -168,7 +168,7 @@ class ExpertationsController extends Controller
                 'placeholder' => '-- Seleziona --',
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('u')
-                        ->where('u.refereer', ':uid')
+                        ->where('u.refereer = :uid')
                         ->setParameter('uid', $this->getUser()->getId())
                         ->orderBy('u.name', 'ASC');
                 },
