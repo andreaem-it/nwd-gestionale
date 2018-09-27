@@ -31,86 +31,95 @@
               </small>
               <span class="status-indicator online"></span>
             </div>
+              <div class="row d-none d-md-block d-lg-none mt-2 ml-1 text-small">
+                  <a href="{{ url('fos_user_profile_show') }}">Profilo</a> &nbsp; <a href="{{ url('logout') }}">Logout</a>
+              </div>
           </div>
+
         </div>
         <a href="{{ url('nuovo_preventivo') }}" class="btn btn-success btn-block">Nuovo Preventivo
           <i class="mdi mdi-plus"></i>
         </a>
       </div>
     </li>
-    <li class="nav-item">
+    <li class="nav-item {% if app.request.attributes.get('_route') == 'dashboard'%}active{% endif %}">
       <a class="nav-link" href="{{ url('dashboard') }}">
         <i class="menu-icon mdi mdi-television"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="{% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'lista_preventivi' %}true{% else %}false{% endif %}" aria-controls="ui-basic">
         <i class="menu-icon mdi mdi-chart-line"></i>
         <span class="menu-title">Preventivi</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="ui-basic">
+      <div class="collapse {% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'lista_preventivi' %}show{% endif %}" id="ui-basic">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('nuovo_preventivo') }}">Nuovo</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}" href="{{ url('nuovo_preventivo') }}">Nuovo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('lista_preventivi') }}">Lista</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}" href="{{ url('lista_preventivi') }}">Lista</a>
           </li>
         </ul>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#nav-clienti" aria-expanded="false" aria-controls="nav-clienti" >
+      <a class="nav-link" data-toggle="collapse" href="#nav-clienti" aria-expanded="{% if app.request.attributes.get('_route') == 'nuovo_cliente' or app.request.attributes.get('_route') == 'clienti' %}true{% else %}false{% endif %}false" aria-controls="nav-clienti" >
         <i class="menu-icon mdi mdi-human-male"></i>
         <span class="menu-title">Clienti</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="nav-clienti">
+      <div class="collapse {% if app.request.attributes.get('_route') == 'nuovo_cliente' or app.request.attributes.get('_route') == 'clienti' %}show{% endif %}" id="nav-clienti">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('nuovo_cliente') }}">Nuovo</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_cliente'%}active{% endif %}" href="{{ url('nuovo_cliente') }}">Nuovo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('clienti') }}">Lista</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'clienti' %}active{% endif %}" href="{{ url('clienti') }}">Lista</a>
           </li>
         </ul>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#nav-prezzi" aria-expanded="false" aria-controls="nav-clienti" >
+      <a class="nav-link" data-toggle="collapse" href="#nav-prezzi" aria-expanded="{% if app.request.attributes.get('_route') == 'prezzi_listino' %}true{% else %}false{% endif %}" aria-controls="nav-clienti" >
         <i class="menu-icon mdi mdi-currency-eur"></i>
         <span class="menu-title">Prezzi</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="nav-prezzi">
+      <div class="collapse {% if app.request.attributes.get('_route') == 'prezzi_listino'%}show{% endif %}" id="nav-prezzi">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ path('prezzi_listino') }}">Listino</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}" href="{{ path('prezzi_listino') }}">Listino</a>
           </li>
         </ul>
       </div>
     </li>
+      {% if is_granted('ROLE_ADMIN') %}
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#nav-settings" aria-expanded="false" aria-controls="nav-settings">
+      <a class="nav-link" data-toggle="collapse" href="#nav-settings" aria-expanded="{% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' %}true{% else %}false{% endif %}" aria-controls="nav-settings">
         <i class="menu-icon mdi mdi-backup-restore"></i>
         <span class="menu-title">Impostazioni</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" id="nav-settings">
+      <div class="collapse {% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' %}show{% endif %}" id="nav-settings">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('impostazioni_generali') }}">Generali</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_generali' %}active{% endif %}" href="{{ url('impostazioni_generali') }}">Generali</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('impostazioni_utenti') }}">Utenti</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_utenti' %}active{% endif %}" href="{{ url('impostazioni_utenti') }}">Utenti</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('impostazioni_gruppi') }}">Gruppi</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_gruppi' %}active{% endif %}" href="{{ url('impostazioni_gruppi') }}">Gruppi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_annunci' %}active{% endif %}" href="{{ url('impostazioni_annunci') }}">Annunci</a>
           </li>
         </ul>
       </div>
     </li>
+    {% endif %}
   </ul>
 </nav>

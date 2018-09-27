@@ -480,6 +480,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
+            // impostazioni_annunci
+            if ('/impostazioni/annunci' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::announcementsAction',  '_route' => 'impostazioni_annunci',);
+            }
+
         }
 
         elseif (0 === strpos($pathinfo, '/registra')) {

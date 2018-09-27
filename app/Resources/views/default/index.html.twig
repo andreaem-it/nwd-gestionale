@@ -77,11 +77,76 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-
+            <div class="col-lg-6 mt-4">
+                <div class="card card-revenue" id="widget-3">
+                    <div class="card-body pb-0" style="min-height: 150px">
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Annunci</h3>
+                                <p><small>{{ announcements.0.datetime|date("d-m-Y") }}</small> - {{ announcements.0.message }}</p>
+                            </div>
+                            <div class="col-2">
+                                <i class="mdi mdi-exclamation text-white" style="font-size: 3em"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-3">
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card card-body">
+                    <div class="card-title">
+                        <h4>Ultimi preventivi generati da {{ app.user.username }}</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Data
+                                </th>
+                                <th>
+                                    Cliente
+                                </th>
+                                <th>
+                                    Prezzo
+                                </th>
+                                <th>
+                                    Scadenza
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in expertations %}
+                                <tr>
+                                    <td>
+                                        {{ item.id }}
+                                    </td>
+                                    <td class="py-1">
+                                        {{ item.date|date("d-m-Y") }}
+                                    </td>
+                                    <td>
+                                        <a href="{{ url('vedi_clienti', { id : item.client}) }}">
+                                            {{ functions.uidToName(item.client) }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{ item.price }} €
+                                    </td>
+                                    <td>
+                                        {{ item.expiration|date("d-m-Y") }}
+                                    </td>
+                                </tr>
+                            {% endfor %}
 
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -94,6 +159,9 @@
         });
         $('#widget-2').hover( function() {
             zoom('#widget-2');
+        });
+        $('#widget-3').hover( function() {
+            zoom('#widget-3');
         });
 
         function zoom(item) {

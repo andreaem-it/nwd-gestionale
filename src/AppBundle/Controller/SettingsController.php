@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Announcements;
 use AppBundle\Entity\Groups;
 use AppBundle\Entity\Users;
 use Doctrine\DBAL\Types\IntegerType;
@@ -34,6 +35,8 @@ class SettingsController extends Controller
      * @Route("impostazioni/utenti/", name="impostazioni_utenti")
      */
     public function SettingsUsersAction(Request $request) {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         return $this->render('settings/users.html.twig', [
         ]);
     }
@@ -42,6 +45,8 @@ class SettingsController extends Controller
      * @Route("impostazioni/utenti/nuovo", name="impostazioni_utenti_aggiungi")
      */
     public function AjaxSUAAction(Request $request, UserPasswordEncoderInterface $encoder, \Swift_Mailer $mailer) {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         $user = new Users();
         $user->setLastLogin(new \DateTime("now"));
         $user->setConfirmationToken('NWD-' . rand('1000000000','9999999999'));
@@ -118,6 +123,9 @@ class SettingsController extends Controller
      */
     public function SettingsUserEditAction($id, Request $request, UserPasswordEncoderInterface $encoder, AuthorizationCheckerInterface $authChecker) {
 
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
+
         $user = $this->getDoctrine()->getRepository(Users::class)->find($id);
 
         if ($authChecker->isGranted('ROLE_ADMIN') === true) {
@@ -169,6 +177,9 @@ class SettingsController extends Controller
      * @Route("impostazioni/gruppi/", name="impostazioni_gruppi")
      */
     public function settingsGroupsAction(Request $request) {
+
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         return $this->render('settings/groups.html.twig', [
         ]);
     }
@@ -177,6 +188,9 @@ class SettingsController extends Controller
      * @Route("impostazioni/gruppi/nuovo", name="impostazioni_gruppi_nuovo")
      */
     public function settingsGroupAddAction(Request $request) {
+
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         //$group = new Groups();
 
         /*$form = $this->createFormBuilder($group)
@@ -256,6 +270,9 @@ class SettingsController extends Controller
      */
     public function settingsUserPasswordResetAction($id, \Swift_Mailer $mailer) {
 
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
+
         $repo = $this->getDoctrine()->getRepository(Users::class)->find($id);
 
         $repo->setPassword('');
@@ -289,6 +306,9 @@ class SettingsController extends Controller
      * @Route("impostazioni/utenti/reset-password-link/{token}", name="reset-password-link")
      */
     public function resetPassLinkTokenAction($token, \Swift_Mailer $mailer) {
+
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
 
         $user = $this->getDoctrine()->getRepository(Users::class)->findBy(['confirmationToken' => $token]);
 
@@ -336,9 +356,21 @@ class SettingsController extends Controller
     }
 
     /**
+     * @Route("impostazioni/annunci", name="impostazioni_annunci")
+     */
+    public function announcementsAction() {
+        return $this->render('settings/announcements.html.twig',[
+            'announcements' => $this->getDoctrine()->getRepository(Announcements::class)->findAll()
+        ]);
+    }
+
+    /**
      * @Route("ajax/settings/users/list", name="ajax_settings_users_list")
      */
     public function AjaxSULAction() {
+
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         $usersList = $this->getDoctrine()->getRepository('AppBundle:Users')->findAll();
 
         return $this->render('settings/ajax/users.list.html.twig', [
@@ -350,6 +382,9 @@ class SettingsController extends Controller
      * @Route("ajax/settings/groups/list", name="ajax_settings_groups_list")
      */
     public function AjaxSGLAction() {
+
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
+
         $groupsList = $this->getDoctrine()->getRepository(Groups::class)->findAll();
 
         return $this->render('settings/ajax/groups.list.html.twig', [
