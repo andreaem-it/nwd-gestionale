@@ -133,7 +133,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         <th>
                                             Scadenza
                                         </th>
-                                        <th></th>
+                                        <th style=\"width:200px\"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -268,7 +268,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "expiration", array()), "d-m-Y"), "html", null, true);
             echo "
                                 </td>
-                                <td style=\"width: 255px;\">
+                                <td style=\"max-width: 200px;\">
                                     <div class=\"btn-group\">
                                         <a href=\"";
             // line 113
@@ -373,7 +373,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                         <th>
                                             Scadenza
                                         </th>
-                                        <th></th>
+                                        <th style=\"width:200px\"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -440,7 +440,7 @@ class __TwigTemplate_838c6096cc69fac9c2fef743669b5324378f4c9ff098b999e8d408fbdd6
                                 <td>
                                     {{ item.expiration|date(\"d-m-Y\") }}
                                 </td>
-                                <td style=\"width: 255px;\">
+                                <td style=\"max-width: 200px;\">
                                     <div class=\"btn-group\">
                                         <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
                                             <span class=\"mdi mdi-eye-outline\"></span>

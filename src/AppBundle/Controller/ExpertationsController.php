@@ -168,6 +168,8 @@ class ExpertationsController extends Controller
                 'placeholder' => '-- Seleziona --',
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('u')
+                        ->where('u.refereer', ':uid')
+                        ->setParameter('uid', $this->getUser()->getId())
                         ->orderBy('u.name', 'ASC');
                 },
                 'choice_label' => 'name',
@@ -354,7 +356,10 @@ class ExpertationsController extends Controller
                     'Punto Comando' => 'Punto Comando',
                     'Tirante' => 'Tirante',
                 ],
-                'attr' => ['class' => 'form-control'] ,
+                'attr' => [
+                    'class' => 'form-control',
+                    'required' => false
+                ] ,
                 'label' => false
             ])
             ->add('c2n',ChoiceType::class, [
@@ -363,7 +368,10 @@ class ExpertationsController extends Controller
                     'Punto Comando' => 'Punto Comando',
                     'Tirante' => 'Tirante',
                 ],
-                'attr' => ['class' => 'form-control'] ,
+                'attr' => [
+                    'class' => 'form-control',
+                    'required' => false
+                ] ,
                 'label' => false
             ])
             ->add('c3n',TextType::class, [

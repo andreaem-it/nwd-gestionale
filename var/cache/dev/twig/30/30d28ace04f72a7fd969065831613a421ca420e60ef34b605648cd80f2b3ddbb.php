@@ -40,7 +40,7 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
 
     }
 
-    // line 3
+    // line 2
     public function block_fos_user_content($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -49,8 +49,27 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 4
-        $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "@FOSUser/Registration/register.html.twig", 4)->display($context);
+        // line 3
+        echo "
+<div class=\"row top-title\">
+    <div class=\"col-sm-12\">
+        <h3>Impostazioni <small> Nuovo Utente</small></h3>
+    </div>
+</div>
+<div class=\"row\">
+    <div class=\"col-lg-3 mt-4\">
+        <div class=\"card\">
+            <div class=\"card-body pb-0\">
+                ";
+        // line 13
+        $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "@FOSUser/Registration/register.html.twig", 13)->display($context);
+        // line 14
+        echo "            </div>
+        </div>
+    </div>
+</div>
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -71,16 +90,29 @@ class __TwigTemplate_084ceb9801719f2bd50debdb9c2cd935cee577d14cf9ecc93cf0af06b5b
 
     public function getDebugInfo()
     {
-        return array (  53 => 4,  44 => 3,  15 => 1,);
+        return array (  67 => 14,  65 => 13,  53 => 3,  44 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("{% extends \"@FOSUser/layout.html.twig\" %}
-
 {% block fos_user_content %}
-{% include \"@FOSUser/Registration/register_content.html.twig\" %}
-{% endblock fos_user_content %}
-", "@FOSUser/Registration/register.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig");
+
+<div class=\"row top-title\">
+    <div class=\"col-sm-12\">
+        <h3>Impostazioni <small> Nuovo Utente</small></h3>
+    </div>
+</div>
+<div class=\"row\">
+    <div class=\"col-lg-3 mt-4\">
+        <div class=\"card\">
+            <div class=\"card-body pb-0\">
+                {% include \"@FOSUser/Registration/register_content.html.twig\" %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock fos_user_content %}", "@FOSUser/Registration/register.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig");
     }
 }

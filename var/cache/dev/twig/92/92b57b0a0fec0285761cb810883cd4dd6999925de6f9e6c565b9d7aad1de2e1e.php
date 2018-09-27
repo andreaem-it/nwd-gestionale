@@ -53,26 +53,32 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
         echo "    <div class=\"main-panel\">
         <div class=\"content-wrapper\">
             <div class=\"row\">
-                <div class=\"col-12\">
+                <div class=\"col-11\">
                     <h3>Clienti <small>Lista</small></h3>
+                </div>
+                <div class=\"col-1\">
+                    <a href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_cliente");
+        echo "\" class=\"btn btn-success mb-2 px-2 float-right\">Aggiungi Cliente</a>
                 </div>
             </div>
             ";
-        // line 10
+        // line 13
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 10, $this->source); })()), "flashes", array()));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 13, $this->source); })()), "flashes", array()));
         foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
-            // line 11
+            // line 14
             echo "                ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 12
+                // line 15
                 echo "                    <div class=\"alert alert-";
                 echo twig_escape_filter($this->env, $context["label"], "html", null, true);
                 echo "\">
                         ";
-                // line 13
+                // line 16
                 echo twig_escape_filter($this->env, $context["message"], "html", null, true);
                 echo "
                     </div>
@@ -81,13 +87,13 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 16
+            // line 19
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 20
         echo "            <div class=\"row\">
                 <div class=\"col-lg-12 grid-margin stretch-card\">
                     <div class=\"card\">
@@ -119,33 +125,33 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                     </thead>
                                     <tbody>
                                     ";
-        // line 47
+        // line 50
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new Twig_Error_Runtime('Variable "clients" does not exist.', 47, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new Twig_Error_Runtime('Variable "clients" does not exist.', 50, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 48
+            // line 51
             echo "                                        <tr>
                                             <td class=\"py-1\">
                                                 ";
-            // line 50
+            // line 53
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "html", null, true);
             echo "
                                             </td>
                                             <td>
                                                 ";
-            // line 53
+            // line 56
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", array()), "html", null, true);
             echo "
                                             </td>
                                             <td>
                                                 ";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["func"]) || array_key_exists("func", $context) ? $context["func"] : (function () { throw new Twig_Error_Runtime('Variable "func" does not exist.', 56, $this->source); })()), "convertUName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "refereer", array())), "method"), "html", null, true);
+            // line 59
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["func"]) || array_key_exists("func", $context) ? $context["func"] : (function () { throw new Twig_Error_Runtime('Variable "func" does not exist.', 59, $this->source); })()), "convertUName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "refereer", array())), "method"), "html", null, true);
             echo "
                                             </td>
                                             <td>
                                                 ";
-            // line 59
+            // line 62
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "address", array()), "html", null, true);
             echo ", ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "postalCode", array()), "html", null, true);
@@ -156,32 +162,36 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
             echo ")
                                             </td>
                                             <td>
-                                                ";
-            // line 62
+                                                <a href=\"tel:";
+            // line 65
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "phone", array()), "html", null, true);
-            echo "
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "phone", array()), "html", null, true);
+            echo "</a>
                                             </td>
                                             <td>
-                                                ";
-            // line 65
+                                                <a href=\"mailto:";
+            // line 68
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "email", array()), "html", null, true);
-            echo "
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "email", array()), "html", null, true);
+            echo "</a>
                                             </td>
                                             <td style=\"width: 255px;\">
                                                 <a href=\"";
-            // line 68
+            // line 71
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("elimina_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                                 <a href=\"";
-            // line 71
+            // line 74
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("modifica_cliente", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-warning btn-sm float-right mr-1\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
                                                 <a href=\"";
-            // line 74
+            // line 77
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => 1));
             echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
@@ -193,7 +203,7 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 80
+        // line 83
         echo "                                    </tbody>
                                 </table>
                             </div>
@@ -224,7 +234,7 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
 
     public function getDebugInfo()
     {
-        return array (  197 => 80,  185 => 74,  179 => 71,  173 => 68,  167 => 65,  161 => 62,  149 => 59,  143 => 56,  137 => 53,  131 => 50,  127 => 48,  123 => 47,  91 => 17,  85 => 16,  76 => 13,  71 => 12,  66 => 11,  62 => 10,  53 => 3,  44 => 2,  15 => 1,);
+        return array (  207 => 83,  195 => 77,  189 => 74,  183 => 71,  175 => 68,  167 => 65,  155 => 62,  149 => 59,  143 => 56,  137 => 53,  133 => 51,  129 => 50,  97 => 20,  91 => 19,  82 => 16,  77 => 15,  72 => 14,  68 => 13,  62 => 10,  53 => 3,  44 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -234,8 +244,11 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
     <div class=\"main-panel\">
         <div class=\"content-wrapper\">
             <div class=\"row\">
-                <div class=\"col-12\">
+                <div class=\"col-11\">
                     <h3>Clienti <small>Lista</small></h3>
+                </div>
+                <div class=\"col-1\">
+                    <a href=\"{{ url('nuovo_cliente') }}\" class=\"btn btn-success mb-2 px-2 float-right\">Aggiungi Cliente</a>
                 </div>
             </div>
             {% for label, messages in app.flashes %}
@@ -290,10 +303,10 @@ class __TwigTemplate_a0af6211db4c019bc7d2588a96a6d23f55561963970581a534d1086bc90
                                                 {{ item.address }}, {{ item.postalCode }}, {{ item.city }} ({{ item.province }})
                                             </td>
                                             <td>
-                                                {{ item.phone }}
+                                                <a href=\"tel:{{ item.phone }}\">{{ item.phone }}</a>
                                             </td>
                                             <td>
-                                                {{ item.email }}
+                                                <a href=\"mailto:{{ item.email }}\">{{ item.email }}</a>
                                             </td>
                                             <td style=\"width: 255px;\">
                                                 <a href=\"{{ url('elimina_clienti', { 'id' : item.id }) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">

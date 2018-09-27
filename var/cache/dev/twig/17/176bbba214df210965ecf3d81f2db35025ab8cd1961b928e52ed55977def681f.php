@@ -395,7 +395,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                             <tbody id=\"email-fields-list\" data-prototype='
                                 </tr>
                                 <td style=\"max-width:20px\">
-                                        <button type=\"button\" class=\"remove-collection-widget btn btn-outline-danger\"><i class=\"fa fa-trash\"></i></button>
+                                        <button type=\"button\" class=\"remove-collection-widget btn  px-1 pl-2\" style=\"left: -10px; position: relative;\"><i class=\"fa fa-minus-square \"></i></button>
                                     </td>
                                     <td>
                                         ";
@@ -937,7 +937,7 @@ class __TwigTemplate_005dec11b5cbeb407fa2d32a096682da5dc4590fbad9cf9ed088eaec708
                             <tbody id=\"email-fields-list\" data-prototype='
                                 </tr>
                                 <td style=\"max-width:20px\">
-                                        <button type=\"button\" class=\"remove-collection-widget btn btn-outline-danger\"><i class=\"fa fa-trash\"></i></button>
+                                        <button type=\"button\" class=\"remove-collection-widget btn  px-1 pl-2\" style=\"left: -10px; position: relative;\"><i class=\"fa fa-minus-square \"></i></button>
                                     </td>
                                     <td>
                                         {{ form_widget(form.floor.vars.prototype)|e }}
