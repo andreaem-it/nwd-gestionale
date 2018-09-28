@@ -37,6 +37,11 @@ class Users extends BaseUser
     private $father;
 
     /**
+     * @ORM\Column(name="picture", type="string", nullable=true)
+     */
+    private $picture;
+
+    /**
      * Get id
      *
      * @return int
@@ -69,5 +74,29 @@ class Users extends BaseUser
     public function getFather()
     {
         return $this->father;
+    }
+
+    /**
+     * Set picture.
+     *
+     * @param string|null $picture
+     *
+     * @return Users
+     */
+    public function setPicture($picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture.
+     *
+     * @return string|null
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }

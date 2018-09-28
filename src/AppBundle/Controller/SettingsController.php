@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Announcements;
 use AppBundle\Entity\Groups;
+use AppBundle\Entity\Heatings;
 use AppBundle\Entity\Users;
 use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -11,6 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\ResetType;
@@ -21,6 +23,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use AppBundle\Service\FileUploader;
 
 class SettingsController extends Controller
 {
@@ -123,7 +126,7 @@ class SettingsController extends Controller
     /**
      * @Route("impostazioni/utenti/modifica/{id}", name="impostazioni_utenti_modifica")
      */
-    public function SettingsUserEditAction($id, Request $request, UserPasswordEncoderInterface $encoder, AuthorizationCheckerInterface $authChecker) {
+    public function SettingsUserEditAction($id, Request $request, UserPasswordEncoderInterface $encoder, AuthorizationCheckerInterface $authChecker, FileUploader $fileUploader) {
 
         $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', 'Permessi', 'Spiacente, non hai il permesso per accedere a questa funzionalità!');
 
@@ -150,6 +153,11 @@ class SettingsController extends Controller
                         'multiple' => true,
                         'attr' => ['class' => 'form-control']
                     ], ['label' => 'Ruoli', 'attr' => ['class' => 'form-control mr-3']])
+                ->add('picture', FileType::class, [
+                    'attr' => ['form-control mt-3'],
+                    'label' => 'Immagine Profilo',
+                    'data_class' => null
+                ])
                 ->add('submit', SubmitType::class,['label' => 'Modifica', 'attr' => ['class' => 'btn btn-success mt-3']])
                 ->add('reset', ResetType::class, ['label' => 'Reset', 'attr' => ['class' => 'btn btn-warning mt-3']])
                 ->getForm();
@@ -165,6 +173,10 @@ class SettingsController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $user->getPicture();
+            $fileName = $fileUploader->upload($file);
+
+            $user->setPicture($fileName);
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('impostazioni_utenti');
         }
@@ -402,6 +414,43 @@ class SettingsController extends Controller
             'announcements' => $this->getDoctrine()->getRepository(Announcements::class)->findAll(),
             'form' => $form->createView()
 
+        ]);
+    }
+
+    /**
+     * @Route("impostazioni/parametri", name="settings_parameters")
+     */
+    public function settingsParametersAction(Request $request) {
+
+        /**
+         * Heating
+         */
+        $heating = new Heatings();
+        $heatingForm = $this->createFormBuilder($heating)
+            ->add('name', TextType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Nome'
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-success mt-3'],
+                'label' => 'Aggiungi'
+            ])
+            ->getForm();
+
+        $heatingForm->handleRequest($request);
+
+        if($heatingForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($heatingForm->getData());
+            $em->flush();
+        }
+        /**
+         * END Heating
+         */
+
+        return $this->render('settings/parameters.html.twig', [
+            'heating' => $this->getDoctrine()->getRepository(Heatings::class)->findAll(),
+            'heatingForm' =>$heatingForm->createView()
         ]);
     }
 

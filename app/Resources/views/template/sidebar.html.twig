@@ -98,15 +98,18 @@
     </li>
       {% if is_granted('ROLE_ADMIN') %}
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#nav-settings" aria-expanded="{% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' %}true{% else %}false{% endif %}" aria-controls="nav-settings">
+      <a class="nav-link" data-toggle="collapse" href="#nav-settings" aria-expanded="{% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' or app.request.attributes.get('_route') == 'settings_parameters' %}true{% else %}false{% endif %}" aria-controls="nav-settings">
         <i class="menu-icon mdi mdi-backup-restore"></i>
         <span class="menu-title">Impostazioni</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse {% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' %}show{% endif %}" id="nav-settings">
+      <div class="collapse {% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' or app.request.attributes.get('_route') == 'settings_parameters' %}show{% endif %}" id="nav-settings">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
             <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_generali' %}active{% endif %}" href="{{ url('impostazioni_generali') }}">Generali</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'settings_parameters' %}active{% endif %}" href="{{ url('settings_parameters') }}">Parametri</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_utenti' %}active{% endif %}" href="{{ url('impostazioni_utenti') }}">Utenti</a>

@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
+use AppBundle\Entity\Heatings;
 use AppBundle\Entity\Users;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -584,29 +585,7 @@ class ExpertationsController extends Controller
     }
 
     public function heatingIntToName($int) {
-        switch ($int) {
-            case 1 :
-                return 'Pavimento';
-                break;
-            case 2 :
-                return 'Radiatori';
-                break;
-            case 3 :
-                return 'Fancoil';
-                break;
-            case 4 :
-                return 'Canalizzato';
-                break;
-            case 5 :
-                return 'Split';
-                break;
-            case 6 :
-                return 'Altro';
-                break;
-            default:
-                return 'N.D.';
-                break;
-        }
+        return $this->getDoctrine()->getRepository(Heatings::class)->find($int);
 
     }
 

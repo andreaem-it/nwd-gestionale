@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+{% block title %}Impostazioni{% endblock %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-9">
+                    <h3>Impostazioni <small>Parametri</small></h3>
+                </div>
+                <div class="col-3">
+
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <ul class="nav nav-pills nav-fill" id="myTab">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Sistemi di Riscaldamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                Sistemi di Riscaldamento
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Nome</th>
+                                                        <th style="max-width: 80px"></th>
+                                                    </tr>
+                                                    {% for item in heating %}
+                                                        <tr>
+                                                            <td>{{ item.id }}</td>
+                                                            <td>{{ item.name }}</td>
+                                                            <td class="float-right">
+                                                                <div class="btn-group">
+                                                                    <a href="" class="btn btn-warning btn-sm float-right mr-0">
+                                                                        <span class="mdi mdi-table-edit"></span>
+                                                                    </a>
+                                                                    <a href="" class="btn btn-danger btn-sm float-right mr-0">
+                                                                        <span class="mdi mdi-delete"></span>
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                Aggiungi Nuovo
+                                            </div>
+                                            {{ form_start(heatingForm) }}
+                                            {{ form_label(heatingForm.name) }}
+                                            {{ form_widget(heatingForm.name) }}
+                                            {{ form_end(heatingForm) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">...</div>
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">...</div>
+                        <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">...</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/bootbox.min.js') }}"></script>
+    <script>
+        $('#myTab a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+{% endblock %}

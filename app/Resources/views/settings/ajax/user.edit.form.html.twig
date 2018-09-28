@@ -20,6 +20,9 @@
                     {{ form_label(form.roles) }}
                     {{ form_widget(form.roles) }}
                 {% endif %}
+                {{ form_label(form.picture) }}
+                {{ form_widget(form.picture) }}
+                <br>
                 {{ form_widget(form.submit) }}
                 {{ form_widget(form.reset) }}
                 <a href="{{ url('impostazioni_utenti_reset_password', {'id': user.id}) }}" class="btn bt-danger mt-3">Reset Password</a>

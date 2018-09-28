@@ -485,6 +485,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::announcementsAction',  '_route' => 'impostazioni_annunci',);
             }
 
+            // settings_parameters
+            if ('/impostazioni/parametri' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::settingsParametersAction',  '_route' => 'settings_parameters',);
+            }
+
         }
 
         elseif (0 === strpos($pathinfo, '/registra')) {

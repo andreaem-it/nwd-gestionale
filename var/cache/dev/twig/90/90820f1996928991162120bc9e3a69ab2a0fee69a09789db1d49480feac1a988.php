@@ -114,19 +114,28 @@ class __TwigTemplate_7c4991b8273fc8125a1d6c8698630909f361d9af90e23289eafdbb9a7b8
         }
         // line 23
         echo "                ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 23, $this->source); })()), "submit", array()), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 23, $this->source); })()), "picture", array()), 'label');
         echo "
                 ";
         // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 24, $this->source); })()), "reset", array()), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 24, $this->source); })()), "picture", array()), 'widget');
         echo "
-                <a href=\"";
-        // line 25
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti_reset_password", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 25, $this->source); })()), "id", array()))), "html", null, true);
-        echo "\" class=\"btn bt-danger mt-3\">Reset Password</a>
+                <br>
                 ";
         // line 26
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 26, $this->source); })()), 'form_end');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 26, $this->source); })()), "submit", array()), 'widget');
+        echo "
+                ";
+        // line 27
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 27, $this->source); })()), "reset", array()), 'widget');
+        echo "
+                <a href=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti_reset_password", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new Twig_Error_Runtime('Variable "user" does not exist.', 28, $this->source); })()), "id", array()))), "html", null, true);
+        echo "\" class=\"btn bt-danger mt-3\">Reset Password</a>
+                ";
+        // line 29
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 29, $this->source); })()), 'form_end');
         echo "
             </div>
         </div>
@@ -153,7 +162,7 @@ class __TwigTemplate_7c4991b8273fc8125a1d6c8698630909f361d9af90e23289eafdbb9a7b8
 
     public function getDebugInfo()
     {
-        return array (  129 => 26,  125 => 25,  121 => 24,  116 => 23,  111 => 21,  106 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  138 => 29,  134 => 28,  130 => 27,  126 => 26,  121 => 24,  116 => 23,  111 => 21,  106 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -180,6 +189,9 @@ class __TwigTemplate_7c4991b8273fc8125a1d6c8698630909f361d9af90e23289eafdbb9a7b8
                     {{ form_label(form.roles) }}
                     {{ form_widget(form.roles) }}
                 {% endif %}
+                {{ form_label(form.picture) }}
+                {{ form_widget(form.picture) }}
+                <br>
                 {{ form_widget(form.submit) }}
                 {{ form_widget(form.reset) }}
                 <a href=\"{{ url('impostazioni_utenti_reset_password', {'id': user.id}) }}\" class=\"btn bt-danger mt-3\">Reset Password</a>
