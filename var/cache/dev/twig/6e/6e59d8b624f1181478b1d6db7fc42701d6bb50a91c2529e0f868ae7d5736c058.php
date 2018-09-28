@@ -32,10 +32,10 @@ class __TwigTemplate_056239aeffae94df390ff198afadf45ca02909cb06e8baa5aef834b8b2e
             // line 2
             echo "    <tr>
         <td class=\"py-1\" class=\"text-center\">
-            ";
+            <img class=\"mg-xs rounded-circle\" src=\"";
             // line 4
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
-            echo "
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("users/" . twig_get_attribute($this->env, $this->source, $context["user"], "picture", array()))), "html", null, true);
+            echo "\" alt=\"image\" style=\"width: 50px; height: 50px  \">
         </td>
         <td class=\"text-center\">
             ";
@@ -216,7 +216,7 @@ $context["role"] == "ROLE_USER")) {
         return new Twig_Source("{% for user in users %}
     <tr>
         <td class=\"py-1\" class=\"text-center\">
-            {{ user.id }}
+            <img class=\"mg-xs rounded-circle\" src=\"{{ asset('users/' ~ user.picture) }}\" alt=\"image\" style=\"width: 50px; height: 50px  \">
         </td>
         <td class=\"text-center\">
             {{ user.usernameCanonical }}

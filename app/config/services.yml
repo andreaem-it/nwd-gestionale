@@ -45,4 +45,4 @@ services:
             $formFactory: '@fos_user.change_password.form.factory'
     AppBundle\Service\FileUploader:
         arguments:
-            $targetDirectory: 'web/users'
+            $targetDirectory: 'users'

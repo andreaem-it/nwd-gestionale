@@ -32,9 +32,9 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
       <div class=\"nav-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
-            <img src=\"";
+            <img class=\"mg-xs rounded-circle\" src=\"";
         // line 7
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/faces-clipart/pic-1.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("users/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 7, $this->source); })()), "user", array()), "picture", array()))), "html", null, true);
         echo "\" alt=\"profile image\" style=\"width: 100%\">
           </div>
           <div class=\"text-wrapper\">
@@ -360,7 +360,7 @@ class __TwigTemplate_78562e73d6d3056f1d52ae0b18503db93dd163299fa86a7025d82c4534d
       <div class=\"nav-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
-            <img src=\"{{ asset('images/faces-clipart/pic-1.png') }}\" alt=\"profile image\" style=\"width: 100%\">
+            <img class=\"mg-xs rounded-circle\" src=\"{{ asset('users/' ~ app.user.picture) }}\" alt=\"profile image\" style=\"width: 100%\">
           </div>
           <div class=\"text-wrapper\">
             <p class=\"profile-name\">

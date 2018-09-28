@@ -650,7 +650,7 @@
     </service>
     <service id="AppBundle\Form\Model\ChangePassword" class="AppBundle\Form\Model\ChangePassword" public="false" autowire="true" autoconfigure="true"/>
     <service id="AppBundle\Service\FileUploader" class="AppBundle\Service\FileUploader" public="false" autowire="true" autoconfigure="true">
-      <argument>web/users</argument>
+      <argument>users</argument>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>

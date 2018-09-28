@@ -101,7 +101,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
         echo "              </span>
               <img class=\"img-xs rounded-circle\" src=\"";
         // line 72
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/faces-clipart/pic-1.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("users/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 72, $this->source); })()), "user", array()), "picture", array()))), "html", null, true);
         echo "\" alt=\"Profile image\">
             </a>
             <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown\" aria-labelledby=\"UserDropdown\">
@@ -261,7 +261,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
                     {{ app.user.username|capitalize }}
                 {% endif %}
               </span>
-              <img class=\"img-xs rounded-circle\" src=\"{{ asset('images/faces-clipart/pic-1.png') }}\" alt=\"Profile image\">
+              <img class=\"img-xs rounded-circle\" src=\"{{ asset('users/' ~ app.user.picture) }}\" alt=\"Profile image\">
             </a>
             <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown\" aria-labelledby=\"UserDropdown\">
               <a class=\"dropdown-item p-0\">

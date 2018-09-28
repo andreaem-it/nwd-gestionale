@@ -111,7 +111,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
                                     <thead>
                                     <tr>
                                         <th class=\"text-center\">
-                                            ID
+
                                         </th>
                                         <th class=\"text-center\">
                                             Username
@@ -248,7 +248,7 @@ class __TwigTemplate_c55d24f1a9d54a2c2e29de955e4d31a238389336886bbd843ad0d200d4d
                                     <thead>
                                     <tr>
                                         <th class=\"text-center\">
-                                            ID
+
                                         </th>
                                         <th class=\"text-center\">
                                             Username

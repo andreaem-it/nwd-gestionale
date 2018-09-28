@@ -5,7 +5,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
-use AppBundle\Entity\Product;
+use AppBundle\Entity\Users;
 use AppBundle\Service\FileUploader;
 
 class UploadListener

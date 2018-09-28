@@ -1,7 +1,7 @@
 {% for user in users %}
     <tr>
         <td class="py-1" class="text-center">
-            {{ user.id }}
+            <img class="mg-xs rounded-circle" src="{{ asset('users/' ~ user.picture) }}" alt="image" style="width: 40px; height: 40px  ">
         </td>
         <td class="text-center">
             {{ user.usernameCanonical }}
