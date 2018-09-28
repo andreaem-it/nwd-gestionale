@@ -10,4 +10,15 @@ namespace AppBundle\Repository;
  */
 class AnnouncementsRepository extends \Doctrine\ORM\EntityRepository
 {
+    /*public function getDescription() {
+        return $this->getDescription();
+    }*/
+
+    function getLastEntity() {
+        return $this->createQueryBuilder('e')
+            ->orderBy('e.datetime', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 }

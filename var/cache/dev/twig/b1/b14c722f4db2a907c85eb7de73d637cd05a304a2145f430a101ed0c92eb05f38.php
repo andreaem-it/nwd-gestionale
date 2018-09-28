@@ -47,24 +47,60 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
         // line 25
         echo "        </ul>
         <ul class=\"navbar-nav navbar-nav-right\">
-          ";
-        // line 137
-        echo "          <li class=\"nav-item dropdown d-none d-xl-inline-block\">
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" id=\"currentTime\"></a>
+            <script>
+                var clock = 0;
+                var interval_msec = 1000;
+                \$(document).ready( function() {
+                    clock = setTimeout(\"UpdateClock()\", interval_msec);
+                });
+                function UpdateClock(){
+                    clearTimeout(clock);
+                    var dt_now = new Date();
+                    var hh\t= dt_now.getUTCHours();
+                    var mm\t= dt_now.getUTCMinutes();
+                    var ss\t= dt_now.getUTCSeconds();
+                    var dd  = dt_now.getUTCDate();
+                    var mo  = dt_now.getUTCMonth() + 1;
+                    var yy  = dt_now.getUTCFullYear();
+                    if(dd < 10){
+                        dd = \"0\" + dd;
+                    }
+                    if(mo < 10){
+                        mo = \"0\" + mo;
+                    }
+                    if(hh < 10){
+                        hh = \"0\" + hh;
+                    }
+                    if(mm < 10){
+                        mm = \"0\" + mm;
+                    }
+                    if(ss < 10){
+                        ss = \"0\" + ss;
+                    }
+                    \$(\"#currentTime\").html(dd + \"/\" + mo + \"/\" + yy + \" \" + hh + \":\" + mm + \":\" + ss);
+                    clock = setTimeout(\"UpdateClock()\", interval_msec);
+
+                }
+            </script>
+          </li>
+          <li class=\"nav-item dropdown d-none d-xl-inline-block\">
             <a class=\"nav-link dropdown-toggle\" id=\"UserDropdown\" href=\"#\" data-toggle=\"dropdown\" aria-expanded=\"false\">
               <span class=\"profile-text\">
                 ";
-        // line 140
+        // line 68
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 141
+            // line 69
             echo "                    ";
-            echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 141, $this->source); })()), "user", array()), "username", array())), "html", null, true);
+            echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 69, $this->source); })()), "user", array()), "username", array())), "html", null, true);
             echo "
                 ";
         }
-        // line 143
+        // line 71
         echo "              </span>
               <img class=\"img-xs rounded-circle\" src=\"";
-        // line 144
+        // line 72
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/faces-clipart/pic-1.png"), "html", null, true);
         echo "\" alt=\"Profile image\">
             </a>
@@ -72,39 +108,39 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
               <a class=\"dropdown-item p-0\">
                 <div class=\"d-flex border-bottom\">
                   ";
-        // line 150
+        // line 78
         echo "                    ";
-        // line 151
+        // line 79
         echo "                  ";
-        // line 152
+        // line 80
         echo "                  <div class=\"py-3 px-4 d-flex align-items-center justify-content-center border-left\">
                       ";
-        // line 153
-        echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 153, $this->source); })()), "user", array()), "username", array())), "html", null, true);
+        // line 81
+        echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 81, $this->source); })()), "user", array()), "username", array())), "html", null, true);
         echo "
                   </div>
                   <a class=\"py-3 px-4 d-flex align-items-center justify-content-center border-right\" href=\"";
-        // line 155
+        // line 83
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("fos_user_profile_show");
         echo "\">
                     <i class=\"mdi mdi-account-outline mr-0 text-gray\"></i>
                   </a>
                   ";
-        // line 159
+        // line 87
         echo "                    ";
-        // line 160
+        // line 88
         echo "                  ";
-        // line 161
+        // line 89
         echo "                </div>
               </a>
               <a href=\"";
-        // line 163
+        // line 91
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("security_change_password");
         echo "\" class=\"dropdown-item\">
                 Cambia Password
               </a>
               <a href=\"";
-        // line 166
+        // line 94
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
         echo "\" class=\"dropdown-item\">
                 Esci
@@ -127,9 +163,6 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             right: 0px;
           }
         </style>
-        ";
-        // line 215
-        echo "
       </div>
     </nav>";
         
@@ -152,7 +185,7 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
 
     public function getDebugInfo()
     {
-        return array (  132 => 215,  108 => 166,  102 => 163,  98 => 161,  96 => 160,  94 => 159,  88 => 155,  83 => 153,  80 => 152,  78 => 151,  76 => 150,  68 => 144,  65 => 143,  59 => 141,  57 => 140,  52 => 137,  48 => 25,  40 => 7,  34 => 4,  29 => 1,);
+        return array (  144 => 94,  138 => 91,  134 => 89,  132 => 88,  130 => 87,  124 => 83,  119 => 81,  116 => 80,  114 => 79,  112 => 78,  104 => 72,  101 => 71,  95 => 69,  93 => 68,  48 => 25,  40 => 7,  34 => 4,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -183,116 +216,44 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             </li>#}
         </ul>
         <ul class=\"navbar-nav navbar-nav-right\">
-          {#<li class=\"nav-item dropdown\">
-            <a class=\"nav-link count-indicator dropdown-toggle\" id=\"messageDropdown\" href=\"#\" data-toggle=\"dropdown\" aria-expanded=\"false\">
-              <i class=\"mdi mdi-file-document-box\"></i>
-              <span class=\"count\">7</span>
-            </a>
-            <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown preview-list\" aria-labelledby=\"messageDropdown\">
-              <div class=\"dropdown-item\">
-                <p class=\"mb-0 font-weight-normal float-left\">You have 7 unread mails
-                </p>
-                <span class=\"badge badge-info badge-pill float-right\">View all</span>
-              </div>
-              <div class=\"dropdown-divider\"></div>
-              <a class=\"dropdown-item preview-item\">
-                <div class=\"preview-thumbnail\">
-                  <img src=\"images/faces/face4.jpg\" alt=\"image\" class=\"profile-pic\">
-                </div>
-                <div class=\"preview-item-content flex-grow\">
-                  <h6 class=\"preview-subject ellipsis font-weight-medium text-dark\">David Grey
-                    <span class=\"float-right font-weight-light small-text\">1 Minutes ago</span>
-                  </h6>
-                  <p class=\"font-weight-light small-text\">
-                    The meeting is cancelled
-                  </p>
-                </div>
-              </a>
-              <div class=\"dropdown-divider\"></div>
-              <a class=\"dropdown-item preview-item\">
-                <div class=\"preview-thumbnail\">
-                  <img src=\"images/faces/face2.jpg\" alt=\"image\" class=\"profile-pic\">
-                </div>
-                <div class=\"preview-item-content flex-grow\">
-                  <h6 class=\"preview-subject ellipsis font-weight-medium text-dark\">Tim Cook
-                    <span class=\"float-right font-weight-light small-text\">15 Minutes ago</span>
-                  </h6>
-                  <p class=\"font-weight-light small-text\">
-                    New product launch
-                  </p>
-                </div>
-              </a>
-              <div class=\"dropdown-divider\"></div>
-              <a class=\"dropdown-item preview-item\">
-                <div class=\"preview-thumbnail\">
-                  <img src=\"images/faces/face3.jpg\" alt=\"image\" class=\"profile-pic\">
-                </div>
-                <div class=\"preview-item-content flex-grow\">
-                  <h6 class=\"preview-subject ellipsis font-weight-medium text-dark\"> Johnson
-                    <span class=\"float-right font-weight-light small-text\">18 Minutes ago</span>
-                  </h6>
-                  <p class=\"font-weight-light small-text\">
-                    Upcoming board meeting
-                  </p>
-                </div>
-              </a>
-            </div>
+          <li class=\"nav-item\">
+            <a class=\"nav-link\" id=\"currentTime\"></a>
+            <script>
+                var clock = 0;
+                var interval_msec = 1000;
+                \$(document).ready( function() {
+                    clock = setTimeout(\"UpdateClock()\", interval_msec);
+                });
+                function UpdateClock(){
+                    clearTimeout(clock);
+                    var dt_now = new Date();
+                    var hh\t= dt_now.getUTCHours();
+                    var mm\t= dt_now.getUTCMinutes();
+                    var ss\t= dt_now.getUTCSeconds();
+                    var dd  = dt_now.getUTCDate();
+                    var mo  = dt_now.getUTCMonth() + 1;
+                    var yy  = dt_now.getUTCFullYear();
+                    if(dd < 10){
+                        dd = \"0\" + dd;
+                    }
+                    if(mo < 10){
+                        mo = \"0\" + mo;
+                    }
+                    if(hh < 10){
+                        hh = \"0\" + hh;
+                    }
+                    if(mm < 10){
+                        mm = \"0\" + mm;
+                    }
+                    if(ss < 10){
+                        ss = \"0\" + ss;
+                    }
+                    \$(\"#currentTime\").html(dd + \"/\" + mo + \"/\" + yy + \" \" + hh + \":\" + mm + \":\" + ss);
+                    clock = setTimeout(\"UpdateClock()\", interval_msec);
+
+                }
+            </script>
           </li>
-          <li class=\"nav-item dropdown\">
-            <a class=\"nav-link count-indicator dropdown-toggle\" id=\"notificationDropdown\" href=\"#\" data-toggle=\"dropdown\">
-              <i class=\"mdi mdi-bell\"></i>
-              <span class=\"count\">4</span>
-            </a>
-            <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown preview-list\" aria-labelledby=\"notificationDropdown\">
-              <a class=\"dropdown-item\">
-                <p class=\"mb-0 font-weight-normal float-left\">You have 4 new notifications
-                </p>
-                <span class=\"badge badge-pill badge-warning float-right\">View all</span>
-              </a>
-              <div class=\"dropdown-divider\"></div>
-              <a class=\"dropdown-item preview-item\">
-                <div class=\"preview-thumbnail\">
-                  <div class=\"preview-icon bg-success\">
-                    <i class=\"mdi mdi-alert-circle-outline mx-0\"></i>
-                  </div>
-                </div>
-                <div class=\"preview-item-content\">
-                  <h6 class=\"preview-subject font-weight-medium text-dark\">Application Error</h6>
-                  <p class=\"font-weight-light small-text\">
-                    Just now
-                  </p>
-                </div>
-              </a>
-              <div class=\"dropdown-divider\"></div>
-              <a class=\"dropdown-item preview-item\">
-                <div class=\"preview-thumbnail\">
-                  <div class=\"preview-icon bg-warning\">
-                    <i class=\"mdi mdi-comment-text-outline mx-0\"></i>
-                  </div>
-                </div>
-                <div class=\"preview-item-content\">
-                  <h6 class=\"preview-subject font-weight-medium text-dark\">Settings</h6>
-                  <p class=\"font-weight-light small-text\">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <div class=\"dropdown-divider\"></div>
-              <a class=\"dropdown-item preview-item\">
-                <div class=\"preview-thumbnail\">
-                  <div class=\"preview-icon bg-info\">
-                    <i class=\"mdi mdi-email-outline mx-0\"></i>
-                  </div>
-                </div>
-                <div class=\"preview-item-content\">
-                  <h6 class=\"preview-subject font-weight-medium text-dark\">New user registration</h6>
-                  <p class=\"font-weight-light small-text\">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>#}
           <li class=\"nav-item dropdown d-none d-xl-inline-block\">
             <a class=\"nav-link dropdown-toggle\" id=\"UserDropdown\" href=\"#\" data-toggle=\"dropdown\" aria-expanded=\"false\">
               <span class=\"profile-text\">
@@ -343,35 +304,6 @@ class __TwigTemplate_90cc60dca8be6d7ca0abee22cf538a7f6ba33b6e44a06a547466cd1c239
             right: 0px;
           }
         </style>
-        {#<div class=\"collapse navbar-collapse\" >
-          <ul class=\"navbar-nav mr-auto\">
-            <li class=\"nav-item active\">
-              <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>
-            </li>
-            <li class=\"nav-item\">
-              <a class=\"nav-link\" href=\"#\">Link</a>
-            </li>
-            <li class=\"nav-item dropdown\">
-              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                Dropdown
-              </a>
-              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                <a class=\"dropdown-item\" href=\"#\">Action</a>
-                <a class=\"dropdown-item\" href=\"#\">Another action</a>
-                <div class=\"dropdown-divider\"></div>
-                <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-              </div>
-            </li>
-            <li class=\"nav-item\">
-              <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
-            </li>
-          </ul>
-          <form class=\"form-inline my-2 my-lg-0\">
-            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
-          </form>
-        </div>#}
-
       </div>
     </nav>", "template/navbar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/navbar.html.twig");
     }

@@ -9,11 +9,13 @@ use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
@@ -358,9 +360,48 @@ class SettingsController extends Controller
     /**
      * @Route("impostazioni/annunci", name="impostazioni_annunci")
      */
-    public function announcementsAction() {
+    public function announcementsAction(Request $request) {
+
+        $announce = new Announcements();
+
+        $form = $this->createFormBuilder($announce)
+                ->add('description', TextareaType::class, [
+                    'attr' => ['class' => 'form-control'],
+                    'label' => 'Annuncio'
+                ])
+                ->add('expiration', TextType::class, [
+                    'attr' => [
+                        'class' => 'form-control input-inline datetimepicker',
+                        'data-provide' => 'datetimepicker',
+                        'html5' => false
+                    ],
+                    'label' => 'Scandenza'
+                ])
+                ->add('submit', SubmitType::class,[
+                    'label' => 'Pubblica',
+                    'attr' => ['class' => 'btn btn-info mt-3']
+                ])
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+            $announce = $form->getData();
+
+            $announce->setDatetime(new \DateTime("now"));
+            $announce->setCreator($this->getUser()->getId());
+            $announce->setExpiration(new \DateTime($form->get('expiration')->getData()));
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($announce);
+            $em->flush();
+
+        }
+
         return $this->render('settings/announcements.html.twig',[
-            'announcements' => $this->getDoctrine()->getRepository(Announcements::class)->findAll()
+            'announcements' => $this->getDoctrine()->getRepository(Announcements::class)->findAll(),
+            'form' => $form->createView()
+
         ]);
     }
 

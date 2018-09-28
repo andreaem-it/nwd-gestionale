@@ -161,9 +161,9 @@ class __TwigTemplate_25932c5350254c030ec7da03a4fa172202bc424ce812b01c15db59a014d
                                 <h3>Annunci</h3>
                                 <p><small>";
         // line 86
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["announcements"]) || array_key_exists("announcements", $context) ? $context["announcements"] : (function () { throw new Twig_Error_Runtime('Variable "announcements" does not exist.', 86, $this->source); })()), 0, array()), "datetime", array()), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["announcements"]) || array_key_exists("announcements", $context) ? $context["announcements"] : (function () { throw new Twig_Error_Runtime('Variable "announcements" does not exist.', 86, $this->source); })()), "datetime", array()), "d-m-Y"), "html", null, true);
         echo "</small> - ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["announcements"]) || array_key_exists("announcements", $context) ? $context["announcements"] : (function () { throw new Twig_Error_Runtime('Variable "announcements" does not exist.', 86, $this->source); })()), 0, array()), "message", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["announcements"]) || array_key_exists("announcements", $context) ? $context["announcements"] : (function () { throw new Twig_Error_Runtime('Variable "announcements" does not exist.', 86, $this->source); })()), "description", array()), "html", null, true);
         echo "</p>
                             </div>
                             <div class=\"col-2\">
@@ -458,7 +458,7 @@ class __TwigTemplate_25932c5350254c030ec7da03a4fa172202bc424ce812b01c15db59a014d
                         <div class=\"row\">
                             <div class=\"col-10\">
                                 <h3>Annunci</h3>
-                                <p><small>{{ announcements.0.datetime|date(\"d-m-Y\") }}</small> - {{ announcements.0.message }}</p>
+                                <p><small>{{ announcements.datetime|date(\"d-m-Y\") }}</small> - {{ announcements.description }}</p>
                             </div>
                             <div class=\"col-2\">
                                 <i class=\"mdi mdi-exclamation text-white\" style=\"font-size: 3em\"></i>

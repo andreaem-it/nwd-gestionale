@@ -16,6 +16,6 @@ if (!\class_exists(appDevDebugProjectContainer::class, false)) {
 
 return new \ContainerWivyp94\appDevDebugProjectContainer(array(
     'container.build_hash' => 'Wivyp94',
-    'container.build_id' => '1cebd580',
-    'container.build_time' => 1538065277,
+    'container.build_id' => '0b1b50dd',
+    'container.build_time' => 1538127365,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerWivyp94');

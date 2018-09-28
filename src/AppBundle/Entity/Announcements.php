@@ -38,9 +38,9 @@ class Announcements
     /**
      * @var string
      *
-     * @ORM\Column(name="message", type="text")
+     * @ORM\Column(name="description", type="text")
      */
-    private $message;
+    private $description;
 
     /**
      * @var \DateTime
@@ -109,30 +109,6 @@ class Announcements
     }
 
     /**
-     * Set message.
-     *
-     * @param string $message
-     *
-     * @return Announcements
-     */
-    public function setMessage($message)
-    {
-        $this->message = $message;
-
-        return $this;
-    }
-
-    /**
-     * Get message.
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->message;
-    }
-
-    /**
      * Set expiration.
      *
      * @param \DateTime $expiration
@@ -154,5 +130,29 @@ class Announcements
     public function getExpiration()
     {
         return $this->expiration;
+    }
+
+    /**
+     * Set description.
+     *
+     * @param string $description
+     *
+     * @return Announcements
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
