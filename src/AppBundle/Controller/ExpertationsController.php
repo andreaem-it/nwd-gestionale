@@ -479,6 +479,27 @@ class ExpertationsController extends Controller
     }
 
     /**
+     * @Route("preventivi/dettaglio/{id}", name="preventivi_dettaglio_id")
+     */
+    public function detailsAction($id) {
+
+        $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+
+        $qtyPL = array_sum($item->getPl());
+        $qtyPC = array_sum($item->getC1v());
+        $qtyPP = array_sum($item->getPp());
+
+        dump($qtyPL);
+
+        return $this->render('expertations/details.html.twig',[
+            'item' => $item,
+            'qtyPL' => $qtyPL,
+            'qtyPC' => $qtyPC,
+            'qtyPP' => $qtyPP
+        ]);
+    }
+
+    /**
      * @Route("preventivi/elimina/{id}/{confirm}", name="preventivi_elimina", defaults={"confirm" = false})
      */
     public function deleteExpertatationAction($id, $confirm = false) {
@@ -585,7 +606,7 @@ class ExpertationsController extends Controller
     }
 
     public function heatingIntToName($int) {
-        return $this->getDoctrine()->getRepository(Heatings::class)->find($int);
+        return (string) $this->getDoctrine()->getRepository(Heatings::class)->find($int)->getName();
 
     }
 

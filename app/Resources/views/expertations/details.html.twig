@@ -1,0 +1,329 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <h3>Preventivi <small>Dettaglio</small></h3>
+            </div>
+        </div>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover border-o">
+                                <thead>
+                                    <tr>
+                                        <th class="no-wrap border">ARTICOLO</th>
+                                        <th class="border" style="max-width: 300px">DESCRIZIONE</th>
+                                        <th class="no-wrap border">QUANTITÁ</th>
+                                        <th class="no-wrap border">PREZZO NETTO UNITARIO</th>
+                                        <th class="no-wrap border">PREZZO NETTO TOTALE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border-left"><i>Punti Luce</i></td>
+                                        <td style="max-width: 300px"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="border-right"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.1.12.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                            P.to luce semplice su canalizzazione in traccia o in vista <br>
+                                            con un cavo non propagante l'incendio con sezione minima 1,5 mmq. <br>
+                                            <strong>Per P.to luce con conduttore di protezione.</strong>
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPL }}</td>
+                                        <td class="border">22.20</td>
+                                        <td class="border">{{ qtyPL * 22.20 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.1.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Canalizzazione per <strong>P.to luce in traccia</strong> per distanza non superiori a 60mt. <br>
+                                                Sono esclusi i conduttori e le opere murarie.
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPL }}</td>
+                                        <td class="border">11.80</td>
+                                        <td class="border">{{ qtyPL * 11.80 }}</td>
+                                    </tr>
+                                    {% if item.opereMurarie == 0 %}
+                                    <tr>
+                                        <td class="border">15.1.3.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Incremento alla canalizzazione per P.to luce per opere murarie su murature <strong>NON Intonacate.</strong> <br>
+                                                Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPL }}</td>
+                                        <td class="border">5.60</td>
+                                        <td class="border">{{ qtyPL * 5.60 }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 1 %}
+                                    <tr>
+                                        <td class="border">15.1.4.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Incremento alla canalizzazione per P.to luce per opere murarie su murature <strong>Intonacate.</strong> <br>
+                                                Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPL }}</td>
+                                        <td class="border">14.90</td>
+                                        <td class="border">{{ qtyPL * 14.90 }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 2 %}
+                                    <tr>
+                                        <td class="border">15.1.5.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Incremento alla canalizzazione per P.to luce per opere murarie su murature in <strong>mattone pieno, calcestruzzo o pietra.</strong> <br>
+                                                Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPL }}</td>
+                                        <td class="border">26.90</td>
+                                        <td class="border">{{ qtyPL * 26.90 }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="border-left"><i>Punti di Comando</i></td>
+                                        <td style="max-width: 300px"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="border-right"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.1.15.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                P.to di comando su canalizzazione in traccia o in vista
+                                                con un cavo non propagante l'incendio <br>
+                                                <strong>Per P.to di comando.</strong>
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPC }}</td>
+                                        <td class="border">9.90</td>
+                                        <td class="border">{{ qtyPC * 9.90 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.1.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Canalizzazione per <strong>P.to di comando in traccia</strong> per distanza non superiori a 60mt. <br>
+                                                Sono esclusi i conduttori e le opere murarie.
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPC }}</td>
+                                        <td class="border">6.30</td>
+                                        <td class="border">{{ qtyPC * 6.30 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.1.15.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Punto di comando aggiuntivo sulla stessa scatola. Per P.to di comando aggiuntivo
+                                            </small>
+                                        </td>
+                                        <td class="border">-</td>
+                                        <td class="border">9.00</td>
+                                        <td class="border">-</td>
+                                    </tr>
+                                    {% if item.opereMurarie == 0 %}
+                                        <tr>
+                                            <td class="border">15.1.3.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
+                                                    <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPC }}</td>
+                                            <td class="border">3.10</td>
+                                            <td class="border">{{ qtyPC * 3.10 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 1 %}
+                                        <tr>
+                                            <td class="border">15.1.4.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
+                                                    <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPC }}</td>
+                                            <td class="border">10.60</td>
+                                            <td class="border">{{ qtyPC * 10.60 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 2 %}
+                                        <tr>
+                                            <td class="border">15.1.5.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to di comando per opere murarie su murature in <br>
+                                                    <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPC }}</td>
+                                            <td class="border">13.40</td>
+                                            <td class="border">{{ qtyPC * 13.40 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="border-left"><i>Punti Presa</i></td>
+                                        <td style="max-width: 300px"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="border-right"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.2.21.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                P.to allaccio per presa monofase su canalizzazione in traccia o in vista <br>
+                                                con cavo non propagante l'incendio di sezione idonea<br>
+                                                <strong>Per allaccio monofase con carico massimo di 16A.</strong>
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPP }}</td>
+                                        <td class="border">26.20</td>
+                                        <td class="border">{{ qtyPC * 26.20 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.2.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Canalizzazione per <strong>P.to Presa in traccia</strong> per distanza non superiori a 60 mt. <br>
+                                                Sono esclusi i conduttori e le opere murarie<br>
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPP }}</td>
+                                        <td class="border">13.80</td>
+                                        <td class="border">{{ qtyPC * 13.80 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.2.41.3</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Punto presa elettrica da collegare alla linea di alimentazione compensata a parte come allaccio elettrico. <br>
+                                                Pt.o presa elettrica 2P+T 10/16A + UNEL. (Schuko Bipasso)<br>
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPP }}</td>
+                                        <td class="border">12.60</td>
+                                        <td class="border">{{ qtyPP * 12.60 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.2.41.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Presa elettrica aggiuntiva sulla stessa scatola 2P+T 10A o 16A o 10/16A (Bipresa) <br>
+                                            </small>
+                                        </td>
+                                        <td class="border">-</td>
+                                        <td class="border">4.80</td>
+                                        <td class="border">-</td>
+                                    </tr>
+                                    {% if item.opereMurarie == 0 %}
+                                        <tr>
+                                            <td class="border">15.2.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
+                                                    <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPP }}</td>
+                                            <td class="border">5.70</td>
+                                            <td class="border">{{ qtyPP * 5.70 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 1 %}
+                                        <tr>
+                                            <td class="border">15.2.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
+                                                    <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPP }}</td>
+                                            <td class="border">15.30</td>
+                                            <td class="border">{{ qtyPP * 15.30 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 2 %}
+                                        <tr>
+                                            <td class="border">15.2.4</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to di comando per opere murarie su murature in <br>
+                                                    <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPP }}</td>
+                                            <td class="border">27.20</td>
+                                            <td class="border">{{ qtyPP * 27.20 }}</td>
+                                        </tr>
+                                    {% endif %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        .no-wrap {
+            max-width: 130px;
+            width: 130px;
+            white-space: pre-wrap!important; /* css-3 */
+            white-space: -moz-pre-wrap!important; /* Mozilla, since 1999 */
+            white-space: -pre-wrap!important; /* Opera 4-6 */
+            white-space: -o-pre-wrap!important; /* Opera 7 */
+            word-wrap: break-word!important; /* Internet Explorer 5.5+ */
+        }
+        .description {
+            max-width: 300px;
+            white-space: pre-wrap!important; /* css-3 */
+            white-space: -moz-pre-wrap!important; /* Mozilla, since 1999 */
+            white-space: -pre-wrap!important; /* Opera 4-6 */
+            white-space: -o-pre-wrap!important; /* Opera 7 */
+            word-wrap: break-word!important; /* Internet Explorer 5.5+ */
+        }
+        td {
+            height: 65px!important;
+        }
+        .text-small {
+            font-size: 10px!important;
+        }
+    </style>
+
+{% endblock %}
+{% block javascripts %}{% endblock %}
