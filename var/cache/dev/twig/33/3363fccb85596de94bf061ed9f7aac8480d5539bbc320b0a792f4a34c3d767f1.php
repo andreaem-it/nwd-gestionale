@@ -56,7 +56,7 @@ class __TwigTemplate_a49844831fc613681b607b94fd2b2f4e9831d21f8260a64a9159b53d3fb
     <div class=\"content-wrapper\">
         <div class=\"row\">
             <div class=\"col-12\">
-                <h3>Preventivi <small>Dettaglio</small></h3>
+                <h3>Preventivi <small>Computometrico</small></h3>
             </div>
         </div>
         ";
@@ -602,7 +602,7 @@ class __TwigTemplate_a49844831fc613681b607b94fd2b2f4e9831d21f8260a64a9159b53d3fb
     <div class=\"content-wrapper\">
         <div class=\"row\">
             <div class=\"col-12\">
-                <h3>Preventivi <small>Dettaglio</small></h3>
+                <h3>Preventivi <small>Computometrico</small></h3>
             </div>
         </div>
         {% for label, messages in app.flashes %}
