@@ -31,11 +31,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border-left"><i>Punti Luce</i></td>
-                                        <td style="max-width: 300px"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="border-right"></td>
+                                        <td colspan="5" class="border table-light"><i>Punti Luce</i></td>
                                     </tr>
                                     <tr>
                                         <td class="border">15.1.12.2</td>
@@ -62,7 +58,7 @@
                                         <td class="border">11.80</td>
                                         <td class="border">{{ qtyPL * 11.80 }}</td>
                                     </tr>
-                                    {% if item.opereMurarie == 0 %}
+                                    {% if item.opereMurarie == '0' %}
                                     <tr>
                                         <td class="border">15.1.3.1</td>
                                         <td class="text-small border" style="max-width: 300px">
@@ -75,41 +71,35 @@
                                         <td class="border">5.60</td>
                                         <td class="border">{{ qtyPL * 5.60 }}</td>
                                     </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 1 %}
-                                    <tr>
-                                        <td class="border">15.1.4.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Incremento alla canalizzazione per P.to luce per opere murarie su murature <strong>Intonacate.</strong> <br>
-                                                Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
-                                            </small>
-                                        </td>
-                                        <td class="border">{{ qtyPL }}</td>
-                                        <td class="border">14.90</td>
-                                        <td class="border">{{ qtyPL * 14.90 }}</td>
-                                    </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 2 %}
-                                    <tr>
-                                        <td class="border">15.1.5.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Incremento alla canalizzazione per P.to luce per opere murarie su murature in <strong>mattone pieno, calcestruzzo o pietra.</strong> <br>
-                                                Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
-                                            </small>
-                                        </td>
-                                        <td class="border">{{ qtyPL }}</td>
-                                        <td class="border">26.90</td>
-                                        <td class="border">{{ qtyPL * 26.90 }}</td>
-                                    </tr>
+                                    {% elseif item.opereMurarie == '1' %}
+                                        <tr>
+                                            <td class="border">15.1.4.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per P.to luce per opere murarie su murature <strong>Intonacate.</strong> <br>
+                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPL }}</td>
+                                            <td class="border">14.90</td>
+                                            <td class="border">{{ qtyPL * 14.90 }}</td>
+                                        </tr>
+                                    {% elseif item.opereMurarie == '2' %}
+                                        <tr>
+                                            <td class="border">15.1.5.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per P.to luce per opere murarie su murature in <strong>mattone pieno, calcestruzzo o pietra.</strong> <br>
+                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border">{{ qtyPL }}</td>
+                                            <td class="border">26.90</td>
+                                            <td class="border">{{ qtyPL * 26.90 }}</td>
+                                        </tr>
                                     {% endif %}
                                     <tr>
-                                        <td class="border-left"><i>Punti di Comando</i></td>
-                                        <td style="max-width: 300px"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="border-right"></td>
+                                        <td colspan="5" class="border table-light"><i>Punti di Comando</i></td>
                                     </tr>
                                     <tr>
                                         <td class="border">15.1.15.2</td>
@@ -160,8 +150,7 @@
                                             <td class="border">3.10</td>
                                             <td class="border">{{ qtyPC * 3.10 }}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 1 %}
+                                    {% elseif item.opereMurarie == 1 %}
                                         <tr>
                                             <td class="border">15.1.4.2</td>
                                             <td class="text-small border" style="max-width: 300px">
@@ -174,8 +163,7 @@
                                             <td class="border">10.60</td>
                                             <td class="border">{{ qtyPC * 10.60 }}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 2 %}
+                                    {% elseif item.opereMurarie == 2 %}
                                         <tr>
                                             <td class="border">15.1.5.2</td>
                                             <td class="text-small border" style="max-width: 300px">
@@ -190,11 +178,7 @@
                                         </tr>
                                     {% endif %}
                                     <tr>
-                                        <td class="border-left"><i>Punti Presa</i></td>
-                                        <td style="max-width: 300px"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="border-right"></td>
+                                        <td colspan="5" class="border table-light"><i>Punti Presa</i></td>
                                     </tr>
                                     <tr>
                                         <td class="border">15.2.21.1</td>
@@ -207,7 +191,7 @@
                                         </td>
                                         <td class="border">{{ qtyPP }}</td>
                                         <td class="border">26.20</td>
-                                        <td class="border">{{ qtyPC * 26.20 }}</td>
+                                        <td class="border">{{ qtyPP * 26.20 }}</td>
                                     </tr>
                                     <tr>
                                         <td class="border">15.2.1</td>
@@ -219,7 +203,7 @@
                                         </td>
                                         <td class="border">{{ qtyPP }}</td>
                                         <td class="border">13.80</td>
-                                        <td class="border">{{ qtyPC * 13.80 }}</td>
+                                        <td class="border">{{ qtyPP * 13.80 }}</td>
                                     </tr>
                                     <tr>
                                         <td class="border">15.2.41.3</td>
@@ -257,8 +241,7 @@
                                             <td class="border">5.70</td>
                                             <td class="border">{{ qtyPP * 5.70 }}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 1 %}
+                                    {% elseif item.opereMurarie == 1 %}
                                         <tr>
                                             <td class="border">15.2.3</td>
                                             <td class="text-small border" style="max-width: 300px">
@@ -271,8 +254,7 @@
                                             <td class="border">15.30</td>
                                             <td class="border">{{ qtyPP * 15.30 }}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 2 %}
+                                    {% elseif item.opereMurarie == 2 %}
                                         <tr>
                                             <td class="border">15.2.4</td>
                                             <td class="text-small border" style="max-width: 300px">
@@ -286,7 +268,36 @@
                                             <td class="border">{{ qtyPP * 27.20 }}</td>
                                         </tr>
                                     {% endif %}
-
+                                    <tr>
+                                        <td colspan="3" class="border-0"></td>
+                                        <td class="border">SUBTOTALE</td>
+                                        <td class="border">
+                                            {{ total|round('2') }} €
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="border-0"></td>
+                                        <td class="border">IVA 22%</td>
+                                        <td class="border">
+                                            {{ vat|round('2') }} €
+                                        </td>
+                                    </tr>
+                                    {% if sconto != 0 %}
+                                    <tr>
+                                        <td colspan="3" class="border-0"></td>
+                                        <td class="border">SCONTO {{ item.sconto }}%</td>
+                                        <td class="border">
+                                            {{ sconto|round('2') }} €
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td colspan="3" class="border-0"></td>
+                                        <td class="border"><strong>TOTALE</strong></td>
+                                        <td class="border">
+                                            <strong>{%  set grandtotal = total + vat - sconto %} {{ grandtotal|round('2') }} €</strong>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

@@ -491,11 +491,63 @@ class ExpertationsController extends Controller
 
         dump($qtyPL);
 
+        $total_1 = ($qtyPL * 22.20) + ($qtyPL * 11.80);
+
+        if ($item->getOpereMurarie() == 0) {
+            $total_2 = $qtyPL * 5.60;
+        } elseif ($item->getOpereMurarie() == 1) {
+            $total_2 = $qtyPL * 14.90;
+        } elseif ($item->getOpereMurarie() == 2) {
+            $total_2 = $qtyPL * 26.90;
+        }
+
+        $total_4 = ($qtyPC * 9.90) + ($qtyPC * 6.30);
+
+        if ($item->getOpereMurarie() == 0) {
+            $total_5 = $qtyPC * 3.10;
+        } elseif ($item->getOpereMurarie() == 1) {
+            $total_5 = $qtyPC * 10.60;
+        } elseif ($item->getOpereMurarie() == 2) {
+            $total_5 = $qtyPC * 13.40;
+        }
+
+        $total_7 = ($qtyPP * 26.20) + ($qtyPP * 13.80) + ($qtyPP * 12.60);
+
+        if ($item->getOpereMurarie() == 0) {
+            $total_8 = ($qtyPC * 5.70);
+        } elseif ($item->getOpereMurarie() == 1) {
+            $total_8 = ($qtyPC * 15.30);
+        } elseif ($item->getOpereMurarie() == 2) {
+            $total_8 = ($qtyPC * 27.30);
+        }
+
+        $total = $total_1 +
+                 $total_2 +
+                 $total_4 +
+                 $total_5 +
+                 $total_7 +
+                 $total_8;
+
+        $vat = $total * 22 / 100;
+
+        $sconto = $total * $item->getSconto() / 100;
+
+        dump($total_1);
+        dump($total_2);
+        dump($total_4);
+        dump($total_5);
+        dump($total_7);
+        dump($total_8);
+
+
         return $this->render('expertations/details.html.twig',[
             'item' => $item,
             'qtyPL' => $qtyPL,
             'qtyPC' => $qtyPC,
-            'qtyPP' => $qtyPP
+            'qtyPP' => $qtyPP,
+            'total' => $total,
+            'vat' => $vat,
+            'sconto' => $sconto
         ]);
     }
 
