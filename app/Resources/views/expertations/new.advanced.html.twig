@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+{% block title %}Preventivo{% endblock %}
+{% block body %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-9">
+                <h3>Preventivo <small>Nuovo > Avanzato</small></h3>
+            </div>
+        </div>
+        {{ form_start(form) }}
+        <div class="mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="input-group">
+                                {{ form_label(form.client) }}
+                                {{ form_widget(form.client) }}
+                                <div class="input-group-prepend">
+                                    <div class="form-group-text mx-0 px-0 py-0 mt-1">
+                                        <a href="{{ url('nuovo_cliente') }}" class="btn btn-outline-success mx-0 px-2">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <div class="form-group">
+                                {{ form_label(form.tipo) }}
+                                {{ form_widget(form.tipo) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <div class="form-group">
+                                {{ form_label(form.kw) }}
+                                {{ form_widget(form.kw) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <div class="form-group">
+                                {{ form_label(form.piani_casa) }}
+                                {{ form_widget(form.piani_casa) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <div class="form-group">
+                                {{ form_label(form.riscaldamento) }}
+                                {{ form_widget(form.riscaldamento) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <div class="form-group">
+                                {{ form_label(form.opere_murarie) }}
+                                {{ form_widget(form.opere_murarie) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <div class="form-group">
+                                {{ form_label(form.trifase) }}
+                                {{ form_widget(form.trifase) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <div class="form-group">
+                                {{ form_label(form.sconto) }}
+                                {{ form_widget(form.sconto) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 ">
+                                <div class="form-group">
+                                    {{ form_label(form.level) }}
+                                    {{ form_widget(form.level) }}
+                                </div>
+                            </div>
+                            <div class="col-lg-2 ">
+                                <div class="form-group">
+                                    {{ form_label(form.square_meters) }}
+                                    {{ form_widget(form.square_meters) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        .form-control {
+            width: 100%!important;
+        }
+        select {
+            width:100%!important;
+        }
+        #form_client {
+            max-width:85%;
+        }
+        .input-group label {
+            font-size: 13px;
+            line-height: 1;
+            vertical-align: top;
+        }
+    </style>
+
+{% endblock %}

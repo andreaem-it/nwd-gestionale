@@ -187,6 +187,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_dettaglio_id')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::detailsAction',));
                 }
 
+                // nuovo_preventivo_avanzato
+                if ('/preventivi/avanzato/nuovo' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::newExpertationAdvancedAction',  '_route' => 'nuovo_preventivo_avanzato',);
+                }
+
                 // preventivi_elimina
                 if (0 === strpos($pathinfo, '/preventivi/elimina') && preg_match('#^/preventivi/elimina/(?P<id>[^/]++)(?:/(?P<confirm>[^/]++))?$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_elimina')), array (  'confirm' => false,  '_controller' => 'AppBundle\\Controller\\ExpertationsController::deleteExpertatationAction',));

@@ -173,8 +173,8 @@ abstract class CompleteConfigurationTest extends TestCase
                 null,
                 null,
                 array(
-                  'simple_form',
-                  'anonymous',
+                    'simple_form',
+                    'anonymous',
                 ),
                 null,
             ),
@@ -594,7 +594,7 @@ abstract class CompleteConfigurationTest extends TestCase
 
     protected function getContainer($file)
     {
-        $file = $file.'.'.$this->getFileExtension();
+        $file .= '.'.$this->getFileExtension();
 
         $container = new ContainerBuilder();
         $security = new SecurityExtension();

@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
+use AppBundle\Entity\ExpertationsAdvanced;
 use AppBundle\Entity\Heatings;
 use AppBundle\Entity\Users;
 use Doctrine\ORM\EntityRepository;
@@ -12,6 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
@@ -549,6 +551,103 @@ class ExpertationsController extends Controller
             'vat' => $vat,
             'sconto' => $sconto
         ]);
+    }
+
+    /**
+     * @Route("preventivi/avanzato/nuovo", name="nuovo_preventivo_avanzato")
+     */
+    public function newExpertationAdvancedAction() {
+
+        $expertations = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+
+        $form = $this->createFormBuilder($expertations)
+            ->add('client', EntityType::class, [
+                'class' => 'AppBundle:Clients',
+                'placeholder' => '-- Seleziona --',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('u')
+                        ->where('u.refereer = :uid')
+                        ->setParameter('uid', $this->getUser()->getId())
+                        ->orderBy('u.name', 'ASC');
+                },
+                'choice_label' => 'name',
+                'choice_value' => 'id',
+                'label' => 'Cliente',
+                'attr' => ['class' => 'mt-1']
+            ])
+            ->add('tipo', ChoiceType::class, [
+                'choices' => [
+                    'Civile' => '1',
+                    'Terziario' => '2'
+                ],
+                'label' => 'Tipo Impianto',
+            ])
+            ->add('kw', TextType::class, [
+                'label' => 'Kw ENEL',
+            ])
+            ->add('piani_casa', IntegerType::class, [
+                'label' => 'Piani',
+            ])
+            ->add('riscaldamento', ChoiceType::class, [
+                'choices' => [
+                    'Pavimento' => '1',
+                    'Radiatori' => '2',
+                    'Fancoil' => '3',
+                    'Canalizzato' => '4',
+                    'Split' => '5',
+                    'Altro' => '6'
+                ],
+                'label' => 'Riscaldamento',
+            ])
+            ->add('opere_murarie', ChoiceType::class, [
+                'choices' => [
+                    'No' => '0',
+                    'Intonaco' => '1',
+                    'Mattone / Pietra' => '2'
+                ],
+                'label' => 'Opere Murarie',
+            ])
+            ->add('trifase', ChoiceType::class, [
+                'choices' => [
+                    'No' => '0',
+                    'Si' => '1'
+                ],
+                'label' => 'Trifase',
+            ])
+            ->add('sconto', TextType::class, [
+                'label' => 'Sconto %',
+            ])
+            ->add('level', ChoiceType::class, [
+                'choices' => [
+                    'Livello 1 - Base' => '1',
+                    'Livello 2 - Standard' => '2',
+                    'Livello 3 - Domotico' => '3'
+                ],
+                'label' => 'Livello Impianto',
+                'attr' => ['class' =>
+                    'col-sm-2',
+                    'aria-describedby' => "button-addon",
+                    'style' => 'min-width:100%'
+                ]
+            ])
+            ->add('square_meters', IntegerType::class, [
+                'attr' => [
+                    'placeholder' => 'mq',
+                    'style' => 'min-width: 100%'
+                ],
+                'label' => 'Metratura Abitazione',
+
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-success'
+                ]
+            ])
+            ->getForm();
+
+        return $this->render('expertations/new.advanced.html.twig',[
+                'form' => $form->createView()
+            ]);
     }
 
     /**
