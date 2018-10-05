@@ -20,4 +20,8 @@ class ExpertationsAdvancedRepository extends \Doctrine\ORM\EntityRepository
     public $sconto;
     public $level;
     public $square_meters;
+
+    public function __construct() {
+        return $this;
+    }
 }

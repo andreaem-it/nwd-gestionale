@@ -13,7 +13,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
@@ -558,9 +557,9 @@ class ExpertationsController extends Controller
      */
     public function newExpertationAdvancedAction() {
 
-        $expertations = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+        $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
 
-        $form = $this->createFormBuilder($expertations)
+        $form = $this->createFormBuilder($expertationsAdvanced)
             ->add('client', EntityType::class, [
                 'class' => 'AppBundle:Clients',
                 'placeholder' => '-- Seleziona --',
@@ -638,6 +637,17 @@ class ExpertationsController extends Controller
                 'label' => 'Metratura Abitazione',
 
             ])
+            /*->add('val1', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])*/
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-success'
