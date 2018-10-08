@@ -187,6 +187,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_dettaglio_id')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::detailsAction',));
                 }
 
+                // mostra_preventivo_avanzato
+                if (0 === strpos($pathinfo, '/preventivi/avanzato/mostra') && preg_match('#^/preventivi/avanzato/mostra/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'mostra_preventivo_avanzato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::showExpertationAdvancedAction',));
+                }
+
+                // nuovo_preventivo_avanzato
+                if (0 === strpos($pathinfo, '/preventivi/avanzato/nuovo') && preg_match('#^/preventivi/avanzato/nuovo(?:/(?P<id>[^/]++))?$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'nuovo_preventivo_avanzato')), array (  'id' => '0',  '_controller' => 'AppBundle\\Controller\\ExpertationsController::newExpertationAdvancedAction',));
+                }
+
                 // preventivi_elimina
                 if (0 === strpos($pathinfo, '/preventivi/elimina') && preg_match('#^/preventivi/elimina/(?P<id>[^/]++)(?:/(?P<confirm>[^/]++))?$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_elimina')), array (  'confirm' => false,  '_controller' => 'AppBundle\\Controller\\ExpertationsController::deleteExpertatationAction',));

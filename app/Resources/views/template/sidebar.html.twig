@@ -49,15 +49,18 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="{% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'lista_preventivi' %}true{% else %}false{% endif %}" aria-controls="ui-basic">
+      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="{% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' or app.request.attributes.get('_route') == 'lista_preventivi' %}true{% else %}false{% endif %}" aria-controls="ui-basic">
         <i class="menu-icon mdi mdi-chart-line"></i>
         <span class="menu-title">Preventivi</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse {% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'lista_preventivi' %}show{% endif %}" id="ui-basic">
+      <div class="collapse {% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' or app.request.attributes.get('_route') == 'lista_preventivi' %}show{% endif %}" id="ui-basic">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}" href="{{ url('nuovo_preventivo') }}">Nuovo</a>
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}" href="{{ url('nuovo_preventivo') }}">Nuovo Base</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}" href="{{ url('nuovo_preventivo_avanzato') }}">Nuovo Avanzato</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}" href="{{ url('lista_preventivi') }}">Lista</a>

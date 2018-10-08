@@ -209,6 +209,7 @@
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_4_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/templates</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
@@ -2436,14 +2437,6 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -3725,10 +3718,11 @@
       <argument type="collection">
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
-        <argument key="exception_controller">twig.controller.exception:showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
+          <argument>bootstrap_4_layout.html.twig</argument>
         </argument>
+        <argument key="exception_controller">twig.controller.exception:showAction</argument>
         <argument key="autoescape">name</argument>
         <argument key="cache">/Users/andreaemili/PhpstormProjects/nwd-gestionale/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
@@ -3831,6 +3825,7 @@
       <argument type="collection">
         <argument key="/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form">null</argument>
       </argument>
+      <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>

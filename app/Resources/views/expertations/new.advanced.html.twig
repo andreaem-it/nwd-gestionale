@@ -1,0 +1,663 @@
+{% extends 'base.html.twig' %}
+{% block title %}Preventivo{% endblock %}
+{% block body %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-9">
+                <h3>Preventivo <small>Nuovo > Avanzato</small></h3>
+            </div>
+        </div>
+        {{ form_start(form) }}
+        <div class="mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <strong>Cliente</strong>
+                            <p><small>{{ func.uidToName(item.client) }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Tipo Impianto</strong>
+                            <p><small>{{ func.plantIntToName(item.tipo) }}</small></p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Kw Enel</strong>
+                            <p><small>{{ item.kw }}</small></p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Piani</strong>
+                            <p><small>{{ item.pianiCasa }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Riscaldamento</strong>
+                            <p><small>{{ func.heatingIntToName(item.riscaldamento) }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Opere Murarie</strong>
+                            <p><small>{{ func.convertOMtoName(item.opereMurarie) }}</small></p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Trifase</strong>
+                            <p>
+                                <small>
+                                    {% if item.trifase == 0 %}
+                                        No
+                                    {% else %}
+                                        Si
+                                    {% endif %}
+                                </small>
+                            </p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Sconto</strong>
+                            <p><small>{{ item.sconto }}</small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <strong>Livello </strong>
+                            <p><small>{{ item.level }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Metri Quadrati</strong>
+                            <p><small>{{ item.squareMeters }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Data Generazione</strong>
+                            <p><small>{{ item.date|date("d/m/Y") }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Prezzo Preliminare</strong>
+                            <p><small>{{ item.price|round(2) }} €</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Illum. Sicurezza</strong>
+                            <p><small>{{ item.illumSicurezza }}</small></p>
+                        </div>
+                        <div class="col-lg-1">
+                            <strong>SPD</strong>
+                            <p><small>{{ item.spd }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Imp. Ausiliari</strong>
+                            <p><small>{{ item.impAusiliari }} </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>TIPOLOGIA</th>
+                                    <th>
+                                        <select class="form-control">
+                                            <option>Ambiente</option>
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <select class="form-control">
+                                            <option>Ambiente</option>
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <select class="form-control">
+                                            <option>Ambiente</option>
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <select class="form-control">
+                                            <option>Ambiente</option>
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <select class="form-control">
+                                            <option>Ambiente</option>
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <select class="form-control">
+                                            <option>Ambiente</option>
+                                        </select>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="10">
+                                        PUNTI PRESA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong >Punti Presa</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Prese esterne a parete</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Prese aggiuntive e bivalenti 10/16A</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Bipolare</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Ventilatore / Estrattore Aria</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        PUNTI COMANDO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Punti Comando</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Comandi Agg.vi</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Punti Luce</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Punti Lice esterni a parete</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Dimmer</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Predisposizione LED parete o incasso</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sensori accendiluce/contatto porta</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Luci emergenza predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Lampada Emergenza</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Segnapasso LED predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sensore luminosità</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        RISCALDAMENTO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allaccio condizionatore/termoconvettori</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Caldaia/Pompa di calore</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Terra ai collettori</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Termostato</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sensore Umidità</strong>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+
+    </div>
+</div>
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        .form-control {
+            width: 100%!important;
+        }
+        select {
+            width:100%!important;
+        }
+        #form_client {
+            max-width:85%;
+        }
+        .input-group label {
+            font-size: 13px;
+            line-height: 1;
+            vertical-align: top;
+        }
+    </style>
+
+{% endblock %}

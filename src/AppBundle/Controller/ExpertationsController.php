@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
+use AppBundle\Entity\ExpertationsAdvanced;
 use AppBundle\Entity\Heatings;
 use AppBundle\Entity\Users;
 use Doctrine\ORM\EntityRepository;
@@ -552,6 +553,59 @@ class ExpertationsController extends Controller
     }
 
     /**
+     * @Route("preventivi/avanzato/mostra/{id}", name="mostra_preventivo_avanzato")
+     */
+    public function showExpertationAdvancedAction($id) {
+
+        $data = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+        $item = $this->getDoctrine()->getManager()->getRepository(ExpertationsAdvanced::class)->findAll();
+
+        dump($data);
+        dump($item);
+
+        return $this->render('expertations/show.advanced.html.twig',[
+            'item' => $item,
+            'data' => $data,
+            'func' => $this
+        ]);
+    }
+
+    /**
+     * @Route("preventivi/avanzato/nuovo/{id}", name="nuovo_preventivo_avanzato", defaults={"id" : "0"})
+     */
+    public function newExpertationAdvancedAction($id) {
+
+        $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+        $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+
+        $form = $this->createFormBuilder($expertationsAdvanced)
+            /*->add('val1', CollectionType::class, [
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+            ])*/
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-success'
+                ]
+            ])
+            ->getForm();
+
+        return $this->render('expertations/new.advanced.html.twig',[
+                'form' => $form->createView(),
+                'item' => $item,
+                'func' => $this
+
+        ]);
+    }
+
+    /**
      * @Route("preventivi/elimina/{id}/{confirm}", name="preventivi_elimina", defaults={"confirm" = false})
      */
     public function deleteExpertatationAction($id, $confirm = false) {
@@ -685,6 +739,20 @@ class ExpertationsController extends Controller
     function getPrice($item) {
         $thing = $prices = $this->getDoctrine()->getRepository('AppBundle:Prices')->find($item);
         return $thing->getPrice();
+    }
+
+    function convertOMtoName($om) {
+        switch ($om) {
+            case '0':
+                return 'Nessuna';
+                break;
+            case '1':
+                return 'Intonaco';
+                break;
+            case '2':
+                return 'Mattone';
+                break;
+        }
     }
 
     function getLevel($role) {
