@@ -7,6 +7,7 @@ use AppBundle\Entity\Expertations;
 use AppBundle\Entity\ExpertationsAdvanced;
 use AppBundle\Entity\Heatings;
 use AppBundle\Entity\Users;
+use AppBundle\Form\ExpertationsAdvancedType;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -576,26 +577,18 @@ class ExpertationsController extends Controller
     public function newExpertationAdvancedAction($id) {
 
         $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
-        $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+        //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+        $expertationsAdvanced = new ExpertationsAdvanced();
 
-        $form = $this->createFormBuilder($expertationsAdvanced)
-            /*->add('val1', CollectionType::class, [
-                'entry_type' => IntegerType::class,
-                'entry_options' => [
-                    'label' => false,
-                    'attr' => ['min' => 0]
-                ],
-                'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
-                'required' => false
-            ])*/
+
+        $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
+
+
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-success'
                 ]
-            ])
-            ->getForm();
+            ]);
 
         return $this->render('expertations/new.advanced.html.twig',[
                 'form' => $form->createView(),

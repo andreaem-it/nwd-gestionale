@@ -212,6 +212,13 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             <div class=\"col-sm-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
+                        <button type=\"button\"
+                                class=\"add-another-collection-widget\"
+                                data-list=\"#fields-list\">Add</button>
+                        ";
+        // line 97
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 97, $this->source); })()), 'form_start');
+        echo "
                         <table class=\"table table-responsive\">
                             <thead>
                                 <tr>
@@ -258,31 +265,45 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    <td id=\"fields-list\"
+                                        data-prototype=\"";
+        // line 145
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 145, $this->source); })()), "val1", array()), "vars", array()), "prototype", array()), 'widget'));
+        echo "\"
+                                        data-widget-tags=\"";
+        // line 146
+        echo twig_escape_filter($this->env, "");
+        echo "\">
+                                        ";
+        // line 147
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 147, $this->source); })()), "val1", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["val1"]) {
+            // line 148
+            echo "
+                                        ";
+            // line 149
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["val1"], 'widget');
+            echo "
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val1'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 151
+        echo "                                    </td>
+
+
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Prese esterne a parete</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 160
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 160, $this->source); })()), "val2", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -305,7 +326,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Prese aggiuntive e bivalenti 10/16A</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 183
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 183, $this->source); })()), "val3", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -328,7 +352,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Bipolare</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 206
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 206, $this->source); })()), "val4", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -351,7 +378,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Ventilatore / Estrattore Aria</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 229
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 229, $this->source); })()), "val5", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -379,7 +409,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Punti Comando</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 257
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 257, $this->source); })()), "val6", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -402,7 +435,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Comandi Agg.vi</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 280
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 280, $this->source); })()), "val7", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -430,7 +466,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Punti Luce</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 308
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 308, $this->source); })()), "val8", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -453,7 +492,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Punti Lice esterni a parete</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 331
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 331, $this->source); })()), "val9", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -476,7 +518,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Dimmer</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 354
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 354, $this->source); })()), "val10", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -499,7 +544,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Predisposizione LED parete o incasso</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 377
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 377, $this->source); })()), "val11", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -522,7 +570,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Sensori accendiluce/contatto porta</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 400
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 400, $this->source); })()), "val12", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -545,7 +596,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Luci emergenza predisposizione</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 423
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 423, $this->source); })()), "val13", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -568,7 +622,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Lampada Emergenza</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 446
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 446, $this->source); })()), "val14", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -591,7 +648,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Segnapasso LED predisposizione</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 469
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 469, $this->source); })()), "val15", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -614,7 +674,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Sensore luminosità</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 492
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 492, $this->source); })()), "val16", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -642,7 +705,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Allaccio condizionatore/termoconvettori</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 520
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 520, $this->source); })()), "val17", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -665,7 +731,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Caldaia/Pompa di calore</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 543
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 543, $this->source); })()), "val18", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -688,7 +757,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Terra ai collettori</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 566
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 566, $this->source); })()), "val19", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -711,7 +783,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Termostato</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 589
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 589, $this->source); })()), "val20", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -734,7 +809,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Sensore Umidità</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        ";
+        // line 612
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 612, $this->source); })()), "val21", array()), 'widget');
+        echo "
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -753,16 +831,45 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                 </tr>
                             </tbody>
+                            ";
+        // line 631
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 631, $this->source); })()), 'form_end');
+        echo "
                         </table>
                     </div>
                 </div>
             </div>
         </div>
         ";
-        // line 640
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 640, $this->source); })()), 'form_end');
+        // line 637
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 637, $this->source); })()), 'form_end');
         echo "
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('.add-another-collection-widget').click(function (e) {
+                    var list = jQuery(jQuery(this).attr('data-list'));
+                    // Try to find the counter of the list
+                    var counter = list.data('widget-counter') | list.children().length;
+                    // If the counter does not exist, use the length of the list
+                    if (!counter) { counter = list.children().length; }
 
+                    // grab the prototype template
+                    var newWidget = list.attr('data-prototype');
+                    // replace the \"__name__\" used in the id and name of the prototype
+                    // with a number that's unique to your emails
+                    // end name attribute looks like name=\"contact[emails][2]\"
+                    newWidget = newWidget.replace(/__name__/g, counter);
+                    // Increase the counter
+                    counter++;
+                    // And store it, the length cannot be used if deleting widgets is allowed
+                    list.data(' widget-counter', counter);
+
+                    // create a new list element and add it to the list
+                    var newElem = jQuery(list.attr('data-widget-tags')).html(newWidget);
+                    newElem.appendTo(list);
+                });
+            });
+        </script>
     </div>
 </div>
 ";
@@ -774,7 +881,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
 
     }
 
-    // line 645
+    // line 667
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -783,7 +890,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 646
+        // line 668
         echo "    <style>
         .form-control {
             width: 100%!important;
@@ -822,7 +929,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
 
     public function getDebugInfo()
     {
-        return array (  787 => 646,  778 => 645,  763 => 640,  204 => 84,  197 => 80,  190 => 76,  183 => 72,  176 => 68,  169 => 64,  162 => 60,  153 => 54,  146 => 49,  142 => 47,  138 => 45,  136 => 44,  127 => 38,  120 => 34,  113 => 30,  106 => 26,  99 => 22,  92 => 18,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
+        return array (  894 => 668,  885 => 667,  845 => 637,  836 => 631,  814 => 612,  788 => 589,  762 => 566,  736 => 543,  710 => 520,  679 => 492,  653 => 469,  627 => 446,  601 => 423,  575 => 400,  549 => 377,  523 => 354,  497 => 331,  471 => 308,  440 => 280,  414 => 257,  383 => 229,  357 => 206,  331 => 183,  305 => 160,  294 => 151,  286 => 149,  283 => 148,  279 => 147,  275 => 146,  271 => 145,  220 => 97,  204 => 84,  197 => 80,  190 => 76,  183 => 72,  176 => 68,  169 => 64,  162 => 60,  153 => 54,  146 => 49,  142 => 47,  138 => 45,  136 => 44,  127 => 38,  120 => 34,  113 => 30,  106 => 26,  99 => 22,  92 => 18,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -920,6 +1027,10 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             <div class=\"col-sm-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
+                        <button type=\"button\"
+                                class=\"add-another-collection-widget\"
+                                data-list=\"#fields-list\">Add</button>
+                        {{ form_start(form) }}
                         <table class=\"table table-responsive\">
                             <thead>
                                 <tr>
@@ -966,31 +1077,23 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                    <td id=\"fields-list\"
+                                        data-prototype=\"{{ form_widget(form.val1.vars.prototype)|e }}\"
+                                        data-widget-tags=\"{{ ''|e }}\">
+                                        {% for val1 in form.val1 %}
+
+                                        {{ form_widget(val1) }}
+                                    {% endfor %}
                                     </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+
+
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Prese esterne a parete</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val2) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1013,7 +1116,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Prese aggiuntive e bivalenti 10/16A</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val3) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1036,7 +1139,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Bipolare</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val4) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1059,7 +1162,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Ventilatore / Estrattore Aria</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val5) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1087,7 +1190,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Punti Comando</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val6) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1110,7 +1213,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Comandi Agg.vi</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val7) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1138,7 +1241,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Punti Luce</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val8) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1161,7 +1264,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Punti Lice esterni a parete</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val9) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1184,7 +1287,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Dimmer</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val10) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1207,7 +1310,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Predisposizione LED parete o incasso</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val11) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1230,7 +1333,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Sensori accendiluce/contatto porta</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val12) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1253,7 +1356,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Luci emergenza predisposizione</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val13) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1276,7 +1379,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Lampada Emergenza</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val14) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1299,7 +1402,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Segnapasso LED predisposizione</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val15) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1322,7 +1425,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Sensore luminosità</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val16) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1350,7 +1453,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Allaccio condizionatore/termoconvettori</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val17) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1373,7 +1476,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Caldaia/Pompa di calore</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val18) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1396,7 +1499,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Terra ai collettori</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val19) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1419,7 +1522,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Termostato</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val20) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1442,7 +1545,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                         <strong>Sensore Umidità</strong>
                                     </td>
                                     <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                        {{ form_widget(form.val21) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">
@@ -1461,13 +1564,39 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                 </tr>
                             </tbody>
+                            {{ form_end(form) }}
                         </table>
                     </div>
                 </div>
             </div>
         </div>
         {{ form_end(form) }}
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('.add-another-collection-widget').click(function (e) {
+                    var list = jQuery(jQuery(this).attr('data-list'));
+                    // Try to find the counter of the list
+                    var counter = list.data('widget-counter') | list.children().length;
+                    // If the counter does not exist, use the length of the list
+                    if (!counter) { counter = list.children().length; }
 
+                    // grab the prototype template
+                    var newWidget = list.attr('data-prototype');
+                    // replace the \"__name__\" used in the id and name of the prototype
+                    // with a number that's unique to your emails
+                    // end name attribute looks like name=\"contact[emails][2]\"
+                    newWidget = newWidget.replace(/__name__/g, counter);
+                    // Increase the counter
+                    counter++;
+                    // And store it, the length cannot be used if deleting widgets is allowed
+                    list.data(' widget-counter', counter);
+
+                    // create a new list element and add it to the list
+                    var newElem = jQuery(list.attr('data-widget-tags')).html(newWidget);
+                    newElem.appendTo(list);
+                });
+            });
+        </script>
     </div>
 </div>
 {% endblock %}

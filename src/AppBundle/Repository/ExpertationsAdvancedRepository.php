@@ -10,18 +10,7 @@ namespace AppBundle\Repository;
  */
 class ExpertationsAdvancedRepository extends \Doctrine\ORM\EntityRepository
 {
-    public $client;
-    public $tipo;
-    public $kw;
-    public $piani_casa;
-    public $riscaldamento;
-    public $opere_murarie;
-    public $trifase;
-    public $sconto;
-    public $level;
-    public $square_meters;
-
-    public function __construct() {
+    public function __construct($val) {
         return $this;
     }
 }

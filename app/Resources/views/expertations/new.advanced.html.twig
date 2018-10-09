@@ -91,6 +91,10 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
+                        <button type="button"
+                                class="add-another-collection-widget"
+                                data-list="#fields-list">Add</button>
+                        {{ form_start(form) }}
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
@@ -137,31 +141,23 @@
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                    <td>
-                                        <input class="form-control" type="number">
+                                    <td id="fields-list"
+                                        data-prototype="{{ form_widget(form.val1.vars.prototype)|e }}"
+                                        data-widget-tags="{{ ''|e }}">
+                                        {% for val1 in form.val1 %}
+
+                                        {{ form_widget(val1) }}
+                                    {% endfor %}
                                     </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+
+
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Prese esterne a parete</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val2) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -184,7 +180,7 @@
                                         <strong>Prese aggiuntive e bivalenti 10/16A</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val3) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -207,7 +203,7 @@
                                         <strong>Bipolare</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val4) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -230,7 +226,7 @@
                                         <strong>Ventilatore / Estrattore Aria</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val5) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -258,7 +254,7 @@
                                         <strong>Punti Comando</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val6) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -281,7 +277,7 @@
                                         <strong>Comandi Agg.vi</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val7) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -309,7 +305,7 @@
                                         <strong>Punti Luce</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val8) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -332,7 +328,7 @@
                                         <strong>Punti Lice esterni a parete</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val9) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -355,7 +351,7 @@
                                         <strong>Dimmer</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val10) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -378,7 +374,7 @@
                                         <strong>Predisposizione LED parete o incasso</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val11) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -401,7 +397,7 @@
                                         <strong>Sensori accendiluce/contatto porta</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val12) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -424,7 +420,7 @@
                                         <strong>Luci emergenza predisposizione</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val13) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -447,7 +443,7 @@
                                         <strong>Lampada Emergenza</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val14) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -470,7 +466,7 @@
                                         <strong>Segnapasso LED predisposizione</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val15) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -493,7 +489,7 @@
                                         <strong>Sensore luminosità</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val16) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -521,7 +517,7 @@
                                         <strong>Allaccio condizionatore/termoconvettori</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val17) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -544,7 +540,7 @@
                                         <strong>Caldaia/Pompa di calore</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val18) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -567,7 +563,7 @@
                                         <strong>Terra ai collettori</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val19) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -590,7 +586,7 @@
                                         <strong>Termostato</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val20) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -613,7 +609,7 @@
                                         <strong>Sensore Umidità</strong>
                                     </td>
                                     <td>
-                                        <input class="form-control" type="number">
+                                        {{ form_widget(form.val21) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
@@ -632,13 +628,39 @@
                                     </td>
                                 </tr>
                             </tbody>
+                            {{ form_end(form) }}
                         </table>
                     </div>
                 </div>
             </div>
         </div>
         {{ form_end(form) }}
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('.add-another-collection-widget').click(function (e) {
+                    var list = jQuery(jQuery(this).attr('data-list'));
+                    // Try to find the counter of the list
+                    var counter = list.data('widget-counter') | list.children().length;
+                    // If the counter does not exist, use the length of the list
+                    if (!counter) { counter = list.children().length; }
 
+                    // grab the prototype template
+                    var newWidget = list.attr('data-prototype');
+                    // replace the "__name__" used in the id and name of the prototype
+                    // with a number that's unique to your emails
+                    // end name attribute looks like name="contact[emails][2]"
+                    newWidget = newWidget.replace(/__name__/g, counter);
+                    // Increase the counter
+                    counter++;
+                    // And store it, the length cannot be used if deleting widgets is allowed
+                    list.data(' widget-counter', counter);
+
+                    // create a new list element and add it to the list
+                    var newElem = jQuery(list.attr('data-widget-tags')).html(newWidget);
+                    newElem.appendTo(list);
+                });
+            });
+        </script>
     </div>
 </div>
 {% endblock %}
