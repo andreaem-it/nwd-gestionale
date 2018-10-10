@@ -579,6 +579,9 @@ class ExpertationsController extends Controller
         $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
         //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
         $expertationsAdvanced = new ExpertationsAdvanced();
+        $ambientsCount = count($this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient());
+
+        dump($ambientsCount);
 
 
         $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
@@ -593,7 +596,8 @@ class ExpertationsController extends Controller
         return $this->render('expertations/new.advanced.html.twig',[
                 'form' => $form->createView(),
                 'item' => $item,
-                'func' => $this
+                'func' => $this,
+                'count' => $ambientsCount
 
         ]);
     }

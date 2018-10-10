@@ -212,48 +212,32 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             <div class=\"col-sm-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        <button type=\"button\"
-                                class=\"add-another-collection-widget\"
-                                data-list=\"#fields-list\">Add</button>
                         ";
-        // line 97
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 97, $this->source); })()), 'form_start');
+        // line 94
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 94, $this->source); })()), 'form_start');
         echo "
                         <table class=\"table table-responsive\">
                             <thead>
                                 <tr>
                                     <th>TIPOLOGIA</th>
-                                    <th>
+                                    ";
+        // line 99
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 99, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 100
+            echo "                                    <th>
                                         <select class=\"form-control\">
                                             <option>Ambiente</option>
                                         </select>
                                     </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                </tr>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 106
+        echo "                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -265,44 +249,33 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                    <td id=\"fields-list\"
-                                        data-prototype=\"";
-        // line 145
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 145, $this->source); })()), "val1", array()), "vars", array()), "prototype", array()), 'widget'));
-        echo "\"
-                                        data-widget-tags=\"";
-        // line 146
-        echo twig_escape_filter($this->env, "");
-        echo "\">
                                         ";
-        // line 147
+        // line 118
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 147, $this->source); })()), "val1", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["val1"]) {
-            // line 148
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 118, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 119
+            echo "                                        <td>
+                                            ";
+            // line 120
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 120, $this->source); })()), "val1", array()), "vars", array()), "prototype", array()), 'widget');
             echo "
+                                        </td>
                                         ";
-            // line 149
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["val1"], 'widget');
-            echo "
-                                    ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val1'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 151
-        echo "                                    </td>
-
-
-                                </tr>
+        // line 123
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Prese esterne a parete</strong>
                                     </td>
                                     <td>
                                         ";
-        // line 160
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 160, $this->source); })()), "val2", array()), 'widget');
+        // line 129
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 129, $this->source); })()), "val2", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -327,8 +300,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 183
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 183, $this->source); })()), "val3", array()), 'widget');
+        // line 152
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 152, $this->source); })()), "val3", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -353,8 +326,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 206
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 206, $this->source); })()), "val4", array()), 'widget');
+        // line 175
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 175, $this->source); })()), "val4", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -379,8 +352,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 229
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 229, $this->source); })()), "val5", array()), 'widget');
+        // line 198
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 198, $this->source); })()), "val5", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -410,8 +383,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 257
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 257, $this->source); })()), "val6", array()), 'widget');
+        // line 226
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 226, $this->source); })()), "val6", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -436,8 +409,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 280
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 280, $this->source); })()), "val7", array()), 'widget');
+        // line 249
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 249, $this->source); })()), "val7", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -467,8 +440,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 308
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 308, $this->source); })()), "val8", array()), 'widget');
+        // line 277
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 277, $this->source); })()), "val8", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -493,8 +466,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 331
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 331, $this->source); })()), "val9", array()), 'widget');
+        // line 300
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 300, $this->source); })()), "val9", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -519,8 +492,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 354
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 354, $this->source); })()), "val10", array()), 'widget');
+        // line 323
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 323, $this->source); })()), "val10", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -545,8 +518,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 377
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 377, $this->source); })()), "val11", array()), 'widget');
+        // line 346
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 346, $this->source); })()), "val11", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -571,8 +544,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 400
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 400, $this->source); })()), "val12", array()), 'widget');
+        // line 369
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 369, $this->source); })()), "val12", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -597,8 +570,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 423
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 423, $this->source); })()), "val13", array()), 'widget');
+        // line 392
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 392, $this->source); })()), "val13", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -623,8 +596,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 446
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 446, $this->source); })()), "val14", array()), 'widget');
+        // line 415
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 415, $this->source); })()), "val14", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -649,8 +622,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 469
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 469, $this->source); })()), "val15", array()), 'widget');
+        // line 438
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 438, $this->source); })()), "val15", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -675,8 +648,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 492
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 492, $this->source); })()), "val16", array()), 'widget');
+        // line 461
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 461, $this->source); })()), "val16", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -706,8 +679,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 520
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 520, $this->source); })()), "val17", array()), 'widget');
+        // line 489
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 489, $this->source); })()), "val17", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -732,8 +705,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 543
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 543, $this->source); })()), "val18", array()), 'widget');
+        // line 512
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 512, $this->source); })()), "val18", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -758,8 +731,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 566
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 566, $this->source); })()), "val19", array()), 'widget');
+        // line 535
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 535, $this->source); })()), "val19", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -784,8 +757,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 589
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 589, $this->source); })()), "val20", array()), 'widget');
+        // line 558
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 558, $this->source); })()), "val20", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -810,8 +783,1156 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         ";
-        // line 612
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 612, $this->source); })()), "val21", array()), 'widget');
+        // line 581
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 581, $this->source); })()), "val21", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        QUADRO ELETTRICO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 12 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 609
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 609, $this->source); })()), "val22", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 36 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 632
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 632, $this->source); })()), "val23", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 54 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 655
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 655, $this->source); })()), "val24", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 72 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 678
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 678, $this->source); })()), "val25", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sezionatore</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 701
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 701, $this->source); })()), "val26", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>MTD</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 724
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 724, $this->source); })()), "val27", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        SERVIZI PREDISPOSIZIONE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allarme Gas predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 752
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 752, $this->source); })()), "val28", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allagamento predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 775
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 775, $this->source); })()), "val29", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allarme predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 798
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 798, $this->source); })()), "val30", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Rilevatore di fumo predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 821
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 821, $this->source); })()), "val31", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Centralino telefonico</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 844
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 844, $this->source); })()), "val32", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Telefono</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 867
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 867, $this->source); })()), "val33", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Citofono Interno</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 890
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 890, $this->source); })()), "val34", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Citofono Esterno</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 913
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 913, $this->source); })()), "val35", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Videocitofono a parete</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 936
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 936, $this->source); })()), "val36", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Videocitofono esterno</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 959
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 959, $this->source); })()), "val37", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Campanello suoneria</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 982
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 982, $this->source); })()), "val38", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Dati predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1005
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1005, $this->source); })()), "val39", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Telecamere predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1028
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1028, $this->source); })()), "val40", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Tiranti e/o pulsanti emergenza</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1051
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1051, $this->source); })()), "val41", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Ronzatore emergenza</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1074
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1074, $this->source); })()), "val42", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>TV frutti</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1097
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1097, $this->source); })()), "val43", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>SAT frutti</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1120
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1120, $this->source); })()), "val44", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Antenna terrestre</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1143
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1143, $this->source); })()), "val45", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Parabola</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1166
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1166, $this->source); })()), "val46", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Touch 3,5\" a colori o EQ40</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1194
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1194, $this->source); })()), "val47", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Equinox 41</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1217
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1217, $this->source); })()), "val48", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Equinox 73</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1240
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1240, $this->source); })()), "val49", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Keypad Vantage</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1263
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1263, $this->source); })()), "val50", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Comandi diffusione sonora</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1286
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1286, $this->source); })()), "val51", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Diffusori</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1309
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1309, $this->source); })()), "val52", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Surround</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1332
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1332, $this->source); })()), "val53", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        PREDISPOSIZIONE AUTOMATISMI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore zanzariera/tenda</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1360
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1360, $this->source); })()), "val54", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore persiana/ lucernai/ grata</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1383
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1383, $this->source); })()), "val55", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore tapparella / oscurante</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1406
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1406, $this->source); })()), "val56", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>P.to comando motori</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1429
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1429, $this->source); })()), "val57", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Basculante</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1452
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1452, $this->source); })()), "val58", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Cancello</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1475
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1475, $this->source); })()), "val59", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        ASPIRAZIONE CENTRALIZZATA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Bocchette</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1503
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1503, $this->source); })()), "val60", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1526
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1526, $this->source); })()), "val61", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        RESOCONTO PLACCHE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 503</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1554
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1554, $this->source); })()), "val62", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 504</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1577
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1577, $this->source); })()), "val63", array()), 'widget');
+        echo "
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 506</strong>
+                                    </td>
+                                    <td>
+                                        ";
+        // line 1600
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1600, $this->source); })()), "val64", array()), 'widget');
         echo "
                                     </td>
                                     <td>
@@ -832,8 +1953,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                 </tr>
                             </tbody>
                             ";
-        // line 631
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 631, $this->source); })()), 'form_end');
+        // line 1619
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1619, $this->source); })()), 'form_end');
         echo "
                         </table>
                     </div>
@@ -841,8 +1962,8 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             </div>
         </div>
         ";
-        // line 637
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 637, $this->source); })()), 'form_end');
+        // line 1625
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1625, $this->source); })()), 'form_end');
         echo "
         <script>
             jQuery(document).ready(function () {
@@ -881,7 +2002,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
 
     }
 
-    // line 667
+    // line 1655
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -890,7 +2011,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 668
+        // line 1656
         echo "    <style>
         .form-control {
             width: 100%!important;
@@ -929,7 +2050,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
 
     public function getDebugInfo()
     {
-        return array (  894 => 668,  885 => 667,  845 => 637,  836 => 631,  814 => 612,  788 => 589,  762 => 566,  736 => 543,  710 => 520,  679 => 492,  653 => 469,  627 => 446,  601 => 423,  575 => 400,  549 => 377,  523 => 354,  497 => 331,  471 => 308,  440 => 280,  414 => 257,  383 => 229,  357 => 206,  331 => 183,  305 => 160,  294 => 151,  286 => 149,  283 => 148,  279 => 147,  275 => 146,  271 => 145,  220 => 97,  204 => 84,  197 => 80,  190 => 76,  183 => 72,  176 => 68,  169 => 64,  162 => 60,  153 => 54,  146 => 49,  142 => 47,  138 => 45,  136 => 44,  127 => 38,  120 => 34,  113 => 30,  106 => 26,  99 => 22,  92 => 18,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
+        return array (  2015 => 1656,  2006 => 1655,  1966 => 1625,  1957 => 1619,  1935 => 1600,  1909 => 1577,  1883 => 1554,  1852 => 1526,  1826 => 1503,  1795 => 1475,  1769 => 1452,  1743 => 1429,  1717 => 1406,  1691 => 1383,  1665 => 1360,  1634 => 1332,  1608 => 1309,  1582 => 1286,  1556 => 1263,  1530 => 1240,  1504 => 1217,  1478 => 1194,  1447 => 1166,  1421 => 1143,  1395 => 1120,  1369 => 1097,  1343 => 1074,  1317 => 1051,  1291 => 1028,  1265 => 1005,  1239 => 982,  1213 => 959,  1187 => 936,  1161 => 913,  1135 => 890,  1109 => 867,  1083 => 844,  1057 => 821,  1031 => 798,  1005 => 775,  979 => 752,  948 => 724,  922 => 701,  896 => 678,  870 => 655,  844 => 632,  818 => 609,  787 => 581,  761 => 558,  735 => 535,  709 => 512,  683 => 489,  652 => 461,  626 => 438,  600 => 415,  574 => 392,  548 => 369,  522 => 346,  496 => 323,  470 => 300,  444 => 277,  413 => 249,  387 => 226,  356 => 198,  330 => 175,  304 => 152,  278 => 129,  270 => 123,  261 => 120,  258 => 119,  254 => 118,  240 => 106,  229 => 100,  225 => 99,  217 => 94,  204 => 84,  197 => 80,  190 => 76,  183 => 72,  176 => 68,  169 => 64,  162 => 60,  153 => 54,  146 => 49,  142 => 47,  138 => 45,  136 => 44,  127 => 38,  120 => 34,  113 => 30,  106 => 26,  99 => 22,  92 => 18,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -1027,44 +2148,18 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             <div class=\"col-sm-12\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        <button type=\"button\"
-                                class=\"add-another-collection-widget\"
-                                data-list=\"#fields-list\">Add</button>
                         {{ form_start(form) }}
                         <table class=\"table table-responsive\">
                             <thead>
                                 <tr>
                                     <th>TIPOLOGIA</th>
+                                    {% for i in 0..count %}
                                     <th>
                                         <select class=\"form-control\">
                                             <option>Ambiente</option>
                                         </select>
                                     </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class=\"form-control\">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
+                                    {% endfor %}
                                 </tr>
                             </thead>
                             <tbody>
@@ -1077,16 +2172,11 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                    <td id=\"fields-list\"
-                                        data-prototype=\"{{ form_widget(form.val1.vars.prototype)|e }}\"
-                                        data-widget-tags=\"{{ ''|e }}\">
-                                        {% for val1 in form.val1 %}
-
-                                        {{ form_widget(val1) }}
-                                    {% endfor %}
-                                    </td>
-
-
+                                        {% for i in 0..count %}
+                                        <td>
+                                            {{ form_widget(form.val1.vars.prototype) }}
+                                        </td>
+                                        {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
@@ -1546,6 +2636,1025 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     <td>
                                         {{ form_widget(form.val21) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        QUADRO ELETTRICO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 12 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val22) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 36 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val23) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 54 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val24) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 72 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val25) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sezionatore</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val26) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>MTD</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val27) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        SERVIZI PREDISPOSIZIONE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allarme Gas predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val28) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allagamento predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val29) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allarme predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val30) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Rilevatore di fumo predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val31) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Centralino telefonico</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val32) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Telefono</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val33) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Citofono Interno</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val34) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Citofono Esterno</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val35) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Videocitofono a parete</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val36) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Videocitofono esterno</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val37) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Campanello suoneria</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val38) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Dati predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val39) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Telecamere predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val40) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Tiranti e/o pulsanti emergenza</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val41) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Ronzatore emergenza</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val42) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>TV frutti</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val43) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>SAT frutti</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val44) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Antenna terrestre</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val45) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Parabola</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val46) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Touch 3,5\" a colori o EQ40</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val47) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Equinox 41</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val48) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Equinox 73</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val49) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Keypad Vantage</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val50) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Comandi diffusione sonora</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val51) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Diffusori</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val52) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Surround</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val53) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        PREDISPOSIZIONE AUTOMATISMI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore zanzariera/tenda</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val54) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore persiana/ lucernai/ grata</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val55) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore tapparella / oscurante</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val56) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>P.to comando motori</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val57) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Basculante</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val58) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Cancello</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val59) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        ASPIRAZIONE CENTRALIZZATA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Bocchette</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val60) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val61) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        RESOCONTO PLACCHE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 503</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val62) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 504</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val63) }}
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                    <td>
+                                        <input class=\"form-control\" type=\"number\">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 506</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val64) }}
                                     </td>
                                     <td>
                                         <input class=\"form-control\" type=\"number\">

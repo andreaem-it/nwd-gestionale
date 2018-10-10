@@ -4,6 +4,7 @@ namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,8 +17,8 @@ class ExpertationsAdvancedType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('father')
-            ->add('val1', CollectionType::class, [
+            ->add('father', HiddenType::class)
+            /*->add('val1', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
@@ -28,7 +29,18 @@ class ExpertationsAdvancedType extends AbstractType
                 'allow_delete' => 'true',
                 'required' => false,
                 //'value' => $item->getC1v()
-            ])
+            ])*/
+            ->add('val1', CollectionType::class,[
+                'entry_type' => IntegerType::class,
+                'entry_options' => [
+                    'label' => false,
+                    'attr' => ['min' => 0]
+                ],
+                'label' => false,
+                'allow_add' => 'true',
+                'allow_delete' => 'true',
+                'required' => false
+                ])
             ->add('val2', IntegerType::class)
             ->add('val3', IntegerType::class)
             ->add('val4', IntegerType::class)
@@ -91,8 +103,7 @@ class ExpertationsAdvancedType extends AbstractType
             ->add('val61', IntegerType::class)
             ->add('val62', IntegerType::class)
             ->add('val63', IntegerType::class)
-            ->add('val64', IntegerType::class)
-            ->add('val65', IntegerType::class);
+            ->add('val64', IntegerType::class);
     }/**
      * {@inheritdoc}
      */

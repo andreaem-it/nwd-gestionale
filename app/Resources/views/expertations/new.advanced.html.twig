@@ -91,44 +91,18 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <button type="button"
-                                class="add-another-collection-widget"
-                                data-list="#fields-list">Add</button>
                         {{ form_start(form) }}
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>TIPOLOGIA</th>
+                                    {% for i in 0..count %}
                                     <th>
                                         <select class="form-control">
                                             <option>Ambiente</option>
                                         </select>
                                     </th>
-                                    <th>
-                                        <select class="form-control">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-control">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-control">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-control">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-control">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
+                                    {% endfor %}
                                 </tr>
                             </thead>
                             <tbody>
@@ -141,16 +115,11 @@
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                    <td id="fields-list"
-                                        data-prototype="{{ form_widget(form.val1.vars.prototype)|e }}"
-                                        data-widget-tags="{{ ''|e }}">
-                                        {% for val1 in form.val1 %}
-
-                                        {{ form_widget(val1) }}
-                                    {% endfor %}
-                                    </td>
-
-
+                                        {% for i in 0..count %}
+                                        <td>
+                                            {{ form_widget(form.val1.vars.prototype) }}
+                                        </td>
+                                        {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
@@ -610,6 +579,1025 @@
                                     </td>
                                     <td>
                                         {{ form_widget(form.val21) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        QUADRO ELETTRICO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 12 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val22) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 36 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val23) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 54 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val24) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Quadro 72 Moduli</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val25) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sezionatore</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val26) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>MTD</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val27) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        SERVIZI PREDISPOSIZIONE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allarme Gas predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val28) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allagamento predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val29) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Allarme predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val30) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Rilevatore di fumo predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val31) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Centralino telefonico</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val32) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Telefono</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val33) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Citofono Interno</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val34) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Citofono Esterno</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val35) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Videocitofono a parete</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val36) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Videocitofono esterno</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val37) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Campanello suoneria</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val38) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Dati predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val39) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Telecamere predisposizione</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val40) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Tiranti e/o pulsanti emergenza</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val41) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Ronzatore emergenza</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val42) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>TV frutti</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val43) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>SAT frutti</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val44) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Antenna terrestre</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val45) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Parabola</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val46) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Touch 3,5" a colori o EQ40</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val47) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Equinox 41</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val48) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Equinox 73</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val49) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Keypad Vantage</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val50) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Comandi diffusione sonora</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val51) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Diffusori</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val52) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Surround</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val53) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        PREDISPOSIZIONE AUTOMATISMI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore zanzariera/tenda</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val54) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore persiana/ lucernai/ grata</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val55) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore tapparella / oscurante</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val56) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>P.to comando motori</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val57) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Basculante</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val58) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Cancello</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val59) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        ASPIRAZIONE CENTRALIZZATA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Bocchette</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val60) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motore</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val61) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10">
+                                        RESOCONTO PLACCHE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 503</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val62) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 504</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val63) }}
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 506</strong>
+                                    </td>
+                                    <td>
+                                        {{ form_widget(form.val64) }}
                                     </td>
                                     <td>
                                         <input class="form-control" type="number">
