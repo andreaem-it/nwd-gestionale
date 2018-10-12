@@ -8,6 +8,7 @@
                 <h3>Preventivo <small>Nuovo > Avanzato</small></h3>
             </div>
         </div>
+        {% form_theme form 'jquery.collection.html.twig' %}
         {{ form_start(form) }}
         <div class="mt-3">
             <div class="card">
@@ -92,17 +93,20 @@
                 <div class="card">
                     <div class="card-body">
                         {{ form_start(form) }}
-                        <table class="table table-responsive">
+                        <table class="table table-responsive" style="overflow-y: visible">
                             <thead>
                                 <tr>
                                     <th>TIPOLOGIA</th>
-                                    {% for i in 0..count %}
-                                    <th>
-                                        <select class="form-control">
-                                            <option>Ambiente</option>
-                                        </select>
-                                    </th>
+                                    {% for item in count %}
+                                        <th>
+                                            {{ func.room(item) }}
+                                        </th>
                                     {% endfor %}
+                                    {#{% for i in 0..count|length %}
+                                        <th>
+                                            {{ item.[index0.loop].ambient }}
+                                        </th>
+                                    {% endfor %}#}
                                 </tr>
                             </thead>
                             <tbody>
@@ -115,103 +119,51 @@
                                     <td>
                                         <strong >Punti Presa</strong>
                                     </td>
-                                        {% for i in 0..count %}
+                                    {% for item in 1..count|length %}
                                         <td>
-                                            {{ form_widget(form.val1.vars.prototype) }}
+                                            <input class="form-control" type="number" id="form_val1_{{ item }}">
                                         </td>
-                                        {% endfor %}
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Prese esterne a parete</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val2) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val2_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Prese aggiuntive e bivalenti 10/16A</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val3) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val3_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Bipolare</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val4) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val4_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Ventilatore / Estrattore Aria</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val5) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val5_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan="10">
@@ -222,47 +174,21 @@
                                     <td>
                                         <strong>Punti Comando</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val6) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val6_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Comandi Agg.vi</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val7) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val7_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan="10">
@@ -273,70 +199,31 @@
                                     <td>
                                         <strong>Punti Luce</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val8) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val8_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Punti Lice esterni a parete</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val9) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val9_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Dimmer</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val10) }}
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="number">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class="form-control" type="number" id="form_val10_{{ item }}">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
@@ -1651,6 +1538,10 @@
         </script>
     </div>
 </div>
+    <script src="{{ asset('js/jquery.collection.js') }}"></script>
+    <script type="text/javascript">
+        $('.collection').collection();
+    </script>
 {% endblock %}
 {% block stylesheets %}
     <style>

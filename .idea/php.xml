@@ -50,6 +50,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-acl" />
       <path value="$PROJECT_DIR$/vendor/symfony/acl-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ninsuo/symfony-collection" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />

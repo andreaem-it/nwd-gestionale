@@ -30,17 +30,7 @@ class ExpertationsAdvancedType extends AbstractType
                 'required' => false,
                 //'value' => $item->getC1v()
             ])*/
-            ->add('val1', CollectionType::class,[
-                'entry_type' => IntegerType::class,
-                'entry_options' => [
-                    'label' => false,
-                    'attr' => ['min' => 0]
-                ],
-                'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
-                'required' => false
-                ])
+            ->add('val1', IntegerType::class)
             ->add('val2', IntegerType::class)
             ->add('val3', IntegerType::class)
             ->add('val4', IntegerType::class)

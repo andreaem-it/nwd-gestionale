@@ -6,6 +6,7 @@ use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
 use AppBundle\Entity\ExpertationsAdvanced;
 use AppBundle\Entity\Heatings;
+use AppBundle\Entity\Rooms;
 use AppBundle\Entity\Users;
 use AppBundle\Form\ExpertationsAdvancedType;
 use Doctrine\ORM\EntityRepository;
@@ -579,7 +580,7 @@ class ExpertationsController extends Controller
         $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
         //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
         $expertationsAdvanced = new ExpertationsAdvanced();
-        $ambientsCount = count($this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient());
+        $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient();
 
         dump($ambientsCount);
 
@@ -767,5 +768,9 @@ class ExpertationsController extends Controller
                 return 4;
                 break;
         }
+    }
+
+    function getRoom($id) {
+        return $this->getDoctrine()->getRepository(Rooms::class)->find($id)->getName();
     }
 }
