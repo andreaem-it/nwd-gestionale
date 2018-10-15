@@ -575,7 +575,7 @@ class ExpertationsController extends Controller
     /**
      * @Route("preventivi/avanzato/nuovo/{id}", name="nuovo_preventivo_avanzato", defaults={"id" : "0"})
      */
-    public function newExpertationAdvancedAction($id) {
+    public function newExpertationAdvancedAction(Request $request,$id) {
 
         $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
         //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
@@ -586,13 +586,20 @@ class ExpertationsController extends Controller
 
 
         $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
-
-
             ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-success'
+                    'class' => 'btn btn-success',
+                    'style' => 'display:none'
                 ]
             ]);
+
+        $form->handleRequest($request);
+
+        if ($form->isValid() && $form->isSubmitted()) {
+            $expAdv = new ExpertationsAdvanced();
+
+            dump($form->getData());
+        }
 
         return $this->render('expertations/new.advanced.html.twig',[
                 'form' => $form->createView(),
@@ -632,56 +639,7 @@ class ExpertationsController extends Controller
         }
     }
 
-    /**
-     * @Route("ajax/expertations/get/outlets/{level}/{room}", name="ajax_get_expertations_room")
-     */
-    public function AjaxEGO($room, $level) {
 
-        $outlets = $this->getDoctrine()->getManager()->getRepository('AppBundle:Outlets')->findBy(['roomId' => $room,'level' => $level]);
-
-        $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
-        $json = $serializer->serialize($outlets, 'json');
-
-        $response = new Response();
-        $response->setContent($json);
-        $response->headers->set('Content-Type', 'application/json');
-
-        return $response;
-    }
-
-    /**
-     * @Route("ajax/expertations/get/quadri/{tipo}/{level}/{meters}", name="ajax_get_expertations_quadri")
-     */
-    public function AjaxEGQ($tipo, $level, $meters) {
-
-        $quadri = $this->getDoctrine()->getManager()->getRepository('AppBundle:Quadri_Elettrici')
-            ->createQueryBuilder('r')
-            ->select('r.numero')
-            ->where('r.livello = :livello')
-            ->andWhere('r.tipo = :tipo')
-            ->andWhere('r.areaDa < :meters')
-            ->andWhere('r.areaA > :meters')
-            ->setParameter('livello', $level)
-            ->setParameter('tipo', $tipo)
-            ->setParameter('meters', $meters)
-            ->getQuery()
-            ->getScalarResult();
-
-        return new Response($quadri[0]['numero']);
-    }
-
-    /**
-     * @Route("ajax/expertation/get/tiranti/{room}", name="ajax_get_tiranti")
-     */
-    public function AjaxEGT($room) {
-        if ($room == 12 ) {
-            return new Response(1);
-        } elseif ($room == 8 ) {
-            return new Response(1);
-        } else {
-            return new Response(0);
-        }
-    }
 
     /**
      * @param $uid
@@ -772,5 +730,93 @@ class ExpertationsController extends Controller
 
     function getRoom($id) {
         return $this->getDoctrine()->getRepository(Rooms::class)->find($id)->getName();
+    }
+
+    /** AJAX FUNCTIONS */
+
+    /**
+     * @Route("ajax/get/expData/{exp}/{field}", name="ajax_get_expdata_field")
+     */
+    public function AjaxGetExpDataFiledAction($exp,$field) {
+
+        switch ($field) {
+            case 'pp':
+                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPp();
+                $result = implode(',',$return);
+                return new Response($result);
+                break;
+            case 'pl':
+                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPl();
+                $result = implode(',',$return);
+                return new Response($result);
+                break;
+            case 'pt':
+                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPt();
+                $result = implode(',',$return);
+                return new Response($result);
+                break;
+            case 'c1v':
+                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getC1v();
+                $result = implode(',',$return);
+                return new Response($result);
+                break;
+            case 'c2v':
+                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getC2v();
+                $result = implode(',',$return);
+                return new Response($result);
+                break;
+        }
+
+    }
+
+    /**
+     * @Route("ajax/expertations/get/outlets/{level}/{room}", name="ajax_get_expertations_room")
+     */
+    public function AjaxEGO($room, $level) {
+
+        $outlets = $this->getDoctrine()->getManager()->getRepository('AppBundle:Outlets')->findBy(['roomId' => $room,'level' => $level]);
+
+        $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
+        $json = $serializer->serialize($outlets, 'json');
+
+        $response = new Response();
+        $response->setContent($json);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
+    /**
+     * @Route("ajax/expertations/get/quadri/{tipo}/{level}/{meters}", name="ajax_get_expertations_quadri")
+     */
+    public function AjaxEGQ($tipo, $level, $meters) {
+
+        $quadri = $this->getDoctrine()->getManager()->getRepository('AppBundle:Quadri_Elettrici')
+            ->createQueryBuilder('r')
+            ->select('r.numero')
+            ->where('r.livello = :livello')
+            ->andWhere('r.tipo = :tipo')
+            ->andWhere('r.areaDa < :meters')
+            ->andWhere('r.areaA > :meters')
+            ->setParameter('livello', $level)
+            ->setParameter('tipo', $tipo)
+            ->setParameter('meters', $meters)
+            ->getQuery()
+            ->getScalarResult();
+
+        return new Response($quadri[0]['numero']);
+    }
+
+    /**
+     * @Route("ajax/expertation/get/tiranti/{room}", name="ajax_get_tiranti")
+     */
+    public function AjaxEGT($room) {
+        if ($room == 12 ) {
+            return new Response(1);
+        } elseif ($room == 8 ) {
+            return new Response(1);
+        } else {
+            return new Response(0);
+        }
     }
 }

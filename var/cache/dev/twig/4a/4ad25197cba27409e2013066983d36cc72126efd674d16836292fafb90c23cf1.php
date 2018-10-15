@@ -262,7 +262,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 123
             echo "                                        <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val1_";
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val1_";
             // line 124
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
@@ -285,7 +285,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 133
             echo "                                        <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val2_";
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val2_";
             // line 134
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
@@ -308,7 +308,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 143
             echo "                                        <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val3_";
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val3_";
             // line 144
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
@@ -331,7 +331,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 153
             echo "                                        <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val4_";
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val4_";
             // line 154
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
@@ -354,7 +354,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 163
             echo "                                        <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val5_";
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val5_";
             // line 164
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
@@ -382,7 +382,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
             // line 178
             echo "                                        <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val6_";
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val6_";
             // line 179
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
@@ -398,28 +398,25 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Comandi Agg.vi</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 188
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 188, $this->source); })()), "val7", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 187
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 187, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 188
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val7_";
+            // line 189
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 192
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
@@ -429,236 +426,209 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Punti Luce</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 216
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 216, $this->source); })()), "val8", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 202
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 202, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 203
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val8_";
+            // line 204
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 207
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Punti Lice esterni a parete</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 239
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 239, $this->source); })()), "val9", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 212
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 212, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 213
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val9_";
+            // line 214
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 217
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Dimmer</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 262
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 262, $this->source); })()), "val10", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 222
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 222, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 223
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val10_";
+            // line 224
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 227
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Predisposizione LED parete o incasso</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 285
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 285, $this->source); })()), "val11", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 232
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 232, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 233
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val11_";
+            // line 234
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 237
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Sensori accendiluce/contatto porta</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 308
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 308, $this->source); })()), "val12", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 242
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 242, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 243
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val12_";
+            // line 244
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 247
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Luci emergenza predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 331
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 331, $this->source); })()), "val13", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 252
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 252, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 253
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val13_";
+            // line 254
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 257
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Lampada Emergenza</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 354
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 354, $this->source); })()), "val14", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 262
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 262, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 263
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val14_";
+            // line 264
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 267
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Segnapasso LED predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 377
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 377, $this->source); })()), "val15", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 272
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 272, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 273
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val15_";
+            // line 274
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 277
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Sensore luminosità</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 400
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 400, $this->source); })()), "val16", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 282
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 282, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 283
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val16_";
+            // line 284
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 287
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         RISCALDAMENTO
@@ -668,132 +638,117 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Allaccio condizionatore/termoconvettori</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 428
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 428, $this->source); })()), "val17", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 297
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 297, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 298
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val17_";
+            // line 299
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 302
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Caldaia/Pompa di calore</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 451
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 451, $this->source); })()), "val18", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 307
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 307, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 308
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val18_";
+            // line 309
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 312
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Terra ai collettori</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 474
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 474, $this->source); })()), "val19", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 317
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 317, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 318
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val19_";
+            // line 319
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 322
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Termostato</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 497
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 497, $this->source); })()), "val20", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 327
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 327, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 328
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val20_";
+            // line 329
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 332
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Sensore Umidità</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 520
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 520, $this->source); })()), "val21", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 337
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 337, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 338
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val21_";
+            // line 339
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 342
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         QUADRO ELETTRICO
@@ -803,158 +758,141 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Quadro 12 Moduli</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 548
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 548, $this->source); })()), "val22", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 352
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 352, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 353
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val22_";
+            // line 354
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 357
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Quadro 36 Moduli</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 571
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 571, $this->source); })()), "val23", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 362
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 362, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 363
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val23_";
+            // line 364
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 367
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Quadro 54 Moduli</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 594
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 594, $this->source); })()), "val24", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 372
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 372, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 373
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val24_";
+            // line 374
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 377
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Quadro 72 Moduli</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 617
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 617, $this->source); })()), "val25", array()), 'widget');
-        echo "
+                                    ";
+        // line 382
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 382, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 383
+            echo "                                    <td>
+                                        <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val25_";
+            // line 384
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
                                     </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 387
+        echo "                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Sezionatore</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 640
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 640, $this->source); })()), "val26", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 393
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 393, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 394
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val26_";
+            // line 395
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 398
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>MTD</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 663
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 663, $this->source); })()), "val27", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 403
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 403, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 404
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val27_";
+            // line 405
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 408
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         SERVIZI PREDISPOSIZIONE
@@ -964,496 +902,439 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Allarme Gas predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 691
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 691, $this->source); })()), "val28", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 418
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 418, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 419
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val28_";
+            // line 420
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 423
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Allagamento predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 714
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 714, $this->source); })()), "val29", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 428
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 428, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 429
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val29_";
+            // line 430
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 433
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Allarme predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 737
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 737, $this->source); })()), "val30", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 438
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 438, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 439
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val30_";
+            // line 440
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 443
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Rilevatore di fumo predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 760
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 760, $this->source); })()), "val31", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 448
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 448, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 449
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val31_";
+            // line 450
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 453
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Centralino telefonico</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 783
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 783, $this->source); })()), "val32", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 458
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 458, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 459
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val32_";
+            // line 460
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 463
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Telefono</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 806
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 806, $this->source); })()), "val33", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 468
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 468, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 469
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val33_";
+            // line 470
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 473
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Citofono Interno</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 829
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 829, $this->source); })()), "val34", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 478
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 478, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 479
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val34_";
+            // line 480
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 483
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Citofono Esterno</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 852
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 852, $this->source); })()), "val35", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 488
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 488, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 489
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val35_";
+            // line 490
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 493
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Videocitofono a parete</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 875
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 875, $this->source); })()), "val36", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 498
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 498, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 499
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val36_";
+            // line 500
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 503
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Videocitofono esterno</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 898
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 898, $this->source); })()), "val37", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 508
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 508, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 509
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val37_";
+            // line 510
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 513
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Campanello suoneria</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 921
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 921, $this->source); })()), "val38", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 518
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 518, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 519
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val38_";
+            // line 520
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 523
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Dati predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 944
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 944, $this->source); })()), "val39", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 528
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 528, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 529
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val39_";
+            // line 530
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 533
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Telecamere predisposizione</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 967
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 967, $this->source); })()), "val40", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 538
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 538, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 539
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val40_";
+            // line 540
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 543
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Tiranti e/o pulsanti emergenza</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 990
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 990, $this->source); })()), "val41", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 548
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 548, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 549
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val41_";
+            // line 550
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 553
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Ronzatore emergenza</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1013
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1013, $this->source); })()), "val42", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 558
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 558, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 559
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val42_";
+            // line 560
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 563
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>TV frutti</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1036
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1036, $this->source); })()), "val43", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 568
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 568, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 569
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val43_";
+            // line 570
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 573
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>SAT frutti</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1059
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1059, $this->source); })()), "val44", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 578
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 578, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 579
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val44_";
+            // line 580
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 583
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Antenna terrestre</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1082
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1082, $this->source); })()), "val45", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 588
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 588, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 589
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val45_";
+            // line 590
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 593
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Parabola</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1105
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1105, $this->source); })()), "val46", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 598
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 598, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 599
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val46_";
+            // line 600
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 603
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
@@ -1463,184 +1344,163 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Touch 3,5\" a colori o EQ40</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1133
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1133, $this->source); })()), "val47", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 613
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 613, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 614
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val47_";
+            // line 615
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 618
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Equinox 41</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1156
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1156, $this->source); })()), "val48", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 623
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 623, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 624
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val48_";
+            // line 625
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 628
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Equinox 73</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1179
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1179, $this->source); })()), "val49", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 633
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 633, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 634
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val49_";
+            // line 635
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 638
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Keypad Vantage</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1202
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1202, $this->source); })()), "val50", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 643
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 643, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 644
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val50_";
+            // line 645
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 648
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Comandi diffusione sonora</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1225
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1225, $this->source); })()), "val51", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 653
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 653, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 654
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val51_";
+            // line 655
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 658
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Diffusori</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1248
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1248, $this->source); })()), "val52", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 663
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 663, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 664
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val52_";
+            // line 665
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 668
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Surround</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1271
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1271, $this->source); })()), "val53", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 673
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 673, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 674
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val53_";
+            // line 675
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 678
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         PREDISPOSIZIONE AUTOMATISMI
@@ -1650,158 +1510,140 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Motore zanzariera/tenda</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1299
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1299, $this->source); })()), "val54", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 688
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 688, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 689
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val54_";
+            // line 690
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 693
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Motore persiana/ lucernai/ grata</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1322
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1322, $this->source); })()), "val55", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 698
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 698, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 699
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val55_";
+            // line 700
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 703
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Motore tapparella / oscurante</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1345
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1345, $this->source); })()), "val56", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 708
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 708, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 709
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val56_";
+            // line 710
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 713
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>P.to comando motori</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1368
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1368, $this->source); })()), "val57", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 718
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 718, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 719
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val57_";
+            // line 720
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 723
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Basculante</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1391
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1391, $this->source); })()), "val58", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 728
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 728, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 729
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val58_";
+            // line 730
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 733
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Cancello</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1414
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1414, $this->source); })()), "val59", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 738
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 738, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 739
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val59_";
+            // line 740
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 743
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         ASPIRAZIONE CENTRALIZZATA
@@ -1811,54 +1653,48 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Bocchette</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1442
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1442, $this->source); })()), "val60", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 753
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 753, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 754
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val60_";
+            // line 755
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 758
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Motore</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1465
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1465, $this->source); })()), "val61", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 763
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 763, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 764
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val61_";
+            // line 765
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 768
+        echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
                                         RESOCONTO PLACCHE
@@ -1868,129 +1704,173 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Supporti 503</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1493
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1493, $this->source); })()), "val62", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 778
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 778, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 779
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val62_";
+            // line 780
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 783
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Supporti 504</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1516
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1516, $this->source); })()), "val63", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 788
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 788, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 789
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val63_";
+            // line 790
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 793
+        echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Supporti 506</strong>
                                     </td>
-                                    <td>
-                                        ";
-        // line 1539
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1539, $this->source); })()), "val64", array()), 'widget');
-        echo "
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                </tr>
+                                    ";
+        // line 798
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 798, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 799
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val64_";
+            // line 800
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 803
+        echo "                                </tr>
                             </tbody>
                             ";
-        // line 1558
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1558, $this->source); })()), 'form_end');
+        // line 805
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 805, $this->source); })()), "submit", array()), 'widget');
+        echo "
+                            <div class=\"row\">
+                                <div class=\"col-9\"></div>
+                                <div class=\"col-3\">
+                                    <div class=\"card card-generate \">
+                                        <div class=\"card-body pt-2 pb-4\">
+                                            <div class=\"row\">
+                                                <div class=\"col-6\">
+                                                    <a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3\">Genera</a>
+                                                </div>
+                                                <div class=\"col-6\">
+                                                    <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3\">Annulla</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            ";
+        // line 823
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 823, $this->source); })()), 'form_end');
         echo "
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        ";
-        // line 1564
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1564, $this->source); })()), 'form_end');
-        echo "
         <script>
-            jQuery(document).ready(function () {
-                jQuery('.add-another-collection-widget').click(function (e) {
-                    var list = jQuery(jQuery(this).attr('data-list'));
-                    // Try to find the counter of the list
-                    var counter = list.data('widget-counter') | list.children().length;
-                    // If the counter does not exist, use the length of the list
-                    if (!counter) { counter = list.children().length; }
+            \$(document).ready( function () {
+                update(";
+        // line 831
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 831, $this->source); })()), "id", array()), "html", null, true);
+        echo ",'pp','val1');
+                update(";
+        // line 832
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 832, $this->source); })()), "id", array()), "html", null, true);
+        echo ",'pl','val8');
+                update(";
+        // line 833
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 833, $this->source); })()), "id", array()), "html", null, true);
+        echo ",'c1v','val6');
+                update(";
+        // line 834
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 834, $this->source); })()), "id", array()), "html", null, true);
+        echo ",'c2v','val41');
+                }
+            );
 
-                    // grab the prototype template
-                    var newWidget = list.attr('data-prototype');
-                    // replace the \"__name__\" used in the id and name of the prototype
-                    // with a number that's unique to your emails
-                    // end name attribute looks like name=\"contact[emails][2]\"
-                    newWidget = newWidget.replace(/__name__/g, counter);
-                    // Increase the counter
-                    counter++;
-                    // And store it, the length cannot be used if deleting widgets is allowed
-                    list.data(' widget-counter', counter);
+            \$('#generateBtn').click(function(e) {
+                e.preventDefault();
+                toastr.info(\"Genero Preventivo\");
+                for(var i = 1; i < 64; i++) {
+                    \$('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
+                    \$('#appbundle_expertationsadvanced_submit').trigger('click')
+                }
 
-                    // create a new list element and add it to the list
-                    var newElem = jQuery(list.attr('data-widget-tags')).html(newWidget);
-                    newElem.appendTo(list);
-                });
             });
+
+            function collect(valn) {
+                var arr = [];
+                \$('input[id^=\"form_' + valn + '_\"]').each(function() {
+                    arr.push(\$(this).val());
+                });
+                return arr.join(\",\");
+            }
+
+            function update(exp,field,valn){
+                \$.ajax({
+                    url: '/ajax/get/expData/' + exp + '/' + field,
+                    success: function (data) {
+                        for (var i = 0; i < ";
+        // line 860
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 860, $this->source); })())), "html", null, true);
+        echo "; i++) {
+                            var numbersArray = data.split(',');
+                            \$.each(numbersArray, function(index, value) {
+                                var ind = index +1;
+                                \$('#form_'+ valn + '_' + ind).val(value);
+                            });
+
+                        }
+                    }
+                })
+            }
         </script>
     </div>
 </div>
     <script src=\"";
-        // line 1593
+        // line 874
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.collection.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\">
         \$('.collection').collection();
     </script>
+    <script src=\"";
+        // line 878
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -2000,7 +1880,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
 
     }
 
-    // line 1598
+    // line 880
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -2009,10 +1889,13 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 1599
+        // line 881
         echo "    <style>
         .form-control {
-            width: 100%!important;
+
+            width: 100px;
+            min-width: 100px;
+
         }
         select {
             width:100%!important;
@@ -2025,8 +1908,25 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             line-height: 1;
             vertical-align: top;
         }
+        .card-generate {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-top-left-radius: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .card-generate {
+                position: fixed;
+                width: 100%;
+            }
+        }
     </style>
-
+    <link rel=\"stylesheet\" href=\"";
+        // line 914
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
+        echo "\">
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -2048,7 +1948,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
 
     public function getDebugInfo()
     {
-        return array (  2013 => 1599,  2004 => 1598,  1989 => 1593,  1957 => 1564,  1948 => 1558,  1926 => 1539,  1900 => 1516,  1874 => 1493,  1843 => 1465,  1817 => 1442,  1786 => 1414,  1760 => 1391,  1734 => 1368,  1708 => 1345,  1682 => 1322,  1656 => 1299,  1625 => 1271,  1599 => 1248,  1573 => 1225,  1547 => 1202,  1521 => 1179,  1495 => 1156,  1469 => 1133,  1438 => 1105,  1412 => 1082,  1386 => 1059,  1360 => 1036,  1334 => 1013,  1308 => 990,  1282 => 967,  1256 => 944,  1230 => 921,  1204 => 898,  1178 => 875,  1152 => 852,  1126 => 829,  1100 => 806,  1074 => 783,  1048 => 760,  1022 => 737,  996 => 714,  970 => 691,  939 => 663,  913 => 640,  887 => 617,  861 => 594,  835 => 571,  809 => 548,  778 => 520,  752 => 497,  726 => 474,  700 => 451,  674 => 428,  643 => 400,  617 => 377,  591 => 354,  565 => 331,  539 => 308,  513 => 285,  487 => 262,  461 => 239,  435 => 216,  404 => 188,  396 => 182,  387 => 179,  384 => 178,  380 => 177,  368 => 167,  359 => 164,  356 => 163,  352 => 162,  345 => 157,  336 => 154,  333 => 153,  329 => 152,  322 => 147,  313 => 144,  310 => 143,  306 => 142,  299 => 137,  290 => 134,  287 => 133,  283 => 132,  276 => 127,  267 => 124,  264 => 123,  260 => 122,  246 => 110,  244 => 105,  235 => 102,  232 => 101,  228 => 100,  220 => 95,  207 => 85,  200 => 81,  193 => 77,  186 => 73,  179 => 69,  172 => 65,  165 => 61,  156 => 55,  149 => 50,  145 => 48,  141 => 46,  139 => 45,  130 => 39,  123 => 35,  116 => 31,  109 => 27,  102 => 23,  95 => 19,  84 => 12,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
+        return array (  1928 => 914,  1893 => 881,  1884 => 880,  1872 => 878,  1865 => 874,  1848 => 860,  1819 => 834,  1815 => 833,  1811 => 832,  1807 => 831,  1796 => 823,  1775 => 805,  1771 => 803,  1762 => 800,  1759 => 799,  1755 => 798,  1748 => 793,  1739 => 790,  1736 => 789,  1732 => 788,  1725 => 783,  1716 => 780,  1713 => 779,  1709 => 778,  1697 => 768,  1688 => 765,  1685 => 764,  1681 => 763,  1674 => 758,  1665 => 755,  1662 => 754,  1658 => 753,  1646 => 743,  1637 => 740,  1634 => 739,  1630 => 738,  1623 => 733,  1614 => 730,  1611 => 729,  1607 => 728,  1600 => 723,  1591 => 720,  1588 => 719,  1584 => 718,  1577 => 713,  1568 => 710,  1565 => 709,  1561 => 708,  1554 => 703,  1545 => 700,  1542 => 699,  1538 => 698,  1531 => 693,  1522 => 690,  1519 => 689,  1515 => 688,  1503 => 678,  1494 => 675,  1491 => 674,  1487 => 673,  1480 => 668,  1471 => 665,  1468 => 664,  1464 => 663,  1457 => 658,  1448 => 655,  1445 => 654,  1441 => 653,  1434 => 648,  1425 => 645,  1422 => 644,  1418 => 643,  1411 => 638,  1402 => 635,  1399 => 634,  1395 => 633,  1388 => 628,  1379 => 625,  1376 => 624,  1372 => 623,  1365 => 618,  1356 => 615,  1353 => 614,  1349 => 613,  1337 => 603,  1328 => 600,  1325 => 599,  1321 => 598,  1314 => 593,  1305 => 590,  1302 => 589,  1298 => 588,  1291 => 583,  1282 => 580,  1279 => 579,  1275 => 578,  1268 => 573,  1259 => 570,  1256 => 569,  1252 => 568,  1245 => 563,  1236 => 560,  1233 => 559,  1229 => 558,  1222 => 553,  1213 => 550,  1210 => 549,  1206 => 548,  1199 => 543,  1190 => 540,  1187 => 539,  1183 => 538,  1176 => 533,  1167 => 530,  1164 => 529,  1160 => 528,  1153 => 523,  1144 => 520,  1141 => 519,  1137 => 518,  1130 => 513,  1121 => 510,  1118 => 509,  1114 => 508,  1107 => 503,  1098 => 500,  1095 => 499,  1091 => 498,  1084 => 493,  1075 => 490,  1072 => 489,  1068 => 488,  1061 => 483,  1052 => 480,  1049 => 479,  1045 => 478,  1038 => 473,  1029 => 470,  1026 => 469,  1022 => 468,  1015 => 463,  1006 => 460,  1003 => 459,  999 => 458,  992 => 453,  983 => 450,  980 => 449,  976 => 448,  969 => 443,  960 => 440,  957 => 439,  953 => 438,  946 => 433,  937 => 430,  934 => 429,  930 => 428,  923 => 423,  914 => 420,  911 => 419,  907 => 418,  895 => 408,  886 => 405,  883 => 404,  879 => 403,  872 => 398,  863 => 395,  860 => 394,  856 => 393,  848 => 387,  839 => 384,  836 => 383,  832 => 382,  825 => 377,  816 => 374,  813 => 373,  809 => 372,  802 => 367,  793 => 364,  790 => 363,  786 => 362,  779 => 357,  770 => 354,  767 => 353,  763 => 352,  751 => 342,  742 => 339,  739 => 338,  735 => 337,  728 => 332,  719 => 329,  716 => 328,  712 => 327,  705 => 322,  696 => 319,  693 => 318,  689 => 317,  682 => 312,  673 => 309,  670 => 308,  666 => 307,  659 => 302,  650 => 299,  647 => 298,  643 => 297,  631 => 287,  622 => 284,  619 => 283,  615 => 282,  608 => 277,  599 => 274,  596 => 273,  592 => 272,  585 => 267,  576 => 264,  573 => 263,  569 => 262,  562 => 257,  553 => 254,  550 => 253,  546 => 252,  539 => 247,  530 => 244,  527 => 243,  523 => 242,  516 => 237,  507 => 234,  504 => 233,  500 => 232,  493 => 227,  484 => 224,  481 => 223,  477 => 222,  470 => 217,  461 => 214,  458 => 213,  454 => 212,  447 => 207,  438 => 204,  435 => 203,  431 => 202,  419 => 192,  410 => 189,  407 => 188,  403 => 187,  396 => 182,  387 => 179,  384 => 178,  380 => 177,  368 => 167,  359 => 164,  356 => 163,  352 => 162,  345 => 157,  336 => 154,  333 => 153,  329 => 152,  322 => 147,  313 => 144,  310 => 143,  306 => 142,  299 => 137,  290 => 134,  287 => 133,  283 => 132,  276 => 127,  267 => 124,  264 => 123,  260 => 122,  246 => 110,  244 => 105,  235 => 102,  232 => 101,  228 => 100,  220 => 95,  207 => 85,  200 => 81,  193 => 77,  186 => 73,  179 => 69,  172 => 65,  165 => 61,  156 => 55,  149 => 50,  145 => 48,  141 => 46,  139 => 45,  130 => 39,  123 => 35,  116 => 31,  109 => 27,  102 => 23,  95 => 19,  84 => 12,  82 => 11,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -2176,7 +2076,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val1_{{ item }}\">
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val1_{{ item }}\">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -2186,7 +2086,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val2_{{ item }}\">
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val2_{{ item }}\">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -2196,7 +2096,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val3_{{ item }}\">
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val3_{{ item }}\">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -2206,7 +2106,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val4_{{ item }}\">
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val4_{{ item }}\">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -2216,7 +2116,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val5_{{ item }}\">
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val5_{{ item }}\">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -2231,7 +2131,7 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class=\"form-control\" type=\"number\" id=\"form_val6_{{ item }}\">
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val6_{{ item }}\">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -2239,24 +2139,11 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Comandi Agg.vi</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val7) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val7_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2267,208 +2154,91 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Punti Luce</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val8) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val8_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Punti Lice esterni a parete</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val9) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val9_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Dimmer</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val10) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val10_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Predisposizione LED parete o incasso</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val11) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val11_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Sensori accendiluce/contatto porta</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val12) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val12_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Luci emergenza predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val13) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val13_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Lampada Emergenza</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val14) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val14_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Segnapasso LED predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val15) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val15_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Sensore luminosità</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val16) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val16_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2479,116 +2249,51 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Allaccio condizionatore/termoconvettori</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val17) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val17_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Caldaia/Pompa di calore</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val18) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val18_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Terra ai collettori</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val19) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val19_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Termostato</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val20) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val20_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Sensore Umidità</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val21) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val21_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2599,139 +2304,62 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Quadro 12 Moduli</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val22) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val22_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Quadro 36 Moduli</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val23) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val23_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Quadro 54 Moduli</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val24) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val24_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Quadro 72 Moduli</strong>
                                     </td>
+                                    {% for item in 1..count|length %}
                                     <td>
-                                        {{ form_widget(form.val25) }}
+                                        <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val25_{{ item }}\">
                                     </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
+                                    {% endfor %}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Sezionatore</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val26) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val26_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>MTD</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val27) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val27_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2742,438 +2370,191 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Allarme Gas predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val28) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val28_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Allagamento predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val29) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val29_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Allarme predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val30) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val30_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Rilevatore di fumo predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val31) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val31_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Centralino telefonico</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val32) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val32_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Telefono</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val33) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val33_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Citofono Interno</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val34) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val34_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Citofono Esterno</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val35) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val35_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Videocitofono a parete</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val36) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val36_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Videocitofono esterno</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val37) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val37_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Campanello suoneria</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val38) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val38_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Dati predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val39) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val39_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Telecamere predisposizione</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val40) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val40_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Tiranti e/o pulsanti emergenza</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val41) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val41_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Ronzatore emergenza</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val42) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val42_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>TV frutti</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val43) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val43_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>SAT frutti</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val44) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val44_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Antenna terrestre</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val45) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val45_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Parabola</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val46) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val46_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -3184,162 +2565,71 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Touch 3,5\" a colori o EQ40</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val47) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val47_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Equinox 41</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val48) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val48_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Equinox 73</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val49) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val49_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Keypad Vantage</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val50) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val50_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Comandi diffusione sonora</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val51) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val51_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Diffusori</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val52) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val52_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Surround</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val53) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val53_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -3350,139 +2640,61 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Motore zanzariera/tenda</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val54) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val54_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Motore persiana/ lucernai/ grata</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val55) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val55_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Motore tapparella / oscurante</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val56) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val56_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>P.to comando motori</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val57) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val57_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Basculante</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val58) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val58_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Cancello</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val59) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val59_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -3493,47 +2705,21 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Bocchette</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val60) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val60_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Motore</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val61) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val61_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -3544,104 +2730,99 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
                                     <td>
                                         <strong>Supporti 503</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val62) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val62_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Supporti 504</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val63) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val63_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>Supporti 506</strong>
                                     </td>
-                                    <td>
-                                        {{ form_widget(form.val64) }}
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
-                                    <td>
-                                        <input class=\"form-control\" type=\"number\">
-                                    </td>
+                                    {% for item in 1..count|length %}
+                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val64_{{ item }}\">
+                                        </td>
+                                    {% endfor %}
                                 </tr>
                             </tbody>
+                            {{ form_widget(form.submit) }}
+                            <div class=\"row\">
+                                <div class=\"col-9\"></div>
+                                <div class=\"col-3\">
+                                    <div class=\"card card-generate \">
+                                        <div class=\"card-body pt-2 pb-4\">
+                                            <div class=\"row\">
+                                                <div class=\"col-6\">
+                                                    <a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3\">Genera</a>
+                                                </div>
+                                                <div class=\"col-6\">
+                                                    <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3\">Annulla</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             {{ form_end(form) }}
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        {{ form_end(form) }}
         <script>
-            jQuery(document).ready(function () {
-                jQuery('.add-another-collection-widget').click(function (e) {
-                    var list = jQuery(jQuery(this).attr('data-list'));
-                    // Try to find the counter of the list
-                    var counter = list.data('widget-counter') | list.children().length;
-                    // If the counter does not exist, use the length of the list
-                    if (!counter) { counter = list.children().length; }
+            \$(document).ready( function () {
+                update({{ item.id }},'pp','val1');
+                update({{ item.id }},'pl','val8');
+                update({{ item.id }},'c1v','val6');
+                update({{ item.id }},'c2v','val41');
+                }
+            );
 
-                    // grab the prototype template
-                    var newWidget = list.attr('data-prototype');
-                    // replace the \"__name__\" used in the id and name of the prototype
-                    // with a number that's unique to your emails
-                    // end name attribute looks like name=\"contact[emails][2]\"
-                    newWidget = newWidget.replace(/__name__/g, counter);
-                    // Increase the counter
-                    counter++;
-                    // And store it, the length cannot be used if deleting widgets is allowed
-                    list.data(' widget-counter', counter);
+            \$('#generateBtn').click(function(e) {
+                e.preventDefault();
+                toastr.info(\"Genero Preventivo\");
+                for(var i = 1; i < 64; i++) {
+                    \$('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
+                    \$('#appbundle_expertationsadvanced_submit').trigger('click')
+                }
 
-                    // create a new list element and add it to the list
-                    var newElem = jQuery(list.attr('data-widget-tags')).html(newWidget);
-                    newElem.appendTo(list);
-                });
             });
+
+            function collect(valn) {
+                var arr = [];
+                \$('input[id^=\"form_' + valn + '_\"]').each(function() {
+                    arr.push(\$(this).val());
+                });
+                return arr.join(\",\");
+            }
+
+            function update(exp,field,valn){
+                \$.ajax({
+                    url: '/ajax/get/expData/' + exp + '/' + field,
+                    success: function (data) {
+                        for (var i = 0; i < {{ count|length }}; i++) {
+                            var numbersArray = data.split(',');
+                            \$.each(numbersArray, function(index, value) {
+                                var ind = index +1;
+                                \$('#form_'+ valn + '_' + ind).val(value);
+                            });
+
+                        }
+                    }
+                })
+            }
         </script>
     </div>
 </div>
@@ -3649,11 +2830,15 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
     <script type=\"text/javascript\">
         \$('.collection').collection();
     </script>
+    <script src=\"{{ asset('js/jquery.toastr.js') }}\" type=\"text/javascript\"></script>
 {% endblock %}
 {% block stylesheets %}
     <style>
         .form-control {
-            width: 100%!important;
+
+            width: 100px;
+            min-width: 100px;
+
         }
         select {
             width:100%!important;
@@ -3666,8 +2851,22 @@ class __TwigTemplate_7b1eb858727820c19e03d5a0d22cf038f70b97f2d2df5e39460dce1b8f1
             line-height: 1;
             vertical-align: top;
         }
+        .card-generate {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-top-left-radius: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .card-generate {
+                position: fixed;
+                width: 100%;
+            }
+        }
     </style>
-
+    <link rel=\"stylesheet\" href=\"{{ asset('css/jquery.toastr.min.css') }}\">
 {% endblock %}", "expertations/new.advanced.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/new.advanced.html.twig");
     }
 }

@@ -483,6 +483,13 @@ class ExpertationsAdvanced
      */
     private $val65;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="father_floor", type="integer", nullable=true)
+     */
+    private $fatherFloor;
+
 
     /**
      * Get id.
@@ -2076,5 +2083,30 @@ class ExpertationsAdvanced
     public function getVal65()
     {
         return $this->val65;
+    }
+
+
+    /**
+     * Set fatherFloor.
+     *
+     * @param int $fatherFloor
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setFatherFloor($fatherFloor)
+    {
+        $this->fatherFloor = $fatherFloor;
+
+        return $this;
+    }
+
+    /**
+     * Get fatherFloor.
+     *
+     * @return int
+     */
+    public function getFatherFloor()
+    {
+        return $this->fatherFloor;
     }
 }

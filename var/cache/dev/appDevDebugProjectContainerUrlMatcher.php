@@ -264,6 +264,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/ajax')) {
+            // ajax_get_expdata_field
+            if (0 === strpos($pathinfo, '/ajax/get/expData') && preg_match('#^/ajax/get/expData/(?P<exp>[^/]++)/(?P<field>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expdata_field')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxGetExpDataFiledAction',));
+            }
+
             if (0 === strpos($pathinfo, '/ajax/expertation')) {
                 // ajax_get_expertations_room
                 if (0 === strpos($pathinfo, '/ajax/expertations/get/outlets') && preg_match('#^/ajax/expertations/get/outlets/(?P<level>[^/]++)/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
