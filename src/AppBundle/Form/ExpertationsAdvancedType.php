@@ -17,6 +17,7 @@ class ExpertationsAdvancedType extends AbstractType
     {
         $builder
             ->add('father', HiddenType::class)
+            ->add('fatherFloor',HiddenType::class)
             /*->add('val1', CollectionType::class, [
                 'entry_type' => HiddenType::class,
                 'entry_options' => [

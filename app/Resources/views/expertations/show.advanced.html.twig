@@ -25,6 +25,1005 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-bordered table-responsive">
+                        <tr>
+                            <td><strong>CLIENTE</strong></td>
+                            <td class="text-center">Proposta n. {{ data.id }} del {{ data.date|date("d.m.Y") }} per <br/> Egregio Signor {{ func.uidToName(data.client) }}</td>
+                            <td class="text-center"><strong>PIANI CASA</strong></td>
+                            <td>{{ data.pianiCasa }}</td>
+                            <td class="text-center"><strong>CIVILE</strong></td>
+                            <td>{% if data.tipo == 1 %}SI{% else %}NO{% endif %}</td>
+                            <td class="text-center"><strong>DOMOTICO</strong></td>
+                            <td>{% if data.level == 3 %}SI{% else %}NO{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DATA</strong></td>
+                            <td class="text-center">{{ data.date|date("d.m.y") }}</td>
+                            <td class="text-center"><strong>METRI QUADRI (TOTALI)</strong></td>
+                            <td>{{ data.squareMeters }}</td>
+                            <td class="text-center"><strong>DISTANZA QUADRO TOUCH</strong></td>
+                            <td>-</td>
+                            <td class="text-center"><strong>ENEL KW</strong></td>
+                            <td>{{ data.kw }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TIPO CLIMA</strong></td>
+                            <td class="text-center">{{ func.heatingIntToName(data.riscaldamento) }}</td>
+                            <td class="text-center"><strong>OPERE MURARIE</strong></td>
+                            <td>{% if data.opereMurarie != 0 %}SI{% else %}NO{% endif %}</td>
+                            <td class="text-center"><strong>INTONACO</strong></td>
+                            <td>{% if data.opereMurarie == 1 %}SI{% else %}NO{% endif %}</td>
+                            <td class="text-center"><strong>PIETRA</strong></td>
+                            <td>{% if data.opereMurarie == 2 %}SI{% else %}NO{% endif %}</td>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered mt-3">
+                        <tr>
+                            <td class="text-center mt-3">
+                                <strong>PIANO 1: TERRA</strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered table-responsive mt-3">
+                        <tr class="mt-3">
+                            <td><strong>TIPOLOGIA</strong></td>
+                            {% for item in data.name %}
+                                <td>{{ item }}</td>
+                            {% endfor %}
+                            <td><strong>TOTALE</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                PUNTI PRESA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong >Punti Presa</strong>
+                            </td>
+                            {% for data in item.0.val1 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val1 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Prese esterne a parete</strong>
+                            </td>
+                            {% for data in item.0.val2 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val2 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Prese aggiuntive e bivalenti 10/16A</strong>
+                            </td>
+                            {% for data in item.0.val3 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val3 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        <tr>
+                            <td>
+                                <strong>Bipolare</strong>
+                            </td>
+                            {% for data in item.0.val4 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val4 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Ventilatore / Estrattore Aria</strong>
+                            </td>
+                            {% for data in item.0.val5 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val5 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                PUNTI COMANDO
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Punti Comando</strong>
+                            </td>
+                            {% for data in item.0.val6 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val6 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Comandi Agg.vi</strong>
+                            </td>
+                            {% for data in item.0.val7 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val7 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Punti Luce</strong>
+                            </td>
+                            {% for data in item.0.val8 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val8 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Punti Lice esterni a parete</strong>
+                            </td>
+                            {% for data in item.0.val9 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val9 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Dimmer</strong>
+                            </td>
+                            {% for data in item.0.val10 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val10 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Predisposizione LED parete o incasso</strong>
+                            </td>
+                            {% for data in item.0.val11 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val11 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Sensori accendiluce/contatto porta</strong>
+                            </td>
+                            {% for data in item.0.val12 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val12 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Luci emergenza predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val13 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val13 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Lampada Emergenza</strong>
+                            </td>
+                            {% for data in item.0.val14 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val14 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Segnapasso LED predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val15 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val15 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Sensore luminosità</strong>
+                            </td>
+                            {% for data in item.0.val16 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val16 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                RISCALDAMENTO
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Allaccio condizionatore/termoconvettori</strong>
+                            </td>
+                            {% for data in item.0.val17 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val17 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Caldaia/Pompa di calore</strong>
+                            </td>
+                            {% for data in item.0.val18 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val18 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Terra ai collettori</strong>
+                            </td>
+                            {% for data in item.0.val19 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val19 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Termostato</strong>
+                            </td>
+                            {% for data in item.0.val20 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val20 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Sensore Umidità</strong>
+                            </td>
+                            {% for data in item.0.val21 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val21 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                QUADRO ELETTRICO
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Quadro 12 Moduli</strong>
+                            </td>
+                            {% for data in item.0.val22 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val22 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Quadro 36 Moduli</strong>
+                            </td>
+                            {% for data in item.0.val23 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val23 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Quadro 54 Moduli</strong>
+                            </td>
+                            {% for data in item.0.val24 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val24 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Quadro 72 Moduli</strong>
+                            </td>
+                            {% for data in item.0.val25 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val25 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Sezionatore</strong>
+                            </td>
+                            {% for data in item.0.val26 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val26 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>MTD</strong>
+                            </td>
+                            {% for data in item.0.val27 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val27 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                SERVIZI PREDISPOSIZIONE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Allarme Gas predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val28 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val28 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Allagamento predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val29 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val29 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Allarme predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val30 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val30 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Rilevatore di fumo predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val31 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val31 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Centralino telefonico</strong>
+                            </td>
+                            {% for data in item.0.val32 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val32 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Telefono</strong>
+                            </td>
+                            {% for data in item.0.val33 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val33 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Citofono Interno</strong>
+                            </td>
+                            {% for data in item.0.val34 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val34 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Citofono Esterno</strong>
+                            </td>
+                            {% for data in item.0.val35 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val35 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Videocitofono a parete</strong>
+                            </td>
+                            {% for data in item.0.val36 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val36 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Videocitofono esterno</strong>
+                            </td>
+                            {% for data in item.0.val37 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val37 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Campanello suoneria</strong>
+                            </td>
+                            {% for data in item.0.val38 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val38 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Dati predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val39 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val39 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Telecamere predisposizione</strong>
+                            </td>
+                            {% for data in item.0.val40 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val40 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Tiranti e/o pulsanti emergenza</strong>
+                            </td>
+                            {% for data in item.0.val41 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val41 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Ronzatore emergenza</strong>
+                            </td>
+                            {% for data in item.0.val42 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val42 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>TV frutti</strong>
+                            </td>
+                            {% for data in item.0.val43 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val43 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>SAT frutti</strong>
+                            </td>
+                            {% for data in item.0.val44 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val44 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Antenna terrestre</strong>
+                            </td>
+                            {% for data in item.0.val45 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val45 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Parabola</strong>
+                            </td>
+                            {% for data in item.0.val46 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val46 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Touch 3,5" a colori o EQ40</strong>
+                            </td>
+                            {% for data in item.0.val47 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val47 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Equinox 41</strong>
+                            </td>
+                            {% for data in item.0.val48 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val48 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Equinox 73</strong>
+                            </td>
+                            {% for data in item.0.val49 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val49 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Keypad Vantage</strong>
+                            </td>
+                            {% for data in item.0.val50 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val50 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Comandi diffusione sonora</strong>
+                            </td>
+                            {% for data in item.0.val51 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val51 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Diffusori</strong>
+                            </td>
+                            {% for data in item.0.val52 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val52 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Surround</strong>
+                            </td>
+                            {% for data in item.0.val53 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val53 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                PREDISPOSIZIONE AUTOMATISMI
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Motore zanzariera/tenda</strong>
+                            </td>
+                            {% for data in item.0.val54 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val54 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Motore persiana/ lucernai/ grata</strong>
+                            </td>
+                            {% for data in item.0.val55 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val55 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Motore tapparella / oscurante</strong>
+                            </td>
+                            {% for data in item.0.val56 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val56 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>P.to comando motori</strong>
+                            </td>
+                            {% for data in item.0.val57 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val57 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Basculante</strong>
+                            </td>
+                            {% for data in item.0.val58 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val58 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Cancello</strong>
+                            </td>
+                            {% for data in item.0.val59 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val59 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                ASPIRAZIONE CENTRALIZZATA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Bocchette</strong>
+                            </td>
+                            {% for data in item.0.val60 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val60 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Motore</strong>
+                            </td>
+                            {% for data in item.0.val61 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val61 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                RESOCONTO PLACCHE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Supporti 503</strong>
+                            </td>
+                            {% for data in item.0.val62 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val62 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Supporti 504</strong>
+                            </td>
+                            {% for data in item.0.val63 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val63 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Supporti 506</strong>
+                            </td>
+                            {% for data in item.0.val64 %}
+                                <td class="text-center">{{ data }}</td>
+                            {% endfor %}
+                            <td class="text-center">
+                                {% for total in item.0.val64 %}
+                                    {% set sum = total + sum ?? 0 %}
+                                    {% if loop.last %}{{ sum }}{% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock body %}

@@ -10,7 +10,4 @@ namespace AppBundle\Repository;
  */
 class ExpertationsAdvancedRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function __construct($val) {
-        return $this;
-    }
 }

@@ -838,10 +838,12 @@
             $('#generateBtn').click(function(e) {
                 e.preventDefault();
                 toastr.info("Genero Preventivo");
-                for(var i = 1; i < 64; i++) {
+                for(var i = 1; i < 65; i++) {
                     $('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
-                    $('#appbundle_expertationsadvanced_submit').trigger('click')
                 }
+                $('#appbundle_expertationsadvanced_father').val({{ item.id }});
+                $('#appbundle_expertationsadvanced_fatherFloor').val('1');
+                $('#appbundle_expertationsadvanced_submit').trigger('click')
 
             });
 
