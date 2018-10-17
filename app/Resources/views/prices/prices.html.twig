@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title %}Impostazioni{% endblock %}
+{% block body %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-9">
+                <h3>Prezzi <small>Prezzario Avanzato</small></h3>
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            Listino Prezzi Avanzato
+                        </h3>
+                        <table class="table table-responsive-sm">
+                            <tr>
+                                <th>Codice</th>
+                                <th>Descrizione</th>
+                                <th>Prezzo</th>
+                            </tr>
+                            {% for item in prices %}
+                                <tr>
+                                    <td>{{ item.code }}</td>
+                                    <td>{{ item.description|truncate(75, true) }}</td>
+                                    <td>{{ item.price }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Importa File prezzario
+                        </h4>
+                        {{ form_start(form) }}
+                        {{ form_widget(form.prices_file) }}
+                        <small class="text-muted text-small mb-3">Richiesto file CSV Prezzario</small>
+                        {{ form_widget(form.submit) }}
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

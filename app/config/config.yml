@@ -82,3 +82,11 @@ fos_user:
     resetting:
         email:
             template:   mail/password_resetting.email.twig
+intriro_csv:
+    importers:
+        default:
+            delimiter: ";"          # Customize delimiter. Default value is comma(,)
+            enclosure: '"'          # Customize enclosure. Default value is double quotation(")
+            escape: "\\"            # Customize escape character. Default value is backslash(\)
+            to_charset: UTF-8       # Customize target encoding. Default value is null, no converting.
+            from_charset: SJIS-win  # Customize CSV file encoding. Default value is null.

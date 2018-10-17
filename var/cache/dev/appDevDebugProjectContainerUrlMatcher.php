@@ -165,7 +165,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dashboard',);
         }
 
-        if (0 === strpos($pathinfo, '/pre')) {
+        if (0 === strpos($pathinfo, '/pr')) {
             if (0 === strpos($pathinfo, '/preventivi')) {
                 // lista_preventivi
                 if ('/preventivi/lista' === $pathinfo) {
@@ -204,62 +204,70 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
-            // prezzi_listino
-            if ('/prezzi/listino' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesListAction',  '_route' => 'prezzi_listino',);
-            }
-
-            // prezzi_aggiorna
-            if (0 === strpos($pathinfo, '/prezzi/aggiorna') && preg_match('#^/prezzi/aggiorna/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'prezzi_aggiorna')), array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesUpdateAction',));
-            }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/profilo')) {
-            // fos_user_profile_show
-            if ('/profilo' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
-                if ('/' === substr($pathinfo, -1)) {
-                    // no-op
-                } elseif ('GET' !== $canonicalMethod) {
-                    goto not_fos_user_profile_show;
-                } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
+            elseif (0 === strpos($pathinfo, '/prezzi')) {
+                // prezzi_listino
+                if ('/prezzi/listino' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesListAction',  '_route' => 'prezzi_listino',);
                 }
 
-                if (!in_array($canonicalMethod, array('GET'))) {
-                    $allow = array_merge($allow, array('GET'));
-                    goto not_fos_user_profile_show;
+                // settings_prices
+                if ('/prezzi/prezzario' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\PricesController::settingsPricesAction',  '_route' => 'settings_prices',);
                 }
 
-                return $ret;
-            }
-            not_fos_user_profile_show:
-
-            // fos_user_profile_edit
-            if ('/profilo/edit' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_profile_edit;
+                // prezzi_aggiorna
+                if (0 === strpos($pathinfo, '/prezzi/aggiorna') && preg_match('#^/prezzi/aggiorna/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'prezzi_aggiorna')), array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesUpdateAction',));
                 }
 
-                return $ret;
             }
-            not_fos_user_profile_edit:
 
-            // fos_user_change_password
-            if ('/profilo/change-password' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_change_password;
+            elseif (0 === strpos($pathinfo, '/profilo')) {
+                // fos_user_profile_show
+                if ('/profilo' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_fos_user_profile_show;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
+                    }
+
+                    if (!in_array($canonicalMethod, array('GET'))) {
+                        $allow = array_merge($allow, array('GET'));
+                        goto not_fos_user_profile_show;
+                    }
+
+                    return $ret;
                 }
+                not_fos_user_profile_show:
 
-                return $ret;
+                // fos_user_profile_edit
+                if ('/profilo/edit' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_profile_edit;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_profile_edit:
+
+                // fos_user_change_password
+                if ('/profilo/change-password' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_change_password;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_change_password:
+
             }
-            not_fos_user_change_password:
 
         }
 

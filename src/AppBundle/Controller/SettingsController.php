@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Announcements;
 use AppBundle\Entity\Groups;
 use AppBundle\Entity\Heatings;
+use AppBundle\Entity\PricesAdvanced;
 use AppBundle\Entity\Users;
 use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;

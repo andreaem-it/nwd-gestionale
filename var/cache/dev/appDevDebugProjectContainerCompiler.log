@@ -12,6 +12,9 @@ Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Reso
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "AppBundle\Controller\SettingsController" (parent: instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\SettingsController).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ExpertationsAdvancedType" (parent: abstract.instanceof.AppBundle\Form\ExpertationsAdvancedType).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "AppBundle\Form\ExpertationsAdvancedType" (parent: instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ExpertationsAdvancedType).
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "instanceof.Twig_ExtensionInterface.0.twig.extension.text" (parent: abstract.instanceof.twig.extension.text).
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "instanceof.Twig\Extension\ExtensionInterface.0.twig.extension.text" (parent: instanceof.Twig_ExtensionInterface.0.twig.extension.text).
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "twig.extension.text" (parent: instanceof.Twig\Extension\ExtensionInterface.0.twig.extension.text).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.app" (parent: cache.adapter.filesystem).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.system" (parent: cache.adapter.system).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.validator" (parent: cache.system).
@@ -351,6 +354,9 @@ Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Re
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "abstract.instanceof.AppBundle\Controller\SettingsController"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ExpertationsAdvancedType"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "abstract.instanceof.AppBundle\Form\ExpertationsAdvancedType"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "instanceof.Twig_ExtensionInterface.0.twig.extension.text"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "instanceof.Twig\Extension\ExtensionInterface.0.twig.extension.text"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "abstract.instanceof.twig.extension.text"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.xk64tvg" to "argument_resolver.service".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.o0cobhk" to "fragment.handler".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "cache.app.recorder_inner" to "cache.app".
@@ -445,6 +451,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.extension.httpfoundation" to "twig".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.extension.form" to "twig".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.extension.dump" to "twig".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.extension.text" to "twig".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.twig.doctrine_extension" to "twig".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.extension.webprofiler" to "twig".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.app_variable" to "twig".
@@ -497,6 +504,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "AppBundle\EventListener\UploadListener"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "AppBundle\AppBundle"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "AppBundle\Form\Model\ChangePassword"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.extension.text"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "translator.selector"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_ServiceLocator~lsrlitn"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_NativeFileSessionHandler~lsrlitn"; reason: unused.

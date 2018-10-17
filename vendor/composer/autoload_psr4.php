@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Twig\\Extensions\\' => array($vendorDir . '/twig/extensions/src'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Tests\\' => array($baseDir . '/tests'),
     'Symfony\\Polyfill\\Util\\' => array($vendorDir . '/symfony/polyfill-util'),
@@ -14,6 +15,7 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Polyfill\\Apcu\\' => array($vendorDir . '/symfony/polyfill-apcu'),
+    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\Templating\\' => array($vendorDir . '/symfony/templating'),
     'Symfony\\Component\\Security\\Acl\\' => array($vendorDir . '/symfony/security-acl'),
@@ -37,6 +39,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Intriro\\Bundle\\CsvBundle\\' => array($vendorDir . '/intriro/csv-bundle/src'),
     'Incenteev\\ParameterHandler\\' => array($vendorDir . '/incenteev/composer-parameter-handler'),
     'Fig\\Link\\' => array($vendorDir . '/fig/link-util/src'),
     'FOS\\UserBundle\\' => array($vendorDir . '/friendsofsymfony/user-bundle'),

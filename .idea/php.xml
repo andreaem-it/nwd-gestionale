@@ -51,6 +51,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-acl" />
       <path value="$PROJECT_DIR$/vendor/symfony/acl-bundle" />
       <path value="$PROJECT_DIR$/vendor/ninsuo/symfony-collection" />
+      <path value="$PROJECT_DIR$/vendor/intriro/csv-bundle" />
+      <path value="$PROJECT_DIR$/vendor/goodby/csv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />

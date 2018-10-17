@@ -17,6 +17,7 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
+      <parameter key="IntriroCsvBundle">Intriro\Bundle\CsvBundle\IntriroCsvBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
@@ -65,6 +66,11 @@
         <parameter key="path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/friendsofsymfony/user-bundle</parameter>
         <parameter key="namespace">FOS\UserBundle</parameter>
       </parameter>
+      <parameter key="IntriroCsvBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/intriro/csv-bundle/src</parameter>
+        <parameter key="namespace">Intriro\Bundle\CsvBundle</parameter>
+      </parameter>
       <parameter key="AppBundle" type="collection">
         <parameter key="parent">null</parameter>
         <parameter key="path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/src/AppBundle</parameter>
@@ -106,6 +112,7 @@
     <parameter key="mailer_user">abcc765e49a04c</parameter>
     <parameter key="mailer_password">0265d66763a0ca</parameter>
     <parameter key="secret">1315451b511620433db424b09f2fe7daedc9179f</parameter>
+    <parameter key="prices_directory">/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/data</parameter>
     <parameter key="locale">it</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
@@ -655,6 +662,9 @@
     <service id="AppBundle\Form\Model\ChangePassword" class="AppBundle\Form\Model\ChangePassword" public="false" autowire="true" autoconfigure="true"/>
     <service id="AppBundle\Service\FileUploader" class="AppBundle\Service\FileUploader" public="false" autowire="true" autoconfigure="true">
       <argument>users</argument>
+    </service>
+    <service id="twig.extension.text" class="Twig_Extensions_Extension_Text" public="false" autowire="true" autoconfigure="true">
+      <tag name="twig.extension"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -2442,6 +2452,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -3787,6 +3805,9 @@
         <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.text"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
@@ -4989,6 +5010,27 @@
       <argument type="service" id="fos_user.object_manager"/>
       <argument>AppBundle\Entity\Groups</argument>
     </service>
+    <service id="intriro_csv.importer.default" class="Goodby\CSV\Import\Standard\Lexer">
+      <argument type="service">
+        <service class="Goodby\CSV\Import\Standard\LexerConfig">
+          <call method="setDelimiter">
+            <argument>;</argument>
+          </call>
+          <call method="setEnclosure">
+            <argument>"</argument>
+          </call>
+          <call method="setEscape">
+            <argument>\</argument>
+          </call>
+          <call method="setToCharset">
+            <argument>UTF-8</argument>
+          </call>
+          <call method="setFromCharset">
+            <argument>SJIS-win</argument>
+          </call>
+        </service>
+      </argument>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -5145,6 +5187,9 @@
     <service id="abstract.instanceof.AppBundle\Controller\SettingsController" class="AppBundle\Controller\SettingsController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ExpertationsAdvancedType" class="AppBundle\Form\ExpertationsAdvancedType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Form\ExpertationsAdvancedType" class="AppBundle\Form\ExpertationsAdvancedType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Twig_ExtensionInterface.0.twig.extension.text" class="Twig_Extensions_Extension_Text" public="false" autowire="true" abstract="true"/>
+    <service id="instanceof.Twig\Extension\ExtensionInterface.0.twig.extension.text" class="Twig_Extensions_Extension_Text" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.twig.extension.text" class="Twig_Extensions_Extension_Text" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="service_locator.idfznfk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
