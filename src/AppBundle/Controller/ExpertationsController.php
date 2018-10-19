@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
 use AppBundle\Entity\ExpertationsAdvanced;
+use AppBundle\Entity\ExpertationsAdvancedLines;
 use AppBundle\Entity\Heatings;
 use AppBundle\Entity\Rooms;
 use AppBundle\Entity\Users;
@@ -582,6 +583,8 @@ class ExpertationsController extends Controller
         $expertationsAdvanced = new ExpertationsAdvanced();
         $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient();
 
+        $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
+
         dump($ambientsCount);
 
 
@@ -677,9 +680,12 @@ class ExpertationsController extends Controller
 
         }
 
+        dump($titles);
+
         return $this->render('expertations/new.advanced.html.twig',[
                 'form' => $form->createView(),
                 'item' => $item,
+                'titles' => $titles,
                 'func' => $this,
                 'count' => $ambientsCount
 

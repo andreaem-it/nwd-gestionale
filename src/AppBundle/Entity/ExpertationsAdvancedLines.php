@@ -35,6 +35,13 @@ class ExpertationsAdvancedLines
      */
     private $description;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isTitle", type="boolean", nullable=true)
+     */
+    private $isTitle;
+
 
     /**
      * Get id.
@@ -92,5 +99,29 @@ class ExpertationsAdvancedLines
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set isTitle.
+     *
+     * @param bool|null $isTitle
+     *
+     * @return ExpertationsAdvancedLines
+     */
+    public function setIsTitle($isTitle = null)
+    {
+        $this->isTitle = $isTitle;
+
+        return $this;
+    }
+
+    /**
+     * Get isTitle.
+     *
+     * @return bool|null
+     */
+    public function getIsTitle()
+    {
+        return $this->isTitle;
     }
 }
