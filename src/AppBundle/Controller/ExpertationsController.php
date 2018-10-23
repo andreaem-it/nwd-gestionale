@@ -564,7 +564,19 @@ class ExpertationsController extends Controller
         $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
 
         dump($data);
-        dump($item);
+        dump($item[0]->getVal1());
+
+        for($i = 1; $i < 64; $i++) {
+            dump(${'$item[0]->getVal' . $i . '()'});
+            $i++;
+            if(${'$item[0]->getVal' . $i . '()'} == null) {
+                $return = '0';
+            } else {
+                $return = array_sum(${'$item[0]->getVal' . $i . '()'} );
+            }
+
+            dump($return);
+        }
 
         return $this->render('expertations/show.advanced.html.twig',[
             'item' => $item,

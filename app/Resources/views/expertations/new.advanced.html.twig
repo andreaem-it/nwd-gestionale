@@ -93,8 +93,16 @@
                 <div class="card">
                     <div class="card-body">
                         {{ form_start(form) }}
-                        <table class="table table-responsive" style="overflow-y: visible">
-                            <thead>
+                        <div class="wrapper1" style="height: 30px;">
+                        <div id="buttons" class="div1 float-right btn-group">
+                            <a class="btn btn-secondary btn-sm" id="scroll-l" href="#" disabled="disabled"> < </a>
+                            <a class="btn btn-secondary btn-sm" id="scroll-r" href="#"> > </a>
+                        </div>
+                    </div>
+                    <div class="wrapper2">
+                        <div class="div2">
+                            <table class="table-2 table table-bordered  mt-3 mr-2 selector" style="position:relative">
+                                <thead>
                                 <tr>
                                     <th>TIPOLOGIA</th>
                                     {% for item in count %}
@@ -865,6 +873,8 @@
                             </div>
                             {{ form_end(form) }}
                         </table>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -948,6 +958,7 @@
             border-top: 1px solid #CCCCCC;
             border-left: 1px solid #CCCCCC;
             border-top-left-radius: 5px;
+            z-index:1;
         }
         @media only screen and (max-width: 600px) {
             .card-generate {
@@ -955,6 +966,60 @@
                 width: 100%;
             }
         }
+        .fixed {
+            top: 63px;
+            right: 0px;
+            left: 96%;
+            background: white;
+            width: 66px;
+            border: 1px lightgrey solid;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .wrapper2 {
+            width: 100%;
+            overflow: hidden;
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/jquery.toastr.min.css') }}">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset("js/jquery.fixedheadertable.min.js") }}"></script>
+    <script>
+        $('#scroll-r').click(function(e) {
+            e.preventDefault();
+            $(".table-2").animate({'left':'-=300px'}).scrollLeft();
+            console.log($(".table-2").width());
+            $("#scroll-r").attr("enabled","enabled");
+            console.log($(".table-2").position())
+
+        });
+        $('#scroll-l').click(function(e) {
+            e.preventDefault();
+            console.log($(".table-2").position())
+            if ($(".table-2").position.left >= 0) {
+                return;
+            }
+            $(".table-2").animate({'left': '+=300px'}).scrollLeft()
+        });
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 333) {
+                $('#buttons').addClass('fixed-top').addClass('fixed').animate();
+                console.log("scolled")
+                /*$('.selector').fixedHeaderTable({
+                    footer: false,
+                    cloneHeadToFoot: false,
+                    fixedColumn: false
+                });*/
+            } else {
+                $('#buttons').removeClass('fixed-top').removeClass('fixed');
+                console.log("top");
+                $('.selector').fixedHeaderTable('destroy');
+            }
+        });
+
+
+    </script>
 {% endblock %}
