@@ -1889,9 +1889,81 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 819
         echo "                                </tr>
-                                ";
-        // line 855
-        echo "                            </tbody>
+                                <tr>
+                                    <td colspan=\"10\">
+                                        RESOCONTO PLACCHE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 503</strong>
+                                    </td>
+                                    ";
+        // line 829
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 829, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 830
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val62_";
+            // line 831
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 834
+        echo "                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 504</strong>
+                                    </td>
+                                    ";
+        // line 839
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 839, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 840
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val63_";
+            // line 841
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 844
+        echo "                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 506</strong>
+                                    </td>
+                                    ";
+        // line 849
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 849, $this->source); })()))));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 850
+            echo "                                        <td>
+                                            <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val64_";
+            // line 851
+            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
+            echo "\">
+                                        </td>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 854
+        echo "                                </tr>
+                            </tbody>
                             ";
         // line 856
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 856, $this->source); })()), "submit", array()), 'widget');
@@ -1942,6 +2014,9 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         // line 887
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 887, $this->source); })()), "id", array()), "html", null, true);
         echo ",'c2v','val41');
+                window.setTimeout(function() {
+                    calculate(62)
+                },10000)
                 }
             );
 
@@ -1952,8 +2027,8 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                     \$('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
                 }
                 \$('#appbundle_expertationsadvanced_father').val(";
-        // line 897
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 897, $this->source); })()), "id", array()), "html", null, true);
+        // line 900
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 900, $this->source); })()), "id", array()), "html", null, true);
         echo ");
                 \$('#appbundle_expertationsadvanced_fatherFloor').val('1');
                 \$('#appbundle_expertationsadvanced_submit').trigger('click')
@@ -1973,8 +2048,8 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                     url: '/ajax/get/expData/' + exp + '/' + field,
                     success: function (data) {
                         for (var i = 0; i < ";
-        // line 915
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 915, $this->source); })())), "html", null, true);
+        // line 918
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 918, $this->source); })())), "html", null, true);
         echo "; i++) {
                             var numbersArray = data.split(',');
                             \$.each(numbersArray, function(index, value) {
@@ -1986,18 +2061,29 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                     }
                 })
             }
+            function calculate(field) {
+                for(var i = 0; i < ";
+        // line 930
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 930, $this->source); })())), "html", null, true);
+        echo "; i++) {
+                    var ind = i +1;
+                    var values = parseInt(\$('#form_val1_' + ind ).val()) + parseInt(\$('#form_val6_' + ind ).val());
+                    console.log(values);
+                    \$('#form_val' + field + '_' + ind ).val(values)
+                }
+            }
         </script>
     </div>
 </div>
     <script src=\"";
-        // line 929
+        // line 940
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.collection.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\">
         \$('.collection').collection();
     </script>
     <script src=\"";
-        // line 933
+        // line 944
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
@@ -2009,7 +2095,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
 
     }
 
-    // line 935
+    // line 946
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -2018,7 +2104,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 936
+        // line 947
         echo "    <style>
         .form-control {
 
@@ -2070,7 +2156,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         }
     </style>
     <link rel=\"stylesheet\" href=\"";
-        // line 986
+        // line 997
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -2082,7 +2168,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
 
     }
 
-    // line 988
+    // line 999
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -2091,7 +2177,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 989
+        // line 1000
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.fixedheadertable.min.js"), "html", null, true);
         echo "\"></script>
@@ -2115,7 +2201,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         \$(window).bind('scroll', function () {
             if (\$(window).scrollTop() > 333) {
                 \$('#buttons').addClass('fixed-top').addClass('fixed').animate();
-                console.log(\"scolled\")
+                console.log(\"scrolled\")
                 /*\$('.selector').fixedHeaderTable({
                     footer: false,
                     cloneHeadToFoot: false,
@@ -2151,7 +2237,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
 
     public function getDebugInfo()
     {
-        return array (  2095 => 989,  2086 => 988,  2074 => 986,  2022 => 936,  2013 => 935,  2001 => 933,  1994 => 929,  1977 => 915,  1956 => 897,  1943 => 887,  1939 => 886,  1935 => 885,  1931 => 884,  1918 => 874,  1897 => 856,  1894 => 855,  1891 => 819,  1882 => 816,  1879 => 815,  1875 => 814,  1870 => 812,  1865 => 809,  1856 => 806,  1853 => 805,  1849 => 804,  1844 => 802,  1834 => 794,  1825 => 791,  1822 => 790,  1818 => 789,  1813 => 787,  1808 => 784,  1799 => 781,  1796 => 780,  1792 => 779,  1787 => 777,  1782 => 774,  1773 => 771,  1770 => 770,  1766 => 769,  1761 => 767,  1756 => 764,  1747 => 761,  1744 => 760,  1740 => 759,  1735 => 757,  1730 => 754,  1721 => 751,  1718 => 750,  1714 => 749,  1709 => 747,  1704 => 744,  1695 => 741,  1692 => 740,  1688 => 739,  1683 => 737,  1673 => 729,  1664 => 726,  1661 => 725,  1657 => 724,  1652 => 722,  1647 => 719,  1638 => 716,  1635 => 715,  1631 => 714,  1626 => 712,  1621 => 709,  1612 => 706,  1609 => 705,  1605 => 704,  1600 => 702,  1595 => 699,  1586 => 696,  1583 => 695,  1579 => 694,  1574 => 692,  1569 => 689,  1560 => 686,  1557 => 685,  1553 => 684,  1548 => 682,  1543 => 679,  1534 => 676,  1531 => 675,  1527 => 674,  1522 => 672,  1517 => 669,  1508 => 666,  1505 => 665,  1501 => 664,  1496 => 662,  1486 => 654,  1477 => 651,  1474 => 650,  1470 => 649,  1465 => 647,  1460 => 644,  1451 => 641,  1448 => 640,  1444 => 639,  1439 => 637,  1434 => 634,  1425 => 631,  1422 => 630,  1418 => 629,  1413 => 627,  1408 => 624,  1399 => 621,  1396 => 620,  1392 => 619,  1387 => 617,  1382 => 614,  1373 => 611,  1370 => 610,  1366 => 609,  1361 => 607,  1356 => 604,  1347 => 601,  1344 => 600,  1340 => 599,  1335 => 597,  1330 => 594,  1321 => 591,  1318 => 590,  1314 => 589,  1309 => 587,  1304 => 584,  1295 => 581,  1292 => 580,  1288 => 579,  1283 => 577,  1278 => 574,  1269 => 571,  1266 => 570,  1262 => 569,  1257 => 567,  1252 => 564,  1243 => 561,  1240 => 560,  1236 => 559,  1231 => 557,  1226 => 554,  1217 => 551,  1214 => 550,  1210 => 549,  1205 => 547,  1200 => 544,  1191 => 541,  1188 => 540,  1184 => 539,  1179 => 537,  1174 => 534,  1165 => 531,  1162 => 530,  1158 => 529,  1153 => 527,  1148 => 524,  1139 => 521,  1136 => 520,  1132 => 519,  1127 => 517,  1122 => 514,  1113 => 511,  1110 => 510,  1106 => 509,  1101 => 507,  1096 => 504,  1087 => 501,  1084 => 500,  1080 => 499,  1075 => 497,  1070 => 494,  1061 => 491,  1058 => 490,  1054 => 489,  1049 => 487,  1044 => 484,  1035 => 481,  1032 => 480,  1028 => 479,  1023 => 477,  1018 => 474,  1009 => 471,  1006 => 470,  1002 => 469,  997 => 467,  987 => 459,  978 => 456,  975 => 455,  971 => 454,  966 => 452,  961 => 449,  952 => 446,  949 => 445,  945 => 444,  940 => 442,  934 => 438,  925 => 435,  922 => 434,  918 => 433,  913 => 431,  908 => 428,  899 => 425,  896 => 424,  892 => 423,  887 => 421,  882 => 418,  873 => 415,  870 => 414,  866 => 413,  861 => 411,  856 => 408,  847 => 405,  844 => 404,  840 => 403,  835 => 401,  825 => 393,  816 => 390,  813 => 389,  809 => 388,  804 => 386,  799 => 383,  790 => 380,  787 => 379,  783 => 378,  778 => 376,  773 => 373,  764 => 370,  761 => 369,  757 => 368,  752 => 366,  747 => 363,  738 => 360,  735 => 359,  731 => 358,  726 => 356,  721 => 353,  712 => 350,  709 => 349,  705 => 348,  700 => 346,  690 => 338,  681 => 335,  678 => 334,  674 => 333,  669 => 331,  664 => 328,  655 => 325,  652 => 324,  648 => 323,  643 => 321,  638 => 318,  629 => 315,  626 => 314,  622 => 313,  617 => 311,  612 => 308,  603 => 305,  600 => 304,  596 => 303,  591 => 301,  586 => 298,  577 => 295,  574 => 294,  570 => 293,  565 => 291,  560 => 288,  551 => 285,  548 => 284,  544 => 283,  539 => 281,  534 => 278,  525 => 275,  522 => 274,  518 => 273,  513 => 271,  508 => 268,  499 => 265,  496 => 264,  492 => 263,  487 => 261,  482 => 258,  473 => 255,  470 => 254,  466 => 253,  461 => 251,  451 => 243,  442 => 240,  439 => 239,  435 => 238,  430 => 236,  425 => 233,  416 => 230,  413 => 229,  409 => 228,  404 => 226,  394 => 218,  385 => 215,  382 => 214,  378 => 213,  373 => 211,  368 => 208,  359 => 205,  356 => 204,  352 => 203,  347 => 201,  342 => 198,  333 => 195,  330 => 194,  326 => 193,  321 => 191,  316 => 188,  307 => 185,  304 => 184,  300 => 183,  295 => 181,  290 => 178,  281 => 175,  278 => 174,  274 => 173,  269 => 171,  260 => 164,  255 => 118,  253 => 113,  244 => 110,  241 => 109,  237 => 108,  221 => 95,  208 => 85,  201 => 81,  194 => 77,  187 => 73,  180 => 69,  173 => 65,  166 => 61,  157 => 55,  150 => 50,  146 => 48,  142 => 46,  140 => 45,  131 => 39,  124 => 35,  117 => 31,  110 => 27,  103 => 23,  96 => 19,  85 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  2181 => 1000,  2172 => 999,  2160 => 997,  2108 => 947,  2099 => 946,  2087 => 944,  2080 => 940,  2067 => 930,  2052 => 918,  2031 => 900,  2015 => 887,  2011 => 886,  2007 => 885,  2003 => 884,  1990 => 874,  1969 => 856,  1965 => 854,  1956 => 851,  1953 => 850,  1949 => 849,  1942 => 844,  1933 => 841,  1930 => 840,  1926 => 839,  1919 => 834,  1910 => 831,  1907 => 830,  1903 => 829,  1891 => 819,  1882 => 816,  1879 => 815,  1875 => 814,  1870 => 812,  1865 => 809,  1856 => 806,  1853 => 805,  1849 => 804,  1844 => 802,  1834 => 794,  1825 => 791,  1822 => 790,  1818 => 789,  1813 => 787,  1808 => 784,  1799 => 781,  1796 => 780,  1792 => 779,  1787 => 777,  1782 => 774,  1773 => 771,  1770 => 770,  1766 => 769,  1761 => 767,  1756 => 764,  1747 => 761,  1744 => 760,  1740 => 759,  1735 => 757,  1730 => 754,  1721 => 751,  1718 => 750,  1714 => 749,  1709 => 747,  1704 => 744,  1695 => 741,  1692 => 740,  1688 => 739,  1683 => 737,  1673 => 729,  1664 => 726,  1661 => 725,  1657 => 724,  1652 => 722,  1647 => 719,  1638 => 716,  1635 => 715,  1631 => 714,  1626 => 712,  1621 => 709,  1612 => 706,  1609 => 705,  1605 => 704,  1600 => 702,  1595 => 699,  1586 => 696,  1583 => 695,  1579 => 694,  1574 => 692,  1569 => 689,  1560 => 686,  1557 => 685,  1553 => 684,  1548 => 682,  1543 => 679,  1534 => 676,  1531 => 675,  1527 => 674,  1522 => 672,  1517 => 669,  1508 => 666,  1505 => 665,  1501 => 664,  1496 => 662,  1486 => 654,  1477 => 651,  1474 => 650,  1470 => 649,  1465 => 647,  1460 => 644,  1451 => 641,  1448 => 640,  1444 => 639,  1439 => 637,  1434 => 634,  1425 => 631,  1422 => 630,  1418 => 629,  1413 => 627,  1408 => 624,  1399 => 621,  1396 => 620,  1392 => 619,  1387 => 617,  1382 => 614,  1373 => 611,  1370 => 610,  1366 => 609,  1361 => 607,  1356 => 604,  1347 => 601,  1344 => 600,  1340 => 599,  1335 => 597,  1330 => 594,  1321 => 591,  1318 => 590,  1314 => 589,  1309 => 587,  1304 => 584,  1295 => 581,  1292 => 580,  1288 => 579,  1283 => 577,  1278 => 574,  1269 => 571,  1266 => 570,  1262 => 569,  1257 => 567,  1252 => 564,  1243 => 561,  1240 => 560,  1236 => 559,  1231 => 557,  1226 => 554,  1217 => 551,  1214 => 550,  1210 => 549,  1205 => 547,  1200 => 544,  1191 => 541,  1188 => 540,  1184 => 539,  1179 => 537,  1174 => 534,  1165 => 531,  1162 => 530,  1158 => 529,  1153 => 527,  1148 => 524,  1139 => 521,  1136 => 520,  1132 => 519,  1127 => 517,  1122 => 514,  1113 => 511,  1110 => 510,  1106 => 509,  1101 => 507,  1096 => 504,  1087 => 501,  1084 => 500,  1080 => 499,  1075 => 497,  1070 => 494,  1061 => 491,  1058 => 490,  1054 => 489,  1049 => 487,  1044 => 484,  1035 => 481,  1032 => 480,  1028 => 479,  1023 => 477,  1018 => 474,  1009 => 471,  1006 => 470,  1002 => 469,  997 => 467,  987 => 459,  978 => 456,  975 => 455,  971 => 454,  966 => 452,  961 => 449,  952 => 446,  949 => 445,  945 => 444,  940 => 442,  934 => 438,  925 => 435,  922 => 434,  918 => 433,  913 => 431,  908 => 428,  899 => 425,  896 => 424,  892 => 423,  887 => 421,  882 => 418,  873 => 415,  870 => 414,  866 => 413,  861 => 411,  856 => 408,  847 => 405,  844 => 404,  840 => 403,  835 => 401,  825 => 393,  816 => 390,  813 => 389,  809 => 388,  804 => 386,  799 => 383,  790 => 380,  787 => 379,  783 => 378,  778 => 376,  773 => 373,  764 => 370,  761 => 369,  757 => 368,  752 => 366,  747 => 363,  738 => 360,  735 => 359,  731 => 358,  726 => 356,  721 => 353,  712 => 350,  709 => 349,  705 => 348,  700 => 346,  690 => 338,  681 => 335,  678 => 334,  674 => 333,  669 => 331,  664 => 328,  655 => 325,  652 => 324,  648 => 323,  643 => 321,  638 => 318,  629 => 315,  626 => 314,  622 => 313,  617 => 311,  612 => 308,  603 => 305,  600 => 304,  596 => 303,  591 => 301,  586 => 298,  577 => 295,  574 => 294,  570 => 293,  565 => 291,  560 => 288,  551 => 285,  548 => 284,  544 => 283,  539 => 281,  534 => 278,  525 => 275,  522 => 274,  518 => 273,  513 => 271,  508 => 268,  499 => 265,  496 => 264,  492 => 263,  487 => 261,  482 => 258,  473 => 255,  470 => 254,  466 => 253,  461 => 251,  451 => 243,  442 => 240,  439 => 239,  435 => 238,  430 => 236,  425 => 233,  416 => 230,  413 => 229,  409 => 228,  404 => 226,  394 => 218,  385 => 215,  382 => 214,  378 => 213,  373 => 211,  368 => 208,  359 => 205,  356 => 204,  352 => 203,  347 => 201,  342 => 198,  333 => 195,  330 => 194,  326 => 193,  321 => 191,  316 => 188,  307 => 185,  304 => 184,  300 => 183,  295 => 181,  290 => 178,  281 => 175,  278 => 174,  274 => 173,  269 => 171,  260 => 164,  255 => 118,  253 => 113,  244 => 110,  241 => 109,  237 => 108,  221 => 95,  208 => 85,  201 => 81,  194 => 77,  187 => 73,  180 => 69,  173 => 65,  166 => 61,  157 => 55,  150 => 50,  146 => 48,  142 => 46,  140 => 45,  131 => 39,  124 => 35,  117 => 31,  110 => 27,  103 => 23,  96 => 19,  85 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -2975,7 +3061,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                                         </td>
                                     {% endfor %}
                                 </tr>
-                                {#<tr>
+                                <tr>
                                     <td colspan=\"10\">
                                         RESOCONTO PLACCHE
                                     </td>
@@ -3009,7 +3095,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val64_{{ item }}\">
                                         </td>
                                     {% endfor %}
-                                </tr>#}
+                                </tr>
                             </tbody>
                             {{ form_widget(form.submit) }}
                             <div class=\"row\">
@@ -3043,6 +3129,9 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                 update({{ item.id }},'pl','val8');
                 update({{ item.id }},'c1v','val6');
                 update({{ item.id }},'c2v','val41');
+                window.setTimeout(function() {
+                    calculate(62)
+                },10000)
                 }
             );
 
@@ -3080,6 +3169,14 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                         }
                     }
                 })
+            }
+            function calculate(field) {
+                for(var i = 0; i < {{ count|length }}; i++) {
+                    var ind = i +1;
+                    var values = parseInt(\$('#form_val1_' + ind ).val()) + parseInt(\$('#form_val6_' + ind ).val());
+                    console.log(values);
+                    \$('#form_val' + field + '_' + ind ).val(values)
+                }
             }
         </script>
     </div>
@@ -3165,7 +3262,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
         \$(window).bind('scroll', function () {
             if (\$(window).scrollTop() > 333) {
                 \$('#buttons').addClass('fixed-top').addClass('fixed').animate();
-                console.log(\"scolled\")
+                console.log(\"scrolled\")
                 /*\$('.selector').fixedHeaderTable({
                     footer: false,
                     cloneHeadToFoot: false,

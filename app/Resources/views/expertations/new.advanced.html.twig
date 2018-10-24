@@ -817,7 +817,7 @@
                                         </td>
                                     {% endfor %}
                                 </tr>
-                                {#<tr>
+                                <tr>
                                     <td colspan="10">
                                         RESOCONTO PLACCHE
                                     </td>
@@ -851,7 +851,7 @@
                                             <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}">
                                         </td>
                                     {% endfor %}
-                                </tr>#}
+                                </tr>
                             </tbody>
                             {{ form_widget(form.submit) }}
                             <div class="row">
@@ -885,6 +885,9 @@
                 update({{ item.id }},'pl','val8');
                 update({{ item.id }},'c1v','val6');
                 update({{ item.id }},'c2v','val41');
+                window.setTimeout(function() {
+                    calculate(62)
+                },10000)
                 }
             );
 
@@ -922,6 +925,14 @@
                         }
                     }
                 })
+            }
+            function calculate(field) {
+                for(var i = 0; i < {{ count|length }}; i++) {
+                    var ind = i +1;
+                    var values = parseInt($('#form_val1_' + ind ).val()) + parseInt($('#form_val6_' + ind ).val());g
+                    console.log(values);
+                    $('#form_val' + field + '_' + ind ).val(values)
+                }
             }
         </script>
     </div>
@@ -1007,7 +1018,7 @@
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 333) {
                 $('#buttons').addClass('fixed-top').addClass('fixed').animate();
-                console.log("scolled")
+                console.log("scrolled")
                 /*$('.selector').fixedHeaderTable({
                     footer: false,
                     cloneHeadToFoot: false,

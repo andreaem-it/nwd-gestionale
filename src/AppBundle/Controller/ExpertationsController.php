@@ -7,6 +7,7 @@ use AppBundle\Entity\Expertations;
 use AppBundle\Entity\ExpertationsAdvanced;
 use AppBundle\Entity\ExpertationsAdvancedLines;
 use AppBundle\Entity\Heatings;
+use AppBundle\Entity\PricesAdvanced;
 use AppBundle\Entity\Rooms;
 use AppBundle\Entity\Users;
 use AppBundle\Form\ExpertationsAdvancedType;
@@ -566,22 +567,34 @@ class ExpertationsController extends Controller
         dump($data);
         dump($item[0]->getVal1());
 
-        for($i = 1; $i < 64; $i++) {
-            dump(${'$item[0]->getVal' . $i . '()'});
-            $i++;
-            if(${'$item[0]->getVal' . $i . '()'} == null) {
-                $return = '0';
-            } else {
-                $return = array_sum(${'$item[0]->getVal' . $i . '()'} );
-            }
+        $total = 0;
 
+        for($i = 1; $i <= 64; $i++) {
+            $array = $item[0]->{"getVal{$i}"}();
+
+            $return = is_array($array) ? array_sum($array) : 0;
+
+            $code = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->find($i);
+            $price = $this->getDoctrine()->getRepository(PricesAdvanced::class)->findBy(['code' => $code->getCode()]);
+
+            $lineTotal = $return * $price[0]->getPrice();
+            $total = $lineTotal + $total;
+
+            dump($i);
+            dump( $code);
             dump($return);
+            dump($price);
+            dump($lineTotal);
+            dump($total);
+
         }
+
 
         return $this->render('expertations/show.advanced.html.twig',[
             'item' => $item,
             'data' => $data,
-            'func' => $this
+            'func' => $this,
+            'total' => $total
         ]);
     }
 
