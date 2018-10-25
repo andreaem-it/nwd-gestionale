@@ -734,7 +734,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>{{ titles.53.description }}/strong>
+                                        <strong>{{ titles.53.description }}</strong>
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
@@ -838,7 +838,7 @@
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}">
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }})">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -885,11 +885,19 @@
                 update({{ item.id }},'pl','val8');
                 update({{ item.id }},'c1v','val6');
                 update({{ item.id }},'c2v','val41');
-                window.setTimeout(function() {
-                    calculate(62)
-                },10000)
+                for(i=0; i < {{ count|length }}; i++) {
+                    $("#form_val63_" + i ).prop('disabled', true);
+                    $("#form_val64_" + i ).prop('disabled', true);
                 }
-            );
+                window.setTimeout(function() {
+                    calculate(62);
+                    for(i=0; i < {{ count|length }}; i++) {
+                        $("#form_val63_" + i ).prop('disabled', false);
+                        $("#form_val64_" + i ).prop('disabled', false);
+                    }
+                    },10000);
+                //check();
+            });
 
             $('#generateBtn').click(function(e) {
                 e.preventDefault();
@@ -929,10 +937,32 @@
             function calculate(field) {
                 for(var i = 0; i < {{ count|length }}; i++) {
                     var ind = i +1;
-                    var values = parseInt($('#form_val1_' + ind ).val()) + parseInt($('#form_val6_' + ind ).val());g
+                    var values = parseInt($('#form_val1_' + ind ).val()) + parseInt($('#form_val6_' + ind ).val());
                     console.log(values);
                     $('#form_val' + field + '_' + ind ).val(values)
                 }
+            }
+            function check(i) {
+                $("#form_val63_" + i ).change(function () {
+                    var direction = this.defaultValue < this.value;
+                    this.defaultValue = this.value;
+                    var val;
+                    val = parseInt($("#form_val62_" + i).val());
+                    if (direction) {
+                        if (val > 0) {
+                            $('#form_val62_' + i).val(parseInt($(this).val()) - 1);
+                        } else {
+                            var thvar = $(this).val();
+                            $(this).val(thvar - 1);
+                        }
+                        console.log("increase 503");
+                        console.log(val);
+                    } else {
+                        $('#form_val62_' + i).val(parseInt($(this).val()) + 1);
+                        console.log("decrease 503");
+                        console.log(val);
+                    }
+                });
             }
         </script>
     </div>
@@ -1009,7 +1039,7 @@
         });
         $('#scroll-l').click(function(e) {
             e.preventDefault();
-            console.log($(".table-2").position())
+            console.log($(".table-2").position());
             if ($(".table-2").position.left >= 0) {
                 return;
             }
