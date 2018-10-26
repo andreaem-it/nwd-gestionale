@@ -464,7 +464,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>{{ titles.27.description }}/strong>
+                                        <strong>{{ titles.27.description }}</strong>
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
@@ -838,7 +838,7 @@
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }})">
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -848,7 +848,7 @@
                                     </td>
                                     {% for item in 1..count|length %}
                                         <td>
-                                            <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}">
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
                                         </td>
                                     {% endfor %}
                                 </tr>
@@ -942,27 +942,39 @@
                     $('#form_val' + field + '_' + ind ).val(values)
                 }
             }
-            function check(i) {
-                $("#form_val63_" + i ).change(function () {
-                    var direction = this.defaultValue < this.value;
-                    this.defaultValue = this.value;
-                    var val;
-                    val = parseInt($("#form_val62_" + i).val());
-                    if (direction) {
-                        if (val > 0) {
-                            $('#form_val62_' + i).val(parseInt($(this).val()) - 1);
-                        } else {
-                            var thvar = $(this).val();
-                            $(this).val(thvar - 1);
-                        }
-                        console.log("increase 503");
-                        console.log(val);
+            function check(i,f) {
+
+                var v = $("#form_val62_" + i).val(); //Let's say this is the value from PHP....
+                var preVal = 0;
+
+                $("#form_val62_" + i).val(v);
+
+                $("#form_val" + f + "_" + i).on("change keyup keydown", function(event) {
+                    let currVal = parseInt($("#form_val" + f + "_" + i).val());
+
+                    console.log(preVal);
+                    console.log(currVal);
+
+                    // store current positions in variables
+                    var start = this.selectionStart,
+                        end = this.selectionEnd;
+
+                    if (!currVal || currVal == 0) {
+                        preVal = 0;
+                        $("#form_val62_" + i).val(v);
+                    } else if (currVal <= v) {
+                        $("#form_val62_" + i).val((v - currVal) == 0 ? 0 : (v - currVal));
+                        preVal = currVal;
                     } else {
-                        $('#form_val62_' + i).val(parseInt($(this).val()) + 1);
-                        console.log("decrease 503");
-                        console.log(val);
+                        $("#form_val" + f + "_" + i).val(v);
                     }
+
+                    this.setSelectionRange(start, end);
+
                 });
+            }
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $('#buttons').css('left','84%');git
             }
         </script>
     </div>
