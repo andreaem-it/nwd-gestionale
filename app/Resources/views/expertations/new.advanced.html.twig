@@ -110,57 +110,13 @@
                                             {{ func.room(item) }}
                                         </th>
                                     {% endfor %}
-                                    {#{% for i in 0..count|length %}
-                                        <th>
-                                            {{ item.[index0.loop].ambient }}
-                                        </th>
-                                    {% endfor %}#}
+                                    <th>
+                                        Sistemi
+                                    </th>
                                 </tr>
                             </thead>
+                                {% set colCount = count|length + 1 %}
                             <tbody>
-                            {#{% set increment = 0 %}
-                            {% for title in titles %}
-                                {% set increment = increment + 1 %}
-                                {% if title.id == 1 %}
-                                    <tr>
-                                        <td colspan="10">
-                                            PUNTI PRESA
-                                        </td>
-                                    </tr>
-                                {%  elseif title.id == 6 %}
-                                    <tr>
-                                        <td colspan="10">
-                                            PUNTI COMANDO
-                                        </td>
-                                    </tr>
-                                {% elseif title.id == 8 %}
-                                    <tr>
-                                        <td colspan="10">
-                                            ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
-                                        </td>
-                                    </tr>
-                                {% elseif title.id == 17 %}
-                                    <tr>
-                                        <td colspan="10">
-                                            RISCALDAMENTO
-                                        </td>
-                                    </tr>
-                                {% elseif title.id == 22 %}
-                                    <tr>
-                                        <td colspan="10">
-                                            QUADRO ELETTRICO
-                                        </td>
-                                    </tr>
-                                {% endif %}
-                                <td>
-                                    <strong>{{ title.description}}</strong>
-                                </td>
-                                {% for item in 1..count|length %}
-                                    <td>
-                                        <input class="form-control" type="number" value="0" min="0" id="form_val{{ increment }}_{{ item }}">
-                                    </td>
-                                {% endfor %}
-                            {% endfor %} #}
                                 <tr>
                                     <td colspan="10">
                                         PUNTI PRESA
@@ -170,7 +126,7 @@
                                     <td>
                                         <strong >{{ titles.0.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val1_{{ item }}">
                                         </td>
@@ -180,7 +136,7 @@
                                     <td>
                                         <strong>{{ titles.1.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val2_{{ item }}">
                                         </td>
@@ -190,7 +146,7 @@
                                     <td>
                                         <strong>{{ titles.2.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val3_{{ item }}">
                                         </td>
@@ -200,7 +156,7 @@
                                     <td>
                                         <strong>{{ titles.3.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val4_{{ item }}">
                                         </td>
@@ -210,7 +166,7 @@
                                     <td>
                                         <strong>{{ titles.4.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val5_{{ item }}">
                                         </td>
@@ -225,7 +181,7 @@
                                     <td>
                                         <strong>{{ titles.5.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val6_{{ item }}">
                                         </td>
@@ -235,7 +191,7 @@
                                     <td>
                                         <strong>{{ titles.6.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val7_{{ item }}">
                                         </td>
@@ -250,7 +206,7 @@
                                     <td>
                                         <strong>{{ titles.7.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val8_{{ item }}">
                                         </td>
@@ -260,7 +216,7 @@
                                     <td>
                                         <strong>{{ titles.8.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val9_{{ item }}">
                                         </td>
@@ -270,7 +226,7 @@
                                     <td>
                                         <strong>{{ titles.9.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val10_{{ item }}">
                                         </td>
@@ -280,7 +236,7 @@
                                     <td>
                                         <strong>{{ titles.10.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val11_{{ item }}">
                                         </td>
@@ -290,7 +246,7 @@
                                     <td>
                                         <strong>{{ titles.11.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val12_{{ item }}">
                                         </td>
@@ -300,7 +256,7 @@
                                     <td>
                                         <strong>{{ titles.12.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val13_{{ item }}">
                                         </td>
@@ -310,7 +266,7 @@
                                     <td>
                                         <strong>{{ titles.13.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val14_{{ item }}">
                                         </td>
@@ -320,7 +276,7 @@
                                     <td>
                                         <strong>{{ titles.14.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val15_{{ item }}">
                                         </td>
@@ -330,7 +286,7 @@
                                     <td>
                                         <strong>{{ titles.15.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val16_{{ item }}">
                                         </td>
@@ -345,7 +301,7 @@
                                     <td>
                                         <strong>{{ titles.16.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val17_{{ item }}">
                                         </td>
@@ -355,7 +311,7 @@
                                     <td>
                                         <strong>{{ titles.17.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val18_{{ item }}">
                                         </td>
@@ -365,7 +321,7 @@
                                     <td>
                                         <strong>{{ titles.18.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val19_{{ item }}">
                                         </td>
@@ -375,7 +331,7 @@
                                     <td>
                                         <strong>{{ titles.19.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val20_{{ item }}">
                                         </td>
@@ -385,7 +341,7 @@
                                     <td>
                                         <strong>{{ titles.20.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val21_{{ item }}">
                                         </td>
@@ -400,7 +356,7 @@
                                     <td>
                                         <strong>{{ titles.21.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val22_{{ item }}">
                                         </td>
@@ -410,7 +366,7 @@
                                     <td>
                                         <strong>{{ titles.22.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val23_{{ item }}">
                                         </td>
@@ -420,7 +376,7 @@
                                     <td>
                                         <strong>{{ titles.23.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val24_{{ item }}">
                                         </td>
@@ -430,7 +386,7 @@
                                     <td>
                                         <strong>{{ titles.24.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                     <td>
                                         <input class="form-control" type="number" value="0" min="0" id="form_val25_{{ item }}">
                                     </td>
@@ -441,7 +397,7 @@
                                     <td>
                                         <strong>{{ titles.25.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val26_{{ item }}">
                                         </td>
@@ -451,7 +407,7 @@
                                     <td>
                                         <strong>{{ titles.26.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val27_{{ item }}">
                                         </td>
@@ -466,7 +422,7 @@
                                     <td>
                                         <strong>{{ titles.27.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val28_{{ item }}">
                                         </td>
@@ -476,7 +432,7 @@
                                     <td>
                                         <strong>{{ titles.28.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val29_{{ item }}">
                                         </td>
@@ -486,7 +442,7 @@
                                     <td>
                                         <strong>{{ titles.29.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val30_{{ item }}">
                                         </td>
@@ -496,7 +452,7 @@
                                     <td>
                                         <strong>{{ titles.30.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val31_{{ item }}">
                                         </td>
@@ -506,7 +462,7 @@
                                     <td>
                                         <strong>{{ titles.31.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val32_{{ item }}">
                                         </td>
@@ -516,7 +472,7 @@
                                     <td>
                                         <strong>{{ titles.32.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val33_{{ item }}">
                                         </td>
@@ -526,7 +482,7 @@
                                     <td>
                                         <strong>{{ titles.33.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val34_{{ item }}">
                                         </td>
@@ -536,7 +492,7 @@
                                     <td>
                                         <strong>{{ titles.34.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val35_{{ item }}">
                                         </td>
@@ -546,7 +502,7 @@
                                     <td>
                                         <strong>{{ titles.35.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val36_{{ item }}">
                                         </td>
@@ -556,7 +512,7 @@
                                     <td>
                                         <strong>{{ titles.36.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val37_{{ item }}">
                                         </td>
@@ -566,7 +522,7 @@
                                     <td>
                                         <strong>{{ titles.37.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val38_{{ item }}">
                                         </td>
@@ -576,7 +532,7 @@
                                     <td>
                                         <strong>{{ titles.38.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val39_{{ item }}">
                                         </td>
@@ -586,7 +542,7 @@
                                     <td>
                                         <strong>{{ titles.39.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val40_{{ item }}">
                                         </td>
@@ -596,7 +552,7 @@
                                     <td>
                                         <strong>{{ titles.40.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val41_{{ item }}">
                                         </td>
@@ -606,7 +562,7 @@
                                     <td>
                                         <strong>{{ titles.41.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val42_{{ item }}">
                                         </td>
@@ -616,7 +572,7 @@
                                     <td>
                                         <strong>{{ titles.42.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val43_{{ item }}">
                                         </td>
@@ -626,7 +582,7 @@
                                     <td>
                                         <strong>{{ titles.43.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val44_{{ item }}">
                                         </td>
@@ -636,7 +592,7 @@
                                     <td>
                                         <strong>{{ titles.44.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val45_{{ item }}">
                                         </td>
@@ -646,7 +602,7 @@
                                     <td>
                                         <strong>{{ titles.45.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val46_{{ item }}">
                                         </td>
@@ -661,7 +617,7 @@
                                     <td>
                                         <strong>{{ titles.46.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val47_{{ item }}">
                                         </td>
@@ -671,7 +627,7 @@
                                     <td>
                                         <strong>{{ titles.47.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val48_{{ item }}">
                                         </td>
@@ -681,7 +637,7 @@
                                     <td>
                                         <strong>{{ titles.48.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val49_{{ item }}">
                                         </td>
@@ -691,7 +647,7 @@
                                     <td>
                                         <strong>{{ titles.49.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val50_{{ item }}">
                                         </td>
@@ -701,7 +657,7 @@
                                     <td>
                                         <strong>{{ titles.50.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val51_{{ item }}">
                                         </td>
@@ -711,7 +667,7 @@
                                     <td>
                                         <strong>{{ titles.51.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val52_{{ item }}">
                                         </td>
@@ -721,7 +677,7 @@
                                     <td>
                                         <strong>{{ titles.52.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val53_{{ item }}">
                                         </td>
@@ -736,7 +692,7 @@
                                     <td>
                                         <strong>{{ titles.53.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val54_{{ item }}">
                                         </td>
@@ -746,7 +702,7 @@
                                     <td>
                                         <strong>{{ titles.54.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val55_{{ item }}">
                                         </td>
@@ -756,7 +712,7 @@
                                     <td>
                                         <strong>{{ titles.55.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val56_{{ item }}">
                                         </td>
@@ -766,7 +722,7 @@
                                     <td>
                                         <strong>{{ titles.56.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val57_{{ item }}">
                                         </td>
@@ -776,7 +732,7 @@
                                     <td>
                                         <strong>{{ titles.57.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val58_{{ item }}">
                                         </td>
@@ -786,7 +742,7 @@
                                     <td>
                                         <strong>{{ titles.58.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val59_{{ item }}">
                                         </td>
@@ -801,7 +757,7 @@
                                     <td>
                                         <strong>{{ titles.59.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val60_{{ item }}">
                                         </td>
@@ -811,7 +767,7 @@
                                     <td>
                                         <strong>{{ titles.60.description }}</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val61_{{ item }}">
                                         </td>
@@ -826,7 +782,7 @@
                                     <td>
                                         <strong>Supporti 503</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val62_{{ item }}">
                                         </td>
@@ -836,7 +792,7 @@
                                     <td>
                                         <strong>Supporti 504</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
                                         </td>
@@ -846,7 +802,7 @@
                                     <td>
                                         <strong>Supporti 506</strong>
                                     </td>
-                                    {% for item in 1..count|length %}
+                                    {% for item in 1..colCount %}
                                         <td>
                                             <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
                                         </td>
@@ -885,13 +841,13 @@
                 update({{ item.id }},'pl','val8');
                 update({{ item.id }},'c1v','val6');
                 update({{ item.id }},'c2v','val41');
-                for(i=0; i < {{ count|length }}; i++) {
+                for(i=0; i < {{ colCount }}; i++) {
                     $("#form_val63_" + i ).prop('disabled', true);
                     $("#form_val64_" + i ).prop('disabled', true);
                 }
                 window.setTimeout(function() {
                     calculate(62);
-                    for(i=0; i < {{ count|length }}; i++) {
+                    for(i=0; i < {{ colCount }}; i++) {
                         $("#form_val63_" + i ).prop('disabled', false);
                         $("#form_val64_" + i ).prop('disabled', false);
                     }
@@ -923,7 +879,7 @@
                 $.ajax({
                     url: '/ajax/get/expData/' + exp + '/' + field,
                     success: function (data) {
-                        for (var i = 0; i < {{ count|length }}; i++) {
+                        for (var i = 0; i < {{ colCount }}; i++) {
                             var numbersArray = data.split(',');
                             $.each(numbersArray, function(index, value) {
                                 var ind = index +1;
@@ -935,7 +891,7 @@
                 })
             }
             function calculate(field) {
-                for(var i = 0; i < {{ count|length }}; i++) {
+                for(var i = 0; i < {{ colCount }}; i++) {
                     var ind = i +1;
                     var values = parseInt($('#form_val1_' + ind ).val()) + parseInt($('#form_val6_' + ind ).val());
                     console.log(values);

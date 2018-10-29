@@ -165,6 +165,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dashboard',);
         }
 
+        // error_id
+        if (0 === strpos($pathinfo, '/errore') && preg_match('#^/errore/(?P<error>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'error_id')), array (  '_controller' => 'AppBundle\\Controller\\DefaultController::errorAction',));
+        }
+
         if (0 === strpos($pathinfo, '/pr')) {
             if (0 === strpos($pathinfo, '/preventivi')) {
                 // lista_preventivi

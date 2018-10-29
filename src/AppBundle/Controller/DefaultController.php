@@ -47,6 +47,16 @@ class DefaultController extends Controller
         ]);
     }
 
+    /**
+     * @Route("/errore/{error}", name="error_id")
+     */
+    public function errorAction($error) {
+
+        return $this->render('default/errors.html.twig',[
+            'error' => $error
+        ]);
+    }
+
     public function uidToName($uid) {
         return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getName();
     }

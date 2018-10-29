@@ -21,6 +21,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
@@ -561,41 +562,43 @@ class ExpertationsController extends Controller
      */
     public function showExpertationAdvancedAction($id) {
 
-        $data = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
-        $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
+            $data = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+            $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
 
-        dump($data);
-        dump($item[0]->getVal1());
+        if($item != null) {
 
-        $total = 0;
+            $total = 0;
 
-        for($i = 1; $i <= 64; $i++) {
-            $array = $item[0]->{"getVal{$i}"}();
+            for($i = 1; $i <= 64; $i++) {
+                $array = $item[0]->{"getVal{$i}"}();
 
-            $return = is_array($array) ? array_sum($array) : 0;
+                $return = is_array($array) ? array_sum($array) : 0;
 
-            $code = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->find($i);
-            $price = $this->getDoctrine()->getRepository(PricesAdvanced::class)->findBy(['code' => $code->getCode()]);
+                $code = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->find($i);
+                $price = $this->getDoctrine()->getRepository(PricesAdvanced::class)->findBy(['code' => $code->getCode()]);
 
-            $lineTotal = $return * $price[0]->getPrice();
-            $total = $lineTotal + $total;
+                $lineTotal = $return * $price[0]->getPrice();
+                $total = $lineTotal + $total;
 
-            dump($i);
-            dump( $code);
-            dump($return);
-            dump($price);
-            dump($lineTotal);
-            dump($total);
+                dump($i);
+                dump( $code);
+                dump($return);
+                dump($price);
+                dump($lineTotal);
+                dump($total);
 
+            }
+
+            return $this->render('expertations/show.advanced.html.twig',[
+                'item' => $item,
+                'data' => $data,
+                'func' => $this,
+                'total' => $total
+            ]);
+        } else {
+            //throw new NotFoundHttpException('Preventivo non ancora generato');
+            return $this->redirectToRoute('error_id', ['error' => 'Preventivo non ancora generato']);
         }
-
-
-        return $this->render('expertations/show.advanced.html.twig',[
-            'item' => $item,
-            'data' => $data,
-            'func' => $this,
-            'total' => $total
-        ]);
     }
 
     /**
@@ -610,9 +613,7 @@ class ExpertationsController extends Controller
 
         $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
 
-        dump($ambientsCount);
-
-        //$check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
+        $check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
 
         //if ($check === null) {
 
@@ -628,8 +629,6 @@ class ExpertationsController extends Controller
 
             if ($form->isValid() && $form->isSubmitted()) {
                 $expAdv = $form->getData();
-
-                dump($form->getData());
 
                 $expAdv->setFather($item->getId());
                 $expAdv->setFatherFloor("1");
@@ -706,7 +705,7 @@ class ExpertationsController extends Controller
                     'id' => $expAdv->getId()
                 ]);
 
-            //}
+
         }
 
         dump($titles);
