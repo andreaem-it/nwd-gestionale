@@ -98,7 +98,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                             </a>
                             <a href=\"";
         // line 26
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 26, $this->source); })()), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 26, $this->source); })()), "id", array()), "floor" => "1")), "html", null, true);
         echo "\" class=\"btn btn-success btn-sm float-right mr-1\">
                                 Avanzato
                             </a>
@@ -716,7 +716,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                             <a href=\"{{ url('preventivi_dettaglio_id', {'id': item.id}) }}\" class=\"btn btn-success btn-sm float-right mr-1\">
                                 Computometrico
                             </a>
-                            <a href=\"{{ url('nuovo_preventivo_avanzato', {'id': item.id}) }}\" class=\"btn btn-success btn-sm float-right mr-1\">
+                            <a href=\"{{ url('nuovo_preventivo_avanzato', {'id': item.id, 'floor': '1' }) }}\" class=\"btn btn-success btn-sm float-right mr-1\">
                                 Avanzato
                             </a>
                         </div>

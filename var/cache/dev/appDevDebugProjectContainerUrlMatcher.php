@@ -198,8 +198,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // nuovo_preventivo_avanzato
-                if (0 === strpos($pathinfo, '/preventivi/avanzato/nuovo') && preg_match('#^/preventivi/avanzato/nuovo(?:/(?P<id>[^/]++))?$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'nuovo_preventivo_avanzato')), array (  'id' => '0',  '_controller' => 'AppBundle\\Controller\\ExpertationsController::newExpertationAdvancedAction',));
+                if (0 === strpos($pathinfo, '/preventivi/avanzato/nuovo/preventivo-') && preg_match('#^/preventivi/avanzato/nuovo/preventivo\\-(?P<id>[^/]++)/piano\\-(?P<floor>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'nuovo_preventivo_avanzato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::newExpertationAdvancedAction',));
                 }
 
                 // preventivi_elimina

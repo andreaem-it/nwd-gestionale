@@ -94,6 +94,16 @@
                     <div class="card-body">
                         {{ form_start(form) }}
                         <div class="wrapper1" style="height: 30px;">
+                        <div id="" class="float-left">
+                            <h4 class="float-left mt-2"><strong>Piano</strong> {{ floor }}</h4>
+                            <div class="btn-group float-right ml-3">
+                                {% set oldFloor = floor - 1 %}
+                                <a class="btn btn-secondary btn-sm" href="{{ url('nuovo_preventivo_avanzato', {'id': item.id, 'floor': oldFloor }) }}">-</a>
+                                {% set newFloor = floor + 1 %}
+                                <a class="btn btn-secondary btn-sm" href="{{ url('nuovo_preventivo_avanzato', {'id': item.id, 'floor': newFloor }) }}">+</a>
+                            </div>
+
+                        </div>
                         <div id="buttons" class="div1 float-right btn-group">
                             <a class="btn btn-secondary btn-sm" id="scroll-l" href="#" disabled="disabled"> < </a>
                             <a class="btn btn-secondary btn-sm" id="scroll-r" href="#"> > </a>

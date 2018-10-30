@@ -32,7 +32,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
       <div class=\"nav-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
-            <img class=\"mg-xs rounded-circle\" src=\"";
+            <img class=\"img-xs rounded-circle border\" src=\"";
         // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("users/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 7, $this->source); })()), "user", array()), "picture", array()))), "html", null, true);
         echo "\" alt=\"profile image\" style=\"width: 100%\">
@@ -158,17 +158,9 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo");
         echo "\">Nuovo Base</a>
           </li>
-          <li class=\"nav-item\">
-            <a class=\"nav-link ";
-        // line 63
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 63, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "nuovo_preventivo_avanzato")) {
-            echo "active";
-        }
-        echo "\" href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato");
-        echo "\">Nuovo Avanzato</a>
-          </li>
-          <li class=\"nav-item\">
+          ";
+        // line 65
+        echo "          <li class=\"nav-item\">
             <a class=\"nav-link ";
         // line 66
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 66, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "lista_preventivi")) {
@@ -359,7 +351,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
 
     public function getDebugInfo()
     {
-        return array (  340 => 130,  327 => 124,  317 => 121,  307 => 118,  297 => 115,  287 => 112,  279 => 109,  267 => 104,  264 => 103,  262 => 102,  250 => 97,  242 => 94,  230 => 89,  217 => 83,  207 => 80,  199 => 77,  187 => 72,  174 => 66,  164 => 63,  154 => 60,  146 => 57,  134 => 52,  125 => 46,  119 => 45,  111 => 40,  101 => 35,  95 => 31,  90 => 29,  87 => 28,  84 => 27,  81 => 26,  78 => 25,  75 => 24,  72 => 23,  69 => 22,  66 => 21,  63 => 20,  60 => 19,  57 => 18,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
+        return array (  332 => 130,  319 => 124,  309 => 121,  299 => 118,  289 => 115,  279 => 112,  271 => 109,  259 => 104,  256 => 103,  254 => 102,  242 => 97,  234 => 94,  222 => 89,  209 => 83,  199 => 80,  191 => 77,  179 => 72,  166 => 66,  163 => 65,  154 => 60,  146 => 57,  134 => 52,  125 => 46,  119 => 45,  111 => 40,  101 => 35,  95 => 31,  90 => 29,  87 => 28,  84 => 27,  81 => 26,  78 => 25,  75 => 24,  72 => 23,  69 => 22,  66 => 21,  63 => 20,  60 => 19,  57 => 18,  52 => 14,  46 => 12,  44 => 11,  37 => 7,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -370,7 +362,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
       <div class=\"nav-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
-            <img class=\"mg-xs rounded-circle\" src=\"{{ asset('users/' ~ app.user.picture) }}\" alt=\"profile image\" style=\"width: 100%\">
+            <img class=\"img-xs rounded-circle border\" src=\"{{ asset('users/' ~ app.user.picture) }}\" alt=\"profile image\" style=\"width: 100%\">
           </div>
           <div class=\"text-wrapper\">
             <p class=\"profile-name\">
@@ -425,9 +417,9 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
           <li class=\"nav-item\">
             <a class=\"nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo') }}\">Nuovo Base</a>
           </li>
-          <li class=\"nav-item\">
+          {#<li class=\"nav-item\">
             <a class=\"nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo_avanzato') }}\">Nuovo Avanzato</a>
-          </li>
+          </li>#}
           <li class=\"nav-item\">
             <a class=\"nav-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}\" href=\"{{ url('lista_preventivi') }}\">Lista</a>
           </li>

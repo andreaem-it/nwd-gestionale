@@ -602,9 +602,9 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("preventivi/avanzato/nuovo/{id}", name="nuovo_preventivo_avanzato", defaults={"id" : "0"})
+     * @Route("preventivi/avanzato/nuovo/preventivo-{id}/piano-{floor}", name="nuovo_preventivo_avanzato")
      */
-    public function newExpertationAdvancedAction(Request $request,$id) {
+    public function newExpertationAdvancedAction(Request $request,$id,$floor) {
 
         $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
         //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
@@ -613,7 +613,7 @@ class ExpertationsController extends Controller
 
         $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
 
-        $check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
+        //$check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
 
         //if ($check === null) {
 
@@ -631,7 +631,7 @@ class ExpertationsController extends Controller
                 $expAdv = $form->getData();
 
                 $expAdv->setFather($item->getId());
-                $expAdv->setFatherFloor("1");
+                $expAdv->setFatherFloor($floor);
                 $expAdv->setVal1(explode(',', $form->getData()->getVal1()));
                 $expAdv->setVal2(explode(',', $form->getData()->getVal2()));
                 $expAdv->setVal3(explode(',', $form->getData()->getVal3()));
@@ -715,8 +715,9 @@ class ExpertationsController extends Controller
                 'item' => $item,
                 'titles' => $titles,
                 'func' => $this,
-                'count' => $ambientsCount
-
+                'count' => $ambientsCount,
+                'url' => $_SERVER['REQUEST_URI'],
+                'floor' => $floor
         ]);
     }
 
