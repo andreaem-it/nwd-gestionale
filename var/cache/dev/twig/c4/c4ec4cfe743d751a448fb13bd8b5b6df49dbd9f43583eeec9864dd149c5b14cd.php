@@ -360,16 +360,10 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                         Prese TV
                                     </th>
                                     <th>
-                                        ";
-        // line 200
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 200, $this->source); })()), "c1n", array()), 'widget');
-        echo "
+                                        Punti di Comando
                                     </th>
                                     <th>
-                                        ";
-        // line 203
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 203, $this->source); })()), "c2n", array()), 'widget');
-        echo "
+                                        Tiranti
                                     </th>
                                     <th>
                                         ";
@@ -712,7 +706,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
 
     public function getDebugInfo()
     {
-        return array (  692 => 423,  687 => 422,  678 => 421,  666 => 419,  662 => 418,  658 => 417,  653 => 416,  644 => 415,  586 => 367,  573 => 357,  467 => 254,  462 => 252,  456 => 249,  450 => 246,  444 => 243,  438 => 240,  432 => 237,  426 => 234,  420 => 231,  414 => 228,  408 => 225,  402 => 222,  389 => 212,  383 => 209,  377 => 206,  371 => 203,  365 => 200,  326 => 164,  322 => 163,  314 => 158,  310 => 157,  302 => 152,  298 => 151,  290 => 146,  286 => 145,  278 => 140,  274 => 139,  268 => 135,  261 => 126,  257 => 125,  249 => 120,  245 => 119,  189 => 66,  185 => 65,  177 => 60,  173 => 59,  165 => 54,  161 => 53,  153 => 48,  149 => 47,  141 => 42,  137 => 41,  129 => 36,  125 => 35,  117 => 30,  113 => 29,  103 => 22,  97 => 19,  93 => 18,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  686 => 423,  681 => 422,  672 => 421,  660 => 419,  656 => 418,  652 => 417,  647 => 416,  638 => 415,  580 => 367,  567 => 357,  461 => 254,  456 => 252,  450 => 249,  444 => 246,  438 => 243,  432 => 240,  426 => 237,  420 => 234,  414 => 231,  408 => 228,  402 => 225,  396 => 222,  383 => 212,  377 => 209,  371 => 206,  326 => 164,  322 => 163,  314 => 158,  310 => 157,  302 => 152,  298 => 151,  290 => 146,  286 => 145,  278 => 140,  274 => 139,  268 => 135,  261 => 126,  257 => 125,  249 => 120,  245 => 119,  189 => 66,  185 => 65,  177 => 60,  173 => 59,  165 => 54,  161 => 53,  153 => 48,  149 => 47,  141 => 42,  137 => 41,  129 => 36,  125 => 35,  117 => 30,  113 => 29,  103 => 22,  97 => 19,  93 => 18,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -916,10 +910,10 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                         Prese TV
                                     </th>
                                     <th>
-                                        {{ form_widget(form.c1n) }}
+                                        Punti di Comando
                                     </th>
                                     <th>
-                                        {{ form_widget(form.c2n) }}
+                                        Tiranti
                                     </th>
                                     <th>
                                         {{ form_widget(form.c3n) }}

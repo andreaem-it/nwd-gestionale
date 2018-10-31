@@ -357,7 +357,7 @@ class ExpertationsController extends Controller
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
             ])
-            ->add('c1n', ChoiceType::class, [
+        /*->add('c1n', ChoiceType::class, [
                 'placeholder' => '--Seleziona--',
                 'choices' => [
                     'Punto Comando' => 'Punto Comando',
@@ -380,7 +380,7 @@ class ExpertationsController extends Controller
                     'required' => false
                 ] ,
                 'label' => false
-            ])
+            ])*/
             ->add('c3n',TextType::class, [
                 'label' => false,
                 'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
@@ -469,6 +469,8 @@ class ExpertationsController extends Controller
             $expertations->setPrice     (0);
             $expertations->setExpiration(New \DateTime("now"));
             $expertations->setCreatedBy($this->getUser()->getId());
+            $expertations->setC1n("Punti di Comando");
+            $expertations->setC2n("Tiranti");
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($expertation);
@@ -606,7 +608,18 @@ class ExpertationsController extends Controller
      */
     public function newExpertationAdvancedAction(Request $request,$id,$floor) {
 
-        $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+        //$item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['id' => $id]);
+        $qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
+        $qb ->select('exp')
+            ->where($qb->expr()->orX(
+                $qb->expr()->eq('exp.id', ':id'),
+                $qb->expr()->eq('exp.floor', ':floor')))
+            ->setParameter('id', $id)
+            ->setParameter('floor', array($floor));
+        $item = $qb->getQuery()->getSingleResult();
+
+        dump($item);
+
         //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
         $expertationsAdvanced = new ExpertationsAdvanced();
         $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient();
