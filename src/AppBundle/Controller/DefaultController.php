@@ -36,8 +36,6 @@ class DefaultController extends Controller
         //$announcements = $this->getDoctrine()->getRepository(Announcements::class)->findOneBy(['*'],['id'=>'DESC']);
         $announcements = $this->getDoctrine()->getManager()->getRepository(Announcements::class)->getLastEntity();
 
-        dump($announcements);
-
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'expCount' => count($expCount),

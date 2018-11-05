@@ -14205,7 +14205,7 @@ html {
 
 .main-panel {
   transition: width 0.25s ease, margin 0.25s ease;
-  width: calc(100% - 255px);
+  width: 100%;
   min-height: calc(100vh - 122px);
   display: -webkit-flex;
   display: flex;

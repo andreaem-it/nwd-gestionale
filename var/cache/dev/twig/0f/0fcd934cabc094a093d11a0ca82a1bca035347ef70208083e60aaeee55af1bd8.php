@@ -330,7 +330,45 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
         }
         // line 130
         echo "  </ul>
-</nav>";
+</nav>
+<div id=\"nav-hide-btn-holder\">
+  <a id=\"nav-hide-btn\" href=\"\" class=\"btn btn-secondary btn-xs\">&lt;</a>
+</div>
+<style>
+  #nav-hide-btn {
+    position: absolute;
+    left: 14.6%;
+  }
+  #nav-hide-btn:hover {
+    left: 15.2%;
+  }
+  #sidebar {
+    position: relative;
+  }
+</style>
+<script>
+  let opened;
+  opened = true;
+  \$('.main-panel').css('width', '100%');
+  \$('#nav-hide-btn').click(function(e) {
+      e.preventDefault();
+
+      if (opened == true) {
+          \$('#sidebar').animate({left: -255}, 3000);
+          percent = 100;
+          add_width = (percent * \$('.main-panel').parent().width()) + 'px';
+          \$('.main-panel').animate({marginLeft: -255},2500);
+          \$(this).animate({left: -10}, 3000);
+          opened = false;
+      }else {
+          \$('#sidebar').animate({left: 0}, 3000);
+          \$(this).animate({left: 245}, 3000);
+          \$('.main-panel').animate({marginLeft: 0},2500);
+          opened = true;
+          \$(this).html('>');
+      }
+  })
+</script>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -486,6 +524,44 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
     </li>
     {% endif %}
   </ul>
-</nav>", "template/sidebar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/sidebar.html.twig");
+</nav>
+<div id=\"nav-hide-btn-holder\">
+  <a id=\"nav-hide-btn\" href=\"\" class=\"btn btn-secondary btn-xs\">&lt;</a>
+</div>
+<style>
+  #nav-hide-btn {
+    position: absolute;
+    left: 14.6%;
+  }
+  #nav-hide-btn:hover {
+    left: 15.2%;
+  }
+  #sidebar {
+    position: relative;
+  }
+</style>
+<script>
+  let opened;
+  opened = true;
+  \$('.main-panel').css('width', '100%');
+  \$('#nav-hide-btn').click(function(e) {
+      e.preventDefault();
+
+      if (opened == true) {
+          \$('#sidebar').animate({left: -255}, 3000);
+          percent = 100;
+          add_width = (percent * \$('.main-panel').parent().width()) + 'px';
+          \$('.main-panel').animate({marginLeft: -255},2500);
+          \$(this).animate({left: -10}, 3000);
+          opened = false;
+      }else {
+          \$('#sidebar').animate({left: 0}, 3000);
+          \$(this).animate({left: 245}, 3000);
+          \$('.main-panel').animate({marginLeft: 0},2500);
+          opened = true;
+          \$(this).html('>');
+      }
+  })
+</script>", "template/sidebar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/sidebar.html.twig");
     }
 }

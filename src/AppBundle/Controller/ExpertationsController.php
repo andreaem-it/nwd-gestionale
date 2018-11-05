@@ -76,8 +76,6 @@ class ExpertationsController extends Controller
                      (array_sum($item->getPl()) * $this->getPrice(2)) +
                      (array_sum($item->getPt()) * $this->getPrice(3));
 
-            dump($total);
-
             if($item->getOpereMurarie() == 1) {
                 //TODO: Price
                 $opMurPp = ($this->getPrice(4) * array_sum($item->getPp()));
@@ -145,10 +143,6 @@ class ExpertationsController extends Controller
         $sconto = $item->getSconto() * $vattotal / 100;
 
         $grandtotal = $vattotal - $sconto;
-
-        dump($grandtotal);
-        dump($total);
-        dump($item);
 
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
@@ -497,8 +491,6 @@ class ExpertationsController extends Controller
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
 
-        dump($qtyPL);
-
         $total_1 = ($qtyPL * 22.20) + ($qtyPL * 11.80);
 
         if ($item->getOpereMurarie() == 0) {
@@ -540,13 +532,6 @@ class ExpertationsController extends Controller
 
         $sconto = $total * $item->getSconto() / 100;
 
-        dump($total_1);
-        dump($total_2);
-        dump($total_4);
-        dump($total_5);
-        dump($total_7);
-        dump($total_8);
-
 
         return $this->render('expertations/details.html.twig',[
             'item' => $item,
@@ -582,13 +567,6 @@ class ExpertationsController extends Controller
                 $lineTotal = $return * $price[0]->getPrice();
                 $total = $lineTotal + $total;
 
-                dump($i);
-                dump( $code);
-                dump($return);
-                dump($price);
-                dump($lineTotal);
-                dump($total);
-
             }
 
             return $this->render('expertations/show.advanced.html.twig',[
@@ -617,8 +595,6 @@ class ExpertationsController extends Controller
             ->setParameter('id', $id)
             ->setParameter('floor', array($floor));
         $item = $qb->getQuery()->getSingleResult();
-
-        dump($item);
 
         //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
         $expertationsAdvanced = new ExpertationsAdvanced();
@@ -720,8 +696,6 @@ class ExpertationsController extends Controller
 
 
         }
-
-        dump($titles);
 
         return $this->render('expertations/new.advanced.html.twig',[
                 'form' => $form->createView(),

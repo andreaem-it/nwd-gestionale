@@ -129,3 +129,41 @@
     {% endif %}
   </ul>
 </nav>
+<div id="nav-hide-btn-holder">
+  <a id="nav-hide-btn" href="" class="btn btn-secondary btn-xs">&lt;</a>
+</div>
+<style>
+  #nav-hide-btn {
+    position: absolute;
+    left: 14.6%;
+  }
+  #nav-hide-btn:hover {
+    left: 15.2%;
+  }
+  #sidebar {
+    position: relative;
+  }
+</style>
+<script>
+  let opened;
+  opened = true;
+  $('.main-panel').css('width', '100%');
+  $('#nav-hide-btn').click(function(e) {
+      e.preventDefault();
+
+      if (opened == true) {
+          $('#sidebar').animate({left: -255}, 3000);
+          percent = 100;
+          add_width = (percent * $('.main-panel').parent().width()) + 'px';
+          $('.main-panel').animate({marginLeft: -255},2500);
+          $(this).animate({left: -10}, 3000);
+          opened = false;
+      }else {
+          $('#sidebar').animate({left: 0}, 3000);
+          $(this).animate({left: 245}, 3000);
+          $('.main-panel').animate({marginLeft: 0},2500);
+          opened = true;
+          $(this).html('>');
+      }
+  })
+</script>
