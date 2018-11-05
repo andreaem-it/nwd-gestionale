@@ -130,7 +130,7 @@
   </ul>
 </nav>
 <div id="nav-hide-btn-holder">
-  <a id="nav-hide-btn" href="" class="btn btn-secondary btn-xs">&lt;</a>
+  <a id="nav-hide-btn" href="" class="btn btn-secondary btn-xs"><i id="nav-hide-btn-icon" class="fa fa-chevron-left rotate"></i></a>
 </div>
 <style>
   #nav-hide-btn {
@@ -143,6 +143,18 @@
   #sidebar {
     position: relative;
   }
+  .rotate{
+    -moz-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+  }
+
+  .rotate.down{
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
 </style>
 <script>
   let opened;
@@ -150,20 +162,25 @@
   $('.main-panel').css('width', '100%');
   $('#nav-hide-btn').click(function(e) {
       e.preventDefault();
-
       if (opened == true) {
-          $('#sidebar').animate({left: -255}, 3000);
+          $('#sidebar').animate({left: -255}, 300);
           percent = 100;
           add_width = (percent * $('.main-panel').parent().width()) + 'px';
-          $('.main-panel').animate({marginLeft: -255},2500);
-          $(this).animate({left: -10}, 3000);
+          $('.main-panel').animate({marginLeft: -255},0);
+          $(this).animate({left: -10}, 300);
           opened = false;
+          $('#nav-hide-btn-icon').toggleClass('down');
       }else {
-          $('#sidebar').animate({left: 0}, 3000);
-          $(this).animate({left: 245}, 3000);
-          $('.main-panel').animate({marginLeft: 0},2500);
+          $('#sidebar').animate({left: 0}, 300);
+          $(this).animate({left: 245}, 300);
+          $('.main-panel').animate({marginLeft: 0},50);
           opened = true;
-          $(this).html('>');
+          $('#nav-hide-btn-icon').toggleClass('down');
       }
-  })
+  }).bind('mouseenter', function(){
+      $(this).effect("bounce", { times:3 }, 300);
+  });
 </script>
+{% block javascripts %}
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+{% endblock %}
