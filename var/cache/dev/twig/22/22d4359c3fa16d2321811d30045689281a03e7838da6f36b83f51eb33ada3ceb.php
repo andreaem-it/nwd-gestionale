@@ -322,13 +322,7 @@ class __TwigTemplate_0cf7903c69c3d0f3b051d605b35c6ae20402b4a99a8440973c48b92bc0a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 190
-        echo "    <link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.min.css"), "html", null, true);
-        echo "\">
-    <link rel=\"stylesheet\" href=\"";
-        // line 191
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.all.min.css"), "html", null, true);
-        echo "\">
+        echo "
 
 ";
         
@@ -339,7 +333,7 @@ class __TwigTemplate_0cf7903c69c3d0f3b051d605b35c6ae20402b4a99a8440973c48b92bc0a
 
     }
 
-    // line 194
+    // line 193
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -368,7 +362,7 @@ class __TwigTemplate_0cf7903c69c3d0f3b051d605b35c6ae20402b4a99a8440973c48b92bc0a
 
     public function getDebugInfo()
     {
-        return array (  343 => 194,  330 => 191,  325 => 190,  316 => 189,  287 => 170,  268 => 154,  257 => 145,  247 => 141,  241 => 138,  234 => 134,  230 => 133,  224 => 130,  218 => 127,  214 => 125,  210 => 124,  183 => 100,  164 => 86,  93 => 18,  80 => 8,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  337 => 193,  325 => 190,  316 => 189,  287 => 170,  268 => 154,  257 => 145,  247 => 141,  241 => 138,  234 => 134,  230 => 133,  224 => 130,  218 => 127,  214 => 125,  210 => 124,  183 => 100,  164 => 86,  93 => 18,  80 => 8,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -562,8 +556,7 @@ class __TwigTemplate_0cf7903c69c3d0f3b051d605b35c6ae20402b4a99a8440973c48b92bc0a
     </style>
 {% endblock %}
 {% block stylesheets %}
-    <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.min.css') }}\">
-    <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.all.min.css') }}\">
+
 
 {% endblock %}
 {% block javascripts %}

@@ -37,18 +37,17 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Templating\\' => 29,
-            'Symfony\\Component\\Security\\Acl\\' => 31,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\' => 18,
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
             'Symfony\\Bundle\\MonologBundle\\' => 29,
-            'Symfony\\Bundle\\AclBundle\\' => 25,
             'Symfony\\Bundle\\' => 15,
             'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\ProxyManager\\' => 28,
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Snc\\RedisBundle\\' => 16,
             'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
             'Sensio\\Bundle\\DistributionBundle\\' => 33,
@@ -61,6 +60,7 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Psr\\Link\\' => 9,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
+            'Predis\\' => 7,
         ),
         'M' => 
         array (
@@ -146,10 +146,6 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/..' . '/symfony/templating',
         ),
-        'Symfony\\Component\\Security\\Acl\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/security-acl',
-        ),
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
@@ -165,10 +161,6 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'Symfony\\Bundle\\MonologBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/monolog-bundle',
-        ),
-        'Symfony\\Bundle\\AclBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/acl-bundle/src',
         ),
         'Symfony\\Bundle\\' => 
         array (
@@ -193,6 +185,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'Symfony\\Bridge\\Doctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Doctrine',
+        ),
+        'Snc\\RedisBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/snc/redis-bundle',
         ),
         'Sensio\\Bundle\\GeneratorBundle\\' => 
         array (
@@ -229,6 +225,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'Psr\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'Predis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/predis/predis/src',
         ),
         'Monolog\\' => 
         array (

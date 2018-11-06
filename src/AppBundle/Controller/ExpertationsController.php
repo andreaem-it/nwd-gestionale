@@ -65,7 +65,16 @@ class ExpertationsController extends Controller
 
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
+        $advanced = $this->getDoctrine()->getRepository('AppBundle:ExpertationsAdvanced')->findBy(['father' => $id]);
 
+        $gotAdv = null;
+        if ($advanced) {
+            $gotAdv = true;
+        } else {
+            $gotAdv = false;
+        }
+
+        dump($gotAdv);
 
         if($item->getPrice() == 0.0) {
 
@@ -152,7 +161,8 @@ class ExpertationsController extends Controller
             'sconto' => $sconto,
             'grand_total' => $grandtotal,
             'generated' => $generated,
-            'client' => $client
+            'client' => $client,
+            'gotAdv' => $gotAdv
         ]);
     }
 

@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="announcements")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\AnnouncementsRepository")
+ * @ORM\Cache(usage="NONSTRICT_READ_WRITE")
  */
 class Announcements
 {

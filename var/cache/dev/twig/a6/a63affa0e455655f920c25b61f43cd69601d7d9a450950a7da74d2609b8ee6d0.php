@@ -69,36 +69,44 @@ class __TwigTemplate_60d35b5417d78d7a569ccd8298bada00c02425e77adf64a3c5958d7eaa8
         echo "\"></script>
         <link rel=\"stylesheet\" href=\"";
         // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.min.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.all.min.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/pace-loading.css"), "html", null, true);
         echo "\">
         <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        // line 18
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
         <div class=\"container-scroller\">
             ";
-        // line 22
-        $this->loadTemplate("template/navbar.html.twig", "base.html.twig", 22)->display($context);
-        // line 23
+        // line 24
+        $this->loadTemplate("template/navbar.html.twig", "base.html.twig", 24)->display($context);
+        // line 25
         echo "            <div class=\"container-fluid page-body-wrapper\">
                 ";
-        // line 24
-        $this->loadTemplate("template/sidebar.html.twig", "base.html.twig", 24)->display($context);
-        // line 25
+        // line 26
+        $this->loadTemplate("template/sidebar.html.twig", "base.html.twig", 26)->display($context);
+        // line 27
         echo "                ";
         $this->displayBlock('body', $context, $blocks);
-        // line 26
+        // line 28
         echo "            </div>
         </div>
         ";
-        // line 28
-        $this->loadTemplate("template/footer.html.twig", "base.html.twig", 28)->display($context);
-        // line 29
+        // line 30
+        $this->loadTemplate("template/footer.html.twig", "base.html.twig", 30)->display($context);
+        // line 31
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 30
+        // line 32
         echo "    </body>
 </html>";
         
@@ -143,7 +151,7 @@ class __TwigTemplate_60d35b5417d78d7a569ccd8298bada00c02425e77adf64a3c5958d7eaa8
 
     }
 
-    // line 25
+    // line 27
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -160,7 +168,7 @@ class __TwigTemplate_60d35b5417d78d7a569ccd8298bada00c02425e77adf64a3c5958d7eaa8
 
     }
 
-    // line 29
+    // line 31
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -189,7 +197,7 @@ class __TwigTemplate_60d35b5417d78d7a569ccd8298bada00c02425e77adf64a3c5958d7eaa8
 
     public function getDebugInfo()
     {
-        return array (  164 => 29,  147 => 25,  130 => 12,  113 => 6,  102 => 30,  99 => 29,  97 => 28,  93 => 26,  90 => 25,  88 => 24,  85 => 23,  83 => 22,  76 => 18,  72 => 17,  68 => 16,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
+        return array (  172 => 31,  155 => 27,  138 => 12,  121 => 6,  110 => 32,  107 => 31,  105 => 30,  101 => 28,  98 => 27,  96 => 26,  93 => 25,  91 => 24,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  68 => 16,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -210,6 +218,8 @@ class __TwigTemplate_60d35b5417d78d7a569ccd8298bada00c02425e77adf64a3c5958d7eaa8
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
         <script src=\"{{ asset('js/pace.min.js') }}\"></script>
+        <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.min.css') }}\">
+        <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.all.min.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/pace-loading.css') }}\">
         <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\" />
     </head>

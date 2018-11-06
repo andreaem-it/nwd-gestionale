@@ -1635,6 +1635,58 @@
         ]
     },
     {
+        "name": "predis/predis",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nrk/predis.git",
+            "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+            "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8"
+        },
+        "suggest": {
+            "ext-curl": "Allows access to Webdis when paired with phpiredis",
+            "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+        },
+        "time": "2016-06-16T16:22:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Predis\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniele Alessandri",
+                "email": "suppakilla@gmail.com",
+                "homepage": "http://clorophilla.net"
+            }
+        ],
+        "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+        "homepage": "http://github.com/nrk/predis",
+        "keywords": [
+            "nosql",
+            "predis",
+            "redis"
+        ]
+    },
+    {
         "name": "psr/cache",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
@@ -2115,6 +2167,74 @@
         "description": "A security checker for your composer.lock"
     },
     {
+        "name": "snc/redis-bundle",
+        "version": "2.1.7",
+        "version_normalized": "2.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/snc/SncRedisBundle.git",
+            "reference": "13dee3562945bbdbfc02286a476837f9f3ce9cd1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/13dee3562945bbdbfc02286a476837f9f3ce9cd1",
+            "reference": "13dee3562945bbdbfc02286a476837f9f3ce9cd1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
+            "symfony/yaml": "^2.7 || ^3.0 || ^4.0"
+        },
+        "require-dev": {
+            "doctrine/cache": "1.*",
+            "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
+            "predis/predis": "^1.0",
+            "symfony/console": "^2.7 || ^3.0 || ^4.0",
+            "symfony/phpunit-bridge": "^2.7 || ^3.0 || ^4.0"
+        },
+        "suggest": {
+            "monolog/monolog": "If you want to use the monolog redis handler.",
+            "predis/predis": "If you want to use predis.",
+            "symfony/console": "If you want to use commands to interact with the redis database",
+            "symfony/proxy-manager-bridge": "If you want to lazy-load some services"
+        },
+        "time": "2018-10-15T12:07:05+00:00",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Snc\\RedisBundle\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Henrik Westphal",
+                "email": "henrik.westphal@gmail.com"
+            },
+            {
+                "name": "Community contributors",
+                "homepage": "https://github.com/snc/SncRedisBundle/contributors"
+            }
+        ],
+        "description": "A Redis bundle for Symfony",
+        "homepage": "https://github.com/snc/SncRedisBundle",
+        "keywords": [
+            "nosql",
+            "redis",
+            "symfony"
+        ]
+    },
+    {
         "name": "swiftmailer/swiftmailer",
         "version": "v5.4.12",
         "version_normalized": "5.4.12.0",
@@ -2169,69 +2289,6 @@
             "mail",
             "mailer"
         ]
-    },
-    {
-        "name": "symfony/acl-bundle",
-        "version": "v1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/acl-bundle.git",
-            "reference": "78553a279dd2b7c85062255f0599990b36ebf448"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/acl-bundle/zipball/78553a279dd2b7c85062255f0599990b36ebf448",
-            "reference": "78553a279dd2b7c85062255f0599990b36ebf448",
-            "shasum": ""
-        },
-        "require": {
-            "ext-xml": "*",
-            "php": "^5.5.9|>=7.0.8",
-            "symfony/dependency-injection": "~3.4|~4.0",
-            "symfony/http-kernel": "~3.4|~4.0",
-            "symfony/security-acl": "~2.7|~3.0",
-            "symfony/security-bundle": "~3.4|~4.0"
-        },
-        "require-dev": {
-            "doctrine/doctrine-bundle": "^1.6.12",
-            "symfony/console": "~3.4|~4.0",
-            "symfony/framework-bundle": "~3.4|~4.0",
-            "symfony/phpunit-bridge": "~3.4|~4.0",
-            "symfony/yaml": "~3.4|~4.0"
-        },
-        "suggest": {
-            "doctrine/doctrine-bundle": "To use the default dbal configuration"
-        },
-        "time": "2018-01-03T11:21:11+00:00",
-        "type": "symfony-bundle",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Bundle\\AclBundle\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony AclBundle",
-        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/apache-pack",
@@ -2857,69 +2914,6 @@
             "polyfill",
             "shim"
         ]
-    },
-    {
-        "name": "symfony/security-acl",
-        "version": "v3.0.1",
-        "version_normalized": "3.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/security-acl.git",
-            "reference": "ab4dfe2d95e038cd367dd04604487b0a3359bcff"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/security-acl/zipball/ab4dfe2d95e038cd367dd04604487b0a3359bcff",
-            "reference": "ab4dfe2d95e038cd367dd04604487b0a3359bcff",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9",
-            "symfony/security-core": "~2.8|~3.0|~4.0"
-        },
-        "require-dev": {
-            "doctrine/common": "~2.2",
-            "doctrine/dbal": "~2.2",
-            "psr/log": "~1.0",
-            "symfony/phpunit-bridge": "~2.8|~3.0|~4.0"
-        },
-        "suggest": {
-            "doctrine/dbal": "For using the built-in ACL implementation",
-            "symfony/class-loader": "For using the ACL generateSql script",
-            "symfony/finder": "For using the ACL generateSql script"
-        },
-        "time": "2017-07-21T06:01:18+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Security\\Acl\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Security Component - ACL (Access Control List)",
-        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/swiftmailer-bundle",
