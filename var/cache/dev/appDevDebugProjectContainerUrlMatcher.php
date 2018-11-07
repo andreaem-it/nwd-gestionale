@@ -172,14 +172,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         if (0 === strpos($pathinfo, '/pr')) {
             if (0 === strpos($pathinfo, '/preventivi')) {
-                // lista_preventivi
-                if ('/preventivi/lista' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsListAction',  '_route' => 'lista_preventivi',);
+                if (0 === strpos($pathinfo, '/preventivi/lista')) {
+                    // lista_preventivi
+                    if ('/preventivi/lista' === $pathinfo) {
+                        return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsListAction',  '_route' => 'lista_preventivi',);
+                    }
+
+                    // lista_preventivi_cerca
+                    if (preg_match('#^/preventivi/lista/(?P<params>[^/]++)$#sD', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'lista_preventivi_cerca')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsListSearchAction',));
+                    }
+
                 }
 
                 // mostra_preventivo
                 if (0 === strpos($pathinfo, '/preventivi/mostra') && preg_match('#^/preventivi/mostra/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'mostra_preventivo')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsShowAction',));
+                }
+
+                // modifica_preventivo
+                if (0 === strpos($pathinfo, '/preventivi/modifica') && preg_match('#^/preventivi/modifica/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifica_preventivo')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsEditAction',));
                 }
 
                 // nuovo_preventivo
@@ -325,7 +338,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/login')) {
+        // action_prices_flush
+        if ('/actions/prices/flush' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesFlushAction',  '_route' => 'action_prices_flush',);
+        }
+
+        if (0 === strpos($pathinfo, '/login')) {
             // login
             if ('/login' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::login',  '_route' => 'login',);

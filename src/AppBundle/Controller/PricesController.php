@@ -104,8 +104,26 @@ class PricesController extends Controller {
 
         return $this->render('prices/prices.html.twig', [
             'prices' => $prices,
+            'count' => count($prices),
             'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/actions/prices/flush", name="action_prices_flush")
+     */
+    public function pricesFlushAction() {
+        ini_set('max_execution_time', 1200);
+
+        $new = $this->getDoctrine()->getManager();
+        $repo = $new->getRepository('AppBundle:PricesAdvanced')->findAll();
+
+        foreach ($repo as $item) {
+            $new->remove($item);
+            $new->flush();
+        }
+
+        return $this->redirectToRoute('settings_prices');
     }
 
 

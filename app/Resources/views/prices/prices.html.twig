@@ -2,6 +2,28 @@
 {% block title %}Impostazioni{% endblock %}
 {% block body %}
 <div class="main-panel">
+    <div class="modal" tabindex="-1" role="dialog" id="flush-prices">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confermi Svuotamento?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Attenzione:</strong> L'operazione non può essere annullata.</p>
+                    <p>{{ count }} Elementi saranno eliminati definitivamente.</p>
+                    <hr>
+                    <small>L'operazione può impiegare fino a 20 minuti a seconda del carico sul server e del numero di elementi. Nel caso duri di più, il sistema bloccherà l'esecuzione per evitare ulteriori rallentamenti, si prega di aggiornare la pagina.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+                    <a href="{{ url('action_prices_flush') }}" class="btn btn-danger">Elimina</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="content-wrapper">
         <div class="row">
             <div class="col-9">
@@ -18,6 +40,7 @@
                         <h3 class="card-title">
                             Listino Prezzi Avanzato
                         </h3>
+
                         <table class="table table-responsive-sm">
                             <tr>
                                 <th>Codice</th>
@@ -28,7 +51,7 @@
                                 <tr>
                                     <td>{{ item.code }}</td>
                                     <td>{{ item.description|truncate(75, true) }}</td>
-                                    <td>{{ item.price }}</td>
+                                    <td>{{ item.price|number_format(2) }}</td>
                                 </tr>
                             {% endfor %}
                         </table>
@@ -44,8 +67,11 @@
                         {{ form_start(form) }}
                         {{ form_widget(form.prices_file) }}
                         <small class="text-muted text-small mb-3">Richiesto file CSV Prezzario</small>
+                        <br/><br/>
                         {{ form_widget(form.submit) }}
                         {{ form_end(form) }}
+                        <a href="" class="btn btn-danger mt-2 btn-block" data-toggle="modal" data-target="#flush-prices">Svuota Prezzario</a>
+                        <small class="mt-3">{{ count }} Elementi attualmente in lista.</small>
                     </div>
                 </div>
             </div>
