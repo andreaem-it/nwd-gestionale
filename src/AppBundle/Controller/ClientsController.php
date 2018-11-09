@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -77,7 +78,7 @@ class ClientsController extends Controller
                 'class' => 'form-control'],
                 'label' => 'Provincia'
             ])
-            ->add('phone', TextType::class, [ 'attr' => [
+            ->add('phone', TelType::class, [ 'attr' => [
                 'class' => 'form-control'],
                 'label' => 'Telefono'
             ])

@@ -14,6 +14,7 @@ use AppBundle\Form\ExpertationsAdvancedType;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -241,14 +242,20 @@ class ExpertationsController extends Controller
                 'label' => 'Riscaldamento',
                 'attr' => ['class' => 'form-control']
             ])
-            ->add('opere_murarie', ChoiceType::class, [
-                'choices' => [
-                    'No' => '0',
-                    'Intonaco' => '1',
-                    'Mattone / Pietra' => '2'
-                ],
+            ->add('opere_murarie', CheckboxType::class, [
                 'label' => 'Opere Murarie',
-                'attr' => ['class' => 'form-control']
+                'label_attr' => ['class' => 'form-check-label'],
+                'attr' => ['class' => '']
+            ])
+            ->add('opere_murarie_intonaco', CheckboxType::class, [
+                'label' => 'Intonaco',
+                'label_attr' => ['class' => 'form-check-label'],
+                'attr' => ['class' => '']
+            ])
+            ->add('opere_murarie_pietra', CheckboxType::class, [
+                'label' => 'Pietra',
+                'label_attr' => ['class' => 'form-check-label'],
+                'attr' => ['class' => '']
             ])
             ->add('trifase', ChoiceType::class, [
                 'choices' => [
@@ -282,12 +289,15 @@ class ExpertationsController extends Controller
                     'placeholder' => 'mq',
                     'style' => 'min-width: 100%'
                 ],
-                'label' => 'Metratura Abitazione',
+                'label' => 'Metratura',
                 'label_attr' => ['class' => '']
 
             ])
-
-
+            ->add('num_infissi', IntegerType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Numero Infissi',
+                'label_attr' => ['id' => 'form_num_infissi_label']
+            ])
             ->add('num_circuiti', IntegerType::class, [
                 'attr' => ['class' => 'form-control'],
                 'label' => 'Circuiti'
@@ -307,6 +317,14 @@ class ExpertationsController extends Controller
                 ],
                 'attr' => ['class' => 'form-control'] ,
                 'label' => 'SPD'
+            ])
+            ->add('cit_vid', ChoiceType::class, [
+                'choices' => [
+                    'Citofono' => 1,
+                    'VideoCitofono' => 2,
+                ],
+                'attr' => ['class' => 'form-control'] ,
+                'label' => 'Citofono / VideoCitofono'
             ])
             ->add('imp_ausiliari', ChoiceType::class, [
                 'choices' => [
@@ -360,7 +378,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control','min' => 0]
+                    'attr' => ['class' => 'form-control','min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -370,7 +388,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -380,36 +398,12 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
             ])
-        /*->add('c1n', ChoiceType::class, [
-                'placeholder' => '--Seleziona--',
-                'choices' => [
-                    'Punto Comando' => 'Punto Comando',
-                    'Tirante' => 'Tirante',
-                ],
-                'attr' => [
-                    'class' => 'form-control',
-                    'required' => false
-                ] ,
-                'label' => false
-            ])
-            ->add('c2n',ChoiceType::class, [
-                'placeholder' => '--Seleziona--',
-                'choices' => [
-                    'Punto Comando' => 'Punto Comando',
-                    'Tirante' => 'Tirante',
-                ],
-                'attr' => [
-                    'class' => 'form-control',
-                    'required' => false
-                ] ,
-                'label' => false
-            ])*/
             ->add('c3n',TextType::class, [
                 'label' => false,
                 'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
@@ -429,7 +423,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -440,7 +434,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',

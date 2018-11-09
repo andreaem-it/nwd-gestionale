@@ -162,7 +162,11 @@
 <script>
   let opened;
   opened = true;
-  $('.main-panel').css('width', '100%');
+  $(document).ready(function() {
+      //$('.main-panel').width('100%');
+      $('.content-wrapper').width('82%');
+  })
+
   $('#nav-hide-btn').click(function(e) {
       e.preventDefault();
       if (opened == true) {
@@ -170,15 +174,17 @@
           percent = 100;
           add_width = (percent * $('.main-panel').parent().width()) + 'px';
           $('.main-panel').animate({marginLeft: -255},0);
+          $('.content-wrapper').width('97%').animate(50);
           $(this).animate({left: -10}, 300);
-          opened = false;
           $('#nav-hide-btn-icon').toggleClass('down');
+          opened = false;
       }else {
           $('#sidebar').animate({left: 0}, 300);
           $(this).animate({left: 245}, 300);
           $('.main-panel').animate({marginLeft: 0},50);
-          opened = true;
+          $('.content-wrapper').width('82%').animate(50);
           $('#nav-hide-btn-icon').toggleClass('down');
+          opened = true;
       }
   }).bind('mouseenter', function(){
       $(this).effect("bounce", { times:3 }, 300);

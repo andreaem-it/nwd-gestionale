@@ -32,8 +32,8 @@
                         </div>
                         <div class="col-lg-1 grid-margin stretch-card">
                             <div class="input-group">
-                                {{ form_label(form.kw) }}
-                                {{ form_widget(form.kw) }}
+                                {{ form_label(form.square_meters) }}
+                                {{ form_widget(form.square_meters) }}
                             </div>
                         </div>
                         <div class="col-lg-1 grid-margin stretch-card">
@@ -48,11 +48,13 @@
                                 {{ form_widget(form.riscaldamento) }}
                             </div>
                         </div>
-                        <div class="col-lg-2 grid-margin stretch-card">
-                            <div class="input-group">
+                        <div class="col-lg-2">
                                 {{ form_label(form.opere_murarie) }}
                                 {{ form_widget(form.opere_murarie) }}
-                            </div>
+                                {{ form_label(form.opere_murarie_intonaco) }}
+                                {{ form_widget(form.opere_murarie_intonaco) }}
+                                {{ form_label(form.opere_murarie_pietra) }}
+                                {{ form_widget(form.opere_murarie_pietra) }}
                         </div>
                         <div class="col-lg-1 grid-margin stretch-card">
                             <div class="input-group">
@@ -71,9 +73,12 @@
             </div>
         </div>
         <script>
+            $(document).ready(function () {
+                $('#form_num_infissi').hide();
+                $('#form_num_infissi_label').hide();
+            })
             $(document).on('change', '#form_square_meters', function () {
                 dataChanged();
-
             });
             $(document).on('change', '#form_level', function() {
                 dataChanged();
@@ -99,14 +104,20 @@
                 if (level === "1") {
                     $('#form_spd').val("1");
                     $('#form_imp_ausiliari').val("1");
+                    $('#form_num_infissi').hide();
+                    $('#form_num_infissi_label').hide();
                 }
                 if (level === "2") {
                     $('#form_spd').val("1");
                     $('#form_imp_ausiliari').val("2");
+                    $('#form_num_infissi').show();
+                    $('#form_num_infissi_label').show();
                 }
                 if (level === "3") {
                     $('#form_spd').val("2");
                     $('#form_imp_ausiliari').val("3");
+                    $('#form_num_infissi').show();
+                    $('#form_num_infissi_label').show();
                 }
             }
         </script>
@@ -122,10 +133,23 @@
                         </div>
                         <div class="col-lg-2 grid-margin stretch-card">
                             <div class="input-group">
-                                {{ form_label(form.square_meters) }}
-                                {{ form_widget(form.square_meters) }}
+                                {{ form_label(form.kw) }}
+                                {{ form_widget(form.kw) }}
                             </div>
                         </div>
+                        <div class="col-lg-2 grid-margin stretch-card">
+                            <div class="input_group">
+                                {{ form_label(form.cit_vid) }}
+                                {{ form_widget(form.cit_vid) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-2 grid-margin stretch-card">
+                            <div class="input_group">
+                                {{ form_label(form.num_infissi) }}
+                                {{ form_widget(form.num_infissi) }}
+                            </div>
+                        </div>
+
                         <div class="col-lg-3"></div>
                         {#<div class="col-lg-3 grid-margin stretch-card">
                             <div class="mt-5">
@@ -285,6 +309,7 @@
                                             }
                                         }
                                     });
+                                    $('#form_name_' + item).val($('#form_ambient_' + item + ' option:selected').text());
                                     change_tirante(val,item);
                                     toastr.info('Carico valori');
                                 });
@@ -404,6 +429,9 @@
                 position: fixed;
                 width: 100%;
             }
+        }
+        .form-check {
+            margin-top: 0!important;
         }
     </style>
     <script>

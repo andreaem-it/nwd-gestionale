@@ -94,6 +94,20 @@ class Expertations
     /**
      * @var boolean
      *
+     * @ORM\Column(name="opere_murarie_intonaco", type="boolean")
+     */
+    private $opere_murarie_intonaco;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opere_murarie_pietra", type="boolean")
+     */
+    private $opere_murarie_pietra;
+
+    /**
+     * @var boolean
+     *
      * @ORM\Column(name="trifase", type="boolean")
      */
     private $trifase;
@@ -272,6 +286,20 @@ class Expertations
      * @ORM\Column(name="created_by", type="integer", nullable=true)
      */
     private $created_by;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_infissi", type="integer", nullable=true)
+     */
+    private $num_infissi;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cit_vid", type="integer", nullable=true)
+     */
+    private $cit_vid;
 
     /**
      * @var string
@@ -1156,5 +1184,101 @@ class Expertations
     public function getCreatedBy()
     {
         return $this->created_by;
+    }
+
+    /**
+     * Set opereMurarieIntonaco.
+     *
+     * @param bool $opereMurarieIntonaco
+     *
+     * @return Expertations
+     */
+    public function setOpereMurarieIntonaco($opereMurarieIntonaco)
+    {
+        $this->opere_murarie_intonaco = $opereMurarieIntonaco;
+
+        return $this;
+    }
+
+    /**
+     * Get opereMurarieIntonaco.
+     *
+     * @return bool
+     */
+    public function getOpereMurarieIntonaco()
+    {
+        return $this->opere_murarie_intonaco;
+    }
+
+    /**
+     * Set opereMurariePietra.
+     *
+     * @param bool $opereMurariePietra
+     *
+     * @return Expertations
+     */
+    public function setOpereMurariePietra($opereMurariePietra)
+    {
+        $this->opere_murarie_pietra = $opereMurariePietra;
+
+        return $this;
+    }
+
+    /**
+     * Get opereMurariePietra.
+     *
+     * @return bool
+     */
+    public function getOpereMurariePietra()
+    {
+        return $this->opere_murarie_pietra;
+    }
+
+    /**
+     * Set numInfissi.
+     *
+     * @param int|null $numInfissi
+     *
+     * @return Expertations
+     */
+    public function setNumInfissi($numInfissi = null)
+    {
+        $this->num_infissi = $numInfissi;
+
+        return $this;
+    }
+
+    /**
+     * Get numInfissi.
+     *
+     * @return int|null
+     */
+    public function getNumInfissi()
+    {
+        return $this->num_infissi;
+    }
+
+    /**
+     * Set citVid.
+     *
+     * @param int|null $citVid
+     *
+     * @return Expertations
+     */
+    public function setCitVid($citVid = null)
+    {
+        $this->cit_vid = $citVid;
+
+        return $this;
+    }
+
+    /**
+     * Get citVid.
+     *
+     * @return int|null
+     */
+    public function getCitVid()
+    {
+        return $this->cit_vid;
     }
 }

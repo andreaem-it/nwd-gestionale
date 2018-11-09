@@ -372,7 +372,11 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
 <script>
   let opened;
   opened = true;
-  \$('.main-panel').css('width', '100%');
+  \$(document).ready(function() {
+      //\$('.main-panel').width('100%');
+      \$('.content-wrapper').width('82%');
+  })
+
   \$('#nav-hide-btn').click(function(e) {
       e.preventDefault();
       if (opened == true) {
@@ -380,22 +384,24 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
           percent = 100;
           add_width = (percent * \$('.main-panel').parent().width()) + 'px';
           \$('.main-panel').animate({marginLeft: -255},0);
+          \$('.content-wrapper').width('97%').animate(50);
           \$(this).animate({left: -10}, 300);
-          opened = false;
           \$('#nav-hide-btn-icon').toggleClass('down');
+          opened = false;
       }else {
           \$('#sidebar').animate({left: 0}, 300);
           \$(this).animate({left: 245}, 300);
           \$('.main-panel').animate({marginLeft: 0},50);
-          opened = true;
+          \$('.content-wrapper').width('82%').animate(50);
           \$('#nav-hide-btn-icon').toggleClass('down');
+          opened = true;
       }
   }).bind('mouseenter', function(){
       \$(this).effect(\"bounce\", { times:3 }, 300);
   });
 </script>
 ";
-        // line 187
+        // line 193
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -413,7 +419,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 188
+        // line 194
         echo "<script src=\"https://code.jquery.com/ui/1.12.0/jquery-ui.min.js\"></script>
 ";
         
@@ -436,7 +442,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
 
     public function getDebugInfo()
     {
-        return array (  417 => 188,  399 => 187,  343 => 133,  330 => 127,  320 => 124,  310 => 121,  300 => 118,  290 => 115,  282 => 112,  270 => 107,  267 => 106,  265 => 105,  253 => 100,  243 => 97,  235 => 94,  223 => 89,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
+        return array (  423 => 194,  405 => 193,  343 => 133,  330 => 127,  320 => 124,  310 => 121,  300 => 118,  290 => 115,  282 => 112,  270 => 107,  267 => 106,  265 => 105,  253 => 100,  243 => 97,  235 => 94,  223 => 89,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
     }
 
     public function getSourceContext()
@@ -605,7 +611,11 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
 <script>
   let opened;
   opened = true;
-  \$('.main-panel').css('width', '100%');
+  \$(document).ready(function() {
+      //\$('.main-panel').width('100%');
+      \$('.content-wrapper').width('82%');
+  })
+
   \$('#nav-hide-btn').click(function(e) {
       e.preventDefault();
       if (opened == true) {
@@ -613,15 +623,17 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
           percent = 100;
           add_width = (percent * \$('.main-panel').parent().width()) + 'px';
           \$('.main-panel').animate({marginLeft: -255},0);
+          \$('.content-wrapper').width('97%').animate(50);
           \$(this).animate({left: -10}, 300);
-          opened = false;
           \$('#nav-hide-btn-icon').toggleClass('down');
+          opened = false;
       }else {
           \$('#sidebar').animate({left: 0}, 300);
           \$(this).animate({left: 245}, 300);
           \$('.main-panel').animate({marginLeft: 0},50);
-          opened = true;
+          \$('.content-wrapper').width('82%').animate(50);
           \$('#nav-hide-btn-icon').toggleClass('down');
+          opened = true;
       }
   }).bind('mouseenter', function(){
       \$(this).effect(\"bounce\", { times:3 }, 300);
