@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% block title %}Computometrico {% endblock %}
 {% block body %}
 <div class="main-panel">
     <div class="content-wrapper">
@@ -30,6 +31,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><strong>PUNTI LUCE – COMANDO - PRESA</strong></td>
+                                    </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Punti Luce</i></td>
                                     </tr>
@@ -126,7 +130,7 @@
                                         <td class="border">6.30</td>
                                         <td class="border">{{ qtyPC * 6.30 }}</td>
                                     </tr>
-                                    <tr>
+                                    {#<tr>
                                         <td class="border">15.1.15.2</td>
                                         <td class="text-small border" style="max-width: 300px">
                                             <small>
@@ -136,7 +140,7 @@
                                         <td class="border">-</td>
                                         <td class="border">9.00</td>
                                         <td class="border">-</td>
-                                    </tr>
+                                    </tr>#}
                                     {% if item.opereMurarie == 0 %}
                                         <tr>
                                             <td class="border">15.1.3.2</td>
@@ -217,7 +221,7 @@
                                         <td class="border">12.60</td>
                                         <td class="border">{{ qtyPP * 12.60 }}</td>
                                     </tr>
-                                    <tr>
+                                    {#<tr>
                                         <td class="border">15.2.41.2</td>
                                         <td class="text-small border" style="max-width: 300px">
                                             <small>
@@ -227,7 +231,7 @@
                                         <td class="border">-</td>
                                         <td class="border">4.80</td>
                                         <td class="border">-</td>
-                                    </tr>
+                                    </tr>#}
                                     {% if item.opereMurarie == 0 %}
                                         <tr>
                                             <td class="border">15.2.2</td>
@@ -268,6 +272,111 @@
                                             <td class="border">{{ qtyPP * 27.20 }}</td>
                                         </tr>
                                     {% endif %}
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><strong>SERVIZI</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Impianto TV terrestre</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.3.110.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Incremento al punto presa di servizio per <strong>presa di ricezione TV terrestre</strong>
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyPT }}</td>
+                                        <td class="border">41.00</td>
+                                        <td class="border">{{ qtyPT * 41 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.4.230.0</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
+                                            </small>
+                                        </td>
+                                        <td class="border"></td>
+                                        <td class="border">3.20</td>
+                                        <td class="border"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Impianto Telefonico</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.3.210.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
+                                            </small>
+                                        </td>
+                                        <td class="border">{{ qtyTP }}</td>
+                                        <td class="border">26.40</td>
+                                        <td class="border">{{ qtyTP * 26.40 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">15.4.210.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
+                                            </small>
+                                        </td>
+                                        <td class="border"></td>
+                                        <td class="border">1.70</td>
+                                        <td class="border"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Allaccio TERMOSTATI </i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">13.21.10.0</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Collegamento elettrico di regolazione di impianti tecnologici, eseguito sottotraccia <br>
+                                                per alimentare dal quadro elettrico di centrale o di zona una apparecchiatura di regololazione<br>
+                                                (<strong>termostato</strong>, umidostato, flussostato, sonda di temperatura, pressostato, ecc.)
+                                            </small>
+                                        </td>
+                                        <td class="border">1</td>
+                                        <td class="border">100</td>
+                                        <td class="border">100</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Allaccio CALDAIA o POMPA DI CALORE</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">13.21.40.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Collegamento elettrico di potenza di apparecchiature tecnologiche, eseguito sottotraccia,<br>
+                                                per alimentare dal quadro elettrico di centrale o di zona, una apparecchiatura di potenza <br>
+                                                (<strong>bruciatore</strong>, elettropompa, compressore, aerotermo, unità termoventilante, aspiratore, ventilconvettore, ecc.)
+                                            </small>
+                                        </td>
+                                        <td class="border">1</td>
+                                        <td class="border">113</td>
+                                        <td class="border">113</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Allaccio collettori</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border">13.21.10.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Collegamento elettrico di regolazione di impianti tecnologici, eseguito sottotraccia per alimentare <br>
+                                                dal quadro elettrico di centrale o di zona una apparecchiatura di regololazione (termostato, umidostato,<br>
+                                                flussostato, sonda di temperatura, pressostato, ecc.)
+                                            </small>
+                                        </td>
+                                        <td class="border">1</td>
+                                        <td class="border">100</td>
+                                        <td class="border">100</td>
+                                    </tr>
+                                    <!-- TOTALI -->
                                     <tr>
                                         <td colspan="3" class="border-0"></td>
                                         <td class="border">SUBTOTALE</td>

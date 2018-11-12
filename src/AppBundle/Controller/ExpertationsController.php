@@ -20,6 +20,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -222,7 +223,7 @@ class ExpertationsController extends Controller
                 'label' => 'Tipo Impianto',
                 'attr' => ['class' => 'form-control']
             ])
-            ->add('kw', TextType::class, [
+            ->add('kw', NumberType::class, [
                 'label' => 'Kw ENEL',
                 'attr' => ['class' => 'form-control']
             ])
@@ -295,6 +296,7 @@ class ExpertationsController extends Controller
             ])
             ->add('num_infissi', IntegerType::class, [
                 'attr' => ['class' => 'form-control'],
+                'data' => 0,
                 'label' => 'Numero Infissi',
                 'label_attr' => ['id' => 'form_num_infissi_label']
             ])
@@ -843,6 +845,8 @@ class ExpertationsController extends Controller
         $qtyPL = array_sum($item->getPl());
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
+        $qtyPT = array_sum($item->getC1v());
+        $qtyTP = $item->getNumPreseTelefonoDati();
 
         $total_1 = ($qtyPL * 22.20) + ($qtyPL * 11.80);
 
@@ -874,12 +878,20 @@ class ExpertationsController extends Controller
             $total_8 = ($qtyPC * 27.30);
         }
 
+        $total_9 = ($qtyPT * 41);
+        $total_10 = ($qtyTP * 26.40);
+
         $total = $total_1 +
                  $total_2 +
                  $total_4 +
                  $total_5 +
                  $total_7 +
-                 $total_8;
+                 $total_8 +
+                 $total_9 +
+                 $total_10 +
+                 100 +
+                 113 +
+                 100;
 
         $vat = $total * 22 / 100;
 
@@ -891,6 +903,8 @@ class ExpertationsController extends Controller
             'qtyPL' => $qtyPL,
             'qtyPC' => $qtyPC,
             'qtyPP' => $qtyPP,
+            'qtyPT' => $qtyPT,
+            'qtyTP' => $qtyTP,
             'total' => $total,
             'vat' => $vat,
             'sconto' => $sconto

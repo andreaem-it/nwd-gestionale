@@ -348,7 +348,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
 <style>
   #nav-hide-btn {
     position: absolute;
-    left: 14.6%;
+    left: 14%;
   }
   #nav-hide-btn:hover {
     left: 15.2%;
@@ -374,8 +374,8 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
   opened = true;
   \$(document).ready(function() {
       //\$('.main-panel').width('100%');
-      \$('.content-wrapper').width('82%');
-  })
+      //\$('.content-wrapper').width('82%');
+  });
 
   \$('#nav-hide-btn').click(function(e) {
       e.preventDefault();
@@ -384,20 +384,20 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
           percent = 100;
           add_width = (percent * \$('.main-panel').parent().width()) + 'px';
           \$('.main-panel').animate({marginLeft: -255},0);
-          \$('.content-wrapper').width('97%').animate(50);
+          //\$('.content-wrapper').width('97%').animate(50);
           \$(this).animate({left: -10}, 300);
           \$('#nav-hide-btn-icon').toggleClass('down');
           opened = false;
       }else {
-          \$('#sidebar').animate({left: 0}, 300);
+          \$('#sidebar').animate({left: -10}, 300);
           \$(this).animate({left: 245}, 300);
           \$('.main-panel').animate({marginLeft: 0},50);
-          \$('.content-wrapper').width('82%').animate(50);
+          //\$('.content-wrapper').width('82%').animate(50);
           \$('#nav-hide-btn-icon').toggleClass('down');
           opened = true;
       }
   }).bind('mouseenter', function(){
-      \$(this).effect(\"bounce\", { times:3 }, 300);
+      \$(this).effect(\"bounce\", { times:3, direction: 'right' }, 300);
   });
 </script>
 ";
@@ -587,7 +587,7 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
 <style>
   #nav-hide-btn {
     position: absolute;
-    left: 14.6%;
+    left: 14%;
   }
   #nav-hide-btn:hover {
     left: 15.2%;
@@ -613,8 +613,8 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
   opened = true;
   \$(document).ready(function() {
       //\$('.main-panel').width('100%');
-      \$('.content-wrapper').width('82%');
-  })
+      //\$('.content-wrapper').width('82%');
+  });
 
   \$('#nav-hide-btn').click(function(e) {
       e.preventDefault();
@@ -623,20 +623,20 @@ class __TwigTemplate_602a524a7a277741a69ff1f46ec7e9096e0d06be25dc3368fcfba44b016
           percent = 100;
           add_width = (percent * \$('.main-panel').parent().width()) + 'px';
           \$('.main-panel').animate({marginLeft: -255},0);
-          \$('.content-wrapper').width('97%').animate(50);
+          //\$('.content-wrapper').width('97%').animate(50);
           \$(this).animate({left: -10}, 300);
           \$('#nav-hide-btn-icon').toggleClass('down');
           opened = false;
       }else {
-          \$('#sidebar').animate({left: 0}, 300);
+          \$('#sidebar').animate({left: -10}, 300);
           \$(this).animate({left: 245}, 300);
           \$('.main-panel').animate({marginLeft: 0},50);
-          \$('.content-wrapper').width('82%').animate(50);
+          //\$('.content-wrapper').width('82%').animate(50);
           \$('#nav-hide-btn-icon').toggleClass('down');
           opened = true;
       }
   }).bind('mouseenter', function(){
-      \$(this).effect(\"bounce\", { times:3 }, 300);
+      \$(this).effect(\"bounce\", { times:3, direction: 'right' }, 300);
   });
 </script>
 {% block javascripts %}

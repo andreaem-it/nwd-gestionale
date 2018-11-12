@@ -291,16 +291,16 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                                 <a href=\"";
             // line 137
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
+            echo "\" class=\"btn btn-primary btn-sm float-right\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
                                                 </a>
-                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
                                                 <a href=\"";
             // line 143
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
-            echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
+            echo "\" class=\"btn btn-danger btn-sm float-right\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                             </div>
@@ -483,13 +483,13 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                         </td>#}
                                         <td style=\"max-width: 200px;\">
                                             <div class=\"btn-group\">
-                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
                                                 </a>
-                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
-                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                             </div>
