@@ -841,57 +841,106 @@ class ExpertationsController extends Controller
     public function detailsAction($id) {
 
         $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+        $price = $this->getDoctrine()->getRepository(PricesAdvanced::class);
 
         $qtyPL = array_sum($item->getPl());
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
-        $qtyPT = array_sum($item->getC1v());
+        $qtyPT = array_sum($item->getPt());
         $qtyTP = $item->getNumPreseTelefonoDati();
-
-        $total_1 = ($qtyPL * 22.20) + ($qtyPL * 11.80);
-
-        if ($item->getOpereMurarie() == 0) {
-            $total_2 = $qtyPL * 5.60;
-        } elseif ($item->getOpereMurarie() == 1) {
-            $total_2 = $qtyPL * 14.90;
-        } elseif ($item->getOpereMurarie() == 2) {
-            $total_2 = $qtyPL * 26.90;
+        $calcTVCable = 10 * $item->getPianiCasa();
+        if ($qtyTP < 5) {
+            $calcTPCable = 30 + (35 * $qtyPT + 0.15);
+        } else {
+            $calcTPCable = 30 + (35 * $qtyPT + 0.1);
         }
 
-        $total_4 = ($qtyPC * 9.90) + ($qtyPC * 6.30);
+        $prices = array();
 
-        if ($item->getOpereMurarie() == 0) {
-            $total_5 = $qtyPC * 3.10;
-        } elseif ($item->getOpereMurarie() == 1) {
-            $total_5 = $qtyPC * 10.60;
-        } elseif ($item->getOpereMurarie() == 2) {
-            $total_5 = $qtyPC * 13.40;
+        /** Punti Luce */
+        array_push($prices,($qtyPL * $price->findByCode('15.1.12.2')));
+        array_push($prices,($qtyPL * $price->findByCode('15.1.1')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices,$qtyPL * $price->findByCode('15.1.3.1'));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices,$qtyPL * $price->findByCode('15.1.4.1'));
+            }
+            if ($item->getOpereMurariePietra() == 1) {
+                array_push($prices,$qtyPL * $price->findByCode('15.1.5.1'));
+            }
         }
-
-        $total_7 = ($qtyPP * 26.20) + ($qtyPP * 13.80) + ($qtyPP * 12.60);
-
-        if ($item->getOpereMurarie() == 0) {
-            $total_8 = ($qtyPC * 5.70);
-        } elseif ($item->getOpereMurarie() == 1) {
-            $total_8 = ($qtyPC * 15.30);
-        } elseif ($item->getOpereMurarie() == 2) {
-            $total_8 = ($qtyPC * 27.30);
+        /** Punti Comando */
+        array_push($prices,($qtyPC * $price->findByCode('15.1.15.1')));
+        array_push($prices,($qtyPC * $price->findByCode('15.1.2')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices,$qtyPC * $price->findByCode('15.1.3.2'));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices,$qtyPC * $price->findByCode('15.1.4.2'));
+            }
+            if ($item->getOpereMurariePietra() == 1) {
+                array_push($prices,$qtyPC * $price->findByCode('15.1.5.2'));
+            }
         }
+        /** Punti Prese */
+        array_push($prices, ($qtyPP * $price->findByCode('15.2.21.1')));
+        array_push($prices, ($qtyPP * $price->findByCode('15.2.1')));
+        array_push($prices, ($qtyPP * $price->findByCode('15.2.41.3')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices,$qtyPP * $price->findByCode('15.1.3.2'));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices,$qtyPP * $price->findByCode('15.1.4.2'));
+            }
+            if ($item->getOpereMurariePietra() == 1) {
+                array_push($prices,$qtyPP * $price->findByCode('15.1.5.2'));
+            }
+        }
+        /** Prese TV */
+        array_push($prices, ($qtyPT * $price->findByCode('15.3.110.1')));
+        array_push($prices, ($calcTVCable * $price->findByCode('15.4.230')));
+        array_push($prices, ($qtyPT * $price->findByCode('15.3.20.1')));
+        array_push($prices, ($qtyPT * $price->findByCode('15.2.2')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices, ($qtyPT * $price->findByCode('15.1.3.2')));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyPT * $price->findByCode('15.1.4.2')));
+            }
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyPT * $price->findByCode('15.1.5.2')));
+            }
+        }
+        /** Prese Telefoniche */
+        array_push($prices, $qtyTP * $price->findByCode('15.3.210.1'));
+        array_push($prices, $calcTPCable * $price->findByCode('15.4.240.1'));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
+            }
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
+            }
+        }
+        /** Allaccio Termostati */
+        array_push($prices, 1 * $price->findByCode('13.21.10'));
+        /** Allaccio Caldaia o Pompa di Calore */
+        array_push($prices, 1 * $price->findByCode('13.21.40.1'));
+        /** Allaccio collettori */
+        array_push($prices, 1 * $price->findByCode('13.21.10'));
+        /** Impianto di messa a terra */
+        if ($item->getSpd() == 1) {
+            array_push($prices,$price->findByCode('15.7.202') * 1);
+        } else {
+            array_push($prices,($price->findByCode('15.7.202')) + ($price->findByCode('15.7.204.4')) * 1);
+        }
+        /** Relè e alimentatori */
+        if($item->getLevel() == 3) {
+            array_push($prices, $price->findByCode('15.6.170.31') * 1 );
+            array_push($prices, $price->findByCode('15.6.170.44') * 1);
+        }
+        //array_push($prices, 1 * $price->findByCode('13.21.10'));
 
-        $total_9 = ($qtyPT * 41);
-        $total_10 = ($qtyTP * 26.40);
-
-        $total = $total_1 +
-                 $total_2 +
-                 $total_4 +
-                 $total_5 +
-                 $total_7 +
-                 $total_8 +
-                 $total_9 +
-                 $total_10 +
-                 100 +
-                 113 +
-                 100;
+        dump($prices);
+        $total = (array_sum($prices));
 
         $vat = $total * 22 / 100;
 
@@ -906,6 +955,8 @@ class ExpertationsController extends Controller
             'qtyPT' => $qtyPT,
             'qtyTP' => $qtyTP,
             'total' => $total,
+            'calcTPCable' => $calcTPCable,
+            'calcTVCable' => $calcTVCable,
             'vat' => $vat,
             'sconto' => $sconto
         ]);

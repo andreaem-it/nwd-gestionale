@@ -2294,6 +2294,11 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
 
 
     </script>
+    <script>
+        \$(document).ready(function () {
+            \$('#nav-hide-btn-icon').trigger('click');
+        });
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -3363,6 +3368,12 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
 
 
     </script>
-{% endblock %}", "expertations/new.advanced.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/new.advanced.html.twig");
+    <script>
+        \$(document).ready(function () {
+            \$('#nav-hide-btn-icon').trigger('click');
+        });
+    </script>
+{% endblock %}
+", "expertations/new.advanced.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/new.advanced.html.twig");
     }
 }

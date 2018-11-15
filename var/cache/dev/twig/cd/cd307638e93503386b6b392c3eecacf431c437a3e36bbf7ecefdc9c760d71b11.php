@@ -4610,6 +4610,11 @@ class __TwigTemplate_7ce9f836c9f21da71d7084526f4ed7abda3d0df3f88dfc9522f6ea7f295
         })
 
     </script>
+    <script>
+        \$(document).ready(function () {
+            \$('#nav-hide-btn-icon').trigger('click');
+        });
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -5916,6 +5921,12 @@ class __TwigTemplate_7ce9f836c9f21da71d7084526f4ed7abda3d0df3f88dfc9522f6ea7f295
         })
 
     </script>
-{% endblock %}", "expertations/show.advanced.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/show.advanced.html.twig");
+    <script>
+        \$(document).ready(function () {
+            \$('#nav-hide-btn-icon').trigger('click');
+        });
+    </script>
+{% endblock %}
+", "expertations/show.advanced.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/show.advanced.html.twig");
     }
 }
