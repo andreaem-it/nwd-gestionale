@@ -353,7 +353,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="959" column="26" lean-forward="true" selection-start-line="959" selection-start-column="26" selection-end-line="959" selection-end-column="26" />
+              <caret line="959" column="26" selection-start-line="959" selection-start-column="26" selection-end-line="959" selection-end-column="26" />
               <folding>
                 <element signature="e#40#69#0#PHP" expanded="true" />
               </folding>
@@ -1068,12 +1068,12 @@
       <workItem from="1541601787836" duration="8617000" />
       <workItem from="1541687573117" duration="5991000" />
       <workItem from="1542034723060" duration="6115000" />
-      <workItem from="1542206428357" duration="14358000" />
+      <workItem from="1542206428357" duration="14553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421474000" />
+    <option name="totallyTimeSpent" value="421669000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1086,7 +1086,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1680" height="987" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983315" visible="true" weight="0.21611722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1452,7 +1451,7 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="959" column="26" lean-forward="true" selection-start-line="959" selection-start-column="26" selection-end-line="959" selection-end-column="26" />
+          <caret line="959" column="26" selection-start-line="959" selection-start-column="26" selection-end-line="959" selection-end-column="26" />
           <folding>
             <element signature="e#40#69#0#PHP" expanded="true" />
           </folding>
