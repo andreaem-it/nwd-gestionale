@@ -313,9 +313,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
-            // ajax_price_list
-            if ('/ajax/prices/list' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::AJAXPl',  '_route' => 'ajax_price_list',);
+            // ajax_search_expertation
+            if (0 === strpos($pathinfo, '/ajax/search/expertations') && preg_match('#^/ajax/search/expertations/(?P<type>[^/]++)/(?P<terms>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_search_expertation')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxSEXP',));
             }
 
             if (0 === strpos($pathinfo, '/ajax/settings')) {
@@ -334,6 +334,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSGLAction',  '_route' => 'ajax_settings_groups_list',);
                 }
 
+            }
+
+            // ajax_price_list
+            if ('/ajax/prices/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::AJAXPl',  '_route' => 'ajax_price_list',);
             }
 
         }

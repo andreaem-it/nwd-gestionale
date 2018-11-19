@@ -104,7 +104,7 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
         // line 13
         echo "        <div class=\"row\">
             <div class=\"col-lg-6\">
-                <h3>Preventivi <small>Lista</small></h3>
+                <h3 class=\"mt-5\">Preventivi <small>Lista</small></h3>
             </div>
             <div class=\"col-lg-6 grid-margin stretch-card mb-3 float-right\">
                 <div class=\"card\">
@@ -114,17 +114,17 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                 <h5 class=\"mt-2\">Cerca</h5>
                             </div>
                             <div class=\"col-3\">
-                                <select class=\"custom-select\" id=\"inlineFormCustomSelectPref\">
+                                <select id=\"searchType\" class=\"custom-select\" id=\"inlineFormCustomSelectPref\">
                                     <option value=\"1\">Preventivo</option>
                                     <option value=\"2\">Cliente</option>
                                     <option value=\"3\">Data</option>
                                 </select>
                             </div>
                             <div class=\"col-4\">
-                                <input type=\"text\" class=\"form-control mt-1\">
+                                <input id=\"searchTerms\" type=\"text\" class=\"form-control mt-1\">
                             </div>
                             <div class=\"col-1\">
-                                <button type=\"submit\" class=\"btn btn-primary mt-1\">Cerca</button>
+                                <button id=\"searchBtn\" type=\"submit\" class=\"btn btn-primary mt-1\">Cerca</button>
                             </div>
                         </form>
                     </div>
@@ -151,15 +151,12 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                         <th>
                                             Creatore
                                         </th>
-                                        <th>
-                                            Prezzo
-                                        </th>
                                         ";
         // line 68
         echo "                                        <th style=\"width:200px\"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id=\"resultTable\">
                                 ";
         // line 72
         $context['_parent'] = $context;
@@ -200,12 +197,6 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 87, $this->source); })()), "userToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "createdBy", array())), "method"), "html", null, true);
             echo "
                                             </a>
-                                        </td>
-                                        <td>
-                                            ";
-            // line 91
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
-            echo " €
                                         </td>
                                         ";
             // line 96
@@ -278,12 +269,6 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
             echo "
                                             </a>
                                         </td>
-                                        <td>
-                                            ";
-            // line 130
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", array()), "html", null, true);
-            echo " €
-                                        </td>
                                         ";
             // line 135
             echo "                                        <td style=\"max-width: 200px;\">
@@ -321,6 +306,19 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
         </div>
     </div>
 </div>
+    <script>
+        \$('#searchBtn').click(function(e) {
+            e.preventDefault();
+            var type = \$(\"#searchType\").val();
+            var term = \$(\"#searchTerms\").val();
+            \$.ajax({
+                url: '../ajax/search/expertations/' + type + '/' + term,
+                success: function(data) {
+                    \$('#resultTable').html(data);
+                }
+            })
+        })
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -342,7 +340,7 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
 
     public function getDebugInfo()
     {
-        return array (  315 => 150,  302 => 143,  293 => 137,  289 => 135,  284 => 130,  277 => 126,  273 => 125,  266 => 121,  262 => 120,  256 => 117,  250 => 114,  246 => 112,  241 => 111,  228 => 104,  222 => 101,  216 => 98,  212 => 96,  207 => 91,  200 => 87,  196 => 86,  189 => 82,  185 => 81,  179 => 78,  173 => 75,  169 => 73,  165 => 72,  159 => 68,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  300 => 150,  287 => 143,  278 => 137,  274 => 135,  268 => 126,  264 => 125,  257 => 121,  253 => 120,  247 => 117,  241 => 114,  237 => 112,  232 => 111,  219 => 104,  213 => 101,  207 => 98,  203 => 96,  197 => 87,  193 => 86,  186 => 82,  182 => 81,  176 => 78,  170 => 75,  166 => 73,  162 => 72,  156 => 68,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -361,7 +359,7 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
         {% endfor %}
         <div class=\"row\">
             <div class=\"col-lg-6\">
-                <h3>Preventivi <small>Lista</small></h3>
+                <h3 class=\"mt-5\">Preventivi <small>Lista</small></h3>
             </div>
             <div class=\"col-lg-6 grid-margin stretch-card mb-3 float-right\">
                 <div class=\"card\">
@@ -371,17 +369,17 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                 <h5 class=\"mt-2\">Cerca</h5>
                             </div>
                             <div class=\"col-3\">
-                                <select class=\"custom-select\" id=\"inlineFormCustomSelectPref\">
+                                <select id=\"searchType\" class=\"custom-select\" id=\"inlineFormCustomSelectPref\">
                                     <option value=\"1\">Preventivo</option>
                                     <option value=\"2\">Cliente</option>
                                     <option value=\"3\">Data</option>
                                 </select>
                             </div>
                             <div class=\"col-4\">
-                                <input type=\"text\" class=\"form-control mt-1\">
+                                <input id=\"searchTerms\" type=\"text\" class=\"form-control mt-1\">
                             </div>
                             <div class=\"col-1\">
-                                <button type=\"submit\" class=\"btn btn-primary mt-1\">Cerca</button>
+                                <button id=\"searchBtn\" type=\"submit\" class=\"btn btn-primary mt-1\">Cerca</button>
                             </div>
                         </form>
                     </div>
@@ -408,16 +406,16 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                         <th>
                                             Creatore
                                         </th>
-                                        <th>
+                                        {#<th>
                                             Prezzo
                                         </th>
-                                        {#<th>
+                                        <th>
                                             Scadenza
                                         </th>#}
                                         <th style=\"width:200px\"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id=\"resultTable\">
                                 {% for item in u_expertations %}
                                     <tr>
                                         <td>
@@ -436,10 +434,10 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
-                                        <td>
+                                        {#<td>
                                             {{ item.price }} €
                                         </td>
-                                        {#<td>
+                                        <td>
                                             {{ item.expiration|date(\"d-m-Y\") }}
                                         </td>#}
                                         <td style=\"width: 255px;\">
@@ -475,10 +473,10 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
-                                        <td>
+                                        {#<td>
                                             {{ item.price }} €
                                         </td>
-                                        {#<td>
+                                        <td>
                                             {{ item.expiration|date(\"d-m-Y\") }}
                                         </td>#}
                                         <td style=\"max-width: 200px;\">
@@ -505,6 +503,19 @@ class __TwigTemplate_dc9f5d58dbea0e5d9769370a3fd080396636dc26ce15119f2c867d4631a
         </div>
     </div>
 </div>
+    <script>
+        \$('#searchBtn').click(function(e) {
+            e.preventDefault();
+            var type = \$(\"#searchType\").val();
+            var term = \$(\"#searchTerms\").val();
+            \$.ajax({
+                url: '../ajax/search/expertations/' + type + '/' + term,
+                success: function(data) {
+                    \$('#resultTable').html(data);
+                }
+            })
+        })
+    </script>
 {% endblock %}
 ", "expertations/list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/list.html.twig");
     }

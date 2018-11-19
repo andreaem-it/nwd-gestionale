@@ -12,7 +12,7 @@
         {% endfor %}
         <div class="row">
             <div class="col-lg-6">
-                <h3>Preventivi <small>Lista</small></h3>
+                <h3 class="mt-5">Preventivi <small>Lista</small></h3>
             </div>
             <div class="col-lg-6 grid-margin stretch-card mb-3 float-right">
                 <div class="card">
@@ -22,17 +22,17 @@
                                 <h5 class="mt-2">Cerca</h5>
                             </div>
                             <div class="col-3">
-                                <select class="custom-select" id="inlineFormCustomSelectPref">
+                                <select id="searchType" class="custom-select" id="inlineFormCustomSelectPref">
                                     <option value="1">Preventivo</option>
                                     <option value="2">Cliente</option>
                                     <option value="3">Data</option>
                                 </select>
                             </div>
                             <div class="col-4">
-                                <input type="text" class="form-control mt-1">
+                                <input id="searchTerms" type="text" class="form-control mt-1">
                             </div>
                             <div class="col-1">
-                                <button type="submit" class="btn btn-primary mt-1">Cerca</button>
+                                <button id="searchBtn" type="submit" class="btn btn-primary mt-1">Cerca</button>
                             </div>
                         </form>
                     </div>
@@ -59,16 +59,16 @@
                                         <th>
                                             Creatore
                                         </th>
-                                        <th>
+                                        {#<th>
                                             Prezzo
                                         </th>
-                                        {#<th>
+                                        <th>
                                             Scadenza
                                         </th>#}
                                         <th style="width:200px"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="resultTable">
                                 {% for item in u_expertations %}
                                     <tr>
                                         <td>
@@ -87,10 +87,10 @@
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
-                                        <td>
+                                        {#<td>
                                             {{ item.price }} €
                                         </td>
-                                        {#<td>
+                                        <td>
                                             {{ item.expiration|date("d-m-Y") }}
                                         </td>#}
                                         <td style="width: 255px;">
@@ -126,10 +126,10 @@
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
-                                        <td>
+                                        {#<td>
                                             {{ item.price }} €
                                         </td>
-                                        {#<td>
+                                        <td>
                                             {{ item.expiration|date("d-m-Y") }}
                                         </td>#}
                                         <td style="max-width: 200px;">
@@ -156,4 +156,17 @@
         </div>
     </div>
 </div>
+    <script>
+        $('#searchBtn').click(function(e) {
+            e.preventDefault();
+            var type = $("#searchType").val();
+            var term = $("#searchTerms").val();
+            $.ajax({
+                url: '../ajax/search/expertations/' + type + '/' + term,
+                success: function(data) {
+                    $('#resultTable').html(data);
+                }
+            })
+        })
+    </script>
 {% endblock %}
