@@ -297,6 +297,75 @@
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Impianto TV terrestre</i></td>
                                     </tr>
+                                    {% if item.antenna != 0 %}
+                                    <tr>
+                                        <td class="border text-center">15.3.151.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Impianto di ricezione di segnale TV digitale terrestre <strong>costituito da antenna di ricezione TV in <br>
+                                                banda UHF o VHF</strong>, idonea alla ricezione di segnale TV digitale terrestre con guadagno <br>
+                                                compreso superiore a 13 dB,  con possibilità di installazione con polarizzazione verticale o <br>
+                                                orizzontale, <strong>completa di palo e di sistemi di fissaggio su tetto o su copertura piana di <br>
+                                                qualsiasi natura, di cavi di collegamento fino all'impianto di amplificazione.</strong> Il tutto posto in <br>
+                                                opera a qualsiasi altezza, con tutto quanto occorre per dare il lavoro finito , incluse le eventuali <br>
+                                                opere murarie per il fissaggio ed il ripristino di eventuali parti  di copertura interessate. <br>
+                                                <strong>Sistema con due antenne</strong>
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">331.00</td>
+                                        <td class="border text-center">331.00</td>
+                                    </tr>
+                                        {% if qtyPT < 5 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.162.1</td>
+                                                <td class="text-small border" style="max-width: 300px">
+                                                    <small>
+                                                        Amplificatore da palo per segnale TV digitale terrestre, per banda larga UHF - VHF, completo di <br>
+                                                        alimentatore e quota di cavo a basse perdite per linea montante su canalizzazione predisposta, <br>
+                                                        per la distribuzione del segnale derivato dalle antenne di ricezione, fino ai partitori. Posto in <br>
+                                                        opera su palo o all'interno completo degli accessori necessari per dare l'opera finita e <br>
+                                                        funzionante. <strong>Per alimentazione  fino a 5 prese</strong>
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">1</td>
+                                                <td class="border text-center">176.00</td>
+                                                <td class="border text-center">176.00</td>
+                                            </tr>
+                                        {% elseif qtyPT > 6 and qtyPT < 10 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.162.2</td>
+                                                <td class="text-small border" style="max-width: 300px">
+                                                    <small>
+                                                        Amplificatore da palo per segnale TV digitale terrestre, per banda larga UHF - VHF, completo di <br>
+                                                        alimentatore e quota di cavo a basse perdite per linea montante su canalizzazione predisposta, <br>
+                                                        per la distribuzione del segnale derivato dalle antenne di ricezione, fino ai partitori. Posto in <br>
+                                                        opera su palo o all'interno completo degli accessori necessari per dare l'opera finita e <br>
+                                                        funzionante. <strong>Per alimentazione da 6 a 10 prese</strong>
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">1</td>
+                                                <td class="border text-center">253.00</td>
+                                                <td class="border text-center">253.00</td>
+                                            </tr>
+                                        {% elseif qtyPT > 11 and qtyPT < 15 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.162.3</td>
+                                                <td class="text-small border" style="max-width: 300px">
+                                                    <small>
+                                                        Amplificatore da palo per segnale TV digitale terrestre, per banda larga UHF - VHF, completo di <br>
+                                                        alimentatore e quota di cavo a basse perdite per linea montante su canalizzazione predisposta, <br>
+                                                        per la distribuzione del segnale derivato dalle antenne di ricezione, fino ai partitori. Posto in <br>
+                                                        opera su palo o all'interno completo degli accessori necessari per dare l'opera finita e <br>
+                                                        funzionante. <strong>Per alimentazione da 11 a 15 prese</strong>
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">1</td>
+                                                <td class="border text-center">333.00</td>
+                                                <td class="border text-center">333.00</td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endif %}
                                     <tr>
                                         <td class="border text-center">15.3.110.1</td>
                                         <td class="text-small border" style="max-width: 300px">
@@ -358,6 +427,33 @@
                                             <td class="border text-center">{{ qtyPT }}</td>
                                             <td class="border text-center">12.1</td>
                                             <td class="border text-center">{{ qtyPT  * 12.1}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if qtyTR != 0 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><i>Impianto chiamata emergenza con tiranti dal bagno e delle camere da letto</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.40.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per <strong>impianto di chiamata</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyTR }}</td>
+                                            <td class="border text-center">89.00</td>
+                                            <td class="border text-center">{{ qtyTR * 89.00 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.90.0</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per segnalatore acustico di tipo a <strong>ronzatore per EMERGENZE</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyTR }}</td>
+                                            <td class="border text-center">20.00</td>
+                                            <td class="border text-center">{{ qtyTR * 20.00 }}</td>
                                         </tr>
                                     {% endif %}
                                     <tr>
@@ -423,6 +519,34 @@
                                         <td class="border text-center">{{ qtyTP }}</td>
                                         <td class="border text-center">12.1</td>
                                         <td class="border text-center">{{ (qtyTP * 12.10)|number_format(1)}}</td>
+                                    {% endif %}
+                                    {% if item.campanello != 0 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">Segnalatore Acustico</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.80.4</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto di comando di suoneria. Con pulsante <br>
+                                                    con targa.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">28</td>
+                                            <td class="border text-center">28</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.90</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per segnalatore acustico di tipo a <strong> SUONERIA</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">20</td>
+                                            <td class="border text-center">20</td>
+                                        </tr>
                                     {% endif %}
                                     <tr>
                                         <td colspan="5" class="border table-light">Impianto Citofonico o Videocitofonico</td>
@@ -631,10 +755,12 @@
     </style>
     <style type="text/css">
         {# TODO: Fix print CSS #}
-        @page { size: landscape; }
+        @page {
+            size: landscape;
+            margin: 0; }
         @media print {
             * {
-                font-size: 1em!important;
+                font-size: 0.9em!important;
             }
             .footer {
                 display: none;

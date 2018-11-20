@@ -83,7 +83,10 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                         <div class=\"row\">
                             <div class=\"col-4 mr-0 pr-0 ml-0 pl-3\">
                                 <div class=\"btn-group\">
-                                    <a href=\"\" class=\"btn btn-danger btn-sm float-right\">
+                                    <a href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 16, $this->source); })()), "id", array()), "confirm" => false)), "html", null, true);
+        echo "\" class=\"btn btn-danger btn-sm float-right\">
                                         <i class=\"mdi mdi-delete mr-0\"></i>
                                     </a>
                                     <a href=\"\" class=\"btn btn-secondary btn-sm float-right \">
@@ -656,7 +659,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
 
     public function getDebugInfo()
     {
-        return array (  632 => 339,  630 => 338,  621 => 332,  616 => 331,  607 => 330,  595 => 328,  538 => 275,  529 => 274,  517 => 270,  508 => 222,  503 => 221,  498 => 220,  494 => 219,  489 => 216,  484 => 215,  480 => 214,  471 => 208,  465 => 205,  459 => 202,  451 => 196,  443 => 193,  437 => 190,  434 => 189,  431 => 188,  425 => 185,  422 => 184,  419 => 183,  413 => 180,  410 => 179,  407 => 178,  401 => 175,  398 => 174,  395 => 173,  389 => 170,  386 => 169,  384 => 168,  379 => 166,  373 => 163,  367 => 160,  361 => 157,  355 => 154,  351 => 152,  345 => 150,  341 => 148,  339 => 147,  335 => 145,  331 => 144,  328 => 143,  322 => 140,  319 => 139,  316 => 138,  310 => 135,  307 => 134,  304 => 133,  298 => 130,  295 => 129,  292 => 128,  286 => 125,  283 => 124,  280 => 123,  274 => 120,  271 => 119,  269 => 118,  244 => 95,  236 => 94,  222 => 82,  214 => 81,  210 => 80,  206 => 79,  202 => 78,  192 => 75,  188 => 74,  184 => 73,  180 => 72,  163 => 60,  157 => 59,  147 => 58,  143 => 57,  125 => 41,  117 => 37,  109 => 33,  107 => 32,  101 => 29,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  635 => 339,  633 => 338,  624 => 332,  619 => 331,  610 => 330,  598 => 328,  541 => 275,  532 => 274,  520 => 270,  511 => 222,  506 => 221,  501 => 220,  497 => 219,  492 => 216,  487 => 215,  483 => 214,  474 => 208,  468 => 205,  462 => 202,  454 => 196,  446 => 193,  440 => 190,  437 => 189,  434 => 188,  428 => 185,  425 => 184,  422 => 183,  416 => 180,  413 => 179,  410 => 178,  404 => 175,  401 => 174,  398 => 173,  392 => 170,  389 => 169,  387 => 168,  382 => 166,  376 => 163,  370 => 160,  364 => 157,  358 => 154,  354 => 152,  348 => 150,  344 => 148,  342 => 147,  338 => 145,  334 => 144,  331 => 143,  325 => 140,  322 => 139,  319 => 138,  313 => 135,  310 => 134,  307 => 133,  301 => 130,  298 => 129,  295 => 128,  289 => 125,  286 => 124,  283 => 123,  277 => 120,  274 => 119,  272 => 118,  247 => 95,  239 => 94,  225 => 82,  217 => 81,  213 => 80,  209 => 79,  205 => 78,  195 => 75,  191 => 74,  187 => 73,  183 => 72,  166 => 60,  160 => 59,  150 => 58,  146 => 57,  128 => 41,  120 => 37,  112 => 33,  110 => 32,  104 => 29,  88 => 16,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -676,7 +679,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                         <div class=\"row\">
                             <div class=\"col-4 mr-0 pr-0 ml-0 pl-3\">
                                 <div class=\"btn-group\">
-                                    <a href=\"\" class=\"btn btn-danger btn-sm float-right\">
+                                    <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right\">
                                         <i class=\"mdi mdi-delete mr-0\"></i>
                                     </a>
                                     <a href=\"\" class=\"btn btn-secondary btn-sm float-right \">

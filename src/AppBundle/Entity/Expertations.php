@@ -302,6 +302,20 @@ class Expertations
     private $cit_vid;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="antenna", type="integer", nullable=true)
+     */
+    private $antenna;
+
+    /** @var integer
+     *
+     * @ORM\Column(name="campanello", type="integer", nullable=true)
+     */
+    private $campanello;
+
+
+    /**
      * @var string
      * @return string
      */
@@ -1280,5 +1294,53 @@ class Expertations
     public function getCitVid()
     {
         return $this->cit_vid;
+    }
+
+    /**
+     * Set antenna.
+     *
+     * @param int|null $antenna
+     *
+     * @return Expertations
+     */
+    public function setAntenna($antenna = null)
+    {
+        $this->antenna = $antenna;
+
+        return $this;
+    }
+
+    /**
+     * Get antenna.
+     *
+     * @return int|null
+     */
+    public function getAntenna()
+    {
+        return $this->antenna;
+    }
+
+    /**
+     * Set campanello.
+     *
+     * @param int|null $campanello
+     *
+     * @return Expertations
+     */
+    public function setCampanello($campanello = null)
+    {
+        $this->campanello = $campanello;
+
+        return $this;
+    }
+
+    /**
+     * Get campanello.
+     *
+     * @return int|null
+     */
+    public function getCampanello()
+    {
+        return $this->campanello;
     }
 }

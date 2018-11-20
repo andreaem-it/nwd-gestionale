@@ -246,17 +246,27 @@ class ExpertationsController extends Controller
             ->add('opere_murarie', CheckboxType::class, [
                 'label' => 'Opere Murarie',
                 'label_attr' => ['class' => 'form-check-label'],
-                'attr' => ['class' => '']
+                'required' => false
             ])
             ->add('opere_murarie_intonaco', CheckboxType::class, [
                 'label' => 'Intonaco',
                 'label_attr' => ['class' => 'form-check-label'],
-                'attr' => ['class' => '']
+                'required' => false
             ])
             ->add('opere_murarie_pietra', CheckboxType::class, [
                 'label' => 'Pietra',
                 'label_attr' => ['class' => 'form-check-label'],
-                'attr' => ['class' => '']
+                'required' => false
+            ])
+            ->add('antenna', CheckboxType::class, [
+                'label' => 'Antenna pre-esistente',
+                'label_attr' => ['class' => 'form-check-label'],
+                'required' => false
+            ])
+            ->add('campanello', CheckboxType::class, [
+                'label' => 'Campanello',
+                'label_attr' => ['class' => 'form-check-label'],
+                'required' => false
             ])
             ->add('trifase', ChoiceType::class, [
                 'choices' => [
@@ -268,7 +278,8 @@ class ExpertationsController extends Controller
             ])
             ->add('sconto', TextType::class, [
                 'label' => 'Sconto %',
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control'],
+                'data' => 0,
             ])
             ->add('level', ChoiceType::class, [
                 'choices' => [
@@ -823,6 +834,7 @@ class ExpertationsController extends Controller
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
         $qtyPT = array_sum($item->getPt());
+        $qtyTR = array_sum($item->getC2v());
         $qtyTP = $item->getNumPreseTelefonoDati();
         $calcTVCable = 10 * $item->getPianiCasa();
         if ($qtyTP < 5) {
@@ -873,7 +885,17 @@ class ExpertationsController extends Controller
             }
         }
 
-        /** Prese TV */
+        /** Prese TV & Antenna */
+        if($item->getAntenna() == 1) {
+            array_push($prices, (1 * $price->findByCode('15.3.151.2')));
+        }
+        if ($qtyPT < 5 ) {
+            array_push($prices, (1 * $price->findByCode('15.3.162.1')));
+        } elseif ($qtyPT > 6 and $qtyPT < 10) {
+            array_push($prices, (1 * $price->findByCode('15.3.162.2')));
+        } elseif ($qtyPT < 11 and $qtyPT < 15 ) {
+            array_push($prices, (1 * $price->findByCode('15.3.162.3')));
+        }
         array_push($prices, ($qtyPT * $price->findByCode('15.3.110.1')));
         array_push($prices, ($calcTVCable * $price->findByCode('15.4.230')));
         //array_push($prices, ($qtyPT * $price->findByCode('15.3.20.1')));
@@ -908,7 +930,7 @@ class ExpertationsController extends Controller
         /** Allaccio Caldaia o Pompa di Calore */
         array_push($prices, 1 * $price->findByCode('13.21.40.1'));
 
-        /** Allaccio collettori */
+        /** Allaccio Collettori */
         array_push($prices, 1 * $price->findByCode('13.21.10'));
 
         /** Impianto di messa a terra */
@@ -923,7 +945,19 @@ class ExpertationsController extends Controller
             array_push($prices, $price->findByCode('15.6.170.31') * 1 );
             array_push($prices, $price->findByCode('15.6.170.44') * 1);
         }
-        //array_push($prices, 1 * $price->findByCode('13.21.10'));
+
+        /** Tiranti */
+        if ($qtyTR != 0) {
+            array_push($prices, $price->findByCode('15.3.40.1'));
+            array_push($prices, $price->findByCode('15.3.90'));
+        }
+
+        /** Segnalatore Acustico */
+        if ($item->getCampanello() != 0) {
+            array_push($prices, (1 * $price->findByCode('15.3.80.4')));
+            array_push($prices, (1 * $price->findByCode('15.3.90')));
+        }
+
 
         dump($prices);
         $total = (array_sum($prices));
@@ -941,6 +975,7 @@ class ExpertationsController extends Controller
             'qtyPP' => $qtyPP,
             'qtyPT' => $qtyPT,
             'qtyTP' => $qtyTP,
+            'qtyTR' => $qtyTR,
             'total' => $total,
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,
