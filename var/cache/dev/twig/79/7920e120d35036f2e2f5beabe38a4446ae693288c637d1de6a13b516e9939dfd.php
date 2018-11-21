@@ -1054,48 +1054,55 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         echo " €
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan=\"3\" class=\"border-0\"></td>
-                                        <td class=\"border\">IVA 22%</td>
-                                        <td class=\"border text-center\">
-                                            ";
-        // line 700
-        echo twig_escape_filter($this->env, twig_round((isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 700, $this->source); })()), "2"), "html", null, true);
-        echo " €
-                                        </td>
-                                    </tr>
                                     ";
-        // line 703
-        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 703, $this->source); })()) != 0)) {
-            // line 704
-            echo "                                    <tr>
-                                        <td colspan=\"3\" class=\"border-0\"></td>
-                                        <td class=\"border\">SCONTO ";
-            // line 706
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 706, $this->source); })()), "sconto", array()), "html", null, true);
+        // line 696
+        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 696, $this->source); })()) != 0)) {
+            // line 697
+            echo "                                        <tr>
+                                            <td colspan=\"3\" class=\"border-0\"></td>
+                                            <td class=\"border\">SCONTO ";
+            // line 699
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 699, $this->source); })()), "sconto", array()), "html", null, true);
             echo "%</td>
-                                        <td class=\"border text-center\">
-                                            ";
-            // line 708
-            echo twig_escape_filter($this->env, twig_round((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 708, $this->source); })()), "2"), "html", null, true);
+                                            <td class=\"border text-center\">
+                                                ";
+            // line 701
+            echo twig_escape_filter($this->env, twig_round((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 701, $this->source); })()), "2"), "html", null, true);
             echo " €
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"3\" class=\"border-0\"></td>
+                                            <td class=\"border\"><strong>TOTALE SCONTATO</strong></td>
+                                            <td class=\"border text-center\">
+                                                <strong>";
+            // line 708
+            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 708, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 708, $this->source); })())), "2"), "html", null, true);
+            echo " €</strong>
+                                            </td>
+                                        </tr>
+                                    ";
+        } else {
+            // line 712
+            echo "                                            <tr>
+                                                <td colspan=\"3\" class=\"border-0\"></td>
+                                                <td class=\"border\"><strong>TOTALE</strong></td>
+                                                <td class=\"border text-center\">
+                                                    <strong>";
+            // line 716
+            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 716, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 716, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 716, $this->source); })()));
+            echo " ";
+            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 716, $this->source); })()), "2"), "html", null, true);
+            echo " €</strong>
+                                                </td>
+                                            </tr>
                                     ";
         }
-        // line 712
-        echo "                                    <tr>
-                                        <td colspan=\"3\" class=\"border-0\"></td>
-                                        <td class=\"border\"><strong>TOTALE</strong></td>
-                                        <td class=\"border text-center\">
-                                            <strong>";
-        // line 716
-        $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 716, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 716, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 716, $this->source); })()));
-        echo " ";
-        echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 716, $this->source); })()), "2"), "html", null, true);
-        echo " €</strong>
-                                        </td>
-                                    </tr>
+        // line 720
+        echo "                                    ";
+        // line 727
+        echo "
+
                                 </tbody>
                             </table>
                         </div>
@@ -1115,7 +1122,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     }
 
-    // line 730
+    // line 740
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -1124,7 +1131,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 731
+        // line 741
         echo "    <style>
         .no-wrap {
             max-width: 130px;
@@ -1152,7 +1159,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
     </style>
     <style type=\"text/css\">
         ";
-        // line 758
+        // line 768
         echo "        @page {
             size: landscape;
             margin: 0; }
@@ -1212,7 +1219,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     }
 
-    // line 809
+    // line 819
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -1221,7 +1228,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 810
+        // line 820
         echo "    <script>
         \$(document).ready(function () {
             \$('#nav-hide-btn-icon').trigger('click');
@@ -1253,7 +1260,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     public function getDebugInfo()
     {
-        return array (  1225 => 810,  1216 => 809,  1156 => 758,  1128 => 731,  1119 => 730,  1093 => 716,  1087 => 712,  1080 => 708,  1075 => 706,  1071 => 704,  1069 => 703,  1063 => 700,  1053 => 693,  1046 => 688,  1040 => 685,  1035 => 683,  1021 => 672,  1016 => 670,  1002 => 658,  999 => 657,  974 => 634,  960 => 622,  955 => 621,  953 => 620,  882 => 551,  853 => 524,  850 => 523,  845 => 521,  840 => 519,  832 => 513,  829 => 512,  823 => 509,  818 => 507,  808 => 499,  805 => 498,  799 => 495,  794 => 493,  784 => 485,  782 => 484,  777 => 482,  772 => 480,  760 => 471,  755 => 469,  743 => 459,  737 => 456,  732 => 454,  720 => 445,  715 => 443,  703 => 433,  700 => 432,  694 => 429,  689 => 427,  680 => 420,  677 => 419,  671 => 416,  666 => 414,  656 => 406,  653 => 405,  647 => 402,  642 => 400,  632 => 392,  630 => 391,  625 => 389,  620 => 387,  608 => 378,  603 => 376,  594 => 369,  591 => 368,  573 => 352,  571 => 351,  554 => 336,  552 => 335,  535 => 320,  533 => 319,  513 => 301,  511 => 300,  503 => 294,  497 => 291,  492 => 289,  482 => 281,  479 => 280,  473 => 277,  468 => 275,  458 => 267,  455 => 266,  449 => 263,  444 => 261,  434 => 253,  431 => 252,  426 => 239,  421 => 237,  408 => 227,  403 => 225,  390 => 215,  385 => 213,  371 => 201,  365 => 198,  360 => 196,  350 => 188,  347 => 187,  341 => 184,  336 => 182,  326 => 174,  323 => 173,  317 => 170,  312 => 168,  302 => 160,  299 => 159,  294 => 146,  289 => 144,  276 => 134,  271 => 132,  257 => 120,  251 => 117,  246 => 115,  236 => 107,  233 => 106,  227 => 103,  222 => 101,  212 => 93,  209 => 92,  203 => 89,  198 => 87,  188 => 79,  186 => 78,  181 => 76,  176 => 74,  163 => 64,  158 => 62,  125 => 31,  119 => 30,  110 => 27,  105 => 26,  100 => 25,  96 => 24,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  1232 => 820,  1223 => 819,  1163 => 768,  1135 => 741,  1126 => 740,  1104 => 727,  1102 => 720,  1093 => 716,  1087 => 712,  1080 => 708,  1070 => 701,  1065 => 699,  1061 => 697,  1059 => 696,  1053 => 693,  1046 => 688,  1040 => 685,  1035 => 683,  1021 => 672,  1016 => 670,  1002 => 658,  999 => 657,  974 => 634,  960 => 622,  955 => 621,  953 => 620,  882 => 551,  853 => 524,  850 => 523,  845 => 521,  840 => 519,  832 => 513,  829 => 512,  823 => 509,  818 => 507,  808 => 499,  805 => 498,  799 => 495,  794 => 493,  784 => 485,  782 => 484,  777 => 482,  772 => 480,  760 => 471,  755 => 469,  743 => 459,  737 => 456,  732 => 454,  720 => 445,  715 => 443,  703 => 433,  700 => 432,  694 => 429,  689 => 427,  680 => 420,  677 => 419,  671 => 416,  666 => 414,  656 => 406,  653 => 405,  647 => 402,  642 => 400,  632 => 392,  630 => 391,  625 => 389,  620 => 387,  608 => 378,  603 => 376,  594 => 369,  591 => 368,  573 => 352,  571 => 351,  554 => 336,  552 => 335,  535 => 320,  533 => 319,  513 => 301,  511 => 300,  503 => 294,  497 => 291,  492 => 289,  482 => 281,  479 => 280,  473 => 277,  468 => 275,  458 => 267,  455 => 266,  449 => 263,  444 => 261,  434 => 253,  431 => 252,  426 => 239,  421 => 237,  408 => 227,  403 => 225,  390 => 215,  385 => 213,  371 => 201,  365 => 198,  360 => 196,  350 => 188,  347 => 187,  341 => 184,  336 => 182,  326 => 174,  323 => 173,  317 => 170,  312 => 168,  302 => 160,  299 => 159,  294 => 146,  289 => 144,  276 => 134,  271 => 132,  257 => 120,  251 => 117,  246 => 115,  236 => 107,  233 => 106,  227 => 103,  222 => 101,  212 => 93,  209 => 92,  203 => 89,  198 => 87,  188 => 79,  186 => 78,  181 => 76,  176 => 74,  163 => 64,  158 => 62,  125 => 31,  119 => 30,  110 => 27,  105 => 26,  100 => 25,  96 => 24,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -1953,29 +1960,39 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             {{ total|round('2') }} €
                                         </td>
                                     </tr>
-                                    <tr>
+                                    {% if sconto != 0 %}
+                                        <tr>
+                                            <td colspan=\"3\" class=\"border-0\"></td>
+                                            <td class=\"border\">SCONTO {{ item.sconto }}%</td>
+                                            <td class=\"border text-center\">
+                                                {{ sconto|round('2') }} €
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"3\" class=\"border-0\"></td>
+                                            <td class=\"border\"><strong>TOTALE SCONTATO</strong></td>
+                                            <td class=\"border text-center\">
+                                                <strong>{{ (total - sconto)|round('2') }} €</strong>
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                            <tr>
+                                                <td colspan=\"3\" class=\"border-0\"></td>
+                                                <td class=\"border\"><strong>TOTALE</strong></td>
+                                                <td class=\"border text-center\">
+                                                    <strong>{%  set grandtotal = total + vat - sconto %} {{ grandtotal|round('2') }} €</strong>
+                                                </td>
+                                            </tr>
+                                    {% endif %}
+                                    {#<tr>
                                         <td colspan=\"3\" class=\"border-0\"></td>
                                         <td class=\"border\">IVA 22%</td>
                                         <td class=\"border text-center\">
                                             {{ vat|round('2') }} €
                                         </td>
-                                    </tr>
-                                    {% if sconto != 0 %}
-                                    <tr>
-                                        <td colspan=\"3\" class=\"border-0\"></td>
-                                        <td class=\"border\">SCONTO {{ item.sconto }}%</td>
-                                        <td class=\"border text-center\">
-                                            {{ sconto|round('2') }} €
-                                        </td>
-                                    </tr>
-                                    {% endif %}
-                                    <tr>
-                                        <td colspan=\"3\" class=\"border-0\"></td>
-                                        <td class=\"border\"><strong>TOTALE</strong></td>
-                                        <td class=\"border text-center\">
-                                            <strong>{%  set grandtotal = total + vat - sconto %} {{ grandtotal|round('2') }} €</strong>
-                                        </td>
-                                    </tr>
+                                    </tr>#}
+
+
                                 </tbody>
                             </table>
                         </div>

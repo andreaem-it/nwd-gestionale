@@ -693,29 +693,39 @@
                                             {{ total|round('2') }} €
                                         </td>
                                     </tr>
-                                    <tr>
+                                    {% if sconto != 0 %}
+                                        <tr>
+                                            <td colspan="3" class="border-0"></td>
+                                            <td class="border">SCONTO {{ item.sconto }}%</td>
+                                            <td class="border text-center">
+                                                {{ sconto|round('2') }} €
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="border-0"></td>
+                                            <td class="border"><strong>TOTALE SCONTATO</strong></td>
+                                            <td class="border text-center">
+                                                <strong>{{ (total - sconto)|round('2') }} €</strong>
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                            <tr>
+                                                <td colspan="3" class="border-0"></td>
+                                                <td class="border"><strong>TOTALE</strong></td>
+                                                <td class="border text-center">
+                                                    <strong>{%  set grandtotal = total + vat - sconto %} {{ grandtotal|round('2') }} €</strong>
+                                                </td>
+                                            </tr>
+                                    {% endif %}
+                                    {#<tr>
                                         <td colspan="3" class="border-0"></td>
                                         <td class="border">IVA 22%</td>
                                         <td class="border text-center">
                                             {{ vat|round('2') }} €
                                         </td>
-                                    </tr>
-                                    {% if sconto != 0 %}
-                                    <tr>
-                                        <td colspan="3" class="border-0"></td>
-                                        <td class="border">SCONTO {{ item.sconto }}%</td>
-                                        <td class="border text-center">
-                                            {{ sconto|round('2') }} €
-                                        </td>
-                                    </tr>
-                                    {% endif %}
-                                    <tr>
-                                        <td colspan="3" class="border-0"></td>
-                                        <td class="border"><strong>TOTALE</strong></td>
-                                        <td class="border text-center">
-                                            <strong>{%  set grandtotal = total + vat - sconto %} {{ grandtotal|round('2') }} €</strong>
-                                        </td>
-                                    </tr>
+                                    </tr>#}
+
+
                                 </tbody>
                             </table>
                         </div>

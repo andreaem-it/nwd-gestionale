@@ -962,11 +962,9 @@ class ExpertationsController extends Controller
         dump($prices);
         $total = (array_sum($prices));
         dump($total);
-
-        $vat = $total * 22 / 100;
-
         $sconto = $total * $item->getSconto() / 100;
 
+        //$vat = ($total - $sconto) * 22 / 100;
 
         return $this->render('expertations/details.html.twig',[
             'item' => $item,
@@ -979,7 +977,7 @@ class ExpertationsController extends Controller
             'total' => $total,
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,
-            'vat' => $vat,
+            'vat' => $vat = 0,
             'sconto' => $sconto
         ]);
     }
