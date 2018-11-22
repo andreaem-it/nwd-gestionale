@@ -295,9 +295,65 @@
                                         <td colspan="5" class="border table-light"><strong>SERVIZI</strong></td>
                                     </tr>
                                     <tr>
+                                        <td colspan="5" class="border table-light"><i>Punti Presa di Servizio</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.3.10.0</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                PUNTO PRESA DI SERVIZIO in traccia sono escluse le opere murarie
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ qtyPS }}</td>
+                                        <td class="border text-center">25.00</td>
+                                        <td class="border text-center">{{ qtyPS * 25}}</td>
+                                    </tr>
+                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                        <tr>
+                                            <td class="border text-center">15.3.20.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                    <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyPS }}</td>
+                                            <td class="border text-center">8.0</td>
+                                            <td class="border text-center">{{ qtyPs * 8.0 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                        <tr>
+                                            <td class="border text-center">15.3.20.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                    <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyPS }}</td>
+                                            <td class="border text-center">12.9</td>
+                                            <td class="border text-center">{{ qtyPS * 12.9 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td class="border text-center">15.3.20.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                    <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyPS }}</td>
+                                            <td class="border text-center">27.20</td>
+                                            <td class="border text-center">{{ qtyPS * 12.1 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.antenna != 0 %}
+                                    <tr>
                                         <td colspan="5" class="border table-light"><i>Impianto TV terrestre</i></td>
                                     </tr>
-                                    {% if item.antenna != 0 %}
                                     <tr>
                                         <td class="border text-center">15.3.151.2</td>
                                         <td class="text-small border" style="max-width: 300px">
@@ -578,9 +634,9 @@
                                                 (<strong>termostato</strong>, umidostato, flussostato, sonda di temperatura, pressostato, ecc.)
                                             </small>
                                         </td>
-                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">{{ item.pianiCasa }}</td>
                                         <td class="border text-center">100</td>
-                                        <td class="border text-center">100</td>
+                                        <td class="border text-center">{{ item.pianiCasa * 100 }}</td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Allaccio CALDAIA o POMPA DI CALORE</i></td>
@@ -610,9 +666,9 @@
                                                 flussostato, sonda di temperatura, pressostato, ecc.)
                                             </small>
                                         </td>
-                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">{{ item.pianiCasa }}</td>
                                         <td class="border text-center">100</td>
-                                        <td class="border text-center">100</td>
+                                        <td class="border text-center">{{ item.pianiCasa * 100 }}</td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><strong>IMPIANTO DI MESSA A TERRA</strong></td>

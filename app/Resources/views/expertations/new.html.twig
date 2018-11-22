@@ -78,6 +78,13 @@
                 $('#form_num_infissi').prop('disabled', true);
                 $('#nav-hide-btn-icon').trigger('click');
                 //$('#form_num_infissi_label').hide();
+                $('#form_allarme').change(function() {
+                    if(this.checked) {
+                        $('#form_num_infissi').prop('disabled', false);
+                    } else {
+                        $('#form_num_infissi').prop('disabled', true);
+                    }
+                })
             });
             $(document).on('change', '#form_square_meters', function () {
                 dataChanged();
@@ -101,25 +108,22 @@
                 level = $("#form_level").val();
 
                 getData(1,'#form_num_circuiti');
-                getData(2,'#form_num_prese_telefono_dati');
+                getData(2,'#form_num_prese_dati');
                 getData(3,'#form_illum_sicurezza');
 
                 if (level === "1") {
                     $('#form_spd').val("1");
                     $('#form_imp_ausiliari').val("1");
-                    $('#form_num_infissi').prop('disabled', true);
                     //$('#form_num_infissi_label').hide();
                 }
                 if (level === "2") {
                     $('#form_spd').val("1");
                     $('#form_imp_ausiliari').val("2");
-                    $('#form_num_infissi').prop('disabled', false);
                     //$('#form_num_infissi_label').show();
                 }
                 if (level === "3") {
                     $('#form_spd').val("2");
                     $('#form_imp_ausiliari').val("3");
-                    $('#form_num_infissi').prop('disabled', false);
                     //$('#form_num_infissi_label').show();
                 }
                 if(meters <= 75) {
@@ -127,21 +131,48 @@
                 } else {
                     $('#form_kw').val("6");
                 }
-
-
             }
+
+            var v = $("#form_num_prese_dati").val(); //Let's say this is the value from PHP....
+            var preVal = 0;
+
+            $("#form_num_prese_dati").val(v);
+
+            $("#form_num_prese_telefono").on("change keyup keydown", function(event) {
+                let currVal = parseInt($("#form_num_prese_telefono").val());
+
+                console.log(preVal);
+                console.log(currVal);
+
+                // store current positions in variables
+                var start = this.selectionStart,
+                    end = this.selectionEnd;
+
+                if (!currVal || currVal == 0) {
+                    preVal = 0;
+                    $("#form_num_prese_telefono").val(v);
+                } else if (currVal <= v) {
+                    $("#form_num_prese_dati").val((v - currVal) == 0 ? 0 : (v - currVal));
+                    preVal = currVal;
+                } else {
+                    $("#form_num_prese_telefono").val(v);
+                }
+
+                this.setSelectionRange(start, end);
+
+            });
         </script>
         <div class="mt-3">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-3 grid-margin stretch-card">
+                        <div class="col-lg-2 grid-margin stretch-card">
                             <div class="input-group">
                                 {{ form_label(form.level) }}
                                 {{ form_widget(form.level) }}
                             </div>
                         </div>
-                        <div class="col-lg-2 grid-margin stretch-card">
+                        <div class="col-lg-1 grid-margin stretch-card">
                             <div class="input-group">
                                 {{ form_label(form.kw) }}
                                 {{ form_widget(form.kw) }}
@@ -165,6 +196,8 @@
                                 {{ form_widget(form.antenna) }}
                                 {{ form_label(form.campanello) }}
                                 {{ form_widget(form.campanello) }}
+                                {{ form_label(form.allarme) }}
+                                {{ form_widget(form.allarme) }}
                             </div>
                         </div>
                         <div class="col-lg-3"></div>
@@ -181,10 +214,16 @@
                                 {{ form_widget(form.num_circuiti) }}
                             </div>
                         </div>
-                        <div class="col-lg-2 grid-margin stretch-card">
+                        <div class="col-lg-1 grid-margin stretch-card">
                             <div class="input-group">
-                                {{ form_label(form.num_prese_telefono_dati) }}
-                                {{ form_widget(form.num_prese_telefono_dati) }}
+                                {{ form_label(form.num_prese_dati) }}
+                                {{ form_widget(form.num_prese_dati) }}
+                            </div>
+                        </div>
+                        <div class="col-lg-1 grid-margin stretch-card">
+                            <div class="input-group">
+                                {{ form_label(form.num_prese_telefono) }}
+                                {{ form_widget(form.num_prese_telefono) }}
                             </div>
                         </div>
                         <div class="col-lg-2 grid-margin stretch-card">

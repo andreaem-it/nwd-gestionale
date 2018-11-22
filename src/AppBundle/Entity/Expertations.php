@@ -255,9 +255,15 @@ class Expertations
     /**
      * @var string
      *
-     * @ORM\Column(name="num_prese_telefono_dati", type="integer", nullable=true)
+     * @ORM\Column(name="num_prese_dati", type="integer", nullable=true)
      */
-    private $num_prese_telefono_dati;
+    private $num_prese_dati;
+
+    /** @var integer
+     *
+     * @ORM\Column(name="num_prese_telefono", type="integer", nullable=true)
+     */
+    private $num_prese_telefono;
 
     /**
      * @var string
@@ -314,6 +320,12 @@ class Expertations
      */
     private $campanello;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="allarme", type="integer", nullable=true)
+     */
+    private $allarme;
 
     /**
      * @var string
@@ -841,30 +853,6 @@ class Expertations
     }
 
     /**
-     * Set numPreseTelefonoDati
-     *
-     * @param integer $numPreseTelefonoDati
-     *
-     * @return Expertations
-     */
-    public function setNumPreseTelefonoDati($numPreseTelefonoDati)
-    {
-        $this->num_prese_telefono_dati = $numPreseTelefonoDati;
-
-        return $this;
-    }
-
-    /**
-     * Get numPreseTelefonoDati
-     *
-     * @return integer
-     */
-    public function getNumPreseTelefonoDati()
-    {
-        return $this->num_prese_telefono_dati;
-    }
-
-    /**
      * Set illumSicurezza
      *
      * @param integer $illumSicurezza
@@ -1342,5 +1330,77 @@ class Expertations
     public function getCampanello()
     {
         return $this->campanello;
+    }
+
+    /**
+     * Set allarme.
+     *
+     * @param int|null $allarme
+     *
+     * @return Expertations
+     */
+    public function setAllarme($allarme = null)
+    {
+        $this->allarme = $allarme;
+
+        return $this;
+    }
+
+    /**
+     * Get allarme.
+     *
+     * @return int|null
+     */
+    public function getAllarme()
+    {
+        return $this->allarme;
+    }
+
+    /**
+     * Set numPreseDati.
+     *
+     * @param int|null $numPreseDati
+     *
+     * @return Expertations
+     */
+    public function setNumPreseDati($numPreseDati = null)
+    {
+        $this->num_prese_dati = $numPreseDati;
+
+        return $this;
+    }
+
+    /**
+     * Get numPreseDati.
+     *
+     * @return int|null
+     */
+    public function getNumPreseDati()
+    {
+        return $this->num_prese_dati;
+    }
+
+    /**
+     * Set numPreseTelefono.
+     *
+     * @param int|null $numPreseTelefono
+     *
+     * @return Expertations
+     */
+    public function setNumPreseTelefono($numPreseTelefono = null)
+    {
+        $this->num_prese_telefono = $numPreseTelefono;
+
+        return $this;
+    }
+
+    /**
+     * Get numPreseTelefono.
+     *
+     * @return int|null
+     */
+    public function getNumPreseTelefono()
+    {
+        return $this->num_prese_telefono;
     }
 }

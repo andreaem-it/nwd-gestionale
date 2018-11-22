@@ -225,7 +225,7 @@ class ExpertationsController extends Controller
             ])
             ->add('kw', NumberType::class, [
                 'label' => 'Kw ENEL',
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control', 'style' => 'max-height: 35px;']
             ])
             ->add('piani_casa', TextType::class, [
                 'label' => 'Piani',
@@ -268,6 +268,11 @@ class ExpertationsController extends Controller
                 'label_attr' => ['class' => 'form-check-label'],
                 'required' => false
             ])
+            ->add('allarme', CheckboxType::class, [
+                'label' => 'Predisposizione Allarme',
+                'label_attr' => ['class' => 'form-check-label'],
+                'required' => false
+            ])
             ->add('trifase', ChoiceType::class, [
                 'choices' => [
                     'No' => '0',
@@ -278,7 +283,6 @@ class ExpertationsController extends Controller
             ])
             ->add('sconto', TextType::class, [
                 'label' => 'Sconto %',
-                'attr' => ['class' => 'form-control'],
                 'data' => 0,
             ])
             ->add('level', ChoiceType::class, [
@@ -303,25 +307,31 @@ class ExpertationsController extends Controller
                 ],
                 'label' => 'Metratura',
                 'label_attr' => ['class' => '']
-
             ])
             ->add('num_infissi', IntegerType::class, [
-                'attr' => ['class' => 'form-control'],
                 'data' => 0,
                 'label' => 'Numero Infissi',
-                'label_attr' => ['id' => 'form_num_infissi_label']
+                'label_attr' => ['id' => 'form_num_infissi_label'],
+                'attr' => ['class' => 'mt-2','style' => 'min-width:100%']
             ])
             ->add('num_circuiti', IntegerType::class, [
-                'attr' => ['class' => 'form-control'],
-                'label' => 'Circuiti'
+                'label' => 'Circuiti',
+                'data' => '0'
             ])
-            ->add('num_prese_telefono_dati', IntegerType::class, [
+            ->add('num_prese_dati', IntegerType::class, [
                 'attr' => ['class' => 'form-control'] ,
-                'label' => 'Prese Telefono/Dati'
+                'label' => 'Prese Dati',
+                'data' => '0'
+            ])
+            ->add('num_prese_telefono', IntegerType::class, [
+                'attr' => ['class' => 'form-control', 'min' => '0'] ,
+                'label' => 'Prese Tel',
+                'data' => '0'
             ])
             ->add('illum_sicurezza', IntegerType::class, [
                 'attr' => ['class' => 'form-control'] ,
-                'label' => 'Illuminazione Sicurezza'
+                'label' => 'Illuminazione Sicurezza',
+                'data' => '0'
             ])
             ->add('spd', ChoiceType::class, [
                 'choices' => [
@@ -336,7 +346,7 @@ class ExpertationsController extends Controller
                     'Citofono' => 1,
                     'VideoCitofono' => 2,
                 ],
-                'attr' => ['class' => 'form-control'] ,
+                'attr' => ['class' => 'mt-2', 'style' => 'min-width:100%'] ,
                 'label' => 'Citofono / VideoCitofono'
             ])
             ->add('imp_ausiliari', ChoiceType::class, [
@@ -352,7 +362,6 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control'],
                     'data' => 0
                 ],
                 'label' => false,
@@ -620,7 +629,7 @@ class ExpertationsController extends Controller
 
 
             ->add('num_circuiti', IntegerType::class, [
-                'attr' => ['class' => 'form-control'],
+                
                 'label' => 'Circuiti'
             ])
             ->add('num_prese_telefono_dati', IntegerType::class, [
@@ -652,7 +661,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control'],
+                    
                     'data' => 0
                 ],
                 'label' => false,
@@ -835,12 +844,14 @@ class ExpertationsController extends Controller
         $qtyPP = array_sum($item->getPp());
         $qtyPT = array_sum($item->getPt());
         $qtyTR = array_sum($item->getC2v());
-        $qtyTP = $item->getNumPreseTelefonoDati();
+        $qtyTP = $item->getNumPreseTelefono();
         $calcTVCable = 10 * $item->getPianiCasa();
-        if ($qtyTP < 5) {
-            $calcTPCable = 30 + (35 * $qtyPT + 0.15);
+        if ($qtyTP > 5) {
+            $calcTPCable = 30 + (35 * $qtyPT * 0.15);
+        } elseif ($qtyTP == 0) {
+            $calcTPCable = 0;
         } else {
-            $calcTPCable = 30 + (35 * $qtyPT + 0.1);
+            $calcTPCable = 30 + (35 * $qtyPT * 0.1);
         }
 
         $prices = array();
@@ -885,6 +896,26 @@ class ExpertationsController extends Controller
             }
         }
 
+        /** Prese di Servizio */
+        $qtyPS = [
+            $item->getNumPreseDati(),       // Prese Dati
+            $item->getNumPreseTelefono(),   // Prese Telefono
+            array_sum($item->getPt()),      // Prese TV
+            array_sum($item->getC2v()),     // Tiranti
+            //$item->get                    // Ronzatori TODO
+            //$item->get                    // Suonerie TODO
+        ];
+        $qtyPS = array_sum($qtyPS);
+        array_push($prices,$qtyPS * $price->findByCode('15.3.10'));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices, ($qtyPS * $price->findByCode('15.3.20.1')));
+        } elseif ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyPS * $price->findByCode('15.3.20.2')));
+        }
+        if ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyPS * $price->findByCode('15.3.20.3')));
+        }
+
         /** Prese TV & Antenna */
         if($item->getAntenna() == 1) {
             array_push($prices, (1 * $price->findByCode('15.3.151.2')));
@@ -925,13 +956,13 @@ class ExpertationsController extends Controller
         array_push($prices, 2 * $price->findByCode('15.3.52.1'));
 
         /** Allaccio Termostati */
-        array_push($prices, 1 * $price->findByCode('13.21.10'));
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
 
         /** Allaccio Caldaia o Pompa di Calore */
         array_push($prices, 1 * $price->findByCode('13.21.40.1'));
 
         /** Allaccio Collettori */
-        array_push($prices, 1 * $price->findByCode('13.21.10'));
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
 
         /** Impianto di messa a terra */
         if ($item->getSpd() == 1) {
@@ -974,6 +1005,7 @@ class ExpertationsController extends Controller
             'qtyPT' => $qtyPT,
             'qtyTP' => $qtyTP,
             'qtyTR' => $qtyTR,
+            'qtyPS' => $qtyPS,
             'total' => $total,
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,
