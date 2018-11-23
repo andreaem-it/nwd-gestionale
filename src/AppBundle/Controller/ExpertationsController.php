@@ -279,7 +279,6 @@ class ExpertationsController extends Controller
                     'Si' => '1'
                 ],
                 'label' => 'Trifase',
-                'attr' => ['class' => 'form-control']
             ])
             ->add('sconto', TextType::class, [
                 'label' => 'Sconto %',
@@ -301,7 +300,6 @@ class ExpertationsController extends Controller
             ])
             ->add('square_meters', IntegerType::class, [
                 'attr' => [
-                    'class' => 'form-control',
                     'placeholder' => 'mq',
                     'style' => 'min-width: 100%'
                 ],
@@ -319,19 +317,24 @@ class ExpertationsController extends Controller
                 'data' => '0'
             ])
             ->add('num_prese_dati', IntegerType::class, [
-                'attr' => ['class' => 'form-control'] ,
                 'label' => 'Prese Dati',
                 'data' => '0'
             ])
             ->add('num_prese_telefono', IntegerType::class, [
-                'attr' => ['class' => 'form-control', 'min' => '0'] ,
+                'attr' => ['min' => '0'] ,
                 'label' => 'Prese Tel',
                 'data' => '0'
             ])
             ->add('illum_sicurezza', IntegerType::class, [
-                'attr' => ['class' => 'form-control'] ,
                 'label' => 'Illuminazione Sicurezza',
-                'data' => '0'
+                'data' => '0',
+                'attr' => ['class' => '']
+            ])
+            ->add('lampada', CheckboxType::class, [
+                'label' => 'Lampada fornita',
+                'label_attr' => [],
+                'required' => false,
+                'attr' => ['class' => '']
             ])
             ->add('spd', ChoiceType::class, [
                 'choices' => [
@@ -380,7 +383,6 @@ class ExpertationsController extends Controller
                     'label' => false,
                     'choice_label' => 'name',
                     'choice_value' => 'id',
-                    'attr' => ['class' => 'form-control']
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -390,7 +392,7 @@ class ExpertationsController extends Controller
                 'entry_type' => TextType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control','style' => 'min-width:200px!important;','placeholder' => 'Inserisci un nome'],
+                    'attr' => ['style' => 'min-width:200px!important;','placeholder' => 'Inserisci un nome'],
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -400,7 +402,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control','min' => 0, 'value' => 0]
+                    'attr' => ['min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -410,7 +412,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -420,32 +422,32 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
             ])
-            ->add('c3n',TextType::class, [
+            /*->add('c3n',TextType::class, [
                 'label' => false,
-                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'attr' => ['placeholder' => 'Nuova Dotazione'],
                 'required' => false
             ])
             ->add('c4n',TextType::class, [
                 'label' => false,
-                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'attr' => ['placeholder' => 'Nuova Dotazione'],
                 'required' => false
             ])
             ->add('c5n',TextType::class, [
                 'label' => false,
-                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'attr' => ['placeholder' => 'Nuova Dotazione'],
                 'required' => false
-            ])
+            ])*/
             ->add('c1v', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -456,18 +458,18 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0, 'value' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
                 'required' => false
             ])
-            ->add('c3v', CollectionType::class, [
+            /*->add('c3v', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -478,7 +480,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -489,13 +491,13 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
                 'required' => false
-            ])
+            ])*/
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
                 'label' => 'Genera'
@@ -618,18 +620,14 @@ class ExpertationsController extends Controller
             ])
             ->add('square_meters', IntegerType::class, [
                 'attr' => [
-                    'class' => 'form-control',
+
                     'placeholder' => 'mq',
                     'style' => 'min-width: 100%'
                 ],
                 'label' => 'Metratura Abitazione',
                 'label_attr' => ['class' => '']
-
             ])
-
-
             ->add('num_circuiti', IntegerType::class, [
-                
                 'label' => 'Circuiti'
             ])
             ->add('num_prese_telefono_dati', IntegerType::class, [
@@ -661,7 +659,6 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    
                     'data' => 0
                 ],
                 'label' => false,
@@ -690,7 +687,7 @@ class ExpertationsController extends Controller
                 'entry_type' => TextType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control','style' => 'min-width:200px!important;','placeholder' => 'Inserisci un nome'],
+                    'attr' => ['style' => 'min-width:200px!important;','placeholder' => 'Inserisci un nome'],
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -700,7 +697,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control','min' => 0]
+                    'attr' => ['min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -710,7 +707,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -720,7 +717,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -728,24 +725,24 @@ class ExpertationsController extends Controller
             ])
             ->add('c3n',TextType::class, [
                 'label' => false,
-                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'attr' => ['placeholder' => 'Nuova Dotazione'],
                 'required' => false
             ])
             ->add('c4n',TextType::class, [
                 'label' => false,
-                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'attr' => ['placeholder' => 'Nuova Dotazione'],
                 'required' => false
             ])
             ->add('c5n',TextType::class, [
                 'label' => false,
-                'attr' => ['class' => 'form-control','placeholder' => 'Nuova Dotazione'],
+                'attr' => ['placeholder' => 'Nuova Dotazione'],
                 'required' => false
             ])
             ->add('c1v', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -756,18 +753,18 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
                 'required' => false
             ])
-            ->add('c3v', CollectionType::class, [
+            /**->add('c3v', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -778,7 +775,7 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -789,13 +786,13 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['class' => 'form-control', 'min' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
                 'allow_add' => 'true',
                 'allow_delete' => 'true',
                 'required' => false
-            ])
+            ])*/
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-outline-success mt-3 btn-block btn-sm'],
                 'label' => 'Genera'
@@ -845,6 +842,7 @@ class ExpertationsController extends Controller
         $qtyPT = array_sum($item->getPt());
         $qtyTR = array_sum($item->getC2v());
         $qtyTP = $item->getNumPreseTelefono();
+        $qtyPD = $item->getNumPreseDati();
         $calcTVCable = 10 * $item->getPianiCasa();
         if ($qtyTP > 5) {
             $calcTPCable = 30 + (35 * $qtyPT * 0.15);
@@ -941,19 +939,29 @@ class ExpertationsController extends Controller
         }
 
         /** Prese Telefoniche */
-        array_push($prices, $qtyTP * $price->findByCode('15.3.210.1'));
-        array_push($prices, $calcTPCable * $price->findByCode('15.4.240.1'));
-        if ($item->getOpereMurarie() == 1) {
-            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
-        } elseif ($item->getOpereMurarieIntonaco() == 1) {
-            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
+        if ($item->getNumPreseTelefono() != 0 ) {
+            array_push($prices, $qtyTP * $price->findByCode('15.3.210.1'));
+            array_push($prices, $calcTPCable * $price->findByCode('15.4.240.1'));
+            if ($item->getOpereMurarie() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
+            } elseif ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
+            }
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
+            }
         }
-        if ($item->getOpereMurarieIntonaco() == 1) {
-            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
+
+        /** Prese Dati */
+        if ($item->getNumPreseDati() != 0 ) {
+            array_push($prices, $qtyPD * $price->findByCode('15.3.220.6'));
         }
 
         /** Impianto Citofonico */
         array_push($prices, 2 * $price->findByCode('15.3.52.1'));
+
+        /** Orologio Astronomico */
+        array_push($prices, 1 * $price->findByCode('15.6.170.39'));
 
         /** Allaccio Termostati */
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
@@ -964,7 +972,32 @@ class ExpertationsController extends Controller
         /** Allaccio Collettori */
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
 
+        /** Centralino */
+        array_push($prices, 1 * $price->findByCode('15.6.220.3'));
+
+        /** Magnetotermico */
+        array_push($prices, $item->getNumCircuiti() * $price->findByCode('15.6.52.1'));
+
+        /** Sezionatore Quadro */
+        array_push($prices, 1 * $price->findByCode('15.6.10.8'));
+
+        /** Dorsali */
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('15.4.110.12') * 15 * 3);
+
+        /** Corrugati */
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('15.5.10.3') * 15 * 2);
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('15.5.10.4') * 15 * 2);
+        array_push($prices,$item->getPianiCasa() * $price->findByCode('15.5.180.1') * 4);
+        array_push($prices,$item->getPianiCasa() * $price->findByCode('15.5.180.2') * 2 * 3);
+
+        /** Scatole */
+        array_push($prices,$item->getPianiCasa() * $price->findByCode('15.5.80.8'));
+
+        /** Ingresso fornitura */
+        array_push($prices,20 * $price->findByCode('15.4.21.40'));
+
         /** Impianto di messa a terra */
+        array_push($prices, 20 * $price->findByCode('15.4.110.10'));
         if ($item->getSpd() == 1) {
             array_push($prices,$price->findByCode('15.7.204.4') * 1);
         } else {
@@ -1006,6 +1039,7 @@ class ExpertationsController extends Controller
             'qtyTP' => $qtyTP,
             'qtyTR' => $qtyTR,
             'qtyPS' => $qtyPS,
+            'qtyPD' => $qtyPD,
             'total' => $total,
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,

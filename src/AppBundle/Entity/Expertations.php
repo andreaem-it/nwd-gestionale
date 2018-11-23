@@ -328,6 +328,13 @@ class Expertations
     private $allarme;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="lampada", type="integer", nullable=true)
+     */
+    private $lampada;
+
+    /**
      * @var string
      * @return string
      */
@@ -1402,5 +1409,29 @@ class Expertations
     public function getNumPreseTelefono()
     {
         return $this->num_prese_telefono;
+    }
+
+    /**
+     * Set lampada.
+     *
+     * @param int|null $lampada
+     *
+     * @return Expertations
+     */
+    public function setLampada($lampada = null)
+    {
+        $this->lampada = $lampada;
+
+        return $this;
+    }
+
+    /**
+     * Get lampada.
+     *
+     * @return int|null
+     */
+    public function getLampada()
+    {
+        return $this->lampada;
     }
 }

@@ -303,7 +303,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         </script>
         <div class=\"mt-3\">
             <div class=\"card\">
-                <div class=\"card-body\">
+                <div class=\"card-body pb-2\">
                     <div class=\"row\">
                         <div class=\"col-lg-2 grid-margin stretch-card\">
                             <div class=\"input-group\">
@@ -386,7 +386,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         // line 209
         echo "                    </div>
                     <div class=\"row\">
-                        <div class=\"col-lg-1 grid-margin stretch-card\">
+                        <div class=\"col-lg-1\">
                             <div class=\"input-group\">
                                 ";
         // line 213
@@ -398,7 +398,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         echo "
                             </div>
                         </div>
-                        <div class=\"col-lg-1 grid-margin stretch-card\">
+                        <div class=\"col-lg-1\">
                             <div class=\"input-group\">
                                 ";
         // line 219
@@ -410,7 +410,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         echo "
                             </div>
                         </div>
-                        <div class=\"col-lg-1 grid-margin stretch-card\">
+                        <div class=\"col-lg-1\">
                             <div class=\"input-group\">
                                 ";
         // line 225
@@ -422,7 +422,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         echo "
                             </div>
                         </div>
-                        <div class=\"col-lg-2 grid-margin stretch-card\">
+                        <div class=\"col-lg-2\">
                             <div class=\"input-group\">
                                 ";
         // line 231
@@ -432,29 +432,37 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         // line 232
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 232, $this->source); })()), "illum_sicurezza", array()), 'widget');
         echo "
-                            </div>
-                        </div>
-                        <div class=\"col-lg-3 grid-margin stretch-card\">
-                            <div class=\"input-group\">
                                 ";
-        // line 237
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 237, $this->source); })()), "spd", array()), 'label');
+        // line 233
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 233, $this->source); })()), "lampada", array()), 'label');
         echo "
                                 ";
-        // line 238
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 238, $this->source); })()), "spd", array()), 'widget');
+        // line 234
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 234, $this->source); })()), "lampada", array()), 'widget');
         echo "
                             </div>
                         </div>
-                        <div class=\"col-lg-4 grid-margin stretch-card\">
+                        <div class=\"col-lg-3\">
                             <div class=\"input-group\">
                                 ";
-        // line 243
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 243, $this->source); })()), "imp_ausiliari", array()), 'label');
+        // line 239
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 239, $this->source); })()), "spd", array()), 'label');
         echo "
                                 ";
-        // line 244
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 244, $this->source); })()), "imp_ausiliari", array()), 'widget');
+        // line 240
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 240, $this->source); })()), "spd", array()), 'widget');
+        echo "
+                            </div>
+                        </div>
+                        <div class=\"col-lg-4\">
+                            <div class=\"input-group\">
+                                ";
+        // line 245
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 245, $this->source); })()), "imp_ausiliari", array()), 'label');
+        echo "
+                                ";
+        // line 246
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 246, $this->source); })()), "imp_ausiliari", array()), 'widget');
         echo "
                             </div>
                         </div>
@@ -496,25 +504,9 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                     <th>
                                         Tiranti
                                     </th>
-                                    <th>
-                                        ";
-        // line 286
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 286, $this->source); })()), "c3n", array()), 'widget');
-        echo "
-                                    </th>
-                                    <th>
-                                        ";
-        // line 289
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 289, $this->source); })()), "c4n", array()), 'widget');
-        echo "
-                                    </th>
-                                    <th>
-                                        ";
-        // line 292
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 292, $this->source); })()), "c5n", array()), 'widget');
-        echo "
-                                    </th>
-                                </tr>
+                                    ";
+        // line 296
+        echo "                                </tr>
                             </tbody>
                             <tbody id=\"email-fields-list\" data-prototype='
                                 </tr>
@@ -523,72 +515,55 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                     </td>
                                     <td>
                                         ";
-        // line 302
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 302, $this->source); })()), "floor", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 304
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 304, $this->source); })()), "floor", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 305
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 305, $this->source); })()), "ambient", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 307
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 307, $this->source); })()), "ambient", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 308
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 308, $this->source); })()), "name", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 310
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 310, $this->source); })()), "name", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 311
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 311, $this->source); })()), "pp", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 313
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 313, $this->source); })()), "pp", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 314
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 314, $this->source); })()), "pl", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 316
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 316, $this->source); })()), "pl", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 317
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 317, $this->source); })()), "pt", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 319
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 319, $this->source); })()), "pt", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 320
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 320, $this->source); })()), "c1v", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 322
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 322, $this->source); })()), "c1v", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
                                     <td>
                                         ";
-        // line 323
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 323, $this->source); })()), "c2v", array()), "vars", array()), "prototype", array()), 'widget'));
+        // line 325
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 325, $this->source); })()), "c2v", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "
                                     </td>
-                                    <td>
-                                        ";
-        // line 326
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 326, $this->source); })()), "c3v", array()), "vars", array()), "prototype", array()), 'widget'));
-        echo "
-                                    </td>
-                                    <td>
-                                        ";
-        // line 329
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 329, $this->source); })()), "c4v", array()), "vars", array()), "prototype", array()), 'widget'));
-        echo "
-                                    </td>
-                                    <td>
-                                        ";
-        // line 332
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 332, $this->source); })()), "c5v", array()), "vars", array()), "prototype", array()), 'widget'));
-        echo "
-                                    </td>
-                                    ' data-widget-tags=\"";
-        // line 334
+                                    ";
+        // line 336
+        echo "                                    ' data-widget-tags=\"";
         echo twig_escape_filter($this->env, "<tr></tr>");
         echo "\">
 
@@ -695,8 +670,8 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                         <div class=\"row\">
                             <div class=\"col-6\">
                                 ";
-        // line 438
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 438, $this->source); })()), "submit", array()), 'widget');
+        // line 440
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 440, $this->source); })()), "submit", array()), 'widget');
         echo "
                             </div>
                             <div class=\"col-6\">
@@ -708,8 +683,8 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
             </div>
         </div>
         ";
-        // line 448
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 448, $this->source); })()), 'form_end');
+        // line 450
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 450, $this->source); })()), 'form_end');
         echo "
 
     </div>
@@ -769,7 +744,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
 
     }
 
-    // line 499
+    // line 501
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -778,20 +753,20 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 500
+        // line 502
         echo "    <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/scrollbar.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 501
+        // line 503
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 502
+        // line 504
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.all.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 503
+        // line 505
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -803,7 +778,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
 
     }
 
-    // line 505
+    // line 507
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -812,12 +787,12 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 506
+        // line 508
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/scrollbar.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 507
+        // line 509
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
@@ -841,7 +816,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
 
     public function getDebugInfo()
     {
-        return array (  821 => 507,  816 => 506,  807 => 505,  795 => 503,  791 => 502,  787 => 501,  782 => 500,  773 => 499,  712 => 448,  699 => 438,  592 => 334,  587 => 332,  581 => 329,  575 => 326,  569 => 323,  563 => 320,  557 => 317,  551 => 314,  545 => 311,  539 => 308,  533 => 305,  527 => 302,  514 => 292,  508 => 289,  502 => 286,  457 => 244,  453 => 243,  445 => 238,  441 => 237,  433 => 232,  429 => 231,  421 => 226,  417 => 225,  409 => 220,  405 => 219,  397 => 214,  393 => 213,  387 => 209,  380 => 200,  376 => 199,  372 => 198,  368 => 197,  364 => 196,  360 => 195,  352 => 190,  348 => 189,  340 => 184,  336 => 183,  328 => 178,  324 => 177,  316 => 172,  312 => 171,  207 => 69,  203 => 68,  195 => 63,  191 => 62,  184 => 58,  180 => 57,  176 => 56,  172 => 55,  168 => 54,  164 => 53,  157 => 49,  153 => 48,  145 => 43,  141 => 42,  133 => 37,  129 => 36,  121 => 31,  117 => 30,  107 => 23,  101 => 20,  97 => 19,  87 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  796 => 509,  791 => 508,  782 => 507,  770 => 505,  766 => 504,  762 => 503,  757 => 502,  748 => 501,  687 => 450,  674 => 440,  566 => 336,  561 => 325,  555 => 322,  549 => 319,  543 => 316,  537 => 313,  531 => 310,  525 => 307,  519 => 304,  509 => 296,  465 => 246,  461 => 245,  453 => 240,  449 => 239,  441 => 234,  437 => 233,  433 => 232,  429 => 231,  421 => 226,  417 => 225,  409 => 220,  405 => 219,  397 => 214,  393 => 213,  387 => 209,  380 => 200,  376 => 199,  372 => 198,  368 => 197,  364 => 196,  360 => 195,  352 => 190,  348 => 189,  340 => 184,  336 => 183,  328 => 178,  324 => 177,  316 => 172,  312 => 171,  207 => 69,  203 => 68,  195 => 63,  191 => 62,  184 => 58,  180 => 57,  176 => 56,  172 => 55,  168 => 54,  164 => 53,  157 => 49,  153 => 48,  145 => 43,  141 => 42,  133 => 37,  129 => 36,  121 => 31,  117 => 30,  107 => 23,  101 => 20,  97 => 19,  87 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -1012,7 +987,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
         </script>
         <div class=\"mt-3\">
             <div class=\"card\">
-                <div class=\"card-body\">
+                <div class=\"card-body pb-2\">
                     <div class=\"row\">
                         <div class=\"col-lg-2 grid-margin stretch-card\">
                             <div class=\"input-group\">
@@ -1056,37 +1031,39 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                         </div>#}
                     </div>
                     <div class=\"row\">
-                        <div class=\"col-lg-1 grid-margin stretch-card\">
+                        <div class=\"col-lg-1\">
                             <div class=\"input-group\">
                                 {{ form_label(form.num_circuiti) }}
                                 {{ form_widget(form.num_circuiti) }}
                             </div>
                         </div>
-                        <div class=\"col-lg-1 grid-margin stretch-card\">
+                        <div class=\"col-lg-1\">
                             <div class=\"input-group\">
                                 {{ form_label(form.num_prese_dati) }}
                                 {{ form_widget(form.num_prese_dati) }}
                             </div>
                         </div>
-                        <div class=\"col-lg-1 grid-margin stretch-card\">
+                        <div class=\"col-lg-1\">
                             <div class=\"input-group\">
                                 {{ form_label(form.num_prese_telefono) }}
                                 {{ form_widget(form.num_prese_telefono) }}
                             </div>
                         </div>
-                        <div class=\"col-lg-2 grid-margin stretch-card\">
+                        <div class=\"col-lg-2\">
                             <div class=\"input-group\">
                                 {{ form_label(form.illum_sicurezza) }}
                                 {{ form_widget(form.illum_sicurezza) }}
+                                {{ form_label(form.lampada) }}
+                                {{ form_widget(form.lampada) }}
                             </div>
                         </div>
-                        <div class=\"col-lg-3 grid-margin stretch-card\">
+                        <div class=\"col-lg-3\">
                             <div class=\"input-group\">
                                 {{ form_label(form.spd) }}
                                 {{ form_widget(form.spd) }}
                             </div>
                         </div>
-                        <div class=\"col-lg-4 grid-margin stretch-card\">
+                        <div class=\"col-lg-4\">
                             <div class=\"input-group\">
                                 {{ form_label(form.imp_ausiliari) }}
                                 {{ form_widget(form.imp_ausiliari) }}
@@ -1130,7 +1107,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                     <th>
                                         Tiranti
                                     </th>
-                                    <th>
+                                    {#<th>
                                         {{ form_widget(form.c3n) }}
                                     </th>
                                     <th>
@@ -1138,7 +1115,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                     </th>
                                     <th>
                                         {{ form_widget(form.c5n) }}
-                                    </th>
+                                    </th>#}
                                 </tr>
                             </tbody>
                             <tbody id=\"email-fields-list\" data-prototype='
@@ -1170,7 +1147,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                     <td>
                                         {{ form_widget(form.c2v.vars.prototype)|e }}
                                     </td>
-                                    <td>
+                                    {#<td>
                                         {{ form_widget(form.c3v.vars.prototype)|e }}
                                     </td>
                                     <td>
@@ -1178,7 +1155,7 @@ class __TwigTemplate_217eda7123c900fdc36e508ba428ad60fe869e950474bd24075e2d41481
                                     </td>
                                     <td>
                                         {{ form_widget(form.c5v.vars.prototype)|e }}
-                                    </td>
+                                    </td>#}
                                     ' data-widget-tags=\"{{ '<tr></tr>'|e }}\">
 
                             </tbody>

@@ -512,73 +512,91 @@
                                             <td class="border text-center">{{ qtyTR * 20.00 }}</td>
                                         </tr>
                                     {% endif %}
-                                    <tr>
-                                        <td colspan="5" class="border table-light"><i>Impianto Telefonico</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border text-center">15.3.210.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">{{ qtyTP }}</td>
-                                        <td class="border text-center">26.20</td>
-                                        <td class="border text-center">{{ qtyTP * 26.20 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border text-center">15.4.210.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">{{ calcTPCable|number_format(0) }}</td>
-                                        <td class="border text-center">1.70</td>
-                                        <td class="border text-center">{{ (calcTPCable * 1.70)|number_format(1) }}</td>
-                                    </tr>
-                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                    {% if item.numPreseTelefono != 0 %}
                                         <tr>
-                                            <td class="border text-center">15.3.20.1</td>
+                                            <td colspan="5" class="border table-light"><i>Impianto Telefonico</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.210.1</td>
                                             <td class="text-small border" style="max-width: 300px">
                                                 <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
-                                                    Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
+                                                    Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
                                                 </small>
                                             </td>
                                             <td class="border text-center">{{ qtyTP }}</td>
-                                            <td class="border text-center">8</td>
-                                            <td class="border text-center">{{ qtyTP  * 8}}</td>
+                                            <td class="border text-center">26.20</td>
+                                            <td class="border text-center">{{ qtyTP * 26.20 }}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
                                         <tr>
-                                            <td class="border text-center">15.3.20.2</td>
+                                            <td class="border text-center">15.4.210.1</td>
                                             <td class="text-small border" style="max-width: 300px">
                                                 <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
-                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                    Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
                                                 </small>
                                             </td>
-                                            <td class="border text-center">{{ qtyPT }}</td>
-                                            <td class="border text-center">12.9</td>
-                                            <td class="border text-center">{{ qtyPT * 12.9 }}</td>
+                                            <td class="border text-center">{{ calcTPCable|number_format(0) }}</td>
+                                            <td class="border text-center">1.70</td>
+                                            <td class="border text-center">{{ (calcTPCable * 1.70)|number_format(1) }}</td>
                                         </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
+                                                        Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ qtyTP }}</td>
+                                                <td class="border text-center">8</td>
+                                                <td class="border text-center">{{ qtyTP  * 8}}</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
+                                                        Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ qtyPT }}</td>
+                                                <td class="border text-center">12.9</td>
+                                                <td class="border text-center">{{ qtyPT * 12.9 }}</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <td class="border text-center">15.3.20.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyTP }}</td>
+                                            <td class="border text-center">12.1</td>
+                                            <td class="border text-center">{{ (qtyTP * 12.10)|number_format(1)}}</td>
+                                        {% endif %}
                                     {% endif %}
-                                    {% if item.opereMurariePietra == 1 %}
-                                        <td class="border text-center">15.3.20.3</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">{{ qtyTP }}</td>
-                                        <td class="border text-center">12.1</td>
-                                        <td class="border text-center">{{ (qtyTP * 12.10)|number_format(1)}}</td>
+                                    {% if item.numPreseDati != 0 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><i>Connettorizzazione punti trasmissione dati.</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.220.6</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per <strong>connettore tipo RJ45</strong> con cavo UTP cat. 6
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyPD }}</td>
+                                            <td class="border text-center">91.00</td>
+                                            <td class="border text-center">{{ qtyPD * 26.20 }}</td>
+                                        </tr>
                                     {% endif %}
                                     {% if item.campanello != 0 %}
                                         <tr>
-                                            <td colspan="5" class="border table-light">Segnalatore Acustico</td>
+                                            <td colspan="5" class="border table-light"><i>Segnalatore Acustico</i></td>
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.80.4</td>
@@ -605,7 +623,21 @@
                                         </tr>
                                     {% endif %}
                                     <tr>
-                                        <td colspan="5" class="border table-light">Impianto Citofonico o Videocitofonico</td>
+                                        <td colspan="5" class="border table-light"><i>Orologio Astronomico</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.6.170.39</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Interruttore deviatore orario giornaliero e settimanale (ris. Carica 100h) digitale ad 1 uscita.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">139</td>
+                                        <td class="border text-center">139</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Impianto Citofonico o Videocitofonico</i></td>
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.3.52.1</td>
@@ -623,7 +655,7 @@
                                         <td colspan="5" class="border table-light"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" class="border table-light"><i>Allaccio TERMOSTATI </i></td>
+                                        <td colspan="5" class="border table-light"><i>Allaccio di regolazione </i></td>
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.21.10.0</td>
@@ -635,11 +667,11 @@
                                             </small>
                                         </td>
                                         <td class="border text-center">{{ item.pianiCasa }}</td>
-                                        <td class="border text-center">100</td>
+                                        <td class="border text-center">100.00</td>
                                         <td class="border text-center">{{ item.pianiCasa * 100 }}</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" class="border table-light"><i>Allaccio CALDAIA o POMPA DI CALORE</i></td>
+                                        <td colspan="5" class="border table-light"><i>Allaccio di Potenza</i></td>
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.21.40.1</td>
@@ -651,8 +683,8 @@
                                             </small>
                                         </td>
                                         <td class="border text-center">1</td>
-                                        <td class="border text-center">113</td>
-                                        <td class="border text-center">113</td>
+                                        <td class="border text-center">113.00</td>
+                                        <td class="border text-center">113.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Allaccio collettori</i></td>
@@ -667,14 +699,193 @@
                                             </small>
                                         </td>
                                         <td class="border text-center">{{ item.pianiCasa }}</td>
-                                        <td class="border text-center">100</td>
+                                        <td class="border text-center">100.00</td>
                                         <td class="border text-center">{{ item.pianiCasa * 100 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light">
+                                            <strong>
+                                                QUADRI ELETTRICI PER IMPIANTO ELETTRICO, SERVIZI E PREDISPOSIZIONI DOMOTICHE: LE ESATTE QUANTITA' E TIPOLOGIE DEI VARI APPARATI <br>
+                                                SARANNO CONTEGGIATI AL TERMINE DELLE LAVORAZIONI IN MODO DA RISPETTARE L'ESATTO COORDINAMENTO DELLE PROTEZIONI COME DA <br>
+                                                NORMATIVA. ALTRIMENTI PER UN'ESATTA DEFINZIONE DEI QUADRI ELETTRICI E' NECESSARIO, PRIMA DELL'INIZIO DELLE LAVORAZIONI,  <br>
+                                                AVERE IL PROGETTO DEGLI IMPIANTI TECNOLOGICI E L'ESATTA TIPOLOGIA DI UTILIZZATORI CHE VERRANNO INSTALLATI <br>
+                                                (AD ESEMPIO FORNI, LAVATRICI, SAUNE, CONZIONATORI, PISCINE ECC...)
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Quadri elettrici per impianto elettrico e predisposizione domotica.</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.6.220.3</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Centralino tipo appartamento incassato a parete 36  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">43.00</td>
+                                        <td class="border text-center">43.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Interruttori magnetotermici differenziali: circuiti luce di ogni piano, Forza motrice di ogni piano, allarme, impianto antenna,<br>
+                                                Domotica, centralino telefonico, linea luce esterna.</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.06.52.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Interruttore magnetotermico differenziale fino a 32A, potere di interruzione 4,5KA, I.d. 0,03A
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.numCircuiti }}</td>
+                                        <td class="border text-center">67.00</td>
+                                        <td class="border text-center">{{ item.numCircuiti * 67 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Sezionatore Quadro Generale</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.06.10.8</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">42.00</td>
+                                        <td class="border text-center">42.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light">
+                                            <strong>
+                                                QUOTA LINEE DORSALI: LE ESATTE QUANTITA' E TIPOLOGIE DEI CAVI E DEI CORRUGATI  SARANNO CONTEGGIATE AL TERMINE DELLE LAVORAZIONI <br>
+                                                IN QUANTO ALLO STATO ATTUALE NON E' POSSOBILE DETERMINARE L'ESATTA POSIZIONE DELLE SCATOLE DI DERIVAZIONE E DELLA COLONNA MONTANTE <br>
+                                                PER MOTIVI ARCHITETTONICI E/O STRUTTURALI.
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Quota cavi linea dorsale per impianto elettrico linee dorsali</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.4.110.12</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Linea Elettrica in cavo unipolare isolato in PVC, NO7V-K  1*6mmq al metro
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.pianiCasa * 15 * 3 }}</td>
+                                        <td class="border text-center">1.80</td>
+                                        <td class="border text-center">{{ (item.pianiCasa * 15 * 3) * 1.80|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Quota corrugati per dorsale e relativa traccia</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.5.10.3</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 25. Al metro.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.pianiCasa * 15 * 2 }}</td>
+                                        <td class="border text-center">2.80</td>
+                                        <td class="border text-center">{{ (item.pianiCasa * 15 * 2) * 2.80|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.5.10.4</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 32. Al metro.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.pianiCasa * 15 * 2 }}</td>
+                                        <td class="border text-center">3.30</td>
+                                        <td class="border text-center">{{ (item.pianiCasa * 15 * 2) * 3.30|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.5.180.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
+                                                Per larghezza della traccia fino a 10 cm al metro lineare.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.pianiCasa * 4 }}</td>
+                                        <td class="border text-center">8.40</td>
+                                        <td class="border text-center">{{ (item.pianiCasa * 4) * 8.40|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.5.180.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
+                                                Per larghezza della traccia fino a 10 cm al metro lineare.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.pianiCasa * 2 * 3 }}</td>
+                                        <td class="border text-center">0.80</td>
+                                        <td class="border text-center">{{ (item.pianiCasa * 2 * 3) * 0.80|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light">
+                                            <i>
+                                                Scatole derivazione per predisposizione domotica. Queste scatole consentono in futuro di poter allocare in campo <br>
+                                                eventuali dispositivi domotici.
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.5.80.8</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Scatola di derivazione in plastica da incasso. Dimensioni assimilabili a mm 392x152x70.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ item.pianiCasa  }}</td>
+                                        <td class="border text-center">14.30</td>
+                                        <td class="border text-center">{{ (item.pianiCasa) * 14.3|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><strong>INGRESSO LINEA ELETTRICA ENEL DIMENSIONATA PER FORNITURA 4,5KW</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light">
+                                            <i>
+                                                Ingresso linea cavi impianto elettrico misura ipotetica: <u>L'esatta misura e/o sezione verrà conteggiata nel momento in cui verrà <br>
+                                                    stabilita la posizione del contatore e la fornitura di allaccio se monofase o trifase</u>
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.4.21.40</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Linea Elettrica in cavo multipolare isolato in EPR sotto guaina di PVC, sigla RG70R 0,6/1KV o FG70R 0,6/1KV 2*10mmq al metro.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">20</td>
+                                        <td class="border text-center">6.20</td>
+                                        <td class="border text-center">124</td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><strong>IMPIANTO DI MESSA A TERRA</strong></td>
                                     </tr>
+                                    <tr>
+                                        <td class="border text-center">15.4.110.10</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                LINEA ELETTRICA IN CAVO UNIPOLARE ISOLATO IN PVC.  Linea elettrica in cavo <br>
+                                                unipolare isolato in sigla di designazione NO7V-K (norme CEI 20-20 , CEI 20-22,<br>
+                                                CEI 20-35) del tipo non propagante l'incendio. 16 mm2
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">20</td>
+                                        <td class="border text-center">3.50</td>
+                                        <td class="border text-center">70</td>
+                                    </tr>
                                     {% if item.spd == "1" %}
-                                        {% dump(item.spd) %}
                                         <tr>
                                             <td class="border text-center">15.7.202</td>
                                             <td class="text-small border" style="max-width: 300px">

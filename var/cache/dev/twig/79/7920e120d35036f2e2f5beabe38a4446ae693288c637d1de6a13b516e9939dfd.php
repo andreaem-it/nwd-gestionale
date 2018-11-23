@@ -587,7 +587,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
             // line 348
             echo twig_escape_filter($this->env, (isset($context["qtyPS"]) || array_key_exists("qtyPS", $context) ? $context["qtyPS"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPS" does not exist.', 348, $this->source); })()), "html", null, true);
             echo "</td>
-                                            <td class=\"border text-center\">12.1</td>
+                                            <td class=\"border text-center\">27.20</td>
                                             <td class=\"border text-center\">";
             // line 350
             echo twig_escape_filter($this->env, ((isset($context["qtyPS"]) || array_key_exists("qtyPS", $context) ? $context["qtyPS"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPS" does not exist.', 350, $this->source); })()) * 12.1), "html", null, true);
@@ -832,118 +832,150 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                     ";
         }
         // line 515
-        echo "                                    <tr>
-                                        <td colspan=\"5\" class=\"border table-light\"><i>Impianto Telefonico</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td class=\"border text-center\">15.3.210.1</td>
-                                        <td class=\"text-small border\" style=\"max-width: 300px\">
-                                            <small>
-                                                Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
-                                            </small>
-                                        </td>
-                                        <td class=\"border text-center\">";
-        // line 525
-        echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 525, $this->source); })()), "html", null, true);
-        echo "</td>
-                                        <td class=\"border text-center\">26.20</td>
-                                        <td class=\"border text-center\">";
-        // line 527
-        echo twig_escape_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 527, $this->source); })()) * 26.2), "html", null, true);
-        echo "</td>
-                                    </tr>
-                                    <tr>
-                                        <td class=\"border text-center\">15.4.210.1</td>
-                                        <td class=\"text-small border\" style=\"max-width: 300px\">
-                                            <small>
-                                                Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
-                                            </small>
-                                        </td>
-                                        <td class=\"border text-center\">";
-        // line 536
-        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (isset($context["calcTPCable"]) || array_key_exists("calcTPCable", $context) ? $context["calcTPCable"] : (function () { throw new Twig_Error_Runtime('Variable "calcTPCable" does not exist.', 536, $this->source); })()), 0), "html", null, true);
-        echo "</td>
-                                        <td class=\"border text-center\">1.70</td>
-                                        <td class=\"border text-center\">";
-        // line 538
-        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((isset($context["calcTPCable"]) || array_key_exists("calcTPCable", $context) ? $context["calcTPCable"] : (function () { throw new Twig_Error_Runtime('Variable "calcTPCable" does not exist.', 538, $this->source); })()) * 1.7), 1), "html", null, true);
-        echo "</td>
-                                    </tr>
-                                    ";
-        // line 540
-        if (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 540, $this->source); })()), "opereMurarie", array()) == 1) && (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 540, $this->source); })()), "opereMurarieIntonaco", array()) == 0))) {
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 515, $this->source); })()), "numPreseTelefono", array()) != 0)) {
+            // line 516
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><i>Impianto Telefonico</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.210.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 526
+            echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 526, $this->source); })()), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">26.20</td>
+                                            <td class=\"border text-center\">";
+            // line 528
+            echo twig_escape_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 528, $this->source); })()) * 26.2), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.4.210.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 537
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (isset($context["calcTPCable"]) || array_key_exists("calcTPCable", $context) ? $context["calcTPCable"] : (function () { throw new Twig_Error_Runtime('Variable "calcTPCable" does not exist.', 537, $this->source); })()), 0), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">1.70</td>
+                                            <td class=\"border text-center\">";
+            // line 539
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((isset($context["calcTPCable"]) || array_key_exists("calcTPCable", $context) ? $context["calcTPCable"] : (function () { throw new Twig_Error_Runtime('Variable "calcTPCable" does not exist.', 539, $this->source); })()) * 1.7), 1), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        ";
             // line 541
-            echo "                                        <tr>
-                                            <td class=\"border text-center\">15.3.20.1</td>
-                                            <td class=\"text-small border\" style=\"max-width: 300px\">
-                                                <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
-                                                    Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
-                                                </small>
-                                            </td>
-                                            <td class=\"border text-center\">";
-            // line 549
-            echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 549, $this->source); })()), "html", null, true);
-            echo "</td>
-                                            <td class=\"border text-center\">8</td>
-                                            <td class=\"border text-center\">";
-            // line 551
-            echo twig_escape_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 551, $this->source); })()) * 8), "html", null, true);
-            echo "</td>
-                                        </tr>
-                                    ";
-        }
-        // line 554
-        echo "                                    ";
-        if (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 554, $this->source); })()), "opereMurarie", array()) == 1) && (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 554, $this->source); })()), "opereMurarieIntonaco", array()) == 1))) {
+            if (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 541, $this->source); })()), "opereMurarie", array()) == 1) && (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 541, $this->source); })()), "opereMurarieIntonaco", array()) == 0))) {
+                // line 542
+                echo "                                            <tr>
+                                                <td class=\"border text-center\">15.3.20.1</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
+                                                        Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">";
+                // line 550
+                echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 550, $this->source); })()), "html", null, true);
+                echo "</td>
+                                                <td class=\"border text-center\">8</td>
+                                                <td class=\"border text-center\">";
+                // line 552
+                echo twig_escape_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 552, $this->source); })()) * 8), "html", null, true);
+                echo "</td>
+                                            </tr>
+                                        ";
+            }
             // line 555
-            echo "                                        <tr>
-                                            <td class=\"border text-center\">15.3.20.2</td>
+            echo "                                        ";
+            if (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 555, $this->source); })()), "opereMurarie", array()) == 1) && (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 555, $this->source); })()), "opereMurarieIntonaco", array()) == 1))) {
+                // line 556
+                echo "                                            <tr>
+                                                <td class=\"border text-center\">15.3.20.2</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
+                                                        Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">";
+                // line 564
+                echo twig_escape_filter($this->env, (isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 564, $this->source); })()), "html", null, true);
+                echo "</td>
+                                                <td class=\"border text-center\">12.9</td>
+                                                <td class=\"border text-center\">";
+                // line 566
+                echo twig_escape_filter($this->env, ((isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 566, $this->source); })()) * 12.9), "html", null, true);
+                echo "</td>
+                                            </tr>
+                                        ";
+            }
+            // line 569
+            echo "                                        ";
+            if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 569, $this->source); })()), "opereMurariePietra", array()) == 1)) {
+                // line 570
+                echo "                                            <td class=\"border text-center\">15.3.20.3</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
                                                 <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
-                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 563
-            echo twig_escape_filter($this->env, (isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 563, $this->source); })()), "html", null, true);
-            echo "</td>
-                                            <td class=\"border text-center\">12.9</td>
+                // line 576
+                echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 576, $this->source); })()), "html", null, true);
+                echo "</td>
+                                            <td class=\"border text-center\">12.1</td>
                                             <td class=\"border text-center\">";
-            // line 565
-            echo twig_escape_filter($this->env, ((isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 565, $this->source); })()) * 12.9), "html", null, true);
+                // line 578
+                echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 578, $this->source); })()) * 12.1), 1), "html", null, true);
+                echo "</td>
+                                        ";
+            }
+            // line 580
+            echo "                                    ";
+        }
+        // line 581
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 581, $this->source); })()), "numPreseDati", array()) != 0)) {
+            // line 582
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><i>Connettorizzazione punti trasmissione dati.</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.220.6</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per <strong>connettore tipo RJ45</strong> con cavo UTP cat. 6
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 592
+            echo twig_escape_filter($this->env, (isset($context["qtyPD"]) || array_key_exists("qtyPD", $context) ? $context["qtyPD"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPD" does not exist.', 592, $this->source); })()), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">91.00</td>
+                                            <td class=\"border text-center\">";
+            // line 594
+            echo twig_escape_filter($this->env, ((isset($context["qtyPD"]) || array_key_exists("qtyPD", $context) ? $context["qtyPD"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPD" does not exist.', 594, $this->source); })()) * 26.2), "html", null, true);
             echo "</td>
                                         </tr>
                                     ";
         }
-        // line 568
+        // line 597
         echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 568, $this->source); })()), "opereMurariePietra", array()) == 1)) {
-            // line 569
-            echo "                                        <td class=\"border text-center\">15.3.20.3</td>
-                                        <td class=\"text-small border\" style=\"max-width: 300px\">
-                                            <small>
-                                                Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                            </small>
-                                        </td>
-                                        <td class=\"border text-center\">";
-            // line 575
-            echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 575, $this->source); })()), "html", null, true);
-            echo "</td>
-                                        <td class=\"border text-center\">12.1</td>
-                                        <td class=\"border text-center\">";
-            // line 577
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 577, $this->source); })()) * 12.1), 1), "html", null, true);
-            echo "</td>
-                                    ";
-        }
-        // line 579
-        echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 579, $this->source); })()), "campanello", array()) != 0)) {
-            // line 580
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 597, $this->source); })()), "campanello", array()) != 0)) {
+            // line 598
             echo "                                        <tr>
-                                            <td colspan=\"5\" class=\"border table-light\">Segnalatore Acustico</td>
+                                            <td colspan=\"5\" class=\"border table-light\"><i>Segnalatore Acustico</i></td>
                                         </tr>
                                         <tr>
                                             <td class=\"border text-center\">15.3.80.4</td>
@@ -970,9 +1002,23 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     ";
         }
-        // line 607
+        // line 625
         echo "                                    <tr>
-                                        <td colspan=\"5\" class=\"border table-light\">Impianto Citofonico o Videocitofonico</td>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Orologio Astronomico</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.6.170.39</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Interruttore deviatore orario giornaliero e settimanale (ris. Carica 100h) digitale ad 1 uscita.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">1</td>
+                                        <td class=\"border text-center\">139</td>
+                                        <td class=\"border text-center\">139</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Impianto Citofonico o Videocitofonico</i></td>
                                     </tr>
                                     <tr>
                                         <td class=\"border text-center\">15.3.52.1</td>
@@ -990,7 +1036,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
                                     </tr>
                                     <tr>
-                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio TERMOSTATI </i></td>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio di regolazione </i></td>
                                     </tr>
                                     <tr>
                                         <td class=\"border text-center\">13.21.10.0</td>
@@ -1002,17 +1048,17 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">";
-        // line 637
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 637, $this->source); })()), "pianiCasa", array()), "html", null, true);
+        // line 669
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 669, $this->source); })()), "pianiCasa", array()), "html", null, true);
         echo "</td>
-                                        <td class=\"border text-center\">100</td>
+                                        <td class=\"border text-center\">100.00</td>
                                         <td class=\"border text-center\">";
-        // line 639
-        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 639, $this->source); })()), "pianiCasa", array()) * 100), "html", null, true);
+        // line 671
+        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 671, $this->source); })()), "pianiCasa", array()) * 100), "html", null, true);
         echo "</td>
                                     </tr>
                                     <tr>
-                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio CALDAIA o POMPA DI CALORE</i></td>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio di Potenza</i></td>
                                     </tr>
                                     <tr>
                                         <td class=\"border text-center\">13.21.40.1</td>
@@ -1024,8 +1070,8 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">1</td>
-                                        <td class=\"border text-center\">113</td>
-                                        <td class=\"border text-center\">113</td>
+                                        <td class=\"border text-center\">113.00</td>
+                                        <td class=\"border text-center\">113.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><i>Allaccio collettori</i></td>
@@ -1040,27 +1086,231 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">";
-        // line 669
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 669, $this->source); })()), "pianiCasa", array()), "html", null, true);
+        // line 701
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 701, $this->source); })()), "pianiCasa", array()), "html", null, true);
         echo "</td>
-                                        <td class=\"border text-center\">100</td>
+                                        <td class=\"border text-center\">100.00</td>
                                         <td class=\"border text-center\">";
-        // line 671
-        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 671, $this->source); })()), "pianiCasa", array()) * 100), "html", null, true);
+        // line 703
+        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 703, $this->source); })()), "pianiCasa", array()) * 100), "html", null, true);
         echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <strong>
+                                                QUADRI ELETTRICI PER IMPIANTO ELETTRICO, SERVIZI E PREDISPOSIZIONI DOMOTICHE: LE ESATTE QUANTITA' E TIPOLOGIE DEI VARI APPARATI <br>
+                                                SARANNO CONTEGGIATI AL TERMINE DELLE LAVORAZIONI IN MODO DA RISPETTARE L'ESATTO COORDINAMENTO DELLE PROTEZIONI COME DA <br>
+                                                NORMATIVA. ALTRIMENTI PER UN'ESATTA DEFINZIONE DEI QUADRI ELETTRICI E' NECESSARIO, PRIMA DELL'INIZIO DELLE LAVORAZIONI,  <br>
+                                                AVERE IL PROGETTO DEGLI IMPIANTI TECNOLOGICI E L'ESATTA TIPOLOGIA DI UTILIZZATORI CHE VERRANNO INSTALLATI <br>
+                                                (AD ESEMPIO FORNI, LAVATRICI, SAUNE, CONZIONATORI, PISCINE ECC...)
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Quadri elettrici per impianto elettrico e predisposizione domotica.</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.6.220.3</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Centralino tipo appartamento incassato a parete 36  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">1</td>
+                                        <td class=\"border text-center\">43.00</td>
+                                        <td class=\"border text-center\">43.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Interruttori magnetotermici differenziali: circuiti luce di ogni piano, Forza motrice di ogni piano, allarme, impianto antenna,<br>
+                                                Domotica, centralino telefonico, linea luce esterna.</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.06.52.1</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Interruttore magnetotermico differenziale fino a 32A, potere di interruzione 4,5KA, I.d. 0,03A
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 741
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 741, $this->source); })()), "numCircuiti", array()), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">67.00</td>
+                                        <td class=\"border text-center\">";
+        // line 743
+        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 743, $this->source); })()), "numCircuiti", array()) * 67), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Sezionatore Quadro Generale</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.06.10.8</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">1</td>
+                                        <td class=\"border text-center\">42.00</td>
+                                        <td class=\"border text-center\">42.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <strong>
+                                                QUOTA LINEE DORSALI: LE ESATTE QUANTITA' E TIPOLOGIE DEI CAVI E DEI CORRUGATI  SARANNO CONTEGGIATE AL TERMINE DELLE LAVORAZIONI <br>
+                                                IN QUANTO ALLO STATO ATTUALE NON E' POSSOBILE DETERMINARE L'ESATTA POSIZIONE DELLE SCATOLE DI DERIVAZIONE E DELLA COLONNA MONTANTE <br>
+                                                PER MOTIVI ARCHITETTONICI E/O STRUTTURALI.
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Quota cavi linea dorsale per impianto elettrico linee dorsali</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.4.110.12</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Linea Elettrica in cavo unipolare isolato in PVC, NO7V-K  1*6mmq al metro
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 778
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 778, $this->source); })()), "pianiCasa", array()) * 15) * 3), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">1.80</td>
+                                        <td class=\"border text-center\">";
+        // line 780
+        echo twig_escape_filter($this->env, (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 780, $this->source); })()), "pianiCasa", array()) * 15) * 3) * twig_number_format_filter($this->env, 1.8, 2)), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Quota corrugati per dorsale e relativa traccia</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.10.3</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 25. Al metro.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 792
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 792, $this->source); })()), "pianiCasa", array()) * 15) * 2), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">2.80</td>
+                                        <td class=\"border text-center\">";
+        // line 794
+        echo twig_escape_filter($this->env, (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 794, $this->source); })()), "pianiCasa", array()) * 15) * 2) * twig_number_format_filter($this->env, 2.8, 2)), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.10.4</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 32. Al metro.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 803
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 803, $this->source); })()), "pianiCasa", array()) * 15) * 2), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">3.30</td>
+                                        <td class=\"border text-center\">";
+        // line 805
+        echo twig_escape_filter($this->env, (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 805, $this->source); })()), "pianiCasa", array()) * 15) * 2) * twig_number_format_filter($this->env, 3.3, 2)), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.180.1</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
+                                                Per larghezza della traccia fino a 10 cm al metro lineare.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 815
+        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 815, $this->source); })()), "pianiCasa", array()) * 4), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">8.40</td>
+                                        <td class=\"border text-center\">";
+        // line 817
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 817, $this->source); })()), "pianiCasa", array()) * 4) * twig_number_format_filter($this->env, 8.4, 2)), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.180.2</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
+                                                Per larghezza della traccia fino a 10 cm al metro lineare.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 827
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 827, $this->source); })()), "pianiCasa", array()) * 2) * 3), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">0.80</td>
+                                        <td class=\"border text-center\">";
+        // line 829
+        echo twig_escape_filter($this->env, (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 829, $this->source); })()), "pianiCasa", array()) * 2) * 3) * twig_number_format_filter($this->env, 0.8, 2)), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <i>
+                                                Scatole derivazione per predisposizione domotica. Queste scatole consentono in futuro di poter allocare in campo <br>
+                                                eventuali dispositivi domotici.
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.80.8</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Scatola di derivazione in plastica da incasso. Dimensioni assimilabili a mm 392x152x70.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">";
+        // line 846
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 846, $this->source); })()), "pianiCasa", array()), "html", null, true);
+        echo "</td>
+                                        <td class=\"border text-center\">14.30</td>
+                                        <td class=\"border text-center\">";
+        // line 848
+        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 848, $this->source); })()), "pianiCasa", array()) * twig_number_format_filter($this->env, 14.3, 2)), "html", null, true);
+        echo "</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><strong>INGRESSO LINEA ELETTRICA ENEL DIMENSIONATA PER FORNITURA 4,5KW</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <i>
+                                                Ingresso linea cavi impianto elettrico misura ipotetica: <u>L'esatta misura e/o sezione verrà conteggiata nel momento in cui verrà <br>
+                                                    stabilita la posizione del contatore e la fornitura di allaccio se monofase o trifase</u>
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.4.21.40</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Linea Elettrica in cavo multipolare isolato in EPR sotto guaina di PVC, sigla RG70R 0,6/1KV o FG70R 0,6/1KV 2*10mmq al metro.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">20</td>
+                                        <td class=\"border text-center\">6.20</td>
+                                        <td class=\"border text-center\">124</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI MESSA A TERRA</strong></td>
                                     </tr>
                                     ";
-        // line 676
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 676, $this->source); })()), "spd", array()) == "1")) {
-            // line 677
-            echo "                                        ";
-            if ($this->env->isDebug()) {
-                \Symfony\Component\VarDumper\VarDumper::dump(twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 677, $this->source); })()), "spd", array()));
-            }
-            // line 678
+        // line 875
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 875, $this->source); })()), "spd", array()) == "1")) {
+            // line 876
             echo "                                        <tr>
                                             <td class=\"border text-center\">15.7.202</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -1074,7 +1324,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     ";
         } else {
-            // line 690
+            // line 888
             echo "                                        <tr>
                                             <td class=\"border text-center\">15.7.201.2</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -1099,10 +1349,10 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     ";
         }
-        // line 713
+        // line 911
         echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 713, $this->source); })()), "level", array()) == 3)) {
-            // line 714
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 911, $this->source); })()), "level", array()) == 3)) {
+            // line 912
             echo "                                        <tr>
                                             <td colspan=\"5\" class=\"border table-light\"><strong>Relè Passo Passo ed alimentatori già suddivisi per piano: NECESSARI PER LA GESTIONE DELL'ILLUMINAZIONE IN BASSA TENSIONE</strong></td>
                                         </tr>
@@ -1116,13 +1366,13 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 726
-            echo twig_escape_filter($this->env, (isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 726, $this->source); })()), "html", null, true);
+            // line 924
+            echo twig_escape_filter($this->env, (isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 924, $this->source); })()), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">27</td>
                                             <td class=\"border text-center\">";
-            // line 728
-            echo twig_escape_filter($this->env, ((isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 728, $this->source); })()) * 27), "html", null, true);
+            // line 926
+            echo twig_escape_filter($this->env, ((isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 926, $this->source); })()) * 27), "html", null, true);
             echo "</td>
                                         </tr>
                                         <tr>
@@ -1135,43 +1385,43 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 739
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 739, $this->source); })()), "pianiCasa", array()), "html", null, true);
+            // line 937
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 937, $this->source); })()), "pianiCasa", array()), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">40</td>
                                             <td class=\"border text-center\">";
-            // line 741
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 741, $this->source); })()), "pianiCasa", array()) * 40), "html", null, true);
+            // line 939
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 939, $this->source); })()), "pianiCasa", array()) * 40), "html", null, true);
             echo "</td>
                                         </tr>
                                     ";
         }
-        // line 744
+        // line 942
         echo "                                    <!-- TOTALI -->
                                     <tr>
                                         <td colspan=\"3\" class=\"border-0\"></td>
                                         <td class=\"border\">SUBTOTALE</td>
                                         <td class=\"border text-center\">
                                             ";
-        // line 749
-        echo twig_escape_filter($this->env, twig_round((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 749, $this->source); })()), "2"), "html", null, true);
+        // line 947
+        echo twig_escape_filter($this->env, twig_round((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 947, $this->source); })()), "2"), "html", null, true);
         echo " €
                                         </td>
                                     </tr>
                                     ";
-        // line 752
-        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 752, $this->source); })()) != 0)) {
-            // line 753
+        // line 950
+        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 950, $this->source); })()) != 0)) {
+            // line 951
             echo "                                        <tr>
                                             <td colspan=\"3\" class=\"border-0\"></td>
                                             <td class=\"border\">SCONTO ";
-            // line 755
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 755, $this->source); })()), "sconto", array()), "html", null, true);
+            // line 953
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 953, $this->source); })()), "sconto", array()), "html", null, true);
             echo "%</td>
                                             <td class=\"border text-center\">
                                                 ";
-            // line 757
-            echo twig_escape_filter($this->env, twig_round((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 757, $this->source); })()), "2"), "html", null, true);
+            // line 955
+            echo twig_escape_filter($this->env, twig_round((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 955, $this->source); })()), "2"), "html", null, true);
             echo " €
                                             </td>
                                         </tr>
@@ -1180,31 +1430,31 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             <td class=\"border\"><strong>TOTALE SCONTATO</strong></td>
                                             <td class=\"border text-center\">
                                                 <strong>";
-            // line 764
-            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 764, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 764, $this->source); })())), "2"), "html", null, true);
+            // line 962
+            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 962, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 962, $this->source); })())), "2"), "html", null, true);
             echo " €</strong>
                                             </td>
                                         </tr>
                                     ";
         } else {
-            // line 768
+            // line 966
             echo "                                            <tr>
                                                 <td colspan=\"3\" class=\"border-0\"></td>
                                                 <td class=\"border\"><strong>TOTALE</strong></td>
                                                 <td class=\"border text-center\">
                                                     <strong>";
-            // line 772
-            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 772, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 772, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 772, $this->source); })()));
+            // line 970
+            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 970, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 970, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 970, $this->source); })()));
             echo " ";
-            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 772, $this->source); })()), "2"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 970, $this->source); })()), "2"), "html", null, true);
             echo " €</strong>
                                                 </td>
                                             </tr>
                                     ";
         }
-        // line 776
+        // line 974
         echo "                                    ";
-        // line 783
+        // line 981
         echo "
 
                                 </tbody>
@@ -1226,7 +1476,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     }
 
-    // line 796
+    // line 994
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -1235,7 +1485,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 797
+        // line 995
         echo "    <style>
         .no-wrap {
             max-width: 130px;
@@ -1263,7 +1513,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
     </style>
     <style type=\"text/css\">
         ";
-        // line 824
+        // line 1022
         echo "        @page {
             size: landscape;
             margin: 0; }
@@ -1323,7 +1573,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     }
 
-    // line 875
+    // line 1073
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -1332,7 +1582,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 876
+        // line 1074
         echo "    <script>
         \$(document).ready(function () {
             \$('#nav-hide-btn-icon').trigger('click');
@@ -1364,7 +1614,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     public function getDebugInfo()
     {
-        return array (  1336 => 876,  1327 => 875,  1267 => 824,  1239 => 797,  1230 => 796,  1208 => 783,  1206 => 776,  1197 => 772,  1191 => 768,  1184 => 764,  1174 => 757,  1169 => 755,  1165 => 753,  1163 => 752,  1157 => 749,  1150 => 744,  1144 => 741,  1139 => 739,  1125 => 728,  1120 => 726,  1106 => 714,  1103 => 713,  1078 => 690,  1064 => 678,  1059 => 677,  1057 => 676,  1049 => 671,  1044 => 669,  1011 => 639,  1006 => 637,  974 => 607,  945 => 580,  942 => 579,  937 => 577,  932 => 575,  924 => 569,  921 => 568,  915 => 565,  910 => 563,  900 => 555,  897 => 554,  891 => 551,  886 => 549,  876 => 541,  874 => 540,  869 => 538,  864 => 536,  852 => 527,  847 => 525,  835 => 515,  829 => 512,  824 => 510,  812 => 501,  807 => 499,  795 => 489,  792 => 488,  786 => 485,  781 => 483,  772 => 476,  769 => 475,  763 => 472,  758 => 470,  748 => 462,  745 => 461,  739 => 458,  734 => 456,  724 => 448,  722 => 447,  717 => 445,  712 => 443,  700 => 434,  695 => 432,  686 => 425,  683 => 424,  665 => 408,  663 => 407,  646 => 392,  644 => 391,  627 => 376,  625 => 375,  602 => 354,  599 => 353,  593 => 350,  588 => 348,  578 => 340,  575 => 339,  569 => 336,  564 => 334,  554 => 326,  551 => 325,  545 => 322,  540 => 320,  530 => 312,  528 => 311,  523 => 309,  518 => 307,  503 => 294,  497 => 291,  492 => 289,  482 => 281,  479 => 280,  473 => 277,  468 => 275,  458 => 267,  455 => 266,  449 => 263,  444 => 261,  434 => 253,  431 => 252,  426 => 239,  421 => 237,  408 => 227,  403 => 225,  390 => 215,  385 => 213,  371 => 201,  365 => 198,  360 => 196,  350 => 188,  347 => 187,  341 => 184,  336 => 182,  326 => 174,  323 => 173,  317 => 170,  312 => 168,  302 => 160,  299 => 159,  294 => 146,  289 => 144,  276 => 134,  271 => 132,  257 => 120,  251 => 117,  246 => 115,  236 => 107,  233 => 106,  227 => 103,  222 => 101,  212 => 93,  209 => 92,  203 => 89,  198 => 87,  188 => 79,  186 => 78,  181 => 76,  176 => 74,  163 => 64,  158 => 62,  125 => 31,  119 => 30,  110 => 27,  105 => 26,  100 => 25,  96 => 24,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  1586 => 1074,  1577 => 1073,  1517 => 1022,  1489 => 995,  1480 => 994,  1458 => 981,  1456 => 974,  1447 => 970,  1441 => 966,  1434 => 962,  1424 => 955,  1419 => 953,  1415 => 951,  1413 => 950,  1407 => 947,  1400 => 942,  1394 => 939,  1389 => 937,  1375 => 926,  1370 => 924,  1356 => 912,  1353 => 911,  1328 => 888,  1314 => 876,  1312 => 875,  1282 => 848,  1277 => 846,  1257 => 829,  1252 => 827,  1239 => 817,  1234 => 815,  1221 => 805,  1216 => 803,  1204 => 794,  1199 => 792,  1184 => 780,  1179 => 778,  1141 => 743,  1136 => 741,  1095 => 703,  1090 => 701,  1057 => 671,  1052 => 669,  1006 => 625,  977 => 598,  974 => 597,  968 => 594,  963 => 592,  951 => 582,  948 => 581,  945 => 580,  940 => 578,  935 => 576,  927 => 570,  924 => 569,  918 => 566,  913 => 564,  903 => 556,  900 => 555,  894 => 552,  889 => 550,  879 => 542,  877 => 541,  872 => 539,  867 => 537,  855 => 528,  850 => 526,  838 => 516,  835 => 515,  829 => 512,  824 => 510,  812 => 501,  807 => 499,  795 => 489,  792 => 488,  786 => 485,  781 => 483,  772 => 476,  769 => 475,  763 => 472,  758 => 470,  748 => 462,  745 => 461,  739 => 458,  734 => 456,  724 => 448,  722 => 447,  717 => 445,  712 => 443,  700 => 434,  695 => 432,  686 => 425,  683 => 424,  665 => 408,  663 => 407,  646 => 392,  644 => 391,  627 => 376,  625 => 375,  602 => 354,  599 => 353,  593 => 350,  588 => 348,  578 => 340,  575 => 339,  569 => 336,  564 => 334,  554 => 326,  551 => 325,  545 => 322,  540 => 320,  530 => 312,  528 => 311,  523 => 309,  518 => 307,  503 => 294,  497 => 291,  492 => 289,  482 => 281,  479 => 280,  473 => 277,  468 => 275,  458 => 267,  455 => 266,  449 => 263,  444 => 261,  434 => 253,  431 => 252,  426 => 239,  421 => 237,  408 => 227,  403 => 225,  390 => 215,  385 => 213,  371 => 201,  365 => 198,  360 => 196,  350 => 188,  347 => 187,  341 => 184,  336 => 182,  326 => 174,  323 => 173,  317 => 170,  312 => 168,  302 => 160,  299 => 159,  294 => 146,  289 => 144,  276 => 134,  271 => 132,  257 => 120,  251 => 117,  246 => 115,  236 => 107,  233 => 106,  227 => 103,  222 => 101,  212 => 93,  209 => 92,  203 => 89,  198 => 87,  188 => 79,  186 => 78,  181 => 76,  176 => 74,  163 => 64,  158 => 62,  125 => 31,  119 => 30,  110 => 27,  105 => 26,  100 => 25,  96 => 24,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -1717,7 +1967,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">{{ qtyPS }}</td>
-                                            <td class=\"border text-center\">12.1</td>
+                                            <td class=\"border text-center\">27.20</td>
                                             <td class=\"border text-center\">{{ qtyPS * 12.1 }}</td>
                                         </tr>
                                     {% endif %}
@@ -1883,73 +2133,91 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             <td class=\"border text-center\">{{ qtyTR * 20.00 }}</td>
                                         </tr>
                                     {% endif %}
-                                    <tr>
-                                        <td colspan=\"5\" class=\"border table-light\"><i>Impianto Telefonico</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td class=\"border text-center\">15.3.210.1</td>
-                                        <td class=\"text-small border\" style=\"max-width: 300px\">
-                                            <small>
-                                                Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
-                                            </small>
-                                        </td>
-                                        <td class=\"border text-center\">{{ qtyTP }}</td>
-                                        <td class=\"border text-center\">26.20</td>
-                                        <td class=\"border text-center\">{{ qtyTP * 26.20 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class=\"border text-center\">15.4.210.1</td>
-                                        <td class=\"text-small border\" style=\"max-width: 300px\">
-                                            <small>
-                                                Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
-                                            </small>
-                                        </td>
-                                        <td class=\"border text-center\">{{ calcTPCable|number_format(0) }}</td>
-                                        <td class=\"border text-center\">1.70</td>
-                                        <td class=\"border text-center\">{{ (calcTPCable * 1.70)|number_format(1) }}</td>
-                                    </tr>
-                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                    {% if item.numPreseTelefono != 0 %}
                                         <tr>
-                                            <td class=\"border text-center\">15.3.20.1</td>
+                                            <td colspan=\"5\" class=\"border table-light\"><i>Impianto Telefonico</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.210.1</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
                                                 <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
-                                                    Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
+                                                    Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">{{ qtyTP }}</td>
-                                            <td class=\"border text-center\">8</td>
-                                            <td class=\"border text-center\">{{ qtyTP  * 8}}</td>
+                                            <td class=\"border text-center\">26.20</td>
+                                            <td class=\"border text-center\">{{ qtyTP * 26.20 }}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
                                         <tr>
-                                            <td class=\"border text-center\">15.3.20.2</td>
+                                            <td class=\"border text-center\">15.4.210.1</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
                                                 <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
-                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                    Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
                                                 </small>
                                             </td>
-                                            <td class=\"border text-center\">{{ qtyPT }}</td>
-                                            <td class=\"border text-center\">12.9</td>
-                                            <td class=\"border text-center\">{{ qtyPT * 12.9 }}</td>
+                                            <td class=\"border text-center\">{{ calcTPCable|number_format(0) }}</td>
+                                            <td class=\"border text-center\">1.70</td>
+                                            <td class=\"border text-center\">{{ (calcTPCable * 1.70)|number_format(1) }}</td>
                                         </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class=\"border text-center\">15.3.20.1</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
+                                                        Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">{{ qtyTP }}</td>
+                                                <td class=\"border text-center\">8</td>
+                                                <td class=\"border text-center\">{{ qtyTP  * 8}}</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
+                                            <tr>
+                                                <td class=\"border text-center\">15.3.20.2</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
+                                                        Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">{{ qtyPT }}</td>
+                                                <td class=\"border text-center\">12.9</td>
+                                                <td class=\"border text-center\">{{ qtyPT * 12.9 }}</td>
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ qtyTP }}</td>
+                                            <td class=\"border text-center\">12.1</td>
+                                            <td class=\"border text-center\">{{ (qtyTP * 12.10)|number_format(1)}}</td>
+                                        {% endif %}
                                     {% endif %}
-                                    {% if item.opereMurariePietra == 1 %}
-                                        <td class=\"border text-center\">15.3.20.3</td>
-                                        <td class=\"text-small border\" style=\"max-width: 300px\">
-                                            <small>
-                                                Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                            </small>
-                                        </td>
-                                        <td class=\"border text-center\">{{ qtyTP }}</td>
-                                        <td class=\"border text-center\">12.1</td>
-                                        <td class=\"border text-center\">{{ (qtyTP * 12.10)|number_format(1)}}</td>
+                                    {% if item.numPreseDati != 0 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><i>Connettorizzazione punti trasmissione dati.</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.220.6</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per <strong>connettore tipo RJ45</strong> con cavo UTP cat. 6
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ qtyPD }}</td>
+                                            <td class=\"border text-center\">91.00</td>
+                                            <td class=\"border text-center\">{{ qtyPD * 26.20 }}</td>
+                                        </tr>
                                     {% endif %}
                                     {% if item.campanello != 0 %}
                                         <tr>
-                                            <td colspan=\"5\" class=\"border table-light\">Segnalatore Acustico</td>
+                                            <td colspan=\"5\" class=\"border table-light\"><i>Segnalatore Acustico</i></td>
                                         </tr>
                                         <tr>
                                             <td class=\"border text-center\">15.3.80.4</td>
@@ -1976,7 +2244,21 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     {% endif %}
                                     <tr>
-                                        <td colspan=\"5\" class=\"border table-light\">Impianto Citofonico o Videocitofonico</td>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Orologio Astronomico</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.6.170.39</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Interruttore deviatore orario giornaliero e settimanale (ris. Carica 100h) digitale ad 1 uscita.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">1</td>
+                                        <td class=\"border text-center\">139</td>
+                                        <td class=\"border text-center\">139</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Impianto Citofonico o Videocitofonico</i></td>
                                     </tr>
                                     <tr>
                                         <td class=\"border text-center\">15.3.52.1</td>
@@ -1994,7 +2276,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
                                     </tr>
                                     <tr>
-                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio TERMOSTATI </i></td>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio di regolazione </i></td>
                                     </tr>
                                     <tr>
                                         <td class=\"border text-center\">13.21.10.0</td>
@@ -2006,11 +2288,11 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">{{ item.pianiCasa }}</td>
-                                        <td class=\"border text-center\">100</td>
+                                        <td class=\"border text-center\">100.00</td>
                                         <td class=\"border text-center\">{{ item.pianiCasa * 100 }}</td>
                                     </tr>
                                     <tr>
-                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio CALDAIA o POMPA DI CALORE</i></td>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Allaccio di Potenza</i></td>
                                     </tr>
                                     <tr>
                                         <td class=\"border text-center\">13.21.40.1</td>
@@ -2022,8 +2304,8 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">1</td>
-                                        <td class=\"border text-center\">113</td>
-                                        <td class=\"border text-center\">113</td>
+                                        <td class=\"border text-center\">113.00</td>
+                                        <td class=\"border text-center\">113.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><i>Allaccio collettori</i></td>
@@ -2038,14 +2320,180 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">{{ item.pianiCasa }}</td>
-                                        <td class=\"border text-center\">100</td>
+                                        <td class=\"border text-center\">100.00</td>
                                         <td class=\"border text-center\">{{ item.pianiCasa * 100 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <strong>
+                                                QUADRI ELETTRICI PER IMPIANTO ELETTRICO, SERVIZI E PREDISPOSIZIONI DOMOTICHE: LE ESATTE QUANTITA' E TIPOLOGIE DEI VARI APPARATI <br>
+                                                SARANNO CONTEGGIATI AL TERMINE DELLE LAVORAZIONI IN MODO DA RISPETTARE L'ESATTO COORDINAMENTO DELLE PROTEZIONI COME DA <br>
+                                                NORMATIVA. ALTRIMENTI PER UN'ESATTA DEFINZIONE DEI QUADRI ELETTRICI E' NECESSARIO, PRIMA DELL'INIZIO DELLE LAVORAZIONI,  <br>
+                                                AVERE IL PROGETTO DEGLI IMPIANTI TECNOLOGICI E L'ESATTA TIPOLOGIA DI UTILIZZATORI CHE VERRANNO INSTALLATI <br>
+                                                (AD ESEMPIO FORNI, LAVATRICI, SAUNE, CONZIONATORI, PISCINE ECC...)
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Quadri elettrici per impianto elettrico e predisposizione domotica.</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.6.220.3</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Centralino tipo appartamento incassato a parete 36  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">1</td>
+                                        <td class=\"border text-center\">43.00</td>
+                                        <td class=\"border text-center\">43.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Interruttori magnetotermici differenziali: circuiti luce di ogni piano, Forza motrice di ogni piano, allarme, impianto antenna,<br>
+                                                Domotica, centralino telefonico, linea luce esterna.</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.06.52.1</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Interruttore magnetotermico differenziale fino a 32A, potere di interruzione 4,5KA, I.d. 0,03A
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.numCircuiti }}</td>
+                                        <td class=\"border text-center\">67.00</td>
+                                        <td class=\"border text-center\">{{ item.numCircuiti * 67 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Sezionatore Quadro Generale</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.06.10.8</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">1</td>
+                                        <td class=\"border text-center\">42.00</td>
+                                        <td class=\"border text-center\">42.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <strong>
+                                                QUOTA LINEE DORSALI: LE ESATTE QUANTITA' E TIPOLOGIE DEI CAVI E DEI CORRUGATI  SARANNO CONTEGGIATE AL TERMINE DELLE LAVORAZIONI <br>
+                                                IN QUANTO ALLO STATO ATTUALE NON E' POSSOBILE DETERMINARE L'ESATTA POSIZIONE DELLE SCATOLE DI DERIVAZIONE E DELLA COLONNA MONTANTE <br>
+                                                PER MOTIVI ARCHITETTONICI E/O STRUTTURALI.
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Quota cavi linea dorsale per impianto elettrico linee dorsali</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.4.110.12</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Linea Elettrica in cavo unipolare isolato in PVC, NO7V-K  1*6mmq al metro
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.pianiCasa * 15 * 3 }}</td>
+                                        <td class=\"border text-center\">1.80</td>
+                                        <td class=\"border text-center\">{{ (item.pianiCasa * 15 * 3) * 1.80|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><i>Quota corrugati per dorsale e relativa traccia</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.10.3</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 25. Al metro.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.pianiCasa * 15 * 2 }}</td>
+                                        <td class=\"border text-center\">2.80</td>
+                                        <td class=\"border text-center\">{{ (item.pianiCasa * 15 * 2) * 2.80|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.10.4</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 32. Al metro.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.pianiCasa * 15 * 2 }}</td>
+                                        <td class=\"border text-center\">3.30</td>
+                                        <td class=\"border text-center\">{{ (item.pianiCasa * 15 * 2) * 3.30|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.180.1</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
+                                                Per larghezza della traccia fino a 10 cm al metro lineare.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.pianiCasa * 4 }}</td>
+                                        <td class=\"border text-center\">8.40</td>
+                                        <td class=\"border text-center\">{{ (item.pianiCasa * 4) * 8.40|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.180.2</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
+                                                Per larghezza della traccia fino a 10 cm al metro lineare.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.pianiCasa * 2 * 3 }}</td>
+                                        <td class=\"border text-center\">0.80</td>
+                                        <td class=\"border text-center\">{{ (item.pianiCasa * 2 * 3) * 0.80|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <i>
+                                                Scatole derivazione per predisposizione domotica. Queste scatole consentono in futuro di poter allocare in campo <br>
+                                                eventuali dispositivi domotici.
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.5.80.8</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Scatola di derivazione in plastica da incasso. Dimensioni assimilabili a mm 392x152x70.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">{{ item.pianiCasa  }}</td>
+                                        <td class=\"border text-center\">14.30</td>
+                                        <td class=\"border text-center\">{{ (item.pianiCasa) * 14.3|number_format(2) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\"><strong>INGRESSO LINEA ELETTRICA ENEL DIMENSIONATA PER FORNITURA 4,5KW</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"5\" class=\"border table-light\">
+                                            <i>
+                                                Ingresso linea cavi impianto elettrico misura ipotetica: <u>L'esatta misura e/o sezione verrà conteggiata nel momento in cui verrà <br>
+                                                    stabilita la posizione del contatore e la fornitura di allaccio se monofase o trifase</u>
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=\"border text-center\">15.4.21.40</td>
+                                        <td class=\"text-small border\" style=\"max-width: 300px\">
+                                            <small>
+                                                Linea Elettrica in cavo multipolare isolato in EPR sotto guaina di PVC, sigla RG70R 0,6/1KV o FG70R 0,6/1KV 2*10mmq al metro.
+                                            </small>
+                                        </td>
+                                        <td class=\"border text-center\">20</td>
+                                        <td class=\"border text-center\">6.20</td>
+                                        <td class=\"border text-center\">124</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI MESSA A TERRA</strong></td>
                                     </tr>
                                     {% if item.spd == \"1\" %}
-                                        {% dump(item.spd) %}
                                         <tr>
                                             <td class=\"border text-center\">15.7.202</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
