@@ -319,7 +319,7 @@
                                             </td>
                                             <td class="border text-center">{{ qtyPS }}</td>
                                             <td class="border text-center">8.0</td>
-                                            <td class="border text-center">{{ qtyPs * 8.0 }}</td>
+                                            <td class="border text-center">{{ qtyPS * 8.0 }}</td>
                                         </tr>
                                     {% endif %}
                                     {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
@@ -899,7 +899,7 @@
                                         </tr>
                                     {% else %}
                                         <tr>
-                                            <td class="border text-center">15.7.201.2</td>
+                                            <td class="border text-center">15.7.204.2</td>
                                             <td class="text-small border" style="max-width: 300px">
                                                 <small>
                                                     Limitatore di sovratensioni (SPD) Tipo 2. Quadripolare per reti TT (esecuzione 3+1).
@@ -910,7 +910,7 @@
                                             <td class="border text-center">239</td>
                                         </tr>
                                         <tr>
-                                            <td class="border text-center">15.7.204.4</td>
+                                            <td class="border text-center">15.7.201</td>
                                             <td class="text-small border" style="max-width: 300px">
                                                 <small>
                                                     Scaricatore per corrente di fulmine N-PE SPD Tipo 2
@@ -950,6 +950,44 @@
                                             <td class="border text-center">{{ item.pianiCasa }}</td>
                                             <td class="border text-center">40</td>
                                             <td class="border text-center">{{ item.pianiCasa * 40 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="border text-center">15.7.60.1</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Puntazza a croce per dispersione, realizzate in acciaio zincato a fuoco di dimensioni 50*50*5mm,<br>
+                                                da conficcare in terreno di media consistenza all'interno di pozzetto ispezionabile, fornita e posta in opera.<br>
+                                                Di lunghezza pari a 1,5 mt
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">43.80</td>
+                                        <td class="border text-center">43.80</td>
+                                    </tr>
+                                    {% if item.opereMurarie == 0 %}
+                                        <tr>
+                                            <td class="border text-center">15.2.160.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Nodo equipotenziale, costituito da barretta in rame forata. Escluse le opere murarie.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">49.20</td>
+                                            <td class="border text-center">49.20</td>
+                                        </tr>
+                                    {% else %}
+                                        <tr>
+                                            <td class="border text-center">15.2.160.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Nodo equipotenziale, costituito da barretta in rame forata. Comprese le opere murarie.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">79.20</td>
+                                            <td class="border text-center">79.20</td>
                                         </tr>
                                     {% endif %}
                                     <!-- TOTALI -->

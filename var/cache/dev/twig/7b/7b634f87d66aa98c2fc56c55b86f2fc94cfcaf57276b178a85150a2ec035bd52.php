@@ -89,7 +89,10 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
         echo "\" class=\"btn btn-danger btn-sm float-right\">
                                         <i class=\"mdi mdi-delete mr-0\"></i>
                                     </a>
-                                    <a href=\"\" class=\"btn btn-secondary btn-sm float-right \">
+                                    <a href=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("modifica_preventivo", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 19, $this->source); })()), "id", array()))), "html", null, true);
+        echo "\" class=\"btn btn-secondary btn-sm float-right \">
                                         <i class=\"mdi mdi-pencil mr-0\"></i>
                                     </a>
                                     <a href=\"\" class=\"btn btn-success btn-sm float-right\" onclick=\"print();\">
@@ -456,22 +459,28 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                         </table>
                         </div>
                         <div class=\"row mt-5\">
-                            <div class=\"col-md-3\">
+                            <div class=\"col-md-2\">
                                 <strong>Circuiti:</strong> ";
         // line 202
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 202, $this->source); })()), "numCircuiti", array()), "html", null, true);
         echo "
                             </div>
                             <div class=\"col-md-3\">
-                                <strong>Prese Telefono / Dati:</strong> ";
+                                <strong>Prese Telefono:</strong> ";
         // line 205
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 205, $this->source); })()), "numPreseTelefonoDati", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 205, $this->source); })()), "numPreseTelefono", array()), "html", null, true);
+        echo "
+                            </div>
+                            <div class=\"col-md-3\">
+                                <strong>Prese  Dati:</strong>  ";
+        // line 208
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 208, $this->source); })()), "numPreseDati", array()), "html", null, true);
         echo "
                             </div>
                             <div class=\"col-md-4\">
                                 <strong>Dispositivi per l'illuminazione di sicurezza:</strong> ";
-        // line 208
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 208, $this->source); })()), "illumSicurezza", array()), "html", null, true);
+        // line 211
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 211, $this->source); })()), "illumSicurezza", array()), "html", null, true);
         echo "
                             </div>
                         </div>
@@ -479,35 +488,35 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                             <div class=\"col-md-6\">
                                 <strong>SPD:</strong>
                                 ";
-        // line 214
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 214, $this->source); })()), "spd", array()) == 1)) {
+        // line 217
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 217, $this->source); })()), "spd", array()) == 1)) {
             echo "SPD ad arrivo linea per rendere tollerabile il rischio R1 ";
         }
-        // line 215
+        // line 218
         echo "                                ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 215, $this->source); })()), "spd", array()) == 2)) {
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 218, $this->source); })()), "spd", array()) == 2)) {
             echo "SPD ad arrivo linea per rendere tollerabile il rischio R1 e ai fini della protezione contro le sovratensioni ";
         }
-        // line 216
+        // line 219
         echo "                            </div>
                             <div class=\"col-md-6\">
                                 <strong>Impianti ausiliari e risparmio energetico:</strong>
                                 ";
-        // line 219
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 219, $this->source); })()), "impAusiliari", array()) == 1)) {
+        // line 222
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 222, $this->source); })()), "impAusiliari", array()) == 1)) {
             echo "Campanello, citofono e videocitofono ";
         }
-        // line 220
+        // line 223
         echo "                                ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 220, $this->source); })()), "impAusiliari", array()) == 2)) {
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 223, $this->source); })()), "impAusiliari", array()) == 2)) {
             echo "Campanello, citofono e antintrusione, Controllo carichi ";
         }
-        // line 221
+        // line 224
         echo "                                ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 221, $this->source); })()), "impAusiliari", array()) == 3)) {
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 224, $this->source); })()), "impAusiliari", array()) == 3)) {
             echo "Campanello, citofono e antintrusione, Controllo carichi, Domotica ";
         }
-        // line 222
+        // line 225
         echo "                            </div>
                         </div>
                     </div>
@@ -516,7 +525,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
         </div>
 
         ";
-        // line 270
+        // line 273
         echo "    </div>
 </div>
     ";
@@ -528,7 +537,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
 
     }
 
-    // line 274
+    // line 277
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -537,7 +546,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 275
+        // line 278
         echo "    <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/scrollbar.css"), "html", null, true);
         echo "\">
@@ -594,7 +603,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
     }
 </style>
     <link rel=\"stylesheet\" href=\"";
-        // line 328
+        // line 331
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -606,7 +615,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
 
     }
 
-    // line 330
+    // line 333
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -615,12 +624,12 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 331
+        // line 334
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/scrollbar.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 332
+        // line 335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script>
@@ -629,9 +638,9 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
         });
     </script>
     ";
-        // line 338
-        if (((isset($context["generated"]) || array_key_exists("generated", $context) ? $context["generated"] : (function () { throw new Twig_Error_Runtime('Variable "generated" does not exist.', 338, $this->source); })()) == true)) {
-            // line 339
+        // line 341
+        if (((isset($context["generated"]) || array_key_exists("generated", $context) ? $context["generated"] : (function () { throw new Twig_Error_Runtime('Variable "generated" does not exist.', 341, $this->source); })()) == true)) {
+            // line 342
             echo "        <script>
             \$(document).ready(function() {
                 toastr.success(\"Preventivo Generato\");
@@ -659,7 +668,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
 
     public function getDebugInfo()
     {
-        return array (  635 => 339,  633 => 338,  624 => 332,  619 => 331,  610 => 330,  598 => 328,  541 => 275,  532 => 274,  520 => 270,  511 => 222,  506 => 221,  501 => 220,  497 => 219,  492 => 216,  487 => 215,  483 => 214,  474 => 208,  468 => 205,  462 => 202,  454 => 196,  446 => 193,  440 => 190,  437 => 189,  434 => 188,  428 => 185,  425 => 184,  422 => 183,  416 => 180,  413 => 179,  410 => 178,  404 => 175,  401 => 174,  398 => 173,  392 => 170,  389 => 169,  387 => 168,  382 => 166,  376 => 163,  370 => 160,  364 => 157,  358 => 154,  354 => 152,  348 => 150,  344 => 148,  342 => 147,  338 => 145,  334 => 144,  331 => 143,  325 => 140,  322 => 139,  319 => 138,  313 => 135,  310 => 134,  307 => 133,  301 => 130,  298 => 129,  295 => 128,  289 => 125,  286 => 124,  283 => 123,  277 => 120,  274 => 119,  272 => 118,  247 => 95,  239 => 94,  225 => 82,  217 => 81,  213 => 80,  209 => 79,  205 => 78,  195 => 75,  191 => 74,  187 => 73,  183 => 72,  166 => 60,  160 => 59,  150 => 58,  146 => 57,  128 => 41,  120 => 37,  112 => 33,  110 => 32,  104 => 29,  88 => 16,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  644 => 342,  642 => 341,  633 => 335,  628 => 334,  619 => 333,  607 => 331,  550 => 278,  541 => 277,  529 => 273,  520 => 225,  515 => 224,  510 => 223,  506 => 222,  501 => 219,  496 => 218,  492 => 217,  483 => 211,  477 => 208,  471 => 205,  465 => 202,  457 => 196,  449 => 193,  443 => 190,  440 => 189,  437 => 188,  431 => 185,  428 => 184,  425 => 183,  419 => 180,  416 => 179,  413 => 178,  407 => 175,  404 => 174,  401 => 173,  395 => 170,  392 => 169,  390 => 168,  385 => 166,  379 => 163,  373 => 160,  367 => 157,  361 => 154,  357 => 152,  351 => 150,  347 => 148,  345 => 147,  341 => 145,  337 => 144,  334 => 143,  328 => 140,  325 => 139,  322 => 138,  316 => 135,  313 => 134,  310 => 133,  304 => 130,  301 => 129,  298 => 128,  292 => 125,  289 => 124,  286 => 123,  280 => 120,  277 => 119,  275 => 118,  250 => 95,  242 => 94,  228 => 82,  220 => 81,  216 => 80,  212 => 79,  208 => 78,  198 => 75,  194 => 74,  190 => 73,  186 => 72,  169 => 60,  163 => 59,  153 => 58,  149 => 57,  131 => 41,  123 => 37,  115 => 33,  113 => 32,  107 => 29,  94 => 19,  88 => 16,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -682,7 +691,7 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                                     <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right\">
                                         <i class=\"mdi mdi-delete mr-0\"></i>
                                     </a>
-                                    <a href=\"\" class=\"btn btn-secondary btn-sm float-right \">
+                                    <a href=\"{{ url('modifica_preventivo', {'id' : item.id }) }}\" class=\"btn btn-secondary btn-sm float-right \">
                                         <i class=\"mdi mdi-pencil mr-0\"></i>
                                     </a>
                                     <a href=\"\" class=\"btn btn-success btn-sm float-right\" onclick=\"print();\">
@@ -864,11 +873,14 @@ class __TwigTemplate_f6ea18228f7af0ec7622a0ae280e3e314446695b29045b873aeec6ca637
                         </table>
                         </div>
                         <div class=\"row mt-5\">
-                            <div class=\"col-md-3\">
+                            <div class=\"col-md-2\">
                                 <strong>Circuiti:</strong> {{ item.numCircuiti }}
                             </div>
                             <div class=\"col-md-3\">
-                                <strong>Prese Telefono / Dati:</strong> {{ item.numPreseTelefonoDati }}
+                                <strong>Prese Telefono:</strong> {{ item.numPreseTelefono }}
+                            </div>
+                            <div class=\"col-md-3\">
+                                <strong>Prese  Dati:</strong>  {{ item.numPreseDati }}
                             </div>
                             <div class=\"col-md-4\">
                                 <strong>Dispositivi per l'illuminazione di sicurezza:</strong> {{ item.illumSicurezza }}

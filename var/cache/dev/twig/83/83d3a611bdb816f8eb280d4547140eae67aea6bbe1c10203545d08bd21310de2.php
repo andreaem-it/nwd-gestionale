@@ -28,13 +28,19 @@ class __TwigTemplate_50d24b1a4d50b7d97e4a4ab0de04effa040042e95c58695c74961d852dd
         // line 1
         echo "<nav class=\"navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row\" style=\"background: #759EB8!important;\">
       <div class=\"text-center navbar-brand-wrapper d-flex align-items-top justify-content-center\" style=\"background: none\">
-        <a class=\"navbar-brand brand-logo hidden-md-down\" href=\"index.html\">
+        <a class=\"navbar-brand brand-logo hidden-md-down\" href=\"";
+        // line 3
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("homepage");
+        echo "\">
           <img src=\"";
         // line 4
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_nwd_mini.png"), "html", null, true);
         echo "\" alt=\"logo\" style=\"height:100%!important\"/>
         </a>
-        <a class=\"navbar-brand brand-logo-mini\" href=\"index.html\" style=\"min-width: 130px;margin-left: 60px;\">
+        <a class=\"navbar-brand brand-logo-mini\" href=\"";
+        // line 6
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("homepage");
+        echo "\" style=\"min-width: 130px;margin-left: 60px;\">
           <img src=\"";
         // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_nwd_mini.png"), "html", null, true);
@@ -185,17 +191,17 @@ class __TwigTemplate_50d24b1a4d50b7d97e4a4ab0de04effa040042e95c58695c74961d852dd
 
     public function getDebugInfo()
     {
-        return array (  144 => 94,  138 => 91,  134 => 89,  132 => 88,  130 => 87,  124 => 83,  119 => 81,  116 => 80,  114 => 79,  112 => 78,  104 => 72,  101 => 71,  95 => 69,  93 => 68,  48 => 25,  40 => 7,  34 => 4,  29 => 1,);
+        return array (  150 => 94,  144 => 91,  140 => 89,  138 => 88,  136 => 87,  130 => 83,  125 => 81,  122 => 80,  120 => 79,  118 => 78,  110 => 72,  107 => 71,  101 => 69,  99 => 68,  54 => 25,  46 => 7,  42 => 6,  37 => 4,  33 => 3,  29 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("<nav class=\"navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row\" style=\"background: #759EB8!important;\">
       <div class=\"text-center navbar-brand-wrapper d-flex align-items-top justify-content-center\" style=\"background: none\">
-        <a class=\"navbar-brand brand-logo hidden-md-down\" href=\"index.html\">
+        <a class=\"navbar-brand brand-logo hidden-md-down\" href=\"{{ url('homepage') }}\">
           <img src=\"{{ asset('images/logo_nwd_mini.png') }}\" alt=\"logo\" style=\"height:100%!important\"/>
         </a>
-        <a class=\"navbar-brand brand-logo-mini\" href=\"index.html\" style=\"min-width: 130px;margin-left: 60px;\">
+        <a class=\"navbar-brand brand-logo-mini\" href=\"{{ url('homepage') }}\" style=\"min-width: 130px;margin-left: 60px;\">
           <img src=\"{{ asset('images/logo_nwd_mini.png') }}\" alt=\"logo\" style=\"height:100%!important;width: 350px\"/>
         </a>
       </div>

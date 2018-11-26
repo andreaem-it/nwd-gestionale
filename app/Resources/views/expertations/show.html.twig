@@ -16,7 +16,7 @@
                                     <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right">
                                         <i class="mdi mdi-delete mr-0"></i>
                                     </a>
-                                    <a href="" class="btn btn-secondary btn-sm float-right ">
+                                    <a href="{{ url('modifica_preventivo', {'id' : item.id }) }}" class="btn btn-secondary btn-sm float-right ">
                                         <i class="mdi mdi-pencil mr-0"></i>
                                     </a>
                                     <a href="" class="btn btn-success btn-sm float-right" onclick="print();">
@@ -198,11 +198,14 @@
                         </table>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <strong>Circuiti:</strong> {{ item.numCircuiti }}
                             </div>
                             <div class="col-md-3">
-                                <strong>Prese Telefono / Dati:</strong> {{ item.numPreseTelefonoDati }}
+                                <strong>Prese Telefono:</strong> {{ item.numPreseTelefono }}
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Prese  Dati:</strong>  {{ item.numPreseDati }}
                             </div>
                             <div class="col-md-4">
                                 <strong>Dispositivi per l'illuminazione di sicurezza:</strong> {{ item.illumSicurezza }}
