@@ -2148,7 +2148,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                 });
             }
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                \$('#buttons').css('left','84%');git
+                \$('#buttons').css('left','84%');
             }
         </script>
     </div>
@@ -3267,7 +3267,7 @@ class __TwigTemplate_c15e4cf49d3409f85cc5be5abb65548c5bcbfc12275dcf246ee098624c7
                 });
             }
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                \$('#buttons').css('left','84%');git
+                \$('#buttons').css('left','84%');
             }
         </script>
     </div>

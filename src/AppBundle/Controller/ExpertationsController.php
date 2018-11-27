@@ -859,6 +859,7 @@ class ExpertationsController extends Controller
             array_sum($item->getC2v()),     // Tiranti
             '1',                            // Ronzatori
             '1'                             // Suonerie
+            // Predisposizione Lamapada di Emergenza
         ];
         if ($item->getLampada() != 0 ) { array_push($qtyPS, '1'); }
         $qtyPS = array_sum($qtyPS);
@@ -920,6 +921,18 @@ class ExpertationsController extends Controller
 
         /** Orologio Astronomico */
         array_push($prices, 1 * $price->findByCode('15.6.170.39'));
+
+        /** Punti di servizio Termico */
+        $qtyPST = 1 + $item->getPianiCasa();
+        array_push($prices, $qtyPST * $price->findByCode('15.3.10'));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
+        } elseif ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
+        }
+        if ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
+        }
 
         /** Allaccio Termostati */
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
@@ -1015,6 +1028,7 @@ class ExpertationsController extends Controller
             'qtyTR' => $qtyTR,
             'qtyPS' => $qtyPS,
             'qtyPD' => $qtyPD,
+            'qtyPST' => $qtyPST,
             'total' => $total,
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,

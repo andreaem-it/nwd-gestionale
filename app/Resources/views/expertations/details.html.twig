@@ -655,6 +655,59 @@
                                         <td colspan="5" class="border table-light"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
                                     </tr>
                                     <tr>
+                                        <td colspan="5" class="border table-light"><i>Punti Presa di Servizio</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.3.10.0</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                PUNTO PRESA DI SERVIZIO in traccia. Sono escluse le opere murarie
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ qtyPST }}</td>
+                                        <td class="border text-center">25.00</td>
+                                        <td class="border text-center">{{ qtyPST * 25 }}</td>
+                                    </tr>
+                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                        <tr>
+                                            <td class="border text-center">15.3.20.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
+                                                    Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyPST }}</td>
+                                            <td class="border text-center">8</td>
+                                            <td class="border text-center">{{ qtyPST  * 8}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
+                                        <tr>
+                                            <td class="border text-center">15.3.20.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
+                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ qtyPST }}</td>
+                                            <td class="border text-center">12.9</td>
+                                            <td class="border text-center">{{ qtyPST * 12.9 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <td class="border text-center">15.3.20.3</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ qtyPST }}</td>
+                                        <td class="border text-center">12.1</td>
+                                        <td class="border text-center">{{ (qtyPST * 12.10)|number_format(1)}}</td>
+                                    {% endif %}
+                                    <tr>
                                         <td colspan="5" class="border table-light"><i>Allaccio di regolazione </i></td>
                                     </tr>
                                     <tr>
