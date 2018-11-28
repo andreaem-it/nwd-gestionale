@@ -201,7 +201,21 @@ class ExpertationsController extends Controller
 
         $expertations = new Expertations();
 
+        $lastExp = $this->getDoctrine()->getRepository(Expertations::class)->findLast()->getPid();
+        $lastExp = (int)$lastExp + 1;
+        if (strlen((string)$lastExp == 2)) {
+            $lastExp = '00' . $lastExp;
+        } elseif (strlen((string)$lastExp == 3)) {
+            $lastExp = '0' . $lastExp;
+        } else {
+            $lastExp = '00' . $lastExp;
+        }
+
         $form = $this->createFormBuilder($expertations)
+            ->add('pid', TextType::class , [
+                'label' => ' ID',
+                'data' => $lastExp
+            ])
             ->add('client', EntityType::class, [
                 'class' => 'AppBundle:Clients',
                 'placeholder' => '-- Seleziona --',
@@ -226,11 +240,13 @@ class ExpertationsController extends Controller
             ])
             ->add('kw', NumberType::class, [
                 'label' => 'Kw ENEL',
-                'attr' => ['class' => 'form-control', 'style' => 'max-height: 35px;']
+                'attr' => ['class' => 'form-control', 'style' => 'max-height: 35px;'],
+                'data' => '0'
             ])
             ->add('piani_casa', TextType::class, [
                 'label' => 'Piani',
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control'],
+                'data' => '1'
             ])
             ->add('riscaldamento', ChoiceType::class, [
                 'choices' => [
@@ -519,7 +535,8 @@ class ExpertationsController extends Controller
             ])
             ->add('kw', NumberType::class, [
                 'label' => 'Kw ENEL',
-                'attr' => ['class' => 'form-control', 'style' => 'max-height: 35px;']
+                'attr' => ['class' => 'form-control', 'style' => 'max-height: 35px;'],
+                'data' => '0'
             ])
             ->add('piani_casa', TextType::class, [
                 'label' => 'Piani',
@@ -991,12 +1008,20 @@ class ExpertationsController extends Controller
             array_push($prices, $price->findByCode('15.2.160.2'));
         }
 
-        /** Scaricatore
+        /** Scaricatore */
         if ($item->getTrifase() == 0) {
-            array_push($prices, $price->findByCode('15.7.202'));
+            array_push($prices, $price->findByCode('15.7.201'));
         } else {
-            array_push($prices, $price->findByCode('15.7.203'));
-        }*/
+            array_push($prices, 3 * $price->findByCode('15.7.202'));
+        }
+        array_push($prices, $price->findByCode('15.7.202'));
+        if ($item->getLevel() == 3) {
+            if ($item->getTrifase() == 0) {
+                array_push($prices, $price->findByCode('15.7.204.4'));
+            } else {
+                array_push($prices, $price->findByCode('15.7.204.2'));
+            }
+        }
 
         /** Tiranti */
         if ($qtyTR != 0) {

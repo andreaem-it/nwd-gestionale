@@ -10,4 +10,11 @@ namespace AppBundle\Repository;
  */
 class ExpertationsRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findLast() {
+        $qb = $this->createQueryBuilder("e");
+        $qb->setMaxResults( 1 );
+        $qb->orderBy("e.id", "DESC");
+
+        return $qb->getQuery()->getSingleResult();
+    }
 }

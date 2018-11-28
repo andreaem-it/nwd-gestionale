@@ -22,6 +22,13 @@ class Expertations
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="pid", type="string", nullable=true)
+     */
+    private $pid;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="datetime")
@@ -1433,5 +1440,29 @@ class Expertations
     public function getLampada()
     {
         return $this->lampada;
+    }
+
+    /**
+     * Set pid.
+     *
+     * @param int|null $pid
+     *
+     * @return Expertations
+     */
+    public function setPid($pid = null)
+    {
+        $this->pid = $pid;
+
+        return $this;
+    }
+
+    /**
+     * Get pid.
+     *
+     * @return int|null
+     */
+    public function getPid()
+    {
+        return $this->pid;
     }
 }

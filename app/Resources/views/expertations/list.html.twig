@@ -18,21 +18,25 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="row">
-                            <div class="col-2">
-                                <h5 class="mt-2">Cerca</h5>
-                            </div>
-                            <div class="col-3">
-                                <select id="searchType" class="custom-select" id="inlineFormCustomSelectPref">
+                            <div class="col-3 pr-0 border-right-0">
+                                <select id="searchType" class="form-control custom-select mt-1" id="inlineFormCustomSelectPref" style="height: calc(2.25rem + -2px)!important;">
                                     <option value="1">Preventivo</option>
                                     <option value="2">Cliente</option>
-                                    <option value="3">Data</option>
+                                    <!--<option value="3">Data</option>-->
                                 </select>
                             </div>
-                            <div class="col-4">
-                                <input id="searchTerms" type="text" class="form-control mt-1">
+                            <div class="col-6 pl-0 border-left-0">
+                                <input id="searchTerms" type="text" class="form-control mt-1" placeholder="Cerca">
                             </div>
-                            <div class="col-1">
-                                <button id="searchBtn" type="submit" class="btn btn-primary mt-1">Cerca</button>
+                            <div class="col-2">
+                                <div class="btn-group mt-1">
+                                    <button id="searchBtn" type="submit" class="btn btn-primary">
+                                        <span class="mdi mdi-magnify"></span>
+                                    </button>
+                                    <button id="restoreBtn" type="reset" class="btn btn-secondary">
+                                        <span class="mdi mdi-undo-variant"></span>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -72,7 +76,7 @@
                                 {% for item in u_expertations %}
                                     <tr>
                                         <td>
-                                            {{ item.id }}
+                                            {{ item.pid }}
                                         </td>
                                         <td class="py-1">
                                             {{ item.date|date("d-m-Y") }}
@@ -111,7 +115,7 @@
                                 {% for item in expertations %}
                                     <tr>
                                         <td>
-                                            {{ item.id }}
+                                            {{ item.pid }}
                                         </td>
                                         <td class="py-1">
                                             {{ item.date|date("d-m-Y") }}

@@ -34,7 +34,7 @@ class __TwigTemplate_aab589a59516525f2fde5a6a91b3684b316b6ee40943dc30aa540d74ea7
         <td>
             ";
             // line 4
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "pid", array()), "html", null, true);
             echo "
         </td>
         <td class=\"py-1\">
@@ -120,7 +120,7 @@ class __TwigTemplate_aab589a59516525f2fde5a6a91b3684b316b6ee40943dc30aa540d74ea7
         return new Twig_Source("{% for item in expertations %}
     <tr>
         <td>
-            {{ item.id }}
+            {{ item.pid }}
         </td>
         <td class=\"py-1\">
             {{ item.date|date(\"d-m-Y\") }}
