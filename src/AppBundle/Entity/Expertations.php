@@ -282,6 +282,13 @@ class Expertations
     /**
      * @var string
      *
+     * @ORM\Column(name="illum_esterna", type="integer", nullable=true)
+     */
+    private $illum_esterna;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="spd", type="integer", nullable=true)
      */
     private $spd;
@@ -1464,5 +1471,29 @@ class Expertations
     public function getPid()
     {
         return $this->pid;
+    }
+
+    /**
+     * Set illumEsterna.
+     *
+     * @param int|null $illumEsterna
+     *
+     * @return Expertations
+     */
+    public function setIllumEsterna($illumEsterna = null)
+    {
+        $this->illum_esterna = $illumEsterna;
+
+        return $this;
+    }
+
+    /**
+     * Get illumEsterna.
+     *
+     * @return int|null
+     */
+    public function getIllumEsterna()
+    {
+        return $this->illum_esterna;
     }
 }

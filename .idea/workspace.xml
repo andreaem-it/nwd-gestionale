@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5b4971-7656-44fb-8f94-502be161f08c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/js/freeze-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/db/data_dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/data_dev.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/ExpertationsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ExpertationsRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/V/4e+IZoxxkhXlq5aOH43E" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/V/4e+IZoxxkhXlq5aOH43E" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/X/v50JKB0TPaePncoMyQDs" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/X/v50JKB0TPaePncoMyQDs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/0/R/19GEeM9lWX1h-FthdEj8" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/0/R/19GEeM9lWX1h-FthdEj8" afterDir="false" />
@@ -81,6 +77,7 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/8/Obf4bIloIr1TxGY5LAjY" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/8/Obf4bIloIr1TxGY5LAjY" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/F/6BN+tIKzfIOorWRc2cqc" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/F/6BN+tIKzfIOorWRc2cqc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/R/Rlz03FHDzrrN1GS0Dhn1" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/R/Rlz03FHDzrrN1GS0Dhn1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/X/-/mftdXOF7oUwI0tflcSTF" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/X/-/mftdXOF7oUwI0tflcSTF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/X/W/0PorpFVLP4Alh77sBZLt" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/X/W/0PorpFVLP4Alh77sBZLt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/3/E4Nddn8I3XOZ15MLh2oi" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/3/E4Nddn8I3XOZ15MLh2oi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/B/uGcy6513FNSYic+b7pzu" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/B/uGcy6513FNSYic+b7pzu" afterDir="false" />
@@ -90,11 +87,8 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/S/sriGq0ap-BflvuR+CceS" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/S/sriGq0ap-BflvuR+CceS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/Y/c2sfdAm+VNeN4FPk4CvB" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/Y/c2sfdAm+VNeN4FPk4CvB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/79/7920e120d35036f2e2f5beabe38a4446ae693288c637d1de6a13b516e9939dfd.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/79/7920e120d35036f2e2f5beabe38a4446ae693288c637d1de6a13b516e9939dfd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/7b/7b634f87d66aa98c2fc56c55b86f2fc94cfcaf57276b178a85150a2ec035bd52.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/7b/7b634f87d66aa98c2fc56c55b86f2fc94cfcaf57276b178a85150a2ec035bd52.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/a0/a01eb804216cf4a08ce7858e1738c47598e278a788e5a1bbbc44928eacf8ee96.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a0/a01eb804216cf4a08ce7858e1738c47598e278a788e5a1bbbc44928eacf8ee96.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/a5/a5c7b4f0763238ed33f25eed671929189795b634831e14d59bb6fd21ad1c2c66.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a5/a5c7b4f0763238ed33f25eed671929189795b634831e14d59bb6fd21ad1c2c66.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/c4/c4ec4cfe743d751a448fb13bd8b5b6df49dbd9f43583eeec9864dd149c5b14cd.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c4/c4ec4cfe743d751a448fb13bd8b5b6df49dbd9f43583eeec9864dd149c5b14cd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/e1/e129af4986ad9ce93065466458798a5ebdcbd2ee5176583aefd6ad7b1f621013.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/e1/e129af4986ad9ce93065466458798a5ebdcbd2ee5176583aefd6ad7b1f621013.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_lgirkst6gr206t149jl9lva18v" beforeDir="false" afterPath="$PROJECT_DIR$/var/sessions/dev/sess_lgirkst6gr206t149jl9lva18v" afterDir="false" />
     </list>
@@ -189,9 +183,10 @@
     <session id="-537282925">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="42" />
+          <entry key="project.closed" value="44" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="2" />
@@ -219,15 +214,16 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="50" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="7" />
           <entry key="json" value="67" />
-          <entry key="php" value="28919" />
-          <entry key="twig" value="38379" />
+          <entry key="php" value="29029" />
+          <entry key="twig" value="38591" />
           <entry key="xml" value="8" />
           <entry key="yml" value="388" />
         </counts>
@@ -236,8 +232,8 @@
         <counts>
           <entry key="CSS" value="7" />
           <entry key="JSON" value="67" />
-          <entry key="PHP" value="28919" />
-          <entry key="Twig" value="38379" />
+          <entry key="PHP" value="29029" />
+          <entry key="Twig" value="38591" />
           <entry key="XML" value="8" />
           <entry key="YAML" value="388" />
         </counts>
@@ -254,7 +250,7 @@
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="ReST" value="7" />
           <entry key="SQL" value="1" />
-          <entry key="Twig" value="144" />
+          <entry key="Twig" value="145" />
           <entry key="XML" value="8" />
           <entry key="YAML" value="21" />
           <entry key="htaccess" value="1" />
@@ -276,7 +272,7 @@
           <entry key="png" value="2" />
           <entry key="rst" value="7" />
           <entry key="security-checker" value="1" />
-          <entry key="twig" value="144" />
+          <entry key="twig" value="145" />
           <entry key="txt" value="1" />
           <entry key="xml" value="8" />
           <entry key="yml" value="21" />
@@ -318,8 +314,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="580" column="84" selection-start-line="580" selection-start-column="84" selection-end-line="580" selection-end-column="84" />
+            <state relative-caret-position="-1566">
+              <caret line="513" column="47" selection-start-line="513" selection-start-column="47" selection-end-line="513" selection-end-column="47" />
+              <folding>
+                <element signature="e#35970#37071#0#Twig" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -327,54 +326,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
+            <state relative-caret-position="300">
               <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="494" column="28" selection-start-line="494" selection-start-column="28" selection-end-line="494" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="537" column="29" selection-start-line="537" selection-start-column="29" selection-end-line="537" selection-end-column="29" />
-              <folding>
-                <element signature="e#12544#12578#0#HTML" expanded="true" />
-                <element signature="e#12424#12477#0#HTML" expanded="true" />
-                <element signature="e#13056#13079#0#HTML" expanded="true" />
-                <element signature="e#13198#13221#0#HTML" expanded="true" />
-                <element signature="e#13333#13356#0#HTML" expanded="true" />
-                <element signature="e#13467#13490#0#HTML" expanded="true" />
-                <element signature="e#13623#13646#0#HTML" expanded="true" />
-                <element signature="e#13739#13762#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/StickyTableHeaders-master/StickyTableHeaders-master/js/jquery.stickytableheaders.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="325" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/freeze-table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4875">
-              <caret line="325" selection-start-line="325" selection-end-line="325" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="501">
+              <caret line="349" column="41" selection-start-line="349" selection-start-column="41" selection-end-line="349" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -382,11 +353,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="243" column="28" selection-start-line="243" selection-start-column="28" selection-end-line="243" selection-end-column="28" />
+            <state relative-caret-position="-969">
+              <caret line="693" selection-start-line="693" selection-end-line="693" />
               <folding>
                 <element signature="e#40#69#0#PHP" expanded="true" />
-                <element signature="e#31254#31283#0#PHP" expanded="true" />
+                <element signature="e#2419#2448#0#PHP" expanded="true" />
+                <element signature="e#3747#3776#0#PHP" expanded="true" />
+                <element signature="e#4211#4235#1#PHP" expanded="true" />
+                <element signature="e#4304#4323#1#PHP" expanded="true" />
+                <element signature="e#4409#4441#1#PHP" expanded="true" />
+                <element signature="e#7309#7338#0#PHP" expanded="true" />
+                <element signature="e#19899#19927#0#PHP" expanded="true" />
+                <element signature="e#32108#32137#0#PHP" expanded="true" />
+                <element signature="e#42374#42406#0#PHP" expanded="true" />
+                <element signature="e#43884#43922#0#PHP" expanded="true" />
+                <element signature="e#51456#51493#0#PHP" expanded="true" />
+                <element signature="e#52256#52287#0#PHP" expanded="true" />
+                <element signature="e#52981#53000#1#PHP" expanded="true" />
+                <element signature="e#53978#53995#1#PHP" expanded="true" />
+                <element signature="e#54296#54314#1#PHP" expanded="true" />
+                <element signature="e#56893#56912#1#PHP" expanded="true" />
+                <element signature="e#57556#57584#1#PHP" expanded="true" />
+                <element signature="e#58675#58699#1#PHP" expanded="true" />
+                <element signature="e#58765#58799#0#PHP" expanded="true" />
+                <element signature="e#59228#59262#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -395,8 +385,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="547">
+              <caret line="284" column="38" selection-start-line="284" selection-start-column="38" selection-end-line="284" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -431,10 +421,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form_in</find>
-      <find>square</find>
-      <find>15.1.15.2</find>
-      <find>&lt;td class=&quot;border&quot;&gt;</find>
       <find>qty</find>
       <find>calcTP</find>
       <find>26.4</find>
@@ -461,6 +447,10 @@
       <find>kw</find>
       <find>item</find>
       <find>freeze</find>
+      <find>15.7.202</find>
+      <find>illu</find>
+      <find>illum_</find>
+      <find>TV</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
@@ -531,16 +521,16 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/PricesAdvancedRepository.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/new.advanced.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/template/navbar.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/ExpertationsRepository.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
         <option value="$PROJECT_DIR$/web/js/freeze-table.js" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig" />
       </list>
     </option>
   </component>
@@ -622,10 +612,10 @@
       <path value="$PROJECT_DIR$/vendor/snc/redis-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="989" />
+    <option name="height" value="991" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -635,6 +625,150 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="default" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="expertations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="prices" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="prices" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ajax" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="settings" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="settings" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ajax" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="template" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Repository" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="var" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="var" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="logs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -857,150 +991,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="default" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="expertations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="prices" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="prices" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ajax" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="settings" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="settings" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ajax" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="template" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="AppBundle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Repository" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="var" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="var" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="logs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1122,12 +1112,14 @@
       <workItem from="1542640188775" duration="15287000" />
       <workItem from="1542811999117" duration="19030000" />
       <workItem from="1543243635676" duration="15000" />
-      <workItem from="1543243689361" duration="15855000" />
+      <workItem from="1543243689361" duration="16209000" />
+      <workItem from="1543489660286" duration="571000" />
+      <workItem from="1543504845983" duration="4045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476347000" />
+    <option name="totallyTimeSpent" value="481317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1139,10 +1131,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="989" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="991" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983315" visible="true" weight="0.22588523" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983315" visible="true" weight="0.23076923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5016685" side_tool="true" weight="0.2997558" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1155,7 +1147,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32925472" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993895" visible="true" weight="0.20958751" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993895" visible="true" weight="0.20912124" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.32925472" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32925472" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -1392,24 +1384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="286" selection-start-line="286" selection-end-line="286" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PricesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
           <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="580" column="84" selection-start-line="580" selection-start-column="84" selection-end-line="580" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1420,35 +1398,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ExpertationsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="243" column="28" selection-start-line="243" selection-start-column="28" selection-end-line="243" selection-end-column="28" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-            <element signature="e#31254#31283#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1472,30 +1425,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ExpertationsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Expertations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="284" column="38" selection-start-line="284" selection-start-column="38" selection-end-line="284" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="537" column="29" selection-start-line="537" selection-start-column="29" selection-end-line="537" selection-end-column="29" />
+        <state relative-caret-position="295">
+          <caret line="494" column="28" selection-start-line="494" selection-start-column="28" selection-end-line="494" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="693" selection-start-line="693" selection-end-line="693" />
           <folding>
-            <element signature="e#12544#12578#0#HTML" expanded="true" />
-            <element signature="e#12424#12477#0#HTML" expanded="true" />
-            <element signature="e#13056#13079#0#HTML" expanded="true" />
-            <element signature="e#13198#13221#0#HTML" expanded="true" />
-            <element signature="e#13333#13356#0#HTML" expanded="true" />
-            <element signature="e#13467#13490#0#HTML" expanded="true" />
-            <element signature="e#13623#13646#0#HTML" expanded="true" />
-            <element signature="e#13739#13762#0#HTML" expanded="true" />
+            <element signature="e#40#69#0#PHP" expanded="true" />
+            <element signature="e#2419#2448#0#PHP" expanded="true" />
+            <element signature="e#3747#3776#0#PHP" expanded="true" />
+            <element signature="e#4211#4235#1#PHP" expanded="true" />
+            <element signature="e#4304#4323#1#PHP" expanded="true" />
+            <element signature="e#4409#4441#1#PHP" expanded="true" />
+            <element signature="e#7309#7338#0#PHP" expanded="true" />
+            <element signature="e#19899#19927#0#PHP" expanded="true" />
+            <element signature="e#32108#32137#0#PHP" expanded="true" />
+            <element signature="e#42374#42406#0#PHP" expanded="true" />
+            <element signature="e#43884#43922#0#PHP" expanded="true" />
+            <element signature="e#51456#51493#0#PHP" expanded="true" />
+            <element signature="e#52256#52287#0#PHP" expanded="true" />
+            <element signature="e#52981#53000#1#PHP" expanded="true" />
+            <element signature="e#53978#53995#1#PHP" expanded="true" />
+            <element signature="e#54296#54314#1#PHP" expanded="true" />
+            <element signature="e#56893#56912#1#PHP" expanded="true" />
+            <element signature="e#57556#57584#1#PHP" expanded="true" />
+            <element signature="e#58675#58699#1#PHP" expanded="true" />
+            <element signature="e#58765#58799#0#PHP" expanded="true" />
+            <element signature="e#59228#59262#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1566">
+          <caret line="513" column="47" selection-start-line="513" selection-start-column="47" selection-end-line="513" selection-end-column="47" />
+          <folding>
+            <element signature="e#35970#37071#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="349" column="41" selection-start-line="349" selection-start-column="41" selection-end-line="349" selection-end-column="41" />
         </state>
       </provider>
     </entry>

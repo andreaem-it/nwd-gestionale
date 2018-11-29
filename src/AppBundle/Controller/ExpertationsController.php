@@ -353,6 +353,12 @@ class ExpertationsController extends Controller
                 'required' => false,
                 'attr' => ['class' => '']
             ])
+            ->add('illum_esterna', CheckboxType::class, [
+                'label' => 'Illuminazione Esterna',
+                'label_attr' => [],
+                'required' => false,
+                'attr' => ['class' => '']
+            ])
             ->add('spd', ChoiceType::class, [
                 'choices' => [
                     'SPD ad arrivo linea, Tolleranza R1' => 1,
@@ -511,6 +517,9 @@ class ExpertationsController extends Controller
         dump($expertations->getClient());
 
         $form = $this->createFormBuilder($expertations)
+            ->add('pid', TextType::class , [
+                'label' => ' ID',
+            ])
             ->add('client', EntityType::class, [
                 'class' => 'AppBundle:Clients',
                 'query_builder' => function (EntityRepository $er) {
@@ -596,7 +605,7 @@ class ExpertationsController extends Controller
             ])
             ->add('sconto', TextType::class, [
                 'label' => 'Sconto %',
-                'data' => 0,
+                'data' => $expertations->getSconto(),
             ])
             ->add('level', ChoiceType::class, [
                 'choices' => [
@@ -628,20 +637,22 @@ class ExpertationsController extends Controller
             ])
             ->add('num_circuiti', IntegerType::class, [
                 'label' => 'Circuiti',
-                'data' => '0'
             ])
             ->add('num_prese_dati', IntegerType::class, [
                 'label' => 'Prese Dati',
-                'data' => '0'
             ])
             ->add('num_prese_telefono', IntegerType::class, [
                 'attr' => ['min' => '0'] ,
                 'label' => 'Prese Tel',
-                'data' => '0'
             ])
             ->add('illum_sicurezza', IntegerType::class, [
                 'label' => 'Illuminazione Sicurezza',
-                'data' => '0',
+                'attr' => ['class' => '']
+            ])
+            ->add('illum_esterna', CheckboxType::class, [
+                'label' => 'Illuminazione Esterna',
+                'label_attr' => [],
+                'required' => false,
                 'attr' => ['class' => '']
             ])
             ->add('lampada', CheckboxType::class, [
@@ -680,7 +691,6 @@ class ExpertationsController extends Controller
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'data' => 0
                 ],
                 'label' => false,
                 'allow_add' => 'true',
@@ -876,8 +886,8 @@ class ExpertationsController extends Controller
             array_sum($item->getC2v()),     // Tiranti
             '1',                            // Ronzatori
             '1'                             // Suonerie
-            // Predisposizione Lamapada di Emergenza
         ];
+        // Predisposizione Lamapada di Emergenza
         if ($item->getLampada() != 0 ) { array_push($qtyPS, '1'); }
         $qtyPS = array_sum($qtyPS);
         array_push($prices,$qtyPS * $price->findByCode('15.3.10'));
@@ -905,14 +915,14 @@ class ExpertationsController extends Controller
         array_push($prices, ($calcTVCable * $price->findByCode('15.4.230')));
         //array_push($prices, ($qtyPT * $price->findByCode('15.3.20.1')));
         //array_push($prices, ($qtyPT * $price->findByCode('15.2.2')));
-        if ($item->getOpereMurarie() == 1) {
+        /*if ($item->getOpereMurarie() == 1) {
             array_push($prices, ($qtyPT * $price->findByCode('15.3.20.1')));
         } elseif ($item->getOpereMurarieIntonaco() == 1) {
             array_push($prices, ($qtyPT * $price->findByCode('15.3.20.2')));
         }
         if ($item->getOpereMurarieIntonaco() == 1) {
             array_push($prices, ($qtyPT * $price->findByCode('15.3.20.3')));
-        }
+        }*/
 
         /** Prese Telefoniche */
         if ($item->getNumPreseTelefono() != 0 ) {
@@ -937,7 +947,9 @@ class ExpertationsController extends Controller
         array_push($prices, 2 * $price->findByCode('15.3.52.1'));
 
         /** Orologio Astronomico */
-        array_push($prices, 1 * $price->findByCode('15.6.170.39'));
+        if($item->getIllumEsterna() == 1) {
+            array_push($prices, 1 * $price->findByCode('15.6.170.39'));
+        }
 
         /** Punti di servizio Termico */
         $qtyPST = 1 + $item->getPianiCasa();

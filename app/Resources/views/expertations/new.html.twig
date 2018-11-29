@@ -196,19 +196,19 @@
                             </div>
                         </div>
                         <div class="col-lg-2 grid-margin stretch-card">
-                            <div class="input_group">
+                            <div class="input-group">
                                 {{ form_label(form.cit_vid) }}
                                 {{ form_widget(form.cit_vid) }}
                             </div>
                         </div>
                         <div class="col-lg-2 grid-margin stretch-card">
-                            <div class="input_group">
+                            <div class="input-group">
                                 {{ form_label(form.num_infissi) }}
                                 {{ form_widget(form.num_infissi) }}
                             </div>
                         </div>
                         <div class="col-lg-2 grid-margin stretch-card">
-                            <div class="input_group">
+                            <div class="input-group">
                                 {{ form_label(form.antenna) }}
                                 {{ form_widget(form.antenna) }}
                                 {{ form_label(form.campanello) }}
@@ -217,7 +217,12 @@
                                 {{ form_widget(form.allarme) }}
                             </div>
                         </div>
-                        <div class="col-lg-3"></div>
+                        <div class="col-lg-2">
+                            <div class="input-group">
+                                {{ form_label((form.illum_esterna)) }}
+                                {{ form_widget((form.illum_esterna)) }}
+                            </div>
+                        </div>
                         {#<div class="col-lg-3 grid-margin stretch-card">
                             <div class="mt-5">
                                 <h4>Totale Preliminare: <span id="total" class="text-success text-right">0.00 €</span></h4>
@@ -535,7 +540,7 @@
     <script>
         jQuery(document).ready(function(){
             $("table").stickyTableHeaders({
-                marginTop: 65,
+                marginTop: 63,
             });
         });
     </script>
