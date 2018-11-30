@@ -718,76 +718,6 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         echo "</td>
                                     </tr>
                                     ";
-        // line 447
-        if (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 447, $this->source); })()), "opereMurarie", array()) == 1) && (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 447, $this->source); })()), "opereMurarieIntonaco", array()) == 0))) {
-            // line 448
-            echo "                                        <tr>
-                                            <td class=\"border text-center\">15.3.20.1</td>
-                                            <td class=\"text-small border\" style=\"max-width: 300px\">
-                                                <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
-                                                    Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
-                                                </small>
-                                            </td>
-                                            <td class=\"border text-center\">";
-            // line 456
-            echo twig_escape_filter($this->env, (isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 456, $this->source); })()), "html", null, true);
-            echo "</td>
-                                            <td class=\"border text-center\">8</td>
-                                            <td class=\"border text-center\">";
-            // line 458
-            echo twig_escape_filter($this->env, ((isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 458, $this->source); })()) * 8), "html", null, true);
-            echo "</td>
-                                        </tr>
-                                    ";
-        }
-        // line 461
-        echo "                                    ";
-        if (((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 461, $this->source); })()), "opereMurarie", array()) == 1) && (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 461, $this->source); })()), "opereMurarieIntonaco", array()) == 1))) {
-            // line 462
-            echo "                                        <tr>
-                                            <td class=\"border text-center\">15.3.20.2</td>
-                                            <td class=\"text-small border\" style=\"max-width: 300px\">
-                                                <small>
-                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
-                                                    Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
-                                                </small>
-                                            </td>
-                                            <td class=\"border text-center\">";
-            // line 470
-            echo twig_escape_filter($this->env, (isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 470, $this->source); })()), "html", null, true);
-            echo "</td>
-                                            <td class=\"border text-center\">12.9</td>
-                                            <td class=\"border text-center\">";
-            // line 472
-            echo twig_escape_filter($this->env, ((isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 472, $this->source); })()) * 12.9), "html", null, true);
-            echo "</td>
-                                        </tr>
-                                    ";
-        }
-        // line 475
-        echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 475, $this->source); })()), "opereMurariePietra", array()) == 1)) {
-            // line 476
-            echo "                                        <tr>
-                                            <td class=\"border text-center\">15.3.20.32</td>
-                                            <td class=\"text-small border\" style=\"max-width: 300px\">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class=\"border text-center\">";
-            // line 483
-            echo twig_escape_filter($this->env, (isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 483, $this->source); })()), "html", null, true);
-            echo "</td>
-                                            <td class=\"border text-center\">12.1</td>
-                                            <td class=\"border text-center\">";
-            // line 485
-            echo twig_escape_filter($this->env, ((isset($context["qtyPT"]) || array_key_exists("qtyPT", $context) ? $context["qtyPT"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPT" does not exist.', 485, $this->source); })()) * 12.1), "html", null, true);
-            echo "</td>
-                                        </tr>
-                                    ";
-        }
         // line 488
         echo "                                    ";
         if (((isset($context["qtyTR"]) || array_key_exists("qtyTR", $context) ? $context["qtyTR"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTR" does not exist.', 488, $this->source); })()) != 0)) {
@@ -1414,20 +1344,40 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         // line 941
         if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 941, $this->source); })()), "spd", array()) == "1")) {
             // line 942
-            echo "                                        <tr>
-                                            <td class=\"border text-center\">15.7.202</td>
-                                            <td class=\"text-small border\" style=\"max-width: 300px\">
-                                                <small>
-                                                    Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
-                                                </small>
-                                            </td>
-                                            <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">191</td>
-                                            <td class=\"border text-center\">191</td>
-                                        </tr>
-                                    ";
+            echo "                                        ";
+            if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 942, $this->source); })()), "trifase", array()) == 0)) {
+                // line 943
+                echo "                                            <tr>
+                                                <td class=\"border text-center\">15.7.202</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">1</td>
+                                                <td class=\"border text-center\">191.00</td>
+                                                <td class=\"border text-center\">191.00</td>
+                                            </tr>
+                                        ";
+            } else {
+                // line 955
+                echo "                                            <tr>
+                                                <td class=\"border text-center\">15.7.202</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">3</td>
+                                                <td class=\"border text-center\">191.00</td>
+                                                <td class=\"border text-center\">573.00</td>
+                                            </tr>
+                                        ";
+            }
+            // line 967
+            echo "                                    ";
         } else {
-            // line 954
+            // line 968
             echo "                                        <tr>
                                             <td class=\"border text-center\">15.7.204.4</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -1452,7 +1402,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     ";
         }
-        // line 977
+        // line 991
         echo "                                    <tr>
                                         <td class=\"border text-center\">15.7.60.1</td>
                                         <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -1467,9 +1417,9 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         <td class=\"border text-center\">43.80</td>
                                     </tr>
                                     ";
-        // line 990
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 990, $this->source); })()), "opereMurarie", array()) == 0)) {
-            // line 991
+        // line 1004
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1004, $this->source); })()), "opereMurarie", array()) == 0)) {
+            // line 1005
             echo "                                        <tr>
                                             <td class=\"border text-center\">15.2.160.1</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -1483,7 +1433,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     ";
         } else {
-            // line 1003
+            // line 1017
             echo "                                        <tr>
                                             <td class=\"border text-center\">15.2.160.2</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -1497,10 +1447,10 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         </tr>
                                     ";
         }
-        // line 1015
+        // line 1029
         echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1015, $this->source); })()), "level", array()) == 3)) {
-            // line 1016
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1029, $this->source); })()), "level", array()) == 3)) {
+            // line 1030
             echo "                                        <tr>
                                             <td colspan=\"5\" class=\"border table-light\"><strong>Relè Passo Passo ed alimentatori già suddivisi per piano: NECESSARI PER LA GESTIONE DELL'ILLUMINAZIONE IN BASSA TENSIONE</strong></td>
                                         </tr>
@@ -1514,13 +1464,13 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 1028
-            echo twig_escape_filter($this->env, (isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 1028, $this->source); })()), "html", null, true);
+            // line 1042
+            echo twig_escape_filter($this->env, (isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 1042, $this->source); })()), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">27</td>
                                             <td class=\"border text-center\">";
-            // line 1030
-            echo twig_escape_filter($this->env, ((isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 1030, $this->source); })()) * 27), "html", null, true);
+            // line 1044
+            echo twig_escape_filter($this->env, ((isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 1044, $this->source); })()) * 27), "html", null, true);
             echo "</td>
                                         </tr>
                                         <tr>
@@ -1533,18 +1483,18 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 1041
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1041, $this->source); })()), "pianiCasa", array()), "html", null, true);
+            // line 1055
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1055, $this->source); })()), "pianiCasa", array()), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">40</td>
                                             <td class=\"border text-center\">";
-            // line 1043
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1043, $this->source); })()), "pianiCasa", array()) * 40), "html", null, true);
+            // line 1057
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1057, $this->source); })()), "pianiCasa", array()) * 40), "html", null, true);
             echo "</td>
                                         </tr>
                                     ";
         }
-        // line 1046
+        // line 1060
         echo "
                                     <!-- TOTALI -->
                                     <tr>
@@ -1552,25 +1502,25 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         <td class=\"border\">SUBTOTALE</td>
                                         <td class=\"border text-center\">
                                             ";
-        // line 1052
-        echo twig_escape_filter($this->env, twig_round((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1052, $this->source); })()), "2"), "html", null, true);
+        // line 1066
+        echo twig_escape_filter($this->env, twig_round((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1066, $this->source); })()), "2"), "html", null, true);
         echo " €
                                         </td>
                                     </tr>
                                     ";
-        // line 1055
-        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1055, $this->source); })()) != 0)) {
-            // line 1056
+        // line 1069
+        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1069, $this->source); })()) != 0)) {
+            // line 1070
             echo "                                        <tr>
                                             <td colspan=\"3\" class=\"border-0\"></td>
                                             <td class=\"border\">SCONTO ";
-            // line 1058
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1058, $this->source); })()), "sconto", array()), "html", null, true);
+            // line 1072
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1072, $this->source); })()), "sconto", array()), "html", null, true);
             echo "%</td>
                                             <td class=\"border text-center\">
                                                 ";
-            // line 1060
-            echo twig_escape_filter($this->env, twig_round((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1060, $this->source); })()), "2"), "html", null, true);
+            // line 1074
+            echo twig_escape_filter($this->env, twig_round((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1074, $this->source); })()), "2"), "html", null, true);
             echo " €
                                             </td>
                                         </tr>
@@ -1579,31 +1529,31 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             <td class=\"border\"><strong>TOTALE SCONTATO</strong></td>
                                             <td class=\"border text-center\">
                                                 <strong>";
-            // line 1067
-            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1067, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1067, $this->source); })())), "2"), "html", null, true);
+            // line 1081
+            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1081, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1081, $this->source); })())), "2"), "html", null, true);
             echo " €</strong>
                                             </td>
                                         </tr>
                                     ";
         } else {
-            // line 1071
+            // line 1085
             echo "                                            <tr>
                                                 <td colspan=\"3\" class=\"border-0\"></td>
                                                 <td class=\"border\"><strong>TOTALE</strong></td>
                                                 <td class=\"border text-center\">
                                                     <strong>";
-            // line 1075
-            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1075, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 1075, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1075, $this->source); })()));
+            // line 1089
+            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1089, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 1089, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1089, $this->source); })()));
             echo " ";
-            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 1075, $this->source); })()), "2"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 1089, $this->source); })()), "2"), "html", null, true);
             echo " €</strong>
                                                 </td>
                                             </tr>
                                     ";
         }
-        // line 1079
+        // line 1093
         echo "                                    ";
-        // line 1086
+        // line 1100
         echo "
 
                                 </tbody>
@@ -1625,7 +1575,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     }
 
-    // line 1099
+    // line 1113
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -1634,7 +1584,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 1100
+        // line 1114
         echo "    <style>
         .no-wrap {
             max-width: 130px;
@@ -1662,7 +1612,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
     </style>
     <style type=\"text/css\">
         ";
-        // line 1127
+        // line 1141
         echo "        @page {
             size: landscape;
             margin: 0; }
@@ -1722,7 +1672,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     }
 
-    // line 1178
+    // line 1192
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -1731,7 +1681,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 1179
+        // line 1193
         echo "    <script>
         \$(document).ready(function () {
             \$('#nav-hide-btn-icon').trigger('click');
@@ -1763,7 +1713,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
 
     public function getDebugInfo()
     {
-        return array (  1735 => 1179,  1726 => 1178,  1666 => 1127,  1638 => 1100,  1629 => 1099,  1607 => 1086,  1605 => 1079,  1596 => 1075,  1590 => 1071,  1583 => 1067,  1573 => 1060,  1568 => 1058,  1564 => 1056,  1562 => 1055,  1556 => 1052,  1548 => 1046,  1542 => 1043,  1537 => 1041,  1523 => 1030,  1518 => 1028,  1504 => 1016,  1501 => 1015,  1487 => 1003,  1473 => 991,  1471 => 990,  1456 => 977,  1431 => 954,  1417 => 942,  1415 => 941,  1372 => 901,  1367 => 899,  1347 => 882,  1342 => 880,  1329 => 870,  1324 => 868,  1311 => 858,  1306 => 856,  1294 => 847,  1289 => 845,  1274 => 833,  1269 => 831,  1231 => 796,  1226 => 794,  1185 => 756,  1180 => 754,  1147 => 724,  1142 => 722,  1128 => 710,  1123 => 708,  1118 => 706,  1110 => 700,  1107 => 699,  1101 => 696,  1096 => 694,  1086 => 686,  1083 => 685,  1077 => 682,  1072 => 680,  1062 => 672,  1060 => 671,  1055 => 669,  1050 => 667,  1006 => 625,  977 => 598,  974 => 597,  968 => 594,  963 => 592,  951 => 582,  948 => 581,  945 => 580,  940 => 578,  935 => 576,  927 => 570,  924 => 569,  918 => 566,  913 => 564,  903 => 556,  900 => 555,  894 => 552,  889 => 550,  879 => 542,  877 => 541,  872 => 539,  867 => 537,  855 => 528,  850 => 526,  838 => 516,  835 => 515,  829 => 512,  824 => 510,  812 => 501,  807 => 499,  795 => 489,  792 => 488,  786 => 485,  781 => 483,  772 => 476,  769 => 475,  763 => 472,  758 => 470,  748 => 462,  745 => 461,  739 => 458,  734 => 456,  724 => 448,  722 => 447,  717 => 445,  712 => 443,  700 => 434,  695 => 432,  686 => 425,  683 => 424,  665 => 408,  663 => 407,  646 => 392,  644 => 391,  627 => 376,  625 => 375,  602 => 354,  599 => 353,  593 => 350,  588 => 348,  578 => 340,  575 => 339,  569 => 336,  564 => 334,  554 => 326,  551 => 325,  545 => 322,  540 => 320,  530 => 312,  528 => 311,  523 => 309,  518 => 307,  503 => 294,  497 => 291,  492 => 289,  482 => 281,  479 => 280,  473 => 277,  468 => 275,  458 => 267,  455 => 266,  449 => 263,  444 => 261,  434 => 253,  431 => 252,  426 => 239,  421 => 237,  408 => 227,  403 => 225,  390 => 215,  385 => 213,  371 => 201,  365 => 198,  360 => 196,  350 => 188,  347 => 187,  341 => 184,  336 => 182,  326 => 174,  323 => 173,  317 => 170,  312 => 168,  302 => 160,  299 => 159,  294 => 146,  289 => 144,  276 => 134,  271 => 132,  257 => 120,  251 => 117,  246 => 115,  236 => 107,  233 => 106,  227 => 103,  222 => 101,  212 => 93,  209 => 92,  203 => 89,  198 => 87,  188 => 79,  186 => 78,  181 => 76,  176 => 74,  163 => 64,  158 => 62,  125 => 31,  119 => 30,  110 => 27,  105 => 26,  100 => 25,  96 => 24,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  1685 => 1193,  1676 => 1192,  1616 => 1141,  1588 => 1114,  1579 => 1113,  1557 => 1100,  1555 => 1093,  1546 => 1089,  1540 => 1085,  1533 => 1081,  1523 => 1074,  1518 => 1072,  1514 => 1070,  1512 => 1069,  1506 => 1066,  1498 => 1060,  1492 => 1057,  1487 => 1055,  1473 => 1044,  1468 => 1042,  1454 => 1030,  1451 => 1029,  1437 => 1017,  1423 => 1005,  1421 => 1004,  1406 => 991,  1381 => 968,  1378 => 967,  1364 => 955,  1350 => 943,  1347 => 942,  1345 => 941,  1302 => 901,  1297 => 899,  1277 => 882,  1272 => 880,  1259 => 870,  1254 => 868,  1241 => 858,  1236 => 856,  1224 => 847,  1219 => 845,  1204 => 833,  1199 => 831,  1161 => 796,  1156 => 794,  1115 => 756,  1110 => 754,  1077 => 724,  1072 => 722,  1058 => 710,  1053 => 708,  1048 => 706,  1040 => 700,  1037 => 699,  1031 => 696,  1026 => 694,  1016 => 686,  1013 => 685,  1007 => 682,  1002 => 680,  992 => 672,  990 => 671,  985 => 669,  980 => 667,  936 => 625,  907 => 598,  904 => 597,  898 => 594,  893 => 592,  881 => 582,  878 => 581,  875 => 580,  870 => 578,  865 => 576,  857 => 570,  854 => 569,  848 => 566,  843 => 564,  833 => 556,  830 => 555,  824 => 552,  819 => 550,  809 => 542,  807 => 541,  802 => 539,  797 => 537,  785 => 528,  780 => 526,  768 => 516,  765 => 515,  759 => 512,  754 => 510,  742 => 501,  737 => 499,  725 => 489,  722 => 488,  717 => 445,  712 => 443,  700 => 434,  695 => 432,  686 => 425,  683 => 424,  665 => 408,  663 => 407,  646 => 392,  644 => 391,  627 => 376,  625 => 375,  602 => 354,  599 => 353,  593 => 350,  588 => 348,  578 => 340,  575 => 339,  569 => 336,  564 => 334,  554 => 326,  551 => 325,  545 => 322,  540 => 320,  530 => 312,  528 => 311,  523 => 309,  518 => 307,  503 => 294,  497 => 291,  492 => 289,  482 => 281,  479 => 280,  473 => 277,  468 => 275,  458 => 267,  455 => 266,  449 => 263,  444 => 261,  434 => 253,  431 => 252,  426 => 239,  421 => 237,  408 => 227,  403 => 225,  390 => 215,  385 => 213,  371 => 201,  365 => 198,  360 => 196,  350 => 188,  347 => 187,  341 => 184,  336 => 182,  326 => 174,  323 => 173,  317 => 170,  312 => 168,  302 => 160,  299 => 159,  294 => 146,  289 => 144,  276 => 134,  271 => 132,  257 => 120,  251 => 117,  246 => 115,  236 => 107,  233 => 106,  227 => 103,  222 => 101,  212 => 93,  209 => 92,  203 => 89,  198 => 87,  188 => 79,  186 => 78,  181 => 76,  176 => 74,  163 => 64,  158 => 62,  125 => 31,  119 => 30,  110 => 27,  105 => 26,  100 => 25,  96 => 24,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -2214,7 +2164,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         <td class=\"border text-center\">3.20</td>
                                         <td class=\"border text-center\">{{ calcTVCable  * 3.20}}</td>
                                     </tr>
-                                    {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                    {#{% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class=\"border text-center\">15.3.20.1</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -2254,7 +2204,7 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                             <td class=\"border text-center\">12.1</td>
                                             <td class=\"border text-center\">{{ qtyPT  * 12.1}}</td>
                                         </tr>
-                                    {% endif %}
+                                    {% endif %}#}
                                     {% if qtyTR != 0 %}
                                         <tr>
                                             <td colspan=\"5\" class=\"border table-light\"><i>Impianto chiamata emergenza con tiranti dal bagno e delle camere da letto</i></td>
@@ -2709,17 +2659,31 @@ class __TwigTemplate_071bc45c92e7e68a6b6fe3b4c85808d19e3a9130ce3e6ec31c3f8808ad2
                                         <td class=\"border text-center\">70</td>
                                     </tr>
                                     {% if item.spd == \"1\" %}
-                                        <tr>
-                                            <td class=\"border text-center\">15.7.202</td>
-                                            <td class=\"text-small border\" style=\"max-width: 300px\">
-                                                <small>
-                                                    Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
-                                                </small>
-                                            </td>
-                                            <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">191</td>
-                                            <td class=\"border text-center\">191</td>
-                                        </tr>
+                                        {% if item.trifase == 0 %}
+                                            <tr>
+                                                <td class=\"border text-center\">15.7.202</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">1</td>
+                                                <td class=\"border text-center\">191.00</td>
+                                                <td class=\"border text-center\">191.00</td>
+                                            </tr>
+                                        {% else %}
+                                            <tr>
+                                                <td class=\"border text-center\">15.7.202</td>
+                                                <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                    <small>
+                                                        Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
+                                                    </small>
+                                                </td>
+                                                <td class=\"border text-center\">3</td>
+                                                <td class=\"border text-center\">191.00</td>
+                                                <td class=\"border text-center\">573.00</td>
+                                            </tr>
+                                        {% endif %}
                                     {% else %}
                                         <tr>
                                             <td class=\"border text-center\">15.7.204.4</td>

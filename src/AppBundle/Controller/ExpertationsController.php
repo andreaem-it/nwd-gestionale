@@ -647,13 +647,14 @@ class ExpertationsController extends Controller
             ])
             ->add('illum_sicurezza', IntegerType::class, [
                 'label' => 'Illuminazione Sicurezza',
-                'attr' => ['class' => '']
+                'attr' => ['class' => ''],
             ])
             ->add('illum_esterna', CheckboxType::class, [
                 'label' => 'Illuminazione Esterna',
                 'label_attr' => [],
                 'required' => false,
-                'attr' => ['class' => '']
+                'attr' => ['class' => ''],
+                'data' => $this->convertToBool($expertations->getIllumEsterna())
             ])
             ->add('lampada', CheckboxType::class, [
                 'label' => 'Lampada fornita',
@@ -693,14 +694,11 @@ class ExpertationsController extends Controller
                     'label' => false,
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
             ])
             ->add('ambient', CollectionType::class, [
                 'entry_type' => EntityType::class,
                 'entry_options' => [
                     'class' => 'AppBundle:Rooms',
-                    'placeholder' => '-- Seleziona --',
                     'query_builder' => function (EntityRepository $er) {
                         return $er->createQueryBuilder('u')
                             ->orderBy('u.name')->distinct()
@@ -710,8 +708,8 @@ class ExpertationsController extends Controller
                     'choice_value' => 'id',
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
+                'attr' => ['class' => ''],
+
             ])
             ->add('name', CollectionType::class, [
                 'entry_type' => TextType::class,
@@ -720,59 +718,47 @@ class ExpertationsController extends Controller
                     'attr' => ['style' => 'min-width:200px!important;','placeholder' => 'Inserisci un nome'],
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
             ])
             ->add('pp', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => ['min' => 0, 'value' => 0]
+                    'attr' => ['min' => 0]
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
             ])
             ->add('pl', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => [ 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
             ])
             ->add('pt', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => [ 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
             ])
             ->add('c1v', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => [ 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
                 'required' => false
             ])
             ->add('c2v', CollectionType::class, [
                 'entry_type' => IntegerType::class,
                 'entry_options' => [
                     'label' => false,
-                    'attr' => [ 'min' => 0, 'value' => 0]
+                    'attr' => [ 'min' => 0]
                 ],
                 'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
                 'required' => false
             ])
             ->add('submit', SubmitType::class, [
@@ -781,7 +767,7 @@ class ExpertationsController extends Controller
             ])
             ->getForm();
 
-
+        dump($form);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
