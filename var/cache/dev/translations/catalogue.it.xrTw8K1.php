@@ -190,6 +190,11 @@ il Team.
     'form.new_password' => 'Nuova password',
     'form.new_password_confirmation' => 'Ripeti password',
   ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Precedente',
+    'label_next' => 'Successivo',
+  ),
 ));
 
 

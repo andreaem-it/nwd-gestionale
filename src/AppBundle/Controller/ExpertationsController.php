@@ -39,8 +39,21 @@ class ExpertationsController extends Controller
     {
         $expertations = null;
         if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
-            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findAll();
             $uExpertations = null;
+            $em    = $this->get('doctrine.orm.entity_manager');
+            $dql   = "SELECT a FROM AppBundle:Expertations a ORDER BY a.pid DESC";
+            $query = $em->createQuery($dql);
+
+            $paginator  = $this->get('knp_paginator');
+            $pagination = $paginator->paginate(
+                $query, /* query NOT result */
+                $request->query->getInt('page', 1)/*page number*/,
+                10/*limit per page*/
+            );
+            $pagination->setCustomParameters([
+                'align' => 'center',
+                'rounded' => true,
+                ]);
         } else {
             $permission = $this->getDoctrine()->getRepository(Users::class)->findBy(['father' => $this->getUser()]);
             $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $permission[0]->getId()]);
@@ -48,11 +61,26 @@ class ExpertationsController extends Controller
             if ($expertations == null) {
                 $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()]);
             }
+            $em    = $this->get('doctrine.orm.entity_manager');
+            $dql   = "SELECT a FROM AppBundle:Expertations a WHERE a.created_by =" . $this->getUser() . " ORDER BY a.pid DESC";
+            $query = $em->createQuery($dql);
+
+            $paginator  = $this->get('knp_paginator');
+            $pagination = $paginator->paginate(
+                $query, /* query NOT result */
+                $request->query->getInt('page', 1)/*page number*/,
+                10/*limit per page*/
+            );
+            $pagination->setCustomParameters([
+                'align' => 'center',
+                'rounded' => true,
+            ]);
         }
 
         return $this->render('expertations/list.html.twig', [
             'expertations' => $expertations,
             'u_expertations' => $uExpertations,
+            'pagination' => $pagination,
             'functions' => $this,
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);

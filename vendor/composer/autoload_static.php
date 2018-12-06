@@ -66,6 +66,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
         'I' => 
         array (
             'Intriro\\Bundle\\CsvBundle\\' => 25,
@@ -234,6 +238,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
+        ),
         'Intriro\\Bundle\\CsvBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/intriro/csv-bundle/src',
@@ -305,6 +313,13 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+        'K' => 
+        array (
+            'Knp\\Component' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
             ),
         ),
         'G' => 

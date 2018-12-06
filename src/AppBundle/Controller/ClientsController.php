@@ -23,14 +23,37 @@ class ClientsController extends Controller
     public function ClientsAction(Request $request) {
 
         if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
-            $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findAll();
-            dump($clients);
+            $em    = $this->get('doctrine.orm.entity_manager');
+            $dql   = "SELECT a FROM AppBundle:Clients a";
+            $query = $em->createQuery($dql);
+
+            $paginator  = $this->get('knp_paginator');
+            $pagination = $paginator->paginate(
+                $query, /* query NOT result */
+                $request->query->getInt('page', 1)/*page number*/,
+                8/*limit per page*/
+            );
+            $pagination->setCustomParameters([
+                'align' => 'center'
+            ]);
         } else {
-            $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findBy(['refereer' => $this->getUser()]);
+            $em    = $this->get('doctrine.orm.entity_manager');
+            $dql   = "SELECT a FROM AppBundle:Cliets a WHERE a.refereer=" . $this->getUser();
+            $query = $em->createQuery($dql);
+
+            $paginator  = $this->get('knp_paginator');
+            $pagination = $paginator->paginate(
+                $query, /* query NOT result */
+                $request->query->getInt('page', 1)/*page number*/,
+                8/*limit per page*/
+            );
+            $pagination->setCustomParameters([
+                'align' => 'center'
+            ]);
         }
 
         return $this->render('clients/clients.html.twig',[
-            'clients' => $clients,
+            'pagination' => $pagination,
             'func' => $this
         ]);
     }

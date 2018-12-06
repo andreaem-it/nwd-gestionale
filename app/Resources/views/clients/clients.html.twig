@@ -26,13 +26,13 @@
                                     <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            {{ knp_pagination_sortable(pagination, 'ID', 'a.id') }}
                                         </th>
-                                        <th>
-                                            Cliente
+                                        <th
+                                            {% if pagination.isSorted('a.Name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Cliente', 'a.name') }}
                                         </th>
-                                        <th>
-                                            Referente
+                                        <th
+                                            {% if pagination.isSorted('a.Refereer') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Commerciale', 'a.refereer') }}
                                         </th>
                                         <th>
                                             Indirizzo
@@ -47,7 +47,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for item in clients %}
+                                    {% for item in pagination %}
                                         <tr>
                                             <td class="py-1">
                                                 {{ item.id }}
@@ -68,20 +68,25 @@
                                                 <a href="mailto:{{ item.email }}">{{ item.email }}</a>
                                             </td>
                                             <td style="width: 255px;">
-                                                <a href="{{ url('elimina_clienti', { 'id' : item.id }) }}" class="btn btn-danger btn-sm float-right mr-1">
-                                                    <span class="mdi mdi-delete"></span>
-                                                </a>
-                                                <a href="{{ url('modifica_cliente' , { 'id' : item.id }) }}" class="btn btn-warning btn-sm float-right mr-1">
-                                                    <span class="mdi mdi-table-edit"></span>
-                                                </a>
-                                                <a href="{{ url('vedi_clienti',{'id' : 1}) }}" class="btn btn-primary btn-sm float-right mr-1">
-                                                    <span class="mdi mdi-eye-outline"></span>
-                                                </a>
+                                                <div class="btn-group">
+                                                    <a href="{{ url('vedi_clienti',{'id' : 1}) }}" class="btn btn-primary btn-sm float-right">
+                                                        <span class="mdi mdi-eye-outline"></span>
+                                                    </a>
+                                                    <a href="{{ url('modifica_cliente' , { 'id' : item.id }) }}" class="btn btn-warning btn-sm float-right">
+                                                        <span class="mdi mdi-table-edit"></span>
+                                                    </a>
+                                                    <a href="{{ url('elimina_clienti', { 'id' : item.id }) }}" class="btn btn-danger btn-sm float-right">
+                                                        <span class="mdi mdi-delete"></span>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>
                                 </table>
+                                <div class="navigation">
+                                    {{ knp_pagination_render(pagination) }}
+                                </div>
                             </div>
                         </div>
                     </div>

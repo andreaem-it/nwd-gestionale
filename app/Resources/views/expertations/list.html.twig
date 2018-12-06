@@ -52,16 +52,16 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            {{ knp_pagination_sortable(pagination, 'ID', 'a.pid') }}
                                         </th>
                                         <th>
-                                            Data
+                                            {{ knp_pagination_sortable(pagination, 'Data', 'a.date') }}
                                         </th>
                                         <th>
-                                            Cliente
+                                            {{ knp_pagination_sortable(pagination, 'Cliente', 'a.client') }}
                                         </th>
                                         <th>
-                                            Creatore
+                                            {{ knp_pagination_sortable(pagination, 'Commerciale', 'a.created_by') }}
                                         </th>
                                         {#<th>
                                             Prezzo
@@ -112,7 +112,7 @@
                                         </td>
                                     </tr>
                                 {% endfor %}
-                                {% for item in expertations %}
+                                {% for item in pagination %}
                                     <tr>
                                         <td>
                                             {{ item.pid }}
@@ -153,6 +153,9 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
+                            <div class="navigation mt-3">
+                                {{ knp_pagination_render(pagination) }}
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -29,6 +29,7 @@
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "^2.0",
         "intriro/csv-bundle": "^1.0",
+        "knplabs/knp-paginator-bundle": "^2.8",
         "ninsuo/symfony-collection": "^2.1",
         "predis/predis": "^1.1",
         "sensio/distribution-bundle": "^5.0.19",
