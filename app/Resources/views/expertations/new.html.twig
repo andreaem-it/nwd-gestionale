@@ -26,7 +26,7 @@
                                 {{ form_widget(form.client) }}
                                 <div class="input-group-prepend">
                                     <div class="input-group-text mx-0 px-0 py-0">
-                                        <a href="{{ url('nuovo_cliente') }}" class="btn btn-outline-success mx-0 px-2">+</a>
+                                        <a href="{{ url('nuovo_cliente') }}" class="btn btn-outline-success mx-0 px-2 animsition-link">+</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,26 +279,26 @@
                         <div class="freeze-table">
                             <table class="table table-hover table-responsive-lg float-right" style="display: block !important;">
                                 <thead id="table-head" class="table-light">
-                                    <th style="max-width:20px; width: 20px; min-width: 20px;"></th>
-                                    <th>
+                                    <th style="width: 65px;"></th>
+                                    <th style="min-width:120px">
                                         Piano
                                     </th>
-                                    <th class="tbl-lg">
+                                    <th style="min-width:300px" class="tbl-lg">
                                         Ambiente
                                     </th>
-                                    <th  style="min-width:270px" class="tbl-lg">
+                                    <th style="min-width:300px" class="tbl-lg">
                                         Nome
                                     </th>
-                                    <th style="min-width:150px">
+                                    <th style="min-width:155px">
                                         Punti prese
                                     </th>
-                                    <th style="min-width:150px">
+                                    <th style="min-width:155px">
                                         Punti Luce
                                     </th>
-                                    <th style="min-width:150px">
+                                    <th style="min-width:155px">
                                         Prese TV
                                     </th>
-                                    <th style="min-width:150px">
+                                    <th style="min-width:155px">
                                         Punti di Comando
                                     </th>
                                     <th style="min-width:150px">
@@ -317,15 +317,15 @@
                                 <tbody id="email-fields-list" data-prototype='
                                 </tr>
                                 <td style="max-width:20px">
-                                        <button type="button" class="remove-collection-widget btn  px-1 pl-2" style="left: -10px; position: relative;"><i class="fa fa-minus-square "></i></button>
+                                        <button type="button" class="remove-collection-widget btn px-1 pl-2" style="left: -10px; position: relative;"><i class="fa fa-minus-square "></i></button>
                                     </td>
                                     <td>
                                         {{ form_widget(form.floor.vars.prototype)|e }}
                                     </td>
-                                    <td>
+                                    <td style="min-width:300px">
                                         {{ form_widget(form.ambient.vars.prototype)|e }}
                                     </td>
-                                    <td style="min-width:270px">
+                                    <td style="min-width:300px">
                                         {{ form_widget(form.name.vars.prototype)|e }}
                                     </td>
                                     <td style="min-width:150px">
@@ -447,18 +447,15 @@
                                 dataChanged();
                                 var newcount = counter - 1;
                                 var exval = $("#form_floor_" + newcount).val();
-                                console.log(exval);
-                                console.log("#form_floor_" + counter);
                                 counter++;
-                                console.log($("#form_floor_" + (counter + 1) ).val());
                                 list.data(' widget-counter', counter);
                                 var newElem = jQuery(list.attr('data-widget-tags')).append(newWidget);
-                                newElem.appendTo(list);
+                                newElem.appendTo(list).hide().show("slow");
                                 $("#form_floor_" + (counter + 1)).val(exval);
                                 $(newElem).children('.remove-collection-widget').attr('disabled','disabled');
                                 $('.remove-collection-widget').click(function(e) {
                                     e.preventDefault();
-                                    $(newElem).remove();
+                                    $(newElem).show().hide(1000).remove();
                                     return false;
                                 });
                                 $(document).on('change', '#form_c1n', function () {
@@ -468,7 +465,7 @@
                                     change_tirante($("#form_ambient_" + item).val(),item)
                                 });
 
-                            });
+                            }).animate(500);
 
                         });
                     </script>
@@ -485,7 +482,7 @@
                                 {{ form_widget(form.submit) }}
                             </div>
                             <div class="col-6">
-                                <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3">Annulla</a>
+                                <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 animsition-link">Annulla</a>
                             </div>
                         </div>
                     </div>

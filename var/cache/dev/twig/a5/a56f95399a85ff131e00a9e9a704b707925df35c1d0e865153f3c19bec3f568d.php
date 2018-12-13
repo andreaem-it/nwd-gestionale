@@ -46,7 +46,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
             if ((isset($context["previous"]) || array_key_exists("previous", $context))) {
                 // line 19
                 echo "                <li class=\"page-item\">
-                    <a class=\"page-link\" rel=\"prev\" href=\"";
+                    <a class=\"page-link  animsition-link\" rel=\"prev\" href=\"";
                 // line 20
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 20, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 20, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 20, $this->source); })()) => (isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new Twig_Error_Runtime('Variable "previous" does not exist.', 20, $this->source); })())))), "html", null, true);
                 echo "\">&laquo;&nbsp;";
@@ -57,7 +57,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
             } else {
                 // line 23
                 echo "                <li class=\"page-item disabled\">
-                    <span class=\"page-link\">&laquo;&nbsp;";
+                    <span class=\"page-link  animsition-link\">&laquo;&nbsp;";
                 // line 24
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("label_previous", array(), "KnpPaginatorBundle"), "html", null, true);
                 echo "</span>
@@ -71,7 +71,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
             if (((isset($context["startPage"]) || array_key_exists("startPage", $context) ? $context["startPage"] : (function () { throw new Twig_Error_Runtime('Variable "startPage" does not exist.', 28, $this->source); })()) > 1)) {
                 // line 29
                 echo "                <li class=\"page-item\">
-                    <a class=\"page-link\" href=\"";
+                    <a class=\"page-link  animsition-link\" href=\"";
                 // line 30
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 30, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 30, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 30, $this->source); })()) => 1))), "html", null, true);
                 echo "\">1</a>
@@ -81,7 +81,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
                 if (((isset($context["startPage"]) || array_key_exists("startPage", $context) ? $context["startPage"] : (function () { throw new Twig_Error_Runtime('Variable "startPage" does not exist.', 32, $this->source); })()) == 3)) {
                     // line 33
                     echo "                    <li class=\"page-item\">
-                        <a class=\"page-link\" href=\"";
+                        <a class=\"page-link  animsition-link\" href=\"";
                     // line 34
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 34, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 34, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 34, $this->source); })()) => 2))), "html", null, true);
                     echo "\">2</a>
@@ -91,7 +91,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
 (isset($context["startPage"]) || array_key_exists("startPage", $context) ? $context["startPage"] : (function () { throw new Twig_Error_Runtime('Variable "startPage" does not exist.', 36, $this->source); })()) != 2)) {
                     // line 37
                     echo "                    <li class=\"page-item disabled\">
-                        <span class=\"page-link\">&hellip;</span>
+                        <span class=\"page-link  animsition-link\">&hellip;</span>
                     </li>
                 ";
                 }
@@ -110,7 +110,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
                 if (($context["page"] != (isset($context["current"]) || array_key_exists("current", $context) ? $context["current"] : (function () { throw new Twig_Error_Runtime('Variable "current" does not exist.', 44, $this->source); })()))) {
                     // line 45
                     echo "                    <li class=\"page-item\">
-                        <a class=\"page-link\" href=\"";
+                        <a class=\"page-link  animsition-link\" href=\"";
                     // line 46
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 46, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 46, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 46, $this->source); })()) => $context["page"]))), "html", null, true);
                     echo "\">";
@@ -121,7 +121,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
                 } else {
                     // line 49
                     echo "                    <li class=\"page-item active\">
-                        <span class=\"page-link\">";
+                        <span class=\"page-link  animsition-link\">";
                     // line 50
                     echo twig_escape_filter($this->env, $context["page"], "html", null, true);
                     echo "</span>
@@ -154,7 +154,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
                     } else {
                         // line 63
                         echo "                        <li class=\"page-item\">
-                            <a class=\"page-link\" href=\"";
+                            <a class=\"page-link  animsition-link\" href=\"";
                         // line 64
                         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 64, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 64, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 64, $this->source); })()) => ((isset($context["pageCount"]) || array_key_exists("pageCount", $context) ? $context["pageCount"] : (function () { throw new Twig_Error_Runtime('Variable "pageCount" does not exist.', 64, $this->source); })()) - 1)))), "html", null, true);
                         echo "\">";
@@ -168,7 +168,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
                 }
                 // line 68
                 echo "                <li class=\"page-item\">
-                    <a class=\"page-link\" href=\"";
+                    <a class=\"page-link  animsition-link\" href=\"";
                 // line 69
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 69, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 69, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 69, $this->source); })()) => (isset($context["pageCount"]) || array_key_exists("pageCount", $context) ? $context["pageCount"] : (function () { throw new Twig_Error_Runtime('Variable "pageCount" does not exist.', 69, $this->source); })())))), "html", null, true);
                 echo "\">";
@@ -184,7 +184,7 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
             if ((isset($context["next"]) || array_key_exists("next", $context))) {
                 // line 74
                 echo "                <li class=\"page-item\">
-                    <a class=\"page-link\" rel=\"next\" href=\"";
+                    <a class=\"page-link  animsition-link\" rel=\"next\" href=\"";
                 // line 75
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new Twig_Error_Runtime('Variable "route" does not exist.', 75, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new Twig_Error_Runtime('Variable "query" does not exist.', 75, $this->source); })()), array((isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new Twig_Error_Runtime('Variable "pageParameterName" does not exist.', 75, $this->source); })()) => (isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new Twig_Error_Runtime('Variable "next" does not exist.', 75, $this->source); })())))), "html", null, true);
                 echo "\">";
@@ -251,25 +251,25 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
 
             {% if previous is defined %}
                 <li class=\"page-item\">
-                    <a class=\"page-link\" rel=\"prev\" href=\"{{ path(route, query|merge({(pageParameterName): previous})) }}\">&laquo;&nbsp;{{ 'label_previous'|trans({}, 'KnpPaginatorBundle') }}</a>
+                    <a class=\"page-link  animsition-link\" rel=\"prev\" href=\"{{ path(route, query|merge({(pageParameterName): previous})) }}\">&laquo;&nbsp;{{ 'label_previous'|trans({}, 'KnpPaginatorBundle') }}</a>
                 </li>
             {% else %}
                 <li class=\"page-item disabled\">
-                    <span class=\"page-link\">&laquo;&nbsp;{{ 'label_previous'|trans({}, 'KnpPaginatorBundle') }}</span>
+                    <span class=\"page-link  animsition-link\">&laquo;&nbsp;{{ 'label_previous'|trans({}, 'KnpPaginatorBundle') }}</span>
                 </li>
             {% endif %}
 
             {% if startPage > 1 %}
                 <li class=\"page-item\">
-                    <a class=\"page-link\" href=\"{{ path(route, query|merge({(pageParameterName): 1})) }}\">1</a>
+                    <a class=\"page-link  animsition-link\" href=\"{{ path(route, query|merge({(pageParameterName): 1})) }}\">1</a>
                 </li>
                 {% if startPage == 3 %}
                     <li class=\"page-item\">
-                        <a class=\"page-link\" href=\"{{ path(route, query|merge({(pageParameterName): 2})) }}\">2</a>
+                        <a class=\"page-link  animsition-link\" href=\"{{ path(route, query|merge({(pageParameterName): 2})) }}\">2</a>
                     </li>
                 {% elseif startPage != 2 %}
                     <li class=\"page-item disabled\">
-                        <span class=\"page-link\">&hellip;</span>
+                        <span class=\"page-link  animsition-link\">&hellip;</span>
                     </li>
                 {% endif %}
             {% endif %}
@@ -277,11 +277,11 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
             {% for page in pagesInRange %}
                 {% if page != current %}
                     <li class=\"page-item\">
-                        <a class=\"page-link\" href=\"{{ path(route, query|merge({(pageParameterName): page})) }}\">{{ page }}</a>
+                        <a class=\"page-link  animsition-link\" href=\"{{ path(route, query|merge({(pageParameterName): page})) }}\">{{ page }}</a>
                     </li>
                 {% else %}
                     <li class=\"page-item active\">
-                        <span class=\"page-link\">{{ page }}</span>
+                        <span class=\"page-link  animsition-link\">{{ page }}</span>
                     </li>
                 {% endif %}
 
@@ -295,18 +295,18 @@ class __TwigTemplate_0b4e0d6ef2949705148d380a111959d8d3e7b2d98d24dbb4e801d199975
                         </li>
                     {% else %}
                         <li class=\"page-item\">
-                            <a class=\"page-link\" href=\"{{ path(route, query|merge({(pageParameterName): (pageCount - 1)})) }}\">{{ pageCount -1 }}</a>
+                            <a class=\"page-link  animsition-link\" href=\"{{ path(route, query|merge({(pageParameterName): (pageCount - 1)})) }}\">{{ pageCount -1 }}</a>
                         </li>
                     {% endif %}
                 {% endif %}
                 <li class=\"page-item\">
-                    <a class=\"page-link\" href=\"{{ path(route, query|merge({(pageParameterName): pageCount})) }}\">{{ pageCount }}</a>
+                    <a class=\"page-link  animsition-link\" href=\"{{ path(route, query|merge({(pageParameterName): pageCount})) }}\">{{ pageCount }}</a>
                 </li>
             {% endif %}
 
             {% if next is defined %}
                 <li class=\"page-item\">
-                    <a class=\"page-link\" rel=\"next\" href=\"{{ path(route, query|merge({(pageParameterName): next})) }}\">{{ 'label_next'|trans({}, 'KnpPaginatorBundle') }}&nbsp;&raquo;</a>
+                    <a class=\"page-link  animsition-link\" rel=\"next\" href=\"{{ path(route, query|merge({(pageParameterName): next})) }}\">{{ 'label_next'|trans({}, 'KnpPaginatorBundle') }}&nbsp;&raquo;</a>
                 </li>
             {% else %}
                 <li  class=\"page-item disabled\">

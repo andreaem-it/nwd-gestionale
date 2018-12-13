@@ -104,11 +104,11 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
         // line 13
         echo "        <div class=\"row\">
             <div class=\"col-lg-6\">
-                <h3 class=\"mt-5\">Preventivi <small>Lista</small></h3>
+                <h3 class=\"mt-4\">Preventivi <small>Lista</small></h3>
             </div>
             <div class=\"col-lg-6 grid-margin stretch-card mb-3 float-right\">
                 <div class=\"card\">
-                    <div class=\"card-body\">
+                    <div class=\"card-body\" style=\"padding: 1rem!important;\">
                         <form class=\"row\">
                             <div class=\"col-3 pr-0 border-right-0\">
                                 <select id=\"searchType\" class=\"form-control custom-select mt-1\" id=\"inlineFormCustomSelectPref\" style=\"height: calc(2.25rem + -2px)!important;\">
@@ -193,7 +193,7 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
             echo "
                                         </td>
                                         <td>
-                                            <a href=\"";
+                                            <a class=\" animsition-link\" href=\"";
             // line 85
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
             echo "\">
@@ -204,7 +204,7 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                             </a>
                                         </td>
                                         <td>
-                                            <a href=\"";
+                                            <a class=\" animsition-link\" href=\"";
             // line 90
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
             echo "\">
@@ -221,19 +221,19 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                                 <a href=\"";
             // line 102
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-primary btn-sm float-right mr-1\">
+            echo "\" class=\"btn btn-primary btn-sm float-right mr-1 animsition-link\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
                                                 </a>
                                                 <a href=\"";
             // line 105
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("modifica_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-warning btn-sm float-right mr-1\">
+            echo "\" class=\"btn btn-warning btn-sm float-right mr-1 animsition-link\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
                                                 <a href=\"";
             // line 108
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
-            echo "\" class=\"btn btn-danger btn-sm float-right mr-1\">
+            echo "\" class=\"btn btn-danger btn-sm float-right mr-1 animsition-link\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                             </div>
@@ -264,7 +264,7 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
             echo "
                                         </td>
                                         <td>
-                                            <a href=\"";
+                                            <a class=\" animsition-link\" href=\"";
             // line 124
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("vedi_clienti", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "client", array()))), "html", null, true);
             echo "\">
@@ -275,7 +275,7 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                             </a>
                                         </td>
                                         <td>
-                                            <a href=\"";
+                                            <a class=\" animsition-link\" href=\"";
             // line 129
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("impostazioni_utenti");
             echo "\">
@@ -292,16 +292,16 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                                 <a href=\"";
             // line 141
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-primary btn-sm float-right\">
+            echo "\" class=\"btn btn-primary btn-sm float-right animsition-link\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
                                                 </a>
-                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right\">
+                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right animsition-link\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
                                                 <a href=\"";
             // line 147
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
-            echo "\" class=\"btn btn-danger btn-sm float-right\">
+            echo "\" class=\"btn btn-danger btn-sm float-right animsition-link\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                             </div>
@@ -315,14 +315,18 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
         // line 154
         echo "                                </tbody>
                             </table>
-                            <div class=\"navigation mt-3\">
-                                ";
-        // line 157
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new Twig_Error_Runtime('Variable "pagination" does not exist.', 157, $this->source); })()));
-        echo "
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"col-12\">
+                <div class=\"navigation mt-1\">
+                    ";
+        // line 164
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new Twig_Error_Runtime('Variable "pagination" does not exist.', 164, $this->source); })()));
+        echo "
                 </div>
             </div>
         </div>
@@ -362,7 +366,7 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
 
     public function getDebugInfo()
     {
-        return array (  321 => 157,  316 => 154,  303 => 147,  294 => 141,  290 => 139,  284 => 130,  280 => 129,  273 => 125,  269 => 124,  263 => 121,  257 => 118,  253 => 116,  248 => 115,  235 => 108,  229 => 105,  223 => 102,  219 => 100,  213 => 91,  209 => 90,  202 => 86,  198 => 85,  192 => 82,  186 => 79,  182 => 77,  178 => 76,  172 => 72,  167 => 64,  161 => 61,  155 => 58,  149 => 55,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  328 => 164,  316 => 154,  303 => 147,  294 => 141,  290 => 139,  284 => 130,  280 => 129,  273 => 125,  269 => 124,  263 => 121,  257 => 118,  253 => 116,  248 => 115,  235 => 108,  229 => 105,  223 => 102,  219 => 100,  213 => 91,  209 => 90,  202 => 86,  198 => 85,  192 => 82,  186 => 79,  182 => 77,  178 => 76,  172 => 72,  167 => 64,  161 => 61,  155 => 58,  149 => 55,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -381,11 +385,11 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
         {% endfor %}
         <div class=\"row\">
             <div class=\"col-lg-6\">
-                <h3 class=\"mt-5\">Preventivi <small>Lista</small></h3>
+                <h3 class=\"mt-4\">Preventivi <small>Lista</small></h3>
             </div>
             <div class=\"col-lg-6 grid-margin stretch-card mb-3 float-right\">
                 <div class=\"card\">
-                    <div class=\"card-body\">
+                    <div class=\"card-body\" style=\"padding: 1rem!important;\">
                         <form class=\"row\">
                             <div class=\"col-3 pr-0 border-right-0\">
                                 <select id=\"searchType\" class=\"form-control custom-select mt-1\" id=\"inlineFormCustomSelectPref\" style=\"height: calc(2.25rem + -2px)!important;\">
@@ -451,12 +455,12 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                             {{ item.date|date(\"d-m-Y\") }}
                                         </td>
                                         <td>
-                                            <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
+                                            <a class=\" animsition-link\" href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
                                                 {{ functions.uidToName(item.client) }}
                                             </a>
                                         </td>
                                         <td>
-                                            <a href=\"{{ url('impostazioni_utenti') }}\">
+                                            <a class=\" animsition-link\" href=\"{{ url('impostazioni_utenti') }}\">
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
@@ -468,13 +472,13 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                         </td>#}
                                         <td style=\"width: 255px;\">
                                             <div class=\"btn-group\">
-                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1\">
+                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right mr-1 animsition-link\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
                                                 </a>
-                                                <a href=\"{{ url('modifica_preventivo', {'id' : item.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1\">
+                                                <a href=\"{{ url('modifica_preventivo', {'id' : item.id}) }}\" class=\"btn btn-warning btn-sm float-right mr-1 animsition-link\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
-                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1\">
+                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right mr-1 animsition-link\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                             </div>
@@ -490,12 +494,12 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                             {{ item.date|date(\"d-m-Y\") }}
                                         </td>
                                         <td>
-                                            <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
+                                            <a class=\" animsition-link\" href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
                                                 {{ functions.uidToName(item.client) }}
                                             </a>
                                         </td>
                                         <td>
-                                            <a href=\"{{ url('impostazioni_utenti') }}\">
+                                            <a class=\" animsition-link\" href=\"{{ url('impostazioni_utenti') }}\">
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
@@ -507,13 +511,13 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                         </td>#}
                                         <td style=\"max-width: 200px;\">
                                             <div class=\"btn-group\">
-                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right\">
+                                                <a href=\"{{ url('mostra_preventivo',{'id' : item.id}) }}\" class=\"btn btn-primary btn-sm float-right animsition-link\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
                                                 </a>
-                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right\">
+                                                <a href=\"\" class=\"btn btn-warning btn-sm float-right animsition-link\">
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
-                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right\">
+                                                <a href=\"{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}\" class=\"btn btn-danger btn-sm float-right animsition-link\">
                                                     <span class=\"mdi mdi-delete\"></span>
                                                 </a>
                                             </div>
@@ -522,11 +526,15 @@ class __TwigTemplate_bb96f815cb73cfd2eae27c2f2bda9bf09e3c7f01bda2982a33fc7b10ac7
                                 {% endfor %}
                                 </tbody>
                             </table>
-                            <div class=\"navigation mt-3\">
-                                {{ knp_pagination_render(pagination) }}
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"col-12\">
+                <div class=\"navigation mt-1\">
+                    {{ knp_pagination_render(pagination) }}
                 </div>
             </div>
         </div>

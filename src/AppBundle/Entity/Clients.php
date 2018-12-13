@@ -31,6 +31,20 @@ class Clients
     /**
      * @var string
      *
+     * @ORM\Column(name="surname", type="string", length=255, nullable=true)
+     */
+    private $surname;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="genre", type="integer", nullable=true)
+     */
+    private $genre;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="address", type="string", length=255)
      */
     private $address;
@@ -325,5 +339,53 @@ class Clients
     public function getRefereer()
     {
         return $this->refereer;
+    }
+
+    /**
+     * Set surname.
+     *
+     * @param string $surname
+     *
+     * @return Clients
+     */
+    public function setSurname($surname)
+    {
+        $this->surname = $surname;
+
+        return $this;
+    }
+
+    /**
+     * Get surname.
+     *
+     * @return string
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * Set genre.
+     *
+     * @param int $genre
+     *
+     * @return Clients
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre.
+     *
+     * @return int
+     */
+    public function getGenre()
+    {
+        return $this->genre;
     }
 }

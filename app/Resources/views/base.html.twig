@@ -14,20 +14,45 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="{{ asset('js/pace.min.js') }}"></script>
+        <script src="{{ asset('js/animsition.min.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/fontawesome.all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/pace-loading.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('css/animsition.min.css') }}"/>
     </head>
     <body>
         <div class="container-scroller">
             {% include 'template/navbar.html.twig' %}
-            <div class="container-fluid page-body-wrapper">
+            <div class="container-fluid page-body-wrapper animsition">
                 {% include 'template/sidebar.html.twig' %}
                 {% block body %}{% endblock %}
             </div>
         </div>
         {% include 'template/footer.html.twig' %}
         {% block javascripts %}{% endblock %}
+        <script>
+            $(document).ready(function() {
+                $(".animsition").animsition({
+                    inClass: 'fade-in',
+                    outClass: 'fade-out',
+                    inDuration: 1500,
+                    outDuration: 800,
+                    linkElement: '.animsition-link',
+                    loading: false,
+                    loadingParentElement: 'body',
+                    loadingClass: 'animsition-loading',
+                    loadingInner: '', // e.g '<img src="loading.svg" />'
+                    timeout: false,
+                    timeoutCountdown: 5000,
+                    onLoadEvent: true,
+                    browser: [ 'animation-duration', '-webkit-animation-duration'],
+                    overlay : false,
+                    overlayClass : 'animsition-overlay-slide',
+                    overlayParentElement : 'body',
+                    transition: function(url){ window.location.href = url; }
+                });
+            });
+        </script>
     </body>
 </html>

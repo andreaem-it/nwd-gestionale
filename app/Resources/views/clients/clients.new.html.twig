@@ -13,9 +13,17 @@
             <div class="card-body">
                 {{ form_start(form) }}
                 <div class="row mt-2">
-                    <div class="col-12">
+                    <div class="col-5">
                         {{ form_label(form.name) }}
                         {{ form_widget(form.name) }}
+                    </div>
+                    <div class="col-5">
+                        {{ form_label(form.surname) }}
+                        {{ form_widget(form.surname) }}
+                    </div>
+                    <div class="col-2">
+                        {{ form_label(form.genre) }}
+                        {{ form_widget(form.genre) }}
                     </div>
                 </div>
                 <div class="row mt-2">

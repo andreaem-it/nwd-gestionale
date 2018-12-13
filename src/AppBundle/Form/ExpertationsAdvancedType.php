@@ -5,6 +5,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,18 +19,6 @@ class ExpertationsAdvancedType extends AbstractType
         $builder
             ->add('father', HiddenType::class)
             ->add('fatherFloor',HiddenType::class)
-            /*->add('val1', CollectionType::class, [
-                'entry_type' => HiddenType::class,
-                'entry_options' => [
-                    'label' => false,
-                    'attr' => ['min' => 0]
-                ],
-                'label' => false,
-                'allow_add' => 'true',
-                'allow_delete' => 'true',
-                'required' => false,
-                //'value' => $item->getC1v()
-            ])*/
             ->add('val1', HiddenType::class)
             ->add('val2', HiddenType::class)
             ->add('val3', HiddenType::class)

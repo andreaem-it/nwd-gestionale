@@ -1,9 +1,9 @@
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background: #759EB8!important;">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background: none">
-        <a class="navbar-brand brand-logo hidden-md-down" href="{{ url('homepage') }}">
+        <a class="navbar-brand brand-logo hidden-md-down  animsition-link" href="{{ url('homepage') }}">
           <img src="{{ asset('images/logo_nwd_mini.png') }}" alt="logo" style="height:100%!important"/>
         </a>
-        <a class="navbar-brand brand-logo-mini" href="{{ url('homepage') }}" style="min-width: 130px;margin-left: 60px;">
+        <a class="navbar-brand brand-logo-mini  animsition-link" href="{{ url('homepage') }}" style="min-width: 130px;margin-left: 60px;">
           <img src="{{ asset('images/logo_nwd_mini.png') }}" alt="logo" style="height:100%!important;width: 350px"/>
         </a>
       </div>
@@ -88,10 +88,10 @@
                   {#</div>#}
                 </div>
               </a>
-              <a href="{{ url('security_change_password') }}" class="dropdown-item">
+              <a href="{{ url('security_change_password') }}" class="dropdown-item  animsition-link">
                 Cambia Password
               </a>
-              <a href="{{ path('logout') }}" class="dropdown-item">
+              <a href="{{ path('logout') }}" class="dropdown-item animsition-link">
                 Esci
               </a>
             </div>

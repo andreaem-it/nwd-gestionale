@@ -12,11 +12,11 @@
         {% endfor %}
         <div class="row">
             <div class="col-lg-6">
-                <h3 class="mt-5">Preventivi <small>Lista</small></h3>
+                <h3 class="mt-4">Preventivi <small>Lista</small></h3>
             </div>
             <div class="col-lg-6 grid-margin stretch-card mb-3 float-right">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body" style="padding: 1rem!important;">
                         <form class="row">
                             <div class="col-3 pr-0 border-right-0">
                                 <select id="searchType" class="form-control custom-select mt-1" id="inlineFormCustomSelectPref" style="height: calc(2.25rem + -2px)!important;">
@@ -82,12 +82,12 @@
                                             {{ item.date|date("d-m-Y") }}
                                         </td>
                                         <td>
-                                            <a href="{{ url('vedi_clienti', { id : item.client}) }}">
+                                            <a class=" animsition-link" href="{{ url('vedi_clienti', { id : item.client}) }}">
                                                 {{ functions.uidToName(item.client) }}
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="{{ url('impostazioni_utenti') }}">
+                                            <a class=" animsition-link" href="{{ url('impostazioni_utenti') }}">
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
@@ -99,13 +99,13 @@
                                         </td>#}
                                         <td style="width: 255px;">
                                             <div class="btn-group">
-                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right mr-1">
+                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right mr-1 animsition-link">
                                                     <span class="mdi mdi-eye-outline"></span>
                                                 </a>
-                                                <a href="{{ url('modifica_preventivo', {'id' : item.id}) }}" class="btn btn-warning btn-sm float-right mr-1">
+                                                <a href="{{ url('modifica_preventivo', {'id' : item.id}) }}" class="btn btn-warning btn-sm float-right mr-1 animsition-link">
                                                     <span class="mdi mdi-table-edit"></span>
                                                 </a>
-                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right mr-1">
+                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right mr-1 animsition-link">
                                                     <span class="mdi mdi-delete"></span>
                                                 </a>
                                             </div>
@@ -121,12 +121,12 @@
                                             {{ item.date|date("d-m-Y") }}
                                         </td>
                                         <td>
-                                            <a href="{{ url('vedi_clienti', { id : item.client}) }}">
+                                            <a class=" animsition-link" href="{{ url('vedi_clienti', { id : item.client}) }}">
                                                 {{ functions.uidToName(item.client) }}
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="{{ url('impostazioni_utenti') }}">
+                                            <a class=" animsition-link" href="{{ url('impostazioni_utenti') }}">
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
@@ -138,13 +138,13 @@
                                         </td>#}
                                         <td style="max-width: 200px;">
                                             <div class="btn-group">
-                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right">
+                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right animsition-link">
                                                     <span class="mdi mdi-eye-outline"></span>
                                                 </a>
-                                                <a href="" class="btn btn-warning btn-sm float-right">
+                                                <a href="" class="btn btn-warning btn-sm float-right animsition-link">
                                                     <span class="mdi mdi-table-edit"></span>
                                                 </a>
-                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right">
+                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right animsition-link">
                                                     <span class="mdi mdi-delete"></span>
                                                 </a>
                                             </div>
@@ -153,11 +153,15 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
-                            <div class="navigation mt-3">
-                                {{ knp_pagination_render(pagination) }}
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="navigation mt-1">
+                    {{ knp_pagination_render(pagination) }}
                 </div>
             </div>
         </div>

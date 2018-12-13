@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Intriro\Bundle\CsvBundle\IntriroCsvBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Symfony\Bundle\MakerBundle\MakerBundle(),
             new AppBundle\AppBundle(),
         ];
 

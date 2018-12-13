@@ -41,6 +41,7 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Symfony\\Component\\' => 18,
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
             'Symfony\\Bundle\\MonologBundle\\' => 29,
+            'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\' => 15,
             'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\ProxyManager\\' => 28,
@@ -61,6 +62,7 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'Predis\\' => 7,
+            'PhpParser\\' => 10,
         ),
         'M' => 
         array (
@@ -166,6 +168,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/..' . '/symfony/monolog-bundle',
         ),
+        'Symfony\\Bundle\\MakerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/maker-bundle/src',
+        ),
         'Symfony\\Bundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bundle',
@@ -233,6 +239,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'Predis\\' => 
         array (
             0 => __DIR__ . '/..' . '/predis/predis/src',
+        ),
+        'PhpParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
         'Monolog\\' => 
         array (

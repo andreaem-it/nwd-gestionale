@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\AppBundle;
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Expertations;
 use AppBundle\Entity\ExpertationsAdvanced;
@@ -118,6 +119,8 @@ class ExpertationsController extends Controller
     public function expertationsShowAction($id) {
 
         $item = $this->getDoctrine()->getRepository('AppBundle:Expertations')->find($id);
+
+        $id = $item->getId();
 
         $client = $this->getDoctrine()->getRepository('AppBundle:Clients')->find($item->getClient());
 
@@ -831,7 +834,8 @@ class ExpertationsController extends Controller
      */
     public function detailsAction($id) {
 
-        $item = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+        $repo = $this->getDoctrine()->getRepository(Expertations::class);
+        $item = $repo->find($id);
         $price = $this->getDoctrine()->getRepository(PricesAdvanced::class);
 
         $qtyPL = array_sum($item->getPl());
@@ -1061,13 +1065,14 @@ class ExpertationsController extends Controller
             array_push($prices, (1 * $price->findByCode('15.3.90')));
         }
 
-
-        dump($prices);
         $total = (array_sum($prices));
-        dump($total);
         $sconto = $total * $item->getSconto() / 100;
 
         //$vat = ($total - $sconto) * 22 / 100;
+
+        $item->setPrice($total);
+        $this->getDoctrine()->getManager()->persist($item);
+        $this->getDoctrine()->getManager()->flush();
 
         return $this->render('expertations/details.html.twig',[
             'item' => $item,
@@ -1130,25 +1135,28 @@ class ExpertationsController extends Controller
      */
     public function newExpertationAdvancedAction(Request $request,$id,$floor) {
 
-        //$item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['id' => $id]);
-        $qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
-        $qb ->select('exp')
-            ->where($qb->expr()->orX(
-                $qb->expr()->eq('exp.id', ':id'),
-                $qb->expr()->eq('exp.floor', ':floor')))
-            ->setParameter('id', $id)
-            ->setParameter('floor', array($floor));
-        $item = $qb->getQuery()->getSingleResult();
+        if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy('father', $id)) {
+            return $this->redirectToRoute('mostra_preventivo_avanzato', ['id' => $id]);
+        } else {
+            //$item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['id' => $id]);
+            $qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
+            $qb->select('exp')
+                ->where($qb->expr()->orX(
+                    $qb->expr()->eq('exp.id', ':id'),
+                    $qb->expr()->eq('exp.floor', ':floor')))
+                ->setParameter('id', $id)
+                ->setParameter('floor', array($floor));
+            $item = $qb->getQuery()->getSingleResult();
 
-        //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
-        $expertationsAdvanced = new ExpertationsAdvanced();
-        $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient();
+            //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+            $expertationsAdvanced = new ExpertationsAdvanced();
+            $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient();
 
-        $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
+            $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
 
-        //$check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
+            //$check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
 
-        //if ($check === null) {
+            //if ($check === null) {
 
             $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
                 ->add('submit', SubmitType::class, [
@@ -1234,14 +1242,15 @@ class ExpertationsController extends Controller
                 $em->persist($expAdv);
                 $em->flush();
 
+                dump($form);
+
                 $this->redirectToRoute('mostra_preventivo_avanzato', [
                     'id' => $expAdv->getId()
                 ]);
 
+            }
 
-        }
-
-        return $this->render('expertations/new.advanced.html.twig',[
+            return $this->render('expertations/new.advanced.html.twig', [
                 'form' => $form->createView(),
                 'item' => $item,
                 'titles' => $titles,
@@ -1249,7 +1258,8 @@ class ExpertationsController extends Controller
                 'count' => $ambientsCount,
                 'url' => $_SERVER['REQUEST_URI'],
                 'floor' => $floor
-        ]);
+            ]);
+        }
     }
 
     /**
@@ -1290,6 +1300,16 @@ class ExpertationsController extends Controller
     public function uidToName($uid) {
         return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getName();
     }
+
+    public function uidToSurName($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getSurname();
+    }
+
+    public function uidToGenre($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getGenre();
+    }
+
+
 
     public function userToName($user) {
         return $this->getDoctrine()->getRepository(Users::class)->find($user)->getUsername();
@@ -1372,6 +1392,10 @@ class ExpertationsController extends Controller
 
     function getRoom($id) {
         return $this->getDoctrine()->getRepository(Rooms::class)->find($id)->getName();
+    }
+
+    function getFloor($id) {
+        return $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->find($id)->getFloor();
     }
 
     /** AJAX FUNCTIONS */
@@ -1485,6 +1509,14 @@ class ExpertationsController extends Controller
             return TRUE;
         } else {
             return FALSE;
+        }
+    }
+
+    public function hasExpAdv($id) {
+        if ($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->find($id)) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

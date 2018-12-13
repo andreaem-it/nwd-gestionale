@@ -405,6 +405,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::changePasswordAction',  '_route' => 'security_change_password',);
         }
 
+        // statistiche
+        if ('/statistiche' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\StatsController::statsAction',  '_route' => 'statistiche',);
+        }
+
         if (0 === strpos($pathinfo, '/impostazioni')) {
             // impostazioni_generali
             if ('/impostazioni/generali' === $trimmedPathinfo) {

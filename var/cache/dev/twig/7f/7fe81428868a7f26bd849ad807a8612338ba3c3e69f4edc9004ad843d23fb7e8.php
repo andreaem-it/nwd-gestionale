@@ -67,47 +67,78 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
         // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/pace.min.js"), "html", null, true);
         echo "\"></script>
-        <link rel=\"stylesheet\" href=\"";
+        <script src=\"";
         // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/animsition.min.js"), "html", null, true);
+        echo "\"></script>
+        <link rel=\"stylesheet\" href=\"";
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.min.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 18
+        // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fontawesome.all.min.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 19
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/pace-loading.css"), "html", null, true);
         echo "\">
         <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/animsition.min.css"), "html", null, true);
+        echo "\"/>
     </head>
     <body>
         <div class=\"container-scroller\">
             ";
-        // line 24
-        $this->loadTemplate("template/navbar.html.twig", "base.html.twig", 24)->display($context);
-        // line 25
-        echo "            <div class=\"container-fluid page-body-wrapper\">
-                ";
         // line 26
-        $this->loadTemplate("template/sidebar.html.twig", "base.html.twig", 26)->display($context);
+        $this->loadTemplate("template/navbar.html.twig", "base.html.twig", 26)->display($context);
         // line 27
+        echo "            <div class=\"container-fluid page-body-wrapper animsition\">
+                ";
+        // line 28
+        $this->loadTemplate("template/sidebar.html.twig", "base.html.twig", 28)->display($context);
+        // line 29
         echo "                ";
         $this->displayBlock('body', $context, $blocks);
-        // line 28
+        // line 30
         echo "            </div>
         </div>
         ";
-        // line 30
-        $this->loadTemplate("template/footer.html.twig", "base.html.twig", 30)->display($context);
-        // line 31
+        // line 32
+        $this->loadTemplate("template/footer.html.twig", "base.html.twig", 32)->display($context);
+        // line 33
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
-        echo "    </body>
+        // line 34
+        echo "        <script>
+            \$(document).ready(function() {
+                \$(\".animsition\").animsition({
+                    inClass: 'fade-in',
+                    outClass: 'fade-out',
+                    inDuration: 1500,
+                    outDuration: 800,
+                    linkElement: '.animsition-link',
+                    loading: false,
+                    loadingParentElement: 'body',
+                    loadingClass: 'animsition-loading',
+                    loadingInner: '', // e.g '<img src=\"loading.svg\" />'
+                    timeout: false,
+                    timeoutCountdown: 5000,
+                    onLoadEvent: true,
+                    browser: [ 'animation-duration', '-webkit-animation-duration'],
+                    overlay : false,
+                    overlayClass : 'animsition-overlay-slide',
+                    overlayParentElement : 'body',
+                    transition: function(url){ window.location.href = url; }
+                });
+            });
+        </script>
+    </body>
 </html>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -151,7 +182,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
 
     }
 
-    // line 27
+    // line 29
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -168,7 +199,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
 
     }
 
-    // line 31
+    // line 33
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -197,7 +228,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
 
     public function getDebugInfo()
     {
-        return array (  172 => 31,  155 => 27,  138 => 12,  121 => 6,  110 => 32,  107 => 31,  105 => 30,  101 => 28,  98 => 27,  96 => 26,  93 => 25,  91 => 24,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  68 => 16,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
+        return array (  203 => 33,  186 => 29,  169 => 12,  152 => 6,  118 => 34,  115 => 33,  113 => 32,  109 => 30,  106 => 29,  104 => 28,  101 => 27,  99 => 26,  92 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  68 => 16,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -218,21 +249,46 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
         <script src=\"{{ asset('js/pace.min.js') }}\"></script>
+        <script src=\"{{ asset('js/animsition.min.js') }}\"></script>
         <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.min.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.all.min.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/pace-loading.css') }}\">
         <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\" />
+        <link rel=\"stylesheet\" href=\"{{ asset('css/animsition.min.css') }}\"/>
     </head>
     <body>
         <div class=\"container-scroller\">
             {% include 'template/navbar.html.twig' %}
-            <div class=\"container-fluid page-body-wrapper\">
+            <div class=\"container-fluid page-body-wrapper animsition\">
                 {% include 'template/sidebar.html.twig' %}
                 {% block body %}{% endblock %}
             </div>
         </div>
         {% include 'template/footer.html.twig' %}
         {% block javascripts %}{% endblock %}
+        <script>
+            \$(document).ready(function() {
+                \$(\".animsition\").animsition({
+                    inClass: 'fade-in',
+                    outClass: 'fade-out',
+                    inDuration: 1500,
+                    outDuration: 800,
+                    linkElement: '.animsition-link',
+                    loading: false,
+                    loadingParentElement: 'body',
+                    loadingClass: 'animsition-loading',
+                    loadingInner: '', // e.g '<img src=\"loading.svg\" />'
+                    timeout: false,
+                    timeoutCountdown: 5000,
+                    onLoadEvent: true,
+                    browser: [ 'animation-duration', '-webkit-animation-duration'],
+                    overlay : false,
+                    overlayClass : 'animsition-overlay-slide',
+                    overlayParentElement : 'body',
+                    transition: function(url){ window.location.href = url; }
+                });
+            });
+        </script>
     </body>
 </html>", "base.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/base.html.twig");
     }

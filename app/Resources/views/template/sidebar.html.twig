@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" style="-webkit-box-shadow: 2px 0 5px -2px #888;box-shadow: 2px 0 5px -2px #888;" id="navbarSupportedContent">
   <ul class="nav">
     <li class="nav-item nav-profile">
-      <div class="nav-link">
+      <div class="nav-link animsition-link">
         <div class="user-wrapper">
           <div class="profile-image">
             <img class="img-xs rounded-circle border" src="{{ asset('users/' ~ app.user.picture) }}" alt="profile image" style="width: 100%">
@@ -43,7 +43,7 @@
       </div>
     </li>
     <li class="nav-item {% if app.request.attributes.get('_route') == 'dashboard'%}active{% endif %}">
-      <a class="nav-link" href="{{ url('dashboard') }}">
+      <a class="nav-link animsition-link" href="{{ url('dashboard') }}">
         <i class="menu-icon mdi mdi-television"></i>
         <span class="menu-title">Dashboard</span>
       </a>
@@ -57,13 +57,13 @@
       <div class="collapse {% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' or app.request.attributes.get('_route') == 'lista_preventivi' %}show{% endif %}" id="ui-basic">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}" href="{{ url('nuovo_preventivo') }}">Nuovo Base</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}" href="{{ url('nuovo_preventivo') }}">Nuovo Base</a>
           </li>
           {#<li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}" href="{{ url('nuovo_preventivo_avanzato') }}">Nuovo Avanzato</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}" href="{{ url('nuovo_preventivo_avanzato') }}">Nuovo Avanzato</a>
           </li>#}
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}" href="{{ url('lista_preventivi') }}">Lista</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}" href="{{ url('lista_preventivi') }}">Lista</a>
           </li>
         </ul>
       </div>
@@ -77,10 +77,10 @@
       <div class="collapse {% if app.request.attributes.get('_route') == 'nuovo_cliente' or app.request.attributes.get('_route') == 'clienti' %}show{% endif %}" id="nav-clienti">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'nuovo_cliente'%}active{% endif %}" href="{{ url('nuovo_cliente') }}">Nuovo</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_cliente'%}active{% endif %}" href="{{ url('nuovo_cliente') }}">Nuovo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'clienti' %}active{% endif %}" href="{{ url('clienti') }}">Lista</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'clienti' %}active{% endif %}" href="{{ url('clienti') }}">Lista</a>
           </li>
         </ul>
       </div>
@@ -94,15 +94,29 @@
       <div class="collapse {% if app.request.attributes.get('_route') == 'prezzi_listino'%}show{% endif %}" id="nav-prezzi">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}" href="{{ path('prezzi_listino') }}">Listino</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}" href="{{ path('prezzi_listino') }}">Listino</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'settings_prices' %}active{% endif %}" href="{{ path('settings_prices') }}">Prezzario</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'settings_prices' %}active{% endif %}" href="{{ path('settings_prices') }}">Prezzario</a>
           </li>
         </ul>
       </div>
     </li>
-      {% if is_granted('ROLE_ADMIN') %}
+    {% if is_granted('ROLE_ADMIN') %}
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#nav-stats" aria-expanded="{% if app.request.attributes.get('_route') == 'statistiche' %}true{% else %}false{% endif %}" aria-controls="nav-settings">
+        <i class="menu-icon mdi mdi-backup-restore"></i>
+        <span class="menu-title">Statistiche</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse {% if app.request.attributes.get('_route') == 'statistiche' %}show{% endif %}" id="nav-stats">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'statistiche' %}active{% endif %}" href="{{ url('statistiche') }}">Riepilogo</a>
+          </li>
+        </ul>
+      </div>
+    </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#nav-settings" aria-expanded="{% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' or app.request.attributes.get('_route') == 'settings_parameters' %}true{% else %}false{% endif %}" aria-controls="nav-settings">
         <i class="menu-icon mdi mdi-backup-restore"></i>
@@ -112,19 +126,19 @@
       <div class="collapse {% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' or app.request.attributes.get('_route') == 'settings_parameters' %}show{% endif %}" id="nav-settings">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_generali' %}active{% endif %}" href="{{ url('impostazioni_generali') }}">Generali</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_generali' %}active{% endif %}" href="{{ url('impostazioni_generali') }}">Generali</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'settings_parameters' %}active{% endif %}" href="{{ url('settings_parameters') }}">Parametri</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'settings_parameters' %}active{% endif %}" href="{{ url('settings_parameters') }}">Parametri</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_utenti' %}active{% endif %}" href="{{ url('impostazioni_utenti') }}">Utenti</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_utenti' %}active{% endif %}" href="{{ url('impostazioni_utenti') }}">Utenti</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_gruppi' %}active{% endif %}" href="{{ url('impostazioni_gruppi') }}">Gruppi</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_gruppi' %}active{% endif %}" href="{{ url('impostazioni_gruppi') }}">Gruppi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if app.request.attributes.get('_route') == 'impostazioni_annunci' %}active{% endif %}" href="{{ url('impostazioni_annunci') }}">Annunci</a>
+            <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_annunci' %}active{% endif %}" href="{{ url('impostazioni_annunci') }}">Annunci</a>
           </li>
         </ul>
       </div>
@@ -181,7 +195,7 @@
       }else {
           $('#sidebar').animate({left: -10}, 300);
           $(this).animate({left: 245}, 300);
-          $('.main-panel').animate({marginLeft: 0},50);
+          $('.main-panel').animate({marginLeft: -10},50);
           //$('.content-wrapper').width('82%').animate(50);
           $('#nav-hide-btn-icon').toggleClass('down');
           opened = true;

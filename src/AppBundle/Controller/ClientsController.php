@@ -85,6 +85,22 @@ class ClientsController extends Controller
                     'class' => 'form-control'],
                 'label' => 'Nome'
             ])
+            ->add('surname', TextType::class,
+                [ 'attr' => [
+                    'class' => 'form-control'],
+                    'label' => 'Cognome'
+                ])
+            ->add('Genre', ChoiceType::class, [
+                'choices' => [
+                    '-- Seleziona --' => 9,
+                    'Azienda' => 0,
+                    'Uomo' => 1,
+                    'Donna' => 2
+                ], [
+                    'attr' => [
+                    'class' => 'form-control'],
+                    'label' => 'Sesso'
+                ]])
             ->add('address', TextType::class, [ 'attr' => [
                 'class' => 'form-control'],
                 'label' => 'Indirizzo'

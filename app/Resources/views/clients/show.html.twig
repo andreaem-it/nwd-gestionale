@@ -12,12 +12,12 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
-                            <h3>Anagrafica <small><a class="float-right" href="" style="margin-top: 0.8rem !important;">Modifica</a></small></h3>
+                            <h3>Anagrafica <small><a class="float-right animsition-link" href="" style="margin-top: 0.8rem !important;">Modifica</a></small></h3>
                         </div>
                         <strong>Nome:</strong> {{ client.name }} <br/>
                         <strong>Indirizzo:</strong> {{ client.address }}, {{ client.postalCode }}, {{ client.city }} ({{ client.province }}) <br/>
-                        <strong>Telefono:</strong> <a href="tel:{{ client.phone }}">{{ client.phone }}</a>  <br/>
-                        <strong>E-Mail:</strong> <a href="mailto:{{ client.email }}">{{ client.email }}</a>  <br/>
+                        <strong>Telefono:</strong> <a class=" animsition-link" href="tel:{{ client.phone }}">{{ client.phone }}</a>  <br/>
+                        <strong>E-Mail:</strong> <a class=" animsition-link" href="mailto:{{ client.email }}">{{ client.email }}</a>  <br/>
 
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                                             {{ item.expiration|date("d-m-Y") }}
                                         </td>
                                         <td style="width: 60px;">
-                                            <a href="{{ url('mostra_preventivo',{'id' : 1}) }}" class="btn btn-primary btn-sm float-right mr-1">
+                                            <a href="{{ url('mostra_preventivo',{'id' : 1}) }}" class="btn btn-primary btn-sm float-right mr-1 animsition-link">
                                                 <span class="mdi mdi-eye-outline"></span>
                                             </a>
                                         </td>

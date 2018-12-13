@@ -31,7 +31,8 @@
                     <table class="table table-bordered table-responsive-md">
                         <tr>
                             <td><strong>CLIENTE</strong></td>
-                            <td class="text-center">Proposta n. {{ data.id }} del {{ data.date|date("d.m.Y") }} per <br/> Egregio Signor {{ func.uidToName(data.client) }}</td>
+                            {% dump(data.client) %}
+                            <td class="text-center">Proposta n. {{ data.pid }} del {{ data.date|date("d.m.Y") }} per <br/> {% if func.uidToGenre(data.client) == 1 %}Egregio Signor {% elseif func.uidToGenre(data.client) == 2 %}Gentile Signora {% else %}Spett.le {% endif %}{{ func.uidToSurName(data.client) }} {{ func.uidToName(data.client) }}</td>
                             <td class="text-center"><strong>PIANI CASA</strong></td>
                             <td>{{ data.pianiCasa }}</td>
                             <td class="text-center"><strong>CIVILE</strong></td>

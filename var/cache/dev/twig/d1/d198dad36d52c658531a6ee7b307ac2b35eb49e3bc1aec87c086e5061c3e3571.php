@@ -30,7 +30,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         echo "<nav class=\"sidebar sidebar-offcanvas\" id=\"sidebar\" style=\"-webkit-box-shadow: 2px 0 5px -2px #888;box-shadow: 2px 0 5px -2px #888;\" id=\"navbarSupportedContent\">
   <ul class=\"nav\">
     <li class=\"nav-item nav-profile\">
-      <div class=\"nav-link\">
+      <div class=\"nav-link animsition-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
             <img class=\"img-xs rounded-circle border\" src=\"";
@@ -121,7 +121,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
             echo "active";
         }
         echo "\">
-      <a class=\"nav-link\" href=\"";
+      <a class=\"nav-link animsition-link\" href=\"";
         // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("dashboard");
         echo "\">
@@ -150,7 +150,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         echo "\" id=\"ui-basic\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
+            <a class=\"nav-link animsition-link ";
         // line 60
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 60, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "nuovo_preventivo")) {
             echo "active";
@@ -162,7 +162,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
           ";
         // line 65
         echo "          <li class=\"nav-item\">
-            <a class=\"nav-link ";
+            <a class=\"nav-link animsition-link ";
         // line 66
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 66, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "lista_preventivi")) {
             echo "active";
@@ -195,7 +195,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         echo "\" id=\"nav-clienti\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
+            <a class=\"nav-link animsition-link ";
         // line 80
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 80, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "nuovo_cliente")) {
             echo "active";
@@ -205,7 +205,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         echo "\">Nuovo</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
+            <a class=\"nav-link animsition-link ";
         // line 83
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 83, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "clienti")) {
             echo "active";
@@ -238,7 +238,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         echo "\" id=\"nav-prezzi\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
+            <a class=\"nav-link animsition-link ";
         // line 97
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 97, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino")) {
             echo "active";
@@ -248,7 +248,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         echo "\">Listino</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
+            <a class=\"nav-link animsition-link ";
         // line 100
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 100, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_prices")) {
             echo "active";
@@ -260,14 +260,47 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         </ul>
       </div>
     </li>
-      ";
+    ";
         // line 105
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 106
             echo "    <li class=\"nav-item\">
-      <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-settings\" aria-expanded=\"";
+      <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-stats\" aria-expanded=\"";
             // line 107
-            if ((((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_generali") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_utenti")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_gruppi")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_annunci")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_parameters"))) {
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "statistiche")) {
+                echo "true";
+            } else {
+                echo "false";
+            }
+            echo "\" aria-controls=\"nav-settings\">
+        <i class=\"menu-icon mdi mdi-backup-restore\"></i>
+        <span class=\"menu-title\">Statistiche</span>
+        <i class=\"menu-arrow\"></i>
+      </a>
+      <div class=\"collapse ";
+            // line 112
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 112, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "statistiche")) {
+                echo "show";
+            }
+            echo "\" id=\"nav-stats\">
+        <ul class=\"nav flex-column sub-menu\">
+          <li class=\"nav-item\">
+            <a class=\"nav-link animsition-link ";
+            // line 115
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 115, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "statistiche")) {
+                echo "active";
+            }
+            echo "\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("statistiche");
+            echo "\">Riepilogo</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class=\"nav-item\">
+      <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-settings\" aria-expanded=\"";
+            // line 121
+            if ((((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 121, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_generali") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 121, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_utenti")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 121, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_gruppi")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 121, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_annunci")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 121, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_parameters"))) {
                 echo "true";
             } else {
                 echo "false";
@@ -278,16 +311,16 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         <i class=\"menu-arrow\"></i>
       </a>
       <div class=\"collapse ";
-            // line 112
-            if ((((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 112, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_generali") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 112, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_utenti")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 112, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_gruppi")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 112, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_annunci")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 112, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_parameters"))) {
+            // line 126
+            if ((((((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 126, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_generali") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 126, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_utenti")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 126, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_gruppi")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 126, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_annunci")) || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 126, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_parameters"))) {
                 echo "show";
             }
             echo "\" id=\"nav-settings\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
-            // line 115
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 115, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_generali")) {
+            <a class=\"nav-link animsition-link ";
+            // line 129
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 129, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_generali")) {
                 echo "active";
             }
             echo "\" href=\"";
@@ -295,9 +328,9 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
             echo "\">Generali</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
-            // line 118
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 118, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_parameters")) {
+            <a class=\"nav-link animsition-link ";
+            // line 132
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 132, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_parameters")) {
                 echo "active";
             }
             echo "\" href=\"";
@@ -305,9 +338,9 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
             echo "\">Parametri</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
-            // line 121
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 121, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_utenti")) {
+            <a class=\"nav-link animsition-link ";
+            // line 135
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 135, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_utenti")) {
                 echo "active";
             }
             echo "\" href=\"";
@@ -315,9 +348,9 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
             echo "\">Utenti</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
-            // line 124
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 124, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_gruppi")) {
+            <a class=\"nav-link animsition-link ";
+            // line 138
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 138, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_gruppi")) {
                 echo "active";
             }
             echo "\" href=\"";
@@ -325,9 +358,9 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
             echo "\">Gruppi</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link ";
-            // line 127
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 127, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_annunci")) {
+            <a class=\"nav-link animsition-link ";
+            // line 141
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 141, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "impostazioni_annunci")) {
                 echo "active";
             }
             echo "\" href=\"";
@@ -339,7 +372,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
     </li>
     ";
         }
-        // line 133
+        // line 147
         echo "  </ul>
 </nav>
 <div id=\"nav-hide-btn-holder\">
@@ -391,7 +424,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       }else {
           \$('#sidebar').animate({left: -10}, 300);
           \$(this).animate({left: 245}, 300);
-          \$('.main-panel').animate({marginLeft: 0},50);
+          \$('.main-panel').animate({marginLeft: -10},50);
           //\$('.content-wrapper').width('82%').animate(50);
           \$('#nav-hide-btn-icon').toggleClass('down');
           opened = true;
@@ -401,7 +434,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
   });
 </script>
 ";
-        // line 193
+        // line 207
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -419,7 +452,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 194
+        // line 208
         echo "<script src=\"https://code.jquery.com/ui/1.12.0/jquery-ui.min.js\"></script>
 ";
         
@@ -442,7 +475,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
 
     public function getDebugInfo()
     {
-        return array (  423 => 194,  405 => 193,  343 => 133,  330 => 127,  320 => 124,  310 => 121,  300 => 118,  290 => 115,  282 => 112,  270 => 107,  267 => 106,  265 => 105,  253 => 100,  243 => 97,  235 => 94,  223 => 89,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
+        return array (  456 => 208,  438 => 207,  376 => 147,  363 => 141,  353 => 138,  343 => 135,  333 => 132,  323 => 129,  315 => 126,  303 => 121,  290 => 115,  282 => 112,  270 => 107,  267 => 106,  265 => 105,  253 => 100,  243 => 97,  235 => 94,  223 => 89,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
     }
 
     public function getSourceContext()
@@ -450,7 +483,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         return new Twig_Source("<nav class=\"sidebar sidebar-offcanvas\" id=\"sidebar\" style=\"-webkit-box-shadow: 2px 0 5px -2px #888;box-shadow: 2px 0 5px -2px #888;\" id=\"navbarSupportedContent\">
   <ul class=\"nav\">
     <li class=\"nav-item nav-profile\">
-      <div class=\"nav-link\">
+      <div class=\"nav-link animsition-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
             <img class=\"img-xs rounded-circle border\" src=\"{{ asset('users/' ~ app.user.picture) }}\" alt=\"profile image\" style=\"width: 100%\">
@@ -492,7 +525,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       </div>
     </li>
     <li class=\"nav-item {% if app.request.attributes.get('_route') == 'dashboard'%}active{% endif %}\">
-      <a class=\"nav-link\" href=\"{{ url('dashboard') }}\">
+      <a class=\"nav-link animsition-link\" href=\"{{ url('dashboard') }}\">
         <i class=\"menu-icon mdi mdi-television\"></i>
         <span class=\"menu-title\">Dashboard</span>
       </a>
@@ -506,13 +539,13 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       <div class=\"collapse {% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' or app.request.attributes.get('_route') == 'lista_preventivi' %}show{% endif %}\" id=\"ui-basic\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo') }}\">Nuovo Base</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo') }}\">Nuovo Base</a>
           </li>
           {#<li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo_avanzato') }}\">Nuovo Avanzato</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo_avanzato') }}\">Nuovo Avanzato</a>
           </li>#}
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}\" href=\"{{ url('lista_preventivi') }}\">Lista</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'lista_preventivi' %}active{% endif %}\" href=\"{{ url('lista_preventivi') }}\">Lista</a>
           </li>
         </ul>
       </div>
@@ -526,10 +559,10 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       <div class=\"collapse {% if app.request.attributes.get('_route') == 'nuovo_cliente' or app.request.attributes.get('_route') == 'clienti' %}show{% endif %}\" id=\"nav-clienti\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'nuovo_cliente'%}active{% endif %}\" href=\"{{ url('nuovo_cliente') }}\">Nuovo</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_cliente'%}active{% endif %}\" href=\"{{ url('nuovo_cliente') }}\">Nuovo</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'clienti' %}active{% endif %}\" href=\"{{ url('clienti') }}\">Lista</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'clienti' %}active{% endif %}\" href=\"{{ url('clienti') }}\">Lista</a>
           </li>
         </ul>
       </div>
@@ -543,15 +576,29 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       <div class=\"collapse {% if app.request.attributes.get('_route') == 'prezzi_listino'%}show{% endif %}\" id=\"nav-prezzi\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}\" href=\"{{ path('prezzi_listino') }}\">Listino</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}\" href=\"{{ path('prezzi_listino') }}\">Listino</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'settings_prices' %}active{% endif %}\" href=\"{{ path('settings_prices') }}\">Prezzario</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'settings_prices' %}active{% endif %}\" href=\"{{ path('settings_prices') }}\">Prezzario</a>
           </li>
         </ul>
       </div>
     </li>
-      {% if is_granted('ROLE_ADMIN') %}
+    {% if is_granted('ROLE_ADMIN') %}
+    <li class=\"nav-item\">
+      <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-stats\" aria-expanded=\"{% if app.request.attributes.get('_route') == 'statistiche' %}true{% else %}false{% endif %}\" aria-controls=\"nav-settings\">
+        <i class=\"menu-icon mdi mdi-backup-restore\"></i>
+        <span class=\"menu-title\">Statistiche</span>
+        <i class=\"menu-arrow\"></i>
+      </a>
+      <div class=\"collapse {% if app.request.attributes.get('_route') == 'statistiche' %}show{% endif %}\" id=\"nav-stats\">
+        <ul class=\"nav flex-column sub-menu\">
+          <li class=\"nav-item\">
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'statistiche' %}active{% endif %}\" href=\"{{ url('statistiche') }}\">Riepilogo</a>
+          </li>
+        </ul>
+      </div>
+    </li>
     <li class=\"nav-item\">
       <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-settings\" aria-expanded=\"{% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' or app.request.attributes.get('_route') == 'settings_parameters' %}true{% else %}false{% endif %}\" aria-controls=\"nav-settings\">
         <i class=\"menu-icon mdi mdi-backup-restore\"></i>
@@ -561,19 +608,19 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       <div class=\"collapse {% if app.request.attributes.get('_route') == 'impostazioni_generali' or app.request.attributes.get('_route') == 'impostazioni_utenti' or app.request.attributes.get('_route') == 'impostazioni_gruppi' or app.request.attributes.get('_route') == 'impostazioni_annunci' or app.request.attributes.get('_route') == 'settings_parameters' %}show{% endif %}\" id=\"nav-settings\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'impostazioni_generali' %}active{% endif %}\" href=\"{{ url('impostazioni_generali') }}\">Generali</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_generali' %}active{% endif %}\" href=\"{{ url('impostazioni_generali') }}\">Generali</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'settings_parameters' %}active{% endif %}\" href=\"{{ url('settings_parameters') }}\">Parametri</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'settings_parameters' %}active{% endif %}\" href=\"{{ url('settings_parameters') }}\">Parametri</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'impostazioni_utenti' %}active{% endif %}\" href=\"{{ url('impostazioni_utenti') }}\">Utenti</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_utenti' %}active{% endif %}\" href=\"{{ url('impostazioni_utenti') }}\">Utenti</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'impostazioni_gruppi' %}active{% endif %}\" href=\"{{ url('impostazioni_gruppi') }}\">Gruppi</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_gruppi' %}active{% endif %}\" href=\"{{ url('impostazioni_gruppi') }}\">Gruppi</a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link {% if app.request.attributes.get('_route') == 'impostazioni_annunci' %}active{% endif %}\" href=\"{{ url('impostazioni_annunci') }}\">Annunci</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'impostazioni_annunci' %}active{% endif %}\" href=\"{{ url('impostazioni_annunci') }}\">Annunci</a>
           </li>
         </ul>
       </div>
@@ -630,7 +677,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       }else {
           \$('#sidebar').animate({left: -10}, 300);
           \$(this).animate({left: 245}, 300);
-          \$('.main-panel').animate({marginLeft: 0},50);
+          \$('.main-panel').animate({marginLeft: -10},50);
           //\$('.content-wrapper').width('82%').animate(50);
           \$('#nav-hide-btn-icon').toggleClass('down');
           opened = true;

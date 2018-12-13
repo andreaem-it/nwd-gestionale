@@ -16,9 +16,13 @@
                     <div class="row">
                         <div class="col-lg-2">
                             <strong>Cliente</strong>
-                            <p><small>{{ func.uidToName(item.client) }}</small></p>
+                            <p><small>{{ func.uidToSurName(item.client) }} {{ func.uidToName(item.client) }}</small></p>
                         </div>
                         <div class="col-lg-2 ">
+                            <strong>Data Generazione</strong>
+                            <p><small>{{ item.date|date("d/m/Y") }}</small></p>
+                        </div>
+                        <div class="col-lg-2">
                             <strong>Tipo Impianto</strong>
                             <p><small>{{ func.plantIntToName(item.tipo) }}</small></p>
                         </div>
@@ -35,54 +39,70 @@
                             <p><small>{{ func.heatingIntToName(item.riscaldamento) }}</small></p>
                         </div>
                         <div class="col-lg-2 ">
-                            <strong>Opere Murarie</strong>
-                            <p><small>{{ func.convertOMtoName(item.opereMurarie) }}</small></p>
+                            <strong>{% if item.opereMurarie == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Opere Murarie </strong><br>
+                            <strong>{% if item.opereMurarieIntonaco == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Intonaco </strong><br>
+                            <strong>{% if item.opereMurariePietra == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Pietra</strong>
                         </div>
-                        <div class="col-lg-1 ">
-                            <strong>Trifase</strong>
-                            <p>
-                                <small>
-                                    {% if item.trifase == 0 %}
-                                        No
-                                    {% else %}
-                                        Si
-                                    {% endif %}
-                                </small>
-                            </p>
-                        </div>
-                        <div class="col-lg-1 ">
+                        <!--<div class="col-lg-1 ">
                             <strong>Sconto</strong>
                             <p><small>{{ item.sconto }}</small></p>
-                        </div>
+                        </div>-->
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-lg-1">
                             <strong>Livello </strong>
                             <p><small>{{ item.level }}</small></p>
                         </div>
-                        <div class="col-lg-2 ">
-                            <strong>Metri Quadrati</strong>
+                        <div class="col-lg-1">
+                            <strong>Metratura</strong>
                             <p><small>{{ item.squareMeters }}</small></p>
                         </div>
-                        <div class="col-lg-2 ">
-                            <strong>Data Generazione</strong>
-                            <p><small>{{ item.date|date("d/m/Y") }}</small></p>
+                        <div class="col-lg-1 ">
+                            <strong>{% if item.trifase == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Trifase </strong><br>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Circuiti</strong>
+                            <p><small>{{ item.numCircuiti }}</small></p>
                         </div>
                         <div class="col-lg-2 ">
-                            <strong>Prezzo Preliminare</strong>
-                            <p><small>{{ item.price|round(2) }} €</small></p>
+                            <strong>{% if item.illumSicurezza >= 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Illum. Sicurezza </strong>&nbsp;&nbsp;{{ item.illumSicurezza }}<br>
+                            <strong>{% if item.lampada == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Lampada fornita </strong><br>
                         </div>
-                        <div class="col-lg-2 ">
-                            <strong>Illum. Sicurezza</strong>
-                            <p><small>{{ item.illumSicurezza }}</small></p>
-                        </div>
-                        <div class="col-lg-1">
+                        <div class="col-lg-3">
                             <strong>SPD</strong>
-                            <p><small>{{ item.spd }}</small></p>
+                            <p><small>{% if item.spd == 1 %}SPD ad arrivo linea, Tolleranza R1{% elseif item.spd == 2 %}SPD ad arrivo linea, Tolleranza R1, Protezione sovratensioni{% endif %}</small></p>
                         </div>
                         <div class="col-lg-2 ">
                             <strong>Imp. Ausiliari</strong>
-                            <p><small>{{ item.impAusiliari }} </small></p>
+                            <p><small>{% if item.impAusiliari == 1 %}Campanello, citofono e videocitofono{% elseif item.impAusiliari == 2 %}Campanello, citofono e antintrusione, Controllo carichi{% elseif item.impAusiliari == 3 %}Campanello, citofono e antintrusione, Controllo carichi, Domotica{% endif %} </small></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-2">
+                            <strong>{% if item.campanello == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Campanello</strong><br>
+                            <strong>{% if item.citVid == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Citofono</strong><br>
+                            <strong>{% if item.citVid == 2 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;VideoCitofono</strong><br>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>{% if item.antenna == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Predisposizione Antenna</strong><br>
+                            <strong>{% if item.allarme == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Predisposizione Allarme</strong><br>
+                            <strong>{% if item.illumEsterna == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Illuminazione Esterna</strong><br>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Prese Dati</strong>
+                            <p><small>{{ item.numPreseDati }}</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Prese Telefono</strong>
+                            <p><small>{{ item.numPreseTelefono }}</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Sconto</strong>
+                            <p><small>{{ item.sconto }} %</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Totale Preliminare</strong>
+                            <p><small>{{ item.price }} €</small></p>
                         </div>
                     </div>
                 </div>
@@ -827,10 +847,10 @@
                                         <div class="card-body pt-2 pb-4">
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3">Genera</a>
+                                                    <a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3 animsition-link">Genera</a>
                                                 </div>
                                                 <div class="col-6">
-                                                    <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3">Annulla</a>
+                                                    <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 animsition-link">Annulla</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -872,9 +892,8 @@
                     $('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
                 }
                 $('#appbundle_expertationsadvanced_father').val({{ item.id }});
-                $('#appbundle_expertationsadvanced_fatherFloor').val('1');
+                $('#appbundle_expertationsadvanced_fatherFloor').val(0);
                 $('#appbundle_expertationsadvanced_submit').trigger('click')
-
             });
 
             function collect(valn) {
@@ -958,6 +977,21 @@
             width: 100px;
             min-width: 100px;
 
+        }
+        .table td {
+            min-width: 210px;
+        }
+        .table td:hover {
+            background-color: #F0F0EE;
+        }
+        .table th {
+            text-align: center;
+        }
+        .form-control {
+            border:none!important;
+            width: 150px!important;
+            text-align: center!important;
+            background-color: transparent;
         }
         select {
             width:100%!important;

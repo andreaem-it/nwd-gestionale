@@ -277,101 +277,100 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="freeze-table">
-                            <table class="table table- ">
-                                <thead id="table-head" class="table-light">
-                                <th style="max-width:20px; width: 20px; min-width: 20px;"></th>
-                                <th>
-                                    Piano
-                                </th>
-                                <th class="tbl-lg">
-                                    Ambiente
-                                </th>
-                                <th  style="min-width:270px" class="tbl-lg">
-                                    Nome
-                                </th>
-                                <th style="min-width:150px">
-                                    Punti prese
-                                </th>
-                                <th style="min-width:150px">
-                                    Punti Luce
-                                </th>
-                                <th style="min-width:150px">
-                                    Prese TV
-                                </th>
-                                <th style="min-width:150px">
-                                    Punti di Comando
-                                </th>
-                                <th style="min-width:150px">
-                                    Tiranti
-                                </th>
-                                </thead>
-                                <tbody>
-                                {% set i = 0 %}
-                                {% for items in form.floor.vars.value %}
-                                    <tr>
-                                        <td></td>
-                                        <td style="position: relative;">
-                                            {{ form_widget(form.floor, ['data',form.floor.vars.value[i]]) }}
-                                        </td>
-                                        <td>
-                                            {{ form_widget(form.ambient, ['placeholder', form.ambient.vars.value[i]]) }}
-                                        </td>
-                                        <td style="min-width:270px;position: relative;">
-                                            {{ form_widget(form.name) }}
-                                        </td>
-                                        <td style="min-width:150px;position: relative;">
-                                            {{ form_widget(form.pp, ['data', form.pp.vars.value[i]]) }}
-                                        </td>
-                                        <td style="min-width:150px;position: relative;">
-                                            {{ form_widget(form.pl) }}
-                                        </td>
-                                        <td style="min-width:150px;position: relative;">
-                                            {{ form_widget(form.pt) }}
-                                        </td>
-                                        <td style="min-width:150px;position: relative;">
-                                            {{ form_widget(form.c1v) }}
-                                        </td>
-                                        <td style="min-width:150px;position: relative;">
-                                            {{ form_widget(form.c2v) }}
-                                        </td>
+                            <!--<table class="table">
+                                <thead id="table-head" class="table-light">-->
+                                    <!--<th style="max-width:20px; width: 20px; min-width: 20px;"></th>-->
+                                <div class="row">
+                                    <div class="col-1">
+                                        Piano
+                                    </div>
+                                    <div class="col-2" class="tbl-lg">
+                                        Ambiente
+                                    </div>
+                                    <div class="col-auto"  style="min-width:270px" class="tbl-lg">
+                                        Nome
+                                    </div>
+                                    <div class="col-auto" style="min-width:150px">
+                                        Punti prese
+                                    </div>
+                                    <div class="col-auto" style="min-width:150px">
+                                        Punti Luce
+                                    </div>
+                                    <div class="col-auto" style="min-width:150px">
+                                        Prese TV
+                                    </div>
+                                    <div class="col-auto" style="min-width:150px">
+                                        Punti di Comando
+                                    </div>
+                                    <div class="col-auto" style="min-width:150px">
+                                        Tiranti
+                                    </div>
+                                </div>
+
+                                    {% for items in form.floor %}
+                                        <div class="row">
+                                            <div class="col-1 mt-2 mb-2">
+                                                {{ form_widget(items) }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    {% for items in form.ambient %}
+                                        <div class="row">
+                                            <div class="col-2">
+                                                {{ form_widget(items) }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    <tr style="position: relative;">
+
                                     </tr>
-                                    {% set i = i + 1 %}
-                                {% endfor %}
+                                    <tr>
+
+                                    </tr>
+                                    <tr style="min-width:270px;position: relative;">
+                                        {% for items in form.name %}
+                                            <td>
+                                                {{ form_widget(items) }}
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
+                                    <tr style="min-width:150px;position: relative;">
+                                        {% for items in form.pp %}
+                                            <td>
+                                                {{ form_widget(items) }}
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
+                                    <tr style="min-width:150px;position: relative;">
+                                        {% for items in form.pl %}
+                                            <td>
+                                                {{ form_widget(items) }}
+                                            </td>
+
+                                        {% endfor %}
+                                    </tr>
+                                    <tr style="min-width:150px;position: relative;">
+                                        {% for items in form.pt %}
+                                            <td>
+                                                {{ form_widget(items) }}
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
+                                    <tr style="min-width:150px;position: relative;">
+                                        {% for items in form.c1v %}
+                                            <td>
+                                                {{ form_widget(items) }}
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
+                                    <tr style="min-width:150px;position: relative;">
+                                        {% for items in form.c2v %}
+                                            <td>
+                                                {{ form_widget(items) }}
+                                            </td>
+                                        {% endfor %}
+                                    </tr>
                                 </tbody>
-
-                                {#<tbody id="email-fields-list" data-prototype='
-                                </tr>
-                                <td style="max-width:20px">
-                                        <button type="button" class="remove-collection-widget btn  px-1 pl-2" style="left: -10px; position: relative;"><i class="fa fa-minus-square "></i></button>
-                                    </td>
-                                    <td>
-                                        {{ form_widget(form.floor.vars.prototype)|e }}
-                                    </td>
-                                    <td>
-                                        {{ form_widget(form.ambient.vars.prototype)|e }}
-                                    </td>
-                                    <td style="min-width:270px">
-                                        {{ form_widget(form.name.vars.prototype)|e }}
-                                    </td>
-                                    <td style="min-width:150px">
-                                        {{ form_widget(form.pp.vars.prototype)|e }}
-                                    </td>
-                                    <td style="min-width:150px">
-                                        {{ form_widget(form.pl.vars.prototype)|e }}
-                                    </td>
-                                    <td style="min-width:150px">
-                                        {{ form_widget(form.pt.vars.prototype)|e }}
-                                    </td>
-                                    <td style="min-width:150px">
-                                        {{ form_widget(form.c1v.vars.prototype)|e }}
-                                    </td>
-                                    <td style="min-width:150px">
-                                        {{ form_widget(form.c2v.vars.prototype)|e }}
-                                    </td>
-                                    ' data-widget-tags="{{ '<tr></tr>'|e }}">
-
-                                </tbody>#}
-
                             </table>
                         </div>
 
@@ -491,7 +490,7 @@
                                 {{ form_widget(form.submit) }}
                             </div>
                             <div class="col-6">
-                                <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3">Annulla</a>
+                                <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 animsition-link">Annulla</a>
                             </div>
                         </div>
                     </div>
