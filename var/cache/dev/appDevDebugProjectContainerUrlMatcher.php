@@ -220,6 +220,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_elimina')), array (  'confirm' => false,  '_controller' => 'AppBundle\\Controller\\ExpertationsController::deleteExpertatationAction',));
                 }
 
+                // preventivi_imposta_accettato
+                if (0 === strpos($pathinfo, '/preventivi/imposta/accettato') && preg_match('#^/preventivi/imposta/accettato/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_imposta_accettato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationSetAcceptedAction',));
+                }
+
+                // preventivi_imposta_non_accettato
+                if (0 === strpos($pathinfo, '/preventivi/imposta/non-accettato') && preg_match('#^/preventivi/imposta/non\\-accettato/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_imposta_non_accettato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationSetNotAcceptedAction',));
+                }
+
             }
 
             elseif (0 === strpos($pathinfo, '/prezzi')) {

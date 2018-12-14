@@ -1291,6 +1291,33 @@ class ExpertationsController extends Controller
         }
     }
 
+    /**
+     * @Route("preventivi/imposta/accettato/{id}", name="preventivi_imposta_accettato")
+     */
+    public function expertationSetAcceptedAction($id) {
+        $repo = $this->getDoctrine()->getManager();
+        $exp = $repo->getRepository(Expertations::class)->find($id);
+
+        $exp->setStatus(1);
+        $repo->persist($exp);
+        $repo->flush();
+
+        return $this->redirectToRoute('lista_preventivi');
+    }
+
+    /**
+     * @Route("preventivi/imposta/non-accettato/{id}", name="preventivi_imposta_non_accettato")
+     */
+    public function expertationSetNotAcceptedAction($id) {
+        $repo = $this->getDoctrine()->getManager();
+        $exp = $repo->getRepository(Expertations::class)->find($id);
+
+        $exp->setStatus(0);
+        $repo->persist($exp);
+        $repo->flush();
+
+        return $this->redirectToRoute('lista_preventivi');
+    }
 
 
     /**
@@ -1309,7 +1336,13 @@ class ExpertationsController extends Controller
         return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getGenre();
     }
 
+    public function uidToRagSoc($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getRagioneSociale();
+    }
 
+    public function uidToType($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getType();
+    }
 
     public function userToName($user) {
         return $this->getDoctrine()->getRepository(Users::class)->find($user)->getUsername();

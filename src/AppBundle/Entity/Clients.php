@@ -22,9 +22,22 @@ class Clients
     private $id;
 
     /**
+     * @var integer
+     * @ORM\Column(name="type", type="integer", nullable=true)
+     */
+    private $type;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="ragione_sociale", type="string", length=255, nullable=true)
+     */
+    private $ragione_sociale;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
 
@@ -387,5 +400,53 @@ class Clients
     public function getGenre()
     {
         return $this->genre;
+    }
+
+    /**
+     * Set type.
+     *
+     * @param int|null $type
+     *
+     * @return Clients
+     */
+    public function setType($type = null)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type.
+     *
+     * @return int|null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set ragioneSociale.
+     *
+     * @param string|null $ragioneSociale
+     *
+     * @return Clients
+     */
+    public function setRagioneSociale($ragioneSociale = null)
+    {
+        $this->ragione_sociale = $ragioneSociale;
+
+        return $this;
+    }
+
+    /**
+     * Get ragioneSociale.
+     *
+     * @return string|null
+     */
+    public function getRagioneSociale()
+    {
+        return $this->ragione_sociale;
     }
 }

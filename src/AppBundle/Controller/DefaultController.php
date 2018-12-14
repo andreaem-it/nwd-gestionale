@@ -59,6 +59,22 @@ class DefaultController extends Controller
         return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getName();
     }
 
+    public function uidToSurName($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getSurname();
+    }
+
+    public function uidToGenre($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getGenre();
+    }
+
+    public function uidToRagSoc($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getRagioneSociale();
+    }
+
+    public function uidToType($uid) {
+        return $this->getDoctrine()->getRepository('AppBundle:Clients')->find($uid)->getType();
+    }
+
     public function userToName($user) {
         return $this->getDoctrine()->getRepository(Users::class)->find($user)->getUsername();
     }

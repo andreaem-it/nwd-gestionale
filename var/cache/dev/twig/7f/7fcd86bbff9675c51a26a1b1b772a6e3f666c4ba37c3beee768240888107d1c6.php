@@ -231,9 +231,17 @@ class __TwigTemplate_4695bb6efdbd2dc5ba1805169809960939590f99926016005e0df1e2b45
             echo "\">
                                             ";
             // line 134
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 134, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
-            echo "
-                                        </a>
+            if ((twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 134, $this->source); })()), "uidToType", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method") == 1)) {
+                echo " ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 134, $this->source); })()), "uidToRagSoc", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
+                echo " ";
+            } else {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 134, $this->source); })()), "uidToSurName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
+                echo " ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["functions"]) || array_key_exists("functions", $context) ? $context["functions"] : (function () { throw new Twig_Error_Runtime('Variable "functions" does not exist.', 134, $this->source); })()), "uidToName", array(0 => twig_get_attribute($this->env, $this->source, $context["item"], "client", array())), "method"), "html", null, true);
+            }
+            // line 135
+            echo "                                        </a>
                                     </td>
                                     <td>
                                         ";
@@ -362,7 +370,7 @@ class __TwigTemplate_4695bb6efdbd2dc5ba1805169809960939590f99926016005e0df1e2b45
 
     public function getDebugInfo()
     {
-        return array (  337 => 193,  325 => 190,  316 => 189,  287 => 170,  268 => 154,  257 => 145,  247 => 141,  241 => 138,  234 => 134,  230 => 133,  224 => 130,  218 => 127,  214 => 125,  210 => 124,  183 => 100,  164 => 86,  93 => 18,  80 => 8,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  345 => 193,  333 => 190,  324 => 189,  295 => 170,  276 => 154,  265 => 145,  255 => 141,  249 => 138,  244 => 135,  234 => 134,  230 => 133,  224 => 130,  218 => 127,  214 => 125,  210 => 124,  183 => 100,  164 => 86,  93 => 18,  80 => 8,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -500,7 +508,7 @@ class __TwigTemplate_4695bb6efdbd2dc5ba1805169809960939590f99926016005e0df1e2b45
                                     </td>
                                     <td>
                                         <a href=\"{{ url('vedi_clienti', { id : item.client}) }}\">
-                                            {{ functions.uidToName(item.client) }}
+                                            {% if functions.uidToType(item.client) == 1 %} {{ functions.uidToRagSoc(item.client) }} {% else %}{{ functions.uidToSurName(item.client) }} {{ functions.uidToName(item.client) }}{% endif %}
                                         </a>
                                     </td>
                                     <td>

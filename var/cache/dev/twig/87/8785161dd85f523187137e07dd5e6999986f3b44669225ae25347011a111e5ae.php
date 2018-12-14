@@ -149,8 +149,16 @@ class __TwigTemplate_f930f94a8e01c501fc260924403c9286ea291c09188b0466fe98624891e
                         </div>
                         <strong>Nome:</strong> ";
         // line 57
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["client"]) || array_key_exists("client", $context) ? $context["client"] : (function () { throw new Twig_Error_Runtime('Variable "client" does not exist.', 57, $this->source); })()), "name", array()), "html", null, true);
-        echo " <br/>
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["client"]) || array_key_exists("client", $context) ? $context["client"] : (function () { throw new Twig_Error_Runtime('Variable "client" does not exist.', 57, $this->source); })()), "type", array()) == 1)) {
+            echo " ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["client"]) || array_key_exists("client", $context) ? $context["client"] : (function () { throw new Twig_Error_Runtime('Variable "client" does not exist.', 57, $this->source); })()), "ragioneSociale", array()), "html", null, true);
+            echo " ";
+        } else {
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["client"]) || array_key_exists("client", $context) ? $context["client"] : (function () { throw new Twig_Error_Runtime('Variable "client" does not exist.', 57, $this->source); })()), "surname", array()), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["client"]) || array_key_exists("client", $context) ? $context["client"] : (function () { throw new Twig_Error_Runtime('Variable "client" does not exist.', 57, $this->source); })()), "name", array()), "html", null, true);
+        }
+        echo "<br/>
                         <strong>Indirizzo:</strong> ";
         // line 58
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["client"]) || array_key_exists("client", $context) ? $context["client"] : (function () { throw new Twig_Error_Runtime('Variable "client" does not exist.', 58, $this->source); })()), "address", array()), "html", null, true);
@@ -671,7 +679,7 @@ class __TwigTemplate_f930f94a8e01c501fc260924403c9286ea291c09188b0466fe98624891e
 
     public function getDebugInfo()
     {
-        return array (  647 => 342,  645 => 341,  636 => 335,  631 => 334,  622 => 333,  610 => 331,  553 => 278,  544 => 277,  532 => 273,  523 => 225,  518 => 224,  513 => 223,  509 => 222,  504 => 219,  499 => 218,  495 => 217,  486 => 211,  480 => 208,  474 => 205,  468 => 202,  460 => 196,  452 => 193,  446 => 190,  443 => 189,  440 => 188,  434 => 185,  431 => 184,  428 => 183,  422 => 180,  419 => 179,  416 => 178,  410 => 175,  407 => 174,  404 => 173,  398 => 170,  395 => 169,  393 => 168,  388 => 166,  382 => 163,  376 => 160,  370 => 157,  364 => 154,  360 => 152,  354 => 150,  350 => 148,  348 => 147,  344 => 145,  340 => 144,  337 => 143,  331 => 140,  328 => 139,  325 => 138,  319 => 135,  316 => 134,  313 => 133,  307 => 130,  304 => 129,  301 => 128,  295 => 125,  292 => 124,  289 => 123,  283 => 120,  280 => 119,  278 => 118,  253 => 95,  245 => 94,  231 => 82,  223 => 81,  219 => 80,  215 => 79,  211 => 78,  201 => 75,  197 => 74,  193 => 73,  189 => 72,  172 => 60,  166 => 59,  156 => 58,  152 => 57,  134 => 41,  126 => 37,  118 => 33,  116 => 32,  110 => 29,  97 => 19,  91 => 16,  80 => 8,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  655 => 342,  653 => 341,  644 => 335,  639 => 334,  630 => 333,  618 => 331,  561 => 278,  552 => 277,  540 => 273,  531 => 225,  526 => 224,  521 => 223,  517 => 222,  512 => 219,  507 => 218,  503 => 217,  494 => 211,  488 => 208,  482 => 205,  476 => 202,  468 => 196,  460 => 193,  454 => 190,  451 => 189,  448 => 188,  442 => 185,  439 => 184,  436 => 183,  430 => 180,  427 => 179,  424 => 178,  418 => 175,  415 => 174,  412 => 173,  406 => 170,  403 => 169,  401 => 168,  396 => 166,  390 => 163,  384 => 160,  378 => 157,  372 => 154,  368 => 152,  362 => 150,  358 => 148,  356 => 147,  352 => 145,  348 => 144,  345 => 143,  339 => 140,  336 => 139,  333 => 138,  327 => 135,  324 => 134,  321 => 133,  315 => 130,  312 => 129,  309 => 128,  303 => 125,  300 => 124,  297 => 123,  291 => 120,  288 => 119,  286 => 118,  261 => 95,  253 => 94,  239 => 82,  231 => 81,  227 => 80,  223 => 79,  219 => 78,  209 => 75,  205 => 74,  201 => 73,  197 => 72,  180 => 60,  174 => 59,  164 => 58,  152 => 57,  134 => 41,  126 => 37,  118 => 33,  116 => 32,  110 => 29,  97 => 19,  91 => 16,  80 => 8,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -732,7 +740,7 @@ class __TwigTemplate_f930f94a8e01c501fc260924403c9286ea291c09188b0466fe98624891e
                         <div class=\"card-title\">
                             <h5>Cliente</h5>
                         </div>
-                        <strong>Nome:</strong> {{ client.name }} <br/>
+                        <strong>Nome:</strong> {% if client.type == 1 %} {{ client.ragioneSociale }} {% else %}{{ client.surname }} {{ client.name }}{% endif %}<br/>
                         <strong>Indirizzo:</strong> {{ client.address }}, {{ client.postalCode }}, {{ client.city }} ({{ client.province }}) <br/>
                         <strong>Telefono:</strong> <a href=\"tel:{{ client.phone }}\">{{ client.phone }}</a>  <br/>
                         <strong>E-Mail:</strong> <a href=\"mailto:{{ client.email }}\">{{ client.email }}</a>  <br/>

@@ -54,7 +54,7 @@
                         <div class="card-title">
                             <h5>Cliente</h5>
                         </div>
-                        <strong>Nome:</strong> {{ client.name }} <br/>
+                        <strong>Nome:</strong> {% if client.type == 1 %} {{ client.ragioneSociale }} {% else %}{{ client.surname }} {{ client.name }}{% endif %}<br/>
                         <strong>Indirizzo:</strong> {{ client.address }}, {{ client.postalCode }}, {{ client.city }} ({{ client.province }}) <br/>
                         <strong>Telefono:</strong> <a href="tel:{{ client.phone }}">{{ client.phone }}</a>  <br/>
                         <strong>E-Mail:</strong> <a href="mailto:{{ client.email }}">{{ client.email }}</a>  <br/>

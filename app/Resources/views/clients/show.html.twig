@@ -4,7 +4,7 @@
     <div class="content-wrapper">
         <div class="row">
             <div class="col-12">
-                <h3>Clienti <small>{{ client.name }}</small></h3>
+                <h3>Clienti <small>{% if client.type == 1 %} {{ client.ragioneSociale }} {% else %}{{ client.name }} {{ client.surname }} {% endif %}</small></h3>
             </div>
         </div>
         <div class="row">
@@ -12,12 +12,14 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
-                            <h3>Anagrafica <small><a class="float-right animsition-link" href="" style="margin-top: 0.8rem !important;">Modifica</a></small></h3>
+                            <h3>Anagrafica <small><a class="float-right animsition-link" href="{{ url('modifica_cliente', {'id': client.id}) }}" style="margin-top: 0.8rem !important;">Modifica</a></small></h3>
                         </div>
-                        <strong>Nome:</strong> {{ client.name }} <br/>
-                        <strong>Indirizzo:</strong> {{ client.address }}, {{ client.postalCode }}, {{ client.city }} ({{ client.province }}) <br/>
-                        <strong>Telefono:</strong> <a class=" animsition-link" href="tel:{{ client.phone }}">{{ client.phone }}</a>  <br/>
-                        <strong>E-Mail:</strong> <a class=" animsition-link" href="mailto:{{ client.email }}">{{ client.email }}</a>  <br/>
+                        <strong>Nome:</strong>{% if client.type == 1 %} {{ client.ragioneSociale }} {% else %}{{ client.name }} {{ client.surname }} {% endif %}<br/>
+                        <strong>Indirizzo:</strong> {{ client.address }} <br/>
+                        <strong>CAP:</strong> {{ client.postalCode }} <br/>
+                        <strong>Città:</strong> {{ client.city }} ({{ client.province }}) <br/>
+                        <strong>Telefono:</strong> {{ client.phone }} <a class="" href="tel:{{ client.phone }}"><i class="fa fa-phone float-right"></i></a>  <br/>
+                        <strong>E-Mail:</strong> {{ client.email }} <a class="" href="mailto:{{ client.email }}"><i class="fa fa-envelope float-right"></i></a>  <br/>
 
                     </div>
                 </div>

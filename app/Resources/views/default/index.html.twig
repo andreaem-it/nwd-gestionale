@@ -131,7 +131,7 @@
                                     </td>
                                     <td>
                                         <a href="{{ url('vedi_clienti', { id : item.client}) }}">
-                                            {{ functions.uidToName(item.client) }}
+                                            {% if functions.uidToType(item.client) == 1 %} {{ functions.uidToRagSoc(item.client) }} {% else %}{{ functions.uidToSurName(item.client) }} {{ functions.uidToName(item.client) }}{% endif %}
                                         </a>
                                     </td>
                                     <td>

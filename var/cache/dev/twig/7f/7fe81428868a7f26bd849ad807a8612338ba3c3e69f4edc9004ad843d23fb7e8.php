@@ -117,6 +117,9 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
         // line 34
         echo "        <script>
             \$(document).ready(function() {
+                \$(function () {
+                    \$('[data-toggle=\"tooltip\"]').tooltip()
+                });
                 \$(\".animsition\").animsition({
                     inClass: 'fade-in',
                     outClass: 'fade-out',
@@ -228,7 +231,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
 
     public function getDebugInfo()
     {
-        return array (  203 => 33,  186 => 29,  169 => 12,  152 => 6,  118 => 34,  115 => 33,  113 => 32,  109 => 30,  106 => 29,  104 => 28,  101 => 27,  99 => 26,  92 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  68 => 16,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
+        return array (  206 => 33,  189 => 29,  172 => 12,  155 => 6,  118 => 34,  115 => 33,  113 => 32,  109 => 30,  106 => 29,  104 => 28,  101 => 27,  99 => 26,  92 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  68 => 16,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -268,6 +271,9 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
         {% block javascripts %}{% endblock %}
         <script>
             \$(document).ready(function() {
+                \$(function () {
+                    \$('[data-toggle=\"tooltip\"]').tooltip()
+                });
                 \$(\".animsition\").animsition({
                     inClass: 'fade-in',
                     outClass: 'fade-out',

@@ -33,6 +33,9 @@
         {% block javascripts %}{% endblock %}
         <script>
             $(document).ready(function() {
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                });
                 $(".animsition").animsition({
                     inClass: 'fade-in',
                     outClass: 'fade-out',

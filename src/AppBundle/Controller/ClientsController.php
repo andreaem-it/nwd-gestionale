@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -80,27 +81,46 @@ class ClientsController extends Controller
         $client = new Clients();
 
         $form = $this->createFormBuilder($client)
+            ->add('type', ChoiceType::class,
+                ['attr' => [
+                    'class' => '',
+                ],
+                    'choices' => [
+                        '-- Seleziona --' => 0,
+                        'Azienda' => 1,
+                        'Privato' => 2,
+                    ],
+                    'label' => 'Tipo'])
+            ->add('ragioneSociale', TextType::class,
+                [ 'attr' => [
+                    'class' => 'form-control'],
+                    'label' => 'Ragione Sociale',
+                    'required' => false
+                ])
             ->add('name', TextType::class,
                 [ 'attr' => [
                     'class' => 'form-control'],
-                'label' => 'Nome'
+                'label' => 'Nome',
+                    'required' => false
             ])
             ->add('surname', TextType::class,
-                [ 'attr' => [
+                [   'required' => false,
+                    'attr' => [
                     'class' => 'form-control'],
                     'label' => 'Cognome'
                 ])
-            ->add('Genre', ChoiceType::class, [
+            ->add('genre', ChoiceType::class, [
                 'choices' => [
-                    '-- Seleziona --' => 9,
+                    '-- Seleziona --' => '',
                     'Azienda' => 0,
                     'Uomo' => 1,
                     'Donna' => 2
-                ], [
+                ],
                     'attr' => [
                     'class' => 'form-control'],
-                    'label' => 'Sesso'
-                ]])
+                    'label' => 'Sesso',
+                'required' => false
+                ])
             ->add('address', TextType::class, [ 'attr' => [
                 'class' => 'form-control'],
                 'label' => 'Indirizzo'
@@ -125,10 +145,14 @@ class ClientsController extends Controller
                 'class' => 'form-control'],
                 'label' => 'E-Mail'
             ])
-            ->add('privacy_accepted', CheckboxType::class, [ 'attr' => [
-                'class' => 'custom-control-input'],
+            ->add('privacy_accepted', CheckboxType::class, [
+                'attr' => [
+                    'class' => 'control-input',
+                    'style' => 'opacity:1!important'
+                    ],
                 'required' => false,
-                'label' => 'Privacy Accettata'
+                'label' => 'Privacy Accettata',
+
             ])
             ->add('submit', SubmitType::class, [ 'attr' => [
                 'class' => 'btn btn-success float-right' ],

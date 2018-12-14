@@ -217,54 +217,54 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         </ul>
       </div>
     </li>
-    <li class=\"nav-item\">
+      ";
+        // line 88
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 89
+            echo "    <li class=\"nav-item\">
       <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-prezzi\" aria-expanded=\"";
-        // line 89
-        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 89, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 89, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_prices"))) {
-            echo "true";
-        } else {
-            echo "false";
-        }
-        echo "\" aria-controls=\"nav-clienti\" >
+            // line 90
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 90, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 90, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_prices"))) {
+                echo "true";
+            } else {
+                echo "false";
+            }
+            echo "\" aria-controls=\"nav-clienti\" >
         <i class=\"menu-icon mdi mdi-currency-eur\"></i>
         <span class=\"menu-title\">Prezzi</span>
         <i class=\"menu-arrow\"></i>
       </a>
       <div class=\"collapse ";
-        // line 94
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 94, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino")) {
-            echo "show";
-        }
-        echo "\" id=\"nav-prezzi\">
+            // line 95
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 95, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino")) {
+                echo "show";
+            }
+            echo "\" id=\"nav-prezzi\">
         <ul class=\"nav flex-column sub-menu\">
+          <!--<li class=\"nav-item\">
+            <a class=\"nav-link animsition-link ";
+            // line 98
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 98, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino")) {
+                echo "active";
+            }
+            echo "\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prezzi_listino");
+            echo "\">Listino</a>
+          </li>-->
           <li class=\"nav-item\">
             <a class=\"nav-link animsition-link ";
-        // line 97
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 97, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "prezzi_listino")) {
-            echo "active";
-        }
-        echo "\" href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prezzi_listino");
-        echo "\">Listino</a>
-          </li>
-          <li class=\"nav-item\">
-            <a class=\"nav-link animsition-link ";
-        // line 100
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 100, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_prices")) {
-            echo "active";
-        }
-        echo "\" href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("settings_prices");
-        echo "\">Prezzario</a>
+            // line 101
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 101, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "settings_prices")) {
+                echo "active";
+            }
+            echo "\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("settings_prices");
+            echo "\">Prezzario</a>
           </li>
         </ul>
       </div>
     </li>
-    ";
-        // line 105
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 106
-            echo "    <li class=\"nav-item\">
+    <li class=\"nav-item\">
       <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-stats\" aria-expanded=\"";
             // line 107
             if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 107, $this->source); })()), "request", array()), "attributes", array()), "get", array(0 => "_route"), "method") == "statistiche")) {
@@ -273,7 +273,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
                 echo "false";
             }
             echo "\" aria-controls=\"nav-settings\">
-        <i class=\"menu-icon mdi mdi-backup-restore\"></i>
+        <i class=\"menu-icon mdi mdi-poll-box\"></i>
         <span class=\"menu-title\">Statistiche</span>
         <i class=\"menu-arrow\"></i>
       </a>
@@ -475,7 +475,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
 
     public function getDebugInfo()
     {
-        return array (  456 => 208,  438 => 207,  376 => 147,  363 => 141,  353 => 138,  343 => 135,  333 => 132,  323 => 129,  315 => 126,  303 => 121,  290 => 115,  282 => 112,  270 => 107,  267 => 106,  265 => 105,  253 => 100,  243 => 97,  235 => 94,  223 => 89,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
+        return array (  456 => 208,  438 => 207,  376 => 147,  363 => 141,  353 => 138,  343 => 135,  333 => 132,  323 => 129,  315 => 126,  303 => 121,  290 => 115,  282 => 112,  270 => 107,  257 => 101,  247 => 98,  239 => 95,  227 => 90,  224 => 89,  222 => 88,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
     }
 
     public function getSourceContext()
@@ -567,6 +567,7 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
         </ul>
       </div>
     </li>
+      {% if is_granted('ROLE_ADMIN') %}
     <li class=\"nav-item\">
       <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-prezzi\" aria-expanded=\"{% if app.request.attributes.get('_route') == 'prezzi_listino' or app.request.attributes.get('_route') == 'settings_prices' %}true{% else %}false{% endif %}\" aria-controls=\"nav-clienti\" >
         <i class=\"menu-icon mdi mdi-currency-eur\"></i>
@@ -575,19 +576,18 @@ class __TwigTemplate_6c9837fb57422470a75690d00f6359ea957e76dca0f95ed51f0c383663d
       </a>
       <div class=\"collapse {% if app.request.attributes.get('_route') == 'prezzi_listino'%}show{% endif %}\" id=\"nav-prezzi\">
         <ul class=\"nav flex-column sub-menu\">
-          <li class=\"nav-item\">
+          <!--<li class=\"nav-item\">
             <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}\" href=\"{{ path('prezzi_listino') }}\">Listino</a>
-          </li>
+          </li>-->
           <li class=\"nav-item\">
             <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'settings_prices' %}active{% endif %}\" href=\"{{ path('settings_prices') }}\">Prezzario</a>
           </li>
         </ul>
       </div>
     </li>
-    {% if is_granted('ROLE_ADMIN') %}
     <li class=\"nav-item\">
       <a class=\"nav-link\" data-toggle=\"collapse\" href=\"#nav-stats\" aria-expanded=\"{% if app.request.attributes.get('_route') == 'statistiche' %}true{% else %}false{% endif %}\" aria-controls=\"nav-settings\">
-        <i class=\"menu-icon mdi mdi-backup-restore\"></i>
+        <i class=\"menu-icon mdi mdi-poll-box\"></i>
         <span class=\"menu-title\">Statistiche</span>
         <i class=\"menu-arrow\"></i>
       </a>

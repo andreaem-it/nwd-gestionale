@@ -50,7 +50,7 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Cliente";
+        echo "Nuovo Cliente";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -84,78 +84,118 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
         echo "
                 <div class=\"row mt-2\">
-                    <div class=\"col-12\">
+                    <div class=\"col-2\">
                         ";
         // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 17, $this->source); })()), "name", array()), 'label');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 17, $this->source); })()), "type", array()), 'label');
         echo "
                         ";
         // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 18, $this->source); })()), "name", array()), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 18, $this->source); })()), "type", array()), 'widget');
+        echo "
+                    </div>
+                    <div id=\"form_ragione_soc\" class=\"col-10\">
+                        ";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 21, $this->source); })()), "ragioneSociale", array()), 'label');
+        echo "
+                        ";
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 22, $this->source); })()), "ragioneSociale", array()), 'widget');
+        echo "
+                    </div>
+                    <div class=\"col-4 privato_forms\">
+                        ";
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 25, $this->source); })()), "name", array()), 'label');
+        echo "
+                        ";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 26, $this->source); })()), "name", array()), 'widget');
+        echo "
+                    </div>
+                    <div class=\"col-4 privato_forms\">
+                        ";
+        // line 29
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 29, $this->source); })()), "surname", array()), 'label');
+        echo "
+                        ";
+        // line 30
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 30, $this->source); })()), "surname", array()), 'widget');
+        echo "
+                    </div>
+                    <div class=\"col-2 privato_forms\">
+                        ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 33, $this->source); })()), "genre", array()), 'label');
+        echo "
+                        ";
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 34, $this->source); })()), "genre", array()), 'widget');
         echo "
                     </div>
                 </div>
                 <div class=\"row mt-2\">
                     <div class=\"col-5\">
                         ";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 23, $this->source); })()), "address", array()), 'label');
+        // line 39
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 39, $this->source); })()), "address", array()), 'label');
         echo "
                         ";
-        // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 24, $this->source); })()), "address", array()), 'widget');
+        // line 40
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 40, $this->source); })()), "address", array()), 'widget');
         echo "
                     </div>
                     <div class=\"col-2\">
                         ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 27, $this->source); })()), "postal_code", array()), 'label');
+        // line 43
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 43, $this->source); })()), "postal_code", array()), 'label');
         echo "
                         ";
-        // line 28
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 28, $this->source); })()), "postal_code", array()), 'widget');
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 44, $this->source); })()), "postal_code", array()), 'widget');
         echo "
                     </div>
                     <div class=\"col-4\">
                         ";
-        // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 31, $this->source); })()), "city", array()), 'label');
+        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 47, $this->source); })()), "city", array()), 'label');
         echo "
                         ";
-        // line 32
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 32, $this->source); })()), "city", array()), 'widget');
+        // line 48
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 48, $this->source); })()), "city", array()), 'widget');
         echo "
                     </div>
                     <div class=\"col-1\">
                         ";
-        // line 35
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 35, $this->source); })()), "province", array()), 'label');
+        // line 51
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 51, $this->source); })()), "province", array()), 'label');
         echo "
                         ";
-        // line 36
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 36, $this->source); })()), "province", array()), 'widget');
+        // line 52
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 52, $this->source); })()), "province", array()), 'widget');
         echo "
                     </div>
                 </div>
                 <div class=\"row mt-2\">
                     <div class=\"col-6\">
                         ";
-        // line 41
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 41, $this->source); })()), "phone", array()), 'label');
+        // line 57
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 57, $this->source); })()), "phone", array()), 'label');
         echo "
                         ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 42, $this->source); })()), "phone", array()), 'widget');
+        // line 58
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 58, $this->source); })()), "phone", array()), 'widget');
         echo "
                     </div>
                     <div class=\"col-6\">
                         ";
-        // line 45
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 45, $this->source); })()), "email", array()), 'label');
+        // line 61
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 61, $this->source); })()), "email", array()), 'label');
         echo "
                         ";
-        // line 46
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 46, $this->source); })()), "email", array()), 'widget');
+        // line 62
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 62, $this->source); })()), "email", array()), 'widget');
         echo "
                     </div>
                 </div>
@@ -163,12 +203,12 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
                     <div class=\"col-12\">
                         <div class=\"custom-control custom-checkbox\">
                             ";
-        // line 52
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 52, $this->source); })()), "privacy_accepted", array()), 'widget');
+        // line 68
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 68, $this->source); })()), "privacy_accepted", array()), 'widget');
         echo "
                             ";
-        // line 53
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 53, $this->source); })()), "privacy_accepted", array()), 'label', array("label_attr" => array("class" => "custom-control-label"), "label" => "Privacy Accettata"));
+        // line 69
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 69, $this->source); })()), "privacy_accepted", array()), 'label', array("label_attr" => array("class" => "custom-control-label"), "label" => "Privacy Accettata"));
         echo "
                         </div>
                     </div>
@@ -176,89 +216,37 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
                 <div class=\"row mt-3\">
                     <div class=\"col-12\">
                         ";
-        // line 59
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 59, $this->source); })()), "submit", array()), 'widget');
+        // line 75
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 75, $this->source); })()), "submit", array()), 'widget');
         echo "
 
                     </div>
                 </div>
                 ";
-        // line 63
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 63, $this->source); })()), 'form_end');
+        // line 79
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 79, $this->source); })()), 'form_end');
         echo "
             </div>
         </div>
-        <script>
-            var placeSearch, autocomplete;
-            var componentForm = {
-                street_number: 'short_name',
-                route: 'long_name',
-                locality: 'short_name',
-                administrative_area_level_1: 'short_name',
-                country: 'short_name',
-                postal_code: 'long_name'
-            };
-
-            function initAutocomplete() {
-                // Create the autocomplete object, restricting the search to geographical
-                // location types.
-                autocomplete = new google.maps.places.Autocomplete(
-                    /** @type {!HTMLInputElement} */(document.getElementById('form_address')),
-                    {types: ['geocode']});
-
-                // When the user selects an address from the dropdown, populate the address
-                // fields in the form.
-                autocomplete.addListener('place_changed', fillInAddress);
-            }
-
-            function fillInAddress() {
-                // Get the place details from the autocomplete object.
-                var place = autocomplete.getPlace();
-
-                console.log(place);
-
-                \$('#form_address').val(place['address_components'][0]['short_name']);
-                \$('#form_province').val(place['address_components'][3]['short_name']);
-                \$('#form_city').val(place['address_components'][2]['long_name']);
-                \$('#form_postal_code').val(place['address_components'][6]['long_name']);
-
-                for (var component in componentForm) {
-                    document.getElementById(component).value = '';
-                    document.getElementById(component).disabled = false;
-                }
-
-                // Get each component of the address from the place details
-                // and fill the corresponding field on the form.
-                for (var i = 0; i < place.address_components.length; i++) {
-                    var addressType = place.address_components[i].types[0];
-                    if (componentForm[addressType]) {
-                        var val = place.address_components[i][componentForm[addressType]];
-                        document.getElementById(addressType).value = val;
-                    }
-                }
-            }
-
-            // Bias the autocomplete object to the user's geographical location,
-            // as supplied by the browser's 'navigator.geolocation' object.
-            function geolocate() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        var geolocation = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-                        var circle = new google.maps.Circle({
-                            center: geolocation,
-                            radius: position.coords.accuracy
-                        });
-                        autocomplete.setBounds(circle.getBounds());
-                    });
-                }
-            }
-        </script>
-        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyD7BG7Z8rK75xxgo-njpJ9kBSV6iRlhQnk&libraries=places&callback=initAutocomplete\" async defer></script>
     </div>
 </div>
+    <script>
+        \$(document).ready(function() {
+            \$('.privato_forms').hide();
+            \$('#form_ragione_soc').hide();
+            \$(\"select[name='form[type]']\").change(function () {
+                if (\$(this).val() == 1) {
+                    \$('#form_ragione_soc').show();
+                    \$('.privato_forms').hide();
+                    console.log('Azienda')
+                } else if (\$(this).val() == 2) {
+                    \$('#form_ragione_soc').hide();
+                    \$('.privato_forms').show();
+                    console.log('Privato')
+                }
+            });
+        });
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -280,13 +268,13 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
 
     public function getDebugInfo()
     {
-        return array (  187 => 63,  180 => 59,  171 => 53,  167 => 52,  158 => 46,  154 => 45,  148 => 42,  144 => 41,  136 => 36,  132 => 35,  126 => 32,  122 => 31,  116 => 28,  112 => 27,  106 => 24,  102 => 23,  94 => 18,  90 => 17,  84 => 14,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  227 => 79,  220 => 75,  211 => 69,  207 => 68,  198 => 62,  194 => 61,  188 => 58,  184 => 57,  176 => 52,  172 => 51,  166 => 48,  162 => 47,  156 => 44,  152 => 43,  146 => 40,  142 => 39,  134 => 34,  130 => 33,  124 => 30,  120 => 29,  114 => 26,  110 => 25,  104 => 22,  100 => 21,  94 => 18,  90 => 17,  84 => 14,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'base.html.twig' %}
-{% block title %}Cliente{% endblock %}
+{% block title %}Nuovo Cliente{% endblock %}
 {% block body %}
 <div class=\"main-panel\">
     <div class=\"content-wrapper\">
@@ -300,9 +288,25 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
             <div class=\"card-body\">
                 {{ form_start(form) }}
                 <div class=\"row mt-2\">
-                    <div class=\"col-12\">
+                    <div class=\"col-2\">
+                        {{ form_label(form.type) }}
+                        {{ form_widget(form.type) }}
+                    </div>
+                    <div id=\"form_ragione_soc\" class=\"col-10\">
+                        {{ form_label(form.ragioneSociale) }}
+                        {{ form_widget(form.ragioneSociale) }}
+                    </div>
+                    <div class=\"col-4 privato_forms\">
                         {{ form_label(form.name) }}
                         {{ form_widget(form.name) }}
+                    </div>
+                    <div class=\"col-4 privato_forms\">
+                        {{ form_label(form.surname) }}
+                        {{ form_widget(form.surname) }}
+                    </div>
+                    <div class=\"col-2 privato_forms\">
+                        {{ form_label(form.genre) }}
+                        {{ form_widget(form.genre) }}
                     </div>
                 </div>
                 <div class=\"row mt-2\">
@@ -350,77 +354,25 @@ class __TwigTemplate_f91476838341eb5f93d7691d62079deb968d6e9122d621f1781e8492c39
                 {{ form_end(form) }}
             </div>
         </div>
-        <script>
-            var placeSearch, autocomplete;
-            var componentForm = {
-                street_number: 'short_name',
-                route: 'long_name',
-                locality: 'short_name',
-                administrative_area_level_1: 'short_name',
-                country: 'short_name',
-                postal_code: 'long_name'
-            };
-
-            function initAutocomplete() {
-                // Create the autocomplete object, restricting the search to geographical
-                // location types.
-                autocomplete = new google.maps.places.Autocomplete(
-                    /** @type {!HTMLInputElement} */(document.getElementById('form_address')),
-                    {types: ['geocode']});
-
-                // When the user selects an address from the dropdown, populate the address
-                // fields in the form.
-                autocomplete.addListener('place_changed', fillInAddress);
-            }
-
-            function fillInAddress() {
-                // Get the place details from the autocomplete object.
-                var place = autocomplete.getPlace();
-
-                console.log(place);
-
-                \$('#form_address').val(place['address_components'][0]['short_name']);
-                \$('#form_province').val(place['address_components'][3]['short_name']);
-                \$('#form_city').val(place['address_components'][2]['long_name']);
-                \$('#form_postal_code').val(place['address_components'][6]['long_name']);
-
-                for (var component in componentForm) {
-                    document.getElementById(component).value = '';
-                    document.getElementById(component).disabled = false;
-                }
-
-                // Get each component of the address from the place details
-                // and fill the corresponding field on the form.
-                for (var i = 0; i < place.address_components.length; i++) {
-                    var addressType = place.address_components[i].types[0];
-                    if (componentForm[addressType]) {
-                        var val = place.address_components[i][componentForm[addressType]];
-                        document.getElementById(addressType).value = val;
-                    }
-                }
-            }
-
-            // Bias the autocomplete object to the user's geographical location,
-            // as supplied by the browser's 'navigator.geolocation' object.
-            function geolocate() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        var geolocation = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-                        var circle = new google.maps.Circle({
-                            center: geolocation,
-                            radius: position.coords.accuracy
-                        });
-                        autocomplete.setBounds(circle.getBounds());
-                    });
-                }
-            }
-        </script>
-        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyD7BG7Z8rK75xxgo-njpJ9kBSV6iRlhQnk&libraries=places&callback=initAutocomplete\" async defer></script>
     </div>
 </div>
+    <script>
+        \$(document).ready(function() {
+            \$('.privato_forms').hide();
+            \$('#form_ragione_soc').hide();
+            \$(\"select[name='form[type]']\").change(function () {
+                if (\$(this).val() == 1) {
+                    \$('#form_ragione_soc').show();
+                    \$('.privato_forms').hide();
+                    console.log('Azienda')
+                } else if (\$(this).val() == 2) {
+                    \$('#form_ragione_soc').hide();
+                    \$('.privato_forms').show();
+                    console.log('Privato')
+                }
+            });
+        });
+    </script>
 {% endblock %}", "clients/clients.new.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/clients/clients.new.html.twig");
     }
 }

@@ -85,6 +85,7 @@
         </ul>
       </div>
     </li>
+      {% if is_granted('ROLE_ADMIN') %}
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#nav-prezzi" aria-expanded="{% if app.request.attributes.get('_route') == 'prezzi_listino' or app.request.attributes.get('_route') == 'settings_prices' %}true{% else %}false{% endif %}" aria-controls="nav-clienti" >
         <i class="menu-icon mdi mdi-currency-eur"></i>
@@ -93,19 +94,18 @@
       </a>
       <div class="collapse {% if app.request.attributes.get('_route') == 'prezzi_listino'%}show{% endif %}" id="nav-prezzi">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'prezzi_listino' %}active{% endif %}" href="{{ path('prezzi_listino') }}">Listino</a>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link animsition-link {% if app.request.attributes.get('_route') == 'settings_prices' %}active{% endif %}" href="{{ path('settings_prices') }}">Prezzario</a>
           </li>
         </ul>
       </div>
     </li>
-    {% if is_granted('ROLE_ADMIN') %}
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#nav-stats" aria-expanded="{% if app.request.attributes.get('_route') == 'statistiche' %}true{% else %}false{% endif %}" aria-controls="nav-settings">
-        <i class="menu-icon mdi mdi-backup-restore"></i>
+        <i class="menu-icon mdi mdi-poll-box"></i>
         <span class="menu-title">Statistiche</span>
         <i class="menu-arrow"></i>
       </a>

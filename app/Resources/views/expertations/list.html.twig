@@ -10,6 +10,7 @@
                 </div>
             {% endfor %}
         {% endfor %}
+
         <div class="row">
             <div class="col-lg-6">
                 <h3 class="mt-4">Preventivi <small>Lista</small></h3>
@@ -63,6 +64,9 @@
                                         <th>
                                             {{ knp_pagination_sortable(pagination, 'Commerciale', 'a.created_by') }}
                                         </th>
+                                        <th>
+                                            {{ knp_pagination_sortable(pagination, 'Stato', 'a.status') }}
+                                        </th>
                                         {#<th>
                                             Prezzo
                                         </th>
@@ -73,45 +77,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="resultTable">
-                                {% for item in u_expertations %}
-                                    <tr>
-                                        <td>
-                                            {{ item.pid }}
-                                        </td>
-                                        <td class="py-1">
-                                            {{ item.date|date("d-m-Y") }}
-                                        </td>
-                                        <td>
-                                            <a class=" animsition-link" href="{{ url('vedi_clienti', { id : item.client}) }}">
-                                                {{ functions.uidToName(item.client) }}
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class=" animsition-link" href="{{ url('impostazioni_utenti') }}">
-                                                {{ functions.userToName(item.createdBy) }}
-                                            </a>
-                                        </td>
-                                        {#<td>
-                                            {{ item.price }} €
-                                        </td>
-                                        <td>
-                                            {{ item.expiration|date("d-m-Y") }}
-                                        </td>#}
-                                        <td style="width: 255px;">
-                                            <div class="btn-group">
-                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right mr-1 animsition-link">
-                                                    <span class="mdi mdi-eye-outline"></span>
-                                                </a>
-                                                <a href="{{ url('modifica_preventivo', {'id' : item.id}) }}" class="btn btn-warning btn-sm float-right mr-1 animsition-link">
-                                                    <span class="mdi mdi-table-edit"></span>
-                                                </a>
-                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right mr-1 animsition-link">
-                                                    <span class="mdi mdi-delete"></span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                {% endfor %}
                                 {% for item in pagination %}
                                     <tr>
                                         <td>
@@ -122,13 +87,22 @@
                                         </td>
                                         <td>
                                             <a class=" animsition-link" href="{{ url('vedi_clienti', { id : item.client}) }}">
-                                                {{ functions.uidToName(item.client) }}
+                                                {% if functions.uidToType(item.client) == 1 %} {{ functions.uidToRagSoc(item.client) }} {% else %}{{ functions.uidToSurName(item.client) }} {{ functions.uidToName(item.client) }}{% endif %}
                                             </a>
                                         </td>
                                         <td>
                                             <a class=" animsition-link" href="{{ url('impostazioni_utenti') }}">
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
+                                        </td>
+                                        <td>
+                                            {% if item.status == 0 %}
+                                                <span class="text-warning"><i class="far fa-clock"></i> In attesa </span>
+                                            {% elseif item.status == 1 %}
+                                                <span class="text-success"><i class="fa fa-check"></i> Accettato </span>
+                                            {% elseif item.status == 2 %}
+                                                <span class="text-danger"><i class="fa fa-times"></i> Rifiutato </span>
+                                            {% endif %}
                                         </td>
                                         {#<td>
                                             {{ item.price }} €
@@ -137,14 +111,22 @@
                                             {{ item.expiration|date("d-m-Y") }}
                                         </td>#}
                                         <td style="max-width: 200px;">
+                                            <script>
+                                                $(function () {
+                                                    $('[data-toggle="tooltip"]').tooltip();
+                                                });
+                                            </script>
                                             <div class="btn-group">
-                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right animsition-link">
+                                                <a href="{% if item.status == 0 %}{{ url('preventivi_imposta_accettato', {'id': item.id }) }}{% else %}{{ url('preventivi_imposta_non_accettato', {'id': item.id }) }}{% endif %}" class="btn {% if item.status == 0 %}btn-success{% else %} btn-secondary{% endif %} btn-sm animsition-link" data-toggle="tooltip" data-placement="top" title="{% if item.status == 0 %}Imposta come Accettato{% elseif item.status == 1 %}Imposta come Non Accettato{% endif %}">
+                                                    <span class="{% if item.status == 0 %}mdi mdi-check{% else %}fa fa-times pl-1{% endif %}"></span>
+                                                </a>
+                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Mostra Preventivo">
                                                     <span class="mdi mdi-eye-outline"></span>
                                                 </a>
-                                                <a href="" class="btn btn-warning btn-sm float-right animsition-link">
+                                                <a href="" class="btn btn-warning btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Modifica Preventivo">
                                                     <span class="mdi mdi-table-edit"></span>
                                                 </a>
-                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right animsition-link">
+                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Elimina Preventivo">
                                                     <span class="mdi mdi-delete"></span>
                                                 </a>
                                             </div>
