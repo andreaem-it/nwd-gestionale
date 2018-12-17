@@ -20,6 +20,7 @@
       <parameter key="IntriroCsvBundle">Intriro\Bundle\CsvBundle\IntriroCsvBundle</parameter>
       <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
+      <parameter key="ChartjsBundle">fados\ChartjsBundle\ChartjsBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
@@ -82,6 +83,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
+      </parameter>
+      <parameter key="ChartjsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/fados/chartjs-bundle</parameter>
+        <parameter key="namespace">fados\ChartjsBundle</parameter>
       </parameter>
       <parameter key="AppBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -446,6 +452,43 @@
     <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
     <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/font_awesome_sortable_link.html.twig</parameter>
     <parameter key="knp_paginator.page_range">5</parameter>
+    <parameter key="chartjs.animation" type="collection">
+      <parameter key="duration">1000</parameter>
+      <parameter key="easing">easeOutQuart</parameter>
+    </parameter>
+    <parameter key="chartjs.layout" type="collection">
+      <parameter key="padding">0</parameter>
+    </parameter>
+    <parameter key="chartjs.legend" type="collection">
+      <parameter key="display">true</parameter>
+      <parameter key="position">top</parameter>
+      <parameter key="fullWidth">true</parameter>
+      <parameter key="reverse">false</parameter>
+      <parameter key="labels" type="collection">
+        <parameter key="boxWidth">40</parameter>
+        <parameter key="fontSize">12</parameter>
+        <parameter key="fontStyle">normal</parameter>
+        <parameter key="fontColor">#666</parameter>
+        <parameter key="fontFamily">'Helvetica Neue', 'Helvetica', 'Arial', sans-serif</parameter>
+        <parameter key="padding">10</parameter>
+        <parameter key="usePointStyle">false</parameter>
+      </parameter>
+      <parameter key="padding">0</parameter>
+    </parameter>
+    <parameter key="chartjs.title" type="collection">
+      <parameter key="display">false</parameter>
+      <parameter key="position">top</parameter>
+      <parameter key="fontSize">12</parameter>
+      <parameter key="fontFamily">'Helvetica Neue', 'Helvetica', 'Arial', sans-serif</parameter>
+      <parameter key="fontColor">#666</parameter>
+      <parameter key="fontStyle">bold</parameter>
+      <parameter key="padding">10</parameter>
+      <parameter key="text"></parameter>
+    </parameter>
+    <parameter key="chartjs.global.animation">chartjs.animation</parameter>
+    <parameter key="chartjs.global.layout">chartjs.layout</parameter>
+    <parameter key="chartjs.global.legend">chartjs.legend</parameter>
+    <parameter key="chartjs.global.title">chartjs.title</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -2511,6 +2554,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -3858,6 +3909,9 @@
         <argument type="service" id="knp_paginator.twig.extension.pagination"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="app.chartjs.twig_extension"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addGlobal">
@@ -3964,6 +4018,14 @@
       <call method="addPath">
         <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/knplabs/knp-paginator-bundle/Resources/views</argument>
         <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/fados/chartjs-bundle/Resources/views</argument>
+        <argument>Chartjs</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/fados/chartjs-bundle/Resources/views</argument>
+        <argument>!Chartjs</argument>
       </call>
       <call method="addPath">
         <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/src/AppBundle/Resources/views</argument>
@@ -4159,6 +4221,14 @@
       <call method="addPath">
         <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/knplabs/knp-paginator-bundle/Resources/views</argument>
         <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/fados/chartjs-bundle/Resources/views</argument>
+        <argument>Chartjs</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/vendor/fados/chartjs-bundle/Resources/views</argument>
+        <argument>!Chartjs</argument>
       </call>
       <call method="addPath">
         <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale/src/AppBundle/Resources/views</argument>
@@ -5322,6 +5392,11 @@
       <tag name="maker.command"/>
       <argument>/Users/andreaemili/PhpstormProjects/nwd-gestionale</argument>
     </service>
+    <service id="app.chartjs.twig_extension" class="fados\ChartjsBundle\Twig\chartjsExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="app.chartjs.transformer_char" class="fados\ChartjsBundle\Model\ChartDataTransformer"/>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>

@@ -50,6 +50,15 @@ class DefaultController extends Controller
      */
     public function errorAction($error) {
 
+        switch ($error) {
+            case 1:
+                $error = 'Preventivo non ancora generato';
+                break;
+            default:
+                $error = 'Errore generico';
+                break;
+        }
+
         return $this->render('default/errors.html.twig',[
             'error' => $error
         ]);

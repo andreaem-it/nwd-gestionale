@@ -26,6 +26,7 @@
         "doctrine/event-manager": "~1.0",
         "doctrine/orm": "^2.6",
         "doctrine/persistence": "~1.0",
+        "fados/chartjs-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "^2.0",
         "intriro/csv-bundle": "^1.0",

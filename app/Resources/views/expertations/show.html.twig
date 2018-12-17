@@ -30,11 +30,11 @@
                                         Computometrico
                                     </a>
                                     {% if gotAdv == true %}
-                                        <a href="{{ url('mostra_preventivo_avanzato', {'id': item.id}) }}" class="btn btn-success btn-sm float-right ">
+                                        <a href="{{ url('mostra_preventivo_avanzato', {'pid': item.pid}) }}" class="btn btn-success btn-sm float-right">
                                             Mostra Avanzato
                                         </a>
                                     {% else %}
-                                        <a href="{{ url('nuovo_preventivo_avanzato', {'id': item.id, 'floor': '0' }) }}" class="btn btn-success btn-sm float-right">
+                                        <a href="{{ url('nuovo_preventivo_avanzato', {'id': item.pid, 'floor': '0' }) }}" class="btn btn-success btn-sm float-right">
                                             Nuovo Avanzato
                                         </a>
                                     {% endif %}

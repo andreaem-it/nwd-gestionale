@@ -120,7 +120,7 @@
                                                 <a href="{% if item.status == 0 %}{{ url('preventivi_imposta_accettato', {'id': item.id }) }}{% else %}{{ url('preventivi_imposta_non_accettato', {'id': item.id }) }}{% endif %}" class="btn {% if item.status == 0 %}btn-success{% else %} btn-secondary{% endif %} btn-sm animsition-link" data-toggle="tooltip" data-placement="top" title="{% if item.status == 0 %}Imposta come Accettato{% elseif item.status == 1 %}Imposta come Non Accettato{% endif %}">
                                                     <span class="{% if item.status == 0 %}mdi mdi-check{% else %}fa fa-times pl-1{% endif %}"></span>
                                                 </a>
-                                                <a href="{{ url('mostra_preventivo',{'id' : item.id}) }}" class="btn btn-primary btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Mostra Preventivo">
+                                                <a href="{{ url('mostra_preventivo',{'pid' : item.pid}) }}" class="btn btn-primary btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Mostra Preventivo">
                                                     <span class="mdi mdi-eye-outline"></span>
                                                 </a>
                                                 <a href="" class="btn btn-warning btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Modifica Preventivo">

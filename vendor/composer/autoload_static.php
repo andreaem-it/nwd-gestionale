@@ -20,6 +20,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
     );
 
     public static $prefixLengthsPsr4 = array (
+        'f' => 
+        array (
+            'fados\\ChartjsBundle\\' => 20,
+        ),
         'T' => 
         array (
             'Twig\\Extensions\\' => 16,
@@ -104,6 +108,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
     );
 
     public static $prefixDirsPsr4 = array (
+        'fados\\ChartjsBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fados/chartjs-bundle',
+        ),
         'Twig\\Extensions\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/extensions/src',

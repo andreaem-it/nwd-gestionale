@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6036b263496359aaa5d919910cee3870",
+    "content-hash": "8150973a5bb6b75d5be40eda50782c92",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1090,6 +1090,54 @@
                 "reflection"
             ],
             "time": "2018-06-14T14:45:07+00:00"
+        },
+        {
+            "name": "fados/chartjs-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fados-produccions/ChartjsBundle.git",
+                "reference": "e2c14e62d211180cb9a6072f8dcd4360f75e9436"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fados-produccions/ChartjsBundle/zipball/e2c14e62d211180cb9a6072f8dcd4360f75e9436",
+                "reference": "e2c14e62d211180cb9a6072f8dcd4360f75e9436",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": ">=1.0",
+                "symfony/framework-bundle": "~2.1|~3.0",
+                "symfony/twig-bundle": "~2.1|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "fados\\ChartjsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Albert Juhé",
+                    "email": "albertjuhe@gmail.com",
+                    "homepage": "https://github.com/albertjuhe"
+                }
+            ],
+            "description": "Chartjs integration in Symfony2",
+            "homepage": "https://github.com/fados-produccions/ChartjsBundle",
+            "keywords": [
+                "chartjs"
+            ],
+            "time": "2017-10-10T13:30:29+00:00"
         },
         {
             "name": "fig/link-util",
@@ -3597,7 +3645,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "fados/chartjs-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

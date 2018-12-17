@@ -114,11 +114,11 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("/preventivi/mostra/{id}", name="mostra_preventivo")
+     * @Route("/preventivi/mostra/preventivo-{pid}", name="mostra_preventivo")
      */
-    public function expertationsShowAction($id) {
+    public function expertationsShowAction($pid) {
 
-        $item = $this->getDoctrine()->getRepository('AppBundle:Expertations')->find($id);
+        $item = $this->getDoctrine()->getRepository('AppBundle:Expertations')->findOneBy(['pid' =>$pid]);
 
         $id = $item->getId();
 
@@ -135,90 +135,9 @@ class ExpertationsController extends Controller
 
         dump($gotAdv);
 
-        /*if($item->getPrice() == 0.0) {
-
-            $em = $this->getDoctrine()->getManager();
-            $item = $em->getRepository('AppBundle:Expertations')->find($item->getId());
-
-            $total = (array_sum($item->getPp()) * $this->getPrice(1)) +
-                     (array_sum($item->getPl()) * $this->getPrice(2)) +
-                     (array_sum($item->getPt()) * $this->getPrice(3));
-
-            if($item->getOpereMurarie() == 1) {
-                //TODO: Price
-                $opMurPp = ($this->getPrice(4) * array_sum($item->getPp()));
-            } elseif ($item->getOpereMurarie() == 2) {
-                $opMurPp = ($this->getPrice(5) * array_sum($item->getPp()));
-            } else {
-                $opMurPp = ($this->getPrice(6) * array_sum($item->getPp())) ;
-            }
-
-            if($item->getOpereMurarie() == 1) {
-                //TODO: Price
-                $opMurPl = ($this->getPrice(7) * array_sum($item->getPl()));
-            } elseif($item->getOpereMurarie() == 2) {
-                $opMurPl = ($this->getPrice(8) * array_sum($item->getPl()));
-            } else {
-                $opMurPl = ($this->getPrice(9) * array_sum($item->getPl()));
-            }
-
-            if($item->getOpereMurarie() == 1) {
-                //TODO: Price
-                $opMurPt = ($this->getPrice(10) * array_sum($item->getPt()));
-            } elseif($item->getOpereMurarie() == 2) {
-                $opMurPt = ($this->getPrice(11) * array_sum($item->getPt()));
-            } else {
-                $opMurPt = ($this->getPrice(12) * array_sum($item->getPt()));
-            }
-
-            $circ       = ($this->getPrice(13) * $item->getNumCircuiti());
-            $prTelDati  = ($this->getPrice(14)  * $item->getNumPreseTelefonoDati());
-            $illmSic    = ($this->getPrice(15)  * $item->getIllumSicurezza());
-
-            if ($item->getSpd() == 1) {
-                $spd = $this->getPrice(16);
-            } elseif ($item->getSpd() == 2) {
-                $spd = $this->getPrice(17);
-            }
-
-            $total= $total +
-                    $opMurPp +
-                    $opMurPl +
-                    $opMurPt +
-                    $circ +
-                    $prTelDati +
-                    $illmSic +
-                    $spd;
-
-
-            $item->setPrice($total);
-            $em->flush();
-
-            $generated = true;
-
-        } else {
-
-            $total = $item->getPrice();
-
-            $generated = false;
-
-        }
-
-        $vat = $total * 22 / 100;
-
-        $vattotal = ($total + $vat);
-
-        $sconto = $item->getSconto() * $vattotal / 100;
-
-        $grandtotal = $vattotal - $sconto; */
-
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
             'item' => $item,
-            //'total' => $total,
-            //'vat' => $vat,
-            //'sconto' => $sconto,
-            //'grand_total' => $grandtotal,
             'generated' => TRUE,
             'client' => $client,
             'gotAdv' => $gotAdv
@@ -822,8 +741,6 @@ class ExpertationsController extends Controller
             return $this->redirectToRoute('mostra_preventivo', ['id' => $form->getData()->getId()]);
         }
 
-
-
         return $this->render('expertations/edit.html.twig', [
             'form' => $form->createView(),
         ]);
@@ -931,16 +848,6 @@ class ExpertationsController extends Controller
         }
         array_push($prices, ($qtyPT * $price->findByCode('15.3.110.1')));
         array_push($prices, ($calcTVCable * $price->findByCode('15.4.230')));
-        //array_push($prices, ($qtyPT * $price->findByCode('15.3.20.1')));
-        //array_push($prices, ($qtyPT * $price->findByCode('15.2.2')));
-        /*if ($item->getOpereMurarie() == 1) {
-            array_push($prices, ($qtyPT * $price->findByCode('15.3.20.1')));
-        } elseif ($item->getOpereMurarieIntonaco() == 1) {
-            array_push($prices, ($qtyPT * $price->findByCode('15.3.20.2')));
-        }
-        if ($item->getOpereMurarieIntonaco() == 1) {
-            array_push($prices, ($qtyPT * $price->findByCode('15.3.20.3')));
-        }*/
 
         /** Prese Telefoniche */
         if ($item->getNumPreseTelefono() != 0 ) {
@@ -1094,11 +1001,12 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("preventivi/avanzato/mostra/{id}", name="mostra_preventivo_avanzato")
+     * @Route("preventivi/avanzato/mostra/preventivo-{pid}", name="mostra_preventivo_avanzato")
      */
-    public function showExpertationAdvancedAction($id) {
+    public function showExpertationAdvancedAction($pid) {
 
-            $data = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
+            $data = $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $pid]);
+            $id = $this->convertPID($pid);
             $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
 
         if($item != null) {
@@ -1126,7 +1034,7 @@ class ExpertationsController extends Controller
             ]);
         } else {
             //throw new NotFoundHttpException('Preventivo non ancora generato');
-            return $this->redirectToRoute('error_id', ['error' => 'Preventivo non ancora generato']);
+            return $this->redirectToRoute('error_id', ['error' => 0001]);
         }
     }
 
@@ -1135,14 +1043,14 @@ class ExpertationsController extends Controller
      */
     public function newExpertationAdvancedAction(Request $request,$id,$floor) {
 
-        if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy('father', $id)) {
+        if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
             return $this->redirectToRoute('mostra_preventivo_avanzato', ['id' => $id]);
         } else {
             //$item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['id' => $id]);
             $qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
             $qb->select('exp')
                 ->where($qb->expr()->orX(
-                    $qb->expr()->eq('exp.id', ':id'),
+                    $qb->expr()->eq('exp.pid', ':id'),
                     $qb->expr()->eq('exp.floor', ':floor')))
                 ->setParameter('id', $id)
                 ->setParameter('floor', array($floor));
@@ -1150,7 +1058,9 @@ class ExpertationsController extends Controller
 
             //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
             $expertationsAdvanced = new ExpertationsAdvanced();
-            $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($id)->getAmbient();
+
+            $pid = $this->convertPID($id);
+            $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($pid)->getAmbient();
 
             $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
 
@@ -1260,6 +1170,267 @@ class ExpertationsController extends Controller
                 'floor' => $floor
             ]);
         }
+    }
+
+    /**
+     * @Route("preventivi/dettaglio/avanzato/preventivo-{pid}", name="preventivi_dettaglio_avanzato_id")
+     */
+    public function detailsAdvancedAction($pid) {
+
+        $repo = $this->getDoctrine()->getRepository(Expertations::class);
+        $item = $repo->findOneBy(['pid' => $pid]);
+        $repoAdv = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+        $id = $this->convertPID($pid);
+        $itemAdv = $repoAdv->findOneBy(['father' => $id]);
+        $price = $this->getDoctrine()->getRepository(PricesAdvanced::class);
+
+        $qtyPL = array_sum($item->getPl());
+        $qtyPC = array_sum($item->getC1v());
+        $qtyPP = array_sum($item->getPp());
+        $qtyPT = array_sum($item->getPt());
+        $qtyTR = array_sum($item->getC2v());
+        $qtyTP = $item->getNumPreseTelefono();
+        $qtyPD = $item->getNumPreseDati();
+        $calcTVCable = 10 * $item->getPianiCasa();
+        if ($qtyTP > 5) {
+            $calcTPCable = 30 + (35 * $qtyPT * 0.15);
+        } elseif ($qtyTP == 0) {
+            $calcTPCable = 0;
+        } else {
+            $calcTPCable = 30 + (35 * $qtyPT * 0.1);
+        }
+
+        $prices = array();
+
+        /** Punti Luce */
+        array_push($prices,($qtyPL * $price->findByCode('15.1.12.2')));
+        array_push($prices,($qtyPL * $price->findByCode('15.1.1')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices,$qtyPL * $price->findByCode('15.1.3.1'));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices,$qtyPL * $price->findByCode('15.1.4.1'));
+            }
+            if ($item->getOpereMurariePietra() == 1) {
+                array_push($prices,$qtyPL * $price->findByCode('15.1.5.1'));
+            }
+        }
+
+        /** Punti Comando */
+        array_push($prices,($qtyPC * $price->findByCode('15.1.15.1')));
+        array_push($prices,($qtyPC * $price->findByCode('15.1.2')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices,$qtyPC * $price->findByCode('15.1.3.2'));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices,$qtyPC * $price->findByCode('15.1.4.2'));
+            }
+            if ($item->getOpereMurariePietra() == 1) {
+                array_push($prices,$qtyPC * $price->findByCode('15.1.5.2'));
+            }
+        }
+
+        /** Punti Prese */
+        array_push($prices, ($qtyPP * $price->findByCode('15.2.21.1')));
+        array_push($prices, ($qtyPP * $price->findByCode('15.2.1')));
+        array_push($prices, ($qtyPP * $price->findByCode('15.2.41.3')));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices,$qtyPP * $price->findByCode('15.2.2'));
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices,$qtyPP * $price->findByCode('15.2.3'));
+            }
+            if ($item->getOpereMurariePietra() == 1) {
+                array_push($prices,$qtyPP * $price->findByCode('15.2.4'));
+            }
+        }
+        dump($itemAdv->getVal3());
+        if(array_sum($itemAdv->getVal3()) < 0) {
+            //array_push($prices, array_sum($itemAdv->getVal3()) * $price->findByCode('15.2.41.2'));
+        }
+
+        /** Prese di Servizio */
+        $qtyPS = [
+            $item->getNumPreseDati(),       // Prese Dati
+            $item->getNumPreseTelefono(),   // Prese Telefono
+            array_sum($item->getPt()),      // Prese TV
+            array_sum($item->getC2v()),     // Tiranti
+            '1',                            // Ronzatori
+            '1'                             // Suonerie
+        ];
+        // Predisposizione Lamapada di Emergenza
+        if ($item->getLampada() != 0 ) { array_push($qtyPS, '1'); }
+        $qtyPS = array_sum($qtyPS);
+        array_push($prices,$qtyPS * $price->findByCode('15.3.10'));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices, ($qtyPS * $price->findByCode('15.3.20.1')));
+        } elseif ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyPS * $price->findByCode('15.3.20.2')));
+        }
+        if ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyPS * $price->findByCode('15.3.20.3')));
+        }
+
+        /** Prese TV & Antenna */
+        if($item->getAntenna() == 1) {
+            array_push($prices, (1 * $price->findByCode('15.3.151.2')));
+        }
+        if ($qtyPT < 5 ) {
+            array_push($prices, (1 * $price->findByCode('15.3.162.1')));
+        } elseif ($qtyPT > 6 and $qtyPT < 10) {
+            array_push($prices, (1 * $price->findByCode('15.3.162.2')));
+        } elseif ($qtyPT < 11 and $qtyPT < 15 ) {
+            array_push($prices, (1 * $price->findByCode('15.3.162.3')));
+        }
+        array_push($prices, ($qtyPT * $price->findByCode('15.3.110.1')));
+        array_push($prices, ($calcTVCable * $price->findByCode('15.4.230')));
+
+        /** Prese Telefoniche */
+        if ($item->getNumPreseTelefono() != 0 ) {
+            array_push($prices, $qtyTP * $price->findByCode('15.3.210.1'));
+            array_push($prices, $calcTPCable * $price->findByCode('15.4.240.1'));
+            if ($item->getOpereMurarie() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
+            } elseif ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
+            }
+            if ($item->getOpereMurarieIntonaco() == 1) {
+                array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
+            }
+        }
+
+        /** Prese Dati */
+        if ($item->getNumPreseDati() != 0 ) {
+            array_push($prices, $qtyPD * $price->findByCode('15.3.220.6'));
+        }
+
+        /** Impianto Citofonico */
+        array_push($prices, 2 * $price->findByCode('15.3.52.1'));
+
+        /** Orologio Astronomico */
+        if($item->getIllumEsterna() == 1) {
+            array_push($prices, 1 * $price->findByCode('15.6.170.39'));
+        }
+
+        /** Punti di servizio Termico */
+        $qtyPST = 1 + $item->getPianiCasa();
+        array_push($prices, $qtyPST * $price->findByCode('15.3.10'));
+        if ($item->getOpereMurarie() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
+        } elseif ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
+        }
+        if ($item->getOpereMurarieIntonaco() == 1) {
+            array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
+        }
+
+        /** Allaccio Termostati */
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
+
+        /** Allaccio Caldaia o Pompa di Calore */
+        array_push($prices, 1 * $price->findByCode('13.21.40.1'));
+
+        /** Allaccio Collettori */
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
+
+        /** Centralino */
+        array_push($prices, 1 * $price->findByCode('15.6.220.3'));
+
+        /** Magnetotermico */
+        array_push($prices, $item->getNumCircuiti() * $price->findByCode('15.6.52.1'));
+
+        /** Sezionatore Quadro */
+        array_push($prices, 1 * $price->findByCode('15.6.10.8'));
+
+        /** Dorsali */
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('15.4.110.12') * 15 * 3);
+
+        /** Corrugati */
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('15.5.10.3') * 15 * 2);
+        array_push($prices, $item->getPianiCasa() * $price->findByCode('15.5.10.4') * 15 * 2);
+        array_push($prices,$item->getPianiCasa() * $price->findByCode('15.5.180.1') * 4);
+        array_push($prices,$item->getPianiCasa() * $price->findByCode('15.5.180.2') * 2 * 3);
+
+        /** Scatole */
+        array_push($prices,$item->getPianiCasa() * $price->findByCode('15.5.80.8'));
+
+        /** Ingresso fornitura */
+        array_push($prices,20 * $price->findByCode('15.4.21.40'));
+
+        /** Impianto di messa a terra */
+        array_push($prices, 20 * $price->findByCode('15.4.110.10'));
+        if ($item->getSpd() == 1) {
+            array_push($prices,$price->findByCode('15.7.204.4') * 1);
+        } else {
+            array_push($prices,($price->findByCode('15.7.204.4')) + ($price->findByCode('15.7.204.4')) * 1);
+        }
+
+        /** Puntale a croce */
+        array_push($prices, $price->findByCode('15.7.60.1'));
+
+        /** Relè e alimentatori */
+        if($item->getLevel() == 3) {
+            array_push($prices, $price->findByCode('15.6.170.31') * 1 );
+            array_push($prices, $price->findByCode('15.6.170.44') * 1);
+        }
+
+        /** Nodo Equipotenziale */
+        if ($item->getOpereMurarie() == 0) {
+            array_push($prices, $price->findByCode('15.2.160.1'));
+        } else {
+            array_push($prices, $price->findByCode('15.2.160.2'));
+        }
+
+        /** Scaricatore */
+        if ($item->getTrifase() == 0) {
+            array_push($prices, $price->findByCode('15.7.201'));
+        } else {
+            array_push($prices, 3 * $price->findByCode('15.7.202'));
+        }
+        array_push($prices, $price->findByCode('15.7.202'));
+        if ($item->getLevel() == 3) {
+            if ($item->getTrifase() == 0) {
+                array_push($prices, $price->findByCode('15.7.204.4'));
+            } else {
+                array_push($prices, $price->findByCode('15.7.204.2'));
+            }
+        }
+
+        /** Tiranti */
+        if ($qtyTR != 0) {
+            array_push($prices, $price->findByCode('15.3.40.1'));
+            array_push($prices, $price->findByCode('15.3.90'));
+        }
+
+        /** Segnalatore Acustico */
+        if ($item->getCampanello() != 0) {
+            array_push($prices, (1 * $price->findByCode('15.3.80.4')));
+            array_push($prices, (1 * $price->findByCode('15.3.90')));
+        }
+
+        $total = (array_sum($prices));
+        $sconto = $total * $item->getSconto() / 100;
+
+        //$vat = ($total - $sconto) * 22 / 100;
+
+        $item->setPrice($total);
+        $this->getDoctrine()->getManager()->persist($item);
+        $this->getDoctrine()->getManager()->flush();
+
+        return $this->render('expertations/details.advanced.html.twig',[
+            'item' => $item,
+            'qtyPL' => $qtyPL,
+            'qtyPC' => $qtyPC,
+            'qtyPP' => $qtyPP,
+            'qtyPT' => $qtyPT,
+            'qtyTP' => $qtyTP,
+            'qtyTR' => $qtyTR,
+            'qtyPS' => $qtyPS,
+            'qtyPD' => $qtyPD,
+            'qtyPST' => $qtyPST,
+            'total' => $total,
+            'calcTPCable' => $calcTPCable,
+            'calcTVCable' => $calcTVCable,
+            'vat' => $vat = 0,
+            'sconto' => $sconto
+        ]);
     }
 
     /**
@@ -1551,5 +1722,9 @@ class ExpertationsController extends Controller
         } else {
             return false;
         }
+    }
+
+    public function convertPID($id) {
+        return $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $id])->getId();
     }
 }

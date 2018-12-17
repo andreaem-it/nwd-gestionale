@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Intriro\Bundle\CsvBundle\IntriroCsvBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Symfony\Bundle\MakerBundle\MakerBundle(),
+            new fados\ChartjsBundle\ChartjsBundle(),
             new AppBundle\AppBundle(),
         ];
 
