@@ -9,6 +9,7 @@
             </div>
         </div>
         {% form_theme form 'jquery.collection.html.twig' %}
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
         {{ form_start(form) }}
         <div class="mt-3">
             <div class="card">
@@ -188,19 +189,60 @@
                 <div class="collapse mt-1 mb-2" id="collapse-1">
                     <div class="card">
                         <div class="card-body">
-                            <h4>PRIMA AGGIUNTA POSSIBILE: predisposizione per ingresso linee ENEL e TELECOM</h4>
                             <div class="row">
-                                <div class="col-sm-12">
-                                    <strong>Predisposizione tubazione esterna interrata per ingresso Linea telefonica. Misura ipotetica da verificare in loco.</strong>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <label>Tubazione flessibile in polietilene a doppia parete. Diametro esterno 50 mm</label>
-                                </div>
-                                <div class="col-sm-2">
-                                    <input type="number" class="form-control" value="0" width="100%">
-                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <div class="custom-control custom-checkbox">
+                                                {{ form_widget(form.opt1Enabled) }}
+                                            </div>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                Predisposizione tubazione esterna interrata per ingresso Linea telefonica. Misura ipotetica da verificare in loco.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_1Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_1Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_2Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_2Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Ingresso linea cavi impianto elettrico misura stimata in base alla posizione comunicata del contatore ENEL.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_3Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_4Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_4Value) }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -208,63 +250,564 @@
                 <div class="collapse mt-1 mb-2" id="collapse-2">
                     <div class="card">
                         <div class="card-body">
-                            SECONDA AGGIUNTA POSSIBILE: completamento predisposizione per domotica con Relè passo passo.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt2Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Relè Passo Passo ed alimentatori già suddivisi per piano: NECESSARI PER LA GESTIONE DELL'ILLUMINAZIONE IN BASSA TENSIONE
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt2_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt2_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt2_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt2_2Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-3">
                     <div class="card">
                         <div class="card-body">
-                            TERZA AGGIUNTA POSSIBILE: impianto di antenna satellitare, completo di antenna ed accessori
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt3Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                Impianto di ricezione SATELLITARE.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_1Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_1Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_2Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_2Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_3Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_4Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_4Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Impianto Satellitare Multiswitch centralizzato per più di 4 punti SATELLITE.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_5Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_5Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_6Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_6Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_7Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_7Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Incremento al punto presa di servizio per presa di ricezione TV satellitare
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_8Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_8Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_9Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_9Value) }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-4">
                     <div class="card">
                         <div class="card-body">
-                            QUARTA AGGIUNTA POSSIBILE: oneri di predisposizione per diffusione sonora per gli ambienti dell'abitazione
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt4Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione modulo comandi diffusione sonora.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt4_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt4_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt4_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt4_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt4_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt4_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-5">
                     <div class="card">
                         <div class="card-body">
-                            QUINTA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto sorround soggiorno.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt5Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione modulo surround
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt5_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt5_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt5_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt5_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt5_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt5_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-6">
                     <div class="card">
                         <div class="card-body">
-                            SESTA AGGIUNTA POSSIBILE: connettorizzazione dei punti di trasmissione dati predisposti e conteggiati nella proposta C.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt6Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Connettorizzazione punti trasmissione dati.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt6_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt6_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-7">
                     <div class="card">
                         <div class="card-body">
-                            SETTIMA AGGIUNTA POSSIBILE: oneri di predisposizione per videosorveglianza esterna.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt7Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione videosorveglianza
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt7_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt7_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt7_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt7_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt7_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt7_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-8">
                     <div class="card">
                         <div class="card-body">
-                            OTTAVA AGGIUNTA POSSIBILE: oneri di predisposizione per sistema di rilevazione allarme.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt8Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevazione allarme.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt8_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt8_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt8_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt8_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt8_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt8_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-9">
                     <div class="card">
                         <div class="card-body">
-                            NONA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto di rilevazione fumi.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt9Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevazione fumi
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt9_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt9_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt9_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt9_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt9_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt9_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-10">
                     <div class="card">
                         <div class="card-body">
-                            DECIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori sonde allagamento e gas.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt10Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione sonde allagamento.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione sonde allagamento.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevatori gas
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione elettrovalvola GAS.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_7Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_8Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_8Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_9Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_9Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1286,6 +1829,18 @@
             background-image: none;
             border: 1px solid #308ee0!important;
         }
+        .custom-control-label::before,
+        .custom-control-label::after {
+            top: 0rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .custom-control-label {
+            font-size: 16px!important;
+        }
+        .custom-form-control {
+            float: left!important;
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/jquery.toastr.min.css') }}">
 {% endblock %}
@@ -1334,6 +1889,8 @@
                 $(this).switchClass('btn-outline-primary','btn-primary');
             });
         });
-
+        function checkedAddon(id) {
+            $('.collapse-' + id).switchClass('btn-primary', 'btn-success');
+        }
     </script>
 {% endblock %}
