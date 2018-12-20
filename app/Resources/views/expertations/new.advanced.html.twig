@@ -814,77 +814,753 @@
                 <div class="collapse mt-1 mb-2" id="collapse-11">
                     <div class="card">
                         <div class="card-body">
-                            UNDICESIMA AGGIUNTA POSSIBILE: oneri di predisposizione per motorizzazione di tapparelle, persiane, zanzariere, tende e/o oscuranti.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt11Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_5Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-12">
                     <div class="card">
                         <div class="card-body">
-                            DODICESIMA AGGIUNTA POSSIBILE: oneri per passaggio cavi e collegamento di motorizzazioni per tapparelle, persiane, zanzariere, tende e/o oscuranti.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt12Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt12_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt12_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt12_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-13">
                     <div class="card">
                         <div class="card-body">
-                            TREDICESIMA AGGIUNTA POSSIBILE: centralino telefonico con 2 linee esterne e 8 linee interne.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt13Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            CENTRALINO TELEFONICO 2 LINEE ESTERNE E 8 INTERNI.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_4Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-14">
                     <div class="card">
                         <div class="card-body">
-                            QUATTORDICESIMA AGGIUNTA POSSIBILE: impianto citofonico (solo audio)
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt14Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Impianto Citofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_6Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-15">
                     <div class="card">
                         <div class="card-body">
-                            QUINDICESIMA AGGIUNTA POSSIBILE: impianto videocitofonico a colori in esecuzione a muro
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt15Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Impianto Videocitofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_7Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-16">
                     <div class="card">
                         <div class="card-body">
-                            SEDICESIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori  luminosità.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt16Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt16_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt16_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt16_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-17">
                     <div class="card">
                         <div class="card-body">
-                            DICIASSETTESIMA AGGIUNTA POSSIBILE: esempio di soluzione per la  predisposizione di  illuminazione esterna con 20 punti luce.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt17Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione cavidotti esterni Lato anteriore e posteriore per illuminazione esterna pozzetti ogni 10mt circa per rendere più facile la predisposizione dell'illuminazione definitiva. Misura ipotetica da verificare in loco.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Linea elettrica per accensioni 2 linee di accensioni separate.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Collegamento stagno nei pozzetti
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_6Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-18">
                     <div class="card">
                         <div class="card-body">
-                            DICIOTTESIMA AGGIUNTA POSSIBILE: predisposizione per impianto fotovoltaico
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt18Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Tubazione per predisposizione impianto fotovoltaico: due tubazioni dai pannelli al locale tecnico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt18_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt18_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-19">
                     <div class="card">
                         <div class="card-body">
-                            DICIANNOVESIMA AGGIUNTA POSSIBILE: punti presa di servizio per le sonde di temperatura di ogni ambiente, tranne le due conteggiate nella proposta C.
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt19Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Allaccio TERMOSTATI (l'esatta quantità e in funzione del progetto termoidraulico, appena ci verrà consegnato aggiorneremo la nostra offerta).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt19_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt19_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt19_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt19_2Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-20">
                     <div class="card">
                         <div class="card-body">
-                            VENTESIMA AGGIUNTA POSSIBILE: cronotermostati ambiente
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt20Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Cronotermostato
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt20_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt20_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collapse mt-1 mb-2" id="collapse-21">
                     <div class="card">
                         <div class="card-body">
-                            VENTUNESIMA AGGIUNTA POSSIBILE: armadio rack
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt21Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Armadio Rack
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Prese di alimentazione
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Patch Panel
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_7Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_8Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_8Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_9Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_9Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Mensole
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_10Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_10Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_11Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_11Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Pannelli ciechi di copertura finale
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_12Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_12Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_13Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_13Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Ventilazione forzata
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_14Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_14Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

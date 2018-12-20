@@ -841,6 +841,449 @@ class ExpertationsAdvanced
     private $opt10_9Value;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt11_enabled", type="boolean", nullable=true)
+     */
+    private $opt11Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt11_1_value", type="integer", nullable=true)
+     */
+    private $opt11_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt11_2_value", type="integer", nullable=true)
+     */
+    private $opt11_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt11_3_value", type="integer", nullable=true)
+     */
+    private $opt11_3Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt11_4_value", type="integer", nullable=true)
+     */
+    private $opt11_4Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt11_5_value", type="integer", nullable=true)
+     */
+    private $opt11_5Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt12_enabled", type="boolean", nullable=true)
+     */
+    private $opt12Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt12_1_value", type="integer", nullable=true)
+     */
+    private $opt12_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt12_2_value", type="integer", nullable=true)
+     */
+    private $opt12_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt12_3_value", type="integer", nullable=true)
+     */
+    private $opt12_3Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt13_enabled", type="boolean", nullable=true)
+     */
+    private $opt13Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt13_1_value", type="integer", nullable=true)
+     */
+    private $opt13_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt13_2_value", type="integer", nullable=true)
+     */
+    private $opt13_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt13_3_value", type="integer", nullable=true)
+     */
+    private $opt13_3Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt13_4_value", type="integer", nullable=true)
+     */
+    private $opt13_4Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt14_enabled", type="boolean", nullable=true)
+     */
+    private $opt14Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt14_1_value", type="integer", nullable=true)
+     */
+    private $opt14_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt14_2_value", type="integer", nullable=true)
+     */
+    private $opt14_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt14_3_value", type="integer", nullable=true)
+     */
+    private $opt14_3Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt14_4_value", type="integer", nullable=true)
+     */
+    private $opt14_4Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt14_5_value", type="integer", nullable=true)
+     */
+    private $opt14_5Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt14_6_value", type="integer", nullable=true)
+     */
+    private $opt14_6Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt15_enabled", type="boolean", nullable=true)
+     */
+    private $opt15Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_1_value", type="integer", nullable=true)
+     */
+    private $opt15_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_2_value", type="integer", nullable=true)
+     */
+    private $opt15_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_3_value", type="integer", nullable=true)
+     */
+    private $opt15_3Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_4_value", type="integer", nullable=true)
+     */
+    private $opt15_4Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_5_value", type="integer", nullable=true)
+     */
+    private $opt15_5Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_6_value", type="integer", nullable=true)
+     */
+    private $opt15_6Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt15_7_value", type="integer", nullable=true)
+     */
+    private $opt15_7Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt16_enabled", type="boolean", nullable=true)
+     */
+    private $opt16Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt16_1_value", type="integer", nullable=true)
+     */
+    private $opt16_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt16_2_value", type="integer", nullable=true)
+     */
+    private $opt16_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt16_3_value", type="integer", nullable=true)
+     */
+    private $opt16_3Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt17_enabled", type="boolean", nullable=true)
+     */
+    private $opt17Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt17_1_value", type="integer", nullable=true)
+     */
+    private $opt17_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt17_2_value", type="integer", nullable=true)
+     */
+    private $opt17_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt17_3_value", type="integer", nullable=true)
+     */
+    private $opt17_3Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt17_4_value", type="integer", nullable=true)
+     */
+    private $opt17_4Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt17_5_value", type="integer", nullable=true)
+     */
+    private $opt17_5Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt17_6_value", type="integer", nullable=true)
+     */
+    private $opt17_6Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt18_enabled", type="boolean", nullable=true)
+     */
+    private $opt18Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt18_1_value", type="integer", nullable=true)
+     */
+    private $opt18_1Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt19_enabled", type="boolean", nullable=true)
+     */
+    private $opt19Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt19_1_value", type="integer", nullable=true)
+     */
+    private $opt19_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt19_2_value", type="integer", nullable=true)
+     */
+    private $opt19_2Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt20_enabled", type="boolean", nullable=true)
+     */
+    private $opt20Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt20_1_value", type="integer", nullable=true)
+     */
+    private $opt20_1Value;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="opt21_enabled", type="boolean", nullable=true)
+     */
+    private $opt21Enabled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_1_value", type="integer", nullable=true)
+     */
+    private $opt21_1Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_2_value", type="integer", nullable=true)
+     */
+    private $opt21_2Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_3_value", type="integer", nullable=true)
+     */
+    private $opt21_3Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_4_value", type="integer", nullable=true)
+     */
+    private $opt21_4Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_5_value", type="integer", nullable=true)
+     */
+    private $opt21_5Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_6_value", type="integer", nullable=true)
+     */
+    private $opt21_6Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_7_value", type="integer", nullable=true)
+     */
+    private $opt21_7Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_8_value", type="integer", nullable=true)
+     */
+    private $opt21_8Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_9_value", type="integer", nullable=true)
+     */
+    private $opt21_9Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_10_value", type="integer", nullable=true)
+     */
+    private $opt21_10Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_11_value", type="integer", nullable=true)
+     */
+    private $opt21_11Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_12_value", type="integer", nullable=true)
+     */
+    private $opt21_12Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_13_value", type="integer", nullable=true)
+     */
+    private $opt21_13Value;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opt21_14_value", type="integer", nullable=true)
+     */
+    private $opt21_14Value;
+
+
+
+    /**
      * Get id.
      *
      * @return int
@@ -3659,4 +4102,1516 @@ class ExpertationsAdvanced
         return $this->opt10_9Value;
     }
 
+
+    /**
+     * Set opt11Enabled.
+     *
+     * @param bool|null $opt11Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt11Enabled($opt11Enabled = null)
+    {
+        $this->opt11Enabled = $opt11Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt11Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt11Enabled()
+    {
+        return $this->opt11Enabled;
+    }
+
+    /**
+     * Set opt111Value.
+     *
+     * @param int|null $opt111Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt111Value($opt111Value = null)
+    {
+        $this->opt11_1Value = $opt111Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt111Value.
+     *
+     * @return int|null
+     */
+    public function getOpt111Value()
+    {
+        return $this->opt11_1Value;
+    }
+
+    /**
+     * Set opt112Value.
+     *
+     * @param int|null $opt112Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt112Value($opt112Value = null)
+    {
+        $this->opt11_2Value = $opt112Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt112Value.
+     *
+     * @return int|null
+     */
+    public function getOpt112Value()
+    {
+        return $this->opt11_2Value;
+    }
+
+    /**
+     * Set opt113Value.
+     *
+     * @param int|null $opt113Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt113Value($opt113Value = null)
+    {
+        $this->opt11_3Value = $opt113Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt113Value.
+     *
+     * @return int|null
+     */
+    public function getOpt113Value()
+    {
+        return $this->opt11_3Value;
+    }
+
+    /**
+     * Set opt114Value.
+     *
+     * @param int|null $opt114Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt114Value($opt114Value = null)
+    {
+        $this->opt11_4Value = $opt114Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt114Value.
+     *
+     * @return int|null
+     */
+    public function getOpt114Value()
+    {
+        return $this->opt11_4Value;
+    }
+
+    /**
+     * Set opt115Value.
+     *
+     * @param int|null $opt115Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt115Value($opt115Value = null)
+    {
+        $this->opt11_5Value = $opt115Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt115Value.
+     *
+     * @return int|null
+     */
+    public function getOpt115Value()
+    {
+        return $this->opt11_5Value;
+    }
+
+    /**
+     * Set opt12Enabled.
+     *
+     * @param bool|null $opt12Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt12Enabled($opt12Enabled = null)
+    {
+        $this->opt12Enabled = $opt12Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt12Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt12Enabled()
+    {
+        return $this->opt12Enabled;
+    }
+
+    /**
+     * Set opt121Value.
+     *
+     * @param int|null $opt121Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt121Value($opt121Value = null)
+    {
+        $this->opt12_1Value = $opt121Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt121Value.
+     *
+     * @return int|null
+     */
+    public function getOpt121Value()
+    {
+        return $this->opt12_1Value;
+    }
+
+    /**
+     * Set opt122Value.
+     *
+     * @param int|null $opt122Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt122Value($opt122Value = null)
+    {
+        $this->opt12_2Value = $opt122Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt122Value.
+     *
+     * @return int|null
+     */
+    public function getOpt122Value()
+    {
+        return $this->opt12_2Value;
+    }
+
+    /**
+     * Set opt123Value.
+     *
+     * @param int|null $opt123Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt123Value($opt123Value = null)
+    {
+        $this->opt12_3Value = $opt123Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt123Value.
+     *
+     * @return int|null
+     */
+    public function getOpt123Value()
+    {
+        return $this->opt12_3Value;
+    }
+
+    /**
+     * Set opt13Enabled.
+     *
+     * @param bool|null $opt13Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt13Enabled($opt13Enabled = null)
+    {
+        $this->opt13Enabled = $opt13Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt13Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt13Enabled()
+    {
+        return $this->opt13Enabled;
+    }
+
+    /**
+     * Set opt131Value.
+     *
+     * @param int|null $opt131Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt131Value($opt131Value = null)
+    {
+        $this->opt13_1Value = $opt131Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt131Value.
+     *
+     * @return int|null
+     */
+    public function getOpt131Value()
+    {
+        return $this->opt13_1Value;
+    }
+
+    /**
+     * Set opt132Value.
+     *
+     * @param int|null $opt132Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt132Value($opt132Value = null)
+    {
+        $this->opt13_2Value = $opt132Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt132Value.
+     *
+     * @return int|null
+     */
+    public function getOpt132Value()
+    {
+        return $this->opt13_2Value;
+    }
+
+    /**
+     * Set opt133Value.
+     *
+     * @param int|null $opt133Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt133Value($opt133Value = null)
+    {
+        $this->opt13_3Value = $opt133Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt133Value.
+     *
+     * @return int|null
+     */
+    public function getOpt133Value()
+    {
+        return $this->opt13_3Value;
+    }
+
+    /**
+     * Set opt134Value.
+     *
+     * @param int|null $opt134Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt134Value($opt134Value = null)
+    {
+        $this->opt13_4Value = $opt134Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt134Value.
+     *
+     * @return int|null
+     */
+    public function getOpt134Value()
+    {
+        return $this->opt13_4Value;
+    }
+
+    /**
+     * Set opt14Enabled.
+     *
+     * @param bool|null $opt14Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt14Enabled($opt14Enabled = null)
+    {
+        $this->opt14Enabled = $opt14Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt14Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt14Enabled()
+    {
+        return $this->opt14Enabled;
+    }
+
+    /**
+     * Set opt141Value.
+     *
+     * @param int|null $opt141Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt141Value($opt141Value = null)
+    {
+        $this->opt14_1Value = $opt141Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt141Value.
+     *
+     * @return int|null
+     */
+    public function getOpt141Value()
+    {
+        return $this->opt14_1Value;
+    }
+
+    /**
+     * Set opt142Value.
+     *
+     * @param int|null $opt142Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt142Value($opt142Value = null)
+    {
+        $this->opt14_2Value = $opt142Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt142Value.
+     *
+     * @return int|null
+     */
+    public function getOpt142Value()
+    {
+        return $this->opt14_2Value;
+    }
+
+    /**
+     * Set opt143Value.
+     *
+     * @param int|null $opt143Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt143Value($opt143Value = null)
+    {
+        $this->opt14_3Value = $opt143Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt143Value.
+     *
+     * @return int|null
+     */
+    public function getOpt143Value()
+    {
+        return $this->opt14_3Value;
+    }
+
+    /**
+     * Set opt144Value.
+     *
+     * @param int|null $opt144Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt144Value($opt144Value = null)
+    {
+        $this->opt14_4Value = $opt144Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt144Value.
+     *
+     * @return int|null
+     */
+    public function getOpt144Value()
+    {
+        return $this->opt14_4Value;
+    }
+
+    /**
+     * Set opt145Value.
+     *
+     * @param int|null $opt145Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt145Value($opt145Value = null)
+    {
+        $this->opt14_5Value = $opt145Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt145Value.
+     *
+     * @return int|null
+     */
+    public function getOpt145Value()
+    {
+        return $this->opt14_5Value;
+    }
+
+    /**
+     * Set opt146Value.
+     *
+     * @param int|null $opt146Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt146Value($opt146Value = null)
+    {
+        $this->opt14_6Value = $opt146Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt146Value.
+     *
+     * @return int|null
+     */
+    public function getOpt146Value()
+    {
+        return $this->opt14_6Value;
+    }
+
+    /**
+     * Set opt15Enabled.
+     *
+     * @param bool|null $opt15Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt15Enabled($opt15Enabled = null)
+    {
+        $this->opt15Enabled = $opt15Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt15Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt15Enabled()
+    {
+        return $this->opt15Enabled;
+    }
+
+    /**
+     * Set opt151Value.
+     *
+     * @param int|null $opt151Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt151Value($opt151Value = null)
+    {
+        $this->opt15_1Value = $opt151Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt151Value.
+     *
+     * @return int|null
+     */
+    public function getOpt151Value()
+    {
+        return $this->opt15_1Value;
+    }
+
+    /**
+     * Set opt152Value.
+     *
+     * @param int|null $opt152Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt152Value($opt152Value = null)
+    {
+        $this->opt15_2Value = $opt152Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt152Value.
+     *
+     * @return int|null
+     */
+    public function getOpt152Value()
+    {
+        return $this->opt15_2Value;
+    }
+
+    /**
+     * Set opt153Value.
+     *
+     * @param int|null $opt153Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt153Value($opt153Value = null)
+    {
+        $this->opt15_3Value = $opt153Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt153Value.
+     *
+     * @return int|null
+     */
+    public function getOpt153Value()
+    {
+        return $this->opt15_3Value;
+    }
+
+    /**
+     * Set opt154Value.
+     *
+     * @param int|null $opt154Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt154Value($opt154Value = null)
+    {
+        $this->opt15_4Value = $opt154Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt154Value.
+     *
+     * @return int|null
+     */
+    public function getOpt154Value()
+    {
+        return $this->opt15_4Value;
+    }
+
+    /**
+     * Set opt155Value.
+     *
+     * @param int|null $opt155Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt155Value($opt155Value = null)
+    {
+        $this->opt15_5Value = $opt155Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt155Value.
+     *
+     * @return int|null
+     */
+    public function getOpt155Value()
+    {
+        return $this->opt15_5Value;
+    }
+
+    /**
+     * Set opt156Value.
+     *
+     * @param int|null $opt156Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt156Value($opt156Value = null)
+    {
+        $this->opt15_6Value = $opt156Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt156Value.
+     *
+     * @return int|null
+     */
+    public function getOpt156Value()
+    {
+        return $this->opt15_6Value;
+    }
+
+    /**
+     * Set opt157Value.
+     *
+     * @param int|null $opt157Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt157Value($opt157Value = null)
+    {
+        $this->opt15_7Value = $opt157Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt157Value.
+     *
+     * @return int|null
+     */
+    public function getOpt157Value()
+    {
+        return $this->opt15_7Value;
+    }
+
+    /**
+     * Set opt16Enabled.
+     *
+     * @param bool|null $opt16Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt16Enabled($opt16Enabled = null)
+    {
+        $this->opt16Enabled = $opt16Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt16Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt16Enabled()
+    {
+        return $this->opt16Enabled;
+    }
+
+    /**
+     * Set opt161Value.
+     *
+     * @param int|null $opt161Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt161Value($opt161Value = null)
+    {
+        $this->opt16_1Value = $opt161Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt161Value.
+     *
+     * @return int|null
+     */
+    public function getOpt161Value()
+    {
+        return $this->opt16_1Value;
+    }
+
+    /**
+     * Set opt162Value.
+     *
+     * @param int|null $opt162Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt162Value($opt162Value = null)
+    {
+        $this->opt16_2Value = $opt162Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt162Value.
+     *
+     * @return int|null
+     */
+    public function getOpt162Value()
+    {
+        return $this->opt16_2Value;
+    }
+
+    /**
+     * Set opt163Value.
+     *
+     * @param int|null $opt163Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt163Value($opt163Value = null)
+    {
+        $this->opt16_3Value = $opt163Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt163Value.
+     *
+     * @return int|null
+     */
+    public function getOpt163Value()
+    {
+        return $this->opt16_3Value;
+    }
+
+    /**
+     * Set opt17Enabled.
+     *
+     * @param bool|null $opt17Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt17Enabled($opt17Enabled = null)
+    {
+        $this->opt17Enabled = $opt17Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt17Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt17Enabled()
+    {
+        return $this->opt17Enabled;
+    }
+
+    /**
+     * Set opt171Value.
+     *
+     * @param int|null $opt171Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt171Value($opt171Value = null)
+    {
+        $this->opt17_1Value = $opt171Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt171Value.
+     *
+     * @return int|null
+     */
+    public function getOpt171Value()
+    {
+        return $this->opt17_1Value;
+    }
+
+    /**
+     * Set opt172Value.
+     *
+     * @param int|null $opt172Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt172Value($opt172Value = null)
+    {
+        $this->opt17_2Value = $opt172Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt172Value.
+     *
+     * @return int|null
+     */
+    public function getOpt172Value()
+    {
+        return $this->opt17_2Value;
+    }
+
+    /**
+     * Set opt173Value.
+     *
+     * @param int|null $opt173Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt173Value($opt173Value = null)
+    {
+        $this->opt17_3Value = $opt173Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt173Value.
+     *
+     * @return int|null
+     */
+    public function getOpt173Value()
+    {
+        return $this->opt17_3Value;
+    }
+
+    /**
+     * Set opt174Value.
+     *
+     * @param int|null $opt174Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt174Value($opt174Value = null)
+    {
+        $this->opt17_4Value = $opt174Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt174Value.
+     *
+     * @return int|null
+     */
+    public function getOpt174Value()
+    {
+        return $this->opt17_4Value;
+    }
+
+    /**
+     * Set opt175Value.
+     *
+     * @param int|null $opt175Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt175Value($opt175Value = null)
+    {
+        $this->opt17_5Value = $opt175Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt175Value.
+     *
+     * @return int|null
+     */
+    public function getOpt175Value()
+    {
+        return $this->opt17_5Value;
+    }
+
+    /**
+     * Set opt176Value.
+     *
+     * @param int|null $opt176Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt176Value($opt176Value = null)
+    {
+        $this->opt17_6Value = $opt176Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt176Value.
+     *
+     * @return int|null
+     */
+    public function getOpt176Value()
+    {
+        return $this->opt17_6Value;
+    }
+
+    /**
+     * Set opt18Enabled.
+     *
+     * @param bool|null $opt18Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt18Enabled($opt18Enabled = null)
+    {
+        $this->opt18Enabled = $opt18Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt18Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt18Enabled()
+    {
+        return $this->opt18Enabled;
+    }
+
+    /**
+     * Set opt181Value.
+     *
+     * @param int|null $opt181Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt181Value($opt181Value = null)
+    {
+        $this->opt18_1Value = $opt181Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt181Value.
+     *
+     * @return int|null
+     */
+    public function getOpt181Value()
+    {
+        return $this->opt18_1Value;
+    }
+
+    /**
+     * Set opt19Enabled.
+     *
+     * @param bool|null $opt19Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt19Enabled($opt19Enabled = null)
+    {
+        $this->opt19Enabled = $opt19Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt19Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt19Enabled()
+    {
+        return $this->opt19Enabled;
+    }
+
+    /**
+     * Set opt191Value.
+     *
+     * @param int|null $opt191Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt191Value($opt191Value = null)
+    {
+        $this->opt19_1Value = $opt191Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt191Value.
+     *
+     * @return int|null
+     */
+    public function getOpt191Value()
+    {
+        return $this->opt19_1Value;
+    }
+
+    /**
+     * Set opt192Value.
+     *
+     * @param int|null $opt192Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt192Value($opt192Value = null)
+    {
+        $this->opt19_2Value = $opt192Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt192Value.
+     *
+     * @return int|null
+     */
+    public function getOpt192Value()
+    {
+        return $this->opt19_2Value;
+    }
+
+    /**
+     * Set opt20Enabled.
+     *
+     * @param bool|null $opt20Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt20Enabled($opt20Enabled = null)
+    {
+        $this->opt20Enabled = $opt20Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt20Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt20Enabled()
+    {
+        return $this->opt20Enabled;
+    }
+
+    /**
+     * Set opt201Value.
+     *
+     * @param int|null $opt201Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt201Value($opt201Value = null)
+    {
+        $this->opt20_1Value = $opt201Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt201Value.
+     *
+     * @return int|null
+     */
+    public function getOpt201Value()
+    {
+        return $this->opt20_1Value;
+    }
+
+    /**
+     * Set opt21Enabled.
+     *
+     * @param bool|null $opt21Enabled
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt21Enabled($opt21Enabled = null)
+    {
+        $this->opt21Enabled = $opt21Enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get opt21Enabled.
+     *
+     * @return bool|null
+     */
+    public function getOpt21Enabled()
+    {
+        return $this->opt21Enabled;
+    }
+
+    /**
+     * Set opt211Value.
+     *
+     * @param int|null $opt211Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt211Value($opt211Value = null)
+    {
+        $this->opt21_1Value = $opt211Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt211Value.
+     *
+     * @return int|null
+     */
+    public function getOpt211Value()
+    {
+        return $this->opt21_1Value;
+    }
+
+    /**
+     * Set opt212Value.
+     *
+     * @param int|null $opt212Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt212Value($opt212Value = null)
+    {
+        $this->opt21_2Value = $opt212Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt212Value.
+     *
+     * @return int|null
+     */
+    public function getOpt212Value()
+    {
+        return $this->opt21_2Value;
+    }
+
+    /**
+     * Set opt213Value.
+     *
+     * @param int|null $opt213Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt213Value($opt213Value = null)
+    {
+        $this->opt21_3Value = $opt213Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt213Value.
+     *
+     * @return int|null
+     */
+    public function getOpt213Value()
+    {
+        return $this->opt21_3Value;
+    }
+
+    /**
+     * Set opt214Value.
+     *
+     * @param int|null $opt214Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt214Value($opt214Value = null)
+    {
+        $this->opt21_4Value = $opt214Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt214Value.
+     *
+     * @return int|null
+     */
+    public function getOpt214Value()
+    {
+        return $this->opt21_4Value;
+    }
+
+    /**
+     * Set opt215Value.
+     *
+     * @param int|null $opt215Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt215Value($opt215Value = null)
+    {
+        $this->opt21_5Value = $opt215Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt215Value.
+     *
+     * @return int|null
+     */
+    public function getOpt215Value()
+    {
+        return $this->opt21_5Value;
+    }
+
+    /**
+     * Set opt216Value.
+     *
+     * @param int|null $opt216Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt216Value($opt216Value = null)
+    {
+        $this->opt21_6Value = $opt216Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt216Value.
+     *
+     * @return int|null
+     */
+    public function getOpt216Value()
+    {
+        return $this->opt21_6Value;
+    }
+
+    /**
+     * Set opt217Value.
+     *
+     * @param int|null $opt217Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt217Value($opt217Value = null)
+    {
+        $this->opt21_7Value = $opt217Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt217Value.
+     *
+     * @return int|null
+     */
+    public function getOpt217Value()
+    {
+        return $this->opt21_7Value;
+    }
+
+    /**
+     * Set opt218Value.
+     *
+     * @param int|null $opt218Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt218Value($opt218Value = null)
+    {
+        $this->opt21_8Value = $opt218Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt218Value.
+     *
+     * @return int|null
+     */
+    public function getOpt218Value()
+    {
+        return $this->opt21_8Value;
+    }
+
+    /**
+     * Set opt219Value.
+     *
+     * @param int|null $opt219Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt219Value($opt219Value = null)
+    {
+        $this->opt21_9Value = $opt219Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt219Value.
+     *
+     * @return int|null
+     */
+    public function getOpt219Value()
+    {
+        return $this->opt21_9Value;
+    }
+
+    /**
+     * Set opt2110Value.
+     *
+     * @param int|null $opt2110Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt2110Value($opt2110Value = null)
+    {
+        $this->opt21_10Value = $opt2110Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt2110Value.
+     *
+     * @return int|null
+     */
+    public function getOpt2110Value()
+    {
+        return $this->opt21_10Value;
+    }
+
+    /**
+     * Set opt2111Value.
+     *
+     * @param int|null $opt2111Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt2111Value($opt2111Value = null)
+    {
+        $this->opt21_11Value = $opt2111Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt2111Value.
+     *
+     * @return int|null
+     */
+    public function getOpt2111Value()
+    {
+        return $this->opt21_11Value;
+    }
+
+    /**
+     * Set opt2112Value.
+     *
+     * @param int|null $opt2112Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt2112Value($opt2112Value = null)
+    {
+        $this->opt21_12Value = $opt2112Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt2112Value.
+     *
+     * @return int|null
+     */
+    public function getOpt2112Value()
+    {
+        return $this->opt21_12Value;
+    }
+
+    /**
+     * Set opt2113Value.
+     *
+     * @param int|null $opt2113Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt2113Value($opt2113Value = null)
+    {
+        $this->opt21_13Value = $opt2113Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt2113Value.
+     *
+     * @return int|null
+     */
+    public function getOpt2113Value()
+    {
+        return $this->opt21_13Value;
+    }
+
+    /**
+     * Set opt2114Value.
+     *
+     * @param int|null $opt2114Value
+     *
+     * @return ExpertationsAdvanced
+     */
+    public function setOpt2114Value($opt2114Value = null)
+    {
+        $this->opt21_14Value = $opt2114Value;
+
+        return $this;
+    }
+
+    /**
+     * Get opt2114Value.
+     *
+     * @return int|null
+     */
+    public function getOpt2114Value()
+    {
+        return $this->opt21_14Value;
+    }
 }

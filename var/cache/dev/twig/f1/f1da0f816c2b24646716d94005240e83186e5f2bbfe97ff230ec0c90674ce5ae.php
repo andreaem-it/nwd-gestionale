@@ -1307,77 +1307,1104 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-11\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            UNDICESIMA AGGIUNTA POSSIBILE: oneri di predisposizione per motorizzazione di tapparelle, persiane, zanzariere, tende e/o oscuranti.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 822
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 822, $this->source); })()), "opt11Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 834
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 834, $this->source); })()), "opt11_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 837
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 837, $this->source); })()), "opt11_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 842
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 842, $this->source); })()), "opt11_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 845
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 845, $this->source); })()), "opt11_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 850
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 850, $this->source); })()), "opt11_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 853
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 853, $this->source); })()), "opt11_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 858
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 858, $this->source); })()), "opt11_4Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 861
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 861, $this->source); })()), "opt11_4Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 871
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 871, $this->source); })()), "opt11_5Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 874
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 874, $this->source); })()), "opt11_5Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-12\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DODICESIMA AGGIUNTA POSSIBILE: oneri per passaggio cavi e collegamento di motorizzazioni per tapparelle, persiane, zanzariere, tende e/o oscuranti.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 891
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 891, $this->source); })()), "opt12Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 903
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 903, $this->source); })()), "opt12_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 906
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 906, $this->source); })()), "opt12_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 911
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 911, $this->source); })()), "opt12_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 914
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 914, $this->source); })()), "opt12_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 919
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 919, $this->source); })()), "opt12_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 922
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 922, $this->source); })()), "opt12_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-13\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            TREDICESIMA AGGIUNTA POSSIBILE: centralino telefonico con 2 linee esterne e 8 linee interne.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 939
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 939, $this->source); })()), "opt13Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            CENTRALINO TELEFONICO 2 LINEE ESTERNE E 8 INTERNI.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 951
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 951, $this->source); })()), "opt13_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 954
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 954, $this->source); })()), "opt13_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 959
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 959, $this->source); })()), "opt13_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 962
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 962, $this->source); })()), "opt13_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 967
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 967, $this->source); })()), "opt13_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 970
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 970, $this->source); })()), "opt13_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 980
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 980, $this->source); })()), "opt13_4Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 983
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 983, $this->source); })()), "opt13_4Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-14\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            QUATTORDICESIMA AGGIUNTA POSSIBILE: impianto citofonico (solo audio)
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1000
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1000, $this->source); })()), "opt14Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Impianto Citofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1012
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1012, $this->source); })()), "opt14_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1015
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1015, $this->source); })()), "opt14_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1020
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1020, $this->source); })()), "opt14_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1023
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1023, $this->source); })()), "opt14_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1028
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1028, $this->source); })()), "opt14_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1031
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1031, $this->source); })()), "opt14_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1036
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1036, $this->source); })()), "opt14_4Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1039
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1039, $this->source); })()), "opt14_4Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1044
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1044, $this->source); })()), "opt14_5Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1047
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1047, $this->source); })()), "opt14_5Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1057
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1057, $this->source); })()), "opt14_6Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1060
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1060, $this->source); })()), "opt14_6Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-15\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            QUINDICESIMA AGGIUNTA POSSIBILE: impianto videocitofonico a colori in esecuzione a muro
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1077
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1077, $this->source); })()), "opt15Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Impianto Videocitofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1089
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1089, $this->source); })()), "opt15_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1092
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1092, $this->source); })()), "opt15_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1097
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1097, $this->source); })()), "opt15_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1100
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1100, $this->source); })()), "opt15_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1105
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1105, $this->source); })()), "opt15_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1108
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1108, $this->source); })()), "opt15_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1113
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1113, $this->source); })()), "opt15_4Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1116
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1116, $this->source); })()), "opt15_4Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1121
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1121, $this->source); })()), "opt15_5Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1124
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1124, $this->source); })()), "opt15_5Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1129
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1129, $this->source); })()), "opt15_6Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1132
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1132, $this->source); })()), "opt15_6Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1142
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1142, $this->source); })()), "opt15_7Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1145
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1145, $this->source); })()), "opt15_7Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-16\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            SEDICESIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori  luminosità.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1162
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1162, $this->source); })()), "opt16Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1174
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1174, $this->source); })()), "opt16_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1177
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1177, $this->source); })()), "opt16_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1182
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1182, $this->source); })()), "opt16_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1185
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1185, $this->source); })()), "opt16_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1195
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1195, $this->source); })()), "opt16_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1198
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1198, $this->source); })()), "opt16_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-17\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DICIASSETTESIMA AGGIUNTA POSSIBILE: esempio di soluzione per la  predisposizione di  illuminazione esterna con 20 punti luce.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1215
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1215, $this->source); })()), "opt17Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione cavidotti esterni Lato anteriore e posteriore per illuminazione esterna pozzetti ogni 10mt circa per rendere più facile la predisposizione dell'illuminazione definitiva. Misura ipotetica da verificare in loco.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1227
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1227, $this->source); })()), "opt17_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1230
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1230, $this->source); })()), "opt17_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1235
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1235, $this->source); })()), "opt17_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1238
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1238, $this->source); })()), "opt17_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1243
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1243, $this->source); })()), "opt17_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1246
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1246, $this->source); })()), "opt17_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1251
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1251, $this->source); })()), "opt17_4Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1254
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1254, $this->source); })()), "opt17_4Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Linea elettrica per accensioni 2 linee di accensioni separate.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1264
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1264, $this->source); })()), "opt17_5Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1267
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1267, $this->source); })()), "opt17_5Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Collegamento stagno nei pozzetti
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1277
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1277, $this->source); })()), "opt17_6Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1280
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1280, $this->source); })()), "opt17_6Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-18\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DICIOTTESIMA AGGIUNTA POSSIBILE: predisposizione per impianto fotovoltaico
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1297
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1297, $this->source); })()), "opt18Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Tubazione per predisposizione impianto fotovoltaico: due tubazioni dai pannelli al locale tecnico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1309
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1309, $this->source); })()), "opt18_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1312
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1312, $this->source); })()), "opt18_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-19\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DICIANNOVESIMA AGGIUNTA POSSIBILE: punti presa di servizio per le sonde di temperatura di ogni ambiente, tranne le due conteggiate nella proposta C.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1329
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1329, $this->source); })()), "opt19Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Allaccio TERMOSTATI (l'esatta quantità e in funzione del progetto termoidraulico, appena ci verrà consegnato aggiorneremo la nostra offerta).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1341
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1341, $this->source); })()), "opt19_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1344
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1344, $this->source); })()), "opt19_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1354
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1354, $this->source); })()), "opt19_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1357
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1357, $this->source); })()), "opt19_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-20\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            VENTESIMA AGGIUNTA POSSIBILE: cronotermostati ambiente
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1374
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1374, $this->source); })()), "opt20Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Cronotermostato
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1386
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1386, $this->source); })()), "opt20_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1389
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1389, $this->source); })()), "opt20_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-21\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            VENTUNESIMA AGGIUNTA POSSIBILE: armadio rack
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            ";
+        // line 1406
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1406, $this->source); })()), "opt21Enabled", array()), 'widget');
+        echo "
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Armadio Rack
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1418
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1418, $this->source); })()), "opt21_1Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1421
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1421, $this->source); })()), "opt21_1Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1426
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1426, $this->source); })()), "opt21_2Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1429
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1429, $this->source); })()), "opt21_2Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Prese di alimentazione
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1439
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1439, $this->source); })()), "opt21_3Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1442
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1442, $this->source); })()), "opt21_3Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Patch Panel
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1452
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1452, $this->source); })()), "opt21_4Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1455
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1455, $this->source); })()), "opt21_4Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1460
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1460, $this->source); })()), "opt21_5Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1463
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1463, $this->source); })()), "opt21_5Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1468
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1468, $this->source); })()), "opt21_6Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1471
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1471, $this->source); })()), "opt21_6Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1476
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1476, $this->source); })()), "opt21_6Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1479
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1479, $this->source); })()), "opt21_6Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1484
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1484, $this->source); })()), "opt21_7Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1487
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1487, $this->source); })()), "opt21_7Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1492
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1492, $this->source); })()), "opt21_8Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1495
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1495, $this->source); })()), "opt21_8Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1500
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1500, $this->source); })()), "opt21_9Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1503
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1503, $this->source); })()), "opt21_9Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Mensole
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1513
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1513, $this->source); })()), "opt21_10Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1516
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1516, $this->source); })()), "opt21_10Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1521
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1521, $this->source); })()), "opt21_11Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1524
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1524, $this->source); })()), "opt21_11Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Pannelli ciechi di copertura finale
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1534
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1534, $this->source); })()), "opt21_12Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1537
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1537, $this->source); })()), "opt21_12Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1542
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1542, $this->source); })()), "opt21_13Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1545
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1545, $this->source); })()), "opt21_13Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Ventilazione forzata
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            ";
+        // line 1555
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1555, $this->source); })()), "opt21_14Value", array()), 'widget');
+        echo "
+                                        </td>
+                                        <td>
+                                            ";
+        // line 1558
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1558, $this->source); })()), "opt21_14Value", array()), 'label');
+        echo "
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1395,29 +2422,29 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 <div class=\"card\">
                     <div class=\"card-body\">
                         ";
-        // line 904
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 904, $this->source); })()), 'form_start');
+        // line 1580
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1580, $this->source); })()), 'form_start');
         echo "
                         <div class=\"wrapper1\" style=\"height: 30px;\">
                         <div id=\"\" class=\"float-left\">
                             <h4 class=\"float-left mt-2\"><strong>Piano</strong> ";
-        // line 907
-        echo twig_escape_filter($this->env, (isset($context["floor"]) || array_key_exists("floor", $context) ? $context["floor"] : (function () { throw new Twig_Error_Runtime('Variable "floor" does not exist.', 907, $this->source); })()), "html", null, true);
+        // line 1583
+        echo twig_escape_filter($this->env, (isset($context["floor"]) || array_key_exists("floor", $context) ? $context["floor"] : (function () { throw new Twig_Error_Runtime('Variable "floor" does not exist.', 1583, $this->source); })()), "html", null, true);
         echo "</h4>
                             <div class=\"btn-group float-right ml-3\">
                                 ";
-        // line 909
-        $context["oldFloor"] = ((isset($context["floor"]) || array_key_exists("floor", $context) ? $context["floor"] : (function () { throw new Twig_Error_Runtime('Variable "floor" does not exist.', 909, $this->source); })()) - 1);
-        // line 910
+        // line 1585
+        $context["oldFloor"] = ((isset($context["floor"]) || array_key_exists("floor", $context) ? $context["floor"] : (function () { throw new Twig_Error_Runtime('Variable "floor" does not exist.', 1585, $this->source); })()) - 1);
+        // line 1586
         echo "                                <a class=\"btn btn-secondary btn-sm\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 910, $this->source); })()), "pid", array()), "floor" => (isset($context["oldFloor"]) || array_key_exists("oldFloor", $context) ? $context["oldFloor"] : (function () { throw new Twig_Error_Runtime('Variable "oldFloor" does not exist.', 910, $this->source); })()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1586, $this->source); })()), "pid", array()), "floor" => (isset($context["oldFloor"]) || array_key_exists("oldFloor", $context) ? $context["oldFloor"] : (function () { throw new Twig_Error_Runtime('Variable "oldFloor" does not exist.', 1586, $this->source); })()))), "html", null, true);
         echo "\">-</a>
                                 ";
-        // line 911
-        $context["newFloor"] = ((isset($context["floor"]) || array_key_exists("floor", $context) ? $context["floor"] : (function () { throw new Twig_Error_Runtime('Variable "floor" does not exist.', 911, $this->source); })()) + 1);
-        // line 912
+        // line 1587
+        $context["newFloor"] = ((isset($context["floor"]) || array_key_exists("floor", $context) ? $context["floor"] : (function () { throw new Twig_Error_Runtime('Variable "floor" does not exist.', 1587, $this->source); })()) + 1);
+        // line 1588
         echo "                                <a class=\"btn btn-secondary btn-sm\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 912, $this->source); })()), "pid", array()), "floor" => (isset($context["newFloor"]) || array_key_exists("newFloor", $context) ? $context["newFloor"] : (function () { throw new Twig_Error_Runtime('Variable "newFloor" does not exist.', 912, $this->source); })()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1588, $this->source); })()), "pid", array()), "floor" => (isset($context["newFloor"]) || array_key_exists("newFloor", $context) ? $context["newFloor"] : (function () { throw new Twig_Error_Runtime('Variable "newFloor" does not exist.', 1588, $this->source); })()))), "html", null, true);
         echo "\">+</a>
                             </div>
 
@@ -1434,34 +2461,34 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <th>TIPOLOGIA</th>
                                     ";
-        // line 927
+        // line 1603
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 927, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 1603, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 928
+            // line 1604
             echo "                                        <th>
                                             ";
-            // line 929
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["func"]) || array_key_exists("func", $context) ? $context["func"] : (function () { throw new Twig_Error_Runtime('Variable "func" does not exist.', 929, $this->source); })()), "room", array(0 => $context["item"]), "method"), "html", null, true);
+            // line 1605
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["func"]) || array_key_exists("func", $context) ? $context["func"] : (function () { throw new Twig_Error_Runtime('Variable "func" does not exist.', 1605, $this->source); })()), "room", array(0 => $context["item"]), "method"), "html", null, true);
             echo "
                                             ";
-            // line 931
+            // line 1607
             echo "                                        </th>
                                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 933
+        // line 1609
         echo "                                    <th>
                                         Sistemi
                                     </th>
                                 </tr>
                             </thead>
                                 ";
-        // line 938
-        $context["colCount"] = (twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 938, $this->source); })())) + 1);
-        // line 939
+        // line 1614
+        $context["colCount"] = (twig_length_filter($this->env, (isset($context["count"]) || array_key_exists("count", $context) ? $context["count"] : (function () { throw new Twig_Error_Runtime('Variable "count" does not exist.', 1614, $this->source); })())) + 1);
+        // line 1615
         echo "                            <tbody>
                                 <tr>
                                     <td colspan=\"10\">
@@ -1471,19 +2498,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong >";
-        // line 947
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 947, $this->source); })()), 0, array()), "description", array()), "html", null, true);
+        // line 1623
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1623, $this->source); })()), 0, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 949
+        // line 1625
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 949, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1625, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 950
+            // line 1626
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val1_";
-            // line 951
+            // line 1627
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1492,24 +2519,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 954
+        // line 1630
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 957
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 957, $this->source); })()), 1, array()), "description", array()), "html", null, true);
+        // line 1633
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1633, $this->source); })()), 1, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 959
+        // line 1635
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 959, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1635, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 960
+            // line 1636
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val2_";
-            // line 961
+            // line 1637
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1518,24 +2545,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 964
+        // line 1640
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 967
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 967, $this->source); })()), 2, array()), "description", array()), "html", null, true);
+        // line 1643
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1643, $this->source); })()), 2, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 969
+        // line 1645
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 969, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1645, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 970
+            // line 1646
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val3_";
-            // line 971
+            // line 1647
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1544,24 +2571,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 974
+        // line 1650
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 977
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 977, $this->source); })()), 3, array()), "description", array()), "html", null, true);
+        // line 1653
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1653, $this->source); })()), 3, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 979
+        // line 1655
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 979, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1655, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 980
+            // line 1656
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val4_";
-            // line 981
+            // line 1657
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1570,24 +2597,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 984
+        // line 1660
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 987
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 987, $this->source); })()), 4, array()), "description", array()), "html", null, true);
+        // line 1663
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1663, $this->source); })()), 4, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 989
+        // line 1665
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 989, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1665, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 990
+            // line 1666
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val5_";
-            // line 991
+            // line 1667
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1596,7 +2623,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 994
+        // line 1670
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -1606,19 +2633,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1002
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1002, $this->source); })()), 5, array()), "description", array()), "html", null, true);
+        // line 1678
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1678, $this->source); })()), 5, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1004
+        // line 1680
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1004, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1680, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1005
+            // line 1681
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val6_";
-            // line 1006
+            // line 1682
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1627,24 +2654,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1009
+        // line 1685
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1012
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1012, $this->source); })()), 6, array()), "description", array()), "html", null, true);
+        // line 1688
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1688, $this->source); })()), 6, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1014
+        // line 1690
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1014, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1690, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1015
+            // line 1691
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val7_";
-            // line 1016
+            // line 1692
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1653,7 +2680,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1019
+        // line 1695
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -1663,19 +2690,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1027
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1027, $this->source); })()), 7, array()), "description", array()), "html", null, true);
+        // line 1703
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1703, $this->source); })()), 7, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1029
+        // line 1705
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1029, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1705, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1030
+            // line 1706
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val8_";
-            // line 1031
+            // line 1707
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1684,24 +2711,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1034
+        // line 1710
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1037
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1037, $this->source); })()), 8, array()), "description", array()), "html", null, true);
+        // line 1713
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1713, $this->source); })()), 8, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1039
+        // line 1715
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1039, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1715, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1040
+            // line 1716
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val9_";
-            // line 1041
+            // line 1717
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1710,24 +2737,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1044
+        // line 1720
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1047
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1047, $this->source); })()), 9, array()), "description", array()), "html", null, true);
+        // line 1723
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1723, $this->source); })()), 9, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1049
+        // line 1725
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1049, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1725, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1050
+            // line 1726
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val10_";
-            // line 1051
+            // line 1727
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1736,24 +2763,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1054
+        // line 1730
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1057
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1057, $this->source); })()), 10, array()), "description", array()), "html", null, true);
+        // line 1733
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1733, $this->source); })()), 10, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1059
+        // line 1735
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1059, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1735, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1060
+            // line 1736
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val11_";
-            // line 1061
+            // line 1737
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1762,24 +2789,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1064
+        // line 1740
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1067
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1067, $this->source); })()), 11, array()), "description", array()), "html", null, true);
+        // line 1743
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1743, $this->source); })()), 11, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1069
+        // line 1745
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1069, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1745, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1070
+            // line 1746
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val12_";
-            // line 1071
+            // line 1747
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1788,24 +2815,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1074
+        // line 1750
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1077
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1077, $this->source); })()), 12, array()), "description", array()), "html", null, true);
+        // line 1753
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1753, $this->source); })()), 12, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1079
+        // line 1755
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1079, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1755, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1080
+            // line 1756
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val13_";
-            // line 1081
+            // line 1757
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1814,24 +2841,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1084
+        // line 1760
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1087
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1087, $this->source); })()), 13, array()), "description", array()), "html", null, true);
+        // line 1763
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1763, $this->source); })()), 13, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1089
+        // line 1765
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1089, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1765, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1090
+            // line 1766
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val14_";
-            // line 1091
+            // line 1767
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1840,24 +2867,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1094
+        // line 1770
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1097
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1097, $this->source); })()), 14, array()), "description", array()), "html", null, true);
+        // line 1773
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1773, $this->source); })()), 14, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1099
+        // line 1775
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1099, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1775, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1100
+            // line 1776
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val15_";
-            // line 1101
+            // line 1777
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1866,24 +2893,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1104
+        // line 1780
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1107
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1107, $this->source); })()), 15, array()), "description", array()), "html", null, true);
+        // line 1783
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1783, $this->source); })()), 15, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1109
+        // line 1785
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1109, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1785, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1110
+            // line 1786
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val16_";
-            // line 1111
+            // line 1787
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1892,7 +2919,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1114
+        // line 1790
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -1902,19 +2929,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1122
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1122, $this->source); })()), 16, array()), "description", array()), "html", null, true);
+        // line 1798
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1798, $this->source); })()), 16, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1124
+        // line 1800
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1124, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1800, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1125
+            // line 1801
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val17_";
-            // line 1126
+            // line 1802
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1923,24 +2950,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1129
+        // line 1805
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1132
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1132, $this->source); })()), 17, array()), "description", array()), "html", null, true);
+        // line 1808
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1808, $this->source); })()), 17, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1134
+        // line 1810
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1134, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1810, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1135
+            // line 1811
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val18_";
-            // line 1136
+            // line 1812
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1949,24 +2976,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1139
+        // line 1815
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1142
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1142, $this->source); })()), 18, array()), "description", array()), "html", null, true);
+        // line 1818
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1818, $this->source); })()), 18, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1144
+        // line 1820
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1144, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1820, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1145
+            // line 1821
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val19_";
-            // line 1146
+            // line 1822
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -1975,24 +3002,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1149
+        // line 1825
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1152
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1152, $this->source); })()), 19, array()), "description", array()), "html", null, true);
+        // line 1828
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1828, $this->source); })()), 19, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1154
+        // line 1830
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1154, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1830, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1155
+            // line 1831
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val20_";
-            // line 1156
+            // line 1832
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2001,24 +3028,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1159
+        // line 1835
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1162
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1162, $this->source); })()), 20, array()), "description", array()), "html", null, true);
+        // line 1838
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1838, $this->source); })()), 20, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1164
+        // line 1840
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1164, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1840, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1165
+            // line 1841
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val21_";
-            // line 1166
+            // line 1842
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2027,7 +3054,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1169
+        // line 1845
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2037,19 +3064,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1177
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1177, $this->source); })()), 21, array()), "description", array()), "html", null, true);
+        // line 1853
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1853, $this->source); })()), 21, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1179
+        // line 1855
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1179, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1855, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1180
+            // line 1856
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val22_";
-            // line 1181
+            // line 1857
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2058,24 +3085,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1184
+        // line 1860
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1187
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1187, $this->source); })()), 22, array()), "description", array()), "html", null, true);
+        // line 1863
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1863, $this->source); })()), 22, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1189
+        // line 1865
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1189, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1865, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1190
+            // line 1866
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val23_";
-            // line 1191
+            // line 1867
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2084,24 +3111,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1194
+        // line 1870
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1197
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1197, $this->source); })()), 23, array()), "description", array()), "html", null, true);
+        // line 1873
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1873, $this->source); })()), 23, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1199
+        // line 1875
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1199, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1875, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1200
+            // line 1876
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val24_";
-            // line 1201
+            // line 1877
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2110,24 +3137,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1204
+        // line 1880
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1207
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1207, $this->source); })()), 24, array()), "description", array()), "html", null, true);
+        // line 1883
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1883, $this->source); })()), 24, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1209
+        // line 1885
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1209, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1885, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1210
+            // line 1886
             echo "                                    <td>
                                         <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val25_";
-            // line 1211
+            // line 1887
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                     </td>
@@ -2136,25 +3163,25 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1214
+        // line 1890
         echo "                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1218
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1218, $this->source); })()), 25, array()), "description", array()), "html", null, true);
+        // line 1894
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1894, $this->source); })()), 25, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1220
+        // line 1896
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1220, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1896, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1221
+            // line 1897
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val26_";
-            // line 1222
+            // line 1898
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2163,24 +3190,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1225
+        // line 1901
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1228
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1228, $this->source); })()), 26, array()), "description", array()), "html", null, true);
+        // line 1904
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1904, $this->source); })()), 26, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1230
+        // line 1906
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1230, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1906, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1231
+            // line 1907
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val27_";
-            // line 1232
+            // line 1908
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2189,7 +3216,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1235
+        // line 1911
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2199,19 +3226,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1243
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1243, $this->source); })()), 27, array()), "description", array()), "html", null, true);
+        // line 1919
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1919, $this->source); })()), 27, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1245
+        // line 1921
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1245, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1921, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1246
+            // line 1922
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val28_";
-            // line 1247
+            // line 1923
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2220,24 +3247,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1250
+        // line 1926
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1253
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1253, $this->source); })()), 28, array()), "description", array()), "html", null, true);
+        // line 1929
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1929, $this->source); })()), 28, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1255
+        // line 1931
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1255, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1931, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1256
+            // line 1932
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val29_";
-            // line 1257
+            // line 1933
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2246,24 +3273,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1260
+        // line 1936
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1263
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1263, $this->source); })()), 29, array()), "description", array()), "html", null, true);
+        // line 1939
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1939, $this->source); })()), 29, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1265
+        // line 1941
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1265, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1941, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1266
+            // line 1942
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val30_";
-            // line 1267
+            // line 1943
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2272,24 +3299,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1270
+        // line 1946
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1273
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1273, $this->source); })()), 30, array()), "description", array()), "html", null, true);
+        // line 1949
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1949, $this->source); })()), 30, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1275
+        // line 1951
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1275, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1951, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1276
+            // line 1952
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val31_";
-            // line 1277
+            // line 1953
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2298,24 +3325,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1280
+        // line 1956
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1283
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1283, $this->source); })()), 31, array()), "description", array()), "html", null, true);
+        // line 1959
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1959, $this->source); })()), 31, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1285
+        // line 1961
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1285, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1961, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1286
+            // line 1962
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val32_";
-            // line 1287
+            // line 1963
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2324,24 +3351,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1290
+        // line 1966
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1293
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1293, $this->source); })()), 32, array()), "description", array()), "html", null, true);
+        // line 1969
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1969, $this->source); })()), 32, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1295
+        // line 1971
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1295, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1971, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1296
+            // line 1972
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val33_";
-            // line 1297
+            // line 1973
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2350,24 +3377,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1300
+        // line 1976
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1303
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1303, $this->source); })()), 33, array()), "description", array()), "html", null, true);
+        // line 1979
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1979, $this->source); })()), 33, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1305
+        // line 1981
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1305, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1981, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1306
+            // line 1982
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val34_";
-            // line 1307
+            // line 1983
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2376,24 +3403,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1310
+        // line 1986
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1313
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1313, $this->source); })()), 34, array()), "description", array()), "html", null, true);
+        // line 1989
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1989, $this->source); })()), 34, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1315
+        // line 1991
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1315, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1991, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1316
+            // line 1992
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val35_";
-            // line 1317
+            // line 1993
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2402,24 +3429,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1320
+        // line 1996
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1323
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1323, $this->source); })()), 35, array()), "description", array()), "html", null, true);
+        // line 1999
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1999, $this->source); })()), 35, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1325
+        // line 2001
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1325, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2001, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1326
+            // line 2002
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val36_";
-            // line 1327
+            // line 2003
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2428,24 +3455,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1330
+        // line 2006
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1333
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1333, $this->source); })()), 36, array()), "description", array()), "html", null, true);
+        // line 2009
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2009, $this->source); })()), 36, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1335
+        // line 2011
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1335, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2011, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1336
+            // line 2012
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val37_";
-            // line 1337
+            // line 2013
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2454,24 +3481,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1340
+        // line 2016
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1343
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1343, $this->source); })()), 37, array()), "description", array()), "html", null, true);
+        // line 2019
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2019, $this->source); })()), 37, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1345
+        // line 2021
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1345, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2021, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1346
+            // line 2022
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val38_";
-            // line 1347
+            // line 2023
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2480,24 +3507,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1350
+        // line 2026
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1353
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1353, $this->source); })()), 38, array()), "description", array()), "html", null, true);
+        // line 2029
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2029, $this->source); })()), 38, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1355
+        // line 2031
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1355, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2031, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1356
+            // line 2032
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val39_";
-            // line 1357
+            // line 2033
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2506,24 +3533,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1360
+        // line 2036
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1363
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1363, $this->source); })()), 39, array()), "description", array()), "html", null, true);
+        // line 2039
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2039, $this->source); })()), 39, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1365
+        // line 2041
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1365, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2041, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1366
+            // line 2042
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val40_";
-            // line 1367
+            // line 2043
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2532,24 +3559,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1370
+        // line 2046
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1373
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1373, $this->source); })()), 40, array()), "description", array()), "html", null, true);
+        // line 2049
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2049, $this->source); })()), 40, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1375
+        // line 2051
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1375, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2051, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1376
+            // line 2052
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val41_";
-            // line 1377
+            // line 2053
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2558,24 +3585,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1380
+        // line 2056
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1383
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1383, $this->source); })()), 41, array()), "description", array()), "html", null, true);
+        // line 2059
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2059, $this->source); })()), 41, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1385
+        // line 2061
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1385, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2061, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1386
+            // line 2062
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val42_";
-            // line 1387
+            // line 2063
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2584,24 +3611,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1390
+        // line 2066
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1393
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1393, $this->source); })()), 42, array()), "description", array()), "html", null, true);
+        // line 2069
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2069, $this->source); })()), 42, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1395
+        // line 2071
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1395, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2071, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1396
+            // line 2072
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val43_";
-            // line 1397
+            // line 2073
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2610,24 +3637,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1400
+        // line 2076
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1403
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1403, $this->source); })()), 43, array()), "description", array()), "html", null, true);
+        // line 2079
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2079, $this->source); })()), 43, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1405
+        // line 2081
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1405, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2081, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1406
+            // line 2082
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val44_";
-            // line 1407
+            // line 2083
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2636,24 +3663,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1410
+        // line 2086
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1413
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1413, $this->source); })()), 44, array()), "description", array()), "html", null, true);
+        // line 2089
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2089, $this->source); })()), 44, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1415
+        // line 2091
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1415, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2091, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1416
+            // line 2092
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val45_";
-            // line 1417
+            // line 2093
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2662,24 +3689,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1420
+        // line 2096
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1423
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1423, $this->source); })()), 45, array()), "description", array()), "html", null, true);
+        // line 2099
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2099, $this->source); })()), 45, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1425
+        // line 2101
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1425, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2101, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1426
+            // line 2102
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val46_";
-            // line 1427
+            // line 2103
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2688,7 +3715,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1430
+        // line 2106
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2698,19 +3725,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1438
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1438, $this->source); })()), 46, array()), "description", array()), "html", null, true);
+        // line 2114
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2114, $this->source); })()), 46, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1440
+        // line 2116
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1440, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2116, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1441
+            // line 2117
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val47_";
-            // line 1442
+            // line 2118
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2719,24 +3746,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1445
+        // line 2121
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1448
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1448, $this->source); })()), 47, array()), "description", array()), "html", null, true);
+        // line 2124
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2124, $this->source); })()), 47, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1450
+        // line 2126
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1450, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2126, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1451
+            // line 2127
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val48_";
-            // line 1452
+            // line 2128
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2745,24 +3772,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1455
+        // line 2131
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1458
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1458, $this->source); })()), 48, array()), "description", array()), "html", null, true);
+        // line 2134
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2134, $this->source); })()), 48, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1460
+        // line 2136
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1460, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2136, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1461
+            // line 2137
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val49_";
-            // line 1462
+            // line 2138
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2771,24 +3798,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1465
+        // line 2141
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1468
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1468, $this->source); })()), 49, array()), "description", array()), "html", null, true);
+        // line 2144
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2144, $this->source); })()), 49, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1470
+        // line 2146
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1470, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2146, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1471
+            // line 2147
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val50_";
-            // line 1472
+            // line 2148
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2797,24 +3824,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1475
+        // line 2151
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1478
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1478, $this->source); })()), 50, array()), "description", array()), "html", null, true);
+        // line 2154
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2154, $this->source); })()), 50, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1480
+        // line 2156
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1480, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2156, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1481
+            // line 2157
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val51_";
-            // line 1482
+            // line 2158
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2823,24 +3850,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1485
+        // line 2161
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1488
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1488, $this->source); })()), 51, array()), "description", array()), "html", null, true);
+        // line 2164
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2164, $this->source); })()), 51, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1490
+        // line 2166
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1490, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2166, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1491
+            // line 2167
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val52_";
-            // line 1492
+            // line 2168
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2849,24 +3876,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1495
+        // line 2171
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1498
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1498, $this->source); })()), 52, array()), "description", array()), "html", null, true);
+        // line 2174
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2174, $this->source); })()), 52, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1500
+        // line 2176
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1500, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2176, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1501
+            // line 2177
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val53_";
-            // line 1502
+            // line 2178
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2875,7 +3902,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1505
+        // line 2181
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -2885,19 +3912,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1513
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1513, $this->source); })()), 53, array()), "description", array()), "html", null, true);
+        // line 2189
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2189, $this->source); })()), 53, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1515
+        // line 2191
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1515, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2191, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1516
+            // line 2192
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val54_";
-            // line 1517
+            // line 2193
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2906,24 +3933,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1520
+        // line 2196
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1523
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1523, $this->source); })()), 54, array()), "description", array()), "html", null, true);
+        // line 2199
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2199, $this->source); })()), 54, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1525
+        // line 2201
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1525, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2201, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1526
+            // line 2202
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val55_";
-            // line 1527
+            // line 2203
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2932,24 +3959,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1530
+        // line 2206
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1533
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1533, $this->source); })()), 55, array()), "description", array()), "html", null, true);
+        // line 2209
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2209, $this->source); })()), 55, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1535
+        // line 2211
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1535, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2211, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1536
+            // line 2212
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val56_";
-            // line 1537
+            // line 2213
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2958,24 +3985,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1540
+        // line 2216
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1543
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1543, $this->source); })()), 56, array()), "description", array()), "html", null, true);
+        // line 2219
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2219, $this->source); })()), 56, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1545
+        // line 2221
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1545, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2221, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1546
+            // line 2222
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val57_";
-            // line 1547
+            // line 2223
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -2984,24 +4011,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1550
+        // line 2226
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1553
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1553, $this->source); })()), 57, array()), "description", array()), "html", null, true);
+        // line 2229
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2229, $this->source); })()), 57, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1555
+        // line 2231
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1555, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2231, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1556
+            // line 2232
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val58_";
-            // line 1557
+            // line 2233
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -3010,24 +4037,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1560
+        // line 2236
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1563
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1563, $this->source); })()), 58, array()), "description", array()), "html", null, true);
+        // line 2239
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2239, $this->source); })()), 58, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1565
+        // line 2241
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1565, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2241, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1566
+            // line 2242
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val59_";
-            // line 1567
+            // line 2243
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -3036,7 +4063,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1570
+        // line 2246
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -3046,19 +4073,19 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1578
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1578, $this->source); })()), 59, array()), "description", array()), "html", null, true);
+        // line 2254
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2254, $this->source); })()), 59, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1580
+        // line 2256
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1580, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2256, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1581
+            // line 2257
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val60_";
-            // line 1582
+            // line 2258
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -3067,24 +4094,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1585
+        // line 2261
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>";
-        // line 1588
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 1588, $this->source); })()), 60, array()), "description", array()), "html", null, true);
+        // line 2264
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["titles"]) || array_key_exists("titles", $context) ? $context["titles"] : (function () { throw new Twig_Error_Runtime('Variable "titles" does not exist.', 2264, $this->source); })()), 60, array()), "description", array()), "html", null, true);
         echo "</strong>
                                     </td>
                                     ";
-        // line 1590
+        // line 2266
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1590, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2266, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1591
+            // line 2267
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val61_";
-            // line 1592
+            // line 2268
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -3093,7 +4120,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1595
+        // line 2271
         echo "                                </tr>
                                 <tr>
                                     <td colspan=\"10\">
@@ -3105,14 +4132,14 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                         <strong>Supporti 503</strong>
                                     </td>
                                     ";
-        // line 1605
+        // line 2281
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1605, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2281, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1606
+            // line 2282
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val62_";
-            // line 1607
+            // line 2283
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">
                                         </td>
@@ -3121,21 +4148,21 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1610
+        // line 2286
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Supporti 504</strong>
                                     </td>
                                     ";
-        // line 1615
+        // line 2291
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1615, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2291, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1616
+            // line 2292
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val63_";
-            // line 1617
+            // line 2293
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\" onchange=\"check(";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
@@ -3146,21 +4173,21 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1620
+        // line 2296
         echo "                                </tr>
                                 <tr>
                                     <td>
                                         <strong>Supporti 506</strong>
                                     </td>
                                     ";
-        // line 1625
+        // line 2301
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1625, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2301, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 1626
+            // line 2302
             echo "                                        <td>
                                             <input class=\"form-control\" type=\"number\" value=\"0\" min=\"0\" id=\"form_val64_";
-            // line 1627
+            // line 2303
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\" onchange=\"check(";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
@@ -3171,12 +4198,12 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1630
+        // line 2306
         echo "                                </tr>
                             </tbody>
                             ";
-        // line 1632
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1632, $this->source); })()), "submit", array()), 'widget');
+        // line 2308
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2308, $this->source); })()), "submit", array()), 'widget');
         echo "
                             <div class=\"row\">
                                 <div class=\"col-9\"></div>
@@ -3196,8 +4223,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 </div>
                             </div>
                             ";
-        // line 1650
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 1650, $this->source); })()), 'form_end');
+        // line 2326
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2326, $this->source); })()), 'form_end');
         echo "
                         </table>
                         </div>
@@ -3209,24 +4236,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         <script>
             \$(document).ready( function () {
                 update(";
-        // line 1660
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1660, $this->source); })()), "id", array()), "html", null, true);
+        // line 2336
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2336, $this->source); })()), "id", array()), "html", null, true);
         echo ",'pp','val1');
                 update(";
-        // line 1661
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1661, $this->source); })()), "id", array()), "html", null, true);
+        // line 2337
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2337, $this->source); })()), "id", array()), "html", null, true);
         echo ",'pl','val8');
                 update(";
-        // line 1662
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1662, $this->source); })()), "id", array()), "html", null, true);
+        // line 2338
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2338, $this->source); })()), "id", array()), "html", null, true);
         echo ",'c1v','val6');
                 update(";
-        // line 1663
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1663, $this->source); })()), "id", array()), "html", null, true);
+        // line 2339
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2339, $this->source); })()), "id", array()), "html", null, true);
         echo ",'c2v','val41');
                 for(i=0; i < ";
-        // line 1664
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1664, $this->source); })()), "html", null, true);
+        // line 2340
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2340, $this->source); })()), "html", null, true);
         echo "; i++) {
                     \$(\"#form_val63_\" + i ).prop('disabled', true);
                     \$(\"#form_val64_\" + i ).prop('disabled', true);
@@ -3234,8 +4261,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 window.setTimeout(function() {
                     calculate(62);
                     for(i=0; i < ";
-        // line 1670
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1670, $this->source); })()), "html", null, true);
+        // line 2346
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2346, $this->source); })()), "html", null, true);
         echo "; i++) {
                         \$(\"#form_val63_\" + i ).prop('disabled', false);
                         \$(\"#form_val64_\" + i ).prop('disabled', false);
@@ -3251,8 +4278,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                     \$('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
                 }
                 \$('#appbundle_expertationsadvanced_father').val(";
-        // line 1684
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1684, $this->source); })()), "id", array()), "html", null, true);
+        // line 2360
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2360, $this->source); })()), "id", array()), "html", null, true);
         echo ");
                 \$('#appbundle_expertationsadvanced_fatherFloor').val(0);
                 \$('#appbundle_expertationsadvanced_submit').trigger('click')
@@ -3271,8 +4298,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                     url: '/ajax/get/expData/' + exp + '/' + field,
                     success: function (data) {
                         for (var i = 0; i < ";
-        // line 1701
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1701, $this->source); })()), "html", null, true);
+        // line 2377
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2377, $this->source); })()), "html", null, true);
         echo "; i++) {
                             var numbersArray = data.split(',');
                             \$.each(numbersArray, function(index, value) {
@@ -3286,8 +4313,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
             }
             function calculate(field) {
                 for(var i = 0; i < ";
-        // line 1713
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 1713, $this->source); })()), "html", null, true);
+        // line 2389
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2389, $this->source); })()), "html", null, true);
         echo "; i++) {
                     var ind = i +1;
                     var values = parseInt(\$('#form_val1_' + ind ).val()) + parseInt(\$('#form_val6_' + ind ).val());
@@ -3333,14 +4360,14 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
     </div>
 </div>
     <script src=\"";
-        // line 1757
+        // line 2433
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.collection.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\">
         \$('.collection').collection();
     </script>
     <script src=\"";
-        // line 1761
+        // line 2437
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
@@ -3352,7 +4379,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
 
     }
 
-    // line 1763
+    // line 2439
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -3361,7 +4388,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 1764
+        // line 2440
         echo "    <style>
         .form-control {
             width: 100px;
@@ -3444,7 +4471,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         }
     </style>
     <link rel=\"stylesheet\" href=\"";
-        // line 1845
+        // line 2521
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -3456,7 +4483,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
 
     }
 
-    // line 1847
+    // line 2523
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -3465,7 +4492,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 1848
+        // line 2524
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.fixedheadertable.min.js"), "html", null, true);
         echo "\"></script>
@@ -3537,7 +4564,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
 
     public function getDebugInfo()
     {
-        return array (  3469 => 1848,  3460 => 1847,  3448 => 1845,  3365 => 1764,  3356 => 1763,  3344 => 1761,  3337 => 1757,  3290 => 1713,  3275 => 1701,  3255 => 1684,  3238 => 1670,  3229 => 1664,  3225 => 1663,  3221 => 1662,  3217 => 1661,  3213 => 1660,  3200 => 1650,  3179 => 1632,  3175 => 1630,  3164 => 1627,  3161 => 1626,  3157 => 1625,  3150 => 1620,  3139 => 1617,  3136 => 1616,  3132 => 1615,  3125 => 1610,  3116 => 1607,  3113 => 1606,  3109 => 1605,  3097 => 1595,  3088 => 1592,  3085 => 1591,  3081 => 1590,  3076 => 1588,  3071 => 1585,  3062 => 1582,  3059 => 1581,  3055 => 1580,  3050 => 1578,  3040 => 1570,  3031 => 1567,  3028 => 1566,  3024 => 1565,  3019 => 1563,  3014 => 1560,  3005 => 1557,  3002 => 1556,  2998 => 1555,  2993 => 1553,  2988 => 1550,  2979 => 1547,  2976 => 1546,  2972 => 1545,  2967 => 1543,  2962 => 1540,  2953 => 1537,  2950 => 1536,  2946 => 1535,  2941 => 1533,  2936 => 1530,  2927 => 1527,  2924 => 1526,  2920 => 1525,  2915 => 1523,  2910 => 1520,  2901 => 1517,  2898 => 1516,  2894 => 1515,  2889 => 1513,  2879 => 1505,  2870 => 1502,  2867 => 1501,  2863 => 1500,  2858 => 1498,  2853 => 1495,  2844 => 1492,  2841 => 1491,  2837 => 1490,  2832 => 1488,  2827 => 1485,  2818 => 1482,  2815 => 1481,  2811 => 1480,  2806 => 1478,  2801 => 1475,  2792 => 1472,  2789 => 1471,  2785 => 1470,  2780 => 1468,  2775 => 1465,  2766 => 1462,  2763 => 1461,  2759 => 1460,  2754 => 1458,  2749 => 1455,  2740 => 1452,  2737 => 1451,  2733 => 1450,  2728 => 1448,  2723 => 1445,  2714 => 1442,  2711 => 1441,  2707 => 1440,  2702 => 1438,  2692 => 1430,  2683 => 1427,  2680 => 1426,  2676 => 1425,  2671 => 1423,  2666 => 1420,  2657 => 1417,  2654 => 1416,  2650 => 1415,  2645 => 1413,  2640 => 1410,  2631 => 1407,  2628 => 1406,  2624 => 1405,  2619 => 1403,  2614 => 1400,  2605 => 1397,  2602 => 1396,  2598 => 1395,  2593 => 1393,  2588 => 1390,  2579 => 1387,  2576 => 1386,  2572 => 1385,  2567 => 1383,  2562 => 1380,  2553 => 1377,  2550 => 1376,  2546 => 1375,  2541 => 1373,  2536 => 1370,  2527 => 1367,  2524 => 1366,  2520 => 1365,  2515 => 1363,  2510 => 1360,  2501 => 1357,  2498 => 1356,  2494 => 1355,  2489 => 1353,  2484 => 1350,  2475 => 1347,  2472 => 1346,  2468 => 1345,  2463 => 1343,  2458 => 1340,  2449 => 1337,  2446 => 1336,  2442 => 1335,  2437 => 1333,  2432 => 1330,  2423 => 1327,  2420 => 1326,  2416 => 1325,  2411 => 1323,  2406 => 1320,  2397 => 1317,  2394 => 1316,  2390 => 1315,  2385 => 1313,  2380 => 1310,  2371 => 1307,  2368 => 1306,  2364 => 1305,  2359 => 1303,  2354 => 1300,  2345 => 1297,  2342 => 1296,  2338 => 1295,  2333 => 1293,  2328 => 1290,  2319 => 1287,  2316 => 1286,  2312 => 1285,  2307 => 1283,  2302 => 1280,  2293 => 1277,  2290 => 1276,  2286 => 1275,  2281 => 1273,  2276 => 1270,  2267 => 1267,  2264 => 1266,  2260 => 1265,  2255 => 1263,  2250 => 1260,  2241 => 1257,  2238 => 1256,  2234 => 1255,  2229 => 1253,  2224 => 1250,  2215 => 1247,  2212 => 1246,  2208 => 1245,  2203 => 1243,  2193 => 1235,  2184 => 1232,  2181 => 1231,  2177 => 1230,  2172 => 1228,  2167 => 1225,  2158 => 1222,  2155 => 1221,  2151 => 1220,  2146 => 1218,  2140 => 1214,  2131 => 1211,  2128 => 1210,  2124 => 1209,  2119 => 1207,  2114 => 1204,  2105 => 1201,  2102 => 1200,  2098 => 1199,  2093 => 1197,  2088 => 1194,  2079 => 1191,  2076 => 1190,  2072 => 1189,  2067 => 1187,  2062 => 1184,  2053 => 1181,  2050 => 1180,  2046 => 1179,  2041 => 1177,  2031 => 1169,  2022 => 1166,  2019 => 1165,  2015 => 1164,  2010 => 1162,  2005 => 1159,  1996 => 1156,  1993 => 1155,  1989 => 1154,  1984 => 1152,  1979 => 1149,  1970 => 1146,  1967 => 1145,  1963 => 1144,  1958 => 1142,  1953 => 1139,  1944 => 1136,  1941 => 1135,  1937 => 1134,  1932 => 1132,  1927 => 1129,  1918 => 1126,  1915 => 1125,  1911 => 1124,  1906 => 1122,  1896 => 1114,  1887 => 1111,  1884 => 1110,  1880 => 1109,  1875 => 1107,  1870 => 1104,  1861 => 1101,  1858 => 1100,  1854 => 1099,  1849 => 1097,  1844 => 1094,  1835 => 1091,  1832 => 1090,  1828 => 1089,  1823 => 1087,  1818 => 1084,  1809 => 1081,  1806 => 1080,  1802 => 1079,  1797 => 1077,  1792 => 1074,  1783 => 1071,  1780 => 1070,  1776 => 1069,  1771 => 1067,  1766 => 1064,  1757 => 1061,  1754 => 1060,  1750 => 1059,  1745 => 1057,  1740 => 1054,  1731 => 1051,  1728 => 1050,  1724 => 1049,  1719 => 1047,  1714 => 1044,  1705 => 1041,  1702 => 1040,  1698 => 1039,  1693 => 1037,  1688 => 1034,  1679 => 1031,  1676 => 1030,  1672 => 1029,  1667 => 1027,  1657 => 1019,  1648 => 1016,  1645 => 1015,  1641 => 1014,  1636 => 1012,  1631 => 1009,  1622 => 1006,  1619 => 1005,  1615 => 1004,  1610 => 1002,  1600 => 994,  1591 => 991,  1588 => 990,  1584 => 989,  1579 => 987,  1574 => 984,  1565 => 981,  1562 => 980,  1558 => 979,  1553 => 977,  1548 => 974,  1539 => 971,  1536 => 970,  1532 => 969,  1527 => 967,  1522 => 964,  1513 => 961,  1510 => 960,  1506 => 959,  1501 => 957,  1496 => 954,  1487 => 951,  1484 => 950,  1480 => 949,  1475 => 947,  1465 => 939,  1463 => 938,  1456 => 933,  1449 => 931,  1445 => 929,  1442 => 928,  1438 => 927,  1419 => 912,  1417 => 911,  1412 => 910,  1410 => 909,  1405 => 907,  1399 => 904,  1297 => 805,  1291 => 802,  1278 => 792,  1272 => 789,  1264 => 784,  1258 => 781,  1245 => 771,  1239 => 768,  1231 => 763,  1225 => 760,  1212 => 750,  1206 => 747,  1198 => 742,  1192 => 739,  1179 => 729,  1173 => 726,  1165 => 721,  1159 => 718,  1144 => 706,  1124 => 689,  1118 => 686,  1105 => 676,  1099 => 673,  1091 => 668,  1085 => 665,  1070 => 653,  1050 => 636,  1044 => 633,  1031 => 623,  1025 => 620,  1017 => 615,  1011 => 612,  996 => 600,  976 => 583,  970 => 580,  957 => 570,  951 => 567,  943 => 562,  937 => 559,  922 => 547,  902 => 530,  896 => 527,  881 => 515,  861 => 498,  855 => 495,  842 => 485,  836 => 482,  828 => 477,  822 => 474,  807 => 462,  787 => 445,  781 => 442,  768 => 432,  762 => 429,  754 => 424,  748 => 421,  733 => 409,  713 => 392,  707 => 389,  694 => 379,  688 => 376,  675 => 366,  669 => 363,  661 => 358,  655 => 355,  647 => 350,  641 => 347,  628 => 337,  622 => 334,  614 => 329,  608 => 326,  600 => 321,  594 => 318,  586 => 313,  580 => 310,  565 => 298,  545 => 281,  539 => 278,  531 => 273,  525 => 270,  510 => 258,  490 => 241,  484 => 238,  476 => 233,  470 => 230,  457 => 220,  451 => 217,  443 => 212,  437 => 209,  422 => 197,  328 => 106,  321 => 102,  314 => 98,  307 => 94,  296 => 90,  288 => 89,  280 => 88,  270 => 85,  262 => 84,  254 => 83,  240 => 78,  229 => 74,  218 => 70,  208 => 69,  202 => 66,  191 => 62,  185 => 59,  178 => 55,  169 => 49,  158 => 45,  150 => 44,  142 => 43,  136 => 40,  129 => 36,  122 => 32,  115 => 28,  108 => 24,  99 => 20,  88 => 13,  85 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  4496 => 2524,  4487 => 2523,  4475 => 2521,  4392 => 2440,  4383 => 2439,  4371 => 2437,  4364 => 2433,  4317 => 2389,  4302 => 2377,  4282 => 2360,  4265 => 2346,  4256 => 2340,  4252 => 2339,  4248 => 2338,  4244 => 2337,  4240 => 2336,  4227 => 2326,  4206 => 2308,  4202 => 2306,  4191 => 2303,  4188 => 2302,  4184 => 2301,  4177 => 2296,  4166 => 2293,  4163 => 2292,  4159 => 2291,  4152 => 2286,  4143 => 2283,  4140 => 2282,  4136 => 2281,  4124 => 2271,  4115 => 2268,  4112 => 2267,  4108 => 2266,  4103 => 2264,  4098 => 2261,  4089 => 2258,  4086 => 2257,  4082 => 2256,  4077 => 2254,  4067 => 2246,  4058 => 2243,  4055 => 2242,  4051 => 2241,  4046 => 2239,  4041 => 2236,  4032 => 2233,  4029 => 2232,  4025 => 2231,  4020 => 2229,  4015 => 2226,  4006 => 2223,  4003 => 2222,  3999 => 2221,  3994 => 2219,  3989 => 2216,  3980 => 2213,  3977 => 2212,  3973 => 2211,  3968 => 2209,  3963 => 2206,  3954 => 2203,  3951 => 2202,  3947 => 2201,  3942 => 2199,  3937 => 2196,  3928 => 2193,  3925 => 2192,  3921 => 2191,  3916 => 2189,  3906 => 2181,  3897 => 2178,  3894 => 2177,  3890 => 2176,  3885 => 2174,  3880 => 2171,  3871 => 2168,  3868 => 2167,  3864 => 2166,  3859 => 2164,  3854 => 2161,  3845 => 2158,  3842 => 2157,  3838 => 2156,  3833 => 2154,  3828 => 2151,  3819 => 2148,  3816 => 2147,  3812 => 2146,  3807 => 2144,  3802 => 2141,  3793 => 2138,  3790 => 2137,  3786 => 2136,  3781 => 2134,  3776 => 2131,  3767 => 2128,  3764 => 2127,  3760 => 2126,  3755 => 2124,  3750 => 2121,  3741 => 2118,  3738 => 2117,  3734 => 2116,  3729 => 2114,  3719 => 2106,  3710 => 2103,  3707 => 2102,  3703 => 2101,  3698 => 2099,  3693 => 2096,  3684 => 2093,  3681 => 2092,  3677 => 2091,  3672 => 2089,  3667 => 2086,  3658 => 2083,  3655 => 2082,  3651 => 2081,  3646 => 2079,  3641 => 2076,  3632 => 2073,  3629 => 2072,  3625 => 2071,  3620 => 2069,  3615 => 2066,  3606 => 2063,  3603 => 2062,  3599 => 2061,  3594 => 2059,  3589 => 2056,  3580 => 2053,  3577 => 2052,  3573 => 2051,  3568 => 2049,  3563 => 2046,  3554 => 2043,  3551 => 2042,  3547 => 2041,  3542 => 2039,  3537 => 2036,  3528 => 2033,  3525 => 2032,  3521 => 2031,  3516 => 2029,  3511 => 2026,  3502 => 2023,  3499 => 2022,  3495 => 2021,  3490 => 2019,  3485 => 2016,  3476 => 2013,  3473 => 2012,  3469 => 2011,  3464 => 2009,  3459 => 2006,  3450 => 2003,  3447 => 2002,  3443 => 2001,  3438 => 1999,  3433 => 1996,  3424 => 1993,  3421 => 1992,  3417 => 1991,  3412 => 1989,  3407 => 1986,  3398 => 1983,  3395 => 1982,  3391 => 1981,  3386 => 1979,  3381 => 1976,  3372 => 1973,  3369 => 1972,  3365 => 1971,  3360 => 1969,  3355 => 1966,  3346 => 1963,  3343 => 1962,  3339 => 1961,  3334 => 1959,  3329 => 1956,  3320 => 1953,  3317 => 1952,  3313 => 1951,  3308 => 1949,  3303 => 1946,  3294 => 1943,  3291 => 1942,  3287 => 1941,  3282 => 1939,  3277 => 1936,  3268 => 1933,  3265 => 1932,  3261 => 1931,  3256 => 1929,  3251 => 1926,  3242 => 1923,  3239 => 1922,  3235 => 1921,  3230 => 1919,  3220 => 1911,  3211 => 1908,  3208 => 1907,  3204 => 1906,  3199 => 1904,  3194 => 1901,  3185 => 1898,  3182 => 1897,  3178 => 1896,  3173 => 1894,  3167 => 1890,  3158 => 1887,  3155 => 1886,  3151 => 1885,  3146 => 1883,  3141 => 1880,  3132 => 1877,  3129 => 1876,  3125 => 1875,  3120 => 1873,  3115 => 1870,  3106 => 1867,  3103 => 1866,  3099 => 1865,  3094 => 1863,  3089 => 1860,  3080 => 1857,  3077 => 1856,  3073 => 1855,  3068 => 1853,  3058 => 1845,  3049 => 1842,  3046 => 1841,  3042 => 1840,  3037 => 1838,  3032 => 1835,  3023 => 1832,  3020 => 1831,  3016 => 1830,  3011 => 1828,  3006 => 1825,  2997 => 1822,  2994 => 1821,  2990 => 1820,  2985 => 1818,  2980 => 1815,  2971 => 1812,  2968 => 1811,  2964 => 1810,  2959 => 1808,  2954 => 1805,  2945 => 1802,  2942 => 1801,  2938 => 1800,  2933 => 1798,  2923 => 1790,  2914 => 1787,  2911 => 1786,  2907 => 1785,  2902 => 1783,  2897 => 1780,  2888 => 1777,  2885 => 1776,  2881 => 1775,  2876 => 1773,  2871 => 1770,  2862 => 1767,  2859 => 1766,  2855 => 1765,  2850 => 1763,  2845 => 1760,  2836 => 1757,  2833 => 1756,  2829 => 1755,  2824 => 1753,  2819 => 1750,  2810 => 1747,  2807 => 1746,  2803 => 1745,  2798 => 1743,  2793 => 1740,  2784 => 1737,  2781 => 1736,  2777 => 1735,  2772 => 1733,  2767 => 1730,  2758 => 1727,  2755 => 1726,  2751 => 1725,  2746 => 1723,  2741 => 1720,  2732 => 1717,  2729 => 1716,  2725 => 1715,  2720 => 1713,  2715 => 1710,  2706 => 1707,  2703 => 1706,  2699 => 1705,  2694 => 1703,  2684 => 1695,  2675 => 1692,  2672 => 1691,  2668 => 1690,  2663 => 1688,  2658 => 1685,  2649 => 1682,  2646 => 1681,  2642 => 1680,  2637 => 1678,  2627 => 1670,  2618 => 1667,  2615 => 1666,  2611 => 1665,  2606 => 1663,  2601 => 1660,  2592 => 1657,  2589 => 1656,  2585 => 1655,  2580 => 1653,  2575 => 1650,  2566 => 1647,  2563 => 1646,  2559 => 1645,  2554 => 1643,  2549 => 1640,  2540 => 1637,  2537 => 1636,  2533 => 1635,  2528 => 1633,  2523 => 1630,  2514 => 1627,  2511 => 1626,  2507 => 1625,  2502 => 1623,  2492 => 1615,  2490 => 1614,  2483 => 1609,  2476 => 1607,  2472 => 1605,  2469 => 1604,  2465 => 1603,  2446 => 1588,  2444 => 1587,  2439 => 1586,  2437 => 1585,  2432 => 1583,  2426 => 1580,  2401 => 1558,  2395 => 1555,  2382 => 1545,  2376 => 1542,  2368 => 1537,  2362 => 1534,  2349 => 1524,  2343 => 1521,  2335 => 1516,  2329 => 1513,  2316 => 1503,  2310 => 1500,  2302 => 1495,  2296 => 1492,  2288 => 1487,  2282 => 1484,  2274 => 1479,  2268 => 1476,  2260 => 1471,  2254 => 1468,  2246 => 1463,  2240 => 1460,  2232 => 1455,  2226 => 1452,  2213 => 1442,  2207 => 1439,  2194 => 1429,  2188 => 1426,  2180 => 1421,  2174 => 1418,  2159 => 1406,  2139 => 1389,  2133 => 1386,  2118 => 1374,  2098 => 1357,  2092 => 1354,  2079 => 1344,  2073 => 1341,  2058 => 1329,  2038 => 1312,  2032 => 1309,  2017 => 1297,  1997 => 1280,  1991 => 1277,  1978 => 1267,  1972 => 1264,  1959 => 1254,  1953 => 1251,  1945 => 1246,  1939 => 1243,  1931 => 1238,  1925 => 1235,  1917 => 1230,  1911 => 1227,  1896 => 1215,  1876 => 1198,  1870 => 1195,  1857 => 1185,  1851 => 1182,  1843 => 1177,  1837 => 1174,  1822 => 1162,  1802 => 1145,  1796 => 1142,  1783 => 1132,  1777 => 1129,  1769 => 1124,  1763 => 1121,  1755 => 1116,  1749 => 1113,  1741 => 1108,  1735 => 1105,  1727 => 1100,  1721 => 1097,  1713 => 1092,  1707 => 1089,  1692 => 1077,  1672 => 1060,  1666 => 1057,  1653 => 1047,  1647 => 1044,  1639 => 1039,  1633 => 1036,  1625 => 1031,  1619 => 1028,  1611 => 1023,  1605 => 1020,  1597 => 1015,  1591 => 1012,  1576 => 1000,  1556 => 983,  1550 => 980,  1537 => 970,  1531 => 967,  1523 => 962,  1517 => 959,  1509 => 954,  1503 => 951,  1488 => 939,  1468 => 922,  1462 => 919,  1454 => 914,  1448 => 911,  1440 => 906,  1434 => 903,  1419 => 891,  1399 => 874,  1393 => 871,  1380 => 861,  1374 => 858,  1366 => 853,  1360 => 850,  1352 => 845,  1346 => 842,  1338 => 837,  1332 => 834,  1317 => 822,  1297 => 805,  1291 => 802,  1278 => 792,  1272 => 789,  1264 => 784,  1258 => 781,  1245 => 771,  1239 => 768,  1231 => 763,  1225 => 760,  1212 => 750,  1206 => 747,  1198 => 742,  1192 => 739,  1179 => 729,  1173 => 726,  1165 => 721,  1159 => 718,  1144 => 706,  1124 => 689,  1118 => 686,  1105 => 676,  1099 => 673,  1091 => 668,  1085 => 665,  1070 => 653,  1050 => 636,  1044 => 633,  1031 => 623,  1025 => 620,  1017 => 615,  1011 => 612,  996 => 600,  976 => 583,  970 => 580,  957 => 570,  951 => 567,  943 => 562,  937 => 559,  922 => 547,  902 => 530,  896 => 527,  881 => 515,  861 => 498,  855 => 495,  842 => 485,  836 => 482,  828 => 477,  822 => 474,  807 => 462,  787 => 445,  781 => 442,  768 => 432,  762 => 429,  754 => 424,  748 => 421,  733 => 409,  713 => 392,  707 => 389,  694 => 379,  688 => 376,  675 => 366,  669 => 363,  661 => 358,  655 => 355,  647 => 350,  641 => 347,  628 => 337,  622 => 334,  614 => 329,  608 => 326,  600 => 321,  594 => 318,  586 => 313,  580 => 310,  565 => 298,  545 => 281,  539 => 278,  531 => 273,  525 => 270,  510 => 258,  490 => 241,  484 => 238,  476 => 233,  470 => 230,  457 => 220,  451 => 217,  443 => 212,  437 => 209,  422 => 197,  328 => 106,  321 => 102,  314 => 98,  307 => 94,  296 => 90,  288 => 89,  280 => 88,  270 => 85,  262 => 84,  254 => 83,  240 => 78,  229 => 74,  218 => 70,  208 => 69,  202 => 66,  191 => 62,  185 => 59,  178 => 55,  169 => 49,  158 => 45,  150 => 44,  142 => 43,  136 => 40,  129 => 36,  122 => 32,  115 => 28,  108 => 24,  99 => 20,  88 => 13,  85 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -4358,77 +5385,753 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-11\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            UNDICESIMA AGGIUNTA POSSIBILE: oneri di predisposizione per motorizzazione di tapparelle, persiane, zanzariere, tende e/o oscuranti.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt11Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt11_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt11_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt11_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt11_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt11_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_5Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-12\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DODICESIMA AGGIUNTA POSSIBILE: oneri per passaggio cavi e collegamento di motorizzazioni per tapparelle, persiane, zanzariere, tende e/o oscuranti.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt12Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt12_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt12_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt12_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-13\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            TREDICESIMA AGGIUNTA POSSIBILE: centralino telefonico con 2 linee esterne e 8 linee interne.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt13Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            CENTRALINO TELEFONICO 2 LINEE ESTERNE E 8 INTERNI.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt13_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt13_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt13_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt13_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_4Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-14\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            QUATTORDICESIMA AGGIUNTA POSSIBILE: impianto citofonico (solo audio)
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt14Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Impianto Citofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt14_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt14_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt14_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt14_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt14_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt14_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_6Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-15\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            QUINDICESIMA AGGIUNTA POSSIBILE: impianto videocitofonico a colori in esecuzione a muro
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt15Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Impianto Videocitofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt15_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_7Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-16\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            SEDICESIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori  luminosità.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt16Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt16_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt16_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt16_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-17\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DICIASSETTESIMA AGGIUNTA POSSIBILE: esempio di soluzione per la  predisposizione di  illuminazione esterna con 20 punti luce.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt17Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Predisposizione cavidotti esterni Lato anteriore e posteriore per illuminazione esterna pozzetti ogni 10mt circa per rendere più facile la predisposizione dell'illuminazione definitiva. Misura ipotetica da verificare in loco.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt17_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt17_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt17_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt17_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Linea elettrica per accensioni 2 linee di accensioni separate.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt17_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Collegamento stagno nei pozzetti
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt17_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_6Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-18\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DICIOTTESIMA AGGIUNTA POSSIBILE: predisposizione per impianto fotovoltaico
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt18Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Tubazione per predisposizione impianto fotovoltaico: due tubazioni dai pannelli al locale tecnico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt18_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt18_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-19\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            DICIANNOVESIMA AGGIUNTA POSSIBILE: punti presa di servizio per le sonde di temperatura di ogni ambiente, tranne le due conteggiate nella proposta C.
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt19Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Allaccio TERMOSTATI (l'esatta quantità e in funzione del progetto termoidraulico, appena ci verrà consegnato aggiorneremo la nostra offerta).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt19_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt19_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt19_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt19_2Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-20\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            VENTESIMA AGGIUNTA POSSIBILE: cronotermostati ambiente
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt20Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Cronotermostato
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt20_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt20_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=\"collapse mt-1 mb-2\" id=\"collapse-21\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            VENTUNESIMA AGGIUNTA POSSIBILE: armadio rack
+                            <div class=\"row\">
+                                <table class=\"table\">
+                                    <thead>
+                                    <tr>
+                                        <div class=\"custom-control custom-checkbox\">
+                                            {{ form_widget(form.opt21Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Armadio Rack
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Prese di alimentazione
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Patch Panel
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_7Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_8Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_8Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_9Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_9Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Mensole
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_10Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_10Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_11Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_11Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Pannelli ciechi di copertura finale
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_12Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_12Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_13Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_13Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan=\"2\">
+                                            Ventilazione forzata
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=\"width: 210px\">
+                                            {{ form_widget(form.opt21_14Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_14Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
