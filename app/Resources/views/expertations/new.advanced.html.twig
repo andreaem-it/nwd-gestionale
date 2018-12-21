@@ -432,19 +432,23 @@
                                             {{ form_label(form.opt4_2Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt4_3Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt4_3Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt4_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt4_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt4_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -485,19 +489,23 @@
                                             {{ form_label(form.opt5_2Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt5_3Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt5_3Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt5_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt5_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt5_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -570,19 +578,23 @@
                                             {{ form_label(form.opt7_2Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt7_3Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt7_3Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt7_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt7_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt7_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -623,19 +635,23 @@
                                             {{ form_label(form.opt8_2Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt8_3Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt8_3Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt8_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt8_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt8_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -676,19 +692,23 @@
                                             {{ form_label(form.opt9_2Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt9_3Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt9_3Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt9_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt9_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt9_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -792,19 +812,23 @@
                                             {{ form_label(form.opt10_8Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt10_9Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt10_9Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt10_9Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt10_9Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt10_9Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -861,19 +885,23 @@
                                             {{ form_label(form.opt11_4Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt11_5Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt11_5Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt11_5Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt11_5Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt11_5Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>
@@ -1344,19 +1372,23 @@
                                             {{ form_label(form.opt19_1Value) }}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 210px">
-                                            {{ form_widget(form.opt19_2Value) }}
-                                        </td>
-                                        <td>
-                                            {{ form_label(form.opt19_2Value) }}
-                                        </td>
-                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt19_2Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt19_2Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt19_2Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
                                     </tbody>
                                 </table>
                             </div>

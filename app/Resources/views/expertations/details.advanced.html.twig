@@ -226,29 +226,6 @@
                                         <td class="border text-center">13.80</td>
                                         <td class="border text-center">{{ qtyPP * 13.80 }}</td>
                                     </tr>
-                                    <tr>
-                                        <td class="border text-center">15.2.41.3</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Punto presa elettrica da collegare alla linea di alimentazione compensata a parte come allaccio elettrico. <br>
-                                                Pt.o presa elettrica 2P+T 10/16A + UNEL. (Schuko Bipasso)<br>
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">{{ qtyPP }}</td>
-                                        <td class="border text-center">12.60</td>
-                                        <td class="border text-center">{{ qtyPP * 12.60 }}</td>
-                                    </tr>
-                                    {#<tr>
-                                        <td class="border text-center">15.2.41.2</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Presa elettrica aggiuntiva sulla stessa scatola 2P+T 10A o 16A o 10/16A (Bipresa) <br>
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">-</td>
-                                        <td class="border text-center">4.80</td>
-                                        <td class="border text-center">-</td>
-                                    </tr>#}
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.2.2</td>
@@ -289,6 +266,47 @@
                                             <td class="border text-center">{{ qtyPP }}</td>
                                             <td class="border text-center">27.20</td>
                                             <td class="border text-center">{{ qtyPP * 27.20 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemsArray.3 > 0 %}
+                                    <tr>
+                                        <td class="border text-center">15.2.41.3</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Punto presa elettrica da collegare alla linea di alimentazione compensata a parte come allaccio elettrico. <br>
+                                                Pt.o presa elettrica 2P+T 10/16A + UNEL. (Schuko Bipasso)<br>
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ itemsArray.3 }}</td>
+                                        <td class="border text-center">12.60</td>
+                                        <td class="border text-center">{{ itemsArray.3 * 12.60 }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% if itemsArray.4 > 0 %}
+                                    <tr>
+                                        <td class="border text-center">15.2.41.2</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Presa elettrica aggiuntiva sulla stessa scatola 2P+T 10A o 16A o 10/16A (Bipresa) <br>
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ itemsArray.4 }}</td>
+                                        <td class="border text-center">4.80</td>
+                                        <td class="border text-center">{{ itemsArray.4 * 4.80 }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% if itemsArray.5 > 0 %}
+                                        <tr>
+                                            <td class="border text-center">15.2.42</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Per allaccio ventilatori e o aspiratori
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemsArray.5 }}</td>
+                                            <td class="border text-center">6.40</td>
+                                            <td class="border text-center">{{ itemsArray.5 * 6.40 }}</td>
+                                        </tr>
                                         </tr>
                                     {% endif %}
                                     <tr>

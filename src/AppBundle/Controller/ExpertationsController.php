@@ -1241,10 +1241,17 @@ class ExpertationsController extends Controller
                 array_push($prices,$qtyPP * $price->findByCode('15.2.4'));
             }
         }
-        dump($itemAdv->getVal3());
-        if(array_sum($itemAdv->getVal3()) < 0) {
-            //array_push($prices, array_sum($itemAdv->getVal3()) * $price->findByCode('15.2.41.2'));
+        if(array_sum($itemAdv->getVal3()) > 0) {
+            array_push($prices, array_sum($itemAdv->getVal3()) * $price->findByCode('15.2.41.2'));
         }
+        if(array_sum($itemAdv->getVal4()) > 0) {
+            array_push($prices, array_sum($itemAdv->getVal4()) * $price->findByCode('15.2.41.3'));
+        }
+        if(array_sum($itemAdv->getVal5()) > 0) {
+            array_push($prices, array_sum($itemAdv->getVal5()) * $price->findByCode('15.2.42'));
+        }
+        //if(array_sum($itemAdv->get))
+
 
         /** Prese di Servizio */
         $qtyPS = [
@@ -1414,6 +1421,78 @@ class ExpertationsController extends Controller
         $this->getDoctrine()->getManager()->persist($item);
         $this->getDoctrine()->getManager()->flush();
 
+
+        $itemsAdvArray = array();
+
+        array_push($itemsAdvArray, null);
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal1()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal2()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal3()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal4()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal5()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal6()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal7()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal8()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal9()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal10()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal11()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal12()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal13()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal14()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal15()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal16()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal17()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal18()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal19()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal20()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal21()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal22()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal23()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal24()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal25()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal26()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal27()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal28()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal29()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal30()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal31()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal32()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal33()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal34()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal35()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal36()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal37()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal38()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal39()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal40()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal41()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal42()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal43()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal44()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal45()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal46()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal47()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal48()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal49()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal50()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal51()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal52()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal53()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal54()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal55()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal56()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal57()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal58()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal59()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal60()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal61()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal62()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal63()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal64()));
+
+
+        dump($itemsAdvArray);
+
         return $this->render('expertations/details.advanced.html.twig',[
             'item' => $item,
             'qtyPL' => $qtyPL,
@@ -1426,6 +1505,7 @@ class ExpertationsController extends Controller
             'qtyPD' => $qtyPD,
             'qtyPST' => $qtyPST,
             'total' => $total,
+            'itemsArray' => $itemsAdvArray,
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,
             'vat' => $vat = 0,
