@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Users;
 use FOS\UserBundle\Event\FilterUserResponseEvent;
 use FOS\UserBundle\Event\FormEvent;
 use FOS\UserBundle\Event\GetResponseUserEvent;
@@ -86,5 +87,17 @@ class SecurityController extends Controller {
             'user' => $user,
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/login/check/username/{username}")
+     */
+    public function checkUsername($username) {
+            $user = $this->getDoctrine()->getRepository(Users::class)->findBy(['username' => $username]);
+            if ($user != null) {
+                return new Response('TRUE');
+            } else {
+                return new Response('FALSE');
+            }
     }
 }

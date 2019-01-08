@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Users;
+use Doctrine\ORM\Query\Expr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -12,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\Email;
@@ -282,5 +284,46 @@ class ClientsController extends Controller
 
     public function convertUName($uname) {
         return $this->getDoctrine()->getRepository(Users::class)->find($uname);
+    }
+
+    /**
+     * @Route("ajax/clients/find/", name="ajax_clients_find_json")
+     */
+    public function findClientAction(Request $request)
+    {
+        $expr = new Expr();
+
+        $objects = $this->getDoctrine()->getManager()
+            ->getRepository(Clients::class)
+            ->createQueryBuilder('o')
+            ->select('o.name, o.surname, o.ragione_sociale, o.id')
+            ->where($expr->like('o.name', ':name'))
+            ->orWhere($expr->like('o.surname', ':name'))
+            ->orWhere($expr->like('o.ragione_sociale',':name'))
+            ->setParameter('name', sprintf('%s%%', $request->query->get('q', '')))
+            ->getQuery()
+            ->getArrayResult();
+
+        return new JsonResponse($objects);
+    }
+
+    /**
+     * @Route("ajax/clients/get/{ids}", name="ajax_clients_get_json")
+     */
+    public function get($ids)
+    {
+        $expr = new Expr();
+        $ids = explode(',', $ids);
+
+        $objects = $this->getDoctrine()->getManager()
+            ->getRepository(Clients::class)
+            ->createQueryBuilder('o')
+            ->select('o.name, o.surname, o.ragione_sociale, o.id')
+            ->where($expr->in('o.id', ':ids'))
+            ->setParameter('ids', $ids)
+            ->getQuery()
+            ->getArrayResult();
+
+        return new JsonResponse($objects);
     }
 }

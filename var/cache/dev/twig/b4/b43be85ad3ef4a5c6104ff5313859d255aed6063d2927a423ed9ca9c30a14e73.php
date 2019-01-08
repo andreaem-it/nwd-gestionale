@@ -870,7 +870,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                 // line 568
                 echo twig_escape_filter($this->env, (isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 568, $this->source); })()), "html", null, true);
                 echo "</td>
-                                                <td class=\"border text-center\">8</td>
+                                                <td class=\"border text-center\">8.00</td>
                                                 <td class=\"border text-center\">";
                 // line 570
                 echo twig_escape_filter($this->env, ((isset($context["qtyTP"]) || array_key_exists("qtyTP", $context) ? $context["qtyTP"] : (function () { throw new Twig_Error_Runtime('Variable "qtyTP" does not exist.', 570, $this->source); })()) * 8), "html", null, true);
@@ -968,8 +968,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">28</td>
-                                            <td class=\"border text-center\">28</td>
+                                            <td class=\"border text-center\">28.00</td>
+                                            <td class=\"border text-center\">28.00</td>
                                         </tr>
                                         <tr>
                                             <td class=\"border text-center\">15.3.90</td>
@@ -979,8 +979,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">20</td>
-                                            <td class=\"border text-center\">20</td>
+                                            <td class=\"border text-center\">20.00</td>
+                                            <td class=\"border text-center\">20.00</td>
                                         </tr>
                                     ";
         }
@@ -996,8 +996,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">1</td>
-                                        <td class=\"border text-center\">139</td>
-                                        <td class=\"border text-center\">139</td>
+                                        <td class=\"border text-center\">139.00</td>
+                                        <td class=\"border text-center\">139.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><i>Impianto Citofonico o Videocitofonico</i></td>
@@ -1011,8 +1011,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">2</td>
-                                        <td class=\"border text-center\">96</td>
-                                        <td class=\"border text-center\">192</td>
+                                        <td class=\"border text-center\">96.00</td>
+                                        <td class=\"border text-center\">192.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
@@ -1053,7 +1053,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
             // line 698
             echo twig_escape_filter($this->env, (isset($context["qtyPST"]) || array_key_exists("qtyPST", $context) ? $context["qtyPST"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPST" does not exist.', 698, $this->source); })()), "html", null, true);
             echo "</td>
-                                            <td class=\"border text-center\">8</td>
+                                            <td class=\"border text-center\">8.00</td>
                                             <td class=\"border text-center\">";
             // line 700
             echo twig_escape_filter($this->env, ((isset($context["qtyPST"]) || array_key_exists("qtyPST", $context) ? $context["qtyPST"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPST" does not exist.', 700, $this->source); })()) * 8), "html", null, true);
@@ -1374,7 +1374,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                         </td>
                                         <td class=\"border text-center\">20</td>
                                         <td class=\"border text-center\">6.20</td>
-                                        <td class=\"border text-center\">124</td>
+                                        <td class=\"border text-center\">124.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI MESSA A TERRA</strong></td>
@@ -1390,7 +1390,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                         </td>
                                         <td class=\"border text-center\">20</td>
                                         <td class=\"border text-center\">3.50</td>
-                                        <td class=\"border text-center\">70</td>
+                                        <td class=\"border text-center\">70.00</td>
                                     </tr>
                                     ";
         // line 959
@@ -1438,8 +1438,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">239</td>
-                                            <td class=\"border text-center\">239</td>
+                                            <td class=\"border text-center\">239.00</td>
+                                            <td class=\"border text-center\">239.00</td>
                                         </tr>
                                         <tr>
                                             <td class=\"border text-center\">15.7.201</td>
@@ -1449,8 +1449,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">125</td>
-                                            <td class=\"border text-center\">125</td>
+                                            <td class=\"border text-center\">125.00</td>
+                                            <td class=\"border text-center\">125.00</td>
                                         </tr>
                                     ";
         }
@@ -1519,7 +1519,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
             // line 1060
             echo twig_escape_filter($this->env, (isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 1060, $this->source); })()), "html", null, true);
             echo "</td>
-                                            <td class=\"border text-center\">27</td>
+                                            <td class=\"border text-center\">27.00</td>
                                             <td class=\"border text-center\">";
             // line 1062
             echo twig_escape_filter($this->env, ((isset($context["qtyPL"]) || array_key_exists("qtyPL", $context) ? $context["qtyPL"] : (function () { throw new Twig_Error_Runtime('Variable "qtyPL" does not exist.', 1062, $this->source); })()) * 27), "html", null, true);
@@ -2343,8 +2343,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                     </small>
                                                 </td>
                                                 <td class=\"border text-center\">{{ qtyTP }}</td>
-                                                <td class=\"border text-center\">8</td>
-                                                <td class=\"border text-center\">{{ qtyTP  * 8}}</td>
+                                                <td class=\"border text-center\">8.00</td>
+                                                <td class=\"border text-center\">{{ qtyTP  * 8.00}}</td>
                                             </tr>
                                         {% endif %}
                                         {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
@@ -2402,8 +2402,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">28</td>
-                                            <td class=\"border text-center\">28</td>
+                                            <td class=\"border text-center\">28.00</td>
+                                            <td class=\"border text-center\">28.00</td>
                                         </tr>
                                         <tr>
                                             <td class=\"border text-center\">15.3.90</td>
@@ -2413,8 +2413,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">20</td>
-                                            <td class=\"border text-center\">20</td>
+                                            <td class=\"border text-center\">20.00</td>
+                                            <td class=\"border text-center\">20.00</td>
                                         </tr>
                                     {% endif %}
                                     <tr>
@@ -2428,8 +2428,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">1</td>
-                                        <td class=\"border text-center\">139</td>
-                                        <td class=\"border text-center\">139</td>
+                                        <td class=\"border text-center\">139.00</td>
+                                        <td class=\"border text-center\">139.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><i>Impianto Citofonico o Videocitofonico</i></td>
@@ -2443,8 +2443,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                             </small>
                                         </td>
                                         <td class=\"border text-center\">2</td>
-                                        <td class=\"border text-center\">96</td>
-                                        <td class=\"border text-center\">192</td>
+                                        <td class=\"border text-center\">96.00</td>
+                                        <td class=\"border text-center\">192.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
@@ -2473,8 +2473,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">{{ qtyPST }}</td>
-                                            <td class=\"border text-center\">8</td>
-                                            <td class=\"border text-center\">{{ qtyPST  * 8}}</td>
+                                            <td class=\"border text-center\">8.00</td>
+                                            <td class=\"border text-center\">{{ qtyPST  * 8.00}}</td>
                                         </tr>
                                     {% endif %}
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
@@ -2715,7 +2715,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                         </td>
                                         <td class=\"border text-center\">20</td>
                                         <td class=\"border text-center\">6.20</td>
-                                        <td class=\"border text-center\">124</td>
+                                        <td class=\"border text-center\">124.00</td>
                                     </tr>
                                     <tr>
                                         <td colspan=\"5\" class=\"border table-light\"><strong>IMPIANTO DI MESSA A TERRA</strong></td>
@@ -2731,7 +2731,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                         </td>
                                         <td class=\"border text-center\">20</td>
                                         <td class=\"border text-center\">3.50</td>
-                                        <td class=\"border text-center\">70</td>
+                                        <td class=\"border text-center\">70.00</td>
                                     </tr>
                                     {% if item.spd == \"1\" %}
                                         {% if item.trifase == 0 %}
@@ -2768,8 +2768,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">239</td>
-                                            <td class=\"border text-center\">239</td>
+                                            <td class=\"border text-center\">239.00</td>
+                                            <td class=\"border text-center\">239.00</td>
                                         </tr>
                                         <tr>
                                             <td class=\"border text-center\">15.7.201</td>
@@ -2779,8 +2779,8 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">1</td>
-                                            <td class=\"border text-center\">125</td>
-                                            <td class=\"border text-center\">125</td>
+                                            <td class=\"border text-center\">125.00</td>
+                                            <td class=\"border text-center\">125.00</td>
                                         </tr>
                                     {% endif %}
                                     <tr>
@@ -2835,7 +2835,7 @@ class __TwigTemplate_6059e7fd1243934c86c32b6f953d0796e7b7fb5c7d66e10897664a79580
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">{{ qtyPL }}</td>
-                                            <td class=\"border text-center\">27</td>
+                                            <td class=\"border text-center\">27.00</td>
                                             <td class=\"border text-center\">{{ qtyPL * 27 }}</td>
                                         </tr>
                                         <tr>

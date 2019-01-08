@@ -252,14 +252,9 @@ $context["item"], "status", array()) == 2)) {
                                         ";
             // line 113
             echo "                                        <td style=\"max-width: 200px;\">
-                                            <script>
-                                                \$(function () {
-                                                    \$('[data-toggle=\"tooltip\"]').tooltip();
-                                                });
-                                            </script>
                                             <div class=\"btn-group\">
                                                 <a href=\"";
-            // line 120
+            // line 115
             if ((twig_get_attribute($this->env, $this->source, $context["item"], "status", array()) == 0)) {
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_imposta_accettato", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()))), "html", null, true);
             } else {
@@ -279,7 +274,7 @@ $context["item"], "status", array()) == 2)) {
             }
             echo "\">
                                                     <span class=\"";
-            // line 121
+            // line 116
             if ((twig_get_attribute($this->env, $this->source, $context["item"], "status", array()) == 0)) {
                 echo "mdi mdi-check";
             } else {
@@ -288,7 +283,7 @@ $context["item"], "status", array()) == 2)) {
             echo "\"></span>
                                                 </a>
                                                 <a href=\"";
-            // line 123
+            // line 118
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo", array("pid" => twig_get_attribute($this->env, $this->source, $context["item"], "pid", array()))), "html", null, true);
             echo "\" class=\"btn btn-primary btn-sm float-right animsition-link\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Mostra Preventivo\">
                                                     <span class=\"mdi mdi-eye-outline\"></span>
@@ -297,7 +292,7 @@ $context["item"], "status", array()) == 2)) {
                                                     <span class=\"mdi mdi-table-edit\"></span>
                                                 </a>
                                                 <a href=\"";
-            // line 129
+            // line 124
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_elimina", array("id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", array()), "confirm" => false)), "html", null, true);
             echo "\" class=\"btn btn-danger btn-sm float-right animsition-link\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Elimina Preventivo\">
                                                     <span class=\"mdi mdi-delete\"></span>
@@ -310,7 +305,7 @@ $context["item"], "status", array()) == 2)) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 136
+        // line 131
         echo "                                </tbody>
                             </table>
                         </div>
@@ -322,8 +317,8 @@ $context["item"], "status", array()) == 2)) {
             <div class=\"col-12\">
                 <div class=\"navigation mt-1\">
                     ";
-        // line 146
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new Twig_Error_Runtime('Variable "pagination" does not exist.', 146, $this->source); })()));
+        // line 141
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new Twig_Error_Runtime('Variable "pagination" does not exist.', 141, $this->source); })()));
         echo "
                 </div>
             </div>
@@ -342,6 +337,15 @@ $context["item"], "status", array()) == 2)) {
                 }
             })
         })
+    </script>
+    <script>
+        \$(function () {
+            \$('[data-toggle=\"tooltip\"]').tooltip({
+                boundary: 'window',
+                container: 'body',
+                placement: 'top'
+            });
+        });
     </script>
 ";
         
@@ -364,7 +368,7 @@ $context["item"], "status", array()) == 2)) {
 
     public function getDebugInfo()
     {
-        return array (  326 => 146,  314 => 136,  301 => 129,  292 => 123,  283 => 121,  263 => 120,  254 => 113,  251 => 106,  247 => 104,  245 => 103,  242 => 102,  240 => 101,  237 => 100,  235 => 99,  228 => 95,  224 => 94,  219 => 91,  209 => 90,  205 => 89,  199 => 86,  193 => 83,  189 => 81,  185 => 80,  179 => 76,  174 => 68,  168 => 65,  162 => 62,  156 => 59,  150 => 56,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  321 => 141,  309 => 131,  296 => 124,  287 => 118,  278 => 116,  258 => 115,  254 => 113,  251 => 106,  247 => 104,  245 => 103,  242 => 102,  240 => 101,  237 => 100,  235 => 99,  228 => 95,  224 => 94,  219 => 91,  209 => 90,  205 => 89,  199 => 86,  193 => 83,  189 => 81,  185 => 80,  179 => 76,  174 => 68,  168 => 65,  162 => 62,  156 => 59,  150 => 56,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -482,11 +486,6 @@ $context["item"], "status", array()) == 2)) {
                                             {{ item.expiration|date(\"d-m-Y\") }}
                                         </td>#}
                                         <td style=\"max-width: 200px;\">
-                                            <script>
-                                                \$(function () {
-                                                    \$('[data-toggle=\"tooltip\"]').tooltip();
-                                                });
-                                            </script>
                                             <div class=\"btn-group\">
                                                 <a href=\"{% if item.status == 0 %}{{ url('preventivi_imposta_accettato', {'id': item.id }) }}{% else %}{{ url('preventivi_imposta_non_accettato', {'id': item.id }) }}{% endif %}\" class=\"btn {% if item.status == 0 %}btn-success{% else %} btn-secondary{% endif %} btn-sm animsition-link\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"{% if item.status == 0 %}Imposta come Accettato{% elseif item.status == 1 %}Imposta come Non Accettato{% endif %}\">
                                                     <span class=\"{% if item.status == 0 %}mdi mdi-check{% else %}fa fa-times pl-1{% endif %}\"></span>
@@ -532,6 +531,15 @@ $context["item"], "status", array()) == 2)) {
                 }
             })
         })
+    </script>
+    <script>
+        \$(function () {
+            \$('[data-toggle=\"tooltip\"]').tooltip({
+                boundary: 'window',
+                container: 'body',
+                placement: 'top'
+            });
+        });
     </script>
 {% endblock %}
 ", "expertations/list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/list.html.twig");

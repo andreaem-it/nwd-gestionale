@@ -1039,9 +1039,9 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("preventivi/avanzato/nuovo/preventivo-{id}/piano-{floor}", name="nuovo_preventivo_avanzato")
+     * @Route("preventivi/avanzato/nuovo/preventivo-{id}", name="nuovo_preventivo_avanzato")
      */
-    public function newExpertationAdvancedAction(Request $request,$id,$floor) {
+    public function newExpertationAdvancedAction(Request $request,$id,$floor = 0) {
 
         if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
             return $this->redirectToRoute('mostra_preventivo_avanzato', ['id' => $id]);
@@ -1078,7 +1078,7 @@ class ExpertationsController extends Controller
 
             $form->handleRequest($request);
 
-            if ($form->isValid() && $form->isSubmitted()) {
+            if ($form->isSubmitted() && $form->isValid()) {
                 $expAdv = $form->getData();
 
                 $expAdv->setFather($item->getId());
@@ -1147,6 +1147,7 @@ class ExpertationsController extends Controller
                 $expAdv->setVal62(explode(',', $form->getData()->getVal62()));
                 $expAdv->setVal63(explode(',', $form->getData()->getVal63()));
                 $expAdv->setVal64(explode(',', $form->getData()->getVal64()));
+
 
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($expAdv);

@@ -111,11 +111,6 @@
                                             {{ item.expiration|date("d-m-Y") }}
                                         </td>#}
                                         <td style="max-width: 200px;">
-                                            <script>
-                                                $(function () {
-                                                    $('[data-toggle="tooltip"]').tooltip();
-                                                });
-                                            </script>
                                             <div class="btn-group">
                                                 <a href="{% if item.status == 0 %}{{ url('preventivi_imposta_accettato', {'id': item.id }) }}{% else %}{{ url('preventivi_imposta_non_accettato', {'id': item.id }) }}{% endif %}" class="btn {% if item.status == 0 %}btn-success{% else %} btn-secondary{% endif %} btn-sm animsition-link" data-toggle="tooltip" data-placement="top" title="{% if item.status == 0 %}Imposta come Accettato{% elseif item.status == 1 %}Imposta come Non Accettato{% endif %}">
                                                     <span class="{% if item.status == 0 %}mdi mdi-check{% else %}fa fa-times pl-1{% endif %}"></span>
@@ -161,5 +156,14 @@
                 }
             })
         })
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({
+                boundary: 'window',
+                container: 'body',
+                placement: 'top'
+            });
+        });
     </script>
 {% endblock %}

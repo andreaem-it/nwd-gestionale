@@ -38,7 +38,7 @@
                                             <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}">
                                             <div class="input-group-append">
                                   <span class="input-group-text">
-                                    <i class="mdi mdi-check-circle-outline"></i>
+                                    <i id="checkUser" class="mdi mdi-check-circle-outline"></i>
                                   </span>
                                             </div>
                                         </div>
@@ -79,6 +79,26 @@
         <script src="{{ asset('vendors/js/vendor.bundle.addons.js') }}"></script>
         <script src="{{ asset('js/off-canvas.js') }}"></script>
         <script src="{{ asset('js/misc.js') }}"></script>
+        <script>
+            $('#username').change(function() {
+                $.ajax({
+                    url: '/login/check/username/' + $('#username').val(),
+                    success: function(data) {
+                        check(data)
+                    }
+                })
+            });
+            function check(data) {
+                if (data === 'TRUE') {
+                    $('#checkUser').addClass('text-success').removeClass('text-danger');
+                    console.log(data)
+                }
+                if (data === 'FALSE') {
+                    $('#checkUser').addClass('text-danger').removeClass('text-success');
+                    console.log(data)
+                }
+            }
+        </script>
     </body>
 </html>
 

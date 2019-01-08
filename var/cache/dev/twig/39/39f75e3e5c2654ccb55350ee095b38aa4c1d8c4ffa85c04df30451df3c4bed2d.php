@@ -106,7 +106,7 @@ class __TwigTemplate_3db1df95336ddb7503ff67af42a905ad0ae0e96ea7928f7ac4510f1de07
         echo "\">
                                             <div class=\"input-group-append\">
                                   <span class=\"input-group-text\">
-                                    <i class=\"mdi mdi-check-circle-outline\"></i>
+                                    <i id=\"checkUser\" class=\"mdi mdi-check-circle-outline\"></i>
                                   </span>
                                             </div>
                                         </div>
@@ -165,6 +165,26 @@ class __TwigTemplate_3db1df95336ddb7503ff67af42a905ad0ae0e96ea7928f7ac4510f1de07
         // line 81
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/misc.js"), "html", null, true);
         echo "\"></script>
+        <script>
+            \$('#username').change(function() {
+                \$.ajax({
+                    url: '/login/check/username/' + \$('#username').val(),
+                    success: function(data) {
+                        check(data)
+                    }
+                })
+            });
+            function check(data) {
+                if (data === 'TRUE') {
+                    \$('#checkUser').addClass('text-success').removeClass('text-danger');
+                    console.log(data)
+                }
+                if (data === 'FALSE') {
+                    \$('#checkUser').addClass('text-danger').removeClass('text-success');
+                    console.log(data)
+                }
+            }
+        </script>
     </body>
 </html>
 
@@ -225,7 +245,7 @@ class __TwigTemplate_3db1df95336ddb7503ff67af42a905ad0ae0e96ea7928f7ac4510f1de07
 
     public function getDebugInfo()
     {
-        return array (  200 => 12,  182 => 6,  166 => 81,  162 => 80,  158 => 79,  154 => 78,  144 => 71,  127 => 57,  105 => 38,  100 => 35,  92 => 30,  88 => 28,  86 => 27,  82 => 26,  78 => 25,  66 => 16,  61 => 13,  59 => 12,  55 => 11,  51 => 10,  47 => 9,  43 => 8,  38 => 6,  31 => 1,);
+        return array (  220 => 12,  202 => 6,  166 => 81,  162 => 80,  158 => 79,  154 => 78,  144 => 71,  127 => 57,  105 => 38,  100 => 35,  92 => 30,  88 => 28,  86 => 27,  82 => 26,  78 => 25,  66 => 16,  61 => 13,  59 => 12,  55 => 11,  51 => 10,  47 => 9,  43 => 8,  38 => 6,  31 => 1,);
     }
 
     public function getSourceContext()
@@ -270,7 +290,7 @@ class __TwigTemplate_3db1df95336ddb7503ff67af42a905ad0ae0e96ea7928f7ac4510f1de07
                                             <input type=\"text\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\">
                                             <div class=\"input-group-append\">
                                   <span class=\"input-group-text\">
-                                    <i class=\"mdi mdi-check-circle-outline\"></i>
+                                    <i id=\"checkUser\" class=\"mdi mdi-check-circle-outline\"></i>
                                   </span>
                                             </div>
                                         </div>
@@ -311,6 +331,26 @@ class __TwigTemplate_3db1df95336ddb7503ff67af42a905ad0ae0e96ea7928f7ac4510f1de07
         <script src=\"{{ asset('vendors/js/vendor.bundle.addons.js') }}\"></script>
         <script src=\"{{ asset('js/off-canvas.js') }}\"></script>
         <script src=\"{{ asset('js/misc.js') }}\"></script>
+        <script>
+            \$('#username').change(function() {
+                \$.ajax({
+                    url: '/login/check/username/' + \$('#username').val(),
+                    success: function(data) {
+                        check(data)
+                    }
+                })
+            });
+            function check(data) {
+                if (data === 'TRUE') {
+                    \$('#checkUser').addClass('text-success').removeClass('text-danger');
+                    console.log(data)
+                }
+                if (data === 'FALSE') {
+                    \$('#checkUser').addClass('text-danger').removeClass('text-success');
+                    console.log(data)
+                }
+            }
+        </script>
     </body>
 </html>
 

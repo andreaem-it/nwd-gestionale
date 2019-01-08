@@ -382,9 +382,25 @@
                                                 $('#form_pl_' + item).val(0);
                                             }
                                             if (data[2]) {
-                                                $('#form_pt_' + item).val(data[2]['outlets']);
-                                            } else {
-                                                $('#form_pt_' + item).val(0);
+                                                if(data[2]['type'] == 3) {
+                                                    $('#form_pt_' + item).val(data[2]['outlets']);
+                                                } else {
+                                                    $('#form_pt_' + item).val(0);
+                                                }
+                                            }
+                                            if (data[3]) {
+                                                if(data[3]['type'] == 4) {
+                                                    $('#form_c1v_' + item).val(data[3]['outlets']);
+                                                } else {
+                                                    $('#form_c1v_' +item).val(0);
+                                                }
+                                            }
+                                            if(data[4]) {
+                                                if(data[4]['type'] == 5) {
+                                                    $('#form_c2v_' + item).val(data[4]['outlets']);
+                                                } else {
+                                                    $('#form_c2v_' +item).val(0);
+                                                }
                                             }
                                         }
                                     });

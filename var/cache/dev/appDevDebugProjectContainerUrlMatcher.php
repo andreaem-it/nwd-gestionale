@@ -145,6 +145,85 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/ajax')) {
+            // ajax_clients_find_json
+            if ('/ajax/clients/find' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\ClientsController::findClientAction',  '_route' => 'ajax_clients_find_json',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_ajax_clients_find_json;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'ajax_clients_find_json'));
+                }
+
+                return $ret;
+            }
+            not_ajax_clients_find_json:
+
+            // ajax_clients_get_json
+            if (0 === strpos($pathinfo, '/ajax/clients/get') && preg_match('#^/ajax/clients/get/(?P<ids>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_clients_get_json')), array (  '_controller' => 'AppBundle\\Controller\\ClientsController::get',));
+            }
+
+            // ajax_get_expdata_field
+            if (0 === strpos($pathinfo, '/ajax/get/expData') && preg_match('#^/ajax/get/expData/(?P<exp>[^/]++)/(?P<field>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expdata_field')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxGetExpDataFiledAction',));
+            }
+
+            if (0 === strpos($pathinfo, '/ajax/expertation')) {
+                // ajax_get_expertations_room
+                if (0 === strpos($pathinfo, '/ajax/expertations/get/outlets') && preg_match('#^/ajax/expertations/get/outlets/(?P<level>[^/]++)/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_room')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGO',));
+                }
+
+                // ajax_get_expertations_quadri
+                if (0 === strpos($pathinfo, '/ajax/expertations/get/quadri') && preg_match('#^/ajax/expertations/get/quadri/(?P<tipo>[^/]++)/(?P<level>[^/]++)/(?P<meters>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_quadri')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGQ',));
+                }
+
+                // ajax_get_tiranti
+                if (0 === strpos($pathinfo, '/ajax/expertation/get/tiranti') && preg_match('#^/ajax/expertation/get/tiranti/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_tiranti')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGT',));
+                }
+
+            }
+
+            // ajax_search_expertation
+            if (0 === strpos($pathinfo, '/ajax/search/expertations') && preg_match('#^/ajax/search/expertations/(?P<type>[^/]++)/(?P<terms>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_search_expertation')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxSEXP',));
+            }
+
+            if (0 === strpos($pathinfo, '/ajax/settings')) {
+                // ajax_settings_users_list
+                if ('/ajax/settings/users/list' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSULAction',  '_route' => 'ajax_settings_users_list',);
+                }
+
+                // ajax_settings_users_delete
+                if (0 === strpos($pathinfo, '/ajax/settings/users/delete') && preg_match('#^/ajax/settings/users/delete/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_settings_users_delete')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUDAction',));
+                }
+
+                // ajax_settings_groups_list
+                if ('/ajax/settings/groups/list' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSGLAction',  '_route' => 'ajax_settings_groups_list',);
+                }
+
+            }
+
+            // ajax_price_list
+            if ('/ajax/prices/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::AJAXPl',  '_route' => 'ajax_price_list',);
+            }
+
+        }
+
+        // action_prices_flush
+        if ('/actions/prices/flush' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesFlushAction',  '_route' => 'action_prices_flush',);
+        }
+
         // homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::homeAction',  '_route' => 'homepage',);
@@ -219,7 +298,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // nuovo_preventivo_avanzato
-                if (0 === strpos($pathinfo, '/preventivi/avanzato/nuovo/preventivo-') && preg_match('#^/preventivi/avanzato/nuovo/preventivo\\-(?P<id>[^/]++)/piano\\-(?P<floor>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (0 === strpos($pathinfo, '/preventivi/avanzato/nuovo/preventivo-') && preg_match('#^/preventivi/avanzato/nuovo/preventivo\\-(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'nuovo_preventivo_avanzato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::newExpertationAdvancedAction',));
                 }
 
@@ -307,69 +386,15 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/ajax')) {
-            // ajax_get_expdata_field
-            if (0 === strpos($pathinfo, '/ajax/get/expData') && preg_match('#^/ajax/get/expData/(?P<exp>[^/]++)/(?P<field>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expdata_field')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxGetExpDataFiledAction',));
-            }
-
-            if (0 === strpos($pathinfo, '/ajax/expertation')) {
-                // ajax_get_expertations_room
-                if (0 === strpos($pathinfo, '/ajax/expertations/get/outlets') && preg_match('#^/ajax/expertations/get/outlets/(?P<level>[^/]++)/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_room')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGO',));
-                }
-
-                // ajax_get_expertations_quadri
-                if (0 === strpos($pathinfo, '/ajax/expertations/get/quadri') && preg_match('#^/ajax/expertations/get/quadri/(?P<tipo>[^/]++)/(?P<level>[^/]++)/(?P<meters>[^/]++)$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_quadri')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGQ',));
-                }
-
-                // ajax_get_tiranti
-                if (0 === strpos($pathinfo, '/ajax/expertation/get/tiranti') && preg_match('#^/ajax/expertation/get/tiranti/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_tiranti')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGT',));
-                }
-
-            }
-
-            // ajax_search_expertation
-            if (0 === strpos($pathinfo, '/ajax/search/expertations') && preg_match('#^/ajax/search/expertations/(?P<type>[^/]++)/(?P<terms>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_search_expertation')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxSEXP',));
-            }
-
-            if (0 === strpos($pathinfo, '/ajax/settings')) {
-                // ajax_settings_users_list
-                if ('/ajax/settings/users/list' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSULAction',  '_route' => 'ajax_settings_users_list',);
-                }
-
-                // ajax_settings_users_delete
-                if (0 === strpos($pathinfo, '/ajax/settings/users/delete') && preg_match('#^/ajax/settings/users/delete/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_settings_users_delete')), array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSUDAction',));
-                }
-
-                // ajax_settings_groups_list
-                if ('/ajax/settings/groups/list' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\SettingsController::AjaxSGLAction',  '_route' => 'ajax_settings_groups_list',);
-                }
-
-            }
-
-            // ajax_price_list
-            if ('/ajax/prices/list' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\PricesController::AJAXPl',  '_route' => 'ajax_price_list',);
-            }
-
-        }
-
-        // action_prices_flush
-        if ('/actions/prices/flush' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\PricesController::pricesFlushAction',  '_route' => 'action_prices_flush',);
-        }
-
-        if (0 === strpos($pathinfo, '/login')) {
+        elseif (0 === strpos($pathinfo, '/login')) {
             // login
             if ('/login' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::login',  '_route' => 'login',);
+            }
+
+            // app_security_checkusername
+            if (0 === strpos($pathinfo, '/login/check/username') && preg_match('#^/login/check/username/(?P<username>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_security_checkusername')), array (  '_controller' => 'AppBundle\\Controller\\SecurityController::checkUsername',));
             }
 
             // fos_user_security_login
