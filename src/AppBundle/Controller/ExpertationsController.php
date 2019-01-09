@@ -1070,9 +1070,10 @@ class ExpertationsController extends Controller
 
             $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
                 ->add('submit', SubmitType::class, [
+                    'label' => 'Genera',
                     'attr' => [
-                        'class' => 'btn btn-success',
-                        'style' => 'display:none'
+                        'class' => 'btn btn-success btn-block btn-sm mt-3   ',
+                        //'style' => 'display:none'
                     ]
                 ]);
 
@@ -1155,8 +1156,8 @@ class ExpertationsController extends Controller
 
                 dump($form);
 
-                $this->redirectToRoute('mostra_preventivo_avanzato', [
-                    'id' => $expAdv->getId()
+                return $this->redirectToRoute('mostra_preventivo_avanzato', [
+                    'pid' => $id
                 ]);
 
             }
@@ -1203,6 +1204,74 @@ class ExpertationsController extends Controller
 
         $prices = array();
 
+        $itemsAdvArray = array();
+
+        array_push($itemsAdvArray, null);
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal1()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal2()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal3()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal4()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal5()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal6()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal7()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal8()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal9()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal10()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal11()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal12()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal13()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal14()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal15()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal16()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal17()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal18()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal19()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal20()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal21()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal22()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal23()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal24()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal25()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal26()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal27()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal28()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal29()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal30()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal31()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal32()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal33()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal34()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal35()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal36()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal37()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal38()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal39()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal40()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal41()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal42()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal43()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal44()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal45()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal46()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal47()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal48()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal49()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal50()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal51()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal52()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal53()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal54()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal55()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal56()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal57()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal58()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal59()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal60()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal61()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal62()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal63()));
+        array_push($itemsAdvArray, array_sum($itemAdv->getVal64()));
+
         /** Punti Luce */
         array_push($prices,($qtyPL * $price->findByCode('15.1.12.2')));
         array_push($prices,($qtyPL * $price->findByCode('15.1.1')));
@@ -1228,6 +1297,10 @@ class ExpertationsController extends Controller
                 array_push($prices,$qtyPC * $price->findByCode('15.1.5.2'));
             }
         }
+        /** Punti Comando Aggiuntivi */
+        if($itemsAdvArray[2] != 0) {
+            array_push($prices,$itemsAdvArray[2] * $price->findByCode('15.1.15.2'));
+        }
 
         /** Punti Prese */
         array_push($prices, ($qtyPP * $price->findByCode('15.2.21.1')));
@@ -1251,8 +1324,6 @@ class ExpertationsController extends Controller
         if(array_sum($itemAdv->getVal5()) > 0) {
             array_push($prices, array_sum($itemAdv->getVal5()) * $price->findByCode('15.2.42'));
         }
-        //if(array_sum($itemAdv->get))
-
 
         /** Prese di Servizio */
         $qtyPS = [
@@ -1317,6 +1388,11 @@ class ExpertationsController extends Controller
             array_push($prices, 1 * $price->findByCode('15.6.170.39'));
         }
 
+        /** Lampade Emergenza */
+        if ($itemsAdvArray[14] > 0) {
+            array_push($prices, $itemsAdvArray[14] * $price->findByCode('15.8.180.1'));
+        }
+
         /** Punti di servizio Termico */
         $qtyPST = 1 + $item->getPianiCasa();
         array_push($prices, $qtyPST * $price->findByCode('15.3.10'));
@@ -1331,6 +1407,11 @@ class ExpertationsController extends Controller
 
         /** Allaccio Termostati */
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
+
+        /** Termostato */
+        if($itemsAdvArray[20] > 0) {
+            array_push($prices, $itemsAdvArray[20] * $price->findByCode('13.19.10.4'));
+        }
 
         /** Allaccio Caldaia o Pompa di Calore */
         array_push($prices, 1 * $price->findByCode('13.21.40.1'));
@@ -1423,73 +1504,7 @@ class ExpertationsController extends Controller
         $this->getDoctrine()->getManager()->flush();
 
 
-        $itemsAdvArray = array();
 
-        array_push($itemsAdvArray, null);
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal1()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal2()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal3()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal4()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal5()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal6()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal7()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal8()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal9()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal10()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal11()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal12()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal13()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal14()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal15()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal16()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal17()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal18()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal19()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal20()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal21()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal22()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal23()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal24()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal25()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal26()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal27()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal28()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal29()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal30()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal31()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal32()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal33()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal34()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal35()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal36()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal37()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal38()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal39()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal40()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal41()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal42()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal43()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal44()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal45()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal46()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal47()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal48()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal49()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal50()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal51()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal52()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal53()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal54()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal55()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal56()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal57()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal58()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal59()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal60()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal61()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal62()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal63()));
-        array_push($itemsAdvArray, array_sum($itemAdv->getVal64()));
 
 
         dump($itemsAdvArray);

@@ -4305,10 +4305,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         // line 2338
         echo "                                </tr>
                             </tbody>
-                            ";
-        // line 2340
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2340, $this->source); })()), "submit", array()), 'widget');
-        echo "
+
                             <div class=\"row\">
                                 <div class=\"col-9\"></div>
                                 <div class=\"col-3\">
@@ -4316,7 +4313,11 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                         <div class=\"card-body pt-2 pb-4\">
                                             <div class=\"row\">
                                                 <div class=\"col-6\">
-                                                    <a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 animsition-link\">Genera</a>
+                                                    ";
+        // line 2348
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2348, $this->source); })()), "submit", array()), 'widget');
+        echo "
+                                                    <!--<a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 animsition-link\">Genera</a>-->
                                                 </div>
                                                 <div class=\"col-6\">
                                                     <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3 animsition-link\">Annulla</a>
@@ -4327,8 +4328,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                 </div>
                             </div>
                             ";
-        // line 2358
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2358, $this->source); })()), 'form_end');
+        // line 2359
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2359, $this->source); })()), 'form_end');
         echo "
                         </table>
                         </div>
@@ -4340,24 +4341,24 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         <script>
             \$(document).ready( function () {
                 update(";
-        // line 2368
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2368, $this->source); })()), "id", array()), "html", null, true);
-        echo ",'pp','val1');
-                update(";
         // line 2369
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2369, $this->source); })()), "id", array()), "html", null, true);
-        echo ",'pl','val8');
+        echo ",'pp','val1');
                 update(";
         // line 2370
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2370, $this->source); })()), "id", array()), "html", null, true);
-        echo ",'c1v','val6');
+        echo ",'pl','val8');
                 update(";
         // line 2371
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2371, $this->source); })()), "id", array()), "html", null, true);
+        echo ",'c1v','val6');
+                update(";
+        // line 2372
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2372, $this->source); })()), "id", array()), "html", null, true);
         echo ",'c2v','val41');
                 for(i=0; i < ";
-        // line 2372
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2372, $this->source); })()), "html", null, true);
+        // line 2373
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2373, $this->source); })()), "html", null, true);
         echo "; i++) {
                     \$(\"#form_val63_\" + i ).prop('disabled', true);
                     \$(\"#form_val64_\" + i ).prop('disabled', true);
@@ -4365,8 +4366,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 window.setTimeout(function() {
                     calculate(62);
                     for(i=0; i < ";
-        // line 2378
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2378, $this->source); })()), "html", null, true);
+        // line 2379
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2379, $this->source); })()), "html", null, true);
         echo "; i++) {
                         \$(\"#form_val63_\" + i ).prop('disabled', false);
                         \$(\"#form_val64_\" + i ).prop('disabled', false);
@@ -4375,18 +4376,18 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 //check();
             });
 
-            \$('#generateBtn').click(function(e) {
-                e.preventDefault();
+            \$('#appbundle_expertationsadvanced_submit').click(function(e) {
+                //e.preventDefault();
                 toastr.info(\"Genero Preventivo\");
                 for(var i = 1; i < 65; i++) {
                     \$('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
                 }
                 \$('#appbundle_expertationsadvanced_father').val(";
-        // line 2392
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2392, $this->source); })()), "id", array()), "html", null, true);
+        // line 2393
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2393, $this->source); })()), "id", array()), "html", null, true);
         echo ");
                 \$('#appbundle_expertationsadvanced_fatherFloor').val(0);
-                \$('#appbundle_expertationsadvanced_submit').trigger('click')
+                //\$('#appbundle_expertationsadvanced_submit').trigger('click')
             });
 
             function collect(valn) {
@@ -4402,8 +4403,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                     url: '/ajax/get/expData/' + exp + '/' + field,
                     success: function (data) {
                         for (var i = 0; i < ";
-        // line 2409
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2409, $this->source); })()), "html", null, true);
+        // line 2410
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2410, $this->source); })()), "html", null, true);
         echo "; i++) {
                             var numbersArray = data.split(',');
                             \$.each(numbersArray, function(index, value) {
@@ -4417,8 +4418,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
             }
             function calculate(field) {
                 for(var i = 0; i < ";
-        // line 2421
-        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2421, $this->source); })()), "html", null, true);
+        // line 2422
+        echo twig_escape_filter($this->env, (isset($context["colCount"]) || array_key_exists("colCount", $context) ? $context["colCount"] : (function () { throw new Twig_Error_Runtime('Variable "colCount" does not exist.', 2422, $this->source); })()), "html", null, true);
         echo "; i++) {
                     var ind = i +1;
                     var values = parseInt(\$('#form_val1_' + ind ).val()) + parseInt(\$('#form_val6_' + ind ).val());
@@ -4464,14 +4465,14 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
     </div>
 </div>
     <script src=\"";
-        // line 2465
+        // line 2466
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.collection.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\">
         \$('.collection').collection();
     </script>
     <script src=\"";
-        // line 2469
+        // line 2470
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.toastr.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
@@ -4483,7 +4484,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
 
     }
 
-    // line 2471
+    // line 2472
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -4492,7 +4493,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 2472
+        // line 2473
         echo "    <style>
         .form-control {
             width: 100px;
@@ -4575,7 +4576,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         }
     </style>
     <link rel=\"stylesheet\" href=\"";
-        // line 2553
+        // line 2554
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/jquery.toastr.min.css"), "html", null, true);
         echo "\">
 ";
@@ -4587,7 +4588,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
 
     }
 
-    // line 2555
+    // line 2556
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -4596,7 +4597,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 2556
+        // line 2557
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.fixedheadertable.min.js"), "html", null, true);
         echo "\"></script>
@@ -4668,7 +4669,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
 
     public function getDebugInfo()
     {
-        return array (  4600 => 2556,  4591 => 2555,  4579 => 2553,  4496 => 2472,  4487 => 2471,  4475 => 2469,  4468 => 2465,  4421 => 2421,  4406 => 2409,  4386 => 2392,  4369 => 2378,  4360 => 2372,  4356 => 2371,  4352 => 2370,  4348 => 2369,  4344 => 2368,  4331 => 2358,  4310 => 2340,  4306 => 2338,  4295 => 2335,  4292 => 2334,  4288 => 2333,  4281 => 2328,  4270 => 2325,  4267 => 2324,  4263 => 2323,  4256 => 2318,  4247 => 2315,  4244 => 2314,  4240 => 2313,  4228 => 2303,  4219 => 2300,  4216 => 2299,  4212 => 2298,  4207 => 2296,  4202 => 2293,  4193 => 2290,  4190 => 2289,  4186 => 2288,  4181 => 2286,  4171 => 2278,  4162 => 2275,  4159 => 2274,  4155 => 2273,  4150 => 2271,  4145 => 2268,  4136 => 2265,  4133 => 2264,  4129 => 2263,  4124 => 2261,  4119 => 2258,  4110 => 2255,  4107 => 2254,  4103 => 2253,  4098 => 2251,  4093 => 2248,  4084 => 2245,  4081 => 2244,  4077 => 2243,  4072 => 2241,  4067 => 2238,  4058 => 2235,  4055 => 2234,  4051 => 2233,  4046 => 2231,  4041 => 2228,  4032 => 2225,  4029 => 2224,  4025 => 2223,  4020 => 2221,  4010 => 2213,  4001 => 2210,  3998 => 2209,  3994 => 2208,  3989 => 2206,  3984 => 2203,  3975 => 2200,  3972 => 2199,  3968 => 2198,  3963 => 2196,  3958 => 2193,  3949 => 2190,  3946 => 2189,  3942 => 2188,  3937 => 2186,  3932 => 2183,  3923 => 2180,  3920 => 2179,  3916 => 2178,  3911 => 2176,  3906 => 2173,  3897 => 2170,  3894 => 2169,  3890 => 2168,  3885 => 2166,  3880 => 2163,  3871 => 2160,  3868 => 2159,  3864 => 2158,  3859 => 2156,  3854 => 2153,  3845 => 2150,  3842 => 2149,  3838 => 2148,  3833 => 2146,  3823 => 2138,  3814 => 2135,  3811 => 2134,  3807 => 2133,  3802 => 2131,  3797 => 2128,  3788 => 2125,  3785 => 2124,  3781 => 2123,  3776 => 2121,  3771 => 2118,  3762 => 2115,  3759 => 2114,  3755 => 2113,  3750 => 2111,  3745 => 2108,  3736 => 2105,  3733 => 2104,  3729 => 2103,  3724 => 2101,  3719 => 2098,  3710 => 2095,  3707 => 2094,  3703 => 2093,  3698 => 2091,  3693 => 2088,  3684 => 2085,  3681 => 2084,  3677 => 2083,  3672 => 2081,  3667 => 2078,  3658 => 2075,  3655 => 2074,  3651 => 2073,  3646 => 2071,  3641 => 2068,  3632 => 2065,  3629 => 2064,  3625 => 2063,  3620 => 2061,  3615 => 2058,  3606 => 2055,  3603 => 2054,  3599 => 2053,  3594 => 2051,  3589 => 2048,  3580 => 2045,  3577 => 2044,  3573 => 2043,  3568 => 2041,  3563 => 2038,  3554 => 2035,  3551 => 2034,  3547 => 2033,  3542 => 2031,  3537 => 2028,  3528 => 2025,  3525 => 2024,  3521 => 2023,  3516 => 2021,  3511 => 2018,  3502 => 2015,  3499 => 2014,  3495 => 2013,  3490 => 2011,  3485 => 2008,  3476 => 2005,  3473 => 2004,  3469 => 2003,  3464 => 2001,  3459 => 1998,  3450 => 1995,  3447 => 1994,  3443 => 1993,  3438 => 1991,  3433 => 1988,  3424 => 1985,  3421 => 1984,  3417 => 1983,  3412 => 1981,  3407 => 1978,  3398 => 1975,  3395 => 1974,  3391 => 1973,  3386 => 1971,  3381 => 1968,  3372 => 1965,  3369 => 1964,  3365 => 1963,  3360 => 1961,  3355 => 1958,  3346 => 1955,  3343 => 1954,  3339 => 1953,  3334 => 1951,  3324 => 1943,  3315 => 1940,  3312 => 1939,  3308 => 1938,  3303 => 1936,  3298 => 1933,  3289 => 1930,  3286 => 1929,  3282 => 1928,  3277 => 1926,  3271 => 1922,  3262 => 1919,  3259 => 1918,  3255 => 1917,  3250 => 1915,  3245 => 1912,  3236 => 1909,  3233 => 1908,  3229 => 1907,  3224 => 1905,  3219 => 1902,  3210 => 1899,  3207 => 1898,  3203 => 1897,  3198 => 1895,  3193 => 1892,  3184 => 1889,  3181 => 1888,  3177 => 1887,  3172 => 1885,  3162 => 1877,  3153 => 1874,  3150 => 1873,  3146 => 1872,  3141 => 1870,  3136 => 1867,  3127 => 1864,  3124 => 1863,  3120 => 1862,  3115 => 1860,  3110 => 1857,  3101 => 1854,  3098 => 1853,  3094 => 1852,  3089 => 1850,  3084 => 1847,  3075 => 1844,  3072 => 1843,  3068 => 1842,  3063 => 1840,  3058 => 1837,  3049 => 1834,  3046 => 1833,  3042 => 1832,  3037 => 1830,  3027 => 1822,  3018 => 1819,  3015 => 1818,  3011 => 1817,  3006 => 1815,  3001 => 1812,  2992 => 1809,  2989 => 1808,  2985 => 1807,  2980 => 1805,  2975 => 1802,  2966 => 1799,  2963 => 1798,  2959 => 1797,  2954 => 1795,  2949 => 1792,  2940 => 1789,  2937 => 1788,  2933 => 1787,  2928 => 1785,  2923 => 1782,  2914 => 1779,  2911 => 1778,  2907 => 1777,  2902 => 1775,  2897 => 1772,  2888 => 1769,  2885 => 1768,  2881 => 1767,  2876 => 1765,  2871 => 1762,  2862 => 1759,  2859 => 1758,  2855 => 1757,  2850 => 1755,  2845 => 1752,  2836 => 1749,  2833 => 1748,  2829 => 1747,  2824 => 1745,  2819 => 1742,  2810 => 1739,  2807 => 1738,  2803 => 1737,  2798 => 1735,  2788 => 1727,  2779 => 1724,  2776 => 1723,  2772 => 1722,  2767 => 1720,  2762 => 1717,  2753 => 1714,  2750 => 1713,  2746 => 1712,  2741 => 1710,  2731 => 1702,  2722 => 1699,  2719 => 1698,  2715 => 1697,  2710 => 1695,  2705 => 1692,  2696 => 1689,  2693 => 1688,  2689 => 1687,  2684 => 1685,  2679 => 1682,  2670 => 1679,  2667 => 1678,  2663 => 1677,  2658 => 1675,  2653 => 1672,  2644 => 1669,  2641 => 1668,  2637 => 1667,  2632 => 1665,  2627 => 1662,  2618 => 1659,  2615 => 1658,  2611 => 1657,  2606 => 1655,  2596 => 1647,  2594 => 1646,  2587 => 1641,  2580 => 1639,  2576 => 1637,  2573 => 1636,  2569 => 1635,  2550 => 1620,  2548 => 1619,  2543 => 1618,  2541 => 1617,  2536 => 1615,  2530 => 1612,  2505 => 1590,  2499 => 1587,  2486 => 1577,  2480 => 1574,  2472 => 1569,  2466 => 1566,  2453 => 1556,  2447 => 1553,  2439 => 1548,  2433 => 1545,  2420 => 1535,  2414 => 1532,  2406 => 1527,  2400 => 1524,  2392 => 1519,  2386 => 1516,  2378 => 1511,  2372 => 1508,  2364 => 1503,  2358 => 1500,  2350 => 1495,  2344 => 1492,  2336 => 1487,  2330 => 1484,  2317 => 1474,  2311 => 1471,  2298 => 1461,  2292 => 1458,  2284 => 1453,  2278 => 1450,  2263 => 1438,  2243 => 1421,  2237 => 1418,  2222 => 1406,  2206 => 1392,  2200 => 1390,  2193 => 1386,  2187 => 1383,  2178 => 1376,  2176 => 1375,  2170 => 1372,  2164 => 1369,  2149 => 1357,  2129 => 1340,  2123 => 1337,  2108 => 1325,  2088 => 1308,  2082 => 1305,  2069 => 1295,  2063 => 1292,  2050 => 1282,  2044 => 1279,  2036 => 1274,  2030 => 1271,  2022 => 1266,  2016 => 1263,  2008 => 1258,  2002 => 1255,  1987 => 1243,  1967 => 1226,  1961 => 1223,  1948 => 1213,  1942 => 1210,  1934 => 1205,  1928 => 1202,  1913 => 1190,  1893 => 1173,  1887 => 1170,  1874 => 1160,  1868 => 1157,  1860 => 1152,  1854 => 1149,  1846 => 1144,  1840 => 1141,  1832 => 1136,  1826 => 1133,  1818 => 1128,  1812 => 1125,  1804 => 1120,  1798 => 1117,  1783 => 1105,  1763 => 1088,  1757 => 1085,  1744 => 1075,  1738 => 1072,  1730 => 1067,  1724 => 1064,  1716 => 1059,  1710 => 1056,  1702 => 1051,  1696 => 1048,  1688 => 1043,  1682 => 1040,  1667 => 1028,  1647 => 1011,  1641 => 1008,  1628 => 998,  1622 => 995,  1614 => 990,  1608 => 987,  1600 => 982,  1594 => 979,  1579 => 967,  1559 => 950,  1553 => 947,  1545 => 942,  1539 => 939,  1531 => 934,  1525 => 931,  1510 => 919,  1494 => 905,  1488 => 903,  1481 => 899,  1475 => 896,  1466 => 889,  1464 => 888,  1458 => 885,  1452 => 882,  1444 => 877,  1438 => 874,  1430 => 869,  1424 => 866,  1416 => 861,  1410 => 858,  1395 => 846,  1379 => 832,  1373 => 830,  1366 => 826,  1360 => 823,  1351 => 816,  1349 => 815,  1343 => 812,  1337 => 809,  1329 => 804,  1323 => 801,  1310 => 791,  1304 => 788,  1296 => 783,  1290 => 780,  1277 => 770,  1271 => 767,  1263 => 762,  1257 => 759,  1244 => 749,  1238 => 746,  1230 => 741,  1224 => 738,  1209 => 726,  1193 => 712,  1187 => 710,  1180 => 706,  1174 => 703,  1165 => 696,  1163 => 695,  1157 => 692,  1151 => 689,  1143 => 684,  1137 => 681,  1122 => 669,  1106 => 655,  1100 => 653,  1093 => 649,  1087 => 646,  1078 => 639,  1076 => 638,  1070 => 635,  1064 => 632,  1056 => 627,  1050 => 624,  1035 => 612,  1019 => 598,  1013 => 596,  1006 => 592,  1000 => 589,  991 => 582,  989 => 581,  983 => 578,  977 => 575,  969 => 570,  963 => 567,  948 => 555,  928 => 538,  922 => 535,  907 => 523,  891 => 509,  885 => 507,  878 => 503,  872 => 500,  863 => 493,  861 => 492,  855 => 489,  849 => 486,  841 => 481,  835 => 478,  820 => 466,  804 => 452,  798 => 450,  791 => 446,  785 => 443,  776 => 436,  774 => 435,  768 => 432,  762 => 429,  754 => 424,  748 => 421,  733 => 409,  713 => 392,  707 => 389,  694 => 379,  688 => 376,  675 => 366,  669 => 363,  661 => 358,  655 => 355,  647 => 350,  641 => 347,  628 => 337,  622 => 334,  614 => 329,  608 => 326,  600 => 321,  594 => 318,  586 => 313,  580 => 310,  565 => 298,  545 => 281,  539 => 278,  531 => 273,  525 => 270,  510 => 258,  490 => 241,  484 => 238,  476 => 233,  470 => 230,  457 => 220,  451 => 217,  443 => 212,  437 => 209,  422 => 197,  328 => 106,  321 => 102,  314 => 98,  307 => 94,  296 => 90,  288 => 89,  280 => 88,  270 => 85,  262 => 84,  254 => 83,  240 => 78,  229 => 74,  218 => 70,  208 => 69,  202 => 66,  191 => 62,  185 => 59,  178 => 55,  169 => 49,  158 => 45,  150 => 44,  142 => 43,  136 => 40,  129 => 36,  122 => 32,  115 => 28,  108 => 24,  99 => 20,  88 => 13,  85 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  4601 => 2557,  4592 => 2556,  4580 => 2554,  4497 => 2473,  4488 => 2472,  4476 => 2470,  4469 => 2466,  4422 => 2422,  4407 => 2410,  4387 => 2393,  4370 => 2379,  4361 => 2373,  4357 => 2372,  4353 => 2371,  4349 => 2370,  4345 => 2369,  4332 => 2359,  4318 => 2348,  4306 => 2338,  4295 => 2335,  4292 => 2334,  4288 => 2333,  4281 => 2328,  4270 => 2325,  4267 => 2324,  4263 => 2323,  4256 => 2318,  4247 => 2315,  4244 => 2314,  4240 => 2313,  4228 => 2303,  4219 => 2300,  4216 => 2299,  4212 => 2298,  4207 => 2296,  4202 => 2293,  4193 => 2290,  4190 => 2289,  4186 => 2288,  4181 => 2286,  4171 => 2278,  4162 => 2275,  4159 => 2274,  4155 => 2273,  4150 => 2271,  4145 => 2268,  4136 => 2265,  4133 => 2264,  4129 => 2263,  4124 => 2261,  4119 => 2258,  4110 => 2255,  4107 => 2254,  4103 => 2253,  4098 => 2251,  4093 => 2248,  4084 => 2245,  4081 => 2244,  4077 => 2243,  4072 => 2241,  4067 => 2238,  4058 => 2235,  4055 => 2234,  4051 => 2233,  4046 => 2231,  4041 => 2228,  4032 => 2225,  4029 => 2224,  4025 => 2223,  4020 => 2221,  4010 => 2213,  4001 => 2210,  3998 => 2209,  3994 => 2208,  3989 => 2206,  3984 => 2203,  3975 => 2200,  3972 => 2199,  3968 => 2198,  3963 => 2196,  3958 => 2193,  3949 => 2190,  3946 => 2189,  3942 => 2188,  3937 => 2186,  3932 => 2183,  3923 => 2180,  3920 => 2179,  3916 => 2178,  3911 => 2176,  3906 => 2173,  3897 => 2170,  3894 => 2169,  3890 => 2168,  3885 => 2166,  3880 => 2163,  3871 => 2160,  3868 => 2159,  3864 => 2158,  3859 => 2156,  3854 => 2153,  3845 => 2150,  3842 => 2149,  3838 => 2148,  3833 => 2146,  3823 => 2138,  3814 => 2135,  3811 => 2134,  3807 => 2133,  3802 => 2131,  3797 => 2128,  3788 => 2125,  3785 => 2124,  3781 => 2123,  3776 => 2121,  3771 => 2118,  3762 => 2115,  3759 => 2114,  3755 => 2113,  3750 => 2111,  3745 => 2108,  3736 => 2105,  3733 => 2104,  3729 => 2103,  3724 => 2101,  3719 => 2098,  3710 => 2095,  3707 => 2094,  3703 => 2093,  3698 => 2091,  3693 => 2088,  3684 => 2085,  3681 => 2084,  3677 => 2083,  3672 => 2081,  3667 => 2078,  3658 => 2075,  3655 => 2074,  3651 => 2073,  3646 => 2071,  3641 => 2068,  3632 => 2065,  3629 => 2064,  3625 => 2063,  3620 => 2061,  3615 => 2058,  3606 => 2055,  3603 => 2054,  3599 => 2053,  3594 => 2051,  3589 => 2048,  3580 => 2045,  3577 => 2044,  3573 => 2043,  3568 => 2041,  3563 => 2038,  3554 => 2035,  3551 => 2034,  3547 => 2033,  3542 => 2031,  3537 => 2028,  3528 => 2025,  3525 => 2024,  3521 => 2023,  3516 => 2021,  3511 => 2018,  3502 => 2015,  3499 => 2014,  3495 => 2013,  3490 => 2011,  3485 => 2008,  3476 => 2005,  3473 => 2004,  3469 => 2003,  3464 => 2001,  3459 => 1998,  3450 => 1995,  3447 => 1994,  3443 => 1993,  3438 => 1991,  3433 => 1988,  3424 => 1985,  3421 => 1984,  3417 => 1983,  3412 => 1981,  3407 => 1978,  3398 => 1975,  3395 => 1974,  3391 => 1973,  3386 => 1971,  3381 => 1968,  3372 => 1965,  3369 => 1964,  3365 => 1963,  3360 => 1961,  3355 => 1958,  3346 => 1955,  3343 => 1954,  3339 => 1953,  3334 => 1951,  3324 => 1943,  3315 => 1940,  3312 => 1939,  3308 => 1938,  3303 => 1936,  3298 => 1933,  3289 => 1930,  3286 => 1929,  3282 => 1928,  3277 => 1926,  3271 => 1922,  3262 => 1919,  3259 => 1918,  3255 => 1917,  3250 => 1915,  3245 => 1912,  3236 => 1909,  3233 => 1908,  3229 => 1907,  3224 => 1905,  3219 => 1902,  3210 => 1899,  3207 => 1898,  3203 => 1897,  3198 => 1895,  3193 => 1892,  3184 => 1889,  3181 => 1888,  3177 => 1887,  3172 => 1885,  3162 => 1877,  3153 => 1874,  3150 => 1873,  3146 => 1872,  3141 => 1870,  3136 => 1867,  3127 => 1864,  3124 => 1863,  3120 => 1862,  3115 => 1860,  3110 => 1857,  3101 => 1854,  3098 => 1853,  3094 => 1852,  3089 => 1850,  3084 => 1847,  3075 => 1844,  3072 => 1843,  3068 => 1842,  3063 => 1840,  3058 => 1837,  3049 => 1834,  3046 => 1833,  3042 => 1832,  3037 => 1830,  3027 => 1822,  3018 => 1819,  3015 => 1818,  3011 => 1817,  3006 => 1815,  3001 => 1812,  2992 => 1809,  2989 => 1808,  2985 => 1807,  2980 => 1805,  2975 => 1802,  2966 => 1799,  2963 => 1798,  2959 => 1797,  2954 => 1795,  2949 => 1792,  2940 => 1789,  2937 => 1788,  2933 => 1787,  2928 => 1785,  2923 => 1782,  2914 => 1779,  2911 => 1778,  2907 => 1777,  2902 => 1775,  2897 => 1772,  2888 => 1769,  2885 => 1768,  2881 => 1767,  2876 => 1765,  2871 => 1762,  2862 => 1759,  2859 => 1758,  2855 => 1757,  2850 => 1755,  2845 => 1752,  2836 => 1749,  2833 => 1748,  2829 => 1747,  2824 => 1745,  2819 => 1742,  2810 => 1739,  2807 => 1738,  2803 => 1737,  2798 => 1735,  2788 => 1727,  2779 => 1724,  2776 => 1723,  2772 => 1722,  2767 => 1720,  2762 => 1717,  2753 => 1714,  2750 => 1713,  2746 => 1712,  2741 => 1710,  2731 => 1702,  2722 => 1699,  2719 => 1698,  2715 => 1697,  2710 => 1695,  2705 => 1692,  2696 => 1689,  2693 => 1688,  2689 => 1687,  2684 => 1685,  2679 => 1682,  2670 => 1679,  2667 => 1678,  2663 => 1677,  2658 => 1675,  2653 => 1672,  2644 => 1669,  2641 => 1668,  2637 => 1667,  2632 => 1665,  2627 => 1662,  2618 => 1659,  2615 => 1658,  2611 => 1657,  2606 => 1655,  2596 => 1647,  2594 => 1646,  2587 => 1641,  2580 => 1639,  2576 => 1637,  2573 => 1636,  2569 => 1635,  2550 => 1620,  2548 => 1619,  2543 => 1618,  2541 => 1617,  2536 => 1615,  2530 => 1612,  2505 => 1590,  2499 => 1587,  2486 => 1577,  2480 => 1574,  2472 => 1569,  2466 => 1566,  2453 => 1556,  2447 => 1553,  2439 => 1548,  2433 => 1545,  2420 => 1535,  2414 => 1532,  2406 => 1527,  2400 => 1524,  2392 => 1519,  2386 => 1516,  2378 => 1511,  2372 => 1508,  2364 => 1503,  2358 => 1500,  2350 => 1495,  2344 => 1492,  2336 => 1487,  2330 => 1484,  2317 => 1474,  2311 => 1471,  2298 => 1461,  2292 => 1458,  2284 => 1453,  2278 => 1450,  2263 => 1438,  2243 => 1421,  2237 => 1418,  2222 => 1406,  2206 => 1392,  2200 => 1390,  2193 => 1386,  2187 => 1383,  2178 => 1376,  2176 => 1375,  2170 => 1372,  2164 => 1369,  2149 => 1357,  2129 => 1340,  2123 => 1337,  2108 => 1325,  2088 => 1308,  2082 => 1305,  2069 => 1295,  2063 => 1292,  2050 => 1282,  2044 => 1279,  2036 => 1274,  2030 => 1271,  2022 => 1266,  2016 => 1263,  2008 => 1258,  2002 => 1255,  1987 => 1243,  1967 => 1226,  1961 => 1223,  1948 => 1213,  1942 => 1210,  1934 => 1205,  1928 => 1202,  1913 => 1190,  1893 => 1173,  1887 => 1170,  1874 => 1160,  1868 => 1157,  1860 => 1152,  1854 => 1149,  1846 => 1144,  1840 => 1141,  1832 => 1136,  1826 => 1133,  1818 => 1128,  1812 => 1125,  1804 => 1120,  1798 => 1117,  1783 => 1105,  1763 => 1088,  1757 => 1085,  1744 => 1075,  1738 => 1072,  1730 => 1067,  1724 => 1064,  1716 => 1059,  1710 => 1056,  1702 => 1051,  1696 => 1048,  1688 => 1043,  1682 => 1040,  1667 => 1028,  1647 => 1011,  1641 => 1008,  1628 => 998,  1622 => 995,  1614 => 990,  1608 => 987,  1600 => 982,  1594 => 979,  1579 => 967,  1559 => 950,  1553 => 947,  1545 => 942,  1539 => 939,  1531 => 934,  1525 => 931,  1510 => 919,  1494 => 905,  1488 => 903,  1481 => 899,  1475 => 896,  1466 => 889,  1464 => 888,  1458 => 885,  1452 => 882,  1444 => 877,  1438 => 874,  1430 => 869,  1424 => 866,  1416 => 861,  1410 => 858,  1395 => 846,  1379 => 832,  1373 => 830,  1366 => 826,  1360 => 823,  1351 => 816,  1349 => 815,  1343 => 812,  1337 => 809,  1329 => 804,  1323 => 801,  1310 => 791,  1304 => 788,  1296 => 783,  1290 => 780,  1277 => 770,  1271 => 767,  1263 => 762,  1257 => 759,  1244 => 749,  1238 => 746,  1230 => 741,  1224 => 738,  1209 => 726,  1193 => 712,  1187 => 710,  1180 => 706,  1174 => 703,  1165 => 696,  1163 => 695,  1157 => 692,  1151 => 689,  1143 => 684,  1137 => 681,  1122 => 669,  1106 => 655,  1100 => 653,  1093 => 649,  1087 => 646,  1078 => 639,  1076 => 638,  1070 => 635,  1064 => 632,  1056 => 627,  1050 => 624,  1035 => 612,  1019 => 598,  1013 => 596,  1006 => 592,  1000 => 589,  991 => 582,  989 => 581,  983 => 578,  977 => 575,  969 => 570,  963 => 567,  948 => 555,  928 => 538,  922 => 535,  907 => 523,  891 => 509,  885 => 507,  878 => 503,  872 => 500,  863 => 493,  861 => 492,  855 => 489,  849 => 486,  841 => 481,  835 => 478,  820 => 466,  804 => 452,  798 => 450,  791 => 446,  785 => 443,  776 => 436,  774 => 435,  768 => 432,  762 => 429,  754 => 424,  748 => 421,  733 => 409,  713 => 392,  707 => 389,  694 => 379,  688 => 376,  675 => 366,  669 => 363,  661 => 358,  655 => 355,  647 => 350,  641 => 347,  628 => 337,  622 => 334,  614 => 329,  608 => 326,  600 => 321,  594 => 318,  586 => 313,  580 => 310,  565 => 298,  545 => 281,  539 => 278,  531 => 273,  525 => 270,  510 => 258,  490 => 241,  484 => 238,  476 => 233,  470 => 230,  457 => 220,  451 => 217,  443 => 212,  437 => 209,  422 => 197,  328 => 106,  321 => 102,  314 => 98,  307 => 94,  296 => 90,  288 => 89,  280 => 88,  270 => 85,  262 => 84,  254 => 83,  240 => 78,  229 => 74,  218 => 70,  208 => 69,  202 => 66,  191 => 62,  185 => 59,  178 => 55,  169 => 49,  158 => 45,  150 => 44,  142 => 43,  136 => 40,  129 => 36,  122 => 32,  115 => 28,  108 => 24,  99 => 20,  88 => 13,  85 => 12,  83 => 11,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -7012,7 +7013,7 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                     {% endfor %}
                                 </tr>
                             </tbody>
-                            {{ form_widget(form.submit) }}
+
                             <div class=\"row\">
                                 <div class=\"col-9\"></div>
                                 <div class=\"col-3\">
@@ -7020,7 +7021,8 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                                         <div class=\"card-body pt-2 pb-4\">
                                             <div class=\"row\">
                                                 <div class=\"col-6\">
-                                                    <a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 animsition-link\">Genera</a>
+                                                    {{ form_widget(form.submit) }}
+                                                    <!--<a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 animsition-link\">Genera</a>-->
                                                 </div>
                                                 <div class=\"col-6\">
                                                     <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3 animsition-link\">Annulla</a>
@@ -7058,15 +7060,15 @@ class __TwigTemplate_c4f0f4a885777f1f8e252d1ae96d6e2876fd31922b97df97e60885a7c97
                 //check();
             });
 
-            \$('#generateBtn').click(function(e) {
-                e.preventDefault();
+            \$('#appbundle_expertationsadvanced_submit').click(function(e) {
+                //e.preventDefault();
                 toastr.info(\"Genero Preventivo\");
                 for(var i = 1; i < 65; i++) {
                     \$('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
                 }
                 \$('#appbundle_expertationsadvanced_father').val({{ item.id }});
                 \$('#appbundle_expertationsadvanced_fatherFloor').val(0);
-                \$('#appbundle_expertationsadvanced_submit').trigger('click')
+                //\$('#appbundle_expertationsadvanced_submit').trigger('click')
             });
 
             function collect(valn) {

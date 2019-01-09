@@ -2337,7 +2337,7 @@
                                     {% endfor %}
                                 </tr>
                             </tbody>
-                            {{ form_widget(form.submit) }}
+
                             <div class="row">
                                 <div class="col-9"></div>
                                 <div class="col-3">
@@ -2345,7 +2345,8 @@
                                         <div class="card-body pt-2 pb-4">
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3 animsition-link">Genera</a>
+                                                    {{ form_widget(form.submit) }}
+                                                    <!--<a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3 animsition-link">Genera</a>-->
                                                 </div>
                                                 <div class="col-6">
                                                     <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 animsition-link">Annulla</a>
@@ -2383,15 +2384,15 @@
                 //check();
             });
 
-            $('#generateBtn').click(function(e) {
-                e.preventDefault();
+            $('#appbundle_expertationsadvanced_submit').click(function(e) {
+                //e.preventDefault();
                 toastr.info("Genero Preventivo");
                 for(var i = 1; i < 65; i++) {
                     $('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
                 }
                 $('#appbundle_expertationsadvanced_father').val({{ item.id }});
                 $('#appbundle_expertationsadvanced_fatherFloor').val(0);
-                $('#appbundle_expertationsadvanced_submit').trigger('click')
+                //$('#appbundle_expertationsadvanced_submit').trigger('click')
             });
 
             function collect(valn) {

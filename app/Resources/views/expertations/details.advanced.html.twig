@@ -8,7 +8,7 @@
                     <h3>Preventivi <small>Computometrico</small></h3>
                 </div>
                 <div class="col-1">
-                    <div class="btn-group float-right">
+                    <div class="btn-group float-right action-buttons">
                         <a href="" class="btn btn-danger btn-sm float-right animsition-link">
                             <i class="mdi mdi-delete mr-0"></i>
                         </a>
@@ -30,7 +30,7 @@
             {% endfor %}
             <div class="row">
                 <div class="col-lg-12 grid-margin stretch-card">
-                    <div class="card">
+                    <div class="card" id="page">
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-hover border-o">
@@ -118,6 +118,17 @@
                                         </tr>
                                     {% endif %}
                                     <tr>
+                                        <td colspan="5" class="border table-light">
+                                            <strong>
+                                                N.B.: il montaggio dei corpi illuminanti è escluso dalla presente offerta. Una volta che questi saranno stati definiti potremo fare un'offerta per<br>
+                                                l'installazione se quantificabile, altrimenti procederemo nelle lavorazioni in economia con le tariffe orarie pattuite in fase di contratto. <br>
+                                                Nel caso non venissero definiti prima della fine dei lavori o l'eventuale installazione non sia di nostra competenza, da parte nostra provvederemo <br>
+                                                all'installazione di almeno un portalampade per ambiente. Eventuali accessori, se necessari, tipo tubazione rame e/o cavo in seta, verranno conteggiati<br>
+                                                a parte con rendicontazione finale.
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td colspan="5" class="border table-light"><i>Punti di Comando</i></td>
                                     </tr>
                                     <tr>
@@ -196,6 +207,19 @@
                                             <td class="border text-center">{{ qtyPC }}</td>
                                             <td class="border text-center">13.40</td>
                                             <td class="border text-center">{{ qtyPC * 13.40 }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemsArray.3 != null %}
+                                        <tr>
+                                            <td class="border text-center">15.1.15.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    P.to di comando aggiuntivo sulla stessa scatola. Per P.to di comando aggiuntivo.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemsArray.3 }}</td>
+                                            <td class="border text-center">9.00 </td>
+                                            <td class="border text-center">{{ itemsArray.3 * 9.00 }}</td>
                                         </tr>
                                     {% endif %}
                                     <tr>
@@ -669,6 +693,22 @@
                                         <td class="border text-center">96.00</td>
                                         <td class="border text-center">192.00</td>
                                     </tr>
+                                    {% if itemsArray.14 > 0 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><i>Lampade emergenza</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.8.180.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PLAFONIERA DI EMERGENZA INSTALLABILE SU SCATOLE PORTAFRUTTO. Su placca in alluminio anodizzato o in plastica.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemsArray.14 }}</td>
+                                            <td class="border text-center">64.00</td>
+                                            <td class="border text-center">{{ itemsArray.14 * 64.00 }}</td>
+                                        </tr>
+                                    {% endif %}
                                     <tr>
                                         <td colspan="5" class="border table-light"><strong>IMPIANTO DI RISCALDAMENTO</strong></td>
                                     </tr>
@@ -740,6 +780,20 @@
                                         <td class="border text-center">{{ item.pianiCasa }}</td>
                                         <td class="border text-center">100.00</td>
                                         <td class="border text-center">{{ item.pianiCasa * 100 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Termostato</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">13.19.10.4</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Termostato elettronico da parete.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ itemsArray.20 }}</td>
+                                        <td class="border text-center">41.90</td>
+                                        <td class="border text-center">{{ itemsArray.20 * 41.90 }}</td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Allaccio di Potenza</i></td>
@@ -1157,11 +1211,18 @@
     <style type="text/css">
         {# TODO: Fix print CSS #}
         @page {
-            size: landscape;
+            /*size: landscape;*/
             margin: 0; }
         @media print {
             * {
                 font-size: 0.9em!important;
+            }
+            small {
+                font-size: 0.8em!important;
+            }
+            #page {
+                max-width: 23cm!important;
+                width: 23cm!important;
             }
             .footer {
                 display: none;
@@ -1208,6 +1269,9 @@
                 padding: 0px 20px!important;
                 margin-left:5px;
                 height: 40px!important;
+            }
+            .action-buttons {
+                display: none;
             }
         }
     </style>
