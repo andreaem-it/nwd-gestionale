@@ -30,7 +30,7 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
         echo "<nav class=\"sidebar sidebar-offcanvas\" id=\"sidebar\" style=\"-webkit-box-shadow: 2px 0 5px -2px #888;box-shadow: 2px 0 5px -2px #888;\" id=\"navbarSupportedContent\">
   <ul class=\"nav\">
     <li class=\"nav-item nav-profile\">
-      <div class=\"nav-link animsition-link\">
+      <div class=\"nav-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
             <img class=\"img-xs rounded-circle border\" src=\"";
@@ -97,10 +97,10 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
               <span class=\"status-indicator online\"></span>
             </div>
               <div class=\"row d-none d-md-block d-lg-none mt-2 ml-1 text-small\">
-                  <a href=\"";
+                  <a class=\"animsition-link\" href=\"";
         // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("fos_user_profile_show");
-        echo "\">Profilo</a> &nbsp; <a href=\"";
+        echo "\">Profilo</a> &nbsp; <a class=\"animsition-link\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("logout");
         echo "\">Logout</a>
               </div>
@@ -110,7 +110,7 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
         <a href=\"";
         // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo");
-        echo "\" class=\"btn btn-success btn-block\">Nuovo Preventivo
+        echo "\" class=\"btn btn-success btn-block animsition-link\">Nuovo Preventivo
           <i class=\"mdi mdi-plus\"></i>
         </a>
       </div>
@@ -157,7 +157,7 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
         }
         echo "\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo");
-        echo "\">Nuovo Base</a>
+        echo "\">Nuovo</a>
           </li>
           ";
         // line 65
@@ -483,7 +483,7 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
         return new Twig_Source("<nav class=\"sidebar sidebar-offcanvas\" id=\"sidebar\" style=\"-webkit-box-shadow: 2px 0 5px -2px #888;box-shadow: 2px 0 5px -2px #888;\" id=\"navbarSupportedContent\">
   <ul class=\"nav\">
     <li class=\"nav-item nav-profile\">
-      <div class=\"nav-link animsition-link\">
+      <div class=\"nav-link\">
         <div class=\"user-wrapper\">
           <div class=\"profile-image\">
             <img class=\"img-xs rounded-circle border\" src=\"{{ asset('users/' ~ app.user.picture) }}\" alt=\"profile image\" style=\"width: 100%\">
@@ -514,12 +514,12 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
               <span class=\"status-indicator online\"></span>
             </div>
               <div class=\"row d-none d-md-block d-lg-none mt-2 ml-1 text-small\">
-                  <a href=\"{{ url('fos_user_profile_show') }}\">Profilo</a> &nbsp; <a href=\"{{ url('logout') }}\">Logout</a>
+                  <a class=\"animsition-link\" href=\"{{ url('fos_user_profile_show') }}\">Profilo</a> &nbsp; <a class=\"animsition-link\" href=\"{{ url('logout') }}\">Logout</a>
               </div>
           </div>
 
         </div>
-        <a href=\"{{ url('nuovo_preventivo') }}\" class=\"btn btn-success btn-block\">Nuovo Preventivo
+        <a href=\"{{ url('nuovo_preventivo') }}\" class=\"btn btn-success btn-block animsition-link\">Nuovo Preventivo
           <i class=\"mdi mdi-plus\"></i>
         </a>
       </div>
@@ -539,7 +539,7 @@ class __TwigTemplate_5d51d84861d27fb9c2a65866870666d0638ee3cacfd3f09def74f0d1dee
       <div class=\"collapse {% if app.request.attributes.get('_route') == 'nuovo_preventivo' or app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' or app.request.attributes.get('_route') == 'lista_preventivi' %}show{% endif %}\" id=\"ui-basic\">
         <ul class=\"nav flex-column sub-menu\">
           <li class=\"nav-item\">
-            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo') }}\">Nuovo Base</a>
+            <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo') }}\">Nuovo</a>
           </li>
           {#<li class=\"nav-item\">
             <a class=\"nav-link animsition-link {% if app.request.attributes.get('_route') == 'nuovo_preventivo_avanzato' %}active{% endif %}\" href=\"{{ url('nuovo_preventivo_avanzato') }}\">Nuovo Avanzato</a>

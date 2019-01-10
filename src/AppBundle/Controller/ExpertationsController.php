@@ -1393,6 +1393,11 @@ class ExpertationsController extends Controller
             array_push($prices, $itemsAdvArray[14] * $price->findByCode('15.8.180.1'));
         }
 
+        /** Allaccio termoconvettori */
+        if ($itemsAdvArray[17] > 0) {
+            array_push($prices, $itemsAdvArray[17] * $price->findByCode('15.2.70.7'));
+        }
+
         /** Punti di servizio Termico */
         $qtyPST = 1 + $item->getPianiCasa();
         array_push($prices, $qtyPST * $price->findByCode('15.3.10'));
@@ -1420,13 +1425,31 @@ class ExpertationsController extends Controller
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
 
         /** Centralino */
-        array_push($prices, 1 * $price->findByCode('15.6.220.3'));
+        if($itemsAdvArray[22] > 0) {
+            array_push($prices, 1 * $price->findByCode('15.6.220.1'));
+        }
+        if($itemsAdvArray[23] > 0) {
+            array_push($prices, 1 * $price->findByCode('15.6.220.3'));
+        }
+        if($itemsAdvArray[24] > 0) {
+            array_push($prices, 1 * $price->findByCode('15.6.220.4'));
+        }
+        if($itemsAdvArray[25] > 0) {
+            array_push($prices, 1 * $price->findByCode('15.6.220.5'));
+        }
 
         /** Magnetotermico */
         array_push($prices, $item->getNumCircuiti() * $price->findByCode('15.6.52.1'));
 
         /** Sezionatore Quadro */
-        array_push($prices, 1 * $price->findByCode('15.6.10.8'));
+        $sezVal = $itemsAdvArray[22] + $itemsAdvArray[23] + $itemsAdvArray[24] + $itemsAdvArray[25];
+        array_push($prices, $sezVal * $price->findByCode('15.6.10.8'));
+
+        /** Differenziale Puro */
+        if($itemsAdvArray[25] > 0) {
+            array_push($prices, 1 * $price->findByCode('15.6.10.8'));
+        }
+
 
         /** Dorsali */
         array_push($prices, $item->getPianiCasa() * $price->findByCode('15.4.110.12') * 15 * 3);

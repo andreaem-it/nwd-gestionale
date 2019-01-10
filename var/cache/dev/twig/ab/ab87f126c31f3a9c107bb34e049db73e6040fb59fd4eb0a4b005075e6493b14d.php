@@ -102,7 +102,7 @@ class __TwigTemplate_1ba1f6dd4bd64d557b8a74b4ed4fcb314bdc40e8190065018496039c2f3
             </div>
         </div>
         <div class=\"row\">
-            <div class=\"card\">
+            <div class=\"card\" id=\"page\">
                 <div class=\"card-body\">
                     <table class=\"table table-bordered table-responsive-md\">
                         <tr>
@@ -4692,7 +4692,7 @@ class __TwigTemplate_1ba1f6dd4bd64d557b8a74b4ed4fcb314bdc40e8190065018496039c2f3
             </div>
         </div>
         <div class=\"row\">
-            <div class=\"card\">
+            <div class=\"card\" id=\"page\">
                 <div class=\"card-body\">
                     <table class=\"table table-bordered table-responsive-md\">
                         <tr>

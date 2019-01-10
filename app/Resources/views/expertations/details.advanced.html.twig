@@ -828,6 +828,20 @@
                                         <td class="border text-center">{{ item.pianiCasa * 100 }}</td>
                                     </tr>
                                     <tr>
+                                        <td colspan="5" class="border table-light"><i>Collegamento Testine nei collettori per Ambiente</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.2.70.7</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Per allaccio elettrico incluso il collegamento all'apparecchio
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ itemsArray.17 }}</td>
+                                        <td class="border text-center"> 16.30 </td>
+                                        <td class="border text-center">{{ itemsArray.17 * 16.30 }}</td>
+                                    </tr>
+                                    <tr>
                                         <td colspan="5" class="border table-light">
                                             <strong>
                                                 QUADRI ELETTRICI PER IMPIANTO ELETTRICO, SERVIZI E PREDISPOSIZIONI DOMOTICHE: LE ESATTE QUANTITA' E TIPOLOGIE DEI VARI APPARATI <br>
@@ -841,17 +855,58 @@
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Quadri elettrici per impianto elettrico e predisposizione domotica.</i></td>
                                     </tr>
-                                    <tr>
-                                        <td class="border text-center">15.6.220.3</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Centralino tipo appartamento incassato a parete 36  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">1</td>
-                                        <td class="border text-center">43.00</td>
-                                        <td class="border text-center">43.00</td>
-                                    </tr>
+                                    {% if (itemsArray.22 > 0) %}
+                                        <tr>
+                                            <td class="border text-center">15.6.220.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Centralino tipo appartamento incassato a parete 12  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">26.00</td>
+                                            <td class="border text-center">26.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if (itemsArray.23 > 0) %}
+                                        <tr>
+                                            <td class="border text-center">15.6.220.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Centralino tipo appartamento incassato a parete 36  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">43.00</td>
+                                            <td class="border text-center">43.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if (itemsArray.24 > 0) %}
+                                        <tr>
+                                            <td class="border text-center">15.6.220.4</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Centralino tipo appartamento incassato a parete 52  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">70.00</td>
+                                            <td class="border text-center">70.00</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if (itemsArray.25 > 0) %}
+                                        <tr>
+                                            <td class="border text-center">15.6.220.5</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Centralino tipo appartamento incassato a parete 72  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">103.00</td>
+                                            <td class="border text-center">103.00</td>
+                                        </tr>
+                                    {% endif %}
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Interruttori magnetotermici differenziali: circuiti luce di ogni piano, Forza motrice di ogni piano, allarme, impianto antenna,<br>
                                                 Domotica, centralino telefonico, linea luce esterna.</i></td>
@@ -877,10 +932,26 @@
                                                 Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
                                             </small>
                                         </td>
+                                        <td class="border text-center">{{ itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25 }}</td>
+                                        <td class="border text-center">42.00</td>
+                                        <td class="border text-center">42.00</td>
+                                    </tr>
+                                    {% if itemsArray.25 > 0 %}
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Differenziale puro</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.06.10.8</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 10 a 32A.
+                                            </small>
+                                        </td>
                                         <td class="border text-center">1</td>
                                         <td class="border text-center">42.00</td>
                                         <td class="border text-center">42.00</td>
                                     </tr>
+                                    {% endif %}
                                     <tr>
                                         <td colspan="5" class="border table-light">
                                             <strong>
