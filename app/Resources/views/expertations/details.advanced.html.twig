@@ -156,17 +156,19 @@
                                         <td class="border text-center">6.30</td>
                                         <td class="border text-center">{{ qtyPC * 6.30 }}</td>
                                     </tr>
-                                    {#<tr>
+                                    {% if itemsArray.7 > 0 %}
+                                    <tr>
                                         <td class="border text-center">15.1.15.2</td>
                                         <td class="text-small border" style="max-width: 300px">
                                             <small>
                                                 Punto di comando aggiuntivo sulla stessa scatola. Per P.to di comando aggiuntivo
                                             </small>
                                         </td>
-                                        <td class="border text-center">-</td>
+                                        <td class="border text-center">{{ itemsArray.7 }}</td>
                                         <td class="border text-center">9.00</td>
-                                        <td class="border text-center">-</td>
-                                    </tr>#}
+                                        <td class="border text-center">{{ itemsArray.7 * 9.00 }}</td>
+                                    </tr>
+                                    {% endif %}
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.1.3.2</td>
@@ -392,7 +394,7 @@
                                             <td class="border text-center">{{ qtyPS * 12.1 }}</td>
                                         </tr>
                                     {% endif %}
-                                    {% if item.antenna != 0 %}
+                                    {% if item.antenna > 0 %}
                                         <tr>
                                             <td colspan="5" class="border table-light"><i>Impianto TV terrestre</i></td>
                                         </tr>
@@ -578,7 +580,7 @@
                                             </td>
                                             <td class="border text-center">{{ calcTPCable|number_format(0) }}</td>
                                             <td class="border text-center">1.70</td>
-                                            <td class="border text-center">{{ (calcTPCable * 1.70)|number_format(1) }}</td>
+                                            <td class="border text-center">{{ (calcTPCable * 1.70)|number_format(2) }}</td>
                                         </tr>
                                         {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                             <tr>
@@ -678,7 +680,7 @@
                                         <td class="border text-center">139.00</td>
                                         <td class="border text-center">139.00</td>
                                     </tr>
-                                    <tr>
+                                    <!--<tr>
                                         <td colspan="5" class="border table-light"><i>Impianto Citofonico o Videocitofonico</i></td>
                                     </tr>
                                     <tr>
@@ -692,7 +694,7 @@
                                         <td class="border text-center">2</td>
                                         <td class="border text-center">96.00</td>
                                         <td class="border text-center">192.00</td>
-                                    </tr>
+                                    </tr>-->
                                     {% if itemsArray.14 > 0 %}
                                         <tr>
                                             <td colspan="5" class="border table-light"><i>Lampade emergenza</i></td>
@@ -807,9 +809,9 @@
                                                 (<strong>bruciatore</strong>, elettropompa, compressore, aerotermo, unità termoventilante, aspiratore, ventilconvettore, ecc.)
                                             </small>
                                         </td>
-                                        <td class="border text-center">1</td>
+                                        <td class="border text-center">{{ itemsArray.18 }}</td>
                                         <td class="border text-center">113.00</td>
-                                        <td class="border text-center">113.00</td>
+                                        <td class="border text-center">{{ itemsArray.18 * 113.00 }}</td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="border table-light"><i>Allaccio collettori</i></td>
@@ -886,7 +888,7 @@
                                             <td class="border text-center">15.6.220.4</td>
                                             <td class="text-small border" style="max-width: 300px">
                                                 <small>
-                                                    Centralino tipo appartamento incassato a parete 52  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
+                                                    Centralino tipo appartamento incassato a parete 54  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
                                                 </small>
                                             </td>
                                             <td class="border text-center">1</td>

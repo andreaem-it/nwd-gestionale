@@ -799,6 +799,12 @@ class ExpertationsController extends Controller
             }
         }
 
+        /** Punti comando Aggiuntivi */
+
+        /** Estrattore */
+
+
+
         /** Punti Prese */
         array_push($prices, ($qtyPP * $price->findByCode('15.2.21.1')));
         array_push($prices, ($qtyPP * $price->findByCode('15.2.1')));
@@ -822,8 +828,8 @@ class ExpertationsController extends Controller
             '1',                            // Ronzatori
             '1'                             // Suonerie
         ];
-        // Predisposizione Lamapada di Emergenza
-        if ($item->getLampada() != 0 ) { array_push($qtyPS, '1'); }
+        /** Predisposizione Lamapada di Emergenza **/
+        if ($item->getLampada() != 0 ) { array_push($qtyPL, '1'); }
         $qtyPS = array_sum($qtyPS);
         array_push($prices,$qtyPS * $price->findByCode('15.3.10'));
         if ($item->getOpereMurarie() == 1) {
@@ -1043,9 +1049,9 @@ class ExpertationsController extends Controller
      */
     public function newExpertationAdvancedAction(Request $request,$id,$floor = 0) {
 
-        if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
-            return $this->redirectToRoute('mostra_preventivo_avanzato', ['id' => $id]);
-        } else {
+        /*if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
+            return $this->redirectToRoute('mostra_preventivo_avanzato', ['pid' => $id]);
+        } else {*/
             //$item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['id' => $id]);
             $qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
             $qb->select('exp')
@@ -1172,7 +1178,7 @@ class ExpertationsController extends Controller
                 'floor' => $floor
             ]);
         }
-    }
+    //}
 
     /**
      * @Route("preventivi/dettaglio/avanzato/preventivo-{pid}", name="preventivi_dettaglio_avanzato_id")
@@ -1189,18 +1195,22 @@ class ExpertationsController extends Controller
         $qtyPL = array_sum($item->getPl());
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
+        $qtyPP = $qtyPP + array_sum($itemAdv->getVal2()) + array_sum($itemAdv->getVal5());
         $qtyPT = array_sum($item->getPt());
         $qtyTR = array_sum($item->getC2v());
-        $qtyTP = $item->getNumPreseTelefono();
+        $qtyTP = array_sum($itemAdv->getVal33());
         $qtyPD = $item->getNumPreseDati();
         $calcTVCable = 10 * $item->getPianiCasa();
+
         if ($qtyTP > 5) {
-            $calcTPCable = 30 + (35 * $qtyPT * 0.15);
+            $calcTPCable = 30 + (35 * 0.15 * $qtyTP);
+        } elseif($qtyTP <= 5) {
+            $calcTPCable = 30 + (35 * 0.1 * $qtyTP);
         } elseif ($qtyTP == 0) {
             $calcTPCable = 0;
-        } else {
-            $calcTPCable = 30 + (35 * $qtyPT * 0.1);
         }
+
+        dump(array_sum($itemAdv->getVal33()));
 
         $prices = array();
 
@@ -1273,6 +1283,9 @@ class ExpertationsController extends Controller
         array_push($itemsAdvArray, array_sum($itemAdv->getVal64()));
 
         /** Punti Luce */
+        if ($itemAdv->getVal13() > 0) {
+            $qtyPL= ($qtyPL + array_sum($itemAdv->getVal13()));
+        }
         array_push($prices,($qtyPL * $price->findByCode('15.1.12.2')));
         array_push($prices,($qtyPL * $price->findByCode('15.1.1')));
         if ($item->getOpereMurarie() == 1) {
@@ -1298,8 +1311,8 @@ class ExpertationsController extends Controller
             }
         }
         /** Punti Comando Aggiuntivi */
-        if($itemsAdvArray[2] != 0) {
-            array_push($prices,$itemsAdvArray[2] * $price->findByCode('15.1.15.2'));
+        if($itemAdv->getVal7() > 0) {
+            array_push($prices,array_sum($itemAdv->getVal7()) * $price->findByCode('15.1.15.2'));
         }
 
         /** Punti Prese */
@@ -1327,12 +1340,21 @@ class ExpertationsController extends Controller
 
         /** Prese di Servizio */
         $qtyPS = [
-            $item->getNumPreseDati(),       // Prese Dati
-            $item->getNumPreseTelefono(),   // Prese Telefono
-            array_sum($item->getPt()),      // Prese TV
-            array_sum($item->getC2v()),     // Tiranti
-            '1',                            // Ronzatori
-            '1'                             // Suonerie
+            array_sum($itemAdv->getVal39()),// Prese Dati
+            array_sum($itemAdv->getVal33()),// Prese Telefono
+            //array_sum($item->getPt()),      // Prese TV
+            array_sum($itemAdv->getVal43()),// Frutti prese TV
+            array_sum($itemAdv->getVal41()),// Tiranti
+            array_sum($itemAdv->getVal42()),// Ronzatori
+            array_sum($itemAdv->getVal38()),// Campanello
+            array_sum($itemAdv->getVal34()),// Citofono Interno
+            array_sum($itemAdv->getVal35()),// Citofono Esterno
+            array_sum($itemAdv->getVal36()),// VideoCitofono Interno
+            array_sum($itemAdv->getVal44()),// Satellite
+            array_sum($itemAdv->getVal46()),// Parabola
+            array_sum($itemAdv->getVal45()),// Antenna Terrestre
+            array_sum($itemAdv->getVal32()), // Centralino Telefonico
+            array_sum($itemAdv->getVal12()), // Contatti Porta
         ];
         // Predisposizione Lamapada di Emergenza
         if ($item->getLampada() != 0 ) { array_push($qtyPS, '1'); }
@@ -1381,7 +1403,7 @@ class ExpertationsController extends Controller
         }
 
         /** Impianto Citofonico */
-        array_push($prices, 2 * $price->findByCode('15.3.52.1'));
+        //array_push($prices, 2 * $price->findByCode('15.3.52.1'));
 
         /** Orologio Astronomico */
         if($item->getIllumEsterna() == 1) {
@@ -1399,7 +1421,7 @@ class ExpertationsController extends Controller
         }
 
         /** Punti di servizio Termico */
-        $qtyPST = 1 + $item->getPianiCasa();
+        $qtyPST = array_sum($itemAdv->getVal18()) + array_sum($itemAdv->getVal19());
         array_push($prices, $qtyPST * $price->findByCode('15.3.10'));
         if ($item->getOpereMurarie() == 1) {
             array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
@@ -1419,7 +1441,7 @@ class ExpertationsController extends Controller
         }
 
         /** Allaccio Caldaia o Pompa di Calore */
-        array_push($prices, 1 * $price->findByCode('13.21.40.1'));
+        array_push($prices, array_sum($itemAdv->getVal18()) * $price->findByCode('13.21.40.1'));
 
         /** Allaccio Collettori */
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));

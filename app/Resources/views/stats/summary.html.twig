@@ -15,8 +15,8 @@
             <div class="col-6">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Preventivi Generati</h3>
-                        <canvas id="myChart" width="100%" height="50"></canvas>
+                        <h3>Preventivi Generati <small>Questo Anno</small></h3>
+                        {{ chartjs_canvas('myPieChart',graphica.width,graphica.height,graphica) }}
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
 {% endblock body %}
 {% block javascripts %}
     <script src="{{ asset('js/chart.js') }}"></script>
-    <script>
+    <!--<script>
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
@@ -64,5 +64,5 @@
                 }
             }
         });
-    </script>
+    </script>-->
 {% endblock %}

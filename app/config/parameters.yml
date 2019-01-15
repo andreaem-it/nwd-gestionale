@@ -1,6 +1,10 @@
 # This file is auto-generated during the composer install
 parameters:
     database_path: '%kernel.root_dir%/db/data_%kernel.environment%.db'
+    #database_host: '192.168.1.187'
+    #database_name: 'gestionale'
+    #database_user: 'root'
+    #database_password: 'Odessa.201X'
     mailer_transport: smtp
     mailer_host: smtp.mailtrap.io
     mailer_user: abcc765e49a04c
