@@ -1611,7 +1611,7 @@
                     <div class="card-body">
                         {{ form_start(form) }}
                         <div class="wrapper1" style="height: 30px;">
-                        <div id="" class="float-left">
+                        <!--<div id="" class="float-left">
                             <h4 class="float-left mt-2"><strong>Piano</strong> {{ floor }}</h4>
                             <div class="btn-group float-right ml-3">
                                 {% set oldFloor = floor - 1 %}
@@ -1624,7 +1624,7 @@
                         <div id="buttons" class="div1 float-right btn-group">
                             <a class="btn btn-secondary btn-sm" id="scroll-l" href="#" disabled="disabled"> < </a>
                             <a class="btn btn-secondary btn-sm" id="scroll-r" href="#"> > </a>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="wrapper2">
                         <div class="div2">
@@ -2476,19 +2476,27 @@
             min-width: 100px;
         }
         .table td {
-            min-width: 210px;
+            padding: 0;
+            min-height: 33px;
+            height: 33px;
         }
         .table td:hover {
             background-color: #F0F0EE;
         }
         .table th {
             text-align: center;
+            font-size:9px;
+            padding: 18px 8px;
         }
         .form-control {
             /*border:none!important;*/
-            width: 150px!important;
+            width: 100%!important;
             text-align: center!important;
             background-color: transparent;
+            border: none!important;
+        }
+        td strong {
+            padding-left:5px;
         }
         select {
             width:100%!important;

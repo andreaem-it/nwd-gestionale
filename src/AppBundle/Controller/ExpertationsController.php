@@ -800,6 +800,7 @@ class ExpertationsController extends Controller
         }
 
         /** Punti comando Aggiuntivi */
+        array_push($prices,($itemAdv->getVal7() * $price->findByCode('15.1.15.2')));
 
         /** Estrattore */
 
@@ -859,14 +860,14 @@ class ExpertationsController extends Controller
         if ($item->getNumPreseTelefono() != 0 ) {
             array_push($prices, $qtyTP * $price->findByCode('15.3.210.1'));
             array_push($prices, $calcTPCable * $price->findByCode('15.4.240.1'));
-            if ($item->getOpereMurarie() == 1) {
+            /*if ($item->getOpereMurarie() == 1) {
                 array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
             } elseif ($item->getOpereMurarieIntonaco() == 1) {
                 array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
             }
             if ($item->getOpereMurarieIntonaco() == 1) {
                 array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
-            }
+            }*/
         }
 
         /** Prese Dati */
@@ -893,9 +894,6 @@ class ExpertationsController extends Controller
         if ($item->getOpereMurarieIntonaco() == 1) {
             array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
         }
-
-        /** Allaccio Termostati */
-        array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
 
         /** Allaccio Caldaia o Pompa di Calore */
         array_push($prices, 1 * $price->findByCode('13.21.40.1'));
@@ -1183,7 +1181,8 @@ class ExpertationsController extends Controller
     /**
      * @Route("preventivi/dettaglio/avanzato/preventivo-{pid}", name="preventivi_dettaglio_avanzato_id")
      */
-    public function detailsAdvancedAction($pid) {
+    public function detailsAdvancedAction($pid)
+    {
 
         $repo = $this->getDoctrine()->getRepository(Expertations::class);
         $item = $repo->findOneBy(['pid' => $pid]);
@@ -1204,7 +1203,7 @@ class ExpertationsController extends Controller
 
         if ($qtyTP > 5) {
             $calcTPCable = 30 + (35 * 0.15 * $qtyTP);
-        } elseif($qtyTP <= 5) {
+        } elseif ($qtyTP <= 5) {
             $calcTPCable = 30 + (35 * 0.1 * $qtyTP);
         } elseif ($qtyTP == 0) {
             $calcTPCable = 0;
@@ -1284,57 +1283,57 @@ class ExpertationsController extends Controller
 
         /** Punti Luce */
         if ($itemAdv->getVal13() > 0) {
-            $qtyPL= ($qtyPL + array_sum($itemAdv->getVal13()));
+            $qtyPL = ($qtyPL + array_sum($itemAdv->getVal13()));
         }
-        array_push($prices,($qtyPL * $price->findByCode('15.1.12.2')));
-        array_push($prices,($qtyPL * $price->findByCode('15.1.1')));
+        array_push($prices, ($qtyPL * $price->findByCode('15.1.12.2')));
+        array_push($prices, ($qtyPL * $price->findByCode('15.1.1')));
         if ($item->getOpereMurarie() == 1) {
-            array_push($prices,$qtyPL * $price->findByCode('15.1.3.1'));
+            array_push($prices, $qtyPL * $price->findByCode('15.1.3.1'));
             if ($item->getOpereMurarieIntonaco() == 1) {
-                array_push($prices,$qtyPL * $price->findByCode('15.1.4.1'));
+                array_push($prices, $qtyPL * $price->findByCode('15.1.4.1'));
             }
             if ($item->getOpereMurariePietra() == 1) {
-                array_push($prices,$qtyPL * $price->findByCode('15.1.5.1'));
+                array_push($prices, $qtyPL * $price->findByCode('15.1.5.1'));
             }
         }
 
         /** Punti Comando */
-        array_push($prices,($qtyPC * $price->findByCode('15.1.15.1')));
-        array_push($prices,($qtyPC * $price->findByCode('15.1.2')));
+        array_push($prices, ($qtyPC * $price->findByCode('15.1.15.1')));
+        array_push($prices, ($qtyPC * $price->findByCode('15.1.2')));
         if ($item->getOpereMurarie() == 1) {
-            array_push($prices,$qtyPC * $price->findByCode('15.1.3.2'));
+            array_push($prices, $qtyPC * $price->findByCode('15.1.3.2'));
             if ($item->getOpereMurarieIntonaco() == 1) {
-                array_push($prices,$qtyPC * $price->findByCode('15.1.4.2'));
+                array_push($prices, $qtyPC * $price->findByCode('15.1.4.2'));
             }
             if ($item->getOpereMurariePietra() == 1) {
-                array_push($prices,$qtyPC * $price->findByCode('15.1.5.2'));
+                array_push($prices, $qtyPC * $price->findByCode('15.1.5.2'));
             }
         }
         /** Punti Comando Aggiuntivi */
-        if($itemAdv->getVal7() > 0) {
-            array_push($prices,array_sum($itemAdv->getVal7()) * $price->findByCode('15.1.15.2'));
+        if ($itemAdv->getVal7() > 0) {
+            array_push($prices, array_sum($itemAdv->getVal7()) * $price->findByCode('15.1.15.2'));
         }
 
         /** Punti Prese */
         array_push($prices, ($qtyPP * $price->findByCode('15.2.21.1')));
         array_push($prices, ($qtyPP * $price->findByCode('15.2.1')));
-        array_push($prices, ($qtyPP * $price->findByCode('15.2.41.3')));
         if ($item->getOpereMurarie() == 1) {
-            array_push($prices,$qtyPP * $price->findByCode('15.2.2'));
+            array_push($prices, $qtyPP * $price->findByCode('15.2.2'));
             if ($item->getOpereMurarieIntonaco() == 1) {
-                array_push($prices,$qtyPP * $price->findByCode('15.2.3'));
+                array_push($prices, $qtyPP * $price->findByCode('15.2.3'));
             }
             if ($item->getOpereMurariePietra() == 1) {
-                array_push($prices,$qtyPP * $price->findByCode('15.2.4'));
+                array_push($prices, $qtyPP * $price->findByCode('15.2.4'));
             }
         }
-        if(array_sum($itemAdv->getVal3()) > 0) {
+        if (array_sum($itemAdv->getVal3()) > 0) {
             array_push($prices, array_sum($itemAdv->getVal3()) * $price->findByCode('15.2.41.2'));
         }
-        if(array_sum($itemAdv->getVal4()) > 0) {
+        if (array_sum($itemAdv->getVal4()) > 0) {
             array_push($prices, array_sum($itemAdv->getVal4()) * $price->findByCode('15.2.41.3'));
+            array_push($prices, array_sum($itemAdv->getVal4()) * $price->findByCode('15.2.80.2'));
         }
-        if(array_sum($itemAdv->getVal5()) > 0) {
+        if (array_sum($itemAdv->getVal5()) > 0) {
             array_push($prices, array_sum($itemAdv->getVal5()) * $price->findByCode('15.2.42'));
         }
 
@@ -1356,10 +1355,13 @@ class ExpertationsController extends Controller
             array_sum($itemAdv->getVal32()), // Centralino Telefonico
             array_sum($itemAdv->getVal12()), // Contatti Porta
         ];
-        // Predisposizione Lamapada di Emergenza
-        if ($item->getLampada() != 0 ) { array_push($qtyPS, '1'); }
+        /** Predisposizione Lamapada di Emergenza **/
+        if ($item->getLampada() != 0) {
+            array_push($qtyPS, '1');
+        }
         $qtyPS = array_sum($qtyPS);
-        array_push($prices,$qtyPS * $price->findByCode('15.3.10'));
+
+        array_push($prices, $qtyPS * $price->findByCode('15.3.10'));
         if ($item->getOpereMurarie() == 1) {
             array_push($prices, ($qtyPS * $price->findByCode('15.3.20.1')));
         } elseif ($item->getOpereMurarieIntonaco() == 1) {
@@ -1370,54 +1372,55 @@ class ExpertationsController extends Controller
         }
 
         /** Prese TV & Antenna */
-        if($item->getAntenna() == 1) {
+        if ($item->getAntenna() == 1) {
             array_push($prices, (1 * $price->findByCode('15.3.151.2')));
         }
-        if ($qtyPT < 5 ) {
-            array_push($prices, (1 * $price->findByCode('15.3.162.1')));
+        if ($qtyPT < 5) {
+            array_push($prices, (1 * $price->findByCode('15.3.161.1')));
         } elseif ($qtyPT > 6 and $qtyPT < 10) {
-            array_push($prices, (1 * $price->findByCode('15.3.162.2')));
-        } elseif ($qtyPT < 11 and $qtyPT < 15 ) {
-            array_push($prices, (1 * $price->findByCode('15.3.162.3')));
+            array_push($prices, (1 * $price->findByCode('15.3.161.2')));
+        } elseif ($qtyPT < 11 and $qtyPT < 15) {
+            array_push($prices, (1 * $price->findByCode('15.3.161.3')));
         }
         array_push($prices, ($qtyPT * $price->findByCode('15.3.110.1')));
         array_push($prices, ($calcTVCable * $price->findByCode('15.4.230')));
 
+        /** Tiranti */
+        if ($qtyTR != 0) {
+            array_push($prices, $price->findByCode('15.3.40.1'));
+            array_push($prices, $price->findByCode('15.3.90'));
+        }
+
         /** Prese Telefoniche */
-        if ($item->getNumPreseTelefono() != 0 ) {
+        if ($item->getNumPreseTelefono() != 0) {
             array_push($prices, $qtyTP * $price->findByCode('15.3.210.1'));
             array_push($prices, $calcTPCable * $price->findByCode('15.4.240.1'));
-            if ($item->getOpereMurarie() == 1) {
+            /*if ($item->getOpereMurarie() == 1) {
                 array_push($prices, ($qtyTP * $price->findByCode('15.3.20.1')));
             } elseif ($item->getOpereMurarieIntonaco() == 1) {
                 array_push($prices, ($qtyTP * $price->findByCode('15.3.20.2')));
             }
             if ($item->getOpereMurarieIntonaco() == 1) {
                 array_push($prices, ($qtyTP * $price->findByCode('15.3.20.3')));
-            }
+            }*/
         }
 
         /** Prese Dati */
-        if ($item->getNumPreseDati() != 0 ) {
+        /*if ($item->getNumPreseDati() != 0 ) {
             array_push($prices, $qtyPD * $price->findByCode('15.3.220.6'));
-        }
+        }*/
 
         /** Impianto Citofonico */
         //array_push($prices, 2 * $price->findByCode('15.3.52.1'));
 
         /** Orologio Astronomico */
-        if($item->getIllumEsterna() == 1) {
+        if ($item->getIllumEsterna() == 1) {
             array_push($prices, 1 * $price->findByCode('15.6.170.39'));
         }
 
         /** Lampade Emergenza */
         if ($itemsAdvArray[14] > 0) {
             array_push($prices, $itemsAdvArray[14] * $price->findByCode('15.8.180.1'));
-        }
-
-        /** Allaccio termoconvettori */
-        if ($itemsAdvArray[17] > 0) {
-            array_push($prices, $itemsAdvArray[17] * $price->findByCode('15.2.70.7'));
         }
 
         /** Punti di servizio Termico */
@@ -1436,41 +1439,62 @@ class ExpertationsController extends Controller
         array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
 
         /** Termostato */
-        if($itemsAdvArray[20] > 0) {
-            array_push($prices, $itemsAdvArray[20] * $price->findByCode('13.19.10.4'));
+        if (array_sum($itemAdv->getVal20()) == 0) {
+            array_push($prices, 1 * $price->findByCode('13.19.10.4'));
+        } elseif (array_sum($itemAdv->getVal20()) == 1) {
+            array_push($prices, 1 * $price->findByCode('13.19.10.4'));
+        }
+        if (array_sum($itemAdv->getVal20()) > 1) {
+            array_push($prices, 2 * $price->findByCode('13.19.10.4'));
+        }
+
+        /** Allaccio Condizionatori */
+        if ($itemAdv->getVal17() < 0) {
+            array_push($prices, ($itemAdv->getVal17() * $price->findByCode('13.21.40.1')));
         }
 
         /** Allaccio Caldaia o Pompa di Calore */
-        array_push($prices, array_sum($itemAdv->getVal18()) * $price->findByCode('13.21.40.1'));
+        if (array_sum($itemAdv->getVal18()) > 1) {
+            array_push($prices, array_sum($itemAdv->getVal18()) * $price->findByCode('13.21.40.1'));
+        }
 
         /** Allaccio Collettori */
-        array_push($prices, $item->getPianiCasa() * $price->findByCode('13.21.10'));
+        if (array_sum($itemAdv->getVal19()) > 1) {
+            array_push($prices, array_sum($itemAdv->getVal19()) * $price->findByCode('13.21.10.1'));
+        }
+
+        /** Testine */
+        if (array_sum($itemAdv->getVal17()) > 0) {
+            array_push($prices, array_sum($itemAdv->getVal17()) * $price->findByCode('15.2.70.7'));
+        } else {
+            array_push($prices, number_format($item->getSquareMeters() / 9, 0) * $price->findByCode('15.2.70.7'));
+        }
 
         /** Centralino */
-        if($itemsAdvArray[22] > 0) {
+        if ($itemsAdvArray[22] > 0) {
             array_push($prices, 1 * $price->findByCode('15.6.220.1'));
         }
-        if($itemsAdvArray[23] > 0) {
+        if ($itemsAdvArray[23] > 0) {
             array_push($prices, 1 * $price->findByCode('15.6.220.3'));
         }
-        if($itemsAdvArray[24] > 0) {
+        if ($itemsAdvArray[24] > 0) {
             array_push($prices, 1 * $price->findByCode('15.6.220.4'));
         }
-        if($itemsAdvArray[25] > 0) {
+        if ($itemsAdvArray[25] > 0) {
             array_push($prices, 1 * $price->findByCode('15.6.220.5'));
         }
-
-        /** Magnetotermico */
-        array_push($prices, $item->getNumCircuiti() * $price->findByCode('15.6.52.1'));
 
         /** Sezionatore Quadro */
         $sezVal = $itemsAdvArray[22] + $itemsAdvArray[23] + $itemsAdvArray[24] + $itemsAdvArray[25];
         array_push($prices, $sezVal * $price->findByCode('15.6.10.8'));
 
+        /** Magnetotermico */
+        array_push($prices, $item->getNumCircuiti() * $price->findByCode('15.6.52.1'));
+
         /** Differenziale Puro */
-        if($itemsAdvArray[25] > 0) {
+        /*if($itemsAdvArray[25] > 0) {
             array_push($prices, 1 * $price->findByCode('15.6.10.8'));
-        }
+        }*/
 
 
         /** Dorsali */
@@ -1488,34 +1512,24 @@ class ExpertationsController extends Controller
         /** Ingresso fornitura */
         array_push($prices,20 * $price->findByCode('15.4.21.40'));
 
-        /** Impianto di messa a terra */
-        array_push($prices, 20 * $price->findByCode('15.4.110.10'));
-        if ($item->getSpd() == 1) {
-            array_push($prices,$price->findByCode('15.7.204.4') * 1);
-        } else {
-            array_push($prices,($price->findByCode('15.7.204.4')) + ($price->findByCode('15.7.204.4')) * 1);
-        }
-
         /** Puntale a croce */
         array_push($prices, $price->findByCode('15.7.60.1'));
 
         /** Relè e alimentatori */
-        if($item->getLevel() == 3) {
+        /*if($item->getLevel() == 3) {
             array_push($prices, $price->findByCode('15.6.170.31') * 1 );
             array_push($prices, $price->findByCode('15.6.170.44') * 1);
-        }
+        }*/
 
         /** Nodo Equipotenziale */
-        if ($item->getOpereMurarie() == 0) {
-            array_push($prices, $price->findByCode('15.2.160.1'));
-        } else {
-            array_push($prices, $price->findByCode('15.2.160.2'));
-        }
+        array_push($prices, $price->findByCode('15.2.160.2'));
 
         /** Scaricatore */
         if ($item->getTrifase() == 0) {
             array_push($prices, $price->findByCode('15.7.201'));
+            array_push($prices, $price->findByCode('15.7.202'));
         } else {
+            array_push($prices, $price->findByCode('15.7.201'));
             array_push($prices, 3 * $price->findByCode('15.7.202'));
         }
         array_push($prices, $price->findByCode('15.7.202'));
@@ -1527,11 +1541,11 @@ class ExpertationsController extends Controller
             }
         }
 
-        /** Tiranti */
-        if ($qtyTR != 0) {
-            array_push($prices, $price->findByCode('15.3.40.1'));
-            array_push($prices, $price->findByCode('15.3.90'));
-        }
+        /** Pozzetto */
+        array_push($prices, $price->findByCode('15.5.260.1'));
+
+        /** Linea Elettrica */
+        array_push($prices, 20 * $price->findByCode('15.4.110.10'));
 
         /** Segnalatore Acustico */
         if ($item->getCampanello() != 0) {
@@ -1570,7 +1584,8 @@ class ExpertationsController extends Controller
             'calcTPCable' => $calcTPCable,
             'calcTVCable' => $calcTVCable,
             'vat' => $vat = 0,
-            'sconto' => $sconto
+            'sconto' => $sconto,
+            'fun' => $this
         ]);
     }
 
@@ -1867,5 +1882,9 @@ class ExpertationsController extends Controller
 
     public function convertPID($id) {
         return $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $id])->getId();
+    }
+
+    public function getPriceByCode($code) {
+        return $this->getDoctrine()->getRepository(PricesAdvanced::class)->findOneBy(['code' => $code])->getPrice();
     }
 }
