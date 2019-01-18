@@ -109,31 +109,31 @@ knp_paginator:
         pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig'     # sliding pagination controls template
         sortable: '@KnpPaginator/Pagination/font_awesome_sortable_link.html.twig' # sort link template
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
-chartjs:
-    animation:
-        duration: 1000
-        easing: easeOutQuart
-    layout:
-        padding: 0
-    legend:
-        display: true
-        position: 'top'
-        fullWidth: true
-        reverse: false
-        labels:
-            boxWidth:	40
-            fontSize:	12
-            fontStyle:	'normal'
-            fontColor:	'#666'
-            fontFamily:	"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-            padding:	10
-            usePointStyle:	false
-    title:
-        display: false
-        position: 'top'
-        fontSize: 12
-        fontFamily:	"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-        fontColor: '#666'
-        fontStyle: 'bold'
-        padding: 10
-        text:	''
+#chartjs:
+#    animation:
+#        duration: 1000
+#        easing: easeOutQuart
+#    layout:
+#        padding: 0
+#    legend:
+#        display: true
+#        position: 'top'
+#        fullWidth: true
+#        reverse: false
+#        labels:
+#            boxWidth:	40
+#            fontSize:	12
+#            fontStyle:	'normal'
+#            fontColor:	'#666'
+#            fontFamily:	"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+#            padding:	10
+#            usePointStyle:	false
+#    title:
+#        display: false
+#        position: 'top'
+#        fontSize: 12
+#        fontFamily:	"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+#        fontColor: '#666'
+#        fontStyle: 'bold'
+#        padding: 10
+#        text:	''

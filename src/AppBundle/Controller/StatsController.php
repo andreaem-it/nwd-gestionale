@@ -4,9 +4,9 @@ namespace AppBundle\Controller;
 
 use AppBundle\AppBundle;
 use AppBundle\Entity\Expertations;
-use fados\ChartjsBundle\Model\ChartBuiderData;
-use fados\ChartjsBundle\Utils\TypeCharjs;
-use fados\ChartjsBundle\Utils\TypeColors;
+//use fados\ChartjsBundle\Model\ChartBuiderData;
+//use fados\ChartjsBundle\Utils\TypeCharjs;
+//use fados\ChartjsBundle\Utils\TypeColors;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,7 +17,7 @@ class StatsController extends Controller
      */
     public function statsAction()
     {
-        dump($this->getByMonth(2018, 11));
+        /*dump($this->getByMonth(2018, 11));
 
         $grafica = new ChartBuiderData();
         $grafica->setType(TypeCharjs::CHARJS_BAR);
