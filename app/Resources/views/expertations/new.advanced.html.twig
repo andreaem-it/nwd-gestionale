@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %}Preventivo{% endblock %}
 {% block body %}
+<script src="{{ asset('js/jquery.CongelarFilaColumna.js') }}"></script>
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -1631,14 +1632,16 @@
                             <table class="table-2 table table-bordered  mt-3 mr-2 selector" style="position:relative">
                                 <thead>
                                 <tr>
-                                    <th>TIPOLOGIA</th>
-                                    {% for item in count %}
+                                    <th class="firstHead">TIPOLOGIA</th>
+                                    {% for itm in item.name %}
+                                        <th class="text-center itemHead">{{ itm }}</th>
+                                    {% endfor %}
+                                    {#{% for item in count %}
                                         <th>
                                             {{ func.room(item) }}
-                                            {#{{ item.name }}#}
                                         </th>
-                                    {% endfor %}
-                                    <th>
+                                    {% endfor %}#}
+                                    <th class="itemHead">
                                         Sistemi
                                     </th>
                                 </tr>
@@ -1646,7 +1649,7 @@
                                 {% set colCount = count|length + 1 %}
                             <tbody>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         PUNTI PRESA
                                     </td>
                                 </tr>
@@ -1701,7 +1704,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         PUNTI COMANDO
                                     </td>
                                 </tr>
@@ -1726,7 +1729,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
                                     </td>
                                 </tr>
@@ -1821,7 +1824,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         RISCALDAMENTO
                                     </td>
                                 </tr>
@@ -1876,7 +1879,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         QUADRO ELETTRICO
                                     </td>
                                 </tr>
@@ -1942,7 +1945,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         SERVIZI PREDISPOSIZIONE
                                     </td>
                                 </tr>
@@ -2137,7 +2140,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
                                     </td>
                                 </tr>
@@ -2212,7 +2215,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         PREDISPOSIZIONE AUTOMATISMI
                                     </td>
                                 </tr>
@@ -2277,7 +2280,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         ASPIRAZIONE CENTRALIZZATA
                                     </td>
                                 </tr>
@@ -2302,7 +2305,7 @@
                                     {% endfor %}
                                 </tr>
                                 <tr>
-                                    <td colspan="10">
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
                                         RESOCONTO PLACCHE
                                     </td>
                                 </tr>
@@ -2479,8 +2482,12 @@
             padding: 0;
             min-height: 33px;
             height: 33px;
+            font-size: 10px;
         }
-        .table td:hover {
+        .table tr:hover {
+            background-color: #F0F0EE;
+        }
+        .table td input:focus {
             background-color: #F0F0EE;
         }
         .table th {
@@ -2558,13 +2565,17 @@
         .custom-form-control {
             float: left!important;
         }
+        .row-title {
+            background-color: #EEE;
+            padding-left: 20px!important;
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/jquery.toastr.min.css') }}">
 {% endblock %}
 {% block javascripts %}
     <script src="{{ asset("js/jquery.fixedheadertable.min.js") }}"></script>
     <script>
-        $('#scroll-r').click(function(e) {
+        /*$('#scroll-r').click(function(e) {
             e.preventDefault();
             $(".table-2").animate({'left':'-=300px'}).scrollLeft();
             console.log($(".table-2").width());
@@ -2579,20 +2590,20 @@
                 return;
             }
             $(".table-2").animate({'left': '+=300px'}).scrollLeft()
-        });
+        });*/
         $(window).bind('scroll', function () {
-            if ($(window).scrollTop() > 333) {
-                $('#buttons').addClass('fixed-top').addClass('fixed').animate();
+            if ($(window).scrollTop() > 630) {
+                //$('#buttons').addClass('fixed-top').addClass('fixed').animate();
                 console.log("scrolled")
-                /*$('.selector').fixedHeaderTable({
-                    footer: false,
-                    cloneHeadToFoot: false,
-                    fixedColumn: false
-                });*/
+                $('thead').css('position','fixed').css('top','63px').css('background','#FFF').width('93.2%');
+                $('.firstHead').width('13%');
+                $('.itemHead').width('8%');
+
             } else {
-                $('#buttons').removeClass('fixed-top').removeClass('fixed');
+                $('thead').css('position','relative').css('top','63px').css('background','#FFF').width('100%');
+                //$('#buttons').removeClass('fixed-top').removeClass('fixed');
                 console.log("top");
-                $('.selector').fixedHeaderTable('destroy');
+                //$('.selector').fixedHeaderTable('destroy');
             }
         });
 
@@ -2605,6 +2616,14 @@
                 //log the id of the target
                 $(this).switchClass('btn-outline-primary','btn-primary');
             });
+            /*$('.selector').fixedHeaderTable({
+                footer: true,
+                cloneHeadToFoot: true,
+                fixedColumn: true
+            });*/
+            /*$(".selector").CongelarFilaColumna({
+                Columnas:  1
+            });*/
         });
         function checkedAddon(id) {
             $('.collapse-' + id).switchClass('btn-primary', 'btn-success');

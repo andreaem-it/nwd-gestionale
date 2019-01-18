@@ -1013,6 +1013,8 @@ class ExpertationsController extends Controller
             $id = $this->convertPID($pid);
             $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
 
+            dump($item);
+
         if($item != null) {
 
             $total = 0;
@@ -1066,7 +1068,11 @@ class ExpertationsController extends Controller
             $pid = $this->convertPID($id);
             $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($pid)->getAmbient();
 
+            dump($ambientsCount);
+
             $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
+
+            dump($titles);
 
             //$check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
 
@@ -1570,6 +1576,7 @@ class ExpertationsController extends Controller
 
         return $this->render('expertations/details.advanced.html.twig',[
             'item' => $item,
+            'itemAdv' => $itemAdv,
             'qtyPL' => $qtyPL,
             'qtyPC' => $qtyPC,
             'qtyPP' => $qtyPP,
@@ -1887,4 +1894,5 @@ class ExpertationsController extends Controller
     public function getPriceByCode($code) {
         return $this->getDoctrine()->getRepository(PricesAdvanced::class)->findOneBy(['code' => $code])->getPrice();
     }
+
 }
