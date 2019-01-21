@@ -1,0 +1,2619 @@
+{% extends 'base.html.twig' %}
+{% block title %}Preventivo{% endblock %}
+{% block body %}
+<script src="{{ asset('js/jquery.CongelarFilaColumna.js') }}"></script>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-9">
+                <h3>Preventivo <small>Nuovo > Avanzato</small></h3>
+            </div>
+        </div>
+        {% form_theme form 'jquery.collection.html.twig' %}
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+        {{ form_start(form) }}
+        <div class="mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <strong>Cliente</strong>
+                            <p><small>{{ func.uidToSurName(item.client) }} {{ func.uidToName(item.client) }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Data Generazione</strong>
+                            <p><small>{{ item.date|date("d/m/Y") }}</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Tipo Impianto</strong>
+                            <p><small>{{ func.plantIntToName(item.tipo) }}</small></p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Kw Enel</strong>
+                            <p><small>{{ item.kw }}</small></p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Piani</strong>
+                            <p><small>{{ item.pianiCasa }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Riscaldamento</strong>
+                            <p><small>{{ func.heatingIntToName(item.riscaldamento) }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>{% if item.opereMurarie == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Opere Murarie </strong><br>
+                            <strong>{% if item.opereMurarieIntonaco == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Intonaco </strong><br>
+                            <strong>{% if item.opereMurariePietra == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Pietra</strong>
+                        </div>
+                        <!--<div class="col-lg-1 ">
+                            <strong>Sconto</strong>
+                            <p><small>{{ item.sconto }}</small></p>
+                        </div>-->
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-1">
+                            <strong>Livello </strong>
+                            <p><small>{{ item.level }}</small></p>
+                        </div>
+                        <div class="col-lg-1">
+                            <strong>Metratura</strong>
+                            <p><small>{{ item.squareMeters }}</small></p>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>{% if item.trifase == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Trifase </strong><br>
+                        </div>
+                        <div class="col-lg-1 ">
+                            <strong>Circuiti</strong>
+                            <p><small>{{ item.numCircuiti }}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>{% if item.illumSicurezza >= 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Illum. Sicurezza </strong>&nbsp;&nbsp;{{ item.illumSicurezza }}<br>
+                            <strong>{% if item.lampada == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Lampada fornita </strong><br>
+                        </div>
+                        <div class="col-lg-3">
+                            <strong>SPD</strong>
+                            <p><small>{% if item.spd == 1 %}SPD ad arrivo linea, Tolleranza R1{% elseif item.spd == 2 %}SPD ad arrivo linea, Tolleranza R1, Protezione sovratensioni{% endif %}</small></p>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <strong>Imp. Ausiliari</strong>
+                            <p><small>{% if item.impAusiliari == 1 %}Campanello, citofono e videocitofono{% elseif item.impAusiliari == 2 %}Campanello, citofono e antintrusione, Controllo carichi{% elseif item.impAusiliari == 3 %}Campanello, citofono e antintrusione, Controllo carichi, Domotica{% endif %} </small></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-2">
+                            <strong>{% if item.campanello == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Campanello</strong><br>
+                            <strong>{% if item.citVid == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Citofono</strong><br>
+                            <strong>{% if item.citVid == 2 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;VideoCitofono</strong><br>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>{% if item.antenna == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Predisposizione Antenna</strong><br>
+                            <strong>{% if item.allarme == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Predisposizione Allarme</strong><br>
+                            <strong>{% if item.illumEsterna == 1 %}<i class="fa fa-check text-success" style="margin-left:-5px"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}&nbsp;Illuminazione Esterna</strong><br>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Prese Dati</strong>
+                            <p><small>{{ item.numPreseDati }}</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Prese Telefono</strong>
+                            <p><small>{{ item.numPreseTelefono }}</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Sconto</strong>
+                            <p><small>{{ item.sconto }} %</small></p>
+                        </div>
+                        <div class="col-lg-2">
+                            <strong>Totale Preliminare</strong>
+                            <p><small>{{ item.price }} €</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Aggiunte</h4>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
+                            Ingresso Linee Enel e Telecom
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
+                            Predisposizione Domotica
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
+                            Impianto Satellitare
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
+                            Diffusione Sonora
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">
+                            Sorround Soggiorno
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-6" role="button" aria-expanded="false" aria-controls="collapse-6">
+                            Connettorizzazione Dati
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-7" role="button" aria-expanded="false" aria-controls="collapse-7">
+                            Videosorveglianza Esterna
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-8" role="button" aria-expanded="false" aria-controls="collapse-8">
+                            Predisposizione Allarme
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-9" role="button" aria-expanded="false" aria-controls="collapse-9">
+                            Rilevazione Fumi
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-10" role="button" aria-expanded="false" aria-controls="collapse-10">
+                            Allagamento e Gas
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-11" role="button" aria-expanded="false" aria-controls="collapse-11">
+                            Motorizzazione Tapparelle
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-12" role="button" aria-expanded="false" aria-controls="collapse-12">
+                            Cavi Motorizzazione Tapparelle
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-13" role="button" aria-expanded="false" aria-controls="collapse-13">
+                            Centralino Telefonico
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-14" role="button" aria-expanded="false" aria-controls="collapse-14">
+                            Impianto Citofonico
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-15" role="button" aria-expanded="false" aria-controls="collapse-15">
+                            Impianto VideoCitofono
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-16" role="button" aria-expanded="false" aria-controls="collapse-16">
+                            Rilevatori Luminosità
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-17" role="button" aria-expanded="false" aria-controls="collapse-17">
+                            Illuminazione Esterna
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-18" role="button" aria-expanded="false" aria-controls="collapse-18">
+                            Predisposizione Fotovoltaico
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-19" role="button" aria-expanded="false" aria-controls="collapse-19">
+                            Sonde Temperatura
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-20" role="button" aria-expanded="false" aria-controls="collapse-20">
+                            Cronotermostati
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-21" role="button" aria-expanded="false" aria-controls="collapse-21">
+                            Armadio Rack
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-22" role="button" aria-expanded="false" aria-controls="collapse-22">
+                            B-Ticino LivingNow
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <div class="collapse mt-1 mb-2" id="collapse-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <div class="custom-control custom-checkbox">
+                                                {{ form_widget(form.opt1Enabled) }}
+                                            </div>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                Predisposizione tubazione esterna interrata per ingresso Linea telefonica. Misura ipotetica da verificare in loco.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_1Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_1Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_2Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_2Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Ingresso linea cavi impianto elettrico misura stimata in base alla posizione comunicata del contatore ENEL.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_3Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt1_4Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt1_4Value) }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt2Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Relè Passo Passo ed alimentatori già suddivisi per piano: NECESSARI PER LA GESTIONE DELL'ILLUMINAZIONE IN BASSA TENSIONE
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt2_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt2_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt2_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt2_2Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt3Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                Impianto di ricezione SATELLITARE.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_1Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_1Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_2Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_2Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_3Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_4Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_4Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Impianto Satellitare Multiswitch centralizzato per più di 4 punti SATELLITE.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_5Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_5Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_6Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_6Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_7Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_7Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Incremento al punto presa di servizio per presa di ricezione TV satellitare
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_8Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_8Value) }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt3_9Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt3_9Value) }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt4Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione modulo comandi diffusione sonora.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt4_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt4_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt4_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt4_2Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt4_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt4_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt4_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt5Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione modulo surround
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt5_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt5_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt5_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt5_2Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt5_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt5_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt5_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt6Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Connettorizzazione punti trasmissione dati.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt6_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt6_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt7Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione videosorveglianza
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt7_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt7_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt7_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt7_2Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt7_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt7_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt7_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt8Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevazione allarme.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt8_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt8_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt8_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt8_2Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt8_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt8_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt8_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt9Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevazione fumi
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt9_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt9_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt9_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt9_2Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt9_3Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt9_3Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt9_3Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt10Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione sonde allagamento.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione sonde allagamento.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevatori gas
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione elettrovalvola GAS.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_7Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt10_8Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt10_8Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt10_9Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt10_9Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt10_9Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-11">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt11Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt11_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt11_4Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt11_5Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt11_5Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt11_5Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt12Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione motori
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt12_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt12_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt12_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt12_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-13">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt13Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            CENTRALINO TELEFONICO 2 LINEE ESTERNE E 8 INTERNI.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt13_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt13_4Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-14">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt14Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Impianto Citofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt14_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt14_6Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-15">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt15Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Impianto Videocitofonico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Trasporto e imballo
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt15_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt15_7Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-16">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt16Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt16_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt16_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione rilevatori luminosità
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt16_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt16_3Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-17">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt17Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione cavidotti esterni Lato anteriore e posteriore per illuminazione esterna pozzetti ogni 10mt circa per rendere più facile la predisposizione dell'illuminazione definitiva. Misura ipotetica da verificare in loco.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Linea elettrica per accensioni 2 linee di accensioni separate.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Collegamento stagno nei pozzetti
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt17_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt17_6Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-18">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt18Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Tubazione per predisposizione impianto fotovoltaico: due tubazioni dai pannelli al locale tecnico
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt18_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt18_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-19">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt19Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Allaccio TERMOSTATI (l'esatta quantità e in funzione del progetto termoidraulico, appena ci verrà consegnato aggiorneremo la nostra offerta).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt19_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt19_1Value) }}
+                                        </td>
+                                    </tr>
+                                    {% if item.opereMurariePietra == 1 %}
+                                        <tr>
+                                            <td colspan="2">
+                                                MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 210px">
+                                                {{ form_widget(form.opt19_2Value) }}
+                                            </td>
+                                            <td>
+                                                {{ form_label(form.opt19_2Value) }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        {{ form_widget(form.opt19_2Value, { 'attr': { 'class': 'hidden'} }) }}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-20">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt20Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Cronotermostato
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt20_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt20_1Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-21">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt21Enabled) }}
+                                        </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            Armadio Rack
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Prese di alimentazione
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Patch Panel
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_7Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_8Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_8Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_9Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_9Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Mensole
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_10Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_10Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_11Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_11Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Pannelli ciechi di copertura finale
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_12Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_12Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_13Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_13Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Ventilazione forzata
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt21_14Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt21_14Value) }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse mt-1 mb-2" id="collapse-22">
+                    <div class="card">
+                        <div class="card-body">
+                            VENTUNESIMA AGGIUNTA POSSIBILE: Placche e frutti marca BTicino serie Living-Now. Le esatte quantità verranno conteggiate a fine lavori.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        {{ form_start(form) }}
+                        <div class="wrapper1" style="height: 30px;">
+
+                    </div>
+                    <div class="wrapper2">
+                        <div class="div2">
+                            <table class="table-2 table table-bordered  mt-3 mr-2 selector" style="position:relative">
+                                <thead>
+                                <tr>
+                                    <th class="firstHead">TIPOLOGIA</th>
+                                    {% for itm in item.name %}
+                                        <th class="text-center itemHead">{{ itm }}</th>
+                                    {% endfor %}
+                                    {#{% for item in count %}
+                                        <th>
+                                            {{ func.room(item) }}
+                                        </th>
+                                    {% endfor %}#}
+                                    <th class="itemHead">
+                                        Sistemi
+                                    </th>
+                                </tr>
+                            </thead>
+                                {% set colCount = count|length + 1 %}
+                            <tbody>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        PUNTI PRESA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong >{{ titles.0.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val1_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.1.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val2_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.2.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val3_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.3.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val4_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.4.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val5_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        PUNTI COMANDO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.5.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val6_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.6.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val7_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.7.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val8_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.8.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val9_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.9.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val10_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.10.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val11_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.11.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val12_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.12.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val13_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.13.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val14_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.14.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val15_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.15.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val16_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        RISCALDAMENTO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.16.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val17_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.17.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val18_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.18.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val19_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.19.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val20_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.20.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val21_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        QUADRO ELETTRICO
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.21.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val22_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.22.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val23_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.23.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val24_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.24.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                    <td>
+                                        <input class="form-control" type="number" value="0" min="0" id="form_val25_{{ item }}">
+                                    </td>
+                                    {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.25.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val26_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.26.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val27_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        SERVIZI PREDISPOSIZIONE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.27.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val28_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.28.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val29_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.29.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val30_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.30.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val31_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.31.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val32_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.32.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val33_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.33.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val34_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.34.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val35_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.35.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val36_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.36.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val37_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.37.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val38_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.38.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val39_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.39.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val40_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.40.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val41_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.41.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val42_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.42.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val43_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.43.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val44_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.44.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val45_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.45.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val46_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.46.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val47_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.47.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val48_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.48.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val49_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.49.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val50_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.50.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val51_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.51.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val52_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.52.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val53_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        PREDISPOSIZIONE AUTOMATISMI
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.53.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val54_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.54.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val55_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.55.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val56_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.56.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val57_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.57.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val58_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.58.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val59_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        ASPIRAZIONE CENTRALIZZATA
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.59.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val60_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>{{ titles.60.description }}</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val61_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td class="row-title" colspan="{{ colCount + 1 }}">
+                                        RESOCONTO PLACCHE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 503</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val62_{{ item }}">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 504</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Supporti 506</strong>
+                                    </td>
+                                    {% for item in 1..colCount %}
+                                        <td>
+                                            <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                            </tbody>
+
+                            <div class="row">
+                                <div class="col-9"></div>
+                                <div class="col-3">
+                                    <div class="card card-generate ">
+                                        <div class="card-body pt-2 pb-4">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    {{ form_widget(form.submit) }}
+                                                    <!--<a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3 ">Genera</a>-->
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 ">Annulla</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ form_end(form) }}
+                        </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready( function () {
+                update({{ item.id }},'pp','val1');
+                update({{ item.id }},'pl','val8');
+                update({{ item.id }},'c1v','val6');
+                update({{ item.id }},'c2v','val41');
+                for(i=0; i < {{ colCount }}; i++) {
+                    $("#form_val63_" + i ).prop('disabled', true);
+                    $("#form_val64_" + i ).prop('disabled', true);
+                }
+                window.setTimeout(function() {
+                    calculate(62);
+                    for(i=0; i < {{ colCount }}; i++) {
+                        $("#form_val63_" + i ).prop('disabled', false);
+                        $("#form_val64_" + i ).prop('disabled', false);
+                    }
+                    },10000);
+                //check();
+            });
+
+            $('#appbundle_expertationsadvanced_submit').click(function(e) {
+                //e.preventDefault();
+                toastr.info("Genero Preventivo");
+                for(var i = 1; i < 65; i++) {
+                    $('#appbundle_expertationsadvanced_val' + i).val(collect('val' + i));
+                }
+                $('#appbundle_expertationsadvanced_father').val({{ item.id }});
+                $('#appbundle_expertationsadvanced_fatherFloor').val(0);
+                //$('#appbundle_expertationsadvanced_submit').trigger('click')
+            });
+
+            function collect(valn) {
+                var arr = [];
+                $('input[id^="form_' + valn + '_"]').each(function() {
+                    arr.push($(this).val());
+                });
+                return arr.join(",");
+            }
+
+            function update(exp,field,valn){
+                $.ajax({
+                    url: '/ajax/get/expData/' + exp + '/' + field,
+                    success: function (data) {
+                        for (var i = 0; i < {{ colCount }}; i++) {
+                            var numbersArray = data.split(',');
+                            $.each(numbersArray, function(index, value) {
+                                var ind = index +1;
+                                $('#form_'+ valn + '_' + ind).val(value);
+                            });
+
+                        }
+                    }
+                })
+            }
+            function calculate(field) {
+                for(var i = 0; i < {{ colCount }}; i++) {
+                    var ind = i +1;
+                    var values = parseInt($('#form_val1_' + ind ).val()) + parseInt($('#form_val6_' + ind ).val());
+                    console.log(values);
+                    $('#form_val' + field + '_' + ind ).val(values)
+                }
+            }
+            function check(i,f) {
+
+                var v = $("#form_val62_" + i).val(); //Let's say this is the value from PHP....
+                var preVal = 0;
+
+                $("#form_val62_" + i).val(v);
+
+                $("#form_val" + f + "_" + i).on("change keyup keydown", function(event) {
+                    let currVal = parseInt($("#form_val" + f + "_" + i).val());
+
+                    console.log(preVal);
+                    console.log(currVal);
+
+                    // store current positions in variables
+                    var start = this.selectionStart,
+                        end = this.selectionEnd;
+
+                    if (!currVal || currVal == 0) {
+                        preVal = 0;
+                        $("#form_val62_" + i).val(v);
+                    } else if (currVal <= v) {
+                        $("#form_val62_" + i).val((v - currVal) == 0 ? 0 : (v - currVal));
+                        preVal = currVal;
+                    } else {
+                        $("#form_val" + f + "_" + i).val(v);
+                    }
+
+                    this.setSelectionRange(start, end);
+
+                });
+            }
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $('#buttons').css('left','84%');
+            }
+        </script>
+    </div>
+</div>
+    <script src="{{ asset('js/jquery.collection.js') }}"></script>
+    <script type="text/javascript">
+        $('.collection').collection();
+    </script>
+    <script src="{{ asset('js/jquery.toastr.js') }}" type="text/javascript"></script>
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        .form-control {
+            width: 100px;
+            min-width: 100px;
+        }
+        .table td {
+            padding: 0;
+            min-height: 33px;
+            height: 33px;
+            font-size: 10px;
+        }
+        .table tr:hover {
+            background-color: #F0F0EE;
+        }
+        .table td input:focus {
+            background-color: #F0F0EE;
+        }
+        .table th {
+            text-align: center;
+            font-size:9px;
+            padding: 18px 8px;
+        }
+        .form-control {
+            /*border:none!important;*/
+            width: 100%!important;
+            text-align: center!important;
+            background-color: transparent;
+            border: none!important;
+        }
+        td strong {
+            padding-left:5px;
+        }
+        select {
+            width:100%!important;
+        }
+        #form_client {
+            max-width:85%;
+        }
+        .input-group label {
+            font-size: 13px;
+            line-height: 1;
+            vertical-align: top;
+        }
+        .card-generate {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-top-left-radius: 5px;
+            z-index:1;
+        }
+        @media only screen and (max-width: 600px) {
+            .card-generate {
+                position: fixed;
+                width: 100%;
+            }
+        }
+        .fixed {
+            top: 63px;
+            right: 0px;
+            left: 96%;
+            background: white;
+            width: 66px;
+            border: 1px lightgrey solid;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .wrapper2 {
+            width: 100%;
+            overflow: hidden;
+        }
+        .collapsed {
+            color: #308ee0;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid #308ee0!important;
+        }
+        .custom-control-label::before,
+        .custom-control-label::after {
+            top: 0rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .custom-control-label {
+            font-size: 16px!important;
+        }
+        .custom-form-control {
+            float: left!important;
+        }
+        .row-title {
+            background-color: #EEE;
+            padding-left: 20px!important;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ asset('css/jquery.toastr.min.css') }}">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset("js/jquery.fixedheadertable.min.js") }}"></script>
+    <script>
+        /*$('#scroll-r').click(function(e) {
+            e.preventDefault();
+            $(".table-2").animate({'left':'-=300px'}).scrollLeft();
+            console.log($(".table-2").width());
+            $("#scroll-r").attr("enabled","enabled");
+            console.log($(".table-2").position())
+
+        });
+        $('#scroll-l').click(function(e) {
+            e.preventDefault();
+            console.log($(".table-2").position());
+            if ($(".table-2").position.left >= 0) {
+                return;
+            }
+            $(".table-2").animate({'left': '+=300px'}).scrollLeft()
+        });*/
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 630) {
+                //$('#buttons').addClass('fixed-top').addClass('fixed').animate();
+                console.log("scrolled")
+                $('thead').css('position','fixed').css('top','63px').css('background','#FFF').width('93.2%');
+                $('.firstHead').width('13%');
+                $('.itemHead').width('8%');
+
+            } else {
+                $('thead').css('position','relative').css('top','63px').css('background','#FFF').width('100%');
+                //$('#buttons').removeClass('fixed-top').removeClass('fixed');
+                console.log("top");
+                //$('.selector').fixedHeaderTable('destroy');
+            }
+        });
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#nav-hide-btn-icon').trigger('click');
+            $('button[data-toggle="collapse"]').click(function(){
+                //log the id of the target
+                $(this).switchClass('btn-outline-primary','btn-primary');
+            });
+            /*$('.selector').fixedHeaderTable({
+                footer: true,
+                cloneHeadToFoot: true,
+                fixedColumn: true
+            });*/
+            /*$(".selector").CongelarFilaColumna({
+                Columnas:  1
+            });*/
+        });
+        function checkedAddon(id) {
+            $('.collapse-' + id).switchClass('btn-primary', 'btn-success');
+        }
+    </script>
+{% endblock %}

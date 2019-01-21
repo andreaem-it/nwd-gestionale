@@ -1577,6 +1577,122 @@ class ExpertationsController extends Controller
     }
 
     /**
+     * @Route("preventivi/modifica/avanzato/preventivo-{pid}", name="preventivi_modifica_avanzato")
+     */
+    public function editExpertationAdvancedAction(Request $request, $pid, $floor=0) {
+        $item = $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $pid]);
+        $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => $item->getId()]);
+
+        $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
+            ->add('submit', SubmitType::class, [
+                'label' => 'Modifica',
+                'attr' => [
+                    'class' => 'btn btn-success btn-block btn-sm mt-3   ',
+                ]
+            ]);
+        $id = $pid;
+        $pid = $this->convertPID($id);
+
+        $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($pid)->getAmbient();
+
+        $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $expAdv = $form->getData();
+
+            $expAdv->setFather($item->getId());
+            $expAdv->setFatherFloor(0);
+            $expAdv->setVal1(explode(',', $form->getData()->getVal1()));
+            $expAdv->setVal2(explode(',', $form->getData()->getVal2()));
+            $expAdv->setVal3(explode(',', $form->getData()->getVal3()));
+            $expAdv->setVal4(explode(',', $form->getData()->getVal4()));
+            $expAdv->setVal5(explode(',', $form->getData()->getVal5()));
+            $expAdv->setVal6(explode(',', $form->getData()->getVal6()));
+            $expAdv->setVal7(explode(',', $form->getData()->getVal7()));
+            $expAdv->setVal8(explode(',', $form->getData()->getVal8()));
+            $expAdv->setVal9(explode(',', $form->getData()->getVal9()));
+            $expAdv->setVal10(explode(',', $form->getData()->getVal10()));
+            $expAdv->setVal11(explode(',', $form->getData()->getVal11()));
+            $expAdv->setVal12(explode(',', $form->getData()->getVal12()));
+            $expAdv->setVal13(explode(',', $form->getData()->getVal13()));
+            $expAdv->setVal14(explode(',', $form->getData()->getVal14()));
+            $expAdv->setVal15(explode(',', $form->getData()->getVal15()));
+            $expAdv->setVal16(explode(',', $form->getData()->getVal16()));
+            $expAdv->setVal17(explode(',', $form->getData()->getVal17()));
+            $expAdv->setVal18(explode(',', $form->getData()->getVal18()));
+            $expAdv->setVal19(explode(',', $form->getData()->getVal19()));
+            $expAdv->setVal20(explode(',', $form->getData()->getVal20()));
+            $expAdv->setVal21(explode(',', $form->getData()->getVal21()));
+            $expAdv->setVal22(explode(',', $form->getData()->getVal22()));
+            $expAdv->setVal23(explode(',', $form->getData()->getVal23()));
+            $expAdv->setVal24(explode(',', $form->getData()->getVal24()));
+            $expAdv->setVal25(explode(',', $form->getData()->getVal25()));
+            $expAdv->setVal26(explode(',', $form->getData()->getVal26()));
+            $expAdv->setVal27(explode(',', $form->getData()->getVal27()));
+            $expAdv->setVal28(explode(',', $form->getData()->getVal28()));
+            $expAdv->setVal29(explode(',', $form->getData()->getVal29()));
+            $expAdv->setVal30(explode(',', $form->getData()->getVal30()));
+            $expAdv->setVal31(explode(',', $form->getData()->getVal31()));
+            $expAdv->setVal32(explode(',', $form->getData()->getVal32()));
+            $expAdv->setVal33(explode(',', $form->getData()->getVal33()));
+            $expAdv->setVal34(explode(',', $form->getData()->getVal34()));
+            $expAdv->setVal35(explode(',', $form->getData()->getVal35()));
+            $expAdv->setVal36(explode(',', $form->getData()->getVal36()));
+            $expAdv->setVal37(explode(',', $form->getData()->getVal37()));
+            $expAdv->setVal38(explode(',', $form->getData()->getVal38()));
+            $expAdv->setVal39(explode(',', $form->getData()->getVal39()));
+            $expAdv->setVal40(explode(',', $form->getData()->getVal40()));
+            $expAdv->setVal41(explode(',', $form->getData()->getVal41()));
+            $expAdv->setVal42(explode(',', $form->getData()->getVal42()));
+            $expAdv->setVal43(explode(',', $form->getData()->getVal43()));
+            $expAdv->setVal44(explode(',', $form->getData()->getVal44()));
+            $expAdv->setVal45(explode(',', $form->getData()->getVal45()));
+            $expAdv->setVal46(explode(',', $form->getData()->getVal46()));
+            $expAdv->setVal47(explode(',', $form->getData()->getVal47()));
+            $expAdv->setVal48(explode(',', $form->getData()->getVal48()));
+            $expAdv->setVal49(explode(',', $form->getData()->getVal49()));
+            $expAdv->setVal50(explode(',', $form->getData()->getVal50()));
+            $expAdv->setVal51(explode(',', $form->getData()->getVal51()));
+            $expAdv->setVal52(explode(',', $form->getData()->getVal52()));
+            $expAdv->setVal53(explode(',', $form->getData()->getVal53()));
+            $expAdv->setVal54(explode(',', $form->getData()->getVal54()));
+            $expAdv->setVal55(explode(',', $form->getData()->getVal55()));
+            $expAdv->setVal56(explode(',', $form->getData()->getVal56()));
+            $expAdv->setVal57(explode(',', $form->getData()->getVal57()));
+            $expAdv->setVal58(explode(',', $form->getData()->getVal58()));
+            $expAdv->setVal59(explode(',', $form->getData()->getVal59()));
+            $expAdv->setVal60(explode(',', $form->getData()->getVal60()));
+            $expAdv->setVal61(explode(',', $form->getData()->getVal61()));
+            $expAdv->setVal62(explode(',', $form->getData()->getVal62()));
+            $expAdv->setVal63(explode(',', $form->getData()->getVal63()));
+            $expAdv->setVal64(explode(',', $form->getData()->getVal64()));
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($expAdv);
+            $em->flush();
+
+            return $this->redirectToRoute('mostra_preventivo_avanzato', [
+                'pid' => $id
+            ]);
+
+        }
+
+
+
+        return $this->render('expertations/edit.advanced.html.twig', [
+            'form' => $form->createView(),
+            'item' => $item,
+            'titles' => $titles,
+            'func' => $this,
+            'count' => $ambientsCount,
+            //'url' => $_SERVER['REQUEST_URI'],
+            //'floor' => $floor
+        ]);
+    }
+
+    /**
      * @Route("preventivi/elimina/{id}/{confirm}", name="preventivi_elimina", defaults={"confirm" = false})
      */
     public function deleteExpertatationAction($id, $confirm = false) {
