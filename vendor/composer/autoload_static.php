@@ -8,10 +8,9 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
 {
     public static $files = array (
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
@@ -38,10 +37,6 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Polyfill\\Apcu\\' => 22,
-            'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\Templating\\' => 29,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\' => 18,
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
             'Symfony\\Bundle\\MonologBundle\\' => 29,
@@ -71,6 +66,12 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MakinaCorpus\\Calista\\View\\' => 26,
+            'MakinaCorpus\\Calista\\Twig\\' => 26,
+            'MakinaCorpus\\Calista\\Query\\' => 27,
+            'MakinaCorpus\\Calista\\Datasource\\' => 32,
+            'MakinaCorpus\\Calista\\Bridge\\Symfony\\' => 36,
+            'MakinaCorpus\\Autocomplete\\' => 26,
         ),
         'K' => 
         array (
@@ -90,7 +91,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             'Doctrine\\ORM\\' => 13,
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\DBAL\\' => 14,
+            'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -104,6 +108,7 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'A' => 
         array (
             'AppBundle\\' => 10,
+            'AntQa\\AjaxAutoCompleteBundle\\' => 29,
         ),
     );
 
@@ -147,22 +152,6 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         'Symfony\\Polyfill\\Apcu\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-apcu',
-        ),
-        'Symfony\\Component\\Yaml\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/yaml',
-        ),
-        'Symfony\\Component\\Translation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\Templating\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/templating',
-        ),
-        'Symfony\\Component\\HttpFoundation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
         'Symfony\\Component\\' => 
         array (
@@ -256,6 +245,30 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MakinaCorpus\\Calista\\View\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/makinacorpus/calista-core/calista-view/src',
+        ),
+        'MakinaCorpus\\Calista\\Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/makinacorpus/calista-core/calista-twig/src',
+        ),
+        'MakinaCorpus\\Calista\\Query\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/makinacorpus/calista-core/calista-query/src',
+        ),
+        'MakinaCorpus\\Calista\\Datasource\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/makinacorpus/calista-core/calista-datasource/src',
+        ),
+        'MakinaCorpus\\Calista\\Bridge\\Symfony\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/makinacorpus/calista-core/calista-bundle/src',
+        ),
+        'MakinaCorpus\\Autocomplete\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/makinacorpus/autocomplete-bundle/src',
+        ),
         'Knp\\Bundle\\PaginatorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
@@ -284,9 +297,21 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
+        'Doctrine\\DBAL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL',
+        ),
+        'Doctrine\\Common\\Lexer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+        ),
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -319,6 +344,10 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
         array (
             0 => __DIR__ . '/../..' . '/src/AppBundle',
         ),
+        'AntQa\\AjaxAutoCompleteBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/piotrantosik/ajax-autocomplete-bundle',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -345,21 +374,6 @@ class ComposerStaticInit9f017761760129ca9691389c68198d27
             'Goodby\\CSV' => 
             array (
                 0 => __DIR__ . '/..' . '/goodby/csv/src',
-            ),
-        ),
-        'D' => 
-        array (
-            'Doctrine\\DBAL\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
-            ),
-            'Doctrine\\Common\\Lexer\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
-            ),
-            'Doctrine\\Common\\Collections\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
     );

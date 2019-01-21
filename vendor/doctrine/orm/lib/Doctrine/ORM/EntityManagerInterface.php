@@ -174,7 +174,7 @@ interface EntityManagerInterface extends ObjectManager
      * @param string $entityName The name of the entity type.
      * @param mixed  $identifier The entity identifier.
      *
-     * @return object The (partial) entity reference.
+     * @return object|null The (partial) entity reference.
      */
     public function getPartialReference($entityName, $identifier);
 
@@ -189,6 +189,8 @@ interface EntityManagerInterface extends ObjectManager
 
     /**
      * Creates a copy of the given entity. Can create a shallow or a deep copy.
+     *
+     * @deprecated method will be removed in 3.0
      *
      * @param object  $entity The entity to copy.
      * @param boolean $deep   FALSE for a shallow copy, TRUE for a deep copy.
@@ -249,7 +251,7 @@ interface EntityManagerInterface extends ObjectManager
     *
     * @deprecated
     *
-    * @param int $hydrationMode
+    * @param string|int $hydrationMode
     *
     * @return \Doctrine\ORM\Internal\Hydration\AbstractHydrator
     */
@@ -258,7 +260,7 @@ interface EntityManagerInterface extends ObjectManager
     /**
      * Create a new instance for the given hydration mode.
      *
-     * @param int $hydrationMode
+     * @param string|int $hydrationMode
      *
      * @return \Doctrine\ORM\Internal\Hydration\AbstractHydrator
      *

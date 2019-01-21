@@ -10,7 +10,4 @@ return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Knp\\Component' => array($vendorDir . '/knplabs/knp-components/src'),
     'Goodby\\CSV' => array($vendorDir . '/goodby/csv/src'),
-    'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
-    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
-    'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
 );

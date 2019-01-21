@@ -1,0 +1,85 @@
+{
+    "name": "makinacorpus/calista-core",
+    "description": "Set of tools to build data set queries and attach them within http context",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Lonny Loquesol",
+            "email": "lonny.loquesol@makina-corpus.com"
+        },
+        {
+            "name": "Pierre Rineau",
+            "email": "pierre.rineau@makina-corpus.com"
+        },
+        {
+            "name": "Régis Leroy",
+            "email": "regis.leroy@makina-corpus.com"
+        },
+        {
+            "name": "Sébastien Corbin",
+            "email": "sebastien.corbin@makina-corpus.com"
+        },
+        {
+            "name": "Yannick Chabbert",
+            "email": "yannick.chabbert@makina-corpus.com"
+        },
+        {
+            "name": "Makina Corpus",
+            "homepage": "http://makina-corpus.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "7.0.20"
+        }
+    },
+    "require": {
+        "php": ">=7",
+        "symfony/event-dispatcher": "^3.4|^4",
+        "symfony/http-foundation": "^3.4|^4",
+        "symfony/options-resolver": "^3.4|^4",
+        "symfony/property-access": "^3.4|^4",
+        "symfony/property-info": "^3.4|^4"
+    },
+    "require-dev": {
+        "box/spout": "^2.7",
+        "phpunit/phpunit": "^6",
+        "symfony/config": "^3.4|^4",
+        "symfony/console": "^3.4|^4",
+        "symfony/dependency-injection": "^3.4|^4",
+        "symfony/framework-bundle": "^3.4|^4",
+        "symfony/http-kernel": "^3.4|^4",
+        "twig/twig": "^2.5"
+    },
+    "replace": {
+        "makinacorpus/calista-datasource": "self.version",
+        "makinacorpus/calista-query": "self.version",
+        "makinacorpus/calista-view": "self.version"
+    },
+    "suggest": {
+        "box/spout ^2.7": "For XLSX (Excel) stream view support",
+        "symfony/property-access": "For dynamic property access in view component",
+        "symfony/property-info": "For dynamic property introspection in view component"
+    },
+    "autoload": {
+        "psr-4": {
+            "MakinaCorpus\\Calista\\Bridge\\Symfony\\": "calista-bundle/src/",
+            "MakinaCorpus\\Calista\\Datasource\\": "calista-datasource/src/",
+            "MakinaCorpus\\Calista\\Query\\": "calista-query/src/",
+            "MakinaCorpus\\Calista\\Twig\\": "calista-twig/src/",
+            "MakinaCorpus\\Calista\\View\\": "calista-view/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MakinaCorpus\\Calista\\Bridge\\Symfony\\Tests\\": "calista-bundle/tests/",
+            "MakinaCorpus\\Calista\\Datasource\\Tests\\": "calista-datasource/tests/",
+            "MakinaCorpus\\Calista\\Query\\Tests\\": "calista-query/tests/",
+            "MakinaCorpus\\Calista\\Twig\\Tests\\": "calista-twig/tests/",
+            "MakinaCorpus\\Calista\\View\\Tests\\": "calista-view/tests/"
+        }
+    }
+}

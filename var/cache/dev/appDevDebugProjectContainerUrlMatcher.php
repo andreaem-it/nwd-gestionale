@@ -337,9 +337,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
-            elseif (0 === strpos($pathinfo, '/profilo')) {
+            elseif (0 === strpos($pathinfo, '/profile')) {
                 // fos_user_profile_show
-                if ('/profilo' === $trimmedPathinfo) {
+                if ('/profile' === $trimmedPathinfo) {
                     $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
                     if ('/' === substr($pathinfo, -1)) {
                         // no-op
@@ -359,7 +359,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 not_fos_user_profile_show:
 
                 // fos_user_profile_edit
-                if ('/profilo/edit' === $pathinfo) {
+                if ('/profile/edit' === $pathinfo) {
                     $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
@@ -371,7 +371,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 not_fos_user_profile_edit:
 
                 // fos_user_change_password
-                if ('/profilo/change-password' === $pathinfo) {
+                if ('/profile/change-password' === $pathinfo) {
                     $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
@@ -596,9 +596,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/registra')) {
+        elseif (0 === strpos($pathinfo, '/register')) {
             // fos_user_registration_register
-            if ('/registra' === $trimmedPathinfo) {
+            if ('/register' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'fos_user.registration.controller:registerAction',  '_route' => 'fos_user_registration_register',);
                 if ('/' === substr($pathinfo, -1)) {
                     // no-op
@@ -618,7 +618,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             not_fos_user_registration_register:
 
             // fos_user_registration_check_email
-            if ('/registra/check-email' === $pathinfo) {
+            if ('/register/check-email' === $pathinfo) {
                 $ret = array (  '_controller' => 'fos_user.registration.controller:checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
                 if (!in_array($canonicalMethod, array('GET'))) {
                     $allow = array_merge($allow, array('GET'));
@@ -629,9 +629,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_fos_user_registration_check_email:
 
-            if (0 === strpos($pathinfo, '/registra/confirm')) {
+            if (0 === strpos($pathinfo, '/register/confirm')) {
                 // fos_user_registration_confirm
-                if (preg_match('#^/registra/confirm/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                if (preg_match('#^/register/confirm/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
                     $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_registration_confirm')), array (  '_controller' => 'fos_user.registration.controller:confirmAction',));
                     if (!in_array($canonicalMethod, array('GET'))) {
                         $allow = array_merge($allow, array('GET'));
@@ -643,7 +643,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 not_fos_user_registration_confirm:
 
                 // fos_user_registration_confirmed
-                if ('/registra/confirmed' === $pathinfo) {
+                if ('/register/confirmed' === $pathinfo) {
                     $ret = array (  '_controller' => 'fos_user.registration.controller:confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
                     if (!in_array($canonicalMethod, array('GET'))) {
                         $allow = array_merge($allow, array('GET'));

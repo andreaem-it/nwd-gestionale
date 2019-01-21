@@ -274,6 +274,7 @@ in your application:
         firewalls:
             main:
                 pattern: ^/
+                user_checker: fos_user.user_checker
                 form_login:
                     provider: fos_userbundle
                     csrf_token_generator: security.csrf.token_manager
@@ -360,7 +361,7 @@ of datastore you are using.
             user-class="AppBundle\Entity\User"
         />
 
-Only four configuration's node are required to use the bundle:
+Only four configuration's nodes are required to use the bundle:
 
 * The type of datastore you are using (``orm``, ``mongodb`` or ``couchdb``).
 * The firewall name which you configured in Step 4.

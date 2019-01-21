@@ -11,7 +11,6 @@
 
 namespace FOS\UserBundle\Controller;
 
-use AppBundle\Entity\Users;
 use FOS\UserBundle\Event\FilterUserResponseEvent;
 use FOS\UserBundle\Event\FormEvent;
 use FOS\UserBundle\Event\GetResponseUserEvent;
@@ -54,11 +53,8 @@ class ProfileController extends Controller
             throw new AccessDeniedException('This user does not have access to this section.');
         }
 
-        $childs = $this->getDoctrine()->getRepository(Users::class)->findBy(['father' => $this->getUser()->getId()]);
-
         return $this->render('@FOSUser/Profile/show.html.twig', array(
             'user' => $user,
-            'childs' => $childs
         ));
     }
 

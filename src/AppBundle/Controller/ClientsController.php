@@ -3,6 +3,8 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Clients;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Users;
 use Doctrine\ORM\Query\Expr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -13,10 +15,10 @@ use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\Email;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class ClientsController extends Controller
 {
@@ -25,8 +27,8 @@ class ClientsController extends Controller
      */
     public function ClientsAction(Request $request) {
 
-        if($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
-            $em    = $this->get('doctrine.orm.entity_manager');
+        if ($this->getUser()->getRoles('ROLE_ADMIN')) {
+            $em    = $this->getDoctrine()->getManager();
             $dql   = "SELECT a FROM AppBundle:Clients a";
             $query = $em->createQuery($dql);
 
@@ -304,7 +306,7 @@ class ClientsController extends Controller
             ->getQuery()
             ->getArrayResult();
 
-        return new JsonResponse($objects);
+        return new Response(json_encode($objects));
     }
 
     /**
