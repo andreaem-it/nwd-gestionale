@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5b4971-7656-44fb-8f94-502be161f08c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/README.md" afterDir="false" />
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14820">
-              <caret line="1015" column="24" selection-start-line="1015" selection-start-column="24" selection-end-line="1015" selection-end-column="24" />
+            <state relative-caret-position="212">
+              <caret line="716" selection-start-line="716" selection-end-line="716" />
               <folding>
                 <element signature="e#40#64#0#PHP" expanded="true" />
               </folding>
@@ -76,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="510">
               <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
@@ -125,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Linea</find>
       <find>Impianto</find>
       <find>Allaccio di</find>
       <find>Termosta</find>
@@ -155,6 +154,7 @@
       <find>scroll</find>
       <find>animsition-link</find>
       <find>animsition</find>
+      <find>dump</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
@@ -239,7 +239,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/stats/summary.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/new.advanced.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/StatsController.php" />
@@ -247,6 +246,7 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
       </list>
     </option>
   </component>
@@ -811,12 +811,12 @@
       <workItem from="1547477709494" duration="8039000" />
       <workItem from="1547651062591" duration="14514000" />
       <workItem from="1547822672197" duration="7490000" />
-      <workItem from="1548082259922" duration="1280000" />
+      <workItem from="1548082259922" duration="1446000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="605481000" />
+    <option name="totallyTimeSpent" value="605647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1096,16 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14820">
-          <caret line="1015" column="24" selection-start-line="1015" selection-start-column="24" selection-end-line="1015" selection-end-column="24" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16785">
@@ -1156,8 +1146,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="510">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="716" selection-start-line="716" selection-end-line="716" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

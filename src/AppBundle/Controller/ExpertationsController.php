@@ -133,8 +133,6 @@ class ExpertationsController extends Controller
             $gotAdv = false;
         }
 
-        dump($gotAdv);
-
         return $this->render('expertations/show.html.twig', [
             'functions' => $this,
             'item' => $item,
@@ -464,7 +462,6 @@ class ExpertationsController extends Controller
     public function expertationsEditAction(Request $request,$id) {
 
         $expertations = $this->getDoctrine()->getRepository(Expertations::class)->find($id);
-        dump($expertations->getClient());
 
         $form = $this->createFormBuilder($expertations)
             ->add('pid', TextType::class , [
@@ -717,7 +714,6 @@ class ExpertationsController extends Controller
             ])
             ->getForm();
 
-        dump($form);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
@@ -1013,8 +1009,6 @@ class ExpertationsController extends Controller
             $id = $this->convertPID($pid);
             $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
 
-            dump($item);
-
         if($item != null) {
 
             $total = 0;
@@ -1068,11 +1062,7 @@ class ExpertationsController extends Controller
             $pid = $this->convertPID($id);
             $ambientsCount = $this->getDoctrine()->getRepository(Expertations::class)->find($pid)->getAmbient();
 
-            dump($ambientsCount);
-
             $titles = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findAll();
-
-            dump($titles);
 
             //$check = $this->getDoctrine()->getRepository(ExpertationsAdvancedLines::class)->findOneBy(['father' => $id]);
 
@@ -1164,8 +1154,6 @@ class ExpertationsController extends Controller
                 $em->persist($expAdv);
                 $em->flush();
 
-                dump($form);
-
                 return $this->redirectToRoute('mostra_preventivo_avanzato', [
                     'pid' => $id
                 ]);
@@ -1214,8 +1202,6 @@ class ExpertationsController extends Controller
         } elseif ($qtyTP == 0) {
             $calcTPCable = 0;
         }
-
-        dump(array_sum($itemAdv->getVal33()));
 
         $prices = array();
 
@@ -1567,12 +1553,6 @@ class ExpertationsController extends Controller
         $item->setPrice($total);
         $this->getDoctrine()->getManager()->persist($item);
         $this->getDoctrine()->getManager()->flush();
-
-
-
-
-
-        dump($itemsAdvArray);
 
         return $this->render('expertations/details.advanced.html.twig',[
             'item' => $item,
