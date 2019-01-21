@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5b4971-7656-44fb-8f94-502be161f08c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/clients/clients.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/clients/clients.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/clients/delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/clients/delete.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/clients/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/clients/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/ajax/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/delete.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/new.advanced.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/new.advanced.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/template/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/template/sidebar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/data_dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/data_dev.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/data_prod.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/data_prod.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/05/0500d8039b91259c2997d1c49a16906fe9e9a606fda2f53863f77d3867e0497e.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/05/0500d8039b91259c2997d1c49a16906fe9e9a606fda2f53863f77d3867e0497e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/4b/4b96e4564c7e6ba4d9f51fdf3e26c2dc944442ca4a65ad1ae6c91874856eddbb.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/4b/4b96e4564c7e6ba4d9f51fdf3e26c2dc944442ca4a65ad1ae6c91874856eddbb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/7f/7fe81428868a7f26bd849ad807a8612338ba3c3e69f4edc9004ad843d23fb7e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/7f/7fe81428868a7f26bd849ad807a8612338ba3c3e69f4edc9004ad843d23fb7e8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/d1/d198dad36d52c658531a6ee7b307ac2b35eb49e3bc1aec87c086e5061c3e3571.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d1/d198dad36d52c658531a6ee7b307ac2b35eb49e3bc1aec87c086e5061c3e3571.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_rab1kpvm4nkis3u42udaef9l0e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/README.md" afterDir="false" />
@@ -36,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/animsition.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/animsition.min.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+            <state relative-caret-position="-12">
+              <caret line="9" column="90" lean-forward="true" selection-start-line="9" selection-start-column="90" selection-end-line="9" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -101,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="87" column="52" selection-start-line="85" selection-start-column="40" selection-end-line="87" selection-end-column="52" />
+            <state relative-caret-position="212">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -260,7 +235,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/list.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/template/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/stats/summary.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
@@ -272,6 +246,7 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" />
       </list>
     </option>
   </component>
@@ -836,12 +811,12 @@
       <workItem from="1547477709494" duration="8039000" />
       <workItem from="1547651062591" duration="14514000" />
       <workItem from="1547822672197" duration="7490000" />
-      <workItem from="1548082259922" duration="673000" />
+      <workItem from="1548082259922" duration="1280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604874000" />
+    <option name="totallyTimeSpent" value="605481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" column="52" selection-start-line="85" selection-start-column="40" selection-end-line="87" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/new.advanced.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38955">
@@ -1181,8 +1149,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="-12">
+          <caret line="9" column="90" lean-forward="true" selection-start-line="9" selection-start-column="90" selection-end-line="9" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
