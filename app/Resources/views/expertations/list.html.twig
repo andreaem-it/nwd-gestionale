@@ -86,12 +86,12 @@
                                             {{ item.date|date("d-m-Y") }}
                                         </td>
                                         <td>
-                                            <a class=" animsition-link" href="{{ url('vedi_clienti', { id : item.client}) }}">
+                                            <a class=" " href="{{ url('vedi_clienti', { id : item.client}) }}">
                                                 {% if functions.uidToType(item.client) == 1 %} {{ functions.uidToRagSoc(item.client) }} {% else %}{{ functions.uidToSurName(item.client) }} {{ functions.uidToName(item.client) }}{% endif %}
                                             </a>
                                         </td>
                                         <td>
-                                            <a class=" animsition-link" href="{{ url('impostazioni_utenti') }}">
+                                            <a class=" " href="{{ url('impostazioni_utenti') }}">
                                                 {{ functions.userToName(item.createdBy) }}
                                             </a>
                                         </td>
@@ -112,16 +112,16 @@
                                         </td>#}
                                         <td style="max-width: 200px;">
                                             <div class="btn-group">
-                                                <a href="{% if item.status == 0 %}{{ url('preventivi_imposta_accettato', {'id': item.id }) }}{% else %}{{ url('preventivi_imposta_non_accettato', {'id': item.id }) }}{% endif %}" class="btn {% if item.status == 0 %}btn-success{% else %} btn-secondary{% endif %} btn-sm animsition-link" data-toggle="tooltip" data-placement="top" title="{% if item.status == 0 %}Imposta come Accettato{% elseif item.status == 1 %}Imposta come Non Accettato{% endif %}">
+                                                <a href="{% if item.status == 0 %}{{ url('preventivi_imposta_accettato', {'id': item.id }) }}{% else %}{{ url('preventivi_imposta_non_accettato', {'id': item.id }) }}{% endif %}" class="btn {% if item.status == 0 %}btn-success{% else %} btn-secondary{% endif %} btn-sm " data-toggle="tooltip" data-placement="top" title="{% if item.status == 0 %}Imposta come Accettato{% elseif item.status == 1 %}Imposta come Non Accettato{% endif %}">
                                                     <span class="{% if item.status == 0 %}mdi mdi-check{% else %}fa fa-times pl-1{% endif %}"></span>
                                                 </a>
-                                                <a href="{{ url('mostra_preventivo',{'pid' : item.pid}) }}" class="btn btn-primary btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Mostra Preventivo">
+                                                <a href="{{ url('mostra_preventivo',{'pid' : item.pid}) }}" class="btn btn-primary btn-sm float-right " data-toggle="tooltip" data-placement="top" title="Mostra Preventivo">
                                                     <span class="mdi mdi-eye-outline"></span>
                                                 </a>
-                                                <a href="" class="btn btn-warning btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Modifica Preventivo">
+                                                <a href="" class="btn btn-warning btn-sm float-right " data-toggle="tooltip" data-placement="top" title="Modifica Preventivo">
                                                     <span class="mdi mdi-table-edit"></span>
                                                 </a>
-                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right animsition-link" data-toggle="tooltip" data-placement="top" title="Elimina Preventivo">
+                                                <a href="{{ url('preventivi_elimina' , {'id' : item.id , 'confirm' : false}) }}" class="btn btn-danger btn-sm float-right " data-toggle="tooltip" data-placement="top" title="Elimina Preventivo">
                                                     <span class="mdi mdi-delete"></span>
                                                 </a>
                                             </div>

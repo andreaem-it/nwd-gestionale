@@ -28,7 +28,7 @@ class __TwigTemplate_34d3c3ec503877729086149efd3a972f33fcfc425198bec8e8a38521778
         // line 1
         echo "<nav class=\"navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row\" style=\"background: #759EB8!important;\">
       <div class=\"text-center navbar-brand-wrapper d-flex align-items-top justify-content-center\" style=\"background: none\">
-        <a class=\"navbar-brand brand-logo hidden-md-down  animsition-link\" href=\"";
+        <a class=\"navbar-brand brand-logo hidden-md-down  \" href=\"";
         // line 3
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("homepage");
         echo "\">
@@ -37,7 +37,7 @@ class __TwigTemplate_34d3c3ec503877729086149efd3a972f33fcfc425198bec8e8a38521778
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo_nwd_mini.png"), "html", null, true);
         echo "\" alt=\"logo\" style=\"height:100%!important\"/>
         </a>
-        <a class=\"navbar-brand brand-logo-mini  animsition-link\" href=\"";
+        <a class=\"navbar-brand brand-logo-mini  \" href=\"";
         // line 6
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("homepage");
         echo "\" style=\"min-width: 130px;margin-left: 60px;\">
@@ -142,13 +142,13 @@ class __TwigTemplate_34d3c3ec503877729086149efd3a972f33fcfc425198bec8e8a38521778
               <a href=\"";
         // line 91
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("security_change_password");
-        echo "\" class=\"dropdown-item  animsition-link\">
+        echo "\" class=\"dropdown-item  \">
                 Cambia Password
               </a>
               <a href=\"";
         // line 94
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
-        echo "\" class=\"dropdown-item animsition-link\">
+        echo "\" class=\"dropdown-item \">
                 Esci
               </a>
             </div>
@@ -198,10 +198,10 @@ class __TwigTemplate_34d3c3ec503877729086149efd3a972f33fcfc425198bec8e8a38521778
     {
         return new Twig_Source("<nav class=\"navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row\" style=\"background: #759EB8!important;\">
       <div class=\"text-center navbar-brand-wrapper d-flex align-items-top justify-content-center\" style=\"background: none\">
-        <a class=\"navbar-brand brand-logo hidden-md-down  animsition-link\" href=\"{{ url('homepage') }}\">
+        <a class=\"navbar-brand brand-logo hidden-md-down  \" href=\"{{ url('homepage') }}\">
           <img src=\"{{ asset('images/logo_nwd_mini.png') }}\" alt=\"logo\" style=\"height:100%!important\"/>
         </a>
-        <a class=\"navbar-brand brand-logo-mini  animsition-link\" href=\"{{ url('homepage') }}\" style=\"min-width: 130px;margin-left: 60px;\">
+        <a class=\"navbar-brand brand-logo-mini  \" href=\"{{ url('homepage') }}\" style=\"min-width: 130px;margin-left: 60px;\">
           <img src=\"{{ asset('images/logo_nwd_mini.png') }}\" alt=\"logo\" style=\"height:100%!important;width: 350px\"/>
         </a>
       </div>
@@ -286,10 +286,10 @@ class __TwigTemplate_34d3c3ec503877729086149efd3a972f33fcfc425198bec8e8a38521778
                   {#</div>#}
                 </div>
               </a>
-              <a href=\"{{ url('security_change_password') }}\" class=\"dropdown-item  animsition-link\">
+              <a href=\"{{ url('security_change_password') }}\" class=\"dropdown-item  \">
                 Cambia Password
               </a>
-              <a href=\"{{ path('logout') }}\" class=\"dropdown-item animsition-link\">
+              <a href=\"{{ path('logout') }}\" class=\"dropdown-item \">
                 Esci
               </a>
             </div>

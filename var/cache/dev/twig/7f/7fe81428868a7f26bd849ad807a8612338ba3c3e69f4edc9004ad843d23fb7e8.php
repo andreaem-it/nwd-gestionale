@@ -97,7 +97,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
         // line 25
         $this->loadTemplate("template/navbar.html.twig", "base.html.twig", 25)->display($context);
         // line 26
-        echo "            <div class=\"container-fluid page-body-wrapper animsition\">
+        echo "            <div class=\"container-fluid page-body-wrapper\">
                 ";
         // line 27
         $this->loadTemplate("template/sidebar.html.twig", "base.html.twig", 27)->display($context);
@@ -124,7 +124,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
                     outClass: 'fade-out',
                     inDuration: 1500,
                     outDuration: 800,
-                    linkElement: '.animsition-link',
+                    linkElement: '.',
                     loading: false,
                     loadingParentElement: 'body',
                     loadingClass: 'animsition-loading',
@@ -260,7 +260,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
     <body>
         <div class=\"container-scroller\">
             {% include 'template/navbar.html.twig' %}
-            <div class=\"container-fluid page-body-wrapper animsition\">
+            <div class=\"container-fluid page-body-wrapper\">
                 {% include 'template/sidebar.html.twig' %}
                 {% block body %}{% endblock %}
             </div>
@@ -277,7 +277,7 @@ class __TwigTemplate_02799d41ee91245872127e615766b04876c483ca0e4fc02254e9a81a912
                     outClass: 'fade-out',
                     inDuration: 1500,
                     outDuration: 800,
-                    linkElement: '.animsition-link',
+                    linkElement: '.',
                     loading: false,
                     loadingParentElement: 'body',
                     loadingClass: 'animsition-loading',

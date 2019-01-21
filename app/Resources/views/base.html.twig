@@ -23,7 +23,7 @@
     <body>
         <div class="container-scroller">
             {% include 'template/navbar.html.twig' %}
-            <div class="container-fluid page-body-wrapper animsition">
+            <div class="container-fluid page-body-wrapper">
                 {% include 'template/sidebar.html.twig' %}
                 {% block body %}{% endblock %}
             </div>
@@ -40,7 +40,7 @@
                     outClass: 'fade-out',
                     inDuration: 1500,
                     outDuration: 800,
-                    linkElement: '.animsition-link',
+                    linkElement: '.',
                     loading: false,
                     loadingParentElement: 'body',
                     loadingClass: 'animsition-loading',

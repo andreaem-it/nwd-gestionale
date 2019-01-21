@@ -4347,10 +4347,10 @@ class __TwigTemplate_220f25c12a12468fd8951b66b94af79451757cd6021c89e91db3e2bf626
         // line 2351
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 2351, $this->source); })()), "submit", array()), 'widget');
         echo "
-                                                    <!--<a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 animsition-link\">Genera</a>-->
+                                                    <!--<a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 \">Genera</a>-->
                                                 </div>
                                                 <div class=\"col-6\">
-                                                    <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3 animsition-link\">Annulla</a>
+                                                    <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3 \">Annulla</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -7079,10 +7079,10 @@ class __TwigTemplate_220f25c12a12468fd8951b66b94af79451757cd6021c89e91db3e2bf626
                                             <div class=\"row\">
                                                 <div class=\"col-6\">
                                                     {{ form_widget(form.submit) }}
-                                                    <!--<a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 animsition-link\">Genera</a>-->
+                                                    <!--<a href=\"\" id=\"generateBtn\" class=\"btn btn-success btn-block btn-sm mt-3 \">Genera</a>-->
                                                 </div>
                                                 <div class=\"col-6\">
-                                                    <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3 animsition-link\">Annulla</a>
+                                                    <a href=\"\" class=\"btn btn-outline-danger btn-block btn-sm mt-3 \">Annulla</a>
                                                 </div>
                                             </div>
                                         </div>
