@@ -448,7 +448,7 @@ class ExpertationsController extends Controller
 
             $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
             $json = $serializer->serialize($form->getData(), 'json');
-            return $this->redirectToRoute('mostra_preventivo', ['id' => $form->getData()->getId()]);
+            return $this->redirectToRoute('mostra_preventivo', ['pid' => $expertations->getPid()]);
         }
 
         return $this->render('expertations/new.html.twig', [
@@ -796,7 +796,6 @@ class ExpertationsController extends Controller
         }
 
         /** Punti comando Aggiuntivi */
-        array_push($prices,($itemAdv->getVal7() * $price->findByCode('15.1.15.2')));
 
         /** Estrattore */
 
@@ -1006,7 +1005,7 @@ class ExpertationsController extends Controller
     public function showExpertationAdvancedAction($pid) {
 
             $data = $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $pid]);
-            $id = $this->convertPID($pid);
+            $id = $data->getPid();
             $item = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id]);
 
         if($item != null) {
@@ -1041,22 +1040,22 @@ class ExpertationsController extends Controller
     /**
      * @Route("preventivi/avanzato/nuovo/preventivo-{id}", name="nuovo_preventivo_avanzato")
      */
-    public function newExpertationAdvancedAction(Request $request,$id,$floor = 0) {
+    public function newExpertationAdvancedAction(Request $request,$id) {
 
         /*if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
             return $this->redirectToRoute('mostra_preventivo_avanzato', ['pid' => $id]);
         } else {*/
-            //$item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['id' => $id]);
-            $qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
-            $qb->select('exp')
-                ->where($qb->expr()->orX(
-                    $qb->expr()->eq('exp.pid', ':id'),
-                    $qb->expr()->eq('exp.floor', ':floor')))
-                ->setParameter('id', $id)
-                ->setParameter('floor', array($floor));
-            $item = $qb->getQuery()->getSingleResult();
+            $item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['pid' => $id]);
+            /*$qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
+            $qb ->select('exp')
+                ->where('exp.pid', ':id')
+                ->setParameter('id', $id);
+            $item = $qb->getQuery()->getSingleResult();*/
+            dump($item);
 
             //$expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
+            $floor = 0;
+
             $expertationsAdvanced = new ExpertationsAdvanced();
 
             $pid = $this->convertPID($id);
@@ -1082,7 +1081,7 @@ class ExpertationsController extends Controller
             if ($form->isSubmitted() && $form->isValid()) {
                 $expAdv = $form->getData();
 
-                $expAdv->setFather($item->getId());
+                $expAdv->setFather($item[0]->getPid());
                 $expAdv->setFatherFloor($floor);
                 $expAdv->setVal1(explode(',', $form->getData()->getVal1()));
                 $expAdv->setVal2(explode(',', $form->getData()->getVal2()));

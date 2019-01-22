@@ -16,6 +16,6 @@ if (!\class_exists(appDevDebugProjectContainer::class, false)) {
 
 return new \ContainerWijb4nd\appDevDebugProjectContainer(array(
     'container.build_hash' => 'Wijb4nd',
-    'container.build_id' => 'd3483017',
-    'container.build_time' => 1548092122,
+    'container.build_id' => '98c86165',
+    'container.build_time' => 1548172171,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerWijb4nd');
