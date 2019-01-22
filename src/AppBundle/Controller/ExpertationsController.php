@@ -171,9 +171,9 @@ class ExpertationsController extends Controller
                     return $er->createQueryBuilder('u')
                         ->where('u.refereer = :uid')
                         ->setParameter('uid', $this->getUser()->getId())
-                        ->orderBy('u.name', 'ASC');
+                        ->orderBy('u.finalName', 'ASC');
                 },
-                'choice_label' => 'name',
+                'choice_label' => 'final_name',
                 'choice_value' => 'id',
                 'label' => 'Cliente',
                 'attr' => ['class' => 'form-control']

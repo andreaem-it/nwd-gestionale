@@ -111,6 +111,12 @@ class Clients
      */
     private $refereer;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="final_name", type="string", nullable=true)
+     */
+    private $finalName;
 
     /**
      * Get id
@@ -448,5 +454,29 @@ class Clients
     public function getRagioneSociale()
     {
         return $this->ragione_sociale;
+    }
+
+    /**
+     * Set finalName.
+     *
+     * @param string|null $finalName
+     *
+     * @return Clients
+     */
+    public function setFinalName($finalName = null)
+    {
+        $this->finalName = $finalName;
+
+        return $this;
+    }
+
+    /**
+     * Get finalName.
+     *
+     * @return string|null
+     */
+    public function getFinalName()
+    {
+        return $this->finalName;
     }
 }

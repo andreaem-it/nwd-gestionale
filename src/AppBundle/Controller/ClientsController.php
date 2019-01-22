@@ -43,7 +43,7 @@ class ClientsController extends Controller
             ]);
         } else {
             $em    = $this->get('doctrine.orm.entity_manager');
-            $dql   = "SELECT a FROM AppBundle:Cliets a WHERE a.refereer=" . $this->getUser();
+            $dql   = "SELECT a FROM AppBundle:Clients a WHERE a.refereer=" . $this->getUser();
             $query = $em->createQuery($dql);
 
             $paginator  = $this->get('knp_paginator');
@@ -116,7 +116,6 @@ class ClientsController extends Controller
             ->add('genre', ChoiceType::class, [
                 'choices' => [
                     '-- Seleziona --' => '',
-                    'Azienda' => 0,
                     'Uomo' => 1,
                     'Donna' => 2
                 ],
@@ -171,6 +170,12 @@ class ClientsController extends Controller
             $client = $form->getData();
 
             $client->setRefereer($this->getUser()->getId());
+            if ($form->getData()->getType() == 2) {
+                $client->setFinalName($form->getData()->getSurname() . " " . $form->getData()->getName());
+            } else {
+                $client->setFinalName($form->getData()->getRagioneSociale());
+            }
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($client);
