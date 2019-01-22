@@ -183,3 +183,7 @@ dc818a,127.0.0.1,GET,http://localhost:8000/preventivi/nuovo,1548177877,,200
 887e8d,127.0.0.1,GET,http://localhost:8000/preventivi/nuovo,1548177902,bcc264,200
 bcc264,127.0.0.1,GET,http://localhost:8000/preventivi/nuovo,1548177902,,500
 e8588f,127.0.0.1,GET,http://localhost:8000/preventivi/nuovo,1548177912,,200
+ed4dab,127.0.0.1,GET,http://localhost:8000/preventivi/lista,1548179276,,200
+b8f781,127.0.0.1,GET,http://localhost:8000/preventivi/mostra/preventivo-0023,1548179280,,200
+375ed6,127.0.0.1,GET,http://localhost:8000/preventivi/avanzato/mostra/preventivo-0023,1548179284,,200
+1053a6,127.0.0.1,GET,http://localhost:8000/preventivi/nuovo,1548179553,,200
