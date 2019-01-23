@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block title %}Preventivo{% endblock %}
 {% block body %}
+    {% dump(clients) %}
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -8,6 +10,11 @@
                 <h3>Preventivo <small>Nuovo > Base</small></h3>
             </div>
         </div>
+        {% if clients == null %}
+            <div class="alert alert-info">
+                <strong>Attenzione:</strong> Non hai alcun cliente in anagrafica, inseriscilo prima di generare il preventivo
+            </div>
+        {% endif %}
         {{ form_start(form) }}
         {{ form_errors(form) }}
         <div class="mt-3">
@@ -431,7 +438,7 @@
                     </div>
                     <button type="button"
                             class="add-another-collection-widget btn btn-outline-primary btn-block mt-4"
-                            data-list="#email-fields-list"><i class="fa fa-plus-circle"></i>Aggiungi riga</button>
+                            data-list="#email-fields-list"><i class="fa fa-plus-circle"></i>Aggiungi Ambiente</button>
                     <script>
                         var distance = $('#table-head').offset().top;
 
