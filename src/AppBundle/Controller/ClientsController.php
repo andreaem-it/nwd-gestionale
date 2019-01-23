@@ -2,63 +2,75 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\AppBundle;
 use AppBundle\Entity\Clients;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Users;
-use Doctrine\ORM\Query\Expr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Validator\Constraints\Email;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Symfony\Component\Serializer\Serializer;
+use Doctrine\ORM\Query\Expr;
 
 class ClientsController extends Controller
 {
+//    /**
+//     * @Route("clienti/", name="clienti")
+//     */
+//    public function ClientsAction(Request $request) {
+//
+//        if ($this->getUser()->getRoles('ROLE_ADMIN')) {
+//            $em    = $this->getDoctrine()->getManager();
+//            $dql   = "SELECT a FROM AppBundle:Clients a";
+//            $query = $em->createQuery($dql);
+//
+//            $paginator  = $this->get('knp_paginator');
+//            $pagination = $paginator->paginate(
+//                $query, /* query NOT result */
+//                $request->query->getInt('page', 1)/*page number*/,
+//                8/*limit per page*/
+//            );
+//            $pagination->setCustomParameters([
+//                'align' => 'center'
+//            ]);
+//        } else {
+//            $em    = $this->get('doctrine.orm.entity_manager');
+//            $dql   = "SELECT a FROM AppBundle:Clients a WHERE a.refereer=" . $this->getUser();
+//            $query = $em->createQuery($dql);
+//
+//            $paginator  = $this->get('knp_paginator');
+//            $pagination = $paginator->paginate(
+//                $query, /* query NOT result */
+//                $request->query->getInt('page', 1)/*page number*/,
+//                8/*limit per page*/
+//            );
+//            $pagination->setCustomParameters([
+//                'align' => 'center'
+//            ]);
+//        }
+//
+//        return $this->render('clients/clients.html.twig',[
+//            'pagination' => $pagination,
+//            'func' => $this
+//        ]);
+//    }
+
     /**
      * @Route("clienti/", name="clienti")
      */
     public function ClientsAction(Request $request) {
-
-        if ($this->getUser()->getRoles('ROLE_ADMIN')) {
-            $em    = $this->getDoctrine()->getManager();
-            $dql   = "SELECT a FROM AppBundle:Clients a";
-            $query = $em->createQuery($dql);
-
-            $paginator  = $this->get('knp_paginator');
-            $pagination = $paginator->paginate(
-                $query, /* query NOT result */
-                $request->query->getInt('page', 1)/*page number*/,
-                8/*limit per page*/
-            );
-            $pagination->setCustomParameters([
-                'align' => 'center'
-            ]);
-        } else {
-            $em    = $this->get('doctrine.orm.entity_manager');
-            $dql   = "SELECT a FROM AppBundle:Clients a WHERE a.refereer=" . $this->getUser();
-            $query = $em->createQuery($dql);
-
-            $paginator  = $this->get('knp_paginator');
-            $pagination = $paginator->paginate(
-                $query, /* query NOT result */
-                $request->query->getInt('page', 1)/*page number*/,
-                8/*limit per page*/
-            );
-            $pagination->setCustomParameters([
-                'align' => 'center'
-            ]);
-        }
+            $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findBy(['refereer' => $this->getUser()]);
 
         return $this->render('clients/clients.html.twig',[
-            'pagination' => $pagination,
+            'clients' => $clients,
             'func' => $this
         ]);
     }
@@ -311,7 +323,14 @@ class ClientsController extends Controller
             ->getQuery()
             ->getArrayResult();
 
-        return new Response(json_encode($objects));
+        $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
+        $json = $serializer->serialize($objects, 'json');
+
+        $response = new Response();
+        $response->setContent($json);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 
     /**
@@ -331,6 +350,13 @@ class ClientsController extends Controller
             ->getQuery()
             ->getArrayResult();
 
-        return new JsonResponse($objects);
+        $serializer = new Serializer(array(new GetSetMethodNormalizer()), array('json' => new JsonEncoder()));
+        $json = $serializer->serialize($objects, 'json');
+
+        $response = new Response();
+        $response->setContent($json);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 }

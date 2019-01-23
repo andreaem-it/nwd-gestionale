@@ -149,6 +149,8 @@ class ExpertationsController extends Controller
 
         $expertations = new Expertations();
 
+        $clients = $this->getDoctrine()->getRepository(Clients::class)->findBy(['refereer' => $this->getUser()->getId()]);
+
         $lastExp = $this->getDoctrine()->getRepository(Expertations::class)->findLast()->getPid();
         $lastExp = (int)$lastExp + 1;
         if (strlen((string)$lastExp == 2)) {
@@ -453,6 +455,7 @@ class ExpertationsController extends Controller
 
         return $this->render('expertations/new.html.twig', [
             'form' => $form->createView(),
+            'clients' => $clients
         ]);
     }
 
