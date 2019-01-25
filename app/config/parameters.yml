@@ -3,6 +3,6 @@ parameters:
     database_path: '%kernel.root_dir%/db/data_prod.db'
     mailer_transport: smtp
     mailer_host: smtp.mailtrap.io
-    mailer_user: abcc765e49a04c
-    mailer_password: 0265d66763a0ca
+    mailer_user: 0285db81b706f0
+    mailer_password: 91793259900057
     secret: 1315451b511620433db424b09f2fe7daedc9179f

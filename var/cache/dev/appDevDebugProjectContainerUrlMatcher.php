@@ -249,6 +249,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'error_id')), array (  '_controller' => 'AppBundle\\Controller\\DefaultController::errorAction',));
         }
 
+        // app_default_testmail
+        if ('/testmail' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::testMailAction',  '_route' => 'app_default_testmail',);
+        }
+
         if (0 === strpos($pathinfo, '/pr')) {
             if (0 === strpos($pathinfo, '/preventivi')) {
                 if (0 === strpos($pathinfo, '/preventivi/lista')) {

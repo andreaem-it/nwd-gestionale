@@ -7,6 +7,7 @@ use AppBundle\Entity\Expertations;
 use AppBundle\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends Controller
@@ -86,5 +87,21 @@ class DefaultController extends Controller
 
     public function userToName($user) {
         return $this->getDoctrine()->getRepository(Users::class)->find($user)->getUsername();
+    }
+
+    /**
+     * @Route("/testmail")
+     */
+    public function testMailAction(\Swift_Mailer $mailer) {
+        $message = (new \Swift_Message('Hello Email'))
+            ->setFrom('gestionale@nwd.it')
+            ->setTo('info@andreaem.it')
+            ->setBody(new Response('Prova'),
+                'text/html'
+            );
+
+        $mailer->send($message);
+
+        return new Response('OK');
     }
 }

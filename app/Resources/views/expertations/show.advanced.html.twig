@@ -1170,50 +1170,50 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-8"></div>
-            <div class="col-4">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <strong>TOTALE LORDO</strong>
-                            </div>
-                            <div class="col-6">
-                                {{ total|number_format(2) }} €
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong>IVA (22%)</strong>
-                            </div>
-                            <div class="col-6">
-                                {% set vat = total * 22 / 100 %}
-                                {{ vat|number_format(2) }} €
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong>SCONTO ({{ data.sconto }} %)</strong>
-                            </div>
-                            <div class="col-6">
-                                {% set sconto = total * data.sconto / 100 %}
-                                {{ (sconto)|number_format(2) }} €
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong>TOTALE NETTO</strong>
-                            </div>
-                            <div class="col-6">
-                                {% set gtotal = total + vat - sconto %}
-                                {{ gtotal|number_format(2) }} €
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {#<div class="row">#}
+            {#<div class="col-8"></div>#}
+            {#<div class="col-4">#}
+                {#<div class="card mt-2">#}
+                    {#<div class="card-body">#}
+                        {#<div class="row">#}
+                            {#<div class="col-6">#}
+                                {#<strong>TOTALE LORDO</strong>#}
+                            {#</div>#}
+                            {#<div class="col-6">#}
+                                {#{{ total|number_format(2) }} €#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="row">#}
+                            {#<div class="col-6">#}
+                                {#<strong>IVA (22%)</strong>#}
+                            {#</div>#}
+                            {#<div class="col-6">#}
+                                {#{% set vat = total * 22 / 100 %}#}
+                                {#{{ vat|number_format(2) }} €#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="row">#}
+                            {#<div class="col-6">#}
+                                {#<strong>SCONTO ({{ data.sconto }} %)</strong>#}
+                            {#</div>#}
+                            {#<div class="col-6">#}
+                                {#{% set sconto = total * data.sconto / 100 %}#}
+                                {#{{ (sconto)|number_format(2) }} €#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="row">#}
+                            {#<div class="col-6">#}
+                                {#<strong>TOTALE NETTO</strong>#}
+                            {#</div>#}
+                            {#<div class="col-6">#}
+                                {#{% set gtotal = total + vat - sconto %}#}
+                                {#{{ gtotal|number_format(2) }} €#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
     </div>
 </div>
 {% endblock body %}

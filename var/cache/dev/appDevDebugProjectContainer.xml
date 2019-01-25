@@ -121,8 +121,8 @@
     <parameter key="database_path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/db/data_prod.db</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">smtp.mailtrap.io</parameter>
-    <parameter key="mailer_user">abcc765e49a04c</parameter>
-    <parameter key="mailer_password">0265d66763a0ca</parameter>
+    <parameter key="mailer_user">0285db81b706f0</parameter>
+    <parameter key="mailer_password">91793259900057</parameter>
     <parameter key="secret">1315451b511620433db424b09f2fe7daedc9179f</parameter>
     <parameter key="prices_directory">/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/data</parameter>
     <parameter key="locale">it</parameter>
@@ -263,8 +263,8 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.host">smtp.mailtrap.io</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.username">abcc765e49a04c</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">0265d66763a0ca</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.username">0285db81b706f0</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">91793259900057</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
@@ -399,7 +399,7 @@
       <parameter key="registration@nwd.it">NWD</parameter>
     </parameter>
     <parameter key="fos_user.resetting.email.from_email" type="collection">
-      <parameter key="abcc765e49a04c">abcc765e49a04c</parameter>
+      <parameter key="0285db81b706f0">0285db81b706f0</parameter>
     </parameter>
     <parameter key="fos_user.storage">orm</parameter>
     <parameter key="fos_user.firewall_name">main</parameter>
@@ -674,7 +674,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.xk64tvg"/>
+      <argument type="service" id="service_locator.1je0igk"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -2478,14 +2478,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -5040,6 +5032,12 @@
       <argument>users</argument>
     </service>
     <service id="abstract.instanceof.twig.extension.text" class="Twig_Extensions_Extension_Text" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="service_locator.40sjrlg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="mailer" type="service" id="swiftmailer.mailer.default" on-invalid="ignore"/>
+      </argument>
+    </service>
     <service id="service_locator.idfznfk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
@@ -5071,14 +5069,16 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.xk64tvg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.1je0igk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="AppBundle\Controller\DefaultController:testMailAction" type="service" id="service_locator.40sjrlg"/>
         <argument key="AppBundle\Controller\SecurityController:login" type="service" id="service_locator.jwewuuw"/>
         <argument key="AppBundle\Controller\SettingsController:AjaxSUAAction" type="service" id="service_locator.hd_5bqv"/>
         <argument key="AppBundle\Controller\SettingsController:SettingsUserEditAction" type="service" id="service_locator._.tenph"/>
         <argument key="AppBundle\Controller\SettingsController:resetPassLinkTokenAction" type="service" id="service_locator.i3nl.uy"/>
         <argument key="AppBundle\Controller\SettingsController:settingsUserPasswordResetAction" type="service" id="service_locator.i3nl.uy"/>
+        <argument key="AppBundle\Controller\DefaultController::testMailAction" type="service" id="service_locator.40sjrlg"/>
         <argument key="AppBundle\Controller\SecurityController::login" type="service" id="service_locator.jwewuuw"/>
         <argument key="AppBundle\Controller\SettingsController::AjaxSUAAction" type="service" id="service_locator.hd_5bqv"/>
         <argument key="AppBundle\Controller\SettingsController::SettingsUserEditAction" type="service" id="service_locator._.tenph"/>
@@ -5414,10 +5414,10 @@
         <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~agoqmwd"/>
       </argument>
       <call method="setUsername">
-        <argument>abcc765e49a04c</argument>
+        <argument>0285db81b706f0</argument>
       </call>
       <call method="setPassword">
-        <argument>0265d66763a0ca</argument>
+        <argument>91793259900057</argument>
       </call>
       <call method="setAuthMode">
         <argument>null</argument>
