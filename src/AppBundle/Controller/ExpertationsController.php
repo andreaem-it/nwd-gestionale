@@ -1590,8 +1590,10 @@ class ExpertationsController extends Controller
      */
     public function editExpertationAdvancedAction(Request $request, $pid, $floor=0) {
         $item = $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $pid]);
-        $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => $item->getId()]);
-
+        dump($item);
+        $npid = ltrim($pid, "00");
+        $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => $npid]);
+        dump($expertationsAdvanced);
         $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
             ->add('submit', SubmitType::class, [
                 'label' => 'Modifica',
@@ -1679,8 +1681,7 @@ class ExpertationsController extends Controller
             $expAdv->setVal64(explode(',', $form->getData()->getVal64()));
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($expAdv);
-            $em->flush();
+            $em->flush($expAdv);
 
             return $this->redirectToRoute('mostra_preventivo_avanzato', [
                 'pid' => $id
@@ -1696,6 +1697,8 @@ class ExpertationsController extends Controller
             'titles' => $titles,
             'func' => $this,
             'count' => $ambientsCount,
+            'pid' => $pid,
+            'expAdv' => $expertationsAdvanced
             //'url' => $_SERVER['REQUEST_URI'],
             //'floor' => $floor
         ]);
@@ -1877,7 +1880,7 @@ class ExpertationsController extends Controller
      */
     public function AjaxGetExpDataFiledAction($exp,$field) {
 
-        switch ($field) {
+        /*switch ($field) {
             case 'pp':
                 $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPp();
                 $result = implode(',',$return);
@@ -1903,8 +1906,204 @@ class ExpertationsController extends Controller
                 $result = implode(',',$return);
                 return new Response($result);
                 break;
-        }
+        }*/
+        //$field = ucfirst($field);
+        $return = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => '00' . $exp]);
 
+        if($field = 'val1') {
+            $result = $return[0]->getVal1();
+        }
+        if($field = 'val2') {
+            $result = $return[0]->getVal2();
+        }
+        if($field = 'val3') {
+            $result = $return[0]->getVal3();
+        }
+        if($field = 'val4') {
+            $result = $return[0]->getVal4();
+        }
+        if($field = 'val5') {
+            $result = $return[0]->getVal5();
+        }
+        if($field = 'val6') {
+            $result = $return[0]->getVal6();
+        }
+        if($field = 'val7') {
+            $result = $return[0]->getVal7();
+        }
+        if($field = 'val8') {
+            $result = $return[0]->getVal8();
+        }
+        if($field = 'val9') {
+            $result = $return[0]->getVal9();
+        }
+        if($field = 'val10') {
+            $result = $return[0]->getVal10();
+        }
+        if($field = 'val11') {
+            $result = $return[0]->getVal11();
+        }
+        if($field = 'val12') {
+            $result = $return[0]->getVal12();
+        }
+        if($field = 'val13') {
+            $result = $return[0]->getVal13();
+        }
+        if($field = 'val14') {
+            $result = $return[0]->getVal14();
+        }
+        if($field = 'val15') {
+            $result = $return[0]->getVal15();
+        }
+        if($field = 'val16') {
+            $result = $return[0]->getVal16();
+        }
+        if($field = 'val17') {
+            $result = $return[0]->getVal17();
+        }
+        if($field = 'val18') {
+            $result = $return[0]->getVal18();
+        }
+        if($field = 'val19') {
+            $result = $return[0]->getVal19();
+        }
+        if($field = 'val20') {
+            $result = $return[0]->getVal20();
+        }
+        if($field = 'val21') {
+            $result = $return[0]->getVal21();
+        }
+        if($field = 'val22') {
+            $result = $return[0]->getVal22();
+        }
+        if($field = 'val23') {
+            $result = $return[0]->getVal23();
+        }
+        if($field = 'val24') {
+            $result = $return[0]->getVal24();
+        }
+        if($field = 'val25') {
+            $result = $return[0]->getVal25();
+        }
+        if($field = 'val26') {
+            $result = $return[0]->getVal26();
+        }
+        if($field = 'val27') {
+            $result = $return[0]->getVal27();
+        }
+        if($field = 'val28') {
+            $result = $return[0]->getVal28();
+        }
+        if($field = 'val29') {
+            $result = $return[0]->getVal29();
+        }
+        if($field = 'val30') {
+            $result = $return[0]->getVal30();
+        }
+        if($field = 'val31') {
+            $result = $return[0]->getVal31();
+        }
+        if($field = 'val32') {
+            $result = $return[0]->getVal32();
+        }
+        if($field = 'val33') {
+            $result = $return[0]->getVal33();
+        }
+        if($field = 'val34') {
+            $result = $return[0]->getVal34();
+        }
+        if($field = 'val35') {
+            $result = $return[0]->getVal35();
+        }
+        if($field = 'val36') {
+            $result = $return[0]->getVal36();
+        }
+        if($field = 'val37') {
+            $result = $return[0]->getVal37();
+        }
+        if($field = 'val38') {
+            $result = $return[0]->getVal38();
+        }
+        if($field = 'val39') {
+            $result = $return[0]->getVal39();
+        }
+        if($field = 'val40') {
+            $result = $return[0]->getVal40();
+        }
+        if($field = 'val41') {
+            $result = $return[0]->getVal41();
+        }
+        if($field = 'val42') {
+            $result = $return[0]->getVal42();
+        }
+        if($field = 'val43') {
+            $result = $return[0]->getVal43();
+        }
+        if($field = 'val44') {
+            $result = $return[0]->getVal44();
+        }
+        if($field = 'val45') {
+            $result = $return[0]->getVal45();
+        }
+        if($field = 'val46') {
+            $result = $return[0]->getVal46();
+        }
+        if($field = 'val47') {
+            $result = $return[0]->getVal47();
+        }
+        if($field = 'val48') {
+            $result = $return[0]->getVal48();
+        }
+        if($field = 'val49') {
+            $result = $return[0]->getVal49();
+        }
+        if($field = 'val50') {
+            $result = $return[0]->getVal50();
+        }
+        if($field = 'val51') {
+            $result = $return[0]->getVal51();
+        }
+        if($field = 'val52') {
+            $result = $return[0]->getVal52();
+        }
+        if($field = 'val53') {
+            $result = $return[0]->getVal53();
+        }
+        if($field = 'val54') {
+            $result = $return[0]->getVal54();
+        }
+        if($field = 'val55') {
+            $result = $return[0]->getVal55();
+        }
+        if($field = 'val56') {
+            $result = $return[0]->getVal56();
+        }
+        if($field = 'val57') {
+            $result = $return[0]->getVal57();
+        }
+        if($field = 'val58') {
+            $result = $return[0]->getVal58();
+        }
+        if($field = 'val59') {
+            $result = $return[0]->getVal59();
+        }
+        if($field = 'val60') {
+            $result = $return[0]->getVal60();
+        }
+        if($field = 'val61') {
+            $result = $return[0]->getVal61();
+        }
+        if($field = 'val62') {
+            $result = $return[0]->getVal62();
+        }
+        if($field = 'val63') {
+            $result = $return[0]->getVal63();
+        }
+        if($field = 'val64') {
+            $result = $return[0]->getVal64();
+        }
+        $result = implode(',', $result);
+        return new Response($result);
     }
 
     /**

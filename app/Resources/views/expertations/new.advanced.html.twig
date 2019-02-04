@@ -1935,7 +1935,8 @@
                             </div>
                             <div class="col-9 pl-0" style="overflow:auto;">
                                 <table class="table-2 table table-bordered">
-                                    <thead>
+                                    <div class="linked-scrollbar-fixed">
+                                        <thead class="linked-scrollbar-fixed">
                                         <tr>
                                             {% for itm in item.0.name %}
                                                 <th class="text-center itemHead">{{ itm }}</th>
@@ -1945,7 +1946,9 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    </div>
+                                    <div class="linked-scrollbar-fixed">
+                                        <tbody class="linked-scrollbar-fixed">
                                         <tr id="firstItem">
                                             <td class="row-title" colspan="{{ colCount + 1 }}"></td>
                                         </tr>
@@ -2429,7 +2432,7 @@
                                             {% endfor %}
                                         </tr>
                                     </tbody>
-
+                                    </div>
                                 </table>
                             </div>
                         </div>
@@ -2550,6 +2553,22 @@
                     }
                     },10000);
                 //check();
+
+                $('.linked-scrollbar-fixed').scroll(function(){
+                    $('.linked-scrollbar-fixed').scrollTop($(this).scrollTop());
+                })
+
+                /*$('.linked-scrollbar-fixed').attr("data-scrolling", "false");
+
+                $('.linked-scrollbar-fixed').scroll(function(){
+                    console.log("scrolled-y");
+                    if($(this).attr("data-scrolling") == "false"){
+                        $('.linked-scrollbar-fixed').not(this).attr("data-scrolling", "true");
+                        $('.linked-scrollbar-fixed').not(this).scrollTop($(this).scrollLeft());
+                    }
+                    $(this).attr("data-scrolling", "false");
+                });*/
+
             });
 
             $('#appbundle_expertationsadvanced_submit').click(function(e) {
