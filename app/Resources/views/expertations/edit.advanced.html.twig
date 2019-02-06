@@ -513,21 +513,23 @@
                                         </table>
                                     </div>
                                     <div class="col-9 pl-0" style="overflow:auto;">
-                                        <table class="table-2 table table-bordered">
-                                            <div class="linked-scrollbar-fixed">
-                                                <thead class="linked-scrollbar-fixed">
-                                                <tr>
-                                                    {% for itm in item.name %}
-                                                        <th class="text-center itemHead">{{ itm }}</th>
-                                                    {% endfor %}
-                                                    <th class="itemHead">
-                                                        Sistemi
-                                                    </th>
-                                                </tr>
-                                                </thead>
+                                            <div class="scroll" style="overflow:auto;display:inline-block;">
+                                                <table id="linked-scrollbar-fixed-1" class="table-2 table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            {% for itm in item.name %}
+                                                                <th class="text-center itemHead">{{ itm }}</th>
+                                                            {% endfor %}
+                                                            <th class="itemHead">
+                                                                Sistemi
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
                                             </div>
-                                            <div class="linked-scrollbar-fixed">
-                                                <tbody class="linked-scrollbar-fixed">
+                                            <div class="scroll" style="overflow:auto;display:inline-block;top: -8px;position:relative">
+                                                <table id="linked-scrollbar-fixed-2" class="table-2 table table-bordered" >
+                                                    <tbody>
                                                 <tr id="firstItem">
                                                     <td class="row-title" colspan="{{ colCount + 1 }}"></td>
                                                 </tr>
@@ -1010,9 +1012,17 @@
                                                         </td>
                                                     {% endfor %}
                                                 </tr>
-                                                </tbody>
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                        </table>
+                                        <script>
+                                            $(document).load( function(){
+                                                $(".scroll").on("scroll",function(){
+                                                    $("div:not(this)").scrollLeft($(this).scrollLeft());
+                                                });
+                                            })
+
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -1043,70 +1053,70 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Aggiunte</h4>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-1" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
                                 Ingresso Linee Enel e Telecom
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-2" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
                                 Predisposizione Domotica
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-3" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
                                 Impianto Satellitare
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-4" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
                                 Diffusione Sonora
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-5" data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">
                                 Sorround Soggiorno
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-6" role="button" aria-expanded="false" aria-controls="collapse-6">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-6" data-toggle="collapse" href="#collapse-6" role="button" aria-expanded="false" aria-controls="collapse-6">
                                 Connettorizzazione Dati
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-7" role="button" aria-expanded="false" aria-controls="collapse-7">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-7" data-toggle="collapse" href="#collapse-7" role="button" aria-expanded="false" aria-controls="collapse-7">
                                 Videosorveglianza Esterna
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-8" role="button" aria-expanded="false" aria-controls="collapse-8">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-8" data-toggle="collapse" href="#collapse-8" role="button" aria-expanded="false" aria-controls="collapse-8">
                                 Predisposizione Allarme
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-9" role="button" aria-expanded="false" aria-controls="collapse-9">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-9" data-toggle="collapse" href="#collapse-9" role="button" aria-expanded="false" aria-controls="collapse-9">
                                 Rilevazione Fumi
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-10" role="button" aria-expanded="false" aria-controls="collapse-10">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-10" data-toggle="collapse" href="#collapse-10" role="button" aria-expanded="false" aria-controls="collapse-10">
                                 Allagamento e Gas
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-11" role="button" aria-expanded="false" aria-controls="collapse-11">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-11" data-toggle="collapse" href="#collapse-11" role="button" aria-expanded="false" aria-controls="collapse-11">
                                 Motorizzazione Tapparelle
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-12" role="button" aria-expanded="false" aria-controls="collapse-12">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-12" data-toggle="collapse" href="#collapse-12" role="button" aria-expanded="false" aria-controls="collapse-12">
                                 Cavi Motorizzazione Tapparelle
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-13" role="button" aria-expanded="false" aria-controls="collapse-13">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-13" data-toggle="collapse" href="#collapse-13" role="button" aria-expanded="false" aria-controls="collapse-13">
                                 Centralino Telefonico
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-14" role="button" aria-expanded="false" aria-controls="collapse-14">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-14" data-toggle="collapse" href="#collapse-14" role="button" aria-expanded="false" aria-controls="collapse-14">
                                 Impianto Citofonico
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-15" role="button" aria-expanded="false" aria-controls="collapse-15">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-15" data-toggle="collapse" href="#collapse-15" role="button" aria-expanded="false" aria-controls="collapse-15">
                                 Impianto VideoCitofono
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-16" role="button" aria-expanded="false" aria-controls="collapse-16">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-16" data-toggle="collapse" href="#collapse-16" role="button" aria-expanded="false" aria-controls="collapse-16">
                                 Rilevatori Luminosità
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-17" role="button" aria-expanded="false" aria-controls="collapse-17">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-17" data-toggle="collapse" href="#collapse-17" role="button" aria-expanded="false" aria-controls="collapse-17">
                                 Illuminazione Esterna
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-18" role="button" aria-expanded="false" aria-controls="collapse-18">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-18" data-toggle="collapse" href="#collapse-18" role="button" aria-expanded="false" aria-controls="collapse-18">
                                 Predisposizione Fotovoltaico
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-19" role="button" aria-expanded="false" aria-controls="collapse-19">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-19" data-toggle="collapse" href="#collapse-19" role="button" aria-expanded="false" aria-controls="collapse-19">
                                 Sonde Temperatura
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-20" role="button" aria-expanded="false" aria-controls="collapse-20">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-20" data-toggle="collapse" href="#collapse-20" role="button" aria-expanded="false" aria-controls="collapse-20">
                                 Cronotermostati
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-21" role="button" aria-expanded="false" aria-controls="collapse-21">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-21" data-toggle="collapse" href="#collapse-21" role="button" aria-expanded="false" aria-controls="collapse-21">
                                 Armadio Rack
                             </a>
-                            <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-22" role="button" aria-expanded="false" aria-controls="collapse-22">
+                            <a class="btn btn-primary ml-1 mb-2 collapsed btn-addon-22" data-toggle="collapse" href="#collapse-22" role="button" aria-expanded="false" aria-controls="collapse-22">
                                 B-Ticino LivingNow
                             </a>
                         </div>
@@ -2537,10 +2547,6 @@
             {{ form_end(form) }}
             <script>
                 $(document).ready( function () {
-                    /*update({{ item.id }},'pp','val1');
-                    update({{ item.id }},'pl','val8');
-                    update({{ item.id }},'c1v','val6');
-                    update({{ item.id }},'c2v','val41');*/
                     for (i=1; i < 64; i++) {
                         update({{ expAdv.father }},'val' + i, 'val' + i);
                     }
@@ -2555,22 +2561,10 @@
                             $("#form_val64_" + i ).prop('disabled', false);
                         }
                     },10000);
-                    //check();
 
-                    $('.linked-scrollbar-fixed').scroll(function(){
-                        $('.linked-scrollbar-fixed').scrollTop($(this).scrollTop());
-                    })
-
-                    /*$('.linked-scrollbar-fixed').attr("data-scrolling", "false");
-
-                    $('.linked-scrollbar-fixed').scroll(function(){
-                        console.log("scrolled-y");
-                        if($(this).attr("data-scrolling") == "false"){
-                            $('.linked-scrollbar-fixed').not(this).attr("data-scrolling", "true");
-                            $('.linked-scrollbar-fixed').not(this).scrollTop($(this).scrollLeft());
-                        }
-                        $(this).attr("data-scrolling", "false");
-                    });*/
+                    $('#linked-scrollbar-fixed-2').on('scroll', function() {
+                        $('#linked-scrollbar-fixed-1').scrollLeft($(this).scrollLeft());
+                    });
 
                 });
 
@@ -2599,6 +2593,7 @@
                         success: function (data) {
                             for (var i = 0; i < {{ colCount }}; i++) {
                                 var numbersArray = data.split(',');
+                                console.log("GET " + valn)
                                 $.each(numbersArray, function(index, value) {
                                     var ind = index +1;
                                     $('#form_'+ valn + '_' + ind).val(value);
@@ -2612,7 +2607,6 @@
                     for(var i = 0; i < {{ colCount }}; i++) {
                         var ind = i +1;
                         var values = parseInt($('#form_val1_' + ind ).val()) + parseInt($('#form_val6_' + ind ).val());
-                        console.log(values);
                         $('#form_val' + field + '_' + ind ).val(values)
                     }
                 }
@@ -2625,9 +2619,6 @@
 
                     $("#form_val" + f + "_" + i).on("change keyup keydown", function(event) {
                         let currVal = parseInt($("#form_val" + f + "_" + i).val());
-
-                        console.log(preVal);
-                        console.log(currVal);
 
                         // store current positions in variables
                         var start = this.selectionStart,
@@ -2661,6 +2652,9 @@
 {% endblock %}
 {% block stylesheets %}
     <style>
+        thead {
+            z-index: 1000;
+        }
         .table td {
             padding: 0;
             min-height: 33px;
@@ -2770,31 +2764,13 @@
 {% block javascripts %}
     <script src="{{ asset("js/jquery.fixedheadertable.min.js") }}"></script>
     <script>
-        /*$('#scroll-r').click(function(e) {
-            e.preventDefault();
-            $(".table-2").animate({'left':'-=300px'}).scrollLeft();
-            console.log($(".table-2").width());
-            $("#scroll-r").attr("enabled","enabled");
-            console.log($(".table-2").position())
-
-        });
-        $('#scroll-l').click(function(e) {
-            e.preventDefault();
-            console.log($(".table-2").position());
-            if ($(".table-2").position.left >= 0) {
-                return;
-            }
-            $(".table-2").animate({'left': '+=300px'}).scrollLeft()
-        });*/
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 430) {
-                console.log("scrolled")
-                $('thead').css('position','fixed').css('top','63px').css('background','#FFF').width('93.2%').css('overflow','auto');
+                $('thead').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','auto');
                 $('.itemHead').width('100');
-                $('#firstItem').height('78');
+                $('#firstItem').height('63');
             } else {
                 $('thead').css('position','relative').css('top','63px').css('background','#FFF').width('100%');
-                console.log("top");
                 $('#firstItem').height('31');
             }
         });
@@ -2806,19 +2782,25 @@
             $('#nav-hide-btn-icon').trigger('click');
             $('button[data-toggle="collapse"]').click(function(){
                 //log the id of the target
-                $(this).switchClass('btn-outline-primary','btn-primary');
+                if($(this).hasClass('btn-success')) {
+                    $('.btn-addon-' + id).switchClass('btn-outline-primary', 'btn-success')
+                } else {
+                    $(this).switchClass('btn-outline-primary', 'btn-primary');
+                }
             });
-            /*$('.selector').fixedHeaderTable({
-                footer: true,
-                cloneHeadToFoot: true,
-                fixedColumn: true
-            });*/
-            /*$(".selector").CongelarFilaColumna({
-                Columnas:  1
-            });*/
         });
         function checkedAddon(id) {
-            $('.collapse-' + id).switchClass('btn-primary', 'btn-success');
+            if($('.btn-addon-' + id).hasClass('btn-success')) {
+
+            } else {
+                $('.btn-addon-' + id).switchClass('btn-primary', 'btn-success').removeClass('collapse');
+
+            }
+        }
+        for (i=1; i < 21; i++) {
+            $('#appbundle_expertationsadvanced_opt' + i + 'Enabled').click( function () {
+                $('.btn-addon-' + i).switchClass('btn-primary', 'btn-success');
+            });
         }
     </script>
 {% endblock %}

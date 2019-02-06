@@ -83,7 +83,7 @@ class ExpertationsAdvancedType extends AbstractType
             ->add('val64', HiddenType::class)
             ->add('val65', HiddenType::class)
             ->add('fatherFloor', HiddenType::class)
-            ->add('opt1Enabled', CheckBoxType::class, [ 'label' => 'PRIMA AGGIUNTA POSSIBILE: predisposizione per ingresso linee ENEL e TELECOM' , 'attr' => ['class' => 'custom-control-input'] , 'label_attr' => ['class' => 'custom-control-label'], 'required' => false ])
+            ->add('opt1Enabled', CheckBoxType::class, [ 'label' => 'PRIMA AGGIUNTA POSSIBILE: predisposizione per ingresso linee ENEL e TELECOM' , 'attr' => ['class' => 'custom-control-input', 'onclick' => 'checkedAddon(1)'] , 'label_attr' => ['class' => 'custom-control-label'], 'required' => false ])
             ->add('opt1_1Value', IntegerType::class, [ 'label' => 'Tubazione flessibile in polietilene a doppia parete. Diametro esterno 50 mm' , 'attr' => ['class' => 'custom-form-control'] , 'data' => '0'  ])
             ->add('opt1_2Value', IntegerType::class, [ 'label' => 'Pozzetto in resina completo di coperchio carrabile 300 x 300 mm.' , 'attr' => ['class' => 'custom-form-control'] , 'data' => '0'  ])
             ->add('opt1_3Value', IntegerType::class, [ 'label' => 'Tubazione flessibile in polietilene a doppia parete. Diametro esterno 63mm', 'attr' => ['class' => 'custom-form-control'] , 'data' => '0'  ])

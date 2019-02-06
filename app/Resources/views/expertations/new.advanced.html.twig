@@ -1935,7 +1935,7 @@
                             </div>
                             <div class="col-9 pl-0" style="overflow:auto;">
                                 <table class="table-2 table table-bordered">
-                                    <div class="linked-scrollbar-fixed">
+                                    <div class="linked-scrollbar-fixed-1">
                                         <thead class="linked-scrollbar-fixed">
                                         <tr>
                                             {% for itm in item.0.name %}
@@ -1947,7 +1947,7 @@
                                         </tr>
                                     </thead>
                                     </div>
-                                    <div class="linked-scrollbar-fixed">
+                                    <div class="linked-scrollbar-fixed-2">
                                         <tbody class="linked-scrollbar-fixed">
                                         <tr id="firstItem">
                                             <td class="row-title" colspan="{{ colCount + 1 }}"></td>
@@ -2553,10 +2553,10 @@
                     }
                     },10000);
                 //check();
+                    $('.linked-scrollbar-fixed-2').on('scroll', function() {
+                        $('.linked-scrollbar-fixed-1').scrollLeft($(this).scrollLeft());
+                    });
 
-                $('.linked-scrollbar-fixed').scroll(function(){
-                    $('.linked-scrollbar-fixed').scrollTop($(this).scrollTop());
-                })
 
                 /*$('.linked-scrollbar-fixed').attr("data-scrolling", "false");
 
