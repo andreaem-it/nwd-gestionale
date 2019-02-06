@@ -1592,10 +1592,8 @@ class ExpertationsController extends Controller
      */
     public function editExpertationAdvancedAction(Request $request, $pid, $floor=0) {
         $item = $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $pid]);
-        dump($item);
         $npid = ltrim($pid, "00");
         $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => $npid]);
-        dump($expertationsAdvanced);
         $form = $this->createForm(ExpertationsAdvancedType::class, new ExpertationsAdvanced())
             ->add('submit', SubmitType::class, [
                 'label' => 'Modifica',
@@ -1686,8 +1684,6 @@ class ExpertationsController extends Controller
             $em->remove($expertationsAdvanced);
             $em->persist($expAdv);
             $em->flush();
-
-
 
             return $this->redirectToRoute('mostra_preventivo_avanzato', [
                 'pid' => $id
