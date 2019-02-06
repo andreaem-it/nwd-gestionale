@@ -166,12 +166,20 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_clients_get_json')), array (  '_controller' => 'AppBundle\\Controller\\ClientsController::get',));
             }
 
-            // ajax_get_expdata_field
-            if (0 === strpos($pathinfo, '/ajax/get/expData') && preg_match('#^/ajax/get/expData/(?P<exp>[^/]++)/(?P<field>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expdata_field')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxGetExpDataFiledAction',));
+            if (0 === strpos($pathinfo, '/ajax/get/expData')) {
+                // ajax_get_expdata_field
+                if (preg_match('#^/ajax/get/expData/(?P<exp>[^/]++)/(?P<field>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expdata_field')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxGetExpDataFiledAction',));
+                }
+
+                // ajax_get_adv_expdata_field
+                if (0 === strpos($pathinfo, '/ajax/get/expData/adv') && preg_match('#^/ajax/get/expData/adv/(?P<exp>[^/]++)/(?P<field>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_adv_expdata_field')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxAdvGetExpDataFiledAction',));
+                }
+
             }
 
-            if (0 === strpos($pathinfo, '/ajax/expertation')) {
+            elseif (0 === strpos($pathinfo, '/ajax/expertation')) {
                 // ajax_get_expertations_room
                 if (0 === strpos($pathinfo, '/ajax/expertations/get/outlets') && preg_match('#^/ajax/expertations/get/outlets/(?P<level>[^/]++)/(?P<room>[^/]++)$#sD', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajax_get_expertations_room')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::AjaxEGO',));

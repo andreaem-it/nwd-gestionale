@@ -1183,18 +1183,20 @@ class ExpertationsController extends Controller
         $item = $repo->findOneBy(['pid' => $pid]);
         $repoAdv = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class);
         $id = $this->convertPID($pid);
-        $itemAdv = $repoAdv->findOneBy(['father' => $id]);
+        $itemAdv = $repoAdv->findOneBy(['father' => $pid]);
         $price = $this->getDoctrine()->getRepository(PricesAdvanced::class);
 
         $qtyPL = array_sum($item->getPl());
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
         $arrPP = array();
+        dump($itemAdv);
+
         array_push($arrPP,$qtyPP);
-        if ($itemAdv->getVal2() != null) {
+        if (!$itemAdv->getVal2()) {
             array_push($arrPP,array_sum($itemAdv->getVal2()));
         }
-        if ($itemAdv->getVal5() != null) {
+        if (!$itemAdv->getVal5()) {
             array_push($arrPP,array_sum($itemAdv->getVal5()));
         }
         $qtyPP = array_sum($arrPP);
@@ -1594,7 +1596,7 @@ class ExpertationsController extends Controller
         $npid = ltrim($pid, "00");
         $expertationsAdvanced = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => $npid]);
         dump($expertationsAdvanced);
-        $form = $this->createForm(ExpertationsAdvancedType::class, $expertationsAdvanced)
+        $form = $this->createForm(ExpertationsAdvancedType::class, new ExpertationsAdvanced())
             ->add('submit', SubmitType::class, [
                 'label' => 'Modifica',
                 'attr' => [
@@ -1613,7 +1615,7 @@ class ExpertationsController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $expAdv = $form->getData();
 
-            $expAdv->setFather($item->getId());
+            $expAdv->setFather($item->getPid());
             $expAdv->setFatherFloor(0);
             $expAdv->setVal1(explode(',', $form->getData()->getVal1()));
             $expAdv->setVal2(explode(',', $form->getData()->getVal2()));
@@ -1681,7 +1683,11 @@ class ExpertationsController extends Controller
             $expAdv->setVal64(explode(',', $form->getData()->getVal64()));
 
             $em = $this->getDoctrine()->getManager();
-            $em->flush($expAdv);
+            $em->remove($expertationsAdvanced);
+            $em->persist($expAdv);
+            $em->flush();
+
+
 
             return $this->redirectToRoute('mostra_preventivo_avanzato', [
                 'pid' => $id
@@ -1878,229 +1884,238 @@ class ExpertationsController extends Controller
     /**
      * @Route("ajax/get/expData/{exp}/{field}", name="ajax_get_expdata_field")
      */
-    public function AjaxGetExpDataFiledAction($exp,$field) {
+    public function AjaxGetExpDataFiledAction($exp,$field)
+    {
 
-        /*switch ($field) {
+        switch ($field) {
             case 'pp':
-                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPp();
-                $result = implode(',',$return);
+                $return = $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPp();
+                $result = implode(',', $return);
                 return new Response($result);
                 break;
             case 'pl':
-                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPl();
-                $result = implode(',',$return);
+                $return = $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPl();
+                $result = implode(',', $return);
                 return new Response($result);
                 break;
             case 'pt':
-                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPt();
-                $result = implode(',',$return);
+                $return = $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getPt();
+                $result = implode(',', $return);
                 return new Response($result);
                 break;
             case 'c1v':
-                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getC1v();
-                $result = implode(',',$return);
+                $return = $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getC1v();
+                $result = implode(',', $return);
                 return new Response($result);
                 break;
             case 'c2v':
-                $return =  $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getC2v();
-                $result = implode(',',$return);
+                $return = $this->getDoctrine()->getRepository(Expertations::class)->find($exp)->getC2v();
+                $result = implode(',', $return);
                 return new Response($result);
                 break;
-        }*/
-        //$field = ucfirst($field);
-        $return = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => '00' . $exp]);
+        }
+    }
 
-        if($field = 'val1') {
-            $result = $return[0]->getVal1();
-        }
-        if($field = 'val2') {
-            $result = $return[0]->getVal2();
-        }
-        if($field = 'val3') {
-            $result = $return[0]->getVal3();
-        }
-        if($field = 'val4') {
-            $result = $return[0]->getVal4();
-        }
-        if($field = 'val5') {
-            $result = $return[0]->getVal5();
-        }
-        if($field = 'val6') {
-            $result = $return[0]->getVal6();
-        }
-        if($field = 'val7') {
-            $result = $return[0]->getVal7();
-        }
-        if($field = 'val8') {
-            $result = $return[0]->getVal8();
-        }
-        if($field = 'val9') {
-            $result = $return[0]->getVal9();
-        }
-        if($field = 'val10') {
-            $result = $return[0]->getVal10();
-        }
-        if($field = 'val11') {
-            $result = $return[0]->getVal11();
-        }
-        if($field = 'val12') {
-            $result = $return[0]->getVal12();
-        }
-        if($field = 'val13') {
-            $result = $return[0]->getVal13();
-        }
-        if($field = 'val14') {
-            $result = $return[0]->getVal14();
-        }
-        if($field = 'val15') {
-            $result = $return[0]->getVal15();
-        }
-        if($field = 'val16') {
-            $result = $return[0]->getVal16();
-        }
-        if($field = 'val17') {
-            $result = $return[0]->getVal17();
-        }
-        if($field = 'val18') {
-            $result = $return[0]->getVal18();
-        }
-        if($field = 'val19') {
-            $result = $return[0]->getVal19();
-        }
-        if($field = 'val20') {
-            $result = $return[0]->getVal20();
-        }
-        if($field = 'val21') {
-            $result = $return[0]->getVal21();
-        }
-        if($field = 'val22') {
-            $result = $return[0]->getVal22();
-        }
-        if($field = 'val23') {
-            $result = $return[0]->getVal23();
-        }
-        if($field = 'val24') {
-            $result = $return[0]->getVal24();
-        }
-        if($field = 'val25') {
-            $result = $return[0]->getVal25();
-        }
-        if($field = 'val26') {
-            $result = $return[0]->getVal26();
-        }
-        if($field = 'val27') {
-            $result = $return[0]->getVal27();
-        }
-        if($field = 'val28') {
-            $result = $return[0]->getVal28();
-        }
-        if($field = 'val29') {
-            $result = $return[0]->getVal29();
-        }
-        if($field = 'val30') {
-            $result = $return[0]->getVal30();
-        }
-        if($field = 'val31') {
-            $result = $return[0]->getVal31();
-        }
-        if($field = 'val32') {
-            $result = $return[0]->getVal32();
-        }
-        if($field = 'val33') {
-            $result = $return[0]->getVal33();
-        }
-        if($field = 'val34') {
-            $result = $return[0]->getVal34();
-        }
-        if($field = 'val35') {
-            $result = $return[0]->getVal35();
-        }
-        if($field = 'val36') {
-            $result = $return[0]->getVal36();
-        }
-        if($field = 'val37') {
-            $result = $return[0]->getVal37();
-        }
-        if($field = 'val38') {
-            $result = $return[0]->getVal38();
-        }
-        if($field = 'val39') {
-            $result = $return[0]->getVal39();
-        }
-        if($field = 'val40') {
-            $result = $return[0]->getVal40();
-        }
-        if($field = 'val41') {
-            $result = $return[0]->getVal41();
-        }
-        if($field = 'val42') {
-            $result = $return[0]->getVal42();
-        }
-        if($field = 'val43') {
-            $result = $return[0]->getVal43();
-        }
-        if($field = 'val44') {
-            $result = $return[0]->getVal44();
-        }
-        if($field = 'val45') {
-            $result = $return[0]->getVal45();
-        }
-        if($field = 'val46') {
-            $result = $return[0]->getVal46();
-        }
-        if($field = 'val47') {
-            $result = $return[0]->getVal47();
-        }
-        if($field = 'val48') {
-            $result = $return[0]->getVal48();
-        }
-        if($field = 'val49') {
-            $result = $return[0]->getVal49();
-        }
-        if($field = 'val50') {
-            $result = $return[0]->getVal50();
-        }
-        if($field = 'val51') {
-            $result = $return[0]->getVal51();
-        }
-        if($field = 'val52') {
-            $result = $return[0]->getVal52();
-        }
-        if($field = 'val53') {
-            $result = $return[0]->getVal53();
-        }
-        if($field = 'val54') {
-            $result = $return[0]->getVal54();
-        }
-        if($field = 'val55') {
-            $result = $return[0]->getVal55();
-        }
-        if($field = 'val56') {
-            $result = $return[0]->getVal56();
-        }
-        if($field = 'val57') {
-            $result = $return[0]->getVal57();
-        }
-        if($field = 'val58') {
-            $result = $return[0]->getVal58();
-        }
-        if($field = 'val59') {
-            $result = $return[0]->getVal59();
-        }
-        if($field = 'val60') {
-            $result = $return[0]->getVal60();
-        }
-        if($field = 'val61') {
-            $result = $return[0]->getVal61();
-        }
-        if($field = 'val62') {
-            $result = $return[0]->getVal62();
-        }
-        if($field = 'val63') {
-            $result = $return[0]->getVal63();
-        }
-        if($field = 'val64') {
-            $result = $return[0]->getVal64();
+    /**
+     * @Route("ajax/get/expData/adv/{exp}/{field}", name="ajax_get_adv_expdata_field")
+     */
+    public function AjaxAdvGetExpDataFiledAction($exp,$field) {
+
+        $return = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => '00' . $exp]);
+
+        switch ($field) {
+            case 'val1':
+                $result = $return->getVal1();
+                break;
+            case 'val2':
+                $result = $return->getVal2();
+                break;
+            case 'val3':
+                $result = $return->getVal3();
+                break;
+            case 'val4':
+                $result = $return->getVal4();
+                break;
+            case 'val5':
+                $result = $return->getVal5();
+                break;
+            case 'val6':
+                $result = $return->getVal6();
+                break;
+            case 'val7':
+                $result = $return->getVal7();
+                break;
+            case 'val8':
+                $result = $return->getVal8();
+                break;
+            case 'val9':
+                $result = $return->getVal9();
+                break;
+            case 'val10':
+                $result = $return->getVal10();
+                break;
+            case 'val11':
+                $result = $return->getVal11();
+                break;
+            case 'val12':
+                $result = $return->getVal12();
+                break;
+            case 'val13':
+                $result = $return->getVal13();
+                break;
+            case 'val14':
+                $result = $return->getVal14();
+                break;
+            case 'val15':
+                $result = $return->getVal15();
+                break;
+            case 'val16':
+                $result = $return->getVal16();
+                break;
+            case 'val17':
+                $result = $return->getVal17();
+                break;
+            case 'val18':
+                $result = $return->getVal18();
+                break;
+            case 'val19':
+                $result = $return->getVal19();
+                break;
+            case 'val20':
+                $result = $return->getVal20();
+                break;
+            case 'val21':
+                $result = $return->getVal21();
+                break;
+            case 'val22':
+                $result = $return->getVal22();
+                break;
+            case 'val23':
+                $result = $return->getVal23();
+                break;
+            case 'val24':
+                $result = $return->getVal24();
+                break;
+            case 'val25':
+                $result = $return->getVal25();
+                break;
+            case 'val26':
+                $result = $return->getVal26();
+                break;
+            case 'val27':
+                $result = $return->getVal27();
+                break;
+            case 'val28':
+                $result = $return->getVal28();
+                break;
+            case 'val29':
+                $result = $return->getVal29();
+                break;
+            case 'val30':
+                $result = $return->getVal30();
+                break;
+            case 'val31':
+                $result = $return->getVal31();
+                break;
+            case 'val32':
+                $result = $return->getVal32();
+                break;
+            case 'val33':
+                $result = $return->getVal33();
+                break;
+            case 'val34':
+                $result = $return->getVal34();
+                break;
+            case 'val35':
+                $result = $return->getVal35();
+                break;
+            case 'val36':
+                $result = $return->getVal36();
+                break;
+            case 'val37':
+                $result = $return->getVal37();
+                break;
+            case 'val38':
+                $result = $return->getVal38();
+                break;
+            case 'val39':
+                $result = $return->getVal39();
+                break;
+            case 'val40':
+                $result = $return->getVal40();
+                break;
+            case 'val41':
+                $result = $return->getVal41();
+                break;
+            case 'val42':
+                $result = $return->getVal42();
+                break;
+            case 'val43':
+                $result = $return->getVal43();
+                break;
+            case 'val44':
+                $result = $return->getVal44();
+                break;
+            case 'val45':
+                $result = $return->getVal45();
+                break;
+            case 'val46':
+                $result = $return->getVal46();
+                break;
+            case 'val47':
+                $result = $return->getVal47();
+                break;
+            case 'val48':
+                $result = $return->getVal48();
+                break;
+            case 'val49':
+                $result = $return->getVal49();
+                break;
+            case 'val50':
+                $result = $return->getVal50();
+                break;
+            case 'val51':
+                $result = $return->getVal51();
+                break;
+            case 'val52':
+                $result = $return->getVal52();
+                break;
+            case 'val53':
+                $result = $return->getVal53();
+                break;
+            case 'val54':
+                $result = $return->getVal54();
+                break;
+            case 'val55':
+                $result = $return->getVal55();
+                break;
+            case 'val56':
+                $result = $return->getVal56();
+                break;
+            case 'val57':
+                $result = $return->getVal57();
+                break;
+            case 'val58':
+                $result = $return->getVal58();
+                break;
+            case 'val59':
+                $result = $return->getVal59();
+                break;
+            case 'val60':
+                $result = $return->getVal60();
+                break;
+            case 'val61':
+                $result = $return->getVal61();
+                break;
+            case 'val62':
+                $result = $return->getVal62();
+                break;
+            case 'val63':
+                $result = $return->getVal63();
+                break;
+            case 'val64':
+                $result = $return->getVal64();
+                break;
         }
         $result = implode(',', $result);
         return new Response($result);

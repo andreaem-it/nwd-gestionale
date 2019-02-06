@@ -11,7 +11,7 @@ namespace AppBundle\Repository;
 class PricesAdvancedRepository extends \Doctrine\ORM\EntityRepository
 {
     function findByCode($code) {
-        $find = $this->findBy(['code' => $code]);
-        return $find[0]->getPrice();
+        $find = $this->findOneBy(['code' => $code]);
+        if($find) return $find->getPrice();
     }
 }
