@@ -1588,7 +1588,7 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("preventivi/modifica/avanzato/preventivo-{pid}", name="preventivi_modifica_avanzato")
+     * @Route("preventivi/avanzato/modifica/preventivo-{pid}", name="preventivi_modifica_avanzato")
      */
     public function editExpertationAdvancedAction(Request $request, $pid, $floor=0) {
         $item = $this->getDoctrine()->getRepository(Expertations::class)->findOneBy(['pid' => $pid]);

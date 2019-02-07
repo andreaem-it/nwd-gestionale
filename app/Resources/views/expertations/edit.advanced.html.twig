@@ -512,9 +512,47 @@
 
                                         </table>
                                     </div>
+                                    <style>
+                                        .tableWide-wrapper {
+                                            overflow-x: auto;
+                                            border-right: 2px solid #797979;
+                                            box-sizing: border-box;
+                                            width: 100%;
+                                        }
+
+                                        .tableScrollTop {
+                                            overflow-x: scroll;
+                                            box-sizing: border-box;
+                                            margin: 0;
+                                            height:0px;
+                                            width: 100%;
+                                        }
+
+                                        .tableWide {
+                                            width: 1500px;
+                                            table-layout: fixed;
+                                            margin-top: 0 !important;
+                                        }
+                                    </style>
+                                    <script>
+                                        $(function(){ 'use strict';
+                                            $(".tableScrollTop").scroll(function() {
+                                                $(".tableWide-wrapper").scrollLeft($(".tableScrollTop").scrollLeft());
+                                            });
+                                            $(".tableWide-wrapper").scroll(function() {
+                                                $(".tableScrollTop").scrollLeft($(".tableWide-wrapper").scrollLeft());
+                                            });
+                                        });
+                                        $(document).ready(function(){
+                                            $('#scrollMaster').width($('#mainTable').width());
+                                        })
+                                    </script>
+
                                     <div class="col-9 pl-0" style="overflow:auto;">
-                                            <div class="scroll" style="overflow:auto;display:inline-block;">
-                                                <table id="linked-scrollbar-fixed-1" class="table-2 table table-bordered">
+                                        <div class="tableScrollTop"><div id="scrollMaster" style="width:2000px; height:20px;"></div></div>
+
+                                        <div id="topTable" class="tableWide-wrapper" tabindex="0">
+                                                <table class="table table-bordered">
                                                     <thead>
                                                         <tr>
                                                             {% for itm in item.name %}
@@ -527,8 +565,8 @@
                                                     </thead>
                                                 </table>
                                             </div>
-                                            <div class="scroll" style="overflow:auto;display:inline-block;top: -8px;position:relative">
-                                                <table id="linked-scrollbar-fixed-2" class="table-2 table table-bordered" >
+                                        <div class="tableWide-wrapper" tabindex="0">
+                                                <table id="mainTable" class="table table-bordered">
                                                     <tbody>
                                                 <tr id="firstItem">
                                                     <td class="row-title" colspan="{{ colCount + 1 }}"></td>
@@ -2544,6 +2582,8 @@
                     </div>
                 </div>
             </div>
+            <script src="{{ asset("js/syncscroll.js") }}"></script>
+            <script src="{{ asset("js/dragscroll.js") }}"></script>
             {{ form_end(form) }}
             <script>
                 $(document).ready( function () {
@@ -2766,11 +2806,11 @@
     <script>
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 430) {
-                $('thead').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','auto');
+                $('#topTable').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','overlay');
                 $('.itemHead').width('100');
-                $('#firstItem').height('63');
+                $('#firstItem').height('79');
             } else {
-                $('thead').css('position','relative').css('top','63px').css('background','#FFF').width('100%');
+                $('#topTable').css('position','').css('top','63px').css('background','#FFF').width('100%');
                 $('#firstItem').height('31');
             }
         });

@@ -111,6 +111,1049 @@
             </div>
         </div>
 
+
+        <div class="row mt-1">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        {{ form_start(form) }}
+                        <div class="wrapper1" style="height: 30px;">
+                        <!--<div id="" class="float-left">
+                            <h4 class="float-left mt-2"><strong>Piano</strong> {{ floor }}</h4>
+                            <div class="btn-group float-right ml-3">
+                                {% set oldFloor = floor - 1 %}
+                                <a class="btn btn-secondary btn-sm" href="{{ url('nuovo_preventivo_avanzato', {'id': item.0.pid, 'floor': oldFloor }) }}">-</a>
+                                {% set newFloor = floor + 1 %}
+                                <a class="btn btn-secondary btn-sm" href="{{ url('nuovo_preventivo_avanzato', {'id': item.0.pid, 'floor': newFloor }) }}">+</a>
+                            </div>
+
+                        </div>
+                        <div id="buttons" class="div1 float-right btn-group">
+                            <a class="btn btn-secondary btn-sm" id="scroll-l" href="#" disabled="disabled"> < </a>
+                            <a class="btn btn-secondary btn-sm" id="scroll-r" href="#"> > </a>
+                        </div>-->
+                    </div>
+                        {% set colCount = count|length + 1 %}
+
+                        <div class="wrapper2">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <table class="table-1 table table-bordered ">
+                                    <th class="firstHead">TIPOLOGIA</th>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            PUNTI PRESA
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong >{{ titles.0.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.1.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.2.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.3.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.4.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            PUNTI COMANDO
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.5.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.6.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.7.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.8.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.9.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.10.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.11.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.12.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.13.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.14.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.15.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            RISCALDAMENTO
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.16.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.17.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.18.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.19.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.20.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            QUADRO ELETTRICO
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.21.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.22.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.23.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.24.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.25.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            SERVIZI PREDISPOSIZIONE
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.26.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.27.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.28.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.29.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.30.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.31.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.32.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.33.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.34.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.35.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.36.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.37.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.38.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.39.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.40.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.41.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.42.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.43.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.44.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.45.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.46.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.47.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.48.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.49.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.50.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.51.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.52.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            PREDISPOSIZIONE AUTOMATISMI
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.53.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.54.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.55.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.56.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.57.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.58.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            ASPIRAZIONE CENTRALIZZATA
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.59.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>{{ titles.60.description }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-title" colspan="{{ colCount + 1 }}">
+                                            RESOCONTO PLACCHE
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Supporti 503</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Supporti 505</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Supporti 506</strong>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <style>
+                                .tableWide-wrapper {
+                                    overflow-x: auto;
+                                    border-right: 2px solid #797979;
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                }
+
+                                .tableScrollTop {
+                                    overflow-x: scroll;
+                                    box-sizing: border-box;
+                                    margin: 0;
+                                    height:0px;
+                                    width: 100%;
+                                }
+
+                                .tableWide {
+                                    width: 1500px;
+                                    table-layout: fixed;
+                                    margin-top: 0 !important;
+                                }
+                            </style>
+                            <script>
+                                $(function(){ 'use strict';
+                                    $(".tableScrollTop").scroll(function() {
+                                        $(".tableWide-wrapper").scrollLeft($(".tableScrollTop").scrollLeft());
+                                    });
+                                    $(".tableWide-wrapper").scroll(function() {
+                                        $(".tableScrollTop").scrollLeft($(".tableWide-wrapper").scrollLeft());
+                                    });
+                                });
+                                $(document).ready(function(){
+                                    $('#scrollMaster').width($('#mainTable').width());
+                                })
+                            </script>
+                            <div class="col-9 pl-0" style="overflow:auto;">
+                                <div class="tableScrollTop"><div id="scrollMaster" style="width:2000px; height:20px;"></div></div>
+
+                                <div id="topTable" class="tableWide-wrapper" tabindex="0">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            {% for itm in item.0.name %}
+                                                <th class="text-center itemHead">{{ itm }}</th>
+                                            {% endfor %}
+                                            <th class="itemHead">
+                                                Sistemi
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="tableWide-wrapper" tabindex="0">
+                                    <table id="mainTable" class="table table-bordered">
+                                        <tbody>
+                                        <tr id="firstItem">
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val1_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val2_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val3_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val4_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val5_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val6_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val7_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val8_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val9_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val10_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val11_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val12_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val13_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val14_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val15_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val16_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val17_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val18_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val19_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val20_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val21_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val22_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val23_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val24_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                            <td>
+                                                <input class="form-control" type="number" value="0" min="0" id="form_val25_{{ item }}">
+                                            </td>
+                                            {% endfor %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val26_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val27_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val28_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val29_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val30_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val31_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val32_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val33_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val34_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val35_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val36_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val37_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val38_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val39_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val40_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val41_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val42_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val43_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val44_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val45_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val46_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val47_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val48_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val49_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val50_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val51_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val52_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val53_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val54_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val55_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val56_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val57_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val58_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val59_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val60_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val61_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val62_{{ item }}">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for item in 1..colCount %}
+                                                <td>
+                                                    <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9"></div>
+                        <div class="col-3">
+                            <div class="card card-generate ">
+                                <div class="card-body pt-2 pb-4">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            {{ form_widget(form.submit) }}
+                                            <!--<a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3 ">Genera</a>-->
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 ">Annulla</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Aggiunte</h4>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
+                            Ingresso Linee Enel e Telecom
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
+                            Predisposizione Domotica
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
+                            Impianto Satellitare
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
+                            Diffusione Sonora
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">
+                            Sorround Soggiorno
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-6" role="button" aria-expanded="false" aria-controls="collapse-6">
+                            Connettorizzazione Dati
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-7" role="button" aria-expanded="false" aria-controls="collapse-7">
+                            Videosorveglianza Esterna
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-8" role="button" aria-expanded="false" aria-controls="collapse-8">
+                            Predisposizione Allarme
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-9" role="button" aria-expanded="false" aria-controls="collapse-9">
+                            Rilevazione Fumi
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-10" role="button" aria-expanded="false" aria-controls="collapse-10">
+                            Allagamento e Gas
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-11" role="button" aria-expanded="false" aria-controls="collapse-11">
+                            Motorizzazione Tapparelle
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-12" role="button" aria-expanded="false" aria-controls="collapse-12">
+                            Cavi Motorizzazione Tapparelle
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-13" role="button" aria-expanded="false" aria-controls="collapse-13">
+                            Centralino Telefonico
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-14" role="button" aria-expanded="false" aria-controls="collapse-14">
+                            Impianto Citofonico
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-15" role="button" aria-expanded="false" aria-controls="collapse-15">
+                            Impianto VideoCitofono
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-16" role="button" aria-expanded="false" aria-controls="collapse-16">
+                            Rilevatori Luminosità
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-17" role="button" aria-expanded="false" aria-controls="collapse-17">
+                            Illuminazione Esterna
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-18" role="button" aria-expanded="false" aria-controls="collapse-18">
+                            Predisposizione Fotovoltaico
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-19" role="button" aria-expanded="false" aria-controls="collapse-19">
+                            Sonde Temperatura
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-20" role="button" aria-expanded="false" aria-controls="collapse-20">
+                            Cronotermostati
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-21" role="button" aria-expanded="false" aria-controls="collapse-21">
+                            Armadio Rack
+                        </a>
+                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-22" role="button" aria-expanded="false" aria-controls="collapse-22">
+                            B-Ticino LivingNow
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row mt-3">
             <div class="col-sm-12">
                 <div class="collapse mt-1 mb-2" id="collapse-1">
@@ -119,55 +1162,55 @@
                             <div class="row">
                                 <table class="table">
                                     <thead>
-                                        <tr>
-                                            <div class="custom-control custom-checkbox">
-                                                {{ form_widget(form.opt1Enabled) }}
-                                            </div>
-                                        </tr>
+                                    <tr>
+                                        <div class="custom-control custom-checkbox">
+                                            {{ form_widget(form.opt1Enabled) }}
+                                        </div>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td colspan="2">
-                                                Predisposizione tubazione esterna interrata per ingresso Linea telefonica. Misura ipotetica da verificare in loco.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt1_1Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt1_1Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt1_2Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt1_2Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                Ingresso linea cavi impianto elettrico misura stimata in base alla posizione comunicata del contatore ENEL.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt1_3Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt1_3Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt1_4Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt1_4Value) }}
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Predisposizione tubazione esterna interrata per ingresso Linea telefonica. Misura ipotetica da verificare in loco.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt1_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt1_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt1_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt1_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Ingresso linea cavi impianto elettrico misura stimata in base alla posizione comunicata del contatore ENEL.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt1_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt1_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt1_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt1_4Value) }}
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -227,98 +1270,98 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td colspan="2">
-                                                Impianto di ricezione SATELLITARE.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_1Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_1Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_2Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_2Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_3Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_3Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_4Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_4Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                Impianto Satellitare Multiswitch centralizzato per più di 4 punti SATELLITE.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_5Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_5Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_6Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_6Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_7Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_7Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                Incremento al punto presa di servizio per presa di ricezione TV satellitare
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_8Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_8Value) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 210px">
-                                                {{ form_widget(form.opt3_9Value) }}
-                                            </td>
-                                            <td>
-                                                {{ form_label(form.opt3_9Value) }}
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Impianto di ricezione SATELLITARE.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_1Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_1Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_2Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_2Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_3Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_3Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_4Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_4Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Impianto Satellitare Multiswitch centralizzato per più di 4 punti SATELLITE.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_5Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_5Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_6Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_6Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_7Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_7Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Incremento al punto presa di servizio per presa di ricezione TV satellitare
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_8Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_8Value) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 210px">
+                                            {{ form_widget(form.opt3_9Value) }}
+                                        </td>
+                                        <td>
+                                            {{ form_label(form.opt3_9Value) }}
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1532,1009 +2575,6 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-1">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        {{ form_start(form) }}
-                        <div class="wrapper1" style="height: 30px;">
-                        <!--<div id="" class="float-left">
-                            <h4 class="float-left mt-2"><strong>Piano</strong> {{ floor }}</h4>
-                            <div class="btn-group float-right ml-3">
-                                {% set oldFloor = floor - 1 %}
-                                <a class="btn btn-secondary btn-sm" href="{{ url('nuovo_preventivo_avanzato', {'id': item.0.pid, 'floor': oldFloor }) }}">-</a>
-                                {% set newFloor = floor + 1 %}
-                                <a class="btn btn-secondary btn-sm" href="{{ url('nuovo_preventivo_avanzato', {'id': item.0.pid, 'floor': newFloor }) }}">+</a>
-                            </div>
-
-                        </div>
-                        <div id="buttons" class="div1 float-right btn-group">
-                            <a class="btn btn-secondary btn-sm" id="scroll-l" href="#" disabled="disabled"> < </a>
-                            <a class="btn btn-secondary btn-sm" id="scroll-r" href="#"> > </a>
-                        </div>-->
-                    </div>
-                        {% set colCount = count|length + 1 %}
-
-                        <div class="wrapper2">
-                        <div class="row">
-                            <div class="col-3 pr-0">
-                                <table class="table-1 table table-bordered ">
-                                    <th class="firstHead">TIPOLOGIA</th>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            PUNTI PRESA
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong >{{ titles.0.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.1.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.2.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.3.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.4.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            PUNTI COMANDO
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.5.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.6.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.7.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.8.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.9.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.10.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.11.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.12.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.13.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.14.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.15.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            RISCALDAMENTO
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.16.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.17.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.18.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.19.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.20.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            QUADRO ELETTRICO
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.21.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.22.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.23.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.24.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.25.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            SERVIZI PREDISPOSIZIONE
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.26.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.27.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.28.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.29.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.30.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.31.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.32.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.33.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.34.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.35.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.36.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.37.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.38.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.39.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.40.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.41.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.42.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.43.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.44.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.45.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.46.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.47.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.48.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.49.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.50.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.51.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.52.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            PREDISPOSIZIONE AUTOMATISMI
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.53.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.54.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.55.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.56.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.57.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.58.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            ASPIRAZIONE CENTRALIZZATA
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.59.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>{{ titles.60.description }}</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-title" colspan="{{ colCount + 1 }}">
-                                            RESOCONTO PLACCHE
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>Supporti 503</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>Supporti 505</strong>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>Supporti 506</strong>
-                                        </td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                            <div class="col-9 pl-0" style="overflow:auto;">
-                                <table class="table-2 table table-bordered">
-                                    <div class="linked-scrollbar-fixed-1">
-                                        <thead class="linked-scrollbar-fixed">
-                                        <tr>
-                                            {% for itm in item.0.name %}
-                                                <th class="text-center itemHead">{{ itm }}</th>
-                                            {% endfor %}
-                                            <th class="itemHead">
-                                                Sistemi
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    </div>
-                                    <div class="linked-scrollbar-fixed-2">
-                                        <tbody class="linked-scrollbar-fixed">
-                                        <tr id="firstItem">
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val1_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val2_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val3_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val4_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val5_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val6_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val7_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val8_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val9_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val10_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val11_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val12_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val13_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val14_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val15_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val16_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val17_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val18_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val19_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val20_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val21_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val22_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val23_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val24_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                            <td>
-                                                <input class="form-control" type="number" value="0" min="0" id="form_val25_{{ item }}">
-                                            </td>
-                                            {% endfor %}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val26_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val27_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val28_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val29_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val30_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val31_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val32_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val33_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val34_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val35_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val36_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val37_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val38_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val39_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val40_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val41_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val42_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val43_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val44_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val45_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val46_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val47_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val48_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val49_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val50_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val51_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val52_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val53_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val54_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val55_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val56_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val57_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val58_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val59_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val60_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val61_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val62_{{ item }}">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                        <tr>
-                                            {% for item in 1..colCount %}
-                                                <td>
-                                                    <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
-                                                </td>
-                                            {% endfor %}
-                                        </tr>
-                                    </tbody>
-                                    </div>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-9"></div>
-                        <div class="col-3">
-                            <div class="card card-generate ">
-                                <div class="card-body pt-2 pb-4">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            {{ form_widget(form.submit) }}
-                                            <!--<a href="" id="generateBtn" class="btn btn-success btn-block btn-sm mt-3 ">Genera</a>-->
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="" class="btn btn-outline-danger btn-block btn-sm mt-3 ">Annulla</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{ form_end(form) }}
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Aggiunte</h4>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
-                            Ingresso Linee Enel e Telecom
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
-                            Predisposizione Domotica
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
-                            Impianto Satellitare
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
-                            Diffusione Sonora
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">
-                            Sorround Soggiorno
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-6" role="button" aria-expanded="false" aria-controls="collapse-6">
-                            Connettorizzazione Dati
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-7" role="button" aria-expanded="false" aria-controls="collapse-7">
-                            Videosorveglianza Esterna
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-8" role="button" aria-expanded="false" aria-controls="collapse-8">
-                            Predisposizione Allarme
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-9" role="button" aria-expanded="false" aria-controls="collapse-9">
-                            Rilevazione Fumi
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-10" role="button" aria-expanded="false" aria-controls="collapse-10">
-                            Allagamento e Gas
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-11" role="button" aria-expanded="false" aria-controls="collapse-11">
-                            Motorizzazione Tapparelle
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-12" role="button" aria-expanded="false" aria-controls="collapse-12">
-                            Cavi Motorizzazione Tapparelle
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-13" role="button" aria-expanded="false" aria-controls="collapse-13">
-                            Centralino Telefonico
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-14" role="button" aria-expanded="false" aria-controls="collapse-14">
-                            Impianto Citofonico
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-15" role="button" aria-expanded="false" aria-controls="collapse-15">
-                            Impianto VideoCitofono
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-16" role="button" aria-expanded="false" aria-controls="collapse-16">
-                            Rilevatori Luminosità
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-17" role="button" aria-expanded="false" aria-controls="collapse-17">
-                            Illuminazione Esterna
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-18" role="button" aria-expanded="false" aria-controls="collapse-18">
-                            Predisposizione Fotovoltaico
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-19" role="button" aria-expanded="false" aria-controls="collapse-19">
-                            Sonde Temperatura
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-20" role="button" aria-expanded="false" aria-controls="collapse-20">
-                            Cronotermostati
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-21" role="button" aria-expanded="false" aria-controls="collapse-21">
-                            Armadio Rack
-                        </a>
-                        <a class="btn btn-primary ml-1 mb-2 collapsed" data-toggle="collapse" href="#collapse-22" role="button" aria-expanded="false" aria-controls="collapse-22">
-                            B-Ticino LivingNow
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <script>
             $(document).ready( function () {
                 update({{ item.0.id }},'pp','val1');
@@ -2785,18 +2825,14 @@
         });*/
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 430) {
-                console.log("scrolled")
-                $('thead').css('position','fixed').css('top','63px').css('background','#FFF').width('93.2%').css('overflow','auto');
+                $('#topTable').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','overlay');
                 $('.itemHead').width('100');
-                $('#firstItem').height('78');
+                $('#firstItem').height('79');
             } else {
-                $('thead').css('position','relative').css('top','63px').css('background','#FFF').width('100%');
-                console.log("top");
+                $('#topTable').css('position','').css('top','63px').css('background','#FFF').width('100%');
                 $('#firstItem').height('31');
             }
         });
-
-
     </script>
     <script>
         $(document).ready(function () {
