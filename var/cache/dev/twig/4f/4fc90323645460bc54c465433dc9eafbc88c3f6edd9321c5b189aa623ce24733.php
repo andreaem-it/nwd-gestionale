@@ -16,6 +16,7 @@ class __TwigTemplate_4020b1b515d956f6ccf8abfd6dd41fec7cf04330d012c38b18037c81d95
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -338,12 +339,31 @@ $context["item"], "status", []) == 2)) {
             })
         })
     </script>
-    <script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 161
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 162
+        echo "    <script>
         \$(function () {
             \$('[data-toggle=\"tooltip\"]').tooltip({
-                boundary: 'window',
-                container: 'body',
-                placement: 'top'
+                'boundary': 'window',
+                'container': 'body',
+                'placement': 'top'
             });
         });
     </script>
@@ -368,7 +388,7 @@ $context["item"], "status", []) == 2)) {
 
     public function getDebugInfo()
     {
-        return array (  321 => 141,  309 => 131,  296 => 124,  287 => 118,  278 => 116,  258 => 115,  254 => 113,  251 => 106,  247 => 104,  245 => 103,  242 => 102,  240 => 101,  237 => 100,  235 => 99,  228 => 95,  224 => 94,  219 => 91,  209 => 90,  205 => 89,  199 => 86,  193 => 83,  189 => 81,  185 => 80,  179 => 76,  174 => 68,  168 => 65,  162 => 62,  156 => 59,  150 => 56,  105 => 13,  99 => 12,  90 => 9,  85 => 8,  80 => 7,  76 => 6,  72 => 4,  63 => 3,  45 => 2,  15 => 1,);
+        return array (  361 => 162,  352 => 161,  322 => 141,  310 => 131,  297 => 124,  288 => 118,  279 => 116,  259 => 115,  255 => 113,  252 => 106,  248 => 104,  246 => 103,  243 => 102,  241 => 101,  238 => 100,  236 => 99,  229 => 95,  225 => 94,  220 => 91,  210 => 90,  206 => 89,  200 => 86,  194 => 83,  190 => 81,  186 => 80,  180 => 76,  175 => 68,  169 => 65,  163 => 62,  157 => 59,  151 => 56,  106 => 13,  100 => 12,  91 => 9,  86 => 8,  81 => 7,  77 => 6,  73 => 4,  64 => 3,  46 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -532,16 +552,17 @@ $context["item"], "status", []) == 2)) {
             })
         })
     </script>
+{% endblock %}
+{% block javascripts %}
     <script>
         \$(function () {
             \$('[data-toggle=\"tooltip\"]').tooltip({
-                boundary: 'window',
-                container: 'body',
-                placement: 'top'
+                'boundary': 'window',
+                'container': 'body',
+                'placement': 'top'
             });
         });
     </script>
-{% endblock %}
-", "expertations/list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/list.html.twig");
+{% endblock %}", "expertations/list.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/expertations/list.html.twig");
     }
 }

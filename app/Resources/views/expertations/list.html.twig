@@ -157,12 +157,14 @@
             })
         })
     </script>
+{% endblock %}
+{% block javascripts %}
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({
-                boundary: 'window',
-                container: 'body',
-                placement: 'top'
+                'boundary': 'window',
+                'container': 'body',
+                'placement': 'top'
             });
         });
     </script>

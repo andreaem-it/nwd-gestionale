@@ -1045,9 +1045,9 @@ class ExpertationsController extends Controller
      */
     public function newExpertationAdvancedAction(Request $request,$id) {
 
-        /*if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
+        if($this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findBy(['father' => $id])) {
             return $this->redirectToRoute('mostra_preventivo_avanzato', ['pid' => $id]);
-        } else {*/
+        } else {
             $item = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['pid' => $id]);
             /*$qb = $this->getDoctrine()->getRepository(Expertations::class)->createQueryBuilder('exp');
             $qb ->select('exp')
@@ -1150,7 +1150,6 @@ class ExpertationsController extends Controller
                 $expAdv->setVal63(explode(',', $form->getData()->getVal63()));
                 $expAdv->setVal64(explode(',', $form->getData()->getVal64()));
 
-
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($expAdv);
                 $em->flush();
@@ -1171,7 +1170,7 @@ class ExpertationsController extends Controller
                 'floor' => $floor
             ]);
         }
-    //}
+    }
 
     /**
      * @Route("preventivi/dettaglio/avanzato/preventivo-{pid}", name="preventivi_dettaglio_avanzato_id")
@@ -1690,8 +1689,6 @@ class ExpertationsController extends Controller
             ]);
 
         }
-
-
 
         return $this->render('expertations/edit.advanced.html.twig', [
             'form' => $form->createView(),

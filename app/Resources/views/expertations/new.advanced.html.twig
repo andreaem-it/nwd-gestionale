@@ -1075,7 +1075,6 @@
                             </div>
                         </div>
                     </div>
-                    {{ form_end(form) }}
                 </div>
             </div>
         </div>
@@ -2575,6 +2574,7 @@
                 </div>
             </div>
         </div>
+        {{ form_end(form) }}
         <script>
             $(document).ready( function () {
                 update({{ item.0.id }},'pp','val1');

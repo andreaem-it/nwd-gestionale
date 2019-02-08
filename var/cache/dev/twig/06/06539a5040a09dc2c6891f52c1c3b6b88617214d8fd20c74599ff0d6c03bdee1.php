@@ -39,29 +39,29 @@ class __TwigTemplate_808578b023c1311e1000532a16bb22d974d64c7bb0b1ecbb98ced00f8f7
         // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
-        <link rel=\"stylesheet\" href=\"";
-        // line 8
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\" integrity=\"sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\" crossorigin=\"anonymous\">        <link rel=\"stylesheet\" href=\"";
+        // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/iconfonts/mdi/css/materialdesignicons.min.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 9
+        // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/css/vendor.bundle.base.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 10
+        // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/css/vendor.bundle.addons.css"), "html", null, true);
         echo "\">
         <link rel=\"stylesheet\" href=\"";
-        // line 11
+        // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
         ";
-        // line 12
+        // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 13
-        echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.bundle.min.js\"></script>
+        // line 12
+        echo "        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js\" integrity=\"sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js\" integrity=\"sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k\" crossorigin=\"anonymous\"></script>
         <script src=\"";
         // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/pace.min.js"), "html", null, true);
@@ -116,9 +116,6 @@ class __TwigTemplate_808578b023c1311e1000532a16bb22d974d64c7bb0b1ecbb98ced00f8f7
         // line 33
         echo "        <script>
             \$(document).ready(function() {
-                \$(function () {
-                    \$('[data-toggle=\"tooltip\"]').tooltip()
-                });
                 \$(\".animsition\").animsition({
                     inClass: 'fade-in',
                     outClass: 'fade-out',
@@ -167,7 +164,7 @@ class __TwigTemplate_808578b023c1311e1000532a16bb22d974d64c7bb0b1ecbb98ced00f8f7
 
     }
 
-    // line 12
+    // line 11
     public function block_stylesheets($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -230,7 +227,7 @@ class __TwigTemplate_808578b023c1311e1000532a16bb22d974d64c7bb0b1ecbb98ced00f8f7
 
     public function getDebugInfo()
     {
-        return array (  205 => 32,  188 => 28,  171 => 12,  154 => 6,  117 => 33,  114 => 32,  112 => 31,  108 => 29,  105 => 28,  103 => 27,  100 => 26,  98 => 25,  91 => 21,  87 => 20,  83 => 19,  79 => 18,  75 => 17,  71 => 16,  67 => 15,  63 => 13,  61 => 12,  57 => 11,  53 => 10,  49 => 9,  45 => 8,  40 => 6,  33 => 1,);
+        return array (  202 => 32,  185 => 28,  168 => 11,  151 => 6,  117 => 33,  114 => 32,  112 => 31,  108 => 29,  105 => 28,  103 => 27,  100 => 26,  98 => 25,  91 => 21,  87 => 20,  83 => 19,  79 => 18,  75 => 17,  71 => 16,  67 => 15,  62 => 12,  60 => 11,  56 => 10,  52 => 9,  48 => 8,  44 => 7,  40 => 6,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -241,14 +238,14 @@ class __TwigTemplate_808578b023c1311e1000532a16bb22d974d64c7bb0b1ecbb98ced00f8f7
         <meta charset=\"UTF-8\" />
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
         <title>NWD {% block title %}{% endblock %}</title>
-        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
-        <link rel=\"stylesheet\" href=\"{{ asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}\">
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\" integrity=\"sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\" crossorigin=\"anonymous\">        <link rel=\"stylesheet\" href=\"{{ asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('vendors/css/vendor.bundle.base.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('vendors/css/vendor.bundle.addons.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
         {% block stylesheets %}{% endblock %}
-        <script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.bundle.min.js\"></script>
+        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js\" integrity=\"sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js\" integrity=\"sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k\" crossorigin=\"anonymous\"></script>
         <script src=\"{{ asset('js/pace.min.js') }}\"></script>
         <script src=\"{{ asset('js/animsition.min.js') }}\"></script>
         <link rel=\"stylesheet\" href=\"{{ asset('css/fontawesome.min.css') }}\">
@@ -269,9 +266,6 @@ class __TwigTemplate_808578b023c1311e1000532a16bb22d974d64c7bb0b1ecbb98ced00f8f7
         {% block javascripts %}{% endblock %}
         <script>
             \$(document).ready(function() {
-                \$(function () {
-                    \$('[data-toggle=\"tooltip\"]').tooltip()
-                });
                 \$(\".animsition\").animsition({
                     inClass: 'fade-in',
                     outClass: 'fade-out',
