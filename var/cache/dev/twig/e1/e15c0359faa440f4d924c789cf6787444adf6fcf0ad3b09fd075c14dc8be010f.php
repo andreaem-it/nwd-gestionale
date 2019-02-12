@@ -118,7 +118,7 @@ class __TwigTemplate_4ba85801c8dffd696ebaa6c78827ec6000d0cca08518235dab9289c6c3a
             echo "                                        <a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("mostra_preventivo_avanzato", ["pid" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 33, $this->source); })()), "pid", [])]), "html", null, true);
             echo "\" class=\"btn btn-success btn-sm float-right\">
-                                            Mostra Avanzato
+                                            Avanzato
                                         </a>
                                     ";
         } else {
@@ -126,7 +126,7 @@ class __TwigTemplate_4ba85801c8dffd696ebaa6c78827ec6000d0cca08518235dab9289c6c3a
             echo "                                        <a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("nuovo_preventivo_avanzato", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 37, $this->source); })()), "pid", []), "floor" => "0"]), "html", null, true);
             echo "\" class=\"btn btn-success btn-sm float-right\">
-                                            Nuovo Avanzato
+                                            Avanzato
                                         </a>
                                     ";
         }
@@ -717,11 +717,11 @@ class __TwigTemplate_4ba85801c8dffd696ebaa6c78827ec6000d0cca08518235dab9289c6c3a
                                     </a>
                                     {% if gotAdv == true %}
                                         <a href=\"{{ url('mostra_preventivo_avanzato', {'pid': item.pid}) }}\" class=\"btn btn-success btn-sm float-right\">
-                                            Mostra Avanzato
+                                            Avanzato
                                         </a>
                                     {% else %}
                                         <a href=\"{{ url('nuovo_preventivo_avanzato', {'id': item.pid, 'floor': '0' }) }}\" class=\"btn btn-success btn-sm float-right\">
-                                            Nuovo Avanzato
+                                            Avanzato
                                         </a>
                                     {% endif %}
                                 </div>

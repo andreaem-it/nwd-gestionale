@@ -103,8 +103,7 @@
                                 <p><small>{{ item.sconto }} %</small></p>
                             </div>
                             <div class="col-lg-2">
-                                <strong>Totale Preliminare</strong>
-                                <p><small>{{ item.price }} €</small></p>
+
                             </div>
                         </div>
                     </div>
@@ -2819,6 +2818,12 @@
     </script>
     <script>
         $(document).ready(function () {
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
             $('#nav-hide-btn-icon').trigger('click');
             $('button[data-toggle="collapse"]').click(function(){
                 //log the id of the target
