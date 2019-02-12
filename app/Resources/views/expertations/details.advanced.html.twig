@@ -992,21 +992,6 @@
                                         </tr>
                                     {% endif %}
                                     <tr>
-                                        <td colspan="5" class="border table-light"><i>Sezionatore Quadro Generale</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border text-center">15.6.10.8</td>
-                                        <td class="text-small border" style="max-width: 300px">
-                                            <small>
-                                                Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
-                                            </small>
-                                        </td>
-                                        <td class="border text-center">{{ itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25 }}</td>
-                                        <td class="border text-center">{{ fun.getPriceByCode('15.6.10.8')|number_format(2) }}</td>
-                                        <td class="border text-center">{{ ((itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25) * fun.getPriceByCode('15.6.10.8'))|number_format(2) }}</td>
-                                        {% set prices = prices|merge([(itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25) * fun.getPriceByCode('15.6.10.8')]) %}
-                                    </tr>
-                                    <tr>
                                         <td colspan="5" class="border table-light"><i>Interruttori magnetotermici differenziali: circuiti luce di ogni piano, Forza motrice di ogni piano, allarme, impianto antenna,<br>
                                                 Domotica, centralino telefonico, linea luce esterna.</i></td>
                                     </tr>
@@ -1022,6 +1007,22 @@
                                         <td class="border text-center">{{ (item.numCircuiti * fun.getPriceByCode('15.6.52.1'))|number_format(2) }}</td>
                                         {% set prices = prices|merge([item.numCircuiti * fun.getPriceByCode('15.6.52.1')]) %}
                                     </tr>
+                                    <tr>
+                                        <td colspan="5" class="border table-light"><i>Sezionatore Quadro Generale</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border text-center">15.6.10.8</td>
+                                        <td class="text-small border" style="max-width: 300px">
+                                            <small>
+                                                Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
+                                            </small>
+                                        </td>
+                                        <td class="border text-center">{{ itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25 }}</td>
+                                        <td class="border text-center">{{ fun.getPriceByCode('15.6.10.8')|number_format(2) }}</td>
+                                        <td class="border text-center">{{ ((itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25) * fun.getPriceByCode('15.6.10.8'))|number_format(2) }}</td>
+                                        {% set prices = prices|merge([(itemsArray.22 + itemsArray.23 + itemsArray.24 + itemsArray.25) * fun.getPriceByCode('15.6.10.8')]) %}
+                                    </tr>
+
 
                                     {% if itemsArray.25 > 0 %}
                                     <tr>

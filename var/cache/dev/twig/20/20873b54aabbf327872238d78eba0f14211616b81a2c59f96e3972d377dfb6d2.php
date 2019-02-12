@@ -85,7 +85,7 @@ class __TwigTemplate_118086d1fbb3743417cedcf2713ae546d6ba62857a9445055826edf7479
         // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("preventivi_dettaglio_avanzato_id", ["pid" => twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new Twig_Error_Runtime('Variable "data" does not exist.', 14, $this->source); })()), "pid", [])]), "html", null, true);
         echo "\" class=\"btn btn-primary btn-sm\">
-                                Computometrico Avanzato
+                                Computometrico
                             </a>
                             <a href=\"\" class=\"btn btn-danger btn-sm float-right\">
                                 <i class=\"mdi mdi-delete mr-0\"></i>
@@ -4696,7 +4696,7 @@ class __TwigTemplate_118086d1fbb3743417cedcf2713ae546d6ba62857a9445055826edf7479
                     <div class=\"card-body mx-0 py-1 px-1\">
                         <div class=\"btn-group\">
                             <a href=\"{{ url('preventivi_dettaglio_avanzato_id', {'pid' : data.pid}) }}\" class=\"btn btn-primary btn-sm\">
-                                Computometrico Avanzato
+                                Computometrico
                             </a>
                             <a href=\"\" class=\"btn btn-danger btn-sm float-right\">
                                 <i class=\"mdi mdi-delete mr-0\"></i>

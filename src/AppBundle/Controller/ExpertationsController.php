@@ -56,14 +56,14 @@ class ExpertationsController extends Controller
                 'rounded' => true,
                 ]);
         } else {
-            $permission = $this->getDoctrine()->getRepository(Users::class)->findBy(['father' => $this->getUser()]);
-            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $permission[0]->getId()]);
-            $uExpertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()]);
+            $permission = $this->getDoctrine()->getRepository(Users::class)->findBy(['father' => $this->getUser()->getId()]);
+            $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
+            $uExpertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
             if ($expertations == null) {
-                $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()]);
+                $expertations = $this->getDoctrine()->getRepository(Expertations::class)->findBy(['created_by' => $this->getUser()->getId()]);
             }
             $em    = $this->get('doctrine.orm.entity_manager');
-            $dql   = "SELECT a FROM AppBundle:Expertations a WHERE a.created_by =" . $this->getUser() . " ORDER BY a.pid DESC";
+            $dql   = "SELECT a FROM AppBundle:Expertations a WHERE a.created_by =" . $this->getUser()->getId() . " ORDER BY a.pid DESC";
             $query = $em->createQuery($dql);
 
             $paginator  = $this->get('knp_paginator');

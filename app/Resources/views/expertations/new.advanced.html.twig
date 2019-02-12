@@ -2700,8 +2700,8 @@
     <style>
         .table td {
             padding: 0;
-            min-height: 33px;
-            height: 33px;
+            min-height: 40px;
+            height: 40px;
             font-size: 10px;
         }
         .table tr:hover {
@@ -2807,30 +2807,14 @@
 {% block javascripts %}
     <script src="{{ asset("js/jquery.fixedheadertable.min.js") }}"></script>
     <script>
-        /*$('#scroll-r').click(function(e) {
-            e.preventDefault();
-            $(".table-2").animate({'left':'-=300px'}).scrollLeft();
-            console.log($(".table-2").width());
-            $("#scroll-r").attr("enabled","enabled");
-            console.log($(".table-2").position())
-
-        });
-        $('#scroll-l').click(function(e) {
-            e.preventDefault();
-            console.log($(".table-2").position());
-            if ($(".table-2").position.left >= 0) {
-                return;
-            }
-            $(".table-2").animate({'left': '+=300px'}).scrollLeft()
-        });*/
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 430) {
                 $('#topTable').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','overlay');
                 $('.itemHead').width('100');
-                $('#firstItem').height('79');
+                $('#firstItem').height('86');
             } else {
                 $('#topTable').css('position','').css('top','63px').css('background','#FFF').width('100%');
-                $('#firstItem').height('31');
+                $('#firstItem').height('39');
             }
         });
     </script>
