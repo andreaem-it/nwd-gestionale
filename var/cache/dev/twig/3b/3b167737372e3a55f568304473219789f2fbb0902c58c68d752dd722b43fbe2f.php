@@ -452,9 +452,6 @@ class __TwigTemplate_6354ad34fa3283edffdb1316396f03f3c52e457682e88c193c9cbf125cb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 208
-        echo "<script src=\"https://code.jquery.com/ui/1.12.0/jquery-ui.min.js\"></script>
-";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -475,7 +472,7 @@ class __TwigTemplate_6354ad34fa3283edffdb1316396f03f3c52e457682e88c193c9cbf125cb
 
     public function getDebugInfo()
     {
-        return array (  456 => 208,  438 => 207,  376 => 147,  363 => 141,  353 => 138,  343 => 135,  333 => 132,  323 => 129,  315 => 126,  303 => 121,  290 => 115,  282 => 112,  270 => 107,  257 => 101,  247 => 98,  239 => 95,  227 => 90,  224 => 89,  222 => 88,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
+        return array (  438 => 207,  376 => 147,  363 => 141,  353 => 138,  343 => 135,  333 => 132,  323 => 129,  315 => 126,  303 => 121,  290 => 115,  282 => 112,  270 => 107,  257 => 101,  247 => 98,  239 => 95,  227 => 90,  224 => 89,  222 => 88,  210 => 83,  200 => 80,  192 => 77,  180 => 72,  167 => 66,  164 => 65,  155 => 60,  147 => 57,  135 => 52,  126 => 46,  120 => 45,  112 => 40,  102 => 35,  96 => 31,  91 => 29,  88 => 28,  85 => 27,  82 => 26,  79 => 25,  76 => 24,  73 => 23,  70 => 22,  67 => 21,  64 => 20,  61 => 19,  58 => 18,  53 => 14,  47 => 12,  45 => 11,  38 => 7,  30 => 1,);
     }
 
     public function getSourceContext()
@@ -687,7 +684,6 @@ class __TwigTemplate_6354ad34fa3283edffdb1316396f03f3c52e457682e88c193c9cbf125cb
   });
 </script>
 {% block javascripts %}
-<script src=\"https://code.jquery.com/ui/1.12.0/jquery-ui.min.js\"></script>
 {% endblock %}", "template/sidebar.html.twig", "/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/Resources/views/template/sidebar.html.twig");
     }
 }
