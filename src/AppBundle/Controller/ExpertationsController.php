@@ -1914,7 +1914,7 @@ class ExpertationsController extends Controller
      */
     public function AjaxAdvGetExpDataFiledAction($exp,$field) {
 
-        $return = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => '00' . $exp]);
+        $return = $this->getDoctrine()->getRepository(ExpertationsAdvanced::class)->findOneBy(['father' => $exp]);
 
         switch ($field) {
             case 'val1':

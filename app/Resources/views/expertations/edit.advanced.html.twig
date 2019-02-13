@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block title %}Preventivo{% endblock %}
 {% block body %}
-    <script src="{{ asset('js/jquery.CongelarFilaColumna.js') }}"></script>
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="row">
@@ -139,7 +138,7 @@
                                         <table class="table-1 table table-bordered ">
                                             <th class="firstHead">TIPOLOGIA</th>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     PUNTI PRESA
                                                 </td>
                                             </tr>
@@ -169,7 +168,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     PUNTI COMANDO
                                                 </td>
                                             </tr>
@@ -184,7 +183,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     ILLUMINAZIONE PREDISPOSIZIONE ESCLUSI CORPI ILLUMINANTI
                                                 </td>
                                             </tr>
@@ -234,7 +233,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     RISCALDAMENTO
                                                 </td>
                                             </tr>
@@ -264,7 +263,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     QUADRO ELETTRICO
                                                 </td>
                                             </tr>
@@ -294,7 +293,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     SERVIZI PREDISPOSIZIONE
                                                 </td>
                                             </tr>
@@ -399,7 +398,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     AUDIO-VIDEO E HOME THEATER PREDISPOSIZIONI
                                                 </td>
                                             </tr>
@@ -439,7 +438,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     PREDISPOSIZIONE AUTOMATISMI
                                                 </td>
                                             </tr>
@@ -474,7 +473,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     ASPIRAZIONE CENTRALIZZATA
                                                 </td>
                                             </tr>
@@ -489,7 +488,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="row-title" colspan="{{ colCount + 1 }}">
+                                                <td class="row-title" colspan="{{ colCount + 2 }}">
                                                     RESOCONTO PLACCHE
                                                 </td>
                                             </tr>
@@ -560,6 +559,9 @@
                                                             <th class="itemHead">
                                                                 Sistemi
                                                             </th>
+                                                            <th class="itemHead">
+                                                                TOTALI
+                                                            </th>
                                                         </tr>
                                                     </thead>
                                                 </table>
@@ -568,486 +570,679 @@
                                                 <table id="mainTable" class="table table-bordered">
                                                     <tbody>
                                                 <tr id="firstItem">
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
                                                 </tr>
 
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val1_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},1)" id="form_val1_{{ item }}">
                                                         </td>
                                                     {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val2_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val3_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
+                                                    <td class="fakeInput">
+                                                        <i id="form_val1_total"><strong>0</strong></i>
+                                                    </td>
 
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val4_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val5_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},2)" id="form_val2_{{ item }}">
                                                         </td>
                                                     {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val6_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val7_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val8_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val9_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val10_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val11_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val12_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val13_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val14_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val15_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val16_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val17_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val18_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val19_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val20_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val21_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val22_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val23_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val24_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val25_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val2_total"><strong>0</strong></i>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val26_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},3)" id="form_val3_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val3_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},4)" id="form_val4_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val4_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val27_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},5)" id="form_val5_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val5_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val28_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},6)" id="form_val6_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val6_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val29_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},7)" id="form_val7_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val7_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val30_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},8)" id="form_val8_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val8_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val31_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},9)" id="form_val9_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val9_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val32_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},10)" id="form_val10_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val10_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val33_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},11)" id="form_val11_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val11_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val34_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},12)" id="form_val12_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val12_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},13)" id="form_val13_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val13_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val35_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},14)" id="form_val14_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val14_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val36_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},15)" id="form_val15_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val15_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val37_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},16)" id="form_val16_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val16_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val38_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},17)" id="form_val17_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val17_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val39_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},18)" id="form_val18_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val18_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val40_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},19)" id="form_val19_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val19_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val41_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},30)" id="form_val20_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val20_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val42_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},21)" id="form_val21_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val21_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val43_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},22)" id="form_val22_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val22_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val44_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},23)" id="form_val23_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val23_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val45_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},24)" id="form_val24_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val24_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val46_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},25)" id="form_val25_{{ item }}">
                                                         </td>
                                                     {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                                    <td class="fakeInput">
+                                                        <i id="form_val25_total"><strong>0</strong></i>
+                                                    </td>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val47_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},26)" id="form_val26_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val26_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val48_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},27)" id="form_val27_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val27_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val49_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},28)" id="form_val28_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val28_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val50_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},29)" id="form_val29_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val29_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val51_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},30)" id="form_val30_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val30_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val52_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},31)" id="form_val31_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val31_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val53_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},32)" id="form_val32_{{ item }}">
                                                         </td>
                                                     {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                                    <td class="fakeInput">
+                                                        <i id="form_val32_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val54_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},33)" id="form_val33_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val33_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val55_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},34)" id="form_val34_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val34_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val56_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},35)" id="form_val35_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val35_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val57_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},36)" id="form_val36_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val36_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val58_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},37)" id="form_val37_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val37_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val59_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},38)" id="form_val38_{{ item }}">
                                                         </td>
                                                     {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
+                                                    <td class="fakeInput">
+                                                        <i id="form_val38_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val60_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},39)" id="form_val39_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val39_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val61_{{ item }}">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},40)" id="form_val40_{{ item }}">
                                                         </td>
                                                     {% endfor %}
-                                                </tr>
-                                                <tr>
-                                                    <td class="row-title" colspan="{{ colCount + 1 }}"></td>
-                                                </tr>
-                                                <tr>
-                                                    {% for item in 1..colCount %}
-                                                        <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val62_{{ item }}">
-                                                        </td>
-                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val40_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},41)" id="form_val41_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val41_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     {% for item in 1..colCount %}
                                                         <td>
-                                                            <input class="form-control" type="number" value="0" min="0" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},42)" id="form_val42_{{ item }}">
                                                         </td>
                                                     {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val42_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},43)" id="form_val43_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val43_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},44)" id="form_val44_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val44_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},45)" id="form_val45_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val45_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},46)" id="form_val46_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val46_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},47)" id="form_val47_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val47_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},48)" id="form_val48_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val48_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},49)" id="form_val49_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val49_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},50)" id="form_val50_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val50_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},51)" id="form_val51_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val51_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},52)" id="form_val52_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val52_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},53)" id="form_val53_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val53_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},54)" id="form_val54_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val54_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},55)" id="form_val55_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val55_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},56)" id="form_val56_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val56_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},57)" id="form_val57_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val57_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},58)" id="form_val58_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val58_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},59)" id="form_val59_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val59_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},60)" id="form_val60_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val60_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},61)" id="form_val61_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val61_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row-title" colspan="{{ colCount + 2 }}"></td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},62)" id="form_val62_{{ item }}">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val62_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},63)" id="form_val63_{{ item }}" onchange="check({{ item }},63)">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val63_total"><strong>0</strong></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {% for item in 1..colCount %}
+                                                        <td>
+                                                            <input class="form-control" type="number" value="0" min="0" onChange="calcLineTotal({{ count|length }},64)" id="form_val64_{{ item }}" onchange="check({{ item }},64)">
+                                                        </td>
+                                                    {% endfor %}
+                                                    <td class="fakeInput">
+                                                        <i id="form_val64_total"><strong>0</strong></i>
+                                                    </td>
                                                 </tr>
                                                     </tbody>
                                                 </table>
@@ -2632,7 +2827,6 @@
                         success: function (data) {
                             for (var i = 0; i < {{ colCount }}; i++) {
                                 var numbersArray = data.split(',');
-                                console.log("GET " + valn)
                                 $.each(numbersArray, function(index, value) {
                                     var ind = index +1;
                                     $('#form_'+ valn + '_' + ind).val(value);
@@ -2680,13 +2874,68 @@
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                     $('#buttons').css('left','84%');
                 }
+                $(window).bind('scroll', function () {
+                    if ($(window).scrollTop() > 430) {
+                        $('#topTable').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','overlay');
+                        $('.itemHead').width('100');
+                        $('#firstItem').height('86');
+                    } else {
+                        $('#topTable').css('position','').css('top','63px').css('background','#FFF').width('100%');
+                        $('#firstItem').height('39');
+                    }
+                });
+                $(document).ready(function () {
+                    $(window).keydown(function(event){
+                        if(event.keyCode == 13) {
+                            event.preventDefault();
+                            return false;
+                        }
+                    });
+                    $('#nav-hide-btn-icon').trigger('click');
+                    $('button[data-toggle="collapse"]').click(function(){
+                        //log the id of the target
+                        if($(this).hasClass('btn-success')) {
+                            $('.btn-addon-' + id).switchClass('btn-outline-primary', 'btn-success')
+                        } else {
+                            $(this).switchClass('btn-outline-primary', 'btn-primary');
+                        }
+                    });
+                });
+                function checkedAddon(id) {
+                    if($('.btn-addon-' + id).hasClass('btn-success')) {
+
+                    } else {
+                        $('.btn-addon-' + id).switchClass('btn-primary', 'btn-success').removeClass('collapse');
+                    }
+                }
+                for (i=1; i < 21; i++) {
+                    $('#appbundle_expertationsadvanced_opt' + i + 'Enabled').click( function () {
+                        $('.btn-addon-' + i).switchClass('btn-primary', 'btn-success');
+                    });
+                }
+                function calcLineTotal(c,v) {
+                    var currentVal = 0;
+                    c = c + 1;
+                    for (i = 1; i < c; i++) {
+                        //$('form_val' + v + '_' . i ).each(function() {
+                        //currentVal = currentVal + $('form_val' + v + '_' . c).val();
+                        currentVal += parseInt($('form_val' + v + '_' . c).val());
+                        console.log(currentVal)
+                        //})
+                    }
+                    $('#form_val' + v + '_total').val(currentVal);
+                    console.log(currentVal)
+
+                }
+                /*$(document).ready( function() {
+                    for (i = 1; i < 64; i++) {
+                        calcLineTotal( {{ colCount }} ,  i);
+                        console.log(i);
+                    }
+                })*/
             </script>
         </div>
     </div>
-    <script src="{{ asset('js/jquery.collection.js') }}"></script>
-    <script type="text/javascript">
-        $('.collection').collection();
-    </script>
     <script src="{{ asset('js/jquery.toastr.js') }}" type="text/javascript"></script>
 {% endblock %}
 {% block stylesheets %}
@@ -2699,6 +2948,7 @@
             min-height: 40px;
             height: 40px;
             font-size: 10px;
+            min-width:100px;
         }
         .table tr:hover {
             background-color: #F0F0EE;
@@ -2797,55 +3047,23 @@
         .itemHead {
             min-width: 100px;
         }
+        .fakeInput {
+            width: 100px!important;
+            height: 40px!important;
+        }
+        .fakeInput {
+            text-align: center!important;
+        }
+        .fakeInput i strong {
+            font-size: 14px;
+            font-style: normal;
+        }
     </style>
     <link rel="stylesheet" href="{{ asset('css/jquery.toastr.min.css') }}">
 {% endblock %}
 {% block javascripts %}
-    <script src="{{ asset("js/jquery.fixedheadertable.min.js") }}"></script>
     <script>
-        $(window).bind('scroll', function () {
-            if ($(window).scrollTop() > 430) {
-                $('#topTable').css('position','fixed').css('top','63px').css('background','#FFF').width('70.2%').css('overflow','overlay');
-                $('.itemHead').width('100');
-                $('#firstItem').height('86');
-            } else {
-                $('#topTable').css('position','').css('top','63px').css('background','#FFF').width('100%');
-                $('#firstItem').height('39');
-            }
-        });
 
 
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(window).keydown(function(event){
-                if(event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
-            $('#nav-hide-btn-icon').trigger('click');
-            $('button[data-toggle="collapse"]').click(function(){
-                //log the id of the target
-                if($(this).hasClass('btn-success')) {
-                    $('.btn-addon-' + id).switchClass('btn-outline-primary', 'btn-success')
-                } else {
-                    $(this).switchClass('btn-outline-primary', 'btn-primary');
-                }
-            });
-        });
-        function checkedAddon(id) {
-            if($('.btn-addon-' + id).hasClass('btn-success')) {
-
-            } else {
-                $('.btn-addon-' + id).switchClass('btn-primary', 'btn-success').removeClass('collapse');
-
-            }
-        }
-        for (i=1; i < 21; i++) {
-            $('#appbundle_expertationsadvanced_opt' + i + 'Enabled').click( function () {
-                $('.btn-addon-' + i).switchClass('btn-primary', 'btn-success');
-            });
-        }
     </script>
 {% endblock %}
