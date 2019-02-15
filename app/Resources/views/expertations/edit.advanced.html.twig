@@ -2831,8 +2831,9 @@
                                     var ind = index +1;
                                     $('#form_'+ valn + '_' + ind).val(value);
                                 });
-
+                                calcLineTotal({{ colCount }}, valn );
                             }
+
                         }
                     })
                 }
@@ -2902,34 +2903,36 @@
                     });
                 });
                 function checkedAddon(id) {
-                    if($('.btn-addon-' + id).hasClass('btn-success')) {
+                    if($('.btn-addon-' + id).hasClass('btn-success').removeClass('collapse')) {
 
                     } else {
                         $('.btn-addon-' + id).switchClass('btn-primary', 'btn-success').removeClass('collapse');
+                        addonClick(id)
                     }
                 }
-                for (i=1; i < 21; i++) {
-                    $('#appbundle_expertationsadvanced_opt' + i + 'Enabled').click( function () {
-                        $('.btn-addon-' + i).switchClass('btn-primary', 'btn-success');
-                    });
+                //for (i=1; i < 21; i++) {
+                function addonClick(i) {
+                    //$('#appbundle_expertationsadvanced_opt' + i + 'Enabled').click( function () {
+                        $('.btn-addon-' + i).switchClass('btn-primary', 'btn-success').switchClass('collapsed', '');
+                    //});
                 }
                 function calcLineTotal(c,v) {
-                    var currentVal = 0;
-                    c = c + 1;
-                    for (i = 1; i < c; i++) {
-                        //$('form_val' + v + '_' . i ).each(function() {
-                        //currentVal = currentVal + $('form_val' + v + '_' . c).val();
-                        currentVal += parseInt($('form_val' + v + '_' . c).val());
-                        console.log(currentVal)
-                        //})
+                    var vals = [];
+                    var myTotal = 0;
+                    var c = (parseInt(c) + 1);
+                    for (i=1; i < c; i++) {
+                        vals.push($('#form_' + v + '_' + i).val());
                     }
-                    $('#form_val' + v + '_total').val(currentVal);
-                    console.log(currentVal)
-
+                    console.log(vals);
+                    for(var i = 0, len = vals.length; i < len; i++) {
+                        myTotal += parseInt(vals[i]);
+                    }
+                    console.log(v + ':' + myTotal);
+                    $('#form_' + v + '_total').html('<strong>' + myTotal + '</strong>');
                 }
                 /*$(document).ready( function() {
                     for (i = 1; i < 64; i++) {
-                        calcLineTotal( {{ colCount }} ,  i);
+                        calcLineTotal( 1 ,  i)
                         console.log(i);
                     }
                 })*/
@@ -3057,6 +3060,9 @@
         .fakeInput i strong {
             font-size: 14px;
             font-style: normal;
+        }
+        .form-check .form-check-label {
+            padding-left: 40px!important;
         }
     </style>
     <link rel="stylesheet" href="{{ asset('css/jquery.toastr.min.css') }}">
