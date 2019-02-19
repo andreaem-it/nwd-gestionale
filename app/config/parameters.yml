@@ -1,6 +1,10 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_path: '%kernel.root_dir%/db/data_prod.db'
+    #database_path: '%kernel.root_dir%/db/data_prod.db'
+    database_host: '192.168.1.7'
+    database_user: 'root'
+    database_password: 'FOFkom14'
+    database_name: 'gestionale'
     mailer_transport: smtp
     mailer_host: smtp.mailtrap.io
     mailer_user: 0285db81b706f0

@@ -118,7 +118,10 @@
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="container.autowiring.strict_mode">true</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
-    <parameter key="database_path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/db/data_prod.db</parameter>
+    <parameter key="database_host">192.168.1.7</parameter>
+    <parameter key="database_user">root</parameter>
+    <parameter key="database_password">FOFkom14</parameter>
+    <parameter key="database_name">gestionale</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">smtp.mailtrap.io</parameter>
     <parameter key="mailer_user">0285db81b706f0</parameter>
@@ -5495,13 +5498,13 @@
     </service>
     <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection" public="true">
       <argument type="collection">
-        <argument key="driver">pdo_sqlite</argument>
+        <argument key="driver">pdo_mysql</argument>
         <argument key="charset">UTF8</argument>
-        <argument key="path">/Users/andreaemili/PhpstormProjects/nwd-gestionale/app/db/data_prod.db</argument>
-        <argument key="host">localhost</argument>
-        <argument key="port">null</argument>
+        <argument key="host">192.168.1.7</argument>
+        <argument key="dbname">gestionale</argument>
         <argument key="user">root</argument>
-        <argument key="password">null</argument>
+        <argument key="password">FOFkom14</argument>
+        <argument key="port">null</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
       </argument>
@@ -5624,13 +5627,23 @@
     <service id="AppBundle\Form\ExpertationsAdvancedType" class="AppBundle\Form\ExpertationsAdvancedType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\ClientsController" class="AppBundle\Controller\ClientsController" public="true" autowire="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\DependencyInjection\ServiceSubscriberInterface.0.AppBundle\Controller\ClientsController" class="AppBundle\Controller\ClientsController" public="true" autowire="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.AppBundle\Controller\ClientsController" class="AppBundle\Controller\ClientsController" public="true" autowire="true" abstract="true"/>
     <service id="AppBundle\Controller\ClientsController" class="AppBundle\Controller\ClientsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id="service_locator.yscbjmj.AppBundle\Controller\ClientsController"/>
+      </call>
     </service>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\DependencyInjection\ServiceSubscriberInterface.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id="service_locator.yscbjmj.AppBundle\Controller\DefaultController"/>
+      </call>
     </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\ExpertationsController" class="AppBundle\Controller\ExpertationsController" public="true" autowire="true" abstract="true"/>
     <service id="AppBundle\Controller\ExpertationsController" class="AppBundle\Controller\ExpertationsController" public="true" autowire="true" autoconfigure="true">
@@ -6003,6 +6016,32 @@
       <argument>twig.template_cache_warmer</argument>
       <argument type="service" id="service_container"/>
       <factory service="service_locator.2m3e4be" method="withContext"/>
+    </service>
+    <service id="service_locator.yscbjmj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service" id="doctrine" on-invalid="ignore"/>
+        <argument key="form.factory" type="service" id="form.factory" on-invalid="ignore"/>
+        <argument key="http_kernel" type="service" id="http_kernel" on-invalid="ignore"/>
+        <argument key="request_stack" type="service" id="request_stack" on-invalid="ignore"/>
+        <argument key="router" type="service" id="router.default" on-invalid="ignore"/>
+        <argument key="security.authorization_checker" type="service" id="security.authorization_checker" on-invalid="ignore"/>
+        <argument key="security.csrf.token_manager" type="service" id="security.csrf.token_manager" on-invalid="ignore"/>
+        <argument key="security.token_storage" type="service" id="security.token_storage" on-invalid="ignore"/>
+        <argument key="session" type="service" id="session" on-invalid="ignore"/>
+        <argument key="templating" type="service" id="templating.engine.twig" on-invalid="ignore"/>
+        <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
+      </argument>
+    </service>
+    <service id="service_locator.yscbjmj.AppBundle\Controller\ClientsController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <argument>AppBundle\Controller\ClientsController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service="service_locator.yscbjmj" method="withContext"/>
+    </service>
+    <service id="service_locator.yscbjmj.AppBundle\Controller\DefaultController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <argument>AppBundle\Controller\DefaultController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service="service_locator.yscbjmj" method="withContext"/>
     </service>
     <service id="debug.validator.inner" class="Symfony\Component\Validator\Validator\ValidatorInterface" public="false">
       <factory service="validator.builder" method="getValidator"/>

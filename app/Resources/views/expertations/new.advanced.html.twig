@@ -2639,6 +2639,7 @@
                                 var ind = index +1;
                                 $('#form_'+ valn + '_' + ind).val(value);
                             });
+                            calcLineTotal({{ colCount }}, valn );
 
                         }
                     }
@@ -2682,6 +2683,20 @@
                     this.setSelectionRange(start, end);
 
                 });
+            }
+            function calcLineTotal(c,v) {
+                var vals = [];
+                var myTotal = 0;
+                var c = (parseInt(c) + 1);
+                for (i=1; i < c; i++) {
+                    vals.push($('#form_' + v + '_' + i).val());
+                }
+                console.log(vals);
+                for(var i = 0, len = vals.length; i < len; i++) {
+                    myTotal += parseInt(vals[i]);
+                }
+                console.log(v + ':' + myTotal);
+                $('#form_' + v + '_total').html('<strong>' + myTotal + '</strong>');
             }
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                 $('#buttons').css('left','84%');

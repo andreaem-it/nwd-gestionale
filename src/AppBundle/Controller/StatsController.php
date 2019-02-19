@@ -4,9 +4,9 @@ namespace AppBundle\Controller;
 
 use AppBundle\AppBundle;
 use AppBundle\Entity\Expertations;
-//use fados\ChartjsBundle\Model\ChartBuiderData;
-//use fados\ChartjsBundle\Utils\TypeCharjs;
-//use fados\ChartjsBundle\Utils\TypeColors;
+use fados\ChartjsBundle\Model\ChartBuiderData;
+use fados\ChartjsBundle\Utils\TypeCharjs;
+use fados\ChartjsBundle\Utils\TypeColors;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,41 +17,13 @@ class StatsController extends Controller
      */
     public function statsAction()
     {
-        /*dump($this->getByMonth(2018, 11));
+        /*dump($this->getByMonth(2018, 11));*/
 
-        $grafica = new ChartBuiderData();
-        $grafica->setType(TypeCharjs::CHARJS_BAR);
-        $grafica->setLabels(['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre']);
-        $grafica->setData([
-            'Preventivi' => [
-                $this->getByMonth(null, 1),
-                $this->getByMonth(null, 2),
-                $this->getByMonth(null, 3),
-                $this->getByMonth(null, 4),
-                $this->getByMonth(null, 5),
-                $this->getByMonth(null, 6),
-                $this->getByMonth(null, 7),
-                $this->getByMonth(null, 8),
-                $this->getByMonth(null, 9),
-                $this->getByMonth(null, 10),
-                $this->getByMonth(null, 11),
-                $this->getByMonth(null, 12)
-            ]
-        ]);
-        $grafica->setBackgroundcolor([TypeColors::dark_green]);
-        $grafica->setBordercolor([TypeColors::green]);
-        $grafica->setHeight('250px');
-        $grafica->setWidth('500px');
-        $grafica->setTitle('Sample Charjs Bar');
+
 
         return $this->render('stats/summary.html.twig',[
-            'graphica'=>$grafica,
-            'title'=>$grafica->getTitle()
-        ]);
 
-       /* return $this->render('', [
-            // ...
-        ]);*/
+        ]);
     }
 
     function getByMonth($year = null, $month = null) {

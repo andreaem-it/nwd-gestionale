@@ -42,13 +42,13 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver: pdo_sqlite
+        driver: pdo_mysql
         charset: UTF8
-        path: "%database_path%"
-        #host:     '%database_host%'
-        #dbname:   '%database_name%'
-        #user:     '%database_user%'
-        #password: '%database_password%'
+        #path: "%database_path%"
+        host:     '%database_host%'
+        dbname:   '%database_name%'
+        user:     '%database_user%'
+        password: '%database_password%'
 
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'

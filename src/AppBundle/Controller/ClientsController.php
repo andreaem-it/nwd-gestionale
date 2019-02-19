@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\AppBundle;
 use AppBundle\Entity\Clients;
 use AppBundle\Entity\Users;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -20,7 +21,7 @@ use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Doctrine\ORM\Query\Expr;
 
-class ClientsController extends Controller
+class ClientsController extends AbstractController
 {
 //    /**
 //     * @Route("clienti/", name="clienti")
@@ -66,7 +67,7 @@ class ClientsController extends Controller
     /**
      * @Route("clienti/", name="clienti")
      */
-    public function ClientsAction(Request $request) {
+    final function ClientsAction(Request $request) {
             $clients = $this->getDoctrine()->getRepository('AppBundle:Clients')->findBy(['refereer' => $this->getUser()]);
 
         return $this->render('clients/clients.html.twig',[
