@@ -1189,7 +1189,6 @@ class ExpertationsController extends Controller
         $qtyPC = array_sum($item->getC1v());
         $qtyPP = array_sum($item->getPp());
         $arrPP = array();
-        dump($itemAdv);
 
         array_push($arrPP,$qtyPP);
         if (!$itemAdv->getVal2()) {

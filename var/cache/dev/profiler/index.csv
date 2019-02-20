@@ -13349,3 +13349,10 @@ b72aae,127.0.0.1,GET,http://localhost:8000/dashboard,1550680954,,200
 9a9b51,127.0.0.1,GET,http://localhost:8000/preventivi/lista,1550680960,,200
 6bdd50,127.0.0.1,GET,http://localhost:8000/preventivi/mostra/preventivo-0026,1550680962,,200
 3d4e1f,127.0.0.1,GET,http://localhost:8000/preventivi/dettaglio/49,1550680968,,200
+365a67,127.0.0.1,GET,http://localhost:8000/preventivi/dettaglio/49,1550682393,,200
+b338cc,127.0.0.1,GET,http://localhost:8000/preventivi/dettaglio/49,1550682406,,200
+2a609a,127.0.0.1,GET,http://localhost:8000/preventivi/avanzato/nuovo/preventivo-0026?floor=0,1550682410,,302
+69e18e,127.0.0.1,GET,http://localhost:8000/preventivi/avanzato/mostra/preventivo-0026,1550682413,,200
+5624b0,127.0.0.1,GET,http://localhost:8000/preventivi/dettaglio/avanzato/preventivo-0026,1550682420,,200
+e7fa97,127.0.0.1,GET,http://localhost:8000/preventivi/dettaglio/avanzato/preventivo-0026,1550682458,,200
+6d15fc,127.0.0.1,GET,http://localhost:8000/preventivi/dettaglio/avanzato/preventivo-0026,1550682514,,200

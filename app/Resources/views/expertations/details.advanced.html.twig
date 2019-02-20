@@ -437,7 +437,7 @@
                                             <td class="border text-center">{{ fun.getPriceByCode('15.3.151.2')|number_format(2) }}</td>
                                             {% set prices = prices|merge([fun.getPriceByCode('15.3.151.2')]) %}
                                         </tr>
-                                        {% if qtyPT < 5 %}
+                                        {% if itemsArray.43 < 5 %}
                                             <tr>
                                                 <td class="border text-center">15.3.161.1</td>
                                                 <td class="text-small border" style="max-width: 300px">
@@ -454,7 +454,7 @@
                                                 <td class="border text-center">{{ fun.getPriceByCode('15.3.161.1')|number_format(2) }}</td>
                                                 {% set prices = prices|merge([fun.getPriceByCode('15.3.161.1')]) %}
                                             </tr>
-                                        {% elseif qtyPT > 6 and qtyPT < 10 %}
+                                        {% elseif itemsArray.43 > 6 and itemsArray.43 < 10 %}
                                             <tr>
                                                 <td class="border text-center">15.3.161.2</td>
                                                 <td class="text-small border" style="max-width: 300px">
@@ -471,7 +471,7 @@
                                                 <td class="border text-center">{{ fun.getPriceByCode('15.3.161.2')|number_format(2) }}</td>
                                                 {% set prices = prices|merge([fun.getPriceByCode('15.3.161.2')]) %}
                                             </tr>
-                                        {% elseif qtyPT > 11 and qtyPT < 15 %}
+                                        {% elseif itemsArray.43 > 11 and itemsArray.43 < 15 %}
                                             <tr>
                                                 <td class="border text-center">15.3.161.3</td>
                                                 <td class="text-small border" style="max-width: 300px">
@@ -497,10 +497,10 @@
                                                 Incremento al punto presa di servizio per <strong>presa di ricezione TV terrestre</strong>
                                             </small>
                                         </td>
-                                        <td class="border text-center">{{ qtyPT }}</td>
+                                        <td class="border text-center">{{ itemsArray.43 }}</td>
                                         <td class="border text-center">{{ fun.getPriceByCode('15.3.110.1')|number_format(2) }}</td>
-                                        <td class="border text-center">{{ (qtyPT * fun.getPriceByCode('15.3.110.1'))|number_format(2) }}</td>
-                                        {% set prices = prices|merge([qtyPT * fun.getPriceByCode('15.3.110.1')]) %}
+                                        <td class="border text-center">{{ (itemsArray.43 * fun.getPriceByCode('15.3.110.1'))|number_format(2) }}</td>
+                                        {% set prices = prices|merge([itemsArray.43 * fun.getPriceByCode('15.3.110.1')]) %}
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.4.230.0</td>
@@ -523,9 +523,9 @@
                                                     Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
                                                 </small>
                                             </td>
-                                            <td class="border text-center">{{ qtyPT }}</td>
+                                            <td class="border text-center">{{ itemsArray.43 }}</td>
                                             <td class="border text-center">8</td>
-                                            <td class="border text-center">{{ qtyPT  * 8}}</td>
+                                            <td class="border text-center">{{ itemsArray.43  * 8}}</td>
                                         </tr>
                                     {% endif %}
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
@@ -537,9 +537,9 @@
                                                     Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
                                                 </small>
                                             </td>
-                                            <td class="border text-center">{{ qtyPT }}</td>
+                                            <td class="border text-center">{{ itemsArray.43 }}</td>
                                             <td class="border text-center">12.9</td>
-                                            <td class="border text-center">{{ qtyPT * 12.9 }}</td>
+                                            <td class="border text-center">{{ itemsArray.43 * 12.9 }}</td>
                                         </tr>
                                     {% endif %}
                                     {% if item.opereMurariePietra == 1 %}
@@ -550,9 +550,9 @@
                                                     Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                                 </small>
                                             </td>
-                                            <td class="border text-center">{{ qtyPT }}</td>
+                                            <td class="border text-center">{{ itemsArray.43 }}</td>
                                             <td class="border text-center">12.1</td>
-                                            <td class="border text-center">{{ qtyPT  * 12.1}}</td>
+                                            <td class="border text-center">{{ itemsArray.43  * 12.1}}</td>
                                         </tr>
                                     {% endif %}#}
                                     {% if qtyTR != 0 %}
@@ -635,9 +635,9 @@
                                                         Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
                                                     </small>
                                                 </td>
-                                                <td class="border text-center">{{ qtyPT }}</td>
+                                                <td class="border text-center">{{ itemsArray.43 }}</td>
                                                 <td class="border text-center">12.9</td>
-                                                <td class="border text-center">{{ qtyPT * 12.9 }}</td>
+                                                <td class="border text-center">{{ itemsArray.43 * 12.9 }}</td>
                                             </tr>
                                         {% endif %}
                                         {% if item.opereMurariePietra == 1 %}
