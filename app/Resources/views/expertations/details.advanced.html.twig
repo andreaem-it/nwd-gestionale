@@ -1343,6 +1343,337 @@
                                         </tr>
                                     {% endif %}
 
+                                    <!-- INIZIO BLOCCHI AGGIONTE -->
+                                    {% if itemAdv.opt1Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">1. PRIMA AGGIUNTA POSSIBILE: predisposizione per ingresso linee ENEL e TELECOM realizzate con cavidotto interrato. Le esatte misure verranno conteggiate alla fine dei lavori appena verranno definite le ubicazioni.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione tubazione esterna interrata per ingresso Linea telefonica. Misura ipotetica da verificare in loco.				</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.5.210.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Tubazione flessibile in polietilene a doppia parete. Diametro esterno 50 mm
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt11Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.5.210.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt11Value * fun.getPriceByCode('15.5.210.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.5.260.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Pozzetto in resina completo di coperchio carrabile 300 x 300 mm.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt12Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.5.260.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt12Value * fun.getPriceByCode('15.5.260.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Ingresso linea cavi impianto elettrico misura stimata in base alla posizione comunicata del contatore ENEL.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.5.210.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Tubazione flessibile in polietilene a doppia parete. Diametro esterno 63 mm
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt13Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.5.210.2')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt13Value * fun.getPriceByCode('15.5.210.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.5.260.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Pozzetto in cemento completo di coperchio carrabile 300 x 300 mm.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt14Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.5.260.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt14Value * fun.getPriceByCode('15.5.260.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt2Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">2. SECONDA AGGIUNTA POSSIBILE: completamento predisposizione per domotica con Relè passo passo. I punti di comando, in questo caso, diventano in bassa tensione,<br> i frutti tutti pulsanti ed i cavi del tipo da utilizzare in impianti domotici. In futuro questa scelta eviterà di dover risfilare l'impianto e cambiare la serie civile.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Relè Passo Passo ed alimentatori già suddivisi per piano: NECESSARI PER LA GESTIONE DELL'ILLUMINAZIONE IN BASSA TENSIONE	</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.6.170.31</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Apparecchi modulari da inserire su quadro elettrico con attacco DIN, forniti e posti in opera. Sono compresi: il cablaggio, gli accessori, il montaggio, <br>E’ compreso quanto altro occorre per dare il lavoro finito. E’ esclusa la quota di carpenteria. Relè passo-passo 1 contatto 16A
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt21Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.6.170.31')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt21Value * fun.getPriceByCode('15.6.170.31')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.6.170.44</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Apparecchi modulari da inserire su quadro elettrico con attacco DIN, forniti e posti in opera. Sono compresi: il cablaggio, gli accessori, il montaggio, <br>E’ compreso quanto altro occorre per dare il lavoro finito. E’ esclusa la quota di carpenteria. Trasformatore BTS secondario 24V 40VA
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt22Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.6.170.44')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt22Value * fun.getPriceByCode('15.6.170.44')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt3Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">3. TERZA AGGIUNTA POSSIBILE: impianto di antenna satellitare, completo di antenna ed accessori, considerato per ogni punto Tv terrestre predisposto.	</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Impianto di ricezione SATELLITARE</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.171.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Impianto di ricezione di segnale TV satellitare costituito da antenna parabolica in alluminio, idonea alla ricezione di segnale TV satellitare,<br>
+                                                    completa di palo e di sistemi di fissaggio su tetto, su parete o su copertura piana di qualsiasi natura, di cavi di collegamento fino all'impianto di amplificazione.<br>
+                                                    Il tutto posto in opera con tutto quanto occorre per dare il lavoro finito, in copertura a qualsiasi altezza, incluse le eventuali opere murarie per il fissaggio <br>
+                                                    ed il ripristino di eventuali parti  di copertura interessate. Per antenna parabolica di diametro pari a 80 cm
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt31Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.171.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt31Value * fun.getPriceByCode('15.3.171.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.172.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
+                                                            inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore ad un’uscita
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt32Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.172.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt32Value * fun.getPriceByCode('15.3.172.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.172.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
+                                                    inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore a due uscite
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt33Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.172.2')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt33Value * fun.getPriceByCode('15.3.172.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.172.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
+                                                    inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore a quattro uscite
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt34Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.172.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt34Value * fun.getPriceByCode('15.3.172.3')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Impianto Satellitare Multiswitch centralizzato per più di 4 punti SATELLITE.	</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.174.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Sistema di amplificazione ed equalizzazione multiswitch per la distribuzione del segnale TV SAT miscelato con segnale TV terrestre, fino a 30 prese,<br>
+                                                    completo di convertitore, alimentatore, con ingressi derivati dall'antenna parabolica, inclusi i cavi di collegamento delle colonne montanti e <br>
+                                                    degli accessori necessari per dare l'opera finita e funzionante. Sistema base con multiswitch radiale a 4 uscite
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt35Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.174.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt35Value * fun.getPriceByCode('15.3.174.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.172.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
+                                                    inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore a due uscite
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt36Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.172.2')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt36Value * fun.getPriceByCode('15.3.172.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.172.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Sistema di amplificazione ed equalizzazione multiswitch per la distribuzione del segnale TV SAT miscelato con segnale TV terrestre, fino a 30 prese,<br>
+                                                    completo di convertitore, alimentatore, con ingressi derivati dall'antenna parabolica, inclusi i cavi di collegamento delle colonne montanti e <br>
+                                                    degli accessori necessari per dare l'opera finita e funzionante. Amplificazione  finale per alimentazione fino a 60 prese
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt37Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.172.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt37Value * fun.getPriceByCode('15.3.172.3')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.110.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per presa di ricezione TV satellitare
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt38Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.110.2')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt38Value * fun.getPriceByCode('15.3.110.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Cavo per dorsale Satellite.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.4.230.0</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt39Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.4.230')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt39Value * fun.getPriceByCode('15.4.230')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt4Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">4. QUARTA AGGIUNTA POSSIBILE: oneri di predisposizione per diffusione sonora per gli ambienti dell'abitazione				</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione modulo comandi diffusione sonora.				</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt41Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt41Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt42Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt42Value * 8 }}</td>
+                                        </tr>
+                                        {# TODO: Gestire maggiorazioni a seconda del tipo op #}
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.				</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.20.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt43Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt43Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {# TODO inserisci OPT5#}
+                                    {% if itemAdv.opt5Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">5. QUINTA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto sorround soggiorno</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt6Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">6. SESTA AGGIUNTA POSSIBILE: connettorizzazione dei punti di trasmissione dati predisposti e conteggiati nella proposta C.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Connettorizzazione punti trasmissione dati.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.220.6</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per <strong>connettore tipo RJ45</strong> con cavo UTP cat. 6
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt61Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.220.6')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt61Value * fun.getPriceByCode('15.3.220.6')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt7Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">7. SETTIMA AGGIUNTA POSSIBILE: oneri di predisposizione per videosorveglianza esterna.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione videosorveglianza</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt71Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt71Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt72Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt72Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione videosorveglianza</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt73Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt73Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
                                     <!-- TOTALI -->
                                     <tr>
                                         <td colspan="3" class="border-0"></td>

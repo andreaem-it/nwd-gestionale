@@ -4,49 +4,9 @@
     <list default="true" id="868f17b2-549f-4749-bc51-d64ff7ff6a3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/V/4e+IZoxxkhXlq5aOH43E" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/V/4e+IZoxxkhXlq5aOH43E" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/X/v50JKB0TPaePncoMyQDs" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/+/X/v50JKB0TPaePncoMyQDs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/5/D/kT829Gd7osLFR5euDgiY" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/5/D/kT829Gd7osLFR5euDgiY" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/5/Z/gg39BQBlxSDR5-tTHvGR" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/5/Z/gg39BQBlxSDR5-tTHvGR" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/A/W/liQTuV+B5TP7uNmVaMvQ" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/A/W/liQTuV+B5TP7uNmVaMvQ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/B/+/eIScfa-+8-JOWKkSmGcg" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/B/+/eIScfa-+8-JOWKkSmGcg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/B/Y/twSLNxKO8I+NwygBuLcW" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/B/Y/twSLNxKO8I+NwygBuLcW" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/D/H/2iZkk+R-pQDWvpAy4dg0" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/D/H/2iZkk+R-pQDWvpAy4dg0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/D/M/3072zcqqw-hoy7FjXFXA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/D/M/3072zcqqw-hoy7FjXFXA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/F/T/S3DLtm6bY6KHGap8H8F5" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/F/T/S3DLtm6bY6KHGap8H8F5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/H/Q/zKR7CFb7qPLte8SJRqPX" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/H/Q/zKR7CFb7qPLte8SJRqPX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/H/Y/PKDiI8TaGljwc9DkC6Kl" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/H/Y/PKDiI8TaGljwc9DkC6Kl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/I/G/iKraGRx2GtAvh6-bY067" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/I/G/iKraGRx2GtAvh6-bY067" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/I/Y/ZBWlyDgfqqgrqjlK97SA" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/I/Y/ZBWlyDgfqqgrqjlK97SA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/J/A/Ju7pecoJ+bbHoOk0iQPs" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/J/A/Ju7pecoJ+bbHoOk0iQPs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/J/C/DjhsNY5SBA7-hVtyz+DY" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/J/C/DjhsNY5SBA7-hVtyz+DY" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/J/C/aFbYbXvacxoIOSQxV4lR" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/J/C/aFbYbXvacxoIOSQxV4lR" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/K/T/LYCyCW8qB51PT9S6PDZT" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/K/T/LYCyCW8qB51PT9S6PDZT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/L/3/2bJyFva5ZjXoEEiqB+6R" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/L/3/2bJyFva5ZjXoEEiqB+6R" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/L/7/WEbJKlKB2A9H19rxSwzZ" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/L/7/WEbJKlKB2A9H19rxSwzZ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/L/N/LK+qFdvy9oxhFjtW91qS" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/L/N/LK+qFdvy9oxhFjtW91qS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/M/C/Vxif44gM2FiZmrp+fswX" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/M/C/Vxif44gM2FiZmrp+fswX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/M/N/aTzimnxM9hJ1zUAkiGat" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/M/N/aTzimnxM9hJ1zUAkiGat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/D/n32t-uzVrOXCcWNah9fR" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/D/n32t-uzVrOXCcWNah9fR" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/J/9K+AKsr4Mg4DLI6gbZaD" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/J/9K+AKsr4Mg4DLI6gbZaD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/N/Zh7Qi3RAqCUSMM0Sjevu" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/N/Zh7Qi3RAqCUSMM0Sjevu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/T/MQQ+WbT9XZTOzEX3TxLF" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/T/MQQ+WbT9XZTOzEX3TxLF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/U/mV39r8b0Lm8OnNEpHkyp" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/O/U/mV39r8b0Lm8OnNEpHkyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/P/0/OX9ZIAdWGVT2GQwG5nhZ" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/P/0/OX9ZIAdWGVT2GQwG5nhZ" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/R/T/CWQ5hh9SU1q8wVtM2bOM" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/R/T/CWQ5hh9SU1q8wVtM2bOM" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/S/C/ZDmFsUzTi+nk-HOLkRbu" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/S/C/ZDmFsUzTi+nk-HOLkRbu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/S/Y/7fbppiOpK2L2Qv36I1ae" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/S/Y/7fbppiOpK2L2Qv36I1ae" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/T/1/qmkHfLv1x5O8mJmN5k7s" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/T/1/qmkHfLv1x5O8mJmN5k7s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/T/Z/iwA6LIafsLkKZc+WM2S2" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/T/Z/iwA6LIafsLkKZc+WM2S2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/F/6BN+tIKzfIOorWRc2cqc" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/F/6BN+tIKzfIOorWRc2cqc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/S/spXw4NbM6RbgA4l25m+X" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/V/S/spXw4NbM6RbgA4l25m+X" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/X/W/0PorpFVLP4Alh77sBZLt" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/X/W/0PorpFVLP4Alh77sBZLt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/B/uGcy6513FNSYic+b7pzu" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/B/uGcy6513FNSYic+b7pzu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/X/E3FCBlxg26kBS5CNUeCi" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Y/X/E3FCBlxg26kBS5CNUeCi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/S/sriGq0ap-BflvuR+CceS" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/S/sriGq0ap-BflvuR+CceS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/Y/c2sfdAm+VNeN4FPk4CvB" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/Z/Y/c2sfdAm+VNeN4FPk4CvB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/20/20873b54aabbf327872238d78eba0f14211616b81a2c59f96e3972d377dfb6d2.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/20/20873b54aabbf327872238d78eba0f14211616b81a2c59f96e3972d377dfb6d2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce98f0eebfeb9bc4837b5e8ead7ae21b717e399589c56909330555ac69fdb9e4.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce98f0eebfeb9bc4837b5e8ead7ae21b717e399589c56909330555ac69fdb9e4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/README.md" afterDir="false" />
@@ -126,131 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#8128#8152#0#HTML" expanded="true" />
-                <element signature="e#10812#10836#0#HTML" expanded="true" />
-                <element signature="e#12002#12026#0#HTML" expanded="true" />
-                <element signature="e#13212#13236#0#HTML" expanded="true" />
-                <element signature="e#14416#14440#0#HTML" expanded="true" />
-                <element signature="e#15804#15828#0#HTML" expanded="true" />
-                <element signature="e#17153#17177#0#HTML" expanded="true" />
-                <element signature="e#18417#18441#0#HTML" expanded="true" />
-                <element signature="e#19732#19756#0#HTML" expanded="true" />
-                <element signature="e#21091#21115#0#HTML" expanded="true" />
-                <element signature="e#22350#22374#0#HTML" expanded="true" />
-                <element signature="e#23730#23754#0#HTML" expanded="true" />
-                <element signature="e#25071#25095#0#HTML" expanded="true" />
-                <element signature="e#26356#26380#0#HTML" expanded="true" />
-                <element signature="e#27369#27393#0#HTML" expanded="true" />
-                <element signature="e#28536#28560#0#HTML" expanded="true" />
-                <element signature="e#30131#30155#0#HTML" expanded="true" />
-                <element signature="e#31244#31268#0#HTML" expanded="true" />
-                <element signature="e#32622#32646#0#HTML" expanded="true" />
-                <element signature="e#33961#33985#0#HTML" expanded="true" />
-                <element signature="e#35528#35552#0#HTML" expanded="true" />
-                <element signature="e#37938#37962#0#HTML" expanded="true" />
-                <element signature="e#39729#39753#0#HTML" expanded="true" />
-                <element signature="e#41521#41545#0#HTML" expanded="true" />
-                <element signature="e#43295#43319#0#HTML" expanded="true" />
-                <element signature="e#44353#44377#0#HTML" expanded="true" />
-                <element signature="e#49014#49038#0#HTML" expanded="true" />
-                <element signature="e#50081#50105#0#HTML" expanded="true" />
-                <element signature="e#51507#51531#0#HTML" expanded="true" />
-                <element signature="e#52596#52620#0#HTML" expanded="true" />
-                <element signature="e#57051#57075#0#HTML" expanded="true" />
-                <element signature="e#58483#58507#0#HTML" expanded="true" />
-                <element signature="e#59596#59620#0#HTML" expanded="true" />
-                <element signature="e#60886#60910#0#HTML" expanded="true" />
-                <element signature="e#63319#63343#0#HTML" expanded="true" />
-                <element signature="e#64895#64919#0#HTML" expanded="true" />
-                <element signature="e#66012#66036#0#HTML" expanded="true" />
-                <element signature="e#67372#67396#0#HTML" expanded="true" />
-                <element signature="e#68645#68669#0#HTML" expanded="true" />
-                <element signature="e#69882#69906#0#HTML" expanded="true" />
-                <element signature="e#71416#71440#0#HTML" expanded="true" />
-                <element signature="e#73493#73517#0#HTML" expanded="true" />
-                <element signature="e#75074#75098#0#HTML" expanded="true" />
-                <element signature="e#76730#76754#0#HTML" expanded="true" />
-                <element signature="e#78329#78353#0#HTML" expanded="true" />
-                <element signature="e#80800#80824#0#HTML" expanded="true" />
-                <element signature="e#82033#82057#0#HTML" expanded="true" />
-                <element signature="e#83266#83290#0#HTML" expanded="true" />
-                <element signature="e#84499#84523#0#HTML" expanded="true" />
-                <element signature="e#86066#86090#0#HTML" expanded="true" />
-                <element signature="e#87339#87363#0#HTML" expanded="true" />
-                <element signature="e#88820#88844#0#HTML" expanded="true" />
-                <element signature="e#90959#90983#0#HTML" expanded="true" />
-                <element signature="e#92261#92285#0#HTML" expanded="true" />
-                <element signature="e#93355#93379#0#HTML" expanded="true" />
-                <element signature="e#94450#94474#0#HTML" expanded="true" />
-                <element signature="e#95637#95661#0#HTML" expanded="true" />
-                <element signature="e#97387#97411#0#HTML" expanded="true" />
-                <element signature="e#99334#99358#0#HTML" expanded="true" />
-                <element signature="e#100603#100627#0#HTML" expanded="true" />
-                <element signature="e#101998#102022#0#HTML" expanded="true" />
-                <element signature="e#103155#103179#0#HTML" expanded="true" />
-                <element signature="e#104263#104287#0#HTML" expanded="true" />
-                <element signature="e#105420#105444#0#HTML" expanded="true" />
-                <element signature="e#106575#106599#0#HTML" expanded="true" />
-                <element signature="e#107623#107647#0#HTML" expanded="true" />
-                <element signature="e#108670#108694#0#HTML" expanded="true" />
-                <element signature="e#109648#109672#0#HTML" expanded="true" />
-                <element signature="e#110981#111005#0#HTML" expanded="true" />
-                <element signature="e#112079#112103#0#HTML" expanded="true" />
-                <element signature="e#113562#113586#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientsController.php">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/var/logs/prod.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="12117" selection-start-line="12117" selection-end-line="12117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="795" column="51" selection-start-line="795" selection-start-column="48" selection-end-line="795" selection-end-column="51" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-              <folding>
-                <element signature="e#40#75#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -258,38 +98,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
+            <state relative-caret-position="-4971">
               <caret line="1191" selection-start-line="1191" selection-end-line="1191" />
-              <folding>
-                <element signature="e#5719#5751#1#PHP" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="1608" column="47" lean-forward="true" selection-start-line="1608" selection-start-column="47" selection-end-line="1608" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PricesController.php">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ExpertationsAdvanced.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="32" selection-start-line="22" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="-46774">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -321,7 +149,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/new.advanced.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/StatsController.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Resources/views/stats/summary.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -331,6 +158,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientsController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" />
       </list>
     </option>
@@ -411,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -427,18 +256,6 @@
               <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
               <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,14 +264,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
@@ -463,14 +272,6 @@
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="expertations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stats" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
@@ -495,32 +296,12 @@
               <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="var" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nwd-gestionale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nwd-gestionale" type="462c0819:PsiDirectoryNode" />
-              <item name="var" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,18 +335,19 @@
       <workItem from="1550156702014" duration="9665000" />
       <workItem from="1550242307356" duration="5974000" />
       <workItem from="1550587341605" duration="2644000" />
-      <workItem from="1550674218499" duration="4137000" />
+      <workItem from="1550674218499" duration="4319000" />
+      <workItem from="1551798696785" duration="6268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22420000" />
+    <option name="totallyTimeSpent" value="28870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="989" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26190478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -578,7 +360,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32998884" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32998884" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -658,6 +440,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/logs/prod.log">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="12117" selection-start-line="12117" selection-end-line="12117" />
+        </state>
+      </provider>
+      <provider editor-type-id="LargeFileEditor">
+        <state relative-caret-position="445">
+          <caret line="1501" column="29" lean-forward="true" selection-end-line="1502" selection-end-column="360" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11925">
+          <caret line="795" column="51" selection-start-line="795" selection-start-column="48" selection-end-line="795" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="e#40#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PricesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -674,140 +497,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/logs/prod.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="12117" selection-start-line="12117" selection-end-line="12117" />
-        </state>
-      </provider>
-      <provider editor-type-id="LargeFileEditor">
-        <state relative-caret-position="445">
-          <caret line="1501" column="29" lean-forward="true" selection-end-line="1502" selection-end-column="360" />
+        <state relative-caret-position="360">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="-4971">
           <caret line="1191" selection-start-line="1191" selection-end-line="1191" />
-          <folding>
-            <element signature="e#5719#5751#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ExpertationsAdvanced.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="795" column="51" selection-start-line="795" selection-start-column="48" selection-end-line="795" selection-end-column="51" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#75#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-46774">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#8128#8152#0#HTML" expanded="true" />
-            <element signature="e#10812#10836#0#HTML" expanded="true" />
-            <element signature="e#12002#12026#0#HTML" expanded="true" />
-            <element signature="e#13212#13236#0#HTML" expanded="true" />
-            <element signature="e#14416#14440#0#HTML" expanded="true" />
-            <element signature="e#15804#15828#0#HTML" expanded="true" />
-            <element signature="e#17153#17177#0#HTML" expanded="true" />
-            <element signature="e#18417#18441#0#HTML" expanded="true" />
-            <element signature="e#19732#19756#0#HTML" expanded="true" />
-            <element signature="e#21091#21115#0#HTML" expanded="true" />
-            <element signature="e#22350#22374#0#HTML" expanded="true" />
-            <element signature="e#23730#23754#0#HTML" expanded="true" />
-            <element signature="e#25071#25095#0#HTML" expanded="true" />
-            <element signature="e#26356#26380#0#HTML" expanded="true" />
-            <element signature="e#27369#27393#0#HTML" expanded="true" />
-            <element signature="e#28536#28560#0#HTML" expanded="true" />
-            <element signature="e#30131#30155#0#HTML" expanded="true" />
-            <element signature="e#31244#31268#0#HTML" expanded="true" />
-            <element signature="e#32622#32646#0#HTML" expanded="true" />
-            <element signature="e#33961#33985#0#HTML" expanded="true" />
-            <element signature="e#35528#35552#0#HTML" expanded="true" />
-            <element signature="e#37938#37962#0#HTML" expanded="true" />
-            <element signature="e#39729#39753#0#HTML" expanded="true" />
-            <element signature="e#41521#41545#0#HTML" expanded="true" />
-            <element signature="e#43295#43319#0#HTML" expanded="true" />
-            <element signature="e#44353#44377#0#HTML" expanded="true" />
-            <element signature="e#49014#49038#0#HTML" expanded="true" />
-            <element signature="e#50081#50105#0#HTML" expanded="true" />
-            <element signature="e#51507#51531#0#HTML" expanded="true" />
-            <element signature="e#52596#52620#0#HTML" expanded="true" />
-            <element signature="e#57051#57075#0#HTML" expanded="true" />
-            <element signature="e#58483#58507#0#HTML" expanded="true" />
-            <element signature="e#59596#59620#0#HTML" expanded="true" />
-            <element signature="e#60886#60910#0#HTML" expanded="true" />
-            <element signature="e#63319#63343#0#HTML" expanded="true" />
-            <element signature="e#64895#64919#0#HTML" expanded="true" />
-            <element signature="e#66012#66036#0#HTML" expanded="true" />
-            <element signature="e#67372#67396#0#HTML" expanded="true" />
-            <element signature="e#68645#68669#0#HTML" expanded="true" />
-            <element signature="e#69882#69906#0#HTML" expanded="true" />
-            <element signature="e#71416#71440#0#HTML" expanded="true" />
-            <element signature="e#73493#73517#0#HTML" expanded="true" />
-            <element signature="e#75074#75098#0#HTML" expanded="true" />
-            <element signature="e#76730#76754#0#HTML" expanded="true" />
-            <element signature="e#78329#78353#0#HTML" expanded="true" />
-            <element signature="e#80800#80824#0#HTML" expanded="true" />
-            <element signature="e#82033#82057#0#HTML" expanded="true" />
-            <element signature="e#83266#83290#0#HTML" expanded="true" />
-            <element signature="e#84499#84523#0#HTML" expanded="true" />
-            <element signature="e#86066#86090#0#HTML" expanded="true" />
-            <element signature="e#87339#87363#0#HTML" expanded="true" />
-            <element signature="e#88820#88844#0#HTML" expanded="true" />
-            <element signature="e#90959#90983#0#HTML" expanded="true" />
-            <element signature="e#92261#92285#0#HTML" expanded="true" />
-            <element signature="e#93355#93379#0#HTML" expanded="true" />
-            <element signature="e#94450#94474#0#HTML" expanded="true" />
-            <element signature="e#95637#95661#0#HTML" expanded="true" />
-            <element signature="e#97387#97411#0#HTML" expanded="true" />
-            <element signature="e#99334#99358#0#HTML" expanded="true" />
-            <element signature="e#100603#100627#0#HTML" expanded="true" />
-            <element signature="e#101998#102022#0#HTML" expanded="true" />
-            <element signature="e#103155#103179#0#HTML" expanded="true" />
-            <element signature="e#104263#104287#0#HTML" expanded="true" />
-            <element signature="e#105420#105444#0#HTML" expanded="true" />
-            <element signature="e#106575#106599#0#HTML" expanded="true" />
-            <element signature="e#107623#107647#0#HTML" expanded="true" />
-            <element signature="e#108670#108694#0#HTML" expanded="true" />
-            <element signature="e#109648#109672#0#HTML" expanded="true" />
-            <element signature="e#110981#111005#0#HTML" expanded="true" />
-            <element signature="e#112079#112103#0#HTML" expanded="true" />
-            <element signature="e#113562#113586#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="440">
+          <caret line="1608" column="47" lean-forward="true" selection-start-line="1608" selection-start-column="47" selection-end-line="1608" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -188,7 +188,7 @@ class __TwigTemplate_118086d1fbb3743417cedcf2713ae546d6ba62857a9445055826edf7479
                             <td class=\"text-center\"><strong>INTONACO</strong></td>
                             <td>";
         // line 61
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new Twig_Error_Runtime('Variable "data" does not exist.', 61, $this->source); })()), "opereMurarie", []) == 1)) {
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new Twig_Error_Runtime('Variable "data" does not exist.', 61, $this->source); })()), "opereMurarieIntonaco", []) == 1)) {
             echo "SI";
         } else {
             echo "NO";
@@ -197,7 +197,7 @@ class __TwigTemplate_118086d1fbb3743417cedcf2713ae546d6ba62857a9445055826edf7479
                             <td class=\"text-center\"><strong>PIETRA</strong></td>
                             <td>";
         // line 63
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new Twig_Error_Runtime('Variable "data" does not exist.', 63, $this->source); })()), "opereMurarie", []) == 2)) {
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new Twig_Error_Runtime('Variable "data" does not exist.', 63, $this->source); })()), "opereMurariePietra", []) == 2)) {
             echo "SI";
         } else {
             echo "NO";
@@ -4742,9 +4742,9 @@ class __TwigTemplate_118086d1fbb3743417cedcf2713ae546d6ba62857a9445055826edf7479
                             <td class=\"text-center\"><strong>OPERE MURARIE</strong></td>
                             <td>{% if data.opereMurarie != 0 %}SI{% else %}NO{% endif %}</td>
                             <td class=\"text-center\"><strong>INTONACO</strong></td>
-                            <td>{% if data.opereMurarie == 1 %}SI{% else %}NO{% endif %}</td>
+                            <td>{% if data.opereMurarieIntonaco == 1 %}SI{% else %}NO{% endif %}</td>
                             <td class=\"text-center\"><strong>PIETRA</strong></td>
-                            <td>{% if data.opereMurarie == 2 %}SI{% else %}NO{% endif %}</td>
+                            <td>{% if data.opereMurariePietra == 2 %}SI{% else %}NO{% endif %}</td>
                         </tr>
                     </table>
                     <table class=\"table table-bordered mt-3\">
