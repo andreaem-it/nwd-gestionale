@@ -2836,8 +2836,85 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
         echo "                                    ";
         // line 1605
         echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1605, $this->source); })()), "opt6Enabled", []) == 1)) {
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1605, $this->source); })()), "opt5Enabled", []) == 1)) {
             // line 1606
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">5. QUINTA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto sorround soggiorno</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione modulo surround salone.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1619
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1619, $this->source); })()), "opt51Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1620
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1620, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1621
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1621, $this->source); })()), "opt51Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1621, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1633
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1633, $this->source); })()), "opt52Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1635
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1635, $this->source); })()), "opt52Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        ";
+            // line 1638
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t\t\t\t</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1648
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1648, $this->source); })()), "opt53Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1649
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1649, $this->source); })()), "getPriceByCode", [0 => "15.3.20.3"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1650
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1650, $this->source); })()), "opt53Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1650, $this->source); })()), "getPriceByCode", [0 => "15.3.20.3"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 1653
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1653, $this->source); })()), "opt6Enabled", []) == 1)) {
+            // line 1654
             echo "                                        <tr>
                                             <td colspan=\"5\" class=\"border table-light\">6. SESTA AGGIUNTA POSSIBILE: connettorizzazione dei punti di trasmissione dati predisposti e conteggiati nella proposta C.</td>
                                         </tr>
@@ -2852,24 +2929,24 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 1619
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1619, $this->source); })()), "opt61Value", []), "html", null, true);
+            // line 1667
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1667, $this->source); })()), "opt61Value", []), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">";
-            // line 1620
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1620, $this->source); })()), "getPriceByCode", [0 => "15.3.220.6"], "method"), 2), "html", null, true);
+            // line 1668
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1668, $this->source); })()), "getPriceByCode", [0 => "15.3.220.6"], "method"), 2), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">";
-            // line 1621
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1621, $this->source); })()), "opt61Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1621, $this->source); })()), "getPriceByCode", [0 => "15.3.220.6"], "method"), 2)), "html", null, true);
+            // line 1669
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1669, $this->source); })()), "opt61Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1669, $this->source); })()), "getPriceByCode", [0 => "15.3.220.6"], "method"), 2)), "html", null, true);
             echo "</td>
                                         </tr>
                                     ";
         }
-        // line 1624
+        // line 1672
         echo "                                    ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1624, $this->source); })()), "opt7Enabled", []) == 1)) {
-            // line 1625
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1672, $this->source); })()), "opt7Enabled", []) == 1)) {
+            // line 1673
             echo "                                        <tr>
                                             <td colspan=\"5\" class=\"border table-light\">7. SETTIMA AGGIUNTA POSSIBILE: oneri di predisposizione per videosorveglianza esterna.</td>
                                         </tr>
@@ -2884,16 +2961,16 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 1638
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1638, $this->source); })()), "opt71Value", []), "html", null, true);
+            // line 1686
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1686, $this->source); })()), "opt71Value", []), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">";
-            // line 1639
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1639, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            // line 1687
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1687, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">";
-            // line 1640
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1640, $this->source); })()), "opt71Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1640, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            // line 1688
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1688, $this->source); })()), "opt71Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1688, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
             echo "</td>
                                         </tr>
                                         <tr>
@@ -2907,20 +2984,20 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 1652
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1652, $this->source); })()), "opt72Value", []), "html", null, true);
+            // line 1700
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1700, $this->source); })()), "opt72Value", []), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\"> 8.00 </td>
                                             <td class=\"border text-center\">";
-            // line 1654
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1654, $this->source); })()), "opt72Value", []) * 8), "html", null, true);
+            // line 1702
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1702, $this->source); })()), "opt72Value", []) * 8), "html", null, true);
             echo "</td>
                                         </tr>
                                         <tr>
                                             <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione videosorveglianza</strong></td>
                                         </tr>
                                         ";
-            // line 1660
+            // line 1708
             echo "                                        <tr>
                                             <td class=\"border text-center\">15.3.10</td>
                                             <td class=\"text-small border\" style=\"max-width: 300px\">
@@ -2929,77 +3006,700 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                                 </small>
                                             </td>
                                             <td class=\"border text-center\">";
-            // line 1667
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1667, $this->source); })()), "opt73Value", []), "html", null, true);
+            // line 1715
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1715, $this->source); })()), "opt73Value", []), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">";
-            // line 1668
-            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1668, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            // line 1716
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1716, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
             echo "</td>
                                             <td class=\"border text-center\">";
-            // line 1669
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1669, $this->source); })()), "opt73Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1669, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            // line 1717
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1717, $this->source); })()), "opt73Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1717, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
             echo "</td>
                                         </tr>
                                     ";
         }
-        // line 1672
+        // line 1720
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1720, $this->source); })()), "opt8Enabled", []) == 1)) {
+            // line 1721
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">8. OTTAVA AGGIUNTA POSSIBILE: oneri di predisposizione per sistema di rilevazione allarme.\t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione videosorveglianza</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1734
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1734, $this->source); })()), "opt81Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1735
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1735, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1736
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1736, $this->source); })()), "opt81Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1736, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1748
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1748, $this->source); })()), "opt82Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1750
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1750, $this->source); })()), "opt82Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.</strong></td>
+                                        </tr>
+                                        ";
+            // line 1756
+            echo "                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1763
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1763, $this->source); })()), "opt83Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1764
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1764, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1765
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1765, $this->source); })()), "opt83Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1765, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 1768
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1768, $this->source); })()), "opt9Enabled", []) == 1)) {
+            // line 1769
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">9. NONA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto di rilevazione fumi. \t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione rilevazione fumi\t</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1782
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1782, $this->source); })()), "opt91Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1783
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1783, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1784
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1784, $this->source); })()), "opt91Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1784, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1796
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1796, $this->source); })()), "opt92Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1798
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1798, $this->source); })()), "opt92Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t</strong></td>
+                                        </tr>
+                                        ";
+            // line 1804
+            echo "                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1811
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1811, $this->source); })()), "opt93Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1812
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1812, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1813
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1813, $this->source); })()), "opt93Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1813, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 1816
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1816, $this->source); })()), "opt10Enabled", []) == 1)) {
+            // line 1817
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">10. DECIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori sonde allagamento e gas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione sonde allagamento</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1830
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1830, $this->source); })()), "opt101Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1831
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1831, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1832
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1832, $this->source); })()), "opt101Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1832, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1844
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1844, $this->source); })()), "opt102Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1846
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1846, $this->source); })()), "opt102Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione elettrovalvola ACQUA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1858
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1858, $this->source); })()), "opt103Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1859
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1859, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1860
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1860, $this->source); })()), "opt103Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1860, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1872
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1872, $this->source); })()), "opt104Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1874
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1874, $this->source); })()), "opt104Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione rilevatori gas</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1886
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1886, $this->source); })()), "opt105Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1887
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1887, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1888
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1888, $this->source); })()), "opt105Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1888, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1900
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1900, $this->source); })()), "opt106Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1902
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1902, $this->source); })()), "opt106Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione elettrovalvola GAS.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1914
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1914, $this->source); })()), "opt107Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1915
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1915, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1916
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1916, $this->source); })()), "opt107Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1916, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1928
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1928, $this->source); })()), "opt108Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1930
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1930, $this->source); })()), "opt108Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t\t\t\t</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1942
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1942, $this->source); })()), "opt109Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1943
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1943, $this->source); })()), "getPriceByCode", [0 => "15.3.20.3"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1944
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1944, $this->source); })()), "opt109Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1944, $this->source); })()), "getPriceByCode", [0 => "15.3.20.3"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 1947
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1947, $this->source); })()), "opt11Enabled", []) == 1)) {
+            // line 1948
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">11. UNDICESIMA AGGIUNTA POSSIBILE: oneri di predisposizione per motorizzazione di tapparelle, persiane, zanzariere, tende e/o oscuranti.\t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1961
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1961, $this->source); })()), "opt111Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1962
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1962, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1963
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1963, $this->source); })()), "opt111Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1963, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1975
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1975, $this->source); })()), "opt112Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">";
+            // line 1977
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1977, $this->source); })()), "opt112Value", []) * 8), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Canalizzazione per P.to Presa in traccia per distanza non superiori a 60 mt. Sono esclusi i conduttori e le opere murarie.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 1986
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1986, $this->source); })()), "opt113Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1987
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1987, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 1988
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 1988, $this->source); })()), "opt113Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 1988, $this->source); })()), "getPriceByCode", [0 => "15.3.10"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: <br>
+                                                    la chiusura della traccia, l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati<br>
+                                                    all'interno della traccia onde evitare uno spessore troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2000
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2000, $this->source); })()), "opt113Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\"> 5.70 </td>
+                                            <td class=\"border text-center\">";
+            // line 2002
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2002, $this->source); })()), "opt113Value", []) * 5.7), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t</strong></td>
+                                        </tr>
+                                        ";
+            // line 2008
+            echo "                                        <tr>
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2015
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2015, $this->source); })()), "opt114Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2016
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2016, $this->source); })()), "getPriceByCode", [0 => "15.3.20.3"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2017
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2017, $this->source); })()), "opt114Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2017, $this->source); })()), "getPriceByCode", [0 => "15.3.20.3"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 2020
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2020, $this->source); })()), "opt12Enabled", []) == 1)) {
+            // line 2021
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">12. DODICESIMA AGGIUNTA POSSIBILE: oneri per passaggio cavi e collegamento di motorizzazioni per tapparelle, persiane, zanzariere, tende e/o oscuranti.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.80.2</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto di comando di motori monofasi o in c.c. di piccola potenza (serrande meccanizzate etc.).<br>
+                                                    Con pulsante doppio senza chiave.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2035
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2035, $this->source); })()), "opt121Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2036
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2036, $this->source); })()), "getPriceByCode", [0 => "15.3.80.2"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2037
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2037, $this->source); })()), "opt121Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2037, $this->source); })()), "getPriceByCode", [0 => "15.3.80.2"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.42</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    COMPENSO AGGIUNTIVO AL PUNTO ALLACCIO ELETTRICO PER COLLEGAMENTO AD APPARECCHIATURA DI CONTROLLO E/O COMANDO. Per collegamento motore tenda
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2046
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2046, $this->source); })()), "opt122Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2047
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2047, $this->source); })()), "getPriceByCode", [0 => "15.2.42"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2048
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2048, $this->source); })()), "opt122Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2048, $this->source); })()), "getPriceByCode", [0 => "15.2.42"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.21.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO ALLACCIO PER PRESA MONOFASE O TRIFASE SU CANALIZZAZIONE IN TRACCIA O SU TUBAZIONE IN VISTA CON CAVO NON PROPAGANTE L'INCENDIO.<br>
+                                                    Per allaccio monofase con carico max 16A
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2058
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2058, $this->source); })()), "opt123Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2059
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2059, $this->source); })()), "getPriceByCode", [0 => "15.2.21.1"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2060
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2060, $this->source); })()), "opt123Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2060, $this->source); })()), "getPriceByCode", [0 => "15.2.21.1"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 2063
+        echo "                                    ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2063, $this->source); })()), "opt13Enabled", []) == 1)) {
+            // line 2064
+            echo "                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">13. TREDICESIMA AGGIUNTA POSSIBILE: impianto citofonico (solo audio)\t\t\t\t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.80.2</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto di comando di motori monofasi o in c.c. di piccola potenza (serrande meccanizzate etc.).<br>
+                                                    Con pulsante doppio senza chiave.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2078
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2078, $this->source); })()), "opt121Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2079
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2079, $this->source); })()), "getPriceByCode", [0 => "15.3.80.2"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2080
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2080, $this->source); })()), "opt121Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2080, $this->source); })()), "getPriceByCode", [0 => "15.3.80.2"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.42</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    COMPENSO AGGIUNTIVO AL PUNTO ALLACCIO ELETTRICO PER COLLEGAMENTO AD APPARECCHIATURA DI CONTROLLO E/O COMANDO. Per collegamento motore tenda
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2089
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2089, $this->source); })()), "opt122Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2090
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2090, $this->source); })()), "getPriceByCode", [0 => "15.2.42"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2091
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2091, $this->source); })()), "opt122Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2091, $this->source); })()), "getPriceByCode", [0 => "15.2.42"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.21.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO ALLACCIO PER PRESA MONOFASE O TRIFASE SU CANALIZZAZIONE IN TRACCIA O SU TUBAZIONE IN VISTA CON CAVO NON PROPAGANTE L'INCENDIO.<br>
+                                                    Per allaccio monofase con carico max 16A
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">";
+            // line 2101
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2101, $this->source); })()), "opt123Value", []), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2102
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2102, $this->source); })()), "getPriceByCode", [0 => "15.2.21.1"], "method"), 2), "html", null, true);
+            echo "</td>
+                                            <td class=\"border text-center\">";
+            // line 2103
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, (isset($context["itemAdv"]) || array_key_exists("itemAdv", $context) ? $context["itemAdv"] : (function () { throw new Twig_Error_Runtime('Variable "itemAdv" does not exist.', 2103, $this->source); })()), "opt123Value", []) * twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fun"]) || array_key_exists("fun", $context) ? $context["fun"] : (function () { throw new Twig_Error_Runtime('Variable "fun" does not exist.', 2103, $this->source); })()), "getPriceByCode", [0 => "15.2.21.1"], "method"), 2)), "html", null, true);
+            echo "</td>
+                                        </tr>
+                                    ";
+        }
+        // line 2106
         echo "                                    <!-- TOTALI -->
                                     <tr>
                                         <td colspan=\"3\" class=\"border-0\"></td>
                                         <td class=\"border\">SUBTOTALE</td>
                                         <td class=\"border text-center\">
                                             ";
-        // line 1677
+        // line 2111
         $context["total"] = 0;
-        // line 1678
+        // line 2112
         echo "                                            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_array_batch((isset($context["prices"]) || array_key_exists("prices", $context) ? $context["prices"] : (function () { throw new Twig_Error_Runtime('Variable "prices" does not exist.', 1678, $this->source); })()), 2));
+        $context['_seq'] = twig_ensure_traversable(twig_array_batch((isset($context["prices"]) || array_key_exists("prices", $context) ? $context["prices"] : (function () { throw new Twig_Error_Runtime('Variable "prices" does not exist.', 2112, $this->source); })()), 2));
         foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-            // line 1679
+            // line 2113
             echo "                                                ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["row"]);
             foreach ($context['_seq'] as $context["_key"] => $context["column"]) {
-                // line 1680
+                // line 2114
                 echo "                                                    ";
-                $context["total"] = ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1680, $this->source); })()) + $context["column"]);
-                // line 1681
+                $context["total"] = ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 2114, $this->source); })()) + $context["column"]);
+                // line 2115
                 echo "                                                ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['column'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 1682
+            // line 2116
             echo "                                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 1683
+        // line 2117
         echo "                                            ";
-        echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1683, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 2117, $this->source); })()), "html", null, true);
         echo " €
                                         </td>
                                     </tr>
                                     ";
-        // line 1686
-        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1686, $this->source); })()) != 0)) {
-            // line 1687
+        // line 2120
+        if (((isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 2120, $this->source); })()) != 0)) {
+            // line 2121
             echo "                                        <tr>
                                             <td colspan=\"3\" class=\"border-0\"></td>
                                             <td class=\"border\">SCONTO ";
-            // line 1689
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1689, $this->source); })()), "sconto", []), "html", null, true);
+            // line 2123
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2123, $this->source); })()), "sconto", []), "html", null, true);
             echo "%</td>
                                             <td class=\"border text-center\">
                                                 ";
-            // line 1691
-            $context["sconto"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1691, $this->source); })()) * twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 1691, $this->source); })()), "sconto", [])) / 100);
-            // line 1692
+            // line 2125
+            $context["sconto"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 2125, $this->source); })()) * twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new Twig_Error_Runtime('Variable "item" does not exist.', 2125, $this->source); })()), "sconto", [])) / 100);
+            // line 2126
             echo "                                                ";
-            echo twig_escape_filter($this->env, (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1692, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 2126, $this->source); })()), "html", null, true);
             echo " €
                                             </td>
                                         </tr>
@@ -3008,31 +3708,31 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                             <td class=\"border\"><strong>TOTALE SCONTATO</strong></td>
                                             <td class=\"border text-center\">
                                                 <strong>";
-            // line 1699
-            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1699, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1699, $this->source); })())), "2"), "html", null, true);
+            // line 2133
+            echo twig_escape_filter($this->env, twig_round(((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 2133, $this->source); })()) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 2133, $this->source); })())), "2"), "html", null, true);
             echo " €</strong>
                                             </td>
                                         </tr>
                                     ";
         } else {
-            // line 1703
+            // line 2137
             echo "                                        <tr>
                                             <td colspan=\"3\" class=\"border-0\"></td>
                                             <td class=\"border\"><strong>TOTALE</strong></td>
                                             <td class=\"border text-center\">
                                                 <strong>";
-            // line 1707
-            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 1707, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 1707, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 1707, $this->source); })()));
+            // line 2141
+            $context["grandtotal"] = (((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new Twig_Error_Runtime('Variable "total" does not exist.', 2141, $this->source); })()) + (isset($context["vat"]) || array_key_exists("vat", $context) ? $context["vat"] : (function () { throw new Twig_Error_Runtime('Variable "vat" does not exist.', 2141, $this->source); })())) - (isset($context["sconto"]) || array_key_exists("sconto", $context) ? $context["sconto"] : (function () { throw new Twig_Error_Runtime('Variable "sconto" does not exist.', 2141, $this->source); })()));
             echo " ";
-            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 1707, $this->source); })()), "2"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_round((isset($context["grandtotal"]) || array_key_exists("grandtotal", $context) ? $context["grandtotal"] : (function () { throw new Twig_Error_Runtime('Variable "grandtotal" does not exist.', 2141, $this->source); })()), "2"), "html", null, true);
             echo " €</strong>
                                             </td>
                                         </tr>
                                     ";
         }
-        // line 1711
+        // line 2145
         echo "                                    ";
-        // line 1718
+        // line 2152
         echo "
                                     </tbody>
                                 </table>
@@ -3053,7 +3753,7 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
 
     }
 
-    // line 1730
+    // line 2164
     public function block_stylesheets($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -3062,7 +3762,7 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 1731
+        // line 2165
         echo "    <style>
         .no-wrap {
             max-width: 130px;
@@ -3090,7 +3790,7 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
     </style>
     <style type=\"text/css\">
         ";
-        // line 1758
+        // line 2192
         echo "        @page {
             /*size: landscape;*/
             margin: 0; }
@@ -3165,7 +3865,7 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
 
     }
 
-    // line 1824
+    // line 2258
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -3174,7 +3874,7 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 1825
+        // line 2259
         echo "    <script>
         \$(document).ready(function () {
             \$('#nav-hide-btn-icon').trigger('click');
@@ -3206,7 +3906,7 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
 
     public function getDebugInfo()
     {
-        return array (  3178 => 1825,  3169 => 1824,  3094 => 1758,  3066 => 1731,  3057 => 1730,  3036 => 1718,  3034 => 1711,  3025 => 1707,  3019 => 1703,  3012 => 1699,  3001 => 1692,  2999 => 1691,  2994 => 1689,  2990 => 1687,  2988 => 1686,  2981 => 1683,  2975 => 1682,  2969 => 1681,  2966 => 1680,  2961 => 1679,  2956 => 1678,  2954 => 1677,  2947 => 1672,  2941 => 1669,  2937 => 1668,  2933 => 1667,  2924 => 1660,  2916 => 1654,  2911 => 1652,  2896 => 1640,  2892 => 1639,  2888 => 1638,  2873 => 1625,  2870 => 1624,  2864 => 1621,  2860 => 1620,  2856 => 1619,  2841 => 1606,  2838 => 1605,  2836 => 1604,  2830 => 1601,  2826 => 1600,  2822 => 1599,  2810 => 1589,  2805 => 1586,  2800 => 1584,  2785 => 1572,  2781 => 1571,  2777 => 1570,  2762 => 1557,  2759 => 1556,  2753 => 1553,  2749 => 1552,  2745 => 1551,  2730 => 1539,  2726 => 1538,  2722 => 1537,  2710 => 1528,  2706 => 1527,  2702 => 1526,  2688 => 1515,  2684 => 1514,  2680 => 1513,  2667 => 1503,  2663 => 1502,  2659 => 1501,  2642 => 1487,  2638 => 1486,  2634 => 1485,  2621 => 1475,  2617 => 1474,  2613 => 1473,  2600 => 1463,  2596 => 1462,  2592 => 1461,  2579 => 1451,  2575 => 1450,  2571 => 1449,  2553 => 1433,  2550 => 1432,  2544 => 1429,  2540 => 1428,  2536 => 1427,  2524 => 1418,  2520 => 1417,  2516 => 1416,  2501 => 1403,  2498 => 1402,  2492 => 1399,  2488 => 1398,  2484 => 1397,  2472 => 1388,  2468 => 1387,  2464 => 1386,  2449 => 1374,  2445 => 1373,  2441 => 1372,  2429 => 1363,  2425 => 1362,  2421 => 1361,  2406 => 1348,  2404 => 1347,  2400 => 1345,  2394 => 1342,  2389 => 1340,  2375 => 1329,  2370 => 1327,  2356 => 1315,  2353 => 1314,  2349 => 1312,  2347 => 1311,  2343 => 1310,  2339 => 1309,  2329 => 1301,  2325 => 1299,  2323 => 1298,  2319 => 1297,  2315 => 1296,  2305 => 1288,  2303 => 1287,  2300 => 1286,  2298 => 1285,  2294 => 1284,  2290 => 1283,  2277 => 1272,  2275 => 1271,  2271 => 1270,  2267 => 1269,  2257 => 1261,  2253 => 1259,  2251 => 1258,  2247 => 1257,  2243 => 1256,  2232 => 1247,  2230 => 1246,  2226 => 1245,  2222 => 1244,  2212 => 1236,  2209 => 1235,  2205 => 1233,  2203 => 1232,  2199 => 1231,  2195 => 1230,  2184 => 1221,  2182 => 1220,  2178 => 1219,  2174 => 1218,  2163 => 1209,  2159 => 1207,  2157 => 1206,  2153 => 1205,  2149 => 1204,  2138 => 1195,  2136 => 1194,  2132 => 1193,  2128 => 1192,  2117 => 1183,  2114 => 1182,  2112 => 1181,  2109 => 1180,  2107 => 1179,  2103 => 1178,  2099 => 1177,  2083 => 1163,  2081 => 1162,  2077 => 1161,  2073 => 1160,  2051 => 1140,  2049 => 1139,  2045 => 1138,  2041 => 1137,  2037 => 1136,  2019 => 1120,  2017 => 1119,  2013 => 1118,  2009 => 1117,  2005 => 1116,  1994 => 1107,  1992 => 1106,  1988 => 1105,  1984 => 1104,  1980 => 1103,  1969 => 1094,  1967 => 1093,  1963 => 1092,  1959 => 1091,  1955 => 1090,  1945 => 1082,  1943 => 1081,  1939 => 1080,  1935 => 1079,  1931 => 1078,  1918 => 1067,  1916 => 1066,  1912 => 1065,  1908 => 1064,  1904 => 1063,  1883 => 1044,  1879 => 1042,  1877 => 1041,  1873 => 1040,  1869 => 1039,  1865 => 1038,  1853 => 1028,  1851 => 1027,  1846 => 1024,  1844 => 1023,  1840 => 1022,  1836 => 1021,  1832 => 1020,  1819 => 1009,  1817 => 1008,  1813 => 1007,  1809 => 1006,  1805 => 1005,  1792 => 994,  1788 => 992,  1786 => 991,  1782 => 990,  1778 => 989,  1774 => 988,  1765 => 981,  1762 => 980,  1758 => 978,  1756 => 977,  1752 => 976,  1748 => 975,  1744 => 974,  1735 => 967,  1732 => 966,  1728 => 964,  1726 => 963,  1722 => 962,  1718 => 961,  1714 => 960,  1705 => 953,  1702 => 952,  1698 => 950,  1696 => 949,  1692 => 948,  1688 => 947,  1684 => 946,  1675 => 939,  1673 => 938,  1656 => 923,  1654 => 922,  1650 => 921,  1646 => 920,  1642 => 919,  1630 => 909,  1626 => 907,  1624 => 906,  1620 => 905,  1616 => 904,  1612 => 903,  1598 => 891,  1596 => 890,  1593 => 889,  1591 => 888,  1587 => 887,  1583 => 886,  1579 => 885,  1564 => 872,  1562 => 871,  1558 => 870,  1554 => 869,  1550 => 868,  1534 => 854,  1528 => 852,  1526 => 851,  1521 => 850,  1519 => 849,  1514 => 848,  1512 => 847,  1507 => 845,  1504 => 844,  1500 => 842,  1498 => 841,  1495 => 840,  1493 => 839,  1490 => 838,  1488 => 837,  1474 => 825,  1472 => 824,  1468 => 823,  1464 => 822,  1460 => 821,  1446 => 809,  1443 => 808,  1441 => 807,  1437 => 806,  1433 => 805,  1429 => 804,  1421 => 798,  1418 => 797,  1414 => 795,  1412 => 794,  1408 => 793,  1404 => 792,  1400 => 791,  1390 => 783,  1387 => 782,  1383 => 780,  1381 => 779,  1377 => 778,  1373 => 777,  1369 => 776,  1359 => 768,  1357 => 767,  1354 => 766,  1352 => 765,  1348 => 764,  1344 => 763,  1340 => 762,  1325 => 749,  1321 => 747,  1319 => 746,  1315 => 745,  1311 => 744,  1307 => 743,  1295 => 733,  1293 => 732,  1275 => 716,  1273 => 715,  1269 => 714,  1265 => 713,  1252 => 702,  1248 => 700,  1246 => 699,  1242 => 698,  1238 => 697,  1227 => 688,  1225 => 687,  1221 => 686,  1217 => 685,  1203 => 673,  1200 => 672,  1196 => 670,  1194 => 669,  1190 => 668,  1186 => 667,  1182 => 666,  1170 => 656,  1167 => 655,  1164 => 654,  1161 => 614,  1159 => 613,  1155 => 612,  1151 => 611,  1147 => 610,  1137 => 602,  1135 => 601,  1131 => 600,  1127 => 599,  1123 => 598,  1111 => 588,  1108 => 587,  1104 => 585,  1102 => 584,  1098 => 583,  1094 => 582,  1090 => 581,  1080 => 573,  1078 => 572,  1074 => 571,  1070 => 570,  1066 => 569,  1054 => 559,  1051 => 558,  1048 => 516,  1046 => 515,  1042 => 514,  1038 => 513,  1034 => 512,  1024 => 504,  1022 => 503,  1018 => 502,  1014 => 501,  1010 => 500,  1001 => 493,  998 => 492,  994 => 490,  992 => 489,  988 => 488,  984 => 487,  970 => 475,  968 => 474,  965 => 473,  963 => 472,  959 => 471,  955 => 470,  941 => 458,  939 => 457,  936 => 456,  934 => 455,  930 => 454,  926 => 453,  912 => 441,  910 => 440,  907 => 439,  905 => 438,  901 => 437,  897 => 436,  877 => 418,  874 => 417,  870 => 415,  868 => 414,  864 => 413,  860 => 412,  856 => 411,  846 => 403,  843 => 402,  839 => 400,  837 => 399,  833 => 398,  829 => 397,  825 => 396,  815 => 388,  812 => 387,  808 => 385,  806 => 384,  802 => 383,  798 => 382,  794 => 381,  784 => 373,  782 => 372,  779 => 371,  777 => 370,  773 => 369,  769 => 368,  765 => 367,  750 => 354,  745 => 351,  743 => 350,  739 => 349,  735 => 348,  731 => 347,  722 => 340,  719 => 339,  715 => 337,  713 => 336,  709 => 335,  705 => 334,  701 => 333,  692 => 326,  690 => 325,  687 => 324,  685 => 323,  681 => 322,  677 => 321,  673 => 320,  663 => 312,  659 => 310,  657 => 309,  653 => 308,  649 => 307,  645 => 306,  635 => 298,  632 => 297,  628 => 295,  626 => 294,  622 => 293,  618 => 292,  614 => 291,  604 => 283,  601 => 282,  597 => 280,  595 => 279,  591 => 278,  587 => 277,  583 => 276,  573 => 268,  571 => 267,  568 => 266,  566 => 265,  562 => 264,  558 => 263,  554 => 262,  543 => 253,  541 => 252,  537 => 251,  533 => 250,  529 => 249,  515 => 237,  511 => 235,  509 => 234,  505 => 233,  501 => 232,  497 => 231,  488 => 224,  485 => 223,  481 => 221,  479 => 220,  475 => 219,  471 => 218,  467 => 217,  457 => 209,  454 => 208,  450 => 206,  448 => 205,  444 => 204,  440 => 203,  436 => 202,  426 => 194,  423 => 193,  419 => 191,  417 => 190,  413 => 189,  409 => 188,  405 => 187,  395 => 179,  392 => 178,  388 => 176,  386 => 175,  382 => 174,  378 => 173,  374 => 172,  365 => 165,  363 => 164,  360 => 163,  358 => 162,  354 => 161,  350 => 160,  346 => 159,  335 => 150,  333 => 149,  329 => 148,  325 => 147,  321 => 146,  296 => 123,  292 => 121,  290 => 120,  286 => 119,  282 => 118,  278 => 117,  268 => 109,  265 => 108,  262 => 107,  260 => 106,  255 => 104,  251 => 103,  247 => 102,  237 => 94,  234 => 93,  230 => 91,  228 => 90,  224 => 89,  220 => 88,  216 => 87,  206 => 79,  204 => 78,  201 => 77,  199 => 76,  195 => 75,  191 => 74,  187 => 73,  176 => 64,  174 => 63,  170 => 62,  166 => 61,  162 => 60,  145 => 45,  143 => 44,  125 => 28,  119 => 27,  110 => 24,  105 => 23,  100 => 22,  96 => 21,  84 => 12,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
+        return array (  3878 => 2259,  3869 => 2258,  3794 => 2192,  3766 => 2165,  3757 => 2164,  3736 => 2152,  3734 => 2145,  3725 => 2141,  3719 => 2137,  3712 => 2133,  3701 => 2126,  3699 => 2125,  3694 => 2123,  3690 => 2121,  3688 => 2120,  3681 => 2117,  3675 => 2116,  3669 => 2115,  3666 => 2114,  3661 => 2113,  3656 => 2112,  3654 => 2111,  3647 => 2106,  3641 => 2103,  3637 => 2102,  3633 => 2101,  3620 => 2091,  3616 => 2090,  3612 => 2089,  3600 => 2080,  3596 => 2079,  3592 => 2078,  3576 => 2064,  3573 => 2063,  3567 => 2060,  3563 => 2059,  3559 => 2058,  3546 => 2048,  3542 => 2047,  3538 => 2046,  3526 => 2037,  3522 => 2036,  3518 => 2035,  3502 => 2021,  3499 => 2020,  3493 => 2017,  3489 => 2016,  3485 => 2015,  3476 => 2008,  3468 => 2002,  3463 => 2000,  3448 => 1988,  3444 => 1987,  3440 => 1986,  3428 => 1977,  3423 => 1975,  3408 => 1963,  3404 => 1962,  3400 => 1961,  3385 => 1948,  3382 => 1947,  3376 => 1944,  3372 => 1943,  3368 => 1942,  3353 => 1930,  3348 => 1928,  3333 => 1916,  3329 => 1915,  3325 => 1914,  3310 => 1902,  3305 => 1900,  3290 => 1888,  3286 => 1887,  3282 => 1886,  3267 => 1874,  3262 => 1872,  3247 => 1860,  3243 => 1859,  3239 => 1858,  3224 => 1846,  3219 => 1844,  3204 => 1832,  3200 => 1831,  3196 => 1830,  3181 => 1817,  3178 => 1816,  3172 => 1813,  3168 => 1812,  3164 => 1811,  3155 => 1804,  3147 => 1798,  3142 => 1796,  3127 => 1784,  3123 => 1783,  3119 => 1782,  3104 => 1769,  3101 => 1768,  3095 => 1765,  3091 => 1764,  3087 => 1763,  3078 => 1756,  3070 => 1750,  3065 => 1748,  3050 => 1736,  3046 => 1735,  3042 => 1734,  3027 => 1721,  3024 => 1720,  3018 => 1717,  3014 => 1716,  3010 => 1715,  3001 => 1708,  2993 => 1702,  2988 => 1700,  2973 => 1688,  2969 => 1687,  2965 => 1686,  2950 => 1673,  2947 => 1672,  2941 => 1669,  2937 => 1668,  2933 => 1667,  2918 => 1654,  2915 => 1653,  2909 => 1650,  2905 => 1649,  2901 => 1648,  2889 => 1638,  2884 => 1635,  2879 => 1633,  2864 => 1621,  2860 => 1620,  2856 => 1619,  2841 => 1606,  2838 => 1605,  2836 => 1604,  2830 => 1601,  2826 => 1600,  2822 => 1599,  2810 => 1589,  2805 => 1586,  2800 => 1584,  2785 => 1572,  2781 => 1571,  2777 => 1570,  2762 => 1557,  2759 => 1556,  2753 => 1553,  2749 => 1552,  2745 => 1551,  2730 => 1539,  2726 => 1538,  2722 => 1537,  2710 => 1528,  2706 => 1527,  2702 => 1526,  2688 => 1515,  2684 => 1514,  2680 => 1513,  2667 => 1503,  2663 => 1502,  2659 => 1501,  2642 => 1487,  2638 => 1486,  2634 => 1485,  2621 => 1475,  2617 => 1474,  2613 => 1473,  2600 => 1463,  2596 => 1462,  2592 => 1461,  2579 => 1451,  2575 => 1450,  2571 => 1449,  2553 => 1433,  2550 => 1432,  2544 => 1429,  2540 => 1428,  2536 => 1427,  2524 => 1418,  2520 => 1417,  2516 => 1416,  2501 => 1403,  2498 => 1402,  2492 => 1399,  2488 => 1398,  2484 => 1397,  2472 => 1388,  2468 => 1387,  2464 => 1386,  2449 => 1374,  2445 => 1373,  2441 => 1372,  2429 => 1363,  2425 => 1362,  2421 => 1361,  2406 => 1348,  2404 => 1347,  2400 => 1345,  2394 => 1342,  2389 => 1340,  2375 => 1329,  2370 => 1327,  2356 => 1315,  2353 => 1314,  2349 => 1312,  2347 => 1311,  2343 => 1310,  2339 => 1309,  2329 => 1301,  2325 => 1299,  2323 => 1298,  2319 => 1297,  2315 => 1296,  2305 => 1288,  2303 => 1287,  2300 => 1286,  2298 => 1285,  2294 => 1284,  2290 => 1283,  2277 => 1272,  2275 => 1271,  2271 => 1270,  2267 => 1269,  2257 => 1261,  2253 => 1259,  2251 => 1258,  2247 => 1257,  2243 => 1256,  2232 => 1247,  2230 => 1246,  2226 => 1245,  2222 => 1244,  2212 => 1236,  2209 => 1235,  2205 => 1233,  2203 => 1232,  2199 => 1231,  2195 => 1230,  2184 => 1221,  2182 => 1220,  2178 => 1219,  2174 => 1218,  2163 => 1209,  2159 => 1207,  2157 => 1206,  2153 => 1205,  2149 => 1204,  2138 => 1195,  2136 => 1194,  2132 => 1193,  2128 => 1192,  2117 => 1183,  2114 => 1182,  2112 => 1181,  2109 => 1180,  2107 => 1179,  2103 => 1178,  2099 => 1177,  2083 => 1163,  2081 => 1162,  2077 => 1161,  2073 => 1160,  2051 => 1140,  2049 => 1139,  2045 => 1138,  2041 => 1137,  2037 => 1136,  2019 => 1120,  2017 => 1119,  2013 => 1118,  2009 => 1117,  2005 => 1116,  1994 => 1107,  1992 => 1106,  1988 => 1105,  1984 => 1104,  1980 => 1103,  1969 => 1094,  1967 => 1093,  1963 => 1092,  1959 => 1091,  1955 => 1090,  1945 => 1082,  1943 => 1081,  1939 => 1080,  1935 => 1079,  1931 => 1078,  1918 => 1067,  1916 => 1066,  1912 => 1065,  1908 => 1064,  1904 => 1063,  1883 => 1044,  1879 => 1042,  1877 => 1041,  1873 => 1040,  1869 => 1039,  1865 => 1038,  1853 => 1028,  1851 => 1027,  1846 => 1024,  1844 => 1023,  1840 => 1022,  1836 => 1021,  1832 => 1020,  1819 => 1009,  1817 => 1008,  1813 => 1007,  1809 => 1006,  1805 => 1005,  1792 => 994,  1788 => 992,  1786 => 991,  1782 => 990,  1778 => 989,  1774 => 988,  1765 => 981,  1762 => 980,  1758 => 978,  1756 => 977,  1752 => 976,  1748 => 975,  1744 => 974,  1735 => 967,  1732 => 966,  1728 => 964,  1726 => 963,  1722 => 962,  1718 => 961,  1714 => 960,  1705 => 953,  1702 => 952,  1698 => 950,  1696 => 949,  1692 => 948,  1688 => 947,  1684 => 946,  1675 => 939,  1673 => 938,  1656 => 923,  1654 => 922,  1650 => 921,  1646 => 920,  1642 => 919,  1630 => 909,  1626 => 907,  1624 => 906,  1620 => 905,  1616 => 904,  1612 => 903,  1598 => 891,  1596 => 890,  1593 => 889,  1591 => 888,  1587 => 887,  1583 => 886,  1579 => 885,  1564 => 872,  1562 => 871,  1558 => 870,  1554 => 869,  1550 => 868,  1534 => 854,  1528 => 852,  1526 => 851,  1521 => 850,  1519 => 849,  1514 => 848,  1512 => 847,  1507 => 845,  1504 => 844,  1500 => 842,  1498 => 841,  1495 => 840,  1493 => 839,  1490 => 838,  1488 => 837,  1474 => 825,  1472 => 824,  1468 => 823,  1464 => 822,  1460 => 821,  1446 => 809,  1443 => 808,  1441 => 807,  1437 => 806,  1433 => 805,  1429 => 804,  1421 => 798,  1418 => 797,  1414 => 795,  1412 => 794,  1408 => 793,  1404 => 792,  1400 => 791,  1390 => 783,  1387 => 782,  1383 => 780,  1381 => 779,  1377 => 778,  1373 => 777,  1369 => 776,  1359 => 768,  1357 => 767,  1354 => 766,  1352 => 765,  1348 => 764,  1344 => 763,  1340 => 762,  1325 => 749,  1321 => 747,  1319 => 746,  1315 => 745,  1311 => 744,  1307 => 743,  1295 => 733,  1293 => 732,  1275 => 716,  1273 => 715,  1269 => 714,  1265 => 713,  1252 => 702,  1248 => 700,  1246 => 699,  1242 => 698,  1238 => 697,  1227 => 688,  1225 => 687,  1221 => 686,  1217 => 685,  1203 => 673,  1200 => 672,  1196 => 670,  1194 => 669,  1190 => 668,  1186 => 667,  1182 => 666,  1170 => 656,  1167 => 655,  1164 => 654,  1161 => 614,  1159 => 613,  1155 => 612,  1151 => 611,  1147 => 610,  1137 => 602,  1135 => 601,  1131 => 600,  1127 => 599,  1123 => 598,  1111 => 588,  1108 => 587,  1104 => 585,  1102 => 584,  1098 => 583,  1094 => 582,  1090 => 581,  1080 => 573,  1078 => 572,  1074 => 571,  1070 => 570,  1066 => 569,  1054 => 559,  1051 => 558,  1048 => 516,  1046 => 515,  1042 => 514,  1038 => 513,  1034 => 512,  1024 => 504,  1022 => 503,  1018 => 502,  1014 => 501,  1010 => 500,  1001 => 493,  998 => 492,  994 => 490,  992 => 489,  988 => 488,  984 => 487,  970 => 475,  968 => 474,  965 => 473,  963 => 472,  959 => 471,  955 => 470,  941 => 458,  939 => 457,  936 => 456,  934 => 455,  930 => 454,  926 => 453,  912 => 441,  910 => 440,  907 => 439,  905 => 438,  901 => 437,  897 => 436,  877 => 418,  874 => 417,  870 => 415,  868 => 414,  864 => 413,  860 => 412,  856 => 411,  846 => 403,  843 => 402,  839 => 400,  837 => 399,  833 => 398,  829 => 397,  825 => 396,  815 => 388,  812 => 387,  808 => 385,  806 => 384,  802 => 383,  798 => 382,  794 => 381,  784 => 373,  782 => 372,  779 => 371,  777 => 370,  773 => 369,  769 => 368,  765 => 367,  750 => 354,  745 => 351,  743 => 350,  739 => 349,  735 => 348,  731 => 347,  722 => 340,  719 => 339,  715 => 337,  713 => 336,  709 => 335,  705 => 334,  701 => 333,  692 => 326,  690 => 325,  687 => 324,  685 => 323,  681 => 322,  677 => 321,  673 => 320,  663 => 312,  659 => 310,  657 => 309,  653 => 308,  649 => 307,  645 => 306,  635 => 298,  632 => 297,  628 => 295,  626 => 294,  622 => 293,  618 => 292,  614 => 291,  604 => 283,  601 => 282,  597 => 280,  595 => 279,  591 => 278,  587 => 277,  583 => 276,  573 => 268,  571 => 267,  568 => 266,  566 => 265,  562 => 264,  558 => 263,  554 => 262,  543 => 253,  541 => 252,  537 => 251,  533 => 250,  529 => 249,  515 => 237,  511 => 235,  509 => 234,  505 => 233,  501 => 232,  497 => 231,  488 => 224,  485 => 223,  481 => 221,  479 => 220,  475 => 219,  471 => 218,  467 => 217,  457 => 209,  454 => 208,  450 => 206,  448 => 205,  444 => 204,  440 => 203,  436 => 202,  426 => 194,  423 => 193,  419 => 191,  417 => 190,  413 => 189,  409 => 188,  405 => 187,  395 => 179,  392 => 178,  388 => 176,  386 => 175,  382 => 174,  378 => 173,  374 => 172,  365 => 165,  363 => 164,  360 => 163,  358 => 162,  354 => 161,  350 => 160,  346 => 159,  335 => 150,  333 => 149,  329 => 148,  325 => 147,  321 => 146,  296 => 123,  292 => 121,  290 => 120,  286 => 119,  282 => 118,  278 => 117,  268 => 109,  265 => 108,  262 => 107,  260 => 106,  255 => 104,  251 => 103,  247 => 102,  237 => 94,  234 => 93,  230 => 91,  228 => 90,  224 => 89,  220 => 88,  216 => 87,  206 => 79,  204 => 78,  201 => 77,  199 => 76,  195 => 75,  191 => 74,  187 => 73,  176 => 64,  174 => 63,  170 => 62,  166 => 61,  162 => 60,  145 => 45,  143 => 44,  125 => 28,  119 => 27,  110 => 24,  105 => 23,  100 => 22,  96 => 21,  84 => 12,  74 => 4,  65 => 3,  47 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -4815,6 +5515,54 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                         </tr>
                                     {% endif %}
                                     {# TODO inserisci OPT5#}
+                                    {% if itemAdv.opt5Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">5. QUINTA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto sorround soggiorno</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione modulo surround salone.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt51Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt51Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt52Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt52Value * 8 }}</td>
+                                        </tr>
+                                        {# TODO: Gestire maggiorazioni a seconda del tipo op #}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t\t\t\t</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt53Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt53Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
                                     {% if itemAdv.opt6Enabled == 1 %}
                                         <tr>
                                             <td colspan=\"5\" class=\"border table-light\">6. SESTA AGGIUNTA POSSIBILE: connettorizzazione dei punti di trasmissione dati predisposti e conteggiati nella proposta C.</td>
@@ -4880,6 +5628,392 @@ class __TwigTemplate_97c37020b4099d5ec261983bf2464804924b500755a57b6ef49fd038e88
                                             <td class=\"border text-center\">{{ itemAdv.opt73Value }}</td>
                                             <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
                                             <td class=\"border text-center\">{{ itemAdv.opt73Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt8Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">8. OTTAVA AGGIUNTA POSSIBILE: oneri di predisposizione per sistema di rilevazione allarme.\t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione videosorveglianza</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt81Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt81Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt82Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt82Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt83Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt83Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt9Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">9. NONA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto di rilevazione fumi. \t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione rilevazione fumi\t</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt91Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt91Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt92Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt92Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt93Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt93Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt10Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">10. DECIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori sonde allagamento e gas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione sonde allagamento</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt101Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt101Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt102Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt102Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione elettrovalvola ACQUA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt103Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt103Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt104Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt104Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione rilevatori gas</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt105Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt105Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt106Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt106Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione elettrovalvola GAS.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt107Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt107Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt108Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt108Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t\t\t\t</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt109Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt109Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt11Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">11. UNDICESIMA AGGIUNTA POSSIBILE: oneri di predisposizione per motorizzazione di tapparelle, persiane, zanzariere, tende e/o oscuranti.\t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.10</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt111Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt111Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt112Value }}</td>
+                                            <td class=\"border text-center\"> 8.00 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt112Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Canalizzazione per P.to Presa in traccia per distanza non superiori a 60 mt. Sono esclusi i conduttori e le opere murarie.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt113Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt113Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">N.P.10_PS</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: <br>
+                                                    la chiusura della traccia, l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati<br>
+                                                    all'interno della traccia onde evitare uno spessore troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt113Value }}</td>
+                                            <td class=\"border text-center\"> 5.70 </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt113Value * 5.7 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.\t</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.20.3</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt114Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt114Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt12Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">12. DODICESIMA AGGIUNTA POSSIBILE: oneri per passaggio cavi e collegamento di motorizzazioni per tapparelle, persiane, zanzariere, tende e/o oscuranti.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.80.2</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto di comando di motori monofasi o in c.c. di piccola potenza (serrande meccanizzate etc.).<br>
+                                                    Con pulsante doppio senza chiave.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt121Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.80.2')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt121Value * fun.getPriceByCode('15.3.80.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.42</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    COMPENSO AGGIUNTIVO AL PUNTO ALLACCIO ELETTRICO PER COLLEGAMENTO AD APPARECCHIATURA DI CONTROLLO E/O COMANDO. Per collegamento motore tenda
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt122Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.2.42')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt122Value * fun.getPriceByCode('15.2.42')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.21.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO ALLACCIO PER PRESA MONOFASE O TRIFASE SU CANALIZZAZIONE IN TRACCIA O SU TUBAZIONE IN VISTA CON CAVO NON PROPAGANTE L'INCENDIO.<br>
+                                                    Per allaccio monofase con carico max 16A
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt123Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.2.21.1')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt123Value * fun.getPriceByCode('15.2.21.1')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt13Enabled == 1 %}
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\">13. TREDICESIMA AGGIUNTA POSSIBILE: impianto citofonico (solo audio)\t\t\t\t</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=\"5\" class=\"border table-light\"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.3.80.2</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto di comando di motori monofasi o in c.c. di piccola potenza (serrande meccanizzate etc.).<br>
+                                                    Con pulsante doppio senza chiave.
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt121Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.3.80.2')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt121Value * fun.getPriceByCode('15.3.80.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.42</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    COMPENSO AGGIUNTIVO AL PUNTO ALLACCIO ELETTRICO PER COLLEGAMENTO AD APPARECCHIATURA DI CONTROLLO E/O COMANDO. Per collegamento motore tenda
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt122Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.2.42')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt122Value * fun.getPriceByCode('15.2.42')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=\"border text-center\">15.2.21.1</td>
+                                            <td class=\"text-small border\" style=\"max-width: 300px\">
+                                                <small>
+                                                    PUNTO ALLACCIO PER PRESA MONOFASE O TRIFASE SU CANALIZZAZIONE IN TRACCIA O SU TUBAZIONE IN VISTA CON CAVO NON PROPAGANTE L'INCENDIO.<br>
+                                                    Per allaccio monofase con carico max 16A
+                                                </small>
+                                            </td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt123Value }}</td>
+                                            <td class=\"border text-center\">{{ fun.getPriceByCode('15.2.21.1')|number_format(2) }}</td>
+                                            <td class=\"border text-center\">{{ itemAdv.opt123Value * fun.getPriceByCode('15.2.21.1')|number_format(2) }}</td>
                                         </tr>
                                     {% endif %}
                                     <!-- TOTALI -->

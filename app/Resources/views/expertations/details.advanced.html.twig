@@ -1606,6 +1606,49 @@
                                         <tr>
                                             <td colspan="5" class="border table-light">5. QUINTA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto sorround soggiorno</td>
                                         </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione modulo surround salone.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt51Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt51Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt52Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt52Value * 8 }}</td>
+                                        </tr>
+                                        {# TODO: Gestire maggiorazioni a seconda del tipo op #}
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.				</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.20.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt53Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt53Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
                                     {% endif %}
                                     {% if itemAdv.opt6Enabled == 1 %}
                                         <tr>
@@ -1672,6 +1715,640 @@
                                             <td class="border text-center">{{ itemAdv.opt73Value }}</td>
                                             <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
                                             <td class="border text-center">{{ itemAdv.opt73Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt8Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">8. OTTAVA AGGIUNTA POSSIBILE: oneri di predisposizione per sistema di rilevazione allarme.	</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione videosorveglianza</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt81Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt81Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt82Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt82Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt83Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt83Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt9Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">9. NONA AGGIUNTA POSSIBILE: oneri di predisposizione per impianto di rilevazione fumi. 	</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione rilevazione fumi	</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt91Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt91Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt92Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt92Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.	</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt93Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt93Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt10Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">10. DECIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori sonde allagamento e gas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione sonde allagamento</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt101Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt101Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt102Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt102Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione elettrovalvola ACQUA</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt103Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt103Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt104Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt104Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione rilevatori gas</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt105Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt105Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt106Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt106Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione elettrovalvola GAS.</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt107Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt107Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt108Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt108Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.				</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.20.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt109Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt109Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt11Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">11. UNDICESIMA AGGIUNTA POSSIBILE: oneri di predisposizione per motorizzazione di tapparelle, persiane, zanzariere, tende e/o oscuranti.	</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt111Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt111Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt112Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt112Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.2.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Canalizzazione per P.to Presa in traccia per distanza non superiori a 60 mt. Sono esclusi i conduttori e le opere murarie.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt113Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt113Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: <br>
+                                                    la chiusura della traccia, l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati<br>
+                                                    all'interno della traccia onde evitare uno spessore troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt113Value }}</td>
+                                            <td class="border text-center"> 5.70 </td>
+                                            <td class="border text-center">{{ itemAdv.opt113Value * 5.7 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.	</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class="border text-center">15.3.20.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt114Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt114Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt12Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">12. DODICESIMA AGGIUNTA POSSIBILE: oneri per passaggio cavi e collegamento di motorizzazioni per tapparelle, persiane, zanzariere, tende e/o oscuranti.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione motori</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.80.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto di comando di motori monofasi o in c.c. di piccola potenza (serrande meccanizzate etc.).<br>
+                                                    Con pulsante doppio senza chiave.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt121Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.80.2')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt121Value * fun.getPriceByCode('15.3.80.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.2.42</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    COMPENSO AGGIUNTIVO AL PUNTO ALLACCIO ELETTRICO PER COLLEGAMENTO AD APPARECCHIATURA DI CONTROLLO E/O COMANDO. Per collegamento motore tenda
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt122Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.2.42')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt122Value * fun.getPriceByCode('15.2.42')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.2.21.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO ALLACCIO PER PRESA MONOFASE O TRIFASE SU CANALIZZAZIONE IN TRACCIA O SU TUBAZIONE IN VISTA CON CAVO NON PROPAGANTE L'INCENDIO.<br>
+                                                    Per allaccio monofase con carico max 16A
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt123Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.2.21.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt123Value * fun.getPriceByCode('15.2.21.1')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt13Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">13. TREDICESIMA AGGIUNTA POSSIBILE: impianto citofonico (solo audio)				</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Impianto Citofonico</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto citofonico o videocitofonico, sistema a 2 fili. Per impianto base fino a 26 interni.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt131Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt131Value * fun.getPriceByCode('15.3.52.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto citofonico  per ogni posto audio interno
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt132Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt132Value * fun.getPriceByCode('15.3.52.3')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.4</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per audio interno intercomunicante.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt133Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.4')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt133Value * fun.getPriceByCode('15.3.52.4')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.5</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per ogni posto esterno audio (PORTER) fino a 2 chiamate.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt134Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.5')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt134Value * fun.getPriceByCode('15.3.52.5')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.4.236</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    LINEA IN CAVO LONWORKS PER CONNESSIONI DI RETE TIPO AWG22.  Linea in cavo LonWorks per connessioni di rete tipo AWG22<br>
+                                                    a due conduttori (una coppia: 2x0,60mm)Twistato e non schermato, con isolamento 1 kV
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt135Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.4.236')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt135Value * fun.getPriceByCode('15.4.236')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Trasporto e imballo	</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">TI</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Trasporto e imballo
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">OMAGGIO</td>
+                                            <td class="border text-center">OMAGGIO</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt14Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">14. QUATTORDICESIMA AGGIUNTA POSSIBILE: impianto videocitofonico a colori in esecuzione a muro</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Impianto Videocitofonico	</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto citofonico o videocitofonico, sistema a 2 fili. Per impianto base fino a 26 interni.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt141Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt141Value * fun.getPriceByCode('15.3.52.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per impianto citofonico  per ogni posto audio interno
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt142Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt142Value * fun.getPriceByCode('15.3.52.3')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.4</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per audio interno intercomunicante.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt143Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.4')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt143Value * fun.getPriceByCode('15.3.52.4')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.52.5</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento al punto presa di servizio per ogni posto esterno audio (PORTER) fino a 2 chiamate.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt144Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.52.5')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt144Value * fun.getPriceByCode('15.3.52.5')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.4.236</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    LINEA IN CAVO LONWORKS PER CONNESSIONI DI RETE TIPO AWG22.  Linea in cavo LonWorks per connessioni di rete tipo AWG22<br>
+                                                    a due conduttori (una coppia: 2x0,60mm)Twistato e non schermato, con isolamento 1 kV
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt145Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.4.236')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt145Value * fun.getPriceByCode('15.4.236')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Trasporto e imballo	</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">TI</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Trasporto e imballo
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">1</td>
+                                            <td class="border text-center">OMAGGIO</td>
+                                            <td class="border text-center">OMAGGIO</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt15Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">15. QUINDICESIMA AGGIUNTA POSSIBILE: predisposizioni per rilevatori  luminosità.	</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione rilevatori luminosità</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt151Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt151Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">N.P.10_PS</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
+                                                    e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
+                                                    l’intonaco, la rasatura e la tinteggiatura.  Nella muratura i corrugati vengono solamente fissati all'interno della traccia onde evitare uno spessore<br>
+                                                    troppo alto che vada poi a discapito dell'intonaco stesso.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt152Value }}</td>
+                                            <td class="border text-center"> 8.00 </td>
+                                            <td class="border text-center">{{ itemAdv.opt152Value * 8 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.	</strong></td>
+                                        </tr>
+                                        {# TODO gestisci op #}
+                                        <tr>
+                                            <td class="border text-center">15.3.10</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt153Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt153Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if itemAdv.opt16Enabled == 1 %}
+                                        <tr>
+                                            <td colspan="5" class="border table-light">16. SEDICESIMA AGGIUNTA POSSIBILE: esempio di soluzione per la  predisposizione di <BR>
+                                                illuminazione esterna con 20 punti luce. Le esatte misure verranno conteggiate alla fine dei lavori				</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Predisposizione cavidotti esterni Lato anteriore e posteriore per illuminazione esterna pozzetti ogni 10mt circa <br>
+                                                    per rendere più facile la predisposizione dell'illuminazione definitiva. Misura ipotetica da verificare in loco.				</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.5.210.5</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Tubazione flessibile in polietilene a doppia parete. Diametro esterno 110 mm
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt161Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.5.210.5')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt161Value * fun.getPriceByCode('15.5.210.5')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.5.260.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Pozzetto in resina completo di coperchio carrabile 300 x 300 mm.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt162Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.5.260.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt162Value * fun.getPriceByCode('15.5.260.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.1.1</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Canalizzazione per P.to luce in traccia per distanza non superiori a 60 mt. Sono esclusi i conduttori e le opere murarie.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt163Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.1.1')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt163Value * fun.getPriceByCode('15.1.1')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.1.32.2</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Punto luce semplice con o senza conduttore di protezione posato in vista con cavo multipolare derivato da linea dorsale da canale o passerella.<br>
+                                                    Per P.to luce con conduttore di protezione con cavo FG70R.
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt164Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.1.32.2')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt164Value * fun.getPriceByCode('15.1.32.2')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Linea elettrica per accensioni 2 linee di accensioni separate.</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.4.21.36</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    LINEA IN CAVO LONWORKS PER CONNESSIONI DI RETE TIPO AWG22.  Linea in cavo LonWorks per connessioni di rete tipo AWG22<br>
+                                                    a due conduttori (una coppia: 2x0,60mm)Twistato e non schermato, con isolamento 1 kV
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt165Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.4.21.36')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt165Value * fun.getPriceByCode('15.4.21.36')|number_format(2) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border table-light"><strong>Collegamento stagno nei pozzetti</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border text-center">15.8.570.3</td>
+                                            <td class="text-small border" style="max-width: 300px">
+                                                <small>
+                                                    Giunto di derivazione realizzato con muffola in gomma in unico pezzo max 4x25 e derivato 2x1,5mmq. FG7OR
+                                                </small>
+                                            </td>
+                                            <td class="border text-center">{{ itemAdv.opt165Value }}</td>
+                                            <td class="border text-center">{{ fun.getPriceByCode('15.8.570.3')|number_format(2) }}</td>
+                                            <td class="border text-center">{{ itemAdv.opt165Value * fun.getPriceByCode('15.8.570.3')|number_format(2) }}</td>
                                         </tr>
                                     {% endif %}
                                     <!-- TOTALI -->
