@@ -292,20 +292,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::expertationsNewAction',  '_route' => 'nuovo_preventivo',);
                 }
 
-                if (0 === strpos($pathinfo, '/preventivi/dettaglio')) {
-                    // preventivi_dettaglio_id
-                    if (preg_match('#^/preventivi/dettaglio/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_dettaglio_id')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::detailsAction',));
-                    }
-
-                    // preventivi_dettaglio_avanzato_id
-                    if (0 === strpos($pathinfo, '/preventivi/dettaglio/avanzato/preventivo-') && preg_match('#^/preventivi/dettaglio/avanzato/preventivo\\-(?P<pid>[^/]++)$#sD', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_dettaglio_avanzato_id')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::detailsAdvancedAction',));
-                    }
-
+                // preventivi_dettaglio_id
+                if (0 === strpos($pathinfo, '/preventivi/dettaglio') && preg_match('#^/preventivi/dettaglio/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_dettaglio_id')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::detailsAction',));
                 }
 
-                elseif (0 === strpos($pathinfo, '/preventivi/avanzato')) {
+                if (0 === strpos($pathinfo, '/preventivi/avanzato')) {
                     // mostra_preventivo_avanzato
                     if (0 === strpos($pathinfo, '/preventivi/avanzato/mostra/preventivo-') && preg_match('#^/preventivi/avanzato/mostra/preventivo\\-(?P<pid>[^/]++)$#sD', $pathinfo, $matches)) {
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'mostra_preventivo_avanzato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::showExpertationAdvancedAction',));
@@ -321,6 +313,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'nuovo_preventivo_avanzato')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::newExpertationAdvancedAction',));
                     }
 
+                }
+
+                // preventivi_dettaglio_avanzato_id
+                if (0 === strpos($pathinfo, '/preventivi/computometrico/avanzato/preventivo-') && preg_match('#^/preventivi/computometrico/avanzato/preventivo\\-(?P<pid>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'preventivi_dettaglio_avanzato_id')), array (  '_controller' => 'AppBundle\\Controller\\ExpertationsController::detailsAdvancedAction',));
                 }
 
                 // preventivi_elimina

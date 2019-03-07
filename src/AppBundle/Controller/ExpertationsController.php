@@ -1173,7 +1173,7 @@ class ExpertationsController extends Controller
     }
 
     /**
-     * @Route("preventivi/dettaglio/avanzato/preventivo-{pid}", name="preventivi_dettaglio_avanzato_id")
+     * @Route("preventivi/computometrico/avanzato/preventivo-{pid}", name="preventivi_dettaglio_avanzato_id")
      */
     public function detailsAdvancedAction($pid)
     {

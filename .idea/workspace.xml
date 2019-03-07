@@ -4,6 +4,14 @@
     <list default="true" id="868f17b2-549f-4749-bc51-d64ff7ff6a3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerDeprecations.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerDeprecations.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/W/U/KJ1j7ZXGP6oPAdstALLv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/IT+PcFUQZK/W/U/KJ1j7ZXGP6oPAdstALLv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce98f0eebfeb9bc4837b5e8ead7ae21b717e399589c56909330555ac69fdb9e4.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce98f0eebfeb9bc4837b5e8ead7ae21b717e399589c56909330555ac69fdb9e4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ninsuo/symfony-collection/.gitignore" afterDir="false" />
@@ -97,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17460">
-              <caret line="1191" selection-start-line="1191" selection-end-line="1191" />
+            <state relative-caret-position="356">
+              <caret line="1175" column="40" selection-start-line="1175" selection-start-column="40" selection-end-line="1175" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -106,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="2307" column="91" selection-start-line="2307" selection-start-column="91" selection-end-line="2307" selection-end-column="91" />
+            <state relative-caret-position="259">
+              <caret line="3549" column="55" selection-start-line="3549" selection-start-column="50" selection-end-line="3549" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -132,10 +140,14 @@
       <find>chiamata</find>
       <find>dump</find>
       <find>TV</find>
+      <find>opt20</find>
+      <find>13.21.</find>
     </findStrings>
     <replaceStrings>
       <replace>itemsArray.43</replace>
       <replace>itemsArray.1</replace>
+      <replace>itemAdv</replace>
+      <replace>opt21</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -156,8 +168,8 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientsController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/show.advanced.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig" />
       </list>
     </option>
@@ -336,12 +348,13 @@
       <workItem from="1550587341605" duration="2644000" />
       <workItem from="1550674218499" duration="4319000" />
       <workItem from="1551798696785" duration="6569000" />
-      <workItem from="1551884746050" duration="4833000" />
+      <workItem from="1551884746050" duration="5563000" />
+      <workItem from="1551970326236" duration="7736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34004000" />
+    <option name="totallyTimeSpent" value="42470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="989" extended-state="0" />
@@ -502,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17460">
-          <caret line="1191" selection-start-line="1191" selection-end-line="1191" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ExpertationsAdvanced.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -516,10 +522,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ExpertationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="1175" column="40" selection-start-line="1175" selection-start-column="40" selection-end-line="1175" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/expertations/details.advanced.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="2307" column="91" selection-start-line="2307" selection-start-column="91" selection-end-line="2307" selection-end-column="91" />
+        <state relative-caret-position="259">
+          <caret line="3549" column="55" selection-start-line="3549" selection-start-column="50" selection-end-line="3549" selection-end-column="55" />
         </state>
       </provider>
     </entry>
