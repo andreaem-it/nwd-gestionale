@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %}Computometrico {% endblock %}
 {% block body %}
+    <link rel="stylesheet" href="{{ asset('css/print.css') }}"  media="print">
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="row">
@@ -29,12 +30,12 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card" id="page">
                         <div class="card-body">
-                            <div class="table-responsive">
+                            <div class="table">
                                 <table class="table table-hover border-o">
                                     <thead>
                                     <tr>
                                         <th class="no-wrap border">ARTICOLO</th>
-                                        <th class="border" style="max-width: 300px">DESCRIZIONE</th>
+                                        <th class="border" style="max-width: 300px; word-wrap: break-word;">DESCRIZIONE</th>
                                         <th class="no-wrap border">QUANTITÁ</th>
                                         <th class="no-wrap border">PREZZO NETTO UNITARIO</th>
                                         <th class="no-wrap border">PREZZO NETTO TOTALE</th>
@@ -50,7 +51,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.1.12.2</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 P.to luce semplice su canalizzazione in traccia o in vista <br>
                                                 con un cavo non propagante l'incendio con sezione minima 1,5 mmq. <br>
@@ -64,7 +65,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.1.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Canalizzazione per <strong>P.to luce in traccia</strong> per distanza non superiori a 60mt. <br>
                                                 Sono esclusi i conduttori e le opere murarie.
@@ -78,7 +79,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.1.3.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per P.to luce per opere murarie su murature <strong>NON Intonacate.</strong> <br>
                                                     Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
@@ -93,7 +94,7 @@
                                     {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
                                         <tr>
                                             <td class="border text-center">15.1.4.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per P.to luce per opere murarie su murature <strong>Intonacate.</strong> <br>
                                                     Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
@@ -108,7 +109,7 @@
                                     {% if item.opereMurariePietra == 1 %}
                                         <tr>
                                             <td class="border text-center">15.1.5.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per P.to luce per opere murarie su murature in <strong>mattone pieno, calcestruzzo o pietra.</strong> <br>
                                                     Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
@@ -136,7 +137,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.1.15.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 P.to di comando su canalizzazione in traccia o in vista
                                                 con un cavo non propagante l'incendio <br>
@@ -150,7 +151,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.1.2</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Canalizzazione per <strong>P.to di comando in traccia</strong> per distanza non superiori a 60mt. <br>
                                                 Sono esclusi i conduttori e le opere murarie.
@@ -164,7 +165,7 @@
                                     {% if itemsArray.7 > 0 %}
                                     <tr>
                                         <td class="border text-center">15.1.15.2</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Punto di comando aggiuntivo sulla stessa scatola. Per P.to di comando aggiuntivo
                                             </small>
@@ -178,7 +179,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.1.3.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
                                                     <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -193,7 +194,7 @@
                                     {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
                                         <tr>
                                             <td class="border text-center">15.1.4.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
                                                     <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -208,7 +209,7 @@
                                     {% if item.opereMurariePietra == 1 %}
                                         <tr>
                                             <td class="border text-center">15.1.5.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to di comando per opere murarie su murature in <br>
                                                     <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -223,7 +224,7 @@
                                     {% if itemsArray.3 != null %}
                                         <tr>
                                             <td class="border text-center">15.1.15.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     P.to di comando aggiuntivo sulla stessa scatola. Per P.to di comando aggiuntivo.
                                                 </small>
@@ -239,7 +240,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.2.21.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 P.to allaccio per presa monofase su canalizzazione in traccia o in vista <br>
                                                 con cavo non propagante l'incendio di sezione idonea<br>
@@ -253,7 +254,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.2.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Canalizzazione per <strong>P.to Presa in traccia</strong> per distanza non superiori a 60 mt. <br>
                                                 Sono esclusi i conduttori e le opere murarie<br>
@@ -267,7 +268,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.2.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
                                                     <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -282,7 +283,7 @@
                                     {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
                                         <tr>
                                             <td class="border text-center">15.2.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to di comando per opere murarie su murature <br>
                                                     <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -297,7 +298,7 @@
                                     {% if item.opereMurariePietra == 1 %}
                                         <tr>
                                             <td class="border text-center">15.2.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to di comando per opere murarie su murature in <br>
                                                     <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -311,7 +312,7 @@
                                     {% endif %}
                                     <tr>
                                         <td class="border text-center">15.2.41.3</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Punto presa elettrica da collegare alla linea di alimentazione compensata a parte come allaccio elettrico. <br>
                                                 Pt.o presa elettrica 2P+T 10/16A + UNEL. (Schuko Bipasso)<br>
@@ -325,7 +326,7 @@
                                     {% if itemsArray.4 > 0 %}
                                     <tr>
                                         <td class="border text-center">15.2.41.2</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Presa elettrica aggiuntiva sulla stessa scatola 2P+T 10A o 16A o 10/16A (Bipresa) <br>
                                             </small>
@@ -339,7 +340,7 @@
                                     {% if itemsArray.5 > 0 %}
                                         <tr>
                                             <td class="border text-center">15.2.42</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Per allaccio ventilatori e o aspiratori
                                                 </small>
@@ -359,7 +360,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.3.10.0</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 PUNTO PRESA DI SERVIZIO in traccia sono escluse le opere murarie
                                             </small>
@@ -372,7 +373,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.3.20.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
                                                     <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -387,7 +388,7 @@
                                     {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
                                         <tr>
                                             <td class="border text-center">15.3.20.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
                                                     <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -402,7 +403,7 @@
                                     {% if item.opereMurariePietra == 1 %}
                                         <tr>
                                             <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
                                                     <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
@@ -420,7 +421,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.151.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Impianto di ricezione di segnale TV digitale terrestre <strong>costituito da antenna di ricezione TV in <br>
                                                         banda UHF o VHF</strong>, idonea alla ricezione di segnale TV digitale terrestre con guadagno <br>
@@ -440,7 +441,7 @@
                                         {% if itemsArray.43 < 5 %}
                                             <tr>
                                                 <td class="border text-center">15.3.161.1</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Amplificatore da palo per segnale TV digitale terrestre, per banda larga UHF - VHF, completo di <br>
                                                         alimentatore e quota di cavo a basse perdite per linea montante su canalizzazione predisposta, <br>
@@ -457,7 +458,7 @@
                                         {% elseif itemsArray.43 > 6 and itemsArray.43 < 10 %}
                                             <tr>
                                                 <td class="border text-center">15.3.161.2</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Amplificatore da palo per segnale TV digitale terrestre, per banda larga UHF - VHF, completo di <br>
                                                         alimentatore e quota di cavo a basse perdite per linea montante su canalizzazione predisposta, <br>
@@ -474,7 +475,7 @@
                                         {% elseif itemsArray.43 > 11 and itemsArray.43 < 15 %}
                                             <tr>
                                                 <td class="border text-center">15.3.161.3</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Amplificatore da palo per segnale TV digitale terrestre, per banda larga UHF - VHF, completo di <br>
                                                         alimentatore e quota di cavo a basse perdite per linea montante su canalizzazione predisposta, <br>
@@ -492,7 +493,7 @@
                                     {% endif %}
                                     <tr>
                                         <td class="border text-center">15.3.110.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Incremento al punto presa di servizio per <strong>presa di ricezione TV terrestre</strong>
                                             </small>
@@ -504,7 +505,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.4.230.0</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
                                             </small>
@@ -517,7 +518,7 @@
                                     {#{% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.3.20.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
                                                     Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
@@ -531,7 +532,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
                                         <tr>
                                             <td class="border text-center">15.3.20.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
                                                     Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
@@ -545,7 +546,7 @@
                                     {% if item.opereMurariePietra == 1 %}
                                         <tr>
                                             <td class="border text-center">15.3.20.32</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                                 </small>
@@ -561,7 +562,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.40.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per <strong>impianto di chiamata</strong>
                                                 </small>
@@ -573,7 +574,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.90.0</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per segnalatore acustico di tipo a <strong>ronzatore per EMERGENZE</strong>
                                                 </small>
@@ -590,7 +591,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.210.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per <strong>presa telefonica</strong> con presa ad 1 coppia
                                                 </small>
@@ -602,7 +603,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.4.240.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Linea telefonica in cavo multicoppie a 2 coppie al metro per linea dorsale
                                                 </small>
@@ -615,7 +616,7 @@
                                         {#{% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                             <tr>
                                                 <td class="border text-center">15.3.20.1</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
                                                         Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
@@ -629,7 +630,7 @@
                                         {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
                                             <tr>
                                                 <td class="border text-center">15.3.20.2</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
                                                         Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
@@ -642,7 +643,7 @@
                                         {% endif %}
                                         {% if item.opereMurariePietra == 1 %}
                                             <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                                 </small>
@@ -658,7 +659,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.220.6</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per <strong>connettore tipo RJ45</strong> con cavo UTP cat. 6
                                                 </small>
@@ -675,7 +676,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.80.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per impianto di comando di suoneria. Con pulsante <br>
                                                     con targa.
@@ -688,7 +689,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.90</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per segnalatore acustico di tipo a <strong> SUONERIA</strong>
                                                 </small>
@@ -704,7 +705,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.6.170.39</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Interruttore deviatore orario giornaliero e settimanale (ris. Carica 100h) digitale ad 1 uscita.
                                             </small>
@@ -719,7 +720,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.3.52.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Incremento al punto presa di servizio per <strong>impianto citofonico o videocitofonico, sistema a 2 fili.
                                                     Per impianto base fino a 26 interni.</strong>
@@ -735,7 +736,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.8.180.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PLAFONIERA DI EMERGENZA INSTALLABILE SU SCATOLE PORTAFRUTTO. Su placca in alluminio anodizzato o in plastica.
                                                 </small>
@@ -754,7 +755,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.3.10.0</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 PUNTO PRESA DI SERVIZIO in traccia. Sono escluse le opere murarie
                                             </small>
@@ -767,7 +768,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
                                         <tr>
                                             <td class="border text-center">15.3.20.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate. <br>
                                                     Sono esclusi: l’intonaco, la rasatura e la tinteggiatura
@@ -782,7 +783,7 @@
                                     {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 1  %}
                                         <tr>
                                             <td class="border text-center">15.3.20.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature Intonacate. <br>
                                                     Sono esclusi: l'intonaco, la rasatura e la tinteggiatura
@@ -796,7 +797,7 @@
                                     {% endif %}
                                     {% if item.opereMurariePietra == 1 %}
                                         <td class="border text-center">15.3.20.3</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                             </small>
@@ -811,7 +812,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.21.10.0</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Collegamento elettrico di regolazione di impianti tecnologici, eseguito sottotraccia <br>
                                                 per alimentare dal quadro elettrico di centrale o di zona una apparecchiatura di regololazione<br>
@@ -828,7 +829,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.19.10.4</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Termostato elettronico da parete.
                                             </small>
@@ -858,7 +859,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.21.40.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Collegamento elettrico di potenza di apparecchiature tecnologiche, eseguito sottotraccia,<br>
                                                 per alimentare dal quadro elettrico di centrale o di zona, una apparecchiatura di potenza <br>
@@ -875,7 +876,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.21.40.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Collegamento elettrico di potenza di apparecchiature tecnologiche, eseguito sottotraccia,<br>
                                                 per alimentare dal quadro elettrico di centrale o di zona, una apparecchiatura di potenza <br>
@@ -893,7 +894,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">13.21.10</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Collegamento elettrico di regolazione di impianti tecnologici, eseguito sottotraccia per alimentare <br>
                                                 dal quadro elettrico di centrale o di zona una apparecchiatura di regololazione (termostato, umidostato,<br>
@@ -911,7 +912,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.2.70.7</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Per allaccio elettrico incluso il collegamento all'apparecchio
                                             </small>
@@ -938,7 +939,7 @@
                                     {% if (itemsArray.22 > 0) %}
                                         <tr>
                                             <td class="border text-center">15.6.220.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Centralino tipo appartamento incassato a parete 12  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
                                                 </small>
@@ -952,7 +953,7 @@
                                     {% if (itemsArray.23 > 0) %}
                                         <tr>
                                             <td class="border text-center">15.6.220.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Centralino tipo appartamento incassato a parete 36  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
                                                 </small>
@@ -966,7 +967,7 @@
                                     {% if (itemsArray.24 > 0) %}
                                         <tr>
                                             <td class="border text-center">15.6.220.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Centralino tipo appartamento incassato a parete 54  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
                                                 </small>
@@ -980,7 +981,7 @@
                                     {% if (itemsArray.25 > 0) %}
                                         <tr>
                                             <td class="border text-center">15.6.220.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Centralino tipo appartamento incassato a parete 72  moduli. <strong>PER CITOFONO E/O CENTRALINO</strong>
                                                 </small>
@@ -997,7 +998,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.06.52.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Interruttore magnetotermico differenziale fino a 32A, potere di interruzione 4,5KA, I.d. 0,03A
                                             </small>
@@ -1012,7 +1013,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.6.10.8</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 40 a 63A.
                                             </small>
@@ -1030,7 +1031,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.06.10.8</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Interruttore automatico magnetotermico Caratteristica C. Potere di interruzione 6KA. Bipolare da 10 a 32A.
                                             </small>
@@ -1055,7 +1056,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.4.110.12</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Linea Elettrica in cavo unipolare isolato in PVC, NO7V-K  1*6mmq al metro
                                             </small>
@@ -1070,7 +1071,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.5.10.3</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 25. Al metro.
                                             </small>
@@ -1082,7 +1083,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.5.10.4</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 32. Al metro.
                                             </small>
@@ -1094,7 +1095,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.5.180.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
                                                 Per larghezza della traccia fino a 10 cm al metro lineare.
@@ -1107,7 +1108,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.5.180.2</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Traccia su muratura di qualsiasi genere esclusa quella in pietra e in calcestruzzo. <br>
                                                 Per larghezza della traccia fino a 10 cm al metro lineare.
@@ -1128,7 +1129,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.5.80.8</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Scatola di derivazione in plastica da incasso. Dimensioni assimilabili a mm 392x152x70.
                                             </small>
@@ -1151,7 +1152,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.4.21.40</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Linea Elettrica in cavo multipolare isolato in EPR sotto guaina di PVC, sigla RG70R 0,6/1KV o FG70R 0,6/1KV 2*10mmq al metro.
                                             </small>
@@ -1166,7 +1167,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.4.110.10</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 LINEA ELETTRICA IN CAVO UNIPOLARE ISOLATO IN PVC.  Linea elettrica in cavo <br>
                                                 unipolare isolato in sigla di designazione NO7V-K (norme CEI 20-20 , CEI 20-22,<br>
@@ -1182,7 +1183,7 @@
                                         {% if item.trifase == 0 %}
                                             <tr>
                                                 <td class="border text-center">15.7.201</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Scaricatore per corrente di fulmine Unipolare  SPD Tipo 1. <br>
                                                         Per ogni polo di fase protetto.
@@ -1195,7 +1196,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="border text-center">15.7.202</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Scaricatore per corrente di fulmine N-PE SPD Tipo 1
                                                     </small>
@@ -1208,7 +1209,7 @@
                                         {% else %}
                                             <tr>
                                                 <td class="border text-center">15.7.201</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Scaricatore per corrente di fulmine Unipolare  SPD Tipo 1. <br>
                                                         Per ogni polo di fase protetto.
@@ -1221,7 +1222,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="border text-center">15.7.202</td>
-                                                <td class="text-small border" style="max-width: 300px">
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                     <small>
                                                         Scaricatore per corrente di fulmine N-PE  SPD Tipo 1
                                                     </small>
@@ -1235,7 +1236,7 @@
                                     {% else %}
                                         <tr>
                                             <td class="border text-center">15.7.204.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Limitatore di sovratensioni (SPD) Tipo 2. Quadripolare per reti TT (esecuzione 3+1).
                                                 </small>
@@ -1247,7 +1248,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.7.201</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Scaricatore per corrente di fulmine N-PE SPD Tipo 2
                                                 </small>
@@ -1260,7 +1261,7 @@
                                     {% endif %}
                                     <tr>
                                         <td class="border text-center">15.5.260.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Pozzetto in resina completo di coperchio carrabile. 300x300mm
                                             </small>
@@ -1272,7 +1273,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border text-center">15.7.60.1</td>
-                                        <td class="text-small border" style="max-width: 300px">
+                                        <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                             <small>
                                                 Puntazza a croce per dispersione, realizzate in acciaio zincato a fuoco di dimensioni 50*50*5mm,<br>
                                                 da conficcare in terreno di media consistenza all'interno di pozzetto ispezionabile, fornita e posta in opera.<br>
@@ -1287,7 +1288,7 @@
                                     {% if item.opereMurarie == 0 %}
                                         <tr>
                                             <td class="border text-center">15.2.160.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Nodo equipotenziale, costituito da barretta in rame forata. Escluse le opere murarie.
                                                 </small>
@@ -1300,7 +1301,7 @@
                                     {% else %}
                                         <tr>
                                             <td class="border text-center">15.2.160.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Nodo equipotenziale, costituito da barretta in rame forata. Comprese le opere murarie.
                                                 </small>
@@ -1317,7 +1318,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.6.170.31</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Apparecchi modulari da inserire su quadro elettrico con attacco DIN, forniti e posti in opera.<br>
                                                     Sono compresi: il cablaggio, gli accessori, il montaggio, E’ compreso quanto altro occorre per dare <br>
@@ -1330,7 +1331,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.6.170.44</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Apparecchi modulari da inserire su quadro elettrico con attacco DIN, forniti e posti in opera.<br>
                                                     Sono compresi: il cablaggio, gli accessori, il montaggio, E’ compreso quanto altro occorre per dare<br>
@@ -1406,7 +1407,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.210.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Tubazione flessibile in polietilene a doppia parete. Diametro esterno 50 mm
                                                 </small>
@@ -1418,7 +1419,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.260.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pozzetto in resina completo di coperchio carrabile 300 x 300 mm.
                                                 </small>
@@ -1433,7 +1434,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.210.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Tubazione flessibile in polietilene a doppia parete. Diametro esterno 63 mm
                                                 </small>
@@ -1445,7 +1446,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.260.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pozzetto in cemento completo di coperchio carrabile 300 x 300 mm.
                                                 </small>
@@ -1508,7 +1509,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.6.170.31</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Apparecchi modulari da inserire su quadro elettrico con attacco DIN, forniti e posti in opera. Sono compresi: il cablaggio, gli accessori, il montaggio, <br>E’ compreso quanto altro occorre per dare il lavoro finito. E’ esclusa la quota di carpenteria. Relè passo-passo 1 contatto 16A
                                                 </small>
@@ -1520,7 +1521,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.6.170.44</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Apparecchi modulari da inserire su quadro elettrico con attacco DIN, forniti e posti in opera. Sono compresi: il cablaggio, gli accessori, il montaggio, <br>E’ compreso quanto altro occorre per dare il lavoro finito. E’ esclusa la quota di carpenteria. Trasformatore BTS secondario 24V 40VA
                                                 </small>
@@ -1583,12 +1584,13 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.171.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Impianto di ricezione di segnale TV satellitare costituito da antenna parabolica in alluminio, idonea alla ricezione di segnale TV satellitare,<br>
-                                                    completa di palo e di sistemi di fissaggio su tetto, su parete o su copertura piana di qualsiasi natura, di cavi di collegamento fino all'impianto di amplificazione.<br>
-                                                    Il tutto posto in opera con tutto quanto occorre per dare il lavoro finito, in copertura a qualsiasi altezza, incluse le eventuali opere murarie per il fissaggio <br>
-                                                    ed il ripristino di eventuali parti  di copertura interessate. Per antenna parabolica di diametro pari a 80 cm
+                                                    completa di palo e di sistemi di fissaggio su tetto, su parete o su copertura piana di qualsiasi natura, di cavi di collegamento fino <br>
+                                                    all'impianto di amplificazione. Il tutto posto in opera con tutto quanto occorre per dare il lavoro finito, in copertura a qualsiasi altezza,<br>
+                                                    incluse le eventuali opere murarie per il fissaggio ed il ripristino di eventuali parti  di copertura interessate.<br>
+                                                    Per antenna parabolica di diametro pari a 80 cm
                                                 </small>
                                             </td>
                                             <td class="border text-center">{{ itemAdv.opt31Value }}</td>
@@ -1598,10 +1600,11 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.172.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
-                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
-                                                            inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore ad un’uscita
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su<br>
+                                                    alloggiamento predisposto, inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante.<br>
+                                                    Convertitore ad un’uscita
                                                 </small>
                                             </td>
                                             <td class="border text-center">{{ itemAdv.opt32Value }}</td>
@@ -1611,10 +1614,11 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.172.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
-                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
-                                                    inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore a due uscite
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su<br>
+                                                    alloggiamento predisposto, inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante.<br>
+                                                    Convertitore a due uscite
                                                 </small>
                                             </td>
                                             <td class="border text-center">{{ itemAdv.opt33Value }}</td>
@@ -1624,10 +1628,11 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.172.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
-                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
-                                                    inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore a quattro uscite
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su<br>
+                                                    alloggiamento predisposto, inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante.<br>
+                                                    Convertitore a quattro uscite
                                                 </small>
                                             </td>
                                             <td class="border text-center">{{ itemAdv.opt34Value }}</td>
@@ -1640,7 +1645,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.174.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Sistema di amplificazione ed equalizzazione multiswitch per la distribuzione del segnale TV SAT miscelato con segnale TV terrestre, fino a 30 prese,<br>
                                                     completo di convertitore, alimentatore, con ingressi derivati dall'antenna parabolica, inclusi i cavi di collegamento delle colonne montanti e <br>
@@ -1654,10 +1659,11 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.172.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
-                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su alloggiamento predisposto,<br>
-                                                    inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. Convertitore a due uscite
+                                                    Sistema di decodificazione di segnale TV SAT, per impianto singolo, costituito da convertitore ad una o più uscite, da posizionare su<BR>
+                                                    alloggiamento predisposto, inclusi i cavi di collegamento delle colonne montanti, e degli accessori necessari per dare l'opera finita e funzionante. <br>
+                                                    Convertitore a due uscite
                                                 </small>
                                             </td>
                                             <td class="border text-center">{{ itemAdv.opt36Value }}</td>
@@ -1667,7 +1673,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.172.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Sistema di amplificazione ed equalizzazione multiswitch per la distribuzione del segnale TV SAT miscelato con segnale TV terrestre, fino a 30 prese,<br>
                                                     completo di convertitore, alimentatore, con ingressi derivati dall'antenna parabolica, inclusi i cavi di collegamento delle colonne montanti e <br>
@@ -1681,7 +1687,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.110.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per presa di ricezione TV satellitare
                                                 </small>
@@ -1696,7 +1702,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.4.230</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Cavo coassiale per impianti di antenna TV  al metro per linea dorsale
                                                 </small>
@@ -1759,7 +1765,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -1771,7 +1777,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -1784,22 +1790,54 @@
                                             <td class="border text-center">{{ itemAdv.opt42Value * 8.00 }}</td>
                                             {% set opt4Arr = opt4Arr|merge([itemAdv.opt42Value * 8.00]) %}
                                         </tr>
-                                        {# TODO: Gestire maggiorazioni a seconda del tipo op #}
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.				</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.</strong></td>
                                         </tr>
-                                        <tr>
-                                            <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt43Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt43Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
-                                            {% set opt4Arr = opt4Arr|merge([itemAdv.opt43Value * fun.getPriceByCode('15.3.20.3')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt42Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt42Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt4Arr = opt4Arr|merge([itemAdv.opt42Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt42Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt42Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt4Arr = opt4Arr|merge([itemAdv.opt42Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt42Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt42Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt4Arr = opt4Arr|merge([itemAdv.opt42Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -1853,7 +1891,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -1865,7 +1903,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -1878,22 +1916,54 @@
                                             <td class="border text-center">{{ itemAdv.opt52Value * 8 }}</td>
                                             {% set opt5Arr = opt5Arr|merge([itemAdv.opt52Value * 8.00]) %}
                                         </tr>
-                                        {# TODO: Gestire maggiorazioni a seconda del tipo op #}
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.				</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.				</strong></td>
                                         </tr>
-                                        <tr>
-                                            <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt53Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt53Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
-                                            {% set opt5Arr = opt5Arr|merge([itemAdv.opt53Value * fun.getPriceByCode('15.3.20.3')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt52Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt52Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt5Arr = opt5Arr|merge([itemAdv.opt52Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt52Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt52Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt5Arr = opt5Arr|merge([itemAdv.opt52Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt52Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt52Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt5Arr = opt5Arr|merge([itemAdv.opt52Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -1946,7 +2016,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.220.6</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per <strong>connettore tipo RJ45</strong> con cavo UTP cat. 6
                                                 </small>
@@ -2008,7 +2078,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2020,7 +2090,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2036,19 +2106,51 @@
                                         <tr>
                                             <td colspan="5" class="border table-light"><strong>Predisposizione videosorveglianza</strong></td>
                                         </tr>
-                                        {# TODO gestisci op #}
-                                        <tr>
-                                            <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt73Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt73Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            {% set opt7Arr = opt7Arr|merge([itemAdv.opt73Value * fun.getPriceByCode('15.3.10')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt72Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt72Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt7Arr = opt7Arr|merge([itemAdv.opt72Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt42Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt42Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt7Arr = opt7Arr|merge([itemAdv.opt42Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt42Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt42Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt4Arr = opt4Arr|merge([itemAdv.opt42Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -2101,7 +2203,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2113,7 +2215,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2127,21 +2229,53 @@
                                             {% set opt8Arr = opt8Arr|merge([itemAdv.opt81Value * 8.00]) %}
                                         </tr>
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.</strong></td>
                                         </tr>
-                                        {# TODO gestisci op #}
-                                        <tr>
-                                            <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt83Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt83Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            {% set opt8Arr = opt8Arr|merge([itemAdv.opt83Value * fun.getPriceByCode('15.3.10')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt83Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt83Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt8Arr = opt8Arr|merge([itemAdv.opt83Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt83Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt83Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt8Arr = opt8Arr|merge([itemAdv.opt83Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt83Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt83Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt8Arr = opt4Arr|merge([itemAdv.opt83Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -2194,7 +2328,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2206,7 +2340,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2220,21 +2354,53 @@
                                             {% set opt9Arr = opt9Arr|merge([itemAdv.opt91Value * 8.00]) %}
                                         </tr>
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.	</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.	</strong></td>
                                         </tr>
-                                        {# TODO gestisci op #}
-                                        <tr>
-                                            <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt93Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt93Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            {% set opt9Arr = opt9Arr|merge([itemAdv.opt93Value * fun.getPriceByCode('15.3.10')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt93Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt93Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt9Arr = opt9Arr|merge([itemAdv.opt93Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt93Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt93Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt9Arr = opt9Arr|merge([itemAdv.opt93Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt93Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt93Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt9Arr = opt9Arr|merge([itemAdv.opt93Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -2287,7 +2453,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2299,7 +2465,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2317,7 +2483,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2329,7 +2495,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2347,7 +2513,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2359,7 +2525,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2377,7 +2543,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2389,7 +2555,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2403,11 +2569,11 @@
                                             {% set opt10Arr = opt10Arr|merge([itemAdv.opt108Value * 8.00]) %}
                                         </tr>
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.				</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.				</strong></td>
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                                 </small>
@@ -2469,7 +2635,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2481,7 +2647,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2496,7 +2662,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.2.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Canalizzazione per P.to Presa in traccia per distanza non superiori a 60 mt. Sono esclusi i conduttori e le opere murarie.
                                                 </small>
@@ -2508,7 +2674,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: <br>
@@ -2522,21 +2688,53 @@
                                             {% set opt11Arr = opt11Arr|merge([itemAdv.opt114Value * 5.70]) %}
                                         </tr>
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.	</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.	</strong></td>
                                         </tr>
-                                        {# TODO gestisci op #}
-                                        <tr>
-                                            <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt115Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt115Value * fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
-                                            {% set opt11Arr = opt11Arr|merge([itemAdv.opt115Value * fun.getPriceByCode('15.3.20.3')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt115Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt115Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt11Arr = opt11Arr|merge([itemAdv.opt115Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt115Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt115Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt11Arr = opt11Arr|merge([itemAdv.opt115Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt115Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt115Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt11Arr = opt11Arr|merge([itemAdv.opt115Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -2589,7 +2787,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.80.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per impianto di comando di motori monofasi o in c.c. di piccola potenza (serrande meccanizzate etc.).<br>
                                                     Con pulsante doppio senza chiave.
@@ -2602,7 +2800,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.2.42</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     COMPENSO AGGIUNTIVO AL PUNTO ALLACCIO ELETTRICO PER COLLEGAMENTO AD APPARECCHIATURA DI CONTROLLO E/O COMANDO. Per collegamento motore tenda
                                                 </small>
@@ -2614,7 +2812,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.2.21.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO ALLACCIO PER PRESA MONOFASE O TRIFASE SU CANALIZZAZIONE IN TRACCIA O SU TUBAZIONE IN VISTA CON CAVO NON PROPAGANTE L'INCENDIO.<br>
                                                     Per allaccio monofase con carico max 16A
@@ -2677,7 +2875,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per impianto citofonico o videocitofonico, sistema a 2 fili. Per impianto base fino a 26 interni.
                                                 </small>
@@ -2689,7 +2887,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per impianto citofonico  per ogni posto audio interno
                                                 </small>
@@ -2701,7 +2899,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per audio interno intercomunicante.
                                                 </small>
@@ -2713,7 +2911,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per ogni posto esterno audio (PORTER) fino a 2 chiamate.
                                                 </small>
@@ -2728,7 +2926,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">TI</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Trasporto e imballo
                                                 </small>
@@ -2789,7 +2987,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per impianto citofonico o videocitofonico, sistema a 2 fili. Per impianto base fino a 26 interni.
                                                 </small>
@@ -2801,7 +2999,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per impianto citofonico  per ogni posto audio interno
                                                 </small>
@@ -2813,7 +3011,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per audio interno intercomunicante.
                                                 </small>
@@ -2825,7 +3023,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.52.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento al punto presa di servizio per ogni posto esterno audio (PORTER) fino a 2 chiamate.
                                                 </small>
@@ -2837,7 +3035,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.4.236</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     LINEA IN CAVO LONWORKS PER CONNESSIONI DI RETE TIPO AWG22.  Linea in cavo LonWorks per connessioni di rete tipo AWG22<br>
                                                     a due conduttori (una coppia: 2x0,60mm)Twistato e non schermato, con isolamento 1 kV
@@ -2853,7 +3051,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">TI</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Trasporto e imballo
                                                 </small>
@@ -2914,7 +3112,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PUNTO PRESA DI SERVIZIO in  traccia sono escluse le opere murarie
                                                 </small>
@@ -2926,7 +3124,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">N.P.10_PS</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature NON Intonacate o fissaggio con collari<br>
                                                     e/o schiume poliuretaniche su pannelli in cartongesso, fibrocemento, fibrolegno e pannellature similari. Sono esclusi: la chiusura della traccia,<br>
@@ -2940,21 +3138,53 @@
                                             {% set opt15Arr = opt15Arr|merge([itemAdv.opt152Value * 8.00 ]) %}
                                         </tr>
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.	</strong></td>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.	</strong></td>
                                         </tr>
-                                        {# TODO gestisci op #}
-                                        <tr>
-                                            <td class="border text-center">15.3.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
-                                                <small>
-                                                    Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
-                                                </small>
-                                            </td>
-                                            <td class="border text-center">{{ itemAdv.opt153Value }}</td>
-                                            <td class="border text-center">{{ fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            <td class="border text-center">{{ itemAdv.opt153Value * fun.getPriceByCode('15.3.10')|number_format(2) }}</td>
-                                            {% set opt15Arr = opt15Arr|merge([itemAdv.opt153Value * fun.getPriceByCode('15.3.10')]) %}
-                                        </tr>
+                                        {% if item.opereMurarie == 1 and item.opereMurarieIntonaco == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.1</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>NON Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt153Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.1')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt153Value * fun.getPriceByCode('15.3.20.1'))|number_format(2) }}</td>
+                                                {% set opt15Arr = opt15Arr|merge([itemAdv.opt153Value * fun.getPriceByCode('15.3.20.1')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurarieIntonaco == 1 and item.opereMurariePietra == 0 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.2</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature <br>
+                                                        <strong>Intonacate.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt153Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.2')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt153Value * fun.getPriceByCode('15.3.20.2'))|number_format(2) }}</td>
+                                                {% set opt15Arr = opt15Arr|merge([itemAdv.opt153Value * fun.getPriceByCode('15.3.20.2')]) %}
+                                            </tr>
+                                        {% endif %}
+                                        {% if item.opereMurariePietra == 1 %}
+                                            <tr>
+                                                <td class="border text-center">15.3.20.3</td>
+                                                <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
+                                                    <small>
+                                                        Incremento alla canalizzazione per p.to presa di servizio per opere murarie su murature in <br>
+                                                        <strong>mattone pieno, calcestruzzo pietra.</strong> Sono esclusi l'intonaco, la rasatura e la tinteggiatura
+                                                    </small>
+                                                </td>
+                                                <td class="border text-center">{{ itemAdv.opt153Value }}</td>
+                                                <td class="border text-center">{{ fun.getPriceByCode('15.3.20.3')|number_format(2) }}</td>
+                                                <td class="border text-center">{{ (itemAdv.opt153Value * fun.getPriceByCode('15.3.20.3'))|number_format(2) }}</td>
+                                                {% set opt15Arr = opt15Arr|merge([itemAdv.opt153Value * fun.getPriceByCode('15.3.20.3')]) %}
+                                            </tr>
+                                        {% endif %}
                                         <tr>
                                             <td colspan="3" class="border-0"></td>
                                             <td class="border">Totale fornitura in opera.<br> IVA ESCLUSA.</td>
@@ -3010,7 +3240,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.210.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Tubazione flessibile in polietilene a doppia parete. Diametro esterno 110 mm
                                                 </small>
@@ -3022,7 +3252,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.260.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pozzetto in resina completo di coperchio carrabile 300 x 300 mm.
                                                 </small>
@@ -3034,7 +3264,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.1.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Canalizzazione per P.to luce in traccia per distanza non superiori a 60 mt. Sono esclusi i conduttori e le opere murarie.
                                                 </small>
@@ -3097,7 +3327,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.5.10.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Tubazione flessibile in PVC autoestinguente serie pesante IMQ. Diametro esterno mm 32. Al metro.
                                                 </small>
@@ -3161,7 +3391,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">13.21.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Collegamento elettrico di regolazione di impianti tecnologici, eseguito sottotraccia per alimentare dal quadro elettrico<br>
                                                     di centrale o di zona una apparecchiatura di regolazione (termostato, umidostato, flussostato, sonda di temperatura, pressostato, ecc.)
@@ -3173,12 +3403,12 @@
                                             {% set opt18Arr = opt18Arr|merge([itemAdv.opt181Value * fun.getPriceByCode('13.21.10')|number_format(2)]) %}
                                         </tr>
                                         <tr>
-                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce su pietra per PUNTI PRESA di SERVIZIO.</strong>
+                                            <td colspan="5" class="border table-light"><strong>MAGGIORAZIONE per tracce per PUNTI PRESA di SERVIZIO.</strong>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.20.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Maggiorazione per opere murarie su muratura in mattone pieno, calcestruzzo o pietra.
                                                 </small>
@@ -3241,7 +3471,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">13.19.20.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Cronotermostato Ambiente.
                                                 </small>
@@ -3304,7 +3534,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.550.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Armadio rack modulare da 19” per impianti di cablaggio strutturato o consolle, realizzato in acciaio verniciato, <br>
                                                     completo di porta trasparente provvista di serratura, aperture di areazione superiori ed inferiori. <br>
@@ -3319,7 +3549,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">NP.4</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Kit Ruote per armadi a pavimento. Fornito e posto in opera
                                                 </small>
@@ -3335,7 +3565,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.560.1</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pannello di alimentazione con min. 5 prese UNEL 16A+T, interruttore bipolare e spia di presenza rete.
                                                 </small>
@@ -3351,7 +3581,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.240.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PATCH PANEL PER ARMADI DI CABLAGGIO STRUTTURATO.  Patch panel per armadi di cablaggio strutturato, <br>
                                                     completo di connettori RJ45 UTP o S-FTP a 8 pin con connessione ad incisione di isolante tipo 110, <br>
@@ -3367,7 +3597,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.240.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     PATCH PANEL PER ARMADI DI CABLAGGIO STRUTTURATO.  Patch panel per armadi di cablaggio strutturato, <br>
                                                     completo di connettori RJ45 UTP o S-FTP a 8 pin con connessione ad incisione di isolante tipo 110, <br>
@@ -3383,7 +3613,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">NP.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pannello Passa Cavi. Fornito e posto in opera
                                                 </small>
@@ -3395,7 +3625,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.240.10</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Patch cord tipo UTP cat. 6  fino a 1 m.
                                                 </small>
@@ -3407,7 +3637,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.240.11</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Patch cord tipo UTP cat. 6  fino a 3 m.
                                                 </small>
@@ -3419,7 +3649,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.240.7</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Incremento alla singola porta per attestazione conduttori e certificazione.
                                                 </small>
@@ -3435,7 +3665,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.560.6</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Mensola di supporto portata max. 50Kg. Profondità 600 mm
                                                 </small>
@@ -3447,7 +3677,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.560.5</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Mensola di supporto portata max. 15Kg. Profondità 400 mm
                                                 </small>
@@ -3463,7 +3693,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.560.2</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pannello cieco 1 unità
                                                 </small>
@@ -3475,7 +3705,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.560.3</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Pannello cieco 2 unità
                                                 </small>
@@ -3491,7 +3721,7 @@
                                         </tr>
                                         <tr>
                                             <td class="border text-center">15.3.560.8</td>
-                                            <td class="text-small border" style="max-width: 300px">
+                                            <td class="text-small border" style="max-width: 300px; word-wrap: break-word;">
                                                 <small>
                                                     Gruppo di ventilazione per circolazione forzata di aria ad una ventola
                                                 </small>
@@ -3574,7 +3804,7 @@
             word-wrap: break-word!important; /* Internet Explorer 5.5+ */
         }
         .description {
-            max-width: 300px;
+            max-width: 300px; word-wrap: break-word;;
             white-space: pre-wrap!important; /* css-3 */
             white-space: -moz-pre-wrap!important; /* Mozilla, since 1999 */
             white-space: -pre-wrap!important; /* Opera 4-6 */
@@ -3589,6 +3819,13 @@
         }
     </style>
     <style type="text/css">
+        small {
+            word-wrap: break-word;
+            font-size: 8pt!important;
+        }
+        td {
+            word-wrap: break-word;
+        }
         {# TODO: Fix print CSS #}
         @page {
             /*size: landscape;*/
@@ -3652,6 +3889,9 @@
             }
             .action-buttons {
                 display: none;
+            }
+            small {
+                word-wrap: break-word;
             }
         }
     </style>
